@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Couch Baby
-date: 2017/03/10
+date: 2017/03/24
 ---
 >Your baby is learning to walk. The baby begins by holding onto a couch. Whenever she is next to the couch, there is a 25 percent chance that she will take a step forward and a 75 percent chance that she will stay clutching the couch. If the baby is one or more steps away from the couch, there’s a 25 percent chance that she will take a step forward, a 25 percent chance she’ll stay in place and a 50 percent chance she’ll take one step back toward the couch.
 >
