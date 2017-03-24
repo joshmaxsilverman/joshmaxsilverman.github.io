@@ -25,6 +25,6 @@ $E_0 = 1 + .25 \times E_1 = 2$
 
 Now, the expected ratio of turns the baby spends at the couch (that is, turns at the end of which she is at the couch) is the inverse of that, or 1/2, because we expect between turns at the couch for the baby to be away from the couch for $E_0-1$, or 1 turn.
 
-Verified by numerical simulation.
+Verified by (numerical simulation)[https://github.com/hectorpefo/hectorpefo.github.io/blob/master/_includes/couch-baby.py].
 
 <br>
