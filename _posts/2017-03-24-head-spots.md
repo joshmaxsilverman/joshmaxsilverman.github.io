@@ -23,7 +23,7 @@ date: 2017/03/24
 
 ## Solution:
 
-The tallest dwarf (#1) will signal with his call whether the number of black dots he sees is odd or even. Suppose he says "black" if odd and "white" if even. Then #2 knows that if the number of black dots _he_ sees differs in parity from those #1 sees, his dot must be black (and same parity, white). He calls his color accordingly, tipping off #3 to whether #2 saw an odd or even number of black dots. And #3 acts identically, as do all until #10, who knows whether #2 saw an odd (1) or even (0) number of black dots, and infers the color of his dot on that basis.  So nine of them will survive for sure, with the tallest getting a 50% shot.
+The tallest dwarf (#1) will signal with his call whether the number of black dots he sees is odd or even. Suppose he says "black" if odd and "white" if even. Then #2 knows that if the number of black dots _he_ sees differs in parity from those #1 sees, his dot must be black (and same parity, white). He calls his color accordingly, tipping off #3 to whether #2 saw an odd or even number of black dots. And #3 acts identically, as do all until #10, who knows whether #9 saw an odd (1) or even (0) number of black dots, and infers the color of his dot on that basis.  So nine of them will survive for sure, with the tallest getting a 50% shot.
 
 The "Extra credit" question seems to be a red herring, as there is no difference in the required approach.
 
