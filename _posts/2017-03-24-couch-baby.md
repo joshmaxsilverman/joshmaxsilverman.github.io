@@ -24,7 +24,7 @@ Letting $E_0$ be the expected number of turns it takes for the baby to return to
 
 $E_0 = 1 + .25 \times E_1 = 2$
 
-It follows that the expected ratio of turns that end with the baby at the couch is 1/2, because we expect between turns at the couch for the baby to be away from the couch for $E_0-1$, or 1 turn.
+It follows that the expected proportion of turns that end with the baby at the couch is 1/2, because we expect between turns at the couch for the baby to be away from the couch for $E_0-1$, or 1 turn.
 
 Verified by [numerical simulation](https://github.com/hectorpefo/hectorpefo.github.io/blob/master/_includes/couch-baby.py).
 
