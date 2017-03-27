@@ -17,6 +17,7 @@ date: 2017/03/24
 Let $E_1$ be the expected number of turns it takes for the baby to return to the couch from one step away. Then $E_1$ includes one step for sure, with .25 chance of then being in the same situation and expecting $E_1$ more turns, and .25 chance of being two steps away. At two steps away we expect $E_1$ turns before returning to one step away and expecting $E_1$ more turns from there. So:
 
 $E_1 = 1 + .25 \times E_1 + .25 \times (E_1 + E_1)$
+
 $E_1 = 4$
 
 Letting $E_0$ be the expected number of turns it takes for the baby to return to (or remain at) the couch starting at the couch itself:
