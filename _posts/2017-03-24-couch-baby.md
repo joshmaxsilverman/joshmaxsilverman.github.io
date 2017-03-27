@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Couch Baby
 date: 2017/03/24
 ---
