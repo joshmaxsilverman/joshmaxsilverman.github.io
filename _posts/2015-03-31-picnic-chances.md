@@ -16,6 +16,6 @@ date: 2017/03/31
 
 ![Picnic Graph](/img/Picnic.PNG)
 
-We can visualize the possibilities that we meet as in the diagram above. The green region is where we arrive within fifteen minutes of one another. Since the area of the whole graph is one, the probability that we meet is the area of the green region, which is easiest to calculate by subtracting from one the area of the white triangles. Each has area 9/32, and so the probability that we meet is 7/16.
+This diagram shows all the possibilities of our arrival times. The green region is where we arrive within fifteen minutes of one another. Letting the units of the axes be hours, the area of the whole graph is 1. The probability that we meet, then, is the area of the green region, which is easiest to calculate by subtracting from 1 the area of the white triangles. Each has area 9/32, and so the probability that we meet is 1 - 9/16, or 7/16.
 
 <br>
