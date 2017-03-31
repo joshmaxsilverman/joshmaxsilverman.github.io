@@ -14,7 +14,7 @@ date: 2017/03/31
 
 ## Solution:
 
-![Picnic Graph](https://github.com/hectorpefo/hectorpefo.github.io/img/Picnic.PNG)
+![Picnic Graph](/img/Picnic.PNG)
 
 We can visualize the possibilities that we meet as in the diagram above. The green region is where we arrive within fifteen minutes of one another. Since the area of the whole graph is one, the probability that we meet is the area of the green region, which is easiest to calculate by subtracting from one twice the area of one of the white triangular regions. Each has area 9/32, and so the probability that we meet is 7/16.
 
