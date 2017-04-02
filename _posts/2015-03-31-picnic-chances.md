@@ -20,7 +20,7 @@ We visualize the possible pairs of arrival times in which we meet as a square. T
 
 ## Extra Credit
 
->Suppose there are $N$ people and a proportion $R$ of the hour in which they want to meet. What is the chance that all of them will be there at the same time?
+>Suppose there are $N$ people and that they stay a proportion $R$ of the hour. What is the chance that all of them will be there at the same time?
 
 (NM\_Solver on [twitter](https://twitter.com/NM_Solver/status/848587772025753600))
 
