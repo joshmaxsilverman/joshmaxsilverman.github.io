@@ -28,9 +28,9 @@ Call one of the people A.  We are going to calculate the probability that A arri
 
 Call the time A arrives, $t$. For all to meet, all of the $N-1$ others must arrive between $t$ and $t+R$. If $t \leq 1-R$, then each has $R$ chance of doing so, and if $t \geq 1-R$, then each has $1-t$ chance.  
 
-There is, then, a $(1-R)R^{N-1}$ chance of A arriving  before $1-R$ and everyone arriving within $R$ afterwards.  
+There is, then, a $(1-R)R^{N-1}$ chance of A arriving before $1-R$ and everyone arriving within $R$ afterwards.  
 
-To calculate the chance of everone meeting when A arrives first and arrives after $1-R$, we need to integrate over the possible values of $t$:
+To calculate the chance of everyone meeting when A arrives first and arrives after $1-R$, we need to integrate over the possible values of $t$:
 
 $$\int_{t=1-R}^1 (1-t)^{N-1} dt =
 \bigg[_{t=1-R}^{1} - \frac{(1-t)^N}{N} \bigg] = 
