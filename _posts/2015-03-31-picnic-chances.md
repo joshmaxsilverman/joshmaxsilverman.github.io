@@ -14,8 +14,33 @@ date: 2017/03/31
 
 ## Solution:
 
-![Picnic Graph](/img/Picnic.PNG)
+![Picnic Graph](https://github.com/hectorpefo/hectorpefo.github.io/img/Picnic.PNG)
 
-This diagram shows all the possibilities of our arrival times. The green region is where we arrive within fifteen minutes of one another.  For any time $t$ (in hours after noon) you might arrive, my arriving at the same time puts us at the point $(t,t)$ on the center diagonal, and we meet so long as I arrive within fifteen minutes of you, putting us somewhere on the horizontal line segment that extends up to fifteen minutes in both directions from that point, that is, from $(t-.25,t)$ (or $(0,t)$ if $t-.25\leq 0$) to $(t+.25,t)$ (or $(1,t)$ if $t+.25\geq 1$).  The probability that we meet, then, is the area of the green region, which is easiest to calculate by subtracting from 1 the area of the white triangles. Pushed together, they form a square of side 3/4 and area 9/16. So the probability that we meet is 1 - 9/16, or 7/16.
+We can visualize the possibilities that we meet as in the diagram above. The green region is where we arrive within fifteen minutes of one another. Since the area of the whole graph is one, the probability that we meet is the area of the green region, which is easiest to calculate by subtracting from one twice the area of one of the white triangular regions. Each has area 9/32, and so the probability that we meet is 7/16.
+
+## Extra Credit
+
+>Suppose there are $N$ people and a proportion $R$ of the hour in which they want to meet. What is the chance that all of them will be there at the same time?
+
+(NM\_Solver on [twitter](https://twitter.com/NM_Solver/status/848587772025753600))
+
+Call one of the people A.  We are going to calculate the probability that A arrives first and everyone meets. We will then multiply that probability by $N$ to get our answer.
+
+Call the time A arrives, $t$. For all to meet, all of the $N-1$ others must arrive between $t$ and $t+R$. If $t \leq 1-R$, then each has $R$ chance of doing so, and if $t \geq 1-R$, then each has $1-t$ chance.  
+
+There is, then, a $(1-R)R^{N-1}$ chance of A arriving  before $1-R$ and everyone arriving within $R$ afterwards.  
+
+To calculate the chance of everone meeting when A arrives first and arrives after $1-R$, we need to integrate over the possible values of $t$:
+
+$\int_{t=1-R}^1 (1-t)^{N-1} dt =
+\bigg[_{t=1-R}^{1} - \frac{(1-t)^N}{N} \bigg] = 
+\frac{R^N}{N}
+$
+
+Putting it all together, the probability that they all meet is:
+
+$N \times \big[ (1-R)R^{N-1} + \frac{R^N}{N} \big] =
+NR^{N-1} - (N-1)R^N
+$
 
 <br>
