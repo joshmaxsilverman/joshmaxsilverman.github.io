@@ -39,7 +39,7 @@ $$
 
 Putting it all together, the probability that they all meet is:
 
-$$N \times \big[ (1-R)R^{N-1} + \frac{R^N}{N} \big] =
+$$P = N \times \big[ (1-R)R^{N-1} + \frac{R^N}{N} \big] =
 NR^{N-1} - (N-1)R^N
 $$
 
