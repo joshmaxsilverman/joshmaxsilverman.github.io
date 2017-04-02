@@ -32,10 +32,10 @@ There is, then, a $(1-R)R^{N-1}$ chance of A arriving  before $1-R$ and everyone
 
 To calculate the chance of everone meeting when A arrives first and arrives after $1-R$, we need to integrate over the possible values of $t$:
 
-$\int_{t=1-R}^1 (1-t)^{N-1} dt =
+$$\int_{t=1-R}^1 (1-t)^{N-1} dt =
 \bigg[_{t=1-R}^{1} - \frac{(1-t)^N}{N} \bigg] = 
 \frac{R^N}{N}
-$
+$$
 
 Putting it all together, the probability that they all meet is:
 
