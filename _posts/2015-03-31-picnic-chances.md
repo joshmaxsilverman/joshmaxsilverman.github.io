@@ -22,7 +22,7 @@ We visualize the possible pairs of arrival times as a square. The green region i
 
 >Suppose there are $N$ people and that they stay a proportion $R$ of the hour. What is the chance that all of them will be there at the same time?
 
-(Suggested by NM\_Solver on [twitter](https://twitter.com/NM_Solver/status/848587772025753600))
+(Suggested by @NM\_Solver on [twitter](https://twitter.com/NM_Solver/status/848587772025753600))
 
 Call one of the people A.  We are going to calculate the probability that A arrives first and everyone meets. We will then multiply that probability by $N$ to get our answer.
 
