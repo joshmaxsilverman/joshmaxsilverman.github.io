@@ -28,6 +28,10 @@ It follows that the expected proportion of turns that end with the baby at the c
 
 Verified by numerical simulation:
 
+<br>
+
+```python
 {% include couch-baby.py %}
+```
 
 <br>
