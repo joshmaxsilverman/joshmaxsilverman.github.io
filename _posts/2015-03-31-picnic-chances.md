@@ -57,5 +57,8 @@ Here are some values, with $R$ values heading columns and $N$ values rows.
 | 9 | 0.000000082 | 0.0001068115234 | 0.001396162742 | 0.009080167711 | 0.01953125 |
 | 10 | 0.0000000091 | 0.00002956390381 | 0.0005398871249 | 0.004502249823 | 0.0107421875 |
 
+Verified by numerical simulation:
+
+{% include picnic.py %}
 
 <br>
