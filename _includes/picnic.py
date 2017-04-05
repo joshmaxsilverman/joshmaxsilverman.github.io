@@ -8,12 +8,12 @@ for rep in range(reps):
 	Arrivals = []
 	for i in range(N):
 		Arrivals.append(random())
-	fail = 0
+	Picnic = 1
 	for i in range(N):
 		for j in range(N):
 			if abs(Arrivals[i]-Arrivals[j]) > R:
-				fail = 1
-	if fail == 0:
+				Picnic = 0
+	if Picnic == 0:
 		accum += 1
 
 print(accum/reps)
