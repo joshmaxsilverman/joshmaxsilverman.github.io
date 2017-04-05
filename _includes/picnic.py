@@ -13,7 +13,7 @@ for rep in range(reps):
 		for j in range(N):
 			if abs(Arrivals[i]-Arrivals[j]) > R:
 				Picnic = 0
-	if Picnic == 0:
+	if Picnic == 1:
 		accum += 1
 
 print(accum/reps)
