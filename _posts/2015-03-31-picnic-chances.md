@@ -59,6 +59,11 @@ Here are some values, with $R$ values heading columns and $N$ values rows.
 
 Verified by numerical simulation:
 
+<br>
+
+```python
 {% include picnic.py %}
+```
 
 <br>
+
