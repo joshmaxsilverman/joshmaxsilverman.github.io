@@ -43,7 +43,7 @@ $$P = N \times \bigg[ (1-R)R^{N-1} + \frac{R^N}{N} \bigg] =
 NR^{N-1} - (N-1)R^N
 $$
 
-Here are some values, with $R$ values heading columns and $N$ values rows.
+Here are some values of $P$, for values of $R$ heading columns and $N$ heading rows.
 
 |  | 0.1 | 0.25 | 0.35 | 0.45 | 0.5 |
 |----|--------------|------------------|-----------------|----------------|--------------|
