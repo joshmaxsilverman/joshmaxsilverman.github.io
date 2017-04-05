@@ -5,13 +5,13 @@ R = .25
 reps = 1000000
 accum = 0
 for rep in range(reps):
-	T = []
+	Arrivals = []
 	for i in range(N):
-		T.append(random())
+		Arrivals.append(random())
 	fail = 0
 	for i in range(N):
 		for j in range(N):
-			if abs(T[i]-T[j]) > R:
+			if abs(Arrivals[i]-Arrivals[j]) > R:
 				fail = 1
 	if fail == 0:
 		accum += 1
