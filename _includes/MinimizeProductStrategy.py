@@ -1,35 +1,23 @@
+# fivethirtyeight.com Riddler https://fivethirtyeight.com/features/can-you-outsmart-our-elementary-school-math-problems/
+
 from random import randint
 
 def RemainingAverage2(A,B):
-	# The average of the remaining numbers now that A, B, and C are gone
+	# The average of the remaining numbers now that A and B are gone
 	return (45 - A - B)/8
 
 def RemainingAverage3(A,B,C):
 	# The average of the remaining numbers now that A, B, and C are gone
 	return (45 - A - B - C)/7
 
-HighHigh = [10,9]
-MidHigh = [7]
+HighHigh = [7,8,9]
 LowHigh = [5,6]
 HighLow = [3,4]
-MidLow = [2]
-LowLow = [0,1]
+LowLow = [0,1,2]
 
-reps = 1000000
-accum = 0
-for rep in range(reps):
-	# Generate four random integers between 0 and 9
-	A = randint(0,9)
-	B = A
-	while B == A:
-		B = randint(0,9)
-	C = A
-	while C == A or C == B:
-		C = randint(0,9)
-	D = A
-	while D == A or D == B or D == C:
-		D = randint(0,9)
-
+def	process(A,B,C,D):
+	global cases, accum
+	cases += 1
 	if A < 5:
 		UpLeft = A
 		if B < RemainingAverage2(A,B):
@@ -51,9 +39,8 @@ for rep in range(reps):
 					UpRight = D
 					DownRight = C
 		elif (A in HighLow and B in HighHigh) \
-			or (A in LowLow and B in LowHigh) \
-			or (A in MidLow or B in MidHigh):
-			# A and B "match" in being high or low in their range, or one is middling
+			or (A in LowLow and B in LowHigh):
+			# A and B "match" in being high or low in their range
 			UpRight = B
 			if C < RemainingAverage3(A,B,C):
 				DownLeft = C
@@ -83,15 +70,14 @@ for rep in range(reps):
 					DownLeft = C
 					UpLeft = D
 			else:
-				if C < D: 
+				if C < RemainingAverage3(A,B,C): 
 					UpLeft = C
 					DownLeft = D
 				else:
 					DownLeft = C
 					UpLeft = D
 		elif (A in HighHigh and B in HighLow) \
-			or (A in LowHigh and B in LowLow) \
-			or (A in MidHigh or B in MidLow):
+			or (A in LowHigh and B in LowLow):
 			UpLeft = B
 			if C < RemainingAverage3(A,B,C):
 				DownLeft = C
@@ -110,5 +96,17 @@ for rep in range(reps):
 				UpLeft = D
 	accum += (10*UpLeft + UpRight)*(10*DownLeft + DownRight)
 
-print(accum/reps)
- 
+cases = 0
+accum = 0
+for A in range(10):
+	for B in range(10):
+		if B == A:
+			continue
+		for C in range(10):
+			if C in [A,B]:
+				continue
+			for D in range(10):
+				if D in [A,B,C]:
+					continue
+				process(A,B,C,D)
+print(accum/cases)
