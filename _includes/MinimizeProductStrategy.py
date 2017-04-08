@@ -20,7 +20,7 @@ def	process(A,B,C,D):
 	cases += 1
 	if A < 5:
 		UpLeft = A
-		if B < RemainingAverage2(A,B):
+		if B < RemainingAverage2(A,B)-1:
 			# A and B both Low numbers
 			DownLeft = B
 			if C < RemainingAverage3(A,B,C):
@@ -60,7 +60,7 @@ def	process(A,B,C,D):
 	else:
 		# A is a High number
 		UpRight = A
-		if B >= RemainingAverage2(A,B):
+		if B >= RemainingAverage2(A,B)+2:
 			DownRight = B
 			if A > B:
 				if C > RemainingAverage3(A,B,C):
