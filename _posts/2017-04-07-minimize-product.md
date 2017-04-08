@@ -68,7 +68,7 @@ So here's what we do. Let $7$, $8$, and $9$ be the high-high numbers, $5$ and $6
 
 That brings us to the third number. Here, the only question is whether the fourth number is likelier to be higher or lower. If we have two numbers on the left or on the right, we place the third so that we are likely to pair the biggest left-number with the biggest right-number. If one number is on the left and one on the right, we place the third so that the bigger of the third and fourth numbers is likely to be on the left.
 
-And that's it. This strategy has an expectation of $1080.31$, which is $46.18\%$ of the expectation for random placements. I arrived at that figure computationally, but not by random Monte Carlo simulation. Instead, the code considers every possible sequence of four numbers and averages the products that result from following this strategy.
+And that's it. This strategy has an expectation of $1063.64$, which is $45.47\%$ of the expectation for random placements. I arrived at that figure computationally, but not by random Monte Carlo simulation. Instead, the code considers every possible sequence of four numbers and averages the products that result from following this strategy.
 
 Code:
 
