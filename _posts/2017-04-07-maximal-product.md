@@ -6,7 +6,9 @@ date: 2017/04/07
 ---
 
 >Consider the following game. In front of you is a stack of 10 cards printed with the numbers 0 through 9, one per card. The stack is shuffled and, sight unseen, you draw a number from the top. You look at the number and place it somewhere in the multiplication equation below. You then draw another number, look at it, and place it somewhere else in the equation. You do that two more times, until all four slots are filled. Once a digit is placed, it can’t be moved, and it can’t be drawn again because it’s no longer in the stack.
+>
 > ![Equation](/img/equation.png)
+>
 >Your goal is to build a multiplication equation with the lowest possible product. What is the optimal strategy? And how much of this game is luck and how much is skill? In other words, how much does the expected product under the optimal strategy differ from simply placing the cards randomly?
 
 <!--more-->
