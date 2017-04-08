@@ -27,7 +27,7 @@ $$= 121 \times \frac{1}{90}\left(\sum_{m=0}^9 \sum_{n=0}^9 mn - \sum_{n=0}^9 n^2
 
 The expectation for starting with the number $m$, placing it top-left, and then placing the others randomly:
 
-$$E(m\mbox{ top-left}) = E(100mC + 10mD + 10BC + BD)$$
+$$E(m\mbox{ top-left}) = E(100m \cdot C + 10m \cdot D + 10B \cdot C + B  \cdot D)$$
 
 $$ = 110 E(m \cdot C) + 11E(B \cdot C)$$
 
