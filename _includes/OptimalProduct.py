@@ -5,7 +5,8 @@
 
 # Strategy is a "dictionary" that contains optimal moves for pairs of
 # a situation and a number (the number on the new card):
-# E.g., Strategy[((A,B,C,D),N)] = 2 means that N should go in place of C.
+# E.g., Strategy[((2,-1,-1,9),4)] = 2 means that 4 should go in the third
+# (python tuple index 2) spot.
 Strategy = {}
 
 # Expectation is a dictionary from situations to the expectation of them
