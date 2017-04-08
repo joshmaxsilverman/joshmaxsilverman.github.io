@@ -57,7 +57,7 @@ There are $5040$ possible sequences of four cards, and $24$ possible ways to pla
 
 You're done!
 
-The code below quickly finds the optimal strategy for all $5,040$ possible card sequences. It confirms our educated guess that we should put first cards showing $4$ and under on the left and $5$ and above on the right, and it yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
+The code below quickly finds the optimal strategy for all $5,040$ possible card sequences. It confirms our educated guess that we should put first-cards showing $4$ and under on the left and $5$ and above on the right, and it yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
 
 ### Code:
 
