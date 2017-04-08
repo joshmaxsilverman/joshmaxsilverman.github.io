@@ -52,23 +52,9 @@ $$= \frac{7975}{3} - \frac{165}{2}m + \frac{11}{6}m^2$$
 
 This allows us to see that placing a first number less than or equal to $4$ on the top-left is the best bet, while placing one greater than or equal to $5$ on the right is the best bet.  This gives us a good, though admittedly not decisive, reason to think that whatever the optimal strategy is, it involves the same decision for the first move.
 
-After the first move, you've either placed a low number on the left or a high one on the right. Suppose it's a low one. Then, if you get a high second number (one at least as large as the average of the remaining numbers), you should place it somewhere on the right, because you have two more chances with equal numbers of low and high numbers remaining and so are likely to land a low number with at least one of them. And if you get a low second number, it should go on the bottom-left, because, with the low numbers depleted, you're otherwise taking a big ($5/14$) risk of ending up with a high number on the bottom-left. Similar reasoning applies to a high first number: if the second number is low it should go somewhere on the left, and if high, on the bottom-right. 
+When you get your second card, there are three places to choose from. For each of these, there are $56$ equally proabable sequences of a third and fourth card to consider. The calculation of the three expectations will be straightforward, if tedious, amounting to doing $168$ two-by-two-digit multiplications and averaging three sets of $56$ numbers. Choose a location with the highest of these expectations, and then proceed the same way with the third card---with only two expectations based on only $7$ possibilities to calculalte. You're done!
 
-If the first-second sequence is high-high or low-low, there is no further decision to make about the placement of the second number. However, if it is high-low or low-high there will be two choices as to where to put the second number. Here, we want to maximize the chances that, in the end, the bigger number on the right is paired with the bigger number on the left.
-
-Why? Call the four numbers, in order of smallest-to-largest, $A$, $B$, $C$, and $D$. The two natural candidate products are $AC \times BD$ and $AD \times BC$. The two products are:
-
-$$100 A\cdot B + 10 A \cdot D + 10 B \cdot C + C \cdot D $$
-
-$$100 A\cdot B + 10 A \cdot C + 10 B \cdot D + C \cdot D $$
-
-The latter minus the former is $10\times ((B(D-C))-(A(D-C))$, which is positive, and so it is the former product that we should aim for.
-
-So here's what we do. Let $7$, $8$, and $9$ be the high-high numbers, $5$ and $6$ be the low-high numbers, and similarly for low-low ($0$, $1$, $2$) and high-low ($3$, $4$). Suppose our first number is high-high; then, chances are it will be our highest number so we don't want our lowest number next to it. So if we get a low-low second number, it goes in the bottom-left. A high-low number goes in the top-left. If our first number was low-high, chances are it will not be our highest number, so it should be paired only with a low-low or mid-low number.  Similarly for a low first number.
-
-That brings us to the third number. Here, the only question is whether the fourth number is likelier to be higher or lower. If we have two numbers on the left or on the right, we place the third so that we are likely to pair the biggest left-number with the biggest right-number. If one number is on the left and one on the right, we place the third so that the bigger of the third and fourth numbers is likely to be on the left.
-
-And that's it. This strategy has an expectation of $1063.64$, which is $45.47\%$ of the expectation for random placements. I arrived at that figure computationally, but not by random Monte Carlo simulation. Instead, the code considers all $5040$ possible sequences of four numbers and averages the products that result from following this strategy.
+The code below quickly finds the optimal strategy for all card sequences and yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
 
 ### Code:
 
