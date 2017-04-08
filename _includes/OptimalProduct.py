@@ -20,30 +20,28 @@ def Process(situation):
 	global Strategy, Expectation
 	accum =  0
 	num_newcards = 0
-	for NewCard in range(10):
-		if NewCard in situation:
+	for newcard in range(10):
+		if newcard in situation:
 			continue
 		least_expected_product = [-1,10000]
 		for i in range(4):
 			if situation[i] == -1:
 				sitlist = list(situation)
-				sitlist[i] = NewCard
-				newsituation = tuple(sitlist)
-				if not -1 in newsituation:
-					Expectation[newsituation] = (10*newsituation[0]+newsituation[1])*(10*newsituation[2]+newsituation[3])
-				elif not newsituation in Expectation:
-					Process(newsituation)
-				E = Expectation[newsituation]
+				sitlist[i] = newcard
+				newsit = tuple(sitlist)
+				if not -1 in newsit:
+					Expectation[newsit] = \
+						(10*newsit[0]+newsit[1])*(10*newsit[2]+newsit[3])
+				elif not newsit in Expectation:
+					Process(newsit)
+				E = Expectation[newsit]
 				if E < least_expected_product[1]:
 					least_expected_product = [i,E]
-		Strategy[(situation,NewCard)] = least_expected_product[0]
+		Strategy[(situation,newcard)] = least_expected_product[0]
 		accum += least_expected_product[1]
 		num_newcards += 1
 	Expectation[situation] = accum/num_newcards
 
 Process((-1,-1,-1,-1)) 
 
-print(Expectation[(-1,-1,-1,-1)])
-
-
-
+print("Optimal strategy expects",Expectation[(-1,-1,-1,-1)])
