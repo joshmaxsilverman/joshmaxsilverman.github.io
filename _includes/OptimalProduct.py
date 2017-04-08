@@ -3,7 +3,7 @@
 # A situation is a tuple (A,B,C,D), representing AB*CD, where each element
 # is a digit or -1 to represent an unfilled position.
 
-# Strategy is a "disctionary" that contains optimal moves for pairs of
+# Strategy is a "dictionary" that contains optimal moves for pairs of
 # a situation and a number (the number on the new card):
 # E.g., Strategy[((A,B,C,D),N)] = 2 means that N should go in place of C.
 Strategy = {}
@@ -15,7 +15,7 @@ Expectation = {}
 def Process(situation):
 	# Determine the optimal strategies for playing with this situation
 	# and any next card, and generate the expectation of playing 
-	# optimally in this situation.
+	# optimally starting from this situation.
 
 	global Strategy, Expectation
 	accum =  0
@@ -44,4 +44,6 @@ def Process(situation):
 Process((-1,-1,-1,-1)) 
 
 print(Expectation[(-1,-1,-1,-1)])
+
+
 
