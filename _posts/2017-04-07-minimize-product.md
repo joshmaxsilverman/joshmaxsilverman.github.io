@@ -36,7 +36,7 @@ $$ E(m \cdot C) = \left(\sum_{n=0}^9 \frac{1}{9} mn\right) - \frac{1}{9}m^2
 
 $$ E(B \cdot C) = \frac{1}{72}\left(\left(\sum_{n=0}^9\sum_{k=0}^9 nk\right) - \left(\sum_{n=0}^9 n^2\right) - \left( 2\times \sum_{n=0}^9 mn\right) + 2m^2 \right) $$
 
-$$ = \frac{1740-90m+2m^2}{72}
+$$ = \frac{1740-90m+2m^2}{72} $$
 
 $$E(m\mbox{ top-left}) = 110 \times \frac{45m-m^2}{9} + 11 \times \frac{1740-90m+2m^2}{72}$$
 
