@@ -23,7 +23,8 @@ $$E = E(100A\cdot C + 10A \cdot D + 10 B \cdot C + B \cdot D)$$
 
 $$= 121 E(A\cdot C)$$
 
-$$= 121 \times \frac{1}{90}\left(\sum_{m=0}^9 \sum_{n=0}^9 mn - \sum_{n=0}^9 n^2\right) = 121 \times \frac{58}{3} \approx 2339.33 $$
+$$= 121 \times \frac{1}{90}\left(\sum_{m=0}^9 \sum_{n=0}^9 mn - \sum_{n=0}^9 n^2\right) 
+= 121 \times \frac{58}{3} = 2339\frac{1}{3} $$
 
 The expectation for starting with the number $m$, placing it top-left, and then placing the others randomly:
 
