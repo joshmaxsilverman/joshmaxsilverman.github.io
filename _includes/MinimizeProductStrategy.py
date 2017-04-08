@@ -2,14 +2,6 @@
 
 from random import randint
 
-def RemainingAverage2(A,B):
-	# The average of the remaining numbers now that A and B are gone
-	return (45 - A - B)/8
-
-def RemainingAverage3(A,B,C):
-	# The average of the remaining numbers now that A, B, and C are gone
-	return (45 - A - B - C)/7
-
 HighHigh = [7,8,9]
 LowHigh = [5,6]
 HighLow = [3,4]
@@ -20,10 +12,10 @@ def	process(A,B,C,D):
 	cases += 1
 	if A < 5:
 		UpLeft = A
-		if B < RemainingAverage2(A,B)-1:
+		if B < (45 - A - B)/8 - 1:
 			# A and B both Low numbers
 			DownLeft = B
-			if C < RemainingAverage3(A,B,C):
+			if C < (45 - A - B - C)/7:
 				# Couple C with the lower of A and B
 				if A < B:
 					UpRight = C
@@ -42,7 +34,7 @@ def	process(A,B,C,D):
 			or (A in LowLow and B in LowHigh):
 			# A and B "match" in being high or low in their range
 			UpRight = B
-			if C < RemainingAverage3(A,B,C):
+			if C < (45 - A - B - C)/7:
 				DownLeft = C
 				DownRight = D
 			else:
@@ -51,7 +43,7 @@ def	process(A,B,C,D):
 		else:
 			# A in HighLow and B in LowHigh or A in LowLow and B in HighHigh
 			DownRight = B
-			if C < RemainingAverage3(A,B,C):
+			if C < (45 - A - B - C)/7:
 				DownLeft = C
 				UpRight = D
 			else:
@@ -60,17 +52,17 @@ def	process(A,B,C,D):
 	else:
 		# A is a High number
 		UpRight = A
-		if B >= RemainingAverage2(A,B)+2:
+		if B >= (45 - A - B)/8 + 2:
 			DownRight = B
 			if A > B:
-				if C > RemainingAverage3(A,B,C):
+				if C > (45 - A - B - C)/7:
 					UpLeft = C
 					DownLeft = D
 				else:
 					DownLeft = C
 					UpLeft = D
 			else:
-				if C < RemainingAverage3(A,B,C): 
+				if C < (45 - A - B - C)/7: 
 					UpLeft = C
 					DownLeft = D
 				else:
@@ -79,7 +71,7 @@ def	process(A,B,C,D):
 		elif (A in HighHigh and B in HighLow) \
 			or (A in LowHigh and B in LowLow):
 			UpLeft = B
-			if C < RemainingAverage3(A,B,C):
+			if C < (45 - A - B - C)/7:
 				DownLeft = C
 				DownRight = D
 			else:
@@ -88,7 +80,7 @@ def	process(A,B,C,D):
 		else:
 			# A in HighHigh and B in LowLow or A in LowHigh and B in HighLow
 			DownLeft = B
-			if C < RemainingAverage3(A,B,C):
+			if C < (45 - A - B - C)/7:
 				UpLeft = C
 				DownRight = D
 			else:
