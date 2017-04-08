@@ -70,7 +70,7 @@ That brings us to the third number. Here, the only question is whether the fourt
 
 And that's it. This strategy has an expectation of $1063.64$, which is $45.47\%$ of the expectation for random placements. I arrived at that figure computationally, but not by random Monte Carlo simulation. Instead, the code considers all $5040$ possible sequences of four numbers and averages the products that result from following this strategy.
 
-Code:
+### Code:
 
 ```python
 {% include MinimizeProductStrategy.py %}
