@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Maximal Product
+title: Minimize Product
 date: 2017/04/07
 ---
 
@@ -66,6 +66,6 @@ And that's it.
 
 Code:
 
-{% include minimalproduct.py %}
+{% include MinimizeProductStrategy.py %}
 
 <br>
