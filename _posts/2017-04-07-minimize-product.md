@@ -50,9 +50,9 @@ $$ = 110\times \frac{1740-90m+2m^2}{72} + 11 \times \frac{45m-m^2}{9}$$
 
 $$= \frac{7975}{3} - \frac{165}{2}m + \frac{11}{6}m^2$$
 
-This allows us to see that placing a first number less than or equal to $4$ on the top-left is the best bet, while placing one greater than or equal to $5$ on the right is the best bet.  This gives us a good, if not decisive, reason to think that whatever the optimal strategy is, it involves the same decision for the first move.
+This allows us to see that placing a first number less than or equal to $4$ on the top-left is the best bet, while placing one greater than or equal to $5$ on the right is the best bet.  This gives us a good, though admittedly not decisive, reason to think that whatever the optimal strategy is, it involves the same decision for the first move.
 
-After the first move, you've either placed a low number on the left or a high one on the right. Suppose it's a low one. Then, if you get a high second number (one at least as large as the average of the remaining numbers), surely you should place it somewhere on the right, because you have two more chances with equal numbers of low and high numbers remaining and so are likely to land a low number with at least one of them. And if you get a low second number, it should go on the bottom-left, because, with the low numbers depleted, you're otherwise taking a big ($5/14$) risk of ending up with a high number on the bottom-left. Similar reasoning applies to a high first number: if the second number is low it should go somewhere on the left, and if high, on the bottom-right. 
+After the first move, you've either placed a low number on the left or a high one on the right. Suppose it's a low one. Then, if you get a high second number (one at least as large as the average of the remaining numbers), you should place it somewhere on the right, because you have two more chances with equal numbers of low and high numbers remaining and so are likely to land a low number with at least one of them. And if you get a low second number, it should go on the bottom-left, because, with the low numbers depleted, you're otherwise taking a big ($5/14$) risk of ending up with a high number on the bottom-left. Similar reasoning applies to a high first number: if the second number is low it should go somewhere on the left, and if high, on the bottom-right. 
 
 If the first-second sequence is high-high or low-low, there is no further decision to make about the placement of the second number. However, if it is high-low or low-high there will be two choices as to where to put the second number. Here, we want to maximize the chances that, in the end, the bigger number on the right is paired with the bigger number on the left.
 
@@ -64,11 +64,11 @@ $$100 A\cdot B + 10 A \cdot C + 10 B \cdot D + C \cdot D $$
 
 The latter minus the former is $10\times ((B(D-C))-(A(D-C))$, which is positive, and so it is the former product that we should aim for.
 
-So here's what we do. Let $8$ and $9$ be the high-high numbers, $5$ and $6$ be the low-high numbers, and $7$ be the mid-high number. Similarly for low-low, mid-low, and high-low. Suppose our first number  was high-high; then, chances are it will be our highest number so we don't want our lowest number next to it. So if we get a low-low second number, it goes in the bottom-left. A high-low number goes in the top-left, and the mid-low number $2$ goes in either right slot at random. If our first number was low-high, chances are it will not be our highest number, so it should be paired only with a low-low or mid-low number.  Similarly for a low first number.
+So here's what we do. Let $7$, $8$, and $9$ be the high-high numbers, $5$ and $6$ be the low-high numbers, and similarly for low-low ($0$, $1$, $2$) and high-low ($3$, $4$). Suppose our first number is high-high; then, chances are it will be our highest number so we don't want our lowest number next to it. So if we get a low-low second number, it goes in the bottom-left. A high-low number goes in the top-left. If our first number was low-high, chances are it will not be our highest number, so it should be paired only with a low-low or mid-low number.  Similarly for a low first number.
 
 That brings us to the third number. Here, the only question is whether the fourth number is likelier to be higher or lower. If we have two numbers on the left or on the right, we place the third so that we are likely to pair the biggest left-number with the biggest right-number. If one number is on the left and one on the right, we place the third so that the bigger of the third and fourth numbers is likely to be on the left.
 
-And that's it.
+And that's it. This strategy has an expectation of $1080.31$, a figure I arrived at computationally but not by random Monte Carlo simulation. Instead my code considers every possible sequence of four numbers and averages the resulting products.
 
 Code:
 
