@@ -54,12 +54,12 @@ This allows us to see that placing a first number less than or equal to $4$ on t
 
 When you get your second card, there are three places to choose from. For each of these, there are $56$ equally proabable sequences of a third and fourth card to consider. The calculation of the three expectations will be straightforward, if tedious, amounting to doing $168$ two-by-two-digit multiplications and averaging three sets of $56$ numbers. Choose a location with the highest of these expectations, and then proceed the same way with the third card---with only two expectations based on only $7$ possibilities to calculalte. You're done!
 
-The code below quickly finds the optimal strategy for all card sequences and yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
+The code below quickly finds the optimal strategy for all card sequences. It confirms our educated guess that we should put first cards $4$ and below on the left and $5$ and up on the right, and it yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
 
 ### Code:
 
 ```python
-{% include MinimizeProductStrategy.py %}
+{% include OptimalProduct.py %}
 ```
 
 <br>
