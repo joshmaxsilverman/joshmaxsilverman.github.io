@@ -111,3 +111,4 @@ for rep in range(reps):
 	accum += (10*UpLeft + UpRight)*(10*DownLeft + DownRight)
 
 print(accum/reps)
+ 
