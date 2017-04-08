@@ -70,6 +70,8 @@ And that's it.
 
 Code:
 
+```python
 {% include MinimizeProductStrategy.py %}
+```
 
 <br>
