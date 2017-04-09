@@ -59,7 +59,7 @@ You're done!
 
 The code below quickly finds the optimal strategy for all $5,040$ possible card sequences. It confirms our educated guess that we should put first-cards showing $4$ and under on the left and $5$ and above on the right, and it yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
 
-Here's a chart to give a sense of the crux of the strategy---the placement of the second card. As you can see, the strategy resists easy summary---there's no simple intuition behind it.
+Here's a chart to give a sense of the crux of the strategy---the placement of the second card (in the chart, "UL" means upper-left, etc.). As you can see, the strategy resists easy summary---there's no simple intuition behind it.
 
 ![Second Card Placement](/img/MinimalProduct.png)
 
