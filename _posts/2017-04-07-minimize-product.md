@@ -57,7 +57,7 @@ There are $5040$ possible sequences of four cards, and $24$ possible ways to pla
 
 You're done!
 
-The code below quickly finds the optimal strategy for ever possible four-card sequence. It confirms our educated guess that we should put first-cards showing $4$ and under on the left and $5$ and above on the right, and it yields an overall expectation of $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
+The code below quickly finds the optimal strategy for every possible four-card sequence. It confirms our educated guess that we should put first-cards showing $4$ and under on the left and $5$ and above on the right, and it yields an overall expectation of about $1056.84$, which is about $45.18\%$ of the expectation of playing randomly.
 
 Here's a chart detailing the crux of the strategy, which is the placement of the second card (in the chart, "UL" means upper-left, etc.). As you can see, the strategy resists easy summary---there's no simple intuition behind it.
 
