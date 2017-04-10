@@ -19,7 +19,7 @@ date: 2017/04/07
 
 First we'll consider how to proceed with only pencil and paper, and then we'll bring out the computer to determine how our strategy would play out for all possible sequences of four cards.
 
-Here is the expectation for a randomly chosen $AB \times CD$:
+Here is the expectation for a randomly chosen $AB \times CD$ (relying on the [linearity of expectation](https://brilliant.org/wiki/linearity-of-expectation/)):
 
 $$E = E(100A\cdot C + 10A \cdot D + 10 B \cdot C + B \cdot D)$$
 
