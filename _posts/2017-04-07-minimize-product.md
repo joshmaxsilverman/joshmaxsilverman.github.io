@@ -69,7 +69,7 @@ In general we want low numbers to end up on the left and high ones on the right.
 
 And we profit from matching very low numbers with not-so-high numbers, and not-so-low numbers with very high ones. For example, $19\times 35$ is $665$, whereas $15\times 39$ is $585$. This explains why when the first card is $1$ a second-card $9$ goes in the lower right, whereas when the first card is $3$ a second-card $5$ goes in the upper right. 
 
-And if you get a $5$ (which goes upper-right) followed by a $6$, you have a $9/14$ chance of getting at least one of $7$, $8$, and $9$ in the remaining two cards; so it pays to take the hit and place the $6$ on the left, treating it as a very high "low card," and leaving open the lower right for the expected higher card. Similar reasoning explains why it pays to treat $4$ as a not-so-high high card with a low first card (apart from $0$), and to treat $5$ as a not-so-low low card given a high first card. 
+And if you get a $5$ (which goes upper-right) followed by a $6$, you have a $9/14$ chance of getting at least one of $7$, $8$, and $9$ in the remaining two cards; so it pays to take the hit and place the $6$ on the left, treating it as a very high "low card," and leaving open the lower right for the expected higher card. Similar reasoning explains why it pays to treat $4$ as a not-so-high high second card with a low first card (apart from $0$), and to treat $5$ as a not-so-low low second card given a high first card. 
 
 ### Code:
 
