@@ -28,7 +28,7 @@ $$= 121 E(A\cdot C)$$
 $$= 121 \times \frac{1}{90}\left(\sum_{m=0}^9 \sum_{n=0}^9 mn - \sum_{n=0}^9 n^2\right) 
 = 121 \times \frac{58}{3} = 2339\frac{1}{3} $$
 
-Where should we put the first card---on the right or on the left? Here's a (non-airtight) argument that cards showing $4$ and below should go on the left, and the others on the right.
+Where should we put the first card---on the right or on the left (we'll assume it goes in the top row, though of course it doesn't matter)? Here's a (non-airtight) argument that cards showing $4$ and below should go on the left, and the others on the right.
 
 The expectation for starting with the number $m$, placing it top-left, and then placing the others randomly:
 
