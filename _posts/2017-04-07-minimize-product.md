@@ -63,7 +63,7 @@ Here's a chart detailing the crux of the strategy, which is the placement of the
 
 ![Second Card Placement](/img/MinimalProduct.png)
 
-As you can see, the strategy resists easy summary---there's no simple intuition behind it.  However, a few observations make some sense of it. In general we want low numbers to end up on the left and high ones on the right, the interesting exception being a first-card value of $0$, where the upper-right card will have an out-sized effect on the product. And we profit from matching very low numbers with not-so-high numbers and not-so-low numbers with very high ones (for example, $19\times 35$ is $665$, whereas $15\times 39$ is $585$, which helps explain why when the first card is $1$ a second-card $9$ goes in the bottom-right, whereas when the first card is $3$ a second-card $5$ goes in the upper-right).
+As you can see, the strategy resists easy summary---there's no simple intuition behind it.  However, a few observations make some sense of it. In general we want low numbers to end up on the left and high ones on the right, the interesting exception being a first-card value of $0$, where the upper-right card will have an out-sized effect on the product. And we profit from matching very low numbers with not-so-high numbers and not-so-low numbers with very high ones. For example, $19\times 35$ is $665$, whereas $15\times 39$ is $585$, which helps explain why when the first card is $1$ a second-card $9$ goes in the bottom-right, whereas when the first card is $3$ a second-card $5$ goes in the upper-right.
 
 ### Code:
 
