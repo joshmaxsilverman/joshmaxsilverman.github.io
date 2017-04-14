@@ -16,7 +16,8 @@ date: 2017/04/14
 > - You start with an empty, nine-person bench.
 > - There are two parties, and each has a 50 percent chance of winning the presidency and a 50 percent chance of winning the Senate in each election.
 > - The outcomes of Senate elections and presidential elections are independent.
-> - The length of time for which a justice serves is uniformly distributed between zero and 40 years.Every election has probability $1/2$ of giving joint control to one party or the other.
+> - The length of time for which a justice serves is uniformly distributed between zero and 40 years.
+> - Every election has probability $1/2$ of giving joint control to one party or the other.
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/how-many-bingo-cards-are-there-in-the-world/))
 
@@ -32,7 +33,7 @@ That value is also the expected number of vacancies _in that seat_ at any one ti
 ### Code:
 
 ```python
-{% include OptimalProduct.py %}
+{% include SupremeVacancies.py %}
 ```
 
 <br>
