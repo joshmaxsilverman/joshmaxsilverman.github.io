@@ -17,7 +17,9 @@ for rep in range(reps):
 	j = 0
 	for i in range(9-Vacancies):
 		if Expiration[i] <= rep:
+			# Seat vacated since last election
 			if President == Senate:
+				# Seat filled as needed until expiring after this election
 				NewExpiration[j] = Expiration[i]
 				while NewExpiration[j] <= rep:
 					NewExpiration[j] = NewExpiration[j] + uniform(0,20)
