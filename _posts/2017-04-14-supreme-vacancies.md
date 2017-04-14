@@ -6,11 +6,7 @@ date: 2017/04/14
 ---
 
 >Imagine that U.S. Supreme Court nominees are only confirmed if the same party holds the presidency and the Senate. What is the expected number of vacancies on the bench in the long run?
-
-
 <!--more-->
-
-
 >You can assume the following:
 >
 > - You start with an empty, nine-person bench.
@@ -30,7 +26,8 @@ The probability that a given seat is vacant at any one time is:
 $$ \frac\frac{{3}{2}}{20 + \frac{3}{2}} = \frac{3}{43}$$
 
 That value is also the expected number of vacancies _in that seat_ at any one time. And so the total expected number of vacancies at any one time is nine times that, or $27/43$, which is is about $.628$
-### Code:
+
+### Code (Python):
 
 ```python
 {% include SupremeVacancies.py %}
