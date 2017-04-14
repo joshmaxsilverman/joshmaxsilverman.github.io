@@ -29,7 +29,7 @@ for rep in range(num_reps):
 		# Looping through the seats
 		if rep-1 < Expiration[i] <= rep:
 			# Seat i has been vacated since the last election
-			if President == Senate:
+			if SameParty:
 				# Seat was filled as needed until due to expire after 
 				# this election, so it's been continuously occupied,
 				# and adds nothing to average vacancies.
@@ -57,12 +57,10 @@ for rep in range(num_reps):
 	accum += AvgVacancies
 
 	# Hold elections
-	Senate = randint(0,1)
-	if rep/2 == int(rep/2):
-		President = randint(0,1)
+	SameParty = randint(0,1)
 
 	# Fill empty seats
-	if President == Senate:
+	if SameParty:
 		for i in Vacancies:
 			Expiration[i] = rep + uniform(0,20)
 		# This is the only place seats are removed from the vacancies list.
