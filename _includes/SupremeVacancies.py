@@ -1,10 +1,9 @@
 from random import randint,uniform
 
-reps = 2000000
+reps = 10000000
 accum = 0
 
-President = 0
-Vacancies = 9
+Vacancies = [0,1,2,3,4,5,6,7,8]
 Expiration = [reps]*9
 
 for rep in range(reps):
@@ -12,26 +11,26 @@ for rep in range(reps):
 
 	# Figure the average number of vacancies since
 	# the last election, including new vacancies.
-	AvgVacancies = Vacancies
+	AvgVacancies = len(Vacancies)
 	NewExpiration = [reps]*9
-	j = 0
-	for i in range(9-Vacancies):
+	for i in range(9):
 		if Expiration[i] <= rep:
-			# Seat vacated since last election
+			# Seat i has been vacated since last election
 			if President == Senate:
-				# Seat filled as needed until expiring after this election
-				NewExpiration[j] = Expiration[i]
-				while NewExpiration[j] <= rep:
-					NewExpiration[j] = NewExpiration[j] + uniform(0,20)
-				j += 1
+				# Seat was filled as needed until expiring after 
+				# this election, so it's now occupied
+				NewExp = Expiration[i]
+				while NewExp <= rep:
+					NewExp += uniform(0,20)
+				NewExpiration[i] = NewExp
 			else:
-				AvgVacancies += rep - Expiration[i]
-				Vacancies += 1
+				# Seat has been unfilled for (rep - Expiration[i]) reps
+				AvgVacancies += (rep - Expiration[i])
+				Vacancies.append(i)
 		else:
-			NewExpiration[j] = Expiration[i]
-			j += 1
+			# Seat occupied
+			NewExpiration[i] = Expiration[i]
 	Expiration = NewExpiration
-
 	accum += AvgVacancies
 
 	# Hold elections
@@ -41,8 +40,8 @@ for rep in range(reps):
 
 	# Fill empty seats
 	if President == Senate:
-		for i in range(9-Vacancies,9):
+		for i in Vacancies:
 			Expiration[i] = rep + uniform(0,20)
-			Vacancies -= 1
+		Vacancies = []
 
 print(accum/reps)
