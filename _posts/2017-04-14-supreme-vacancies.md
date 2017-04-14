@@ -22,7 +22,7 @@ Every election has probability $1/2$ of giving joint control to one party or the
 
 The probability that a given seat is vacant at any one time is:
 
-$$ \frac\frac{{3}{2}}{20 + \frac{3}{2}} = \frac{3}{43}$$
+$$ \frac{\frac{3}{2}}{20 + \frac{3}{2}} = \frac{3}{43}$$
 
 That value is also the expected number of vacancies _in that seat_ at any one time. And so the total expected number of vacancies at any one time is nine times that, or $27/43$, which is is about $.628$
 
