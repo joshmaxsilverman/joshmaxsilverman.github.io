@@ -1,6 +1,6 @@
 from random import randint,uniform
 
-reps = 1000000
+reps = 2000000
 accum = 0
 
 President = 0
@@ -16,9 +16,9 @@ for rep in range(reps):
 	NewExpiration = [reps]*9
 	j = 0
 	for i in range(9-Vacancies):
-		if Expiration[i] < rep:
+		if Expiration[i] <= rep:
 			if President == Senate:
-				NewExpiration[j] = rep + uniform(0,20)
+				NewExpiration[j] = Expiration[i] + uniform(0,20)
 				j += 1
 			else:
 				AvgVacancies += rep - Expiration[i]
