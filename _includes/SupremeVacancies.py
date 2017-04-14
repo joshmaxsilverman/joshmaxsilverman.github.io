@@ -18,7 +18,9 @@ for rep in range(reps):
 	for i in range(9-Vacancies):
 		if Expiration[i] <= rep:
 			if President == Senate:
-				NewExpiration[j] = Expiration[i] + uniform(0,20)
+				NewExpiration[j] = Expiration[i]
+				while NewExpiration[j] <= rep:
+					NewExpiration[j] = NewExpiration[j] + uniform(0,20)
 				j += 1
 			else:
 				AvgVacancies += rep - Expiration[i]
