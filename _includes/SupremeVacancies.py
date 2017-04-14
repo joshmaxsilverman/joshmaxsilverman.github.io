@@ -1,6 +1,6 @@
 from random import randint,uniform
 
-reps = 10000000
+reps = 1000000
 accum = 0
 
 Vacancies = [0,1,2,3,4,5,6,7,8]
@@ -14,7 +14,7 @@ for rep in range(reps):
 	AvgVacancies = len(Vacancies)
 	NewExpiration = [reps]*9
 	for i in range(9):
-		if Expiration[i] <= rep:
+		if Expiration[i] <= rep and not i in Vacancies:
 			# Seat i has been vacated since last election
 			if President == Senate:
 				# Seat was filled as needed until expiring after 
@@ -28,7 +28,7 @@ for rep in range(reps):
 				AvgVacancies += (rep - Expiration[i])
 				Vacancies.append(i)
 		else:
-			# Seat occupied
+			# Seat is occupied or was already vacant as of the last election
 			NewExpiration[i] = Expiration[i]
 	Expiration = NewExpiration
 	accum += AvgVacancies
