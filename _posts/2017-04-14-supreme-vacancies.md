@@ -56,9 +56,9 @@ But terms that start some positive time $t$ into a (joint-control) cycle and end
 
 Taking that complication explicitly into account would involve finding an expression for the nonuniform distribution of such end-times, which to my mind looks like a task better suited to the talents of others. Less imposing is the task of showing that, to a very close approximation, the distribution is in fact uniform; that is, that we can assume that it is uniform with very little effect on our calculation.
 
-Every term that ends in a divided-control cycle (every "TEDC") has its root in a term that started at the start of a joint-control cycle. The first-generation TEDCs have their ends uniformly distributed within cycles, producing uniformly-distributed starting points for second-generation TEDCs.
+Every term that ends in a divided-control cycle (every "TEDC") has a most-immediate predecessor term (perhaps itself) that started at the start of a joint-control cycle. The first-generation TEDCs themselves start at the starts of cycles, and so have their ends uniformly distributed within cycles, producing uniformly-distributed starting points for second-generation TEDCs.
 
-To find out how the ends of second-generation TEDCs are distributed within cycles, we calculate the chance that a TEDC with start time $t_1$ into a cycle ends less than $t_2$ into a cycle. If $t_1 \leq t_2$, then that chance is:
+To find out how the ends of second-generation TEDCs (and so the starts of third-gens) are distributed within cycles, we calculate the chance that a TEDC with start time $t_1$ into a cycle ends less than $t_2$ into a cycle. If $t_1 \leq t_2$, then that chance is:
 
 $$\frac{19t_2+t_1}{19+t_1}$$
 
@@ -85,7 +85,7 @@ Thus the expected length in cycles of a vacancy after a term starting at $t$ is:
 
 $$\frac{19+t}{40} \times \frac{3}{2} = \frac{3(19+t)}{80}$$
 
-Now to determine how term start-times are distributed. There are two cases. The terms that start some positive time into a joint-control cycle are uniformly distributed within such cycles. And there are terms that start right when joint control newly occurs. We need to know what proportion of all terms are of this latter kind.
+Now to determine how term start-times are distributed. There are two cases. The terms that start some positive time into a joint-control cycle are uniformly distributed within such cycles. And there are terms that start right when joint control newly occurs (i.e., $t=0$). We need to know what proportion of all terms are of this latter kind.
 
 The terms that start at the start of a cycle (after the very start, and with exceptions of probability zero) are the successors of terms that end in divided-control cycles, and so there are exactly as many of the former as of the latter. Let $p$ be the probability that a term starts at the start of a cycle, which is also the probability that a term ends in a divided-control cycle. We will find $p$ by relying on both facts about it. 
 
@@ -107,7 +107,7 @@ $$ \frac{39}{81} \times \frac{57}{80}
 
 $$ = \frac{2223}{6480} + \frac{91}{240} = \frac{13}{18} = .7\overline{2} $$
 
-That's in cycles, so the average vacancy is $13/9$, or $/1.\overline{4}$ years.
+That's in cycles, so the average vacancy is $13/9$, or $1.\overline{4}$ years.
 
 The expected number of vacancies at any random time, then, is:
 
