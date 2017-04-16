@@ -18,7 +18,7 @@ date: 2017/04/14
 
 ## Solution:
 
-Here is a broad-strokes "solution" that turns out to be just a pretty good approximation, but contains the essentials of the correct approach.
+Here is a broad-strokes "solution" that, while it turns out to be just a pretty good approximation, contains the essentials of the correct approach.
 
 Every election has probability $1/2$ of giving joint control to one party or the other for the next two years. When that happens, all vacancies are filled immediately, and for those two years, new vacancies are filled instantly.
 
