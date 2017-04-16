@@ -33,11 +33,11 @@ That value is also (close to) the expected number of vacancies in that seat at a
 
 ### Appendix 1: Why Only "Close To"?
 
-There are two simplifications (false assumptions) in the simple reasoning above. First, it's not true that terms are exactly equally likely to end in joint- and divided-control cycles. Second, term-ends are not exactly uniformly distributed as to where they fall within cycles. The second inexactness turns out to be negligible in effect, whereas the first is more significant.
+There are two simplifications in the simple reasoning above. First, it's not true that terms are exactly equally likely to end in joint- and divided-control cycles. Second, term-ends are not exactly uniformly distributed as to where they fall within cycles. The second inexactness turns out to be negligible in effect, whereas the first is more significant.
 
 The fact that any given term (after the very first ones, which we can ignore as negligible in the long term) starts in a joint-control cycle---because only then will the Senate confirm a nomination---entails that the probability is a little more than $1/2$ that it will also end in a joint-control cycle, because there is probability $1$ that it ends in joint control if it ends in the same cycle in which it began (of which there is some positive probability up to $1/20$), and $1/2$ if it ends in any later one. 
 
-To cut to the chase, this makes the average duration a vacancy not $3/2$ but about $1.45$ and the expected number of vacancies not $.628$ but about $.608$. Details follow.
+To cut to the chase, this makes the average duration a vacancy not $1.5$ but about $1.\overline{4}$ and the expected number of vacancies not $.628$ but about $.606$. Details follow.
 
 Let's forget about years and calculate in time units of (two-year) cycles. Term durations are uniformly distributed between $0$ and $20$ cycles, with an expectation of $10$. Each term (after the starting ones) starts some time $t$, between $0$ and $1$, into a joint-control cycle. If it ends in the same cycle ($(1-t)/20$ chance of that), there is probability $1$ of ending in a joint-control cycle. If not ($1-(1-t)/20$ chance), there is probability $1/2$ of that. So a term starting $t$ into a cycle has the following chance of ending in a joint-control cycle:
 
@@ -50,11 +50,11 @@ $$1 - \frac{21-t}{40} = \frac{19+t}{40}$$
 
 of ending in a divided-control cycle.
 
-The many terms that start at the beginning of joint-control cycles (after some divided-control ones), have end-times uniformly distributed between $0$ and $20$ cycles after the cycle start-times, and so in particular the end times that fall in divided-control cycles are uniformly distributed across them. So such terms that end in divided-control cycles have expected vacancies of exactly $3/2$.
+The many terms that start at the beginning of joint-control cycles (after some divided-control ones), have end-times uniformly distributed between $0$ and $20$ cycles after the cycle start-times, and so in particular the end times that fall in divided-control cycles are uniformly distributed across them. So such terms that end in divided-control cycles have expected vacancies of exactly $3/2$ cycles.
 
-But terms that start some positive time $t$ into a (joint-control) cycle and end in a divided-control cycle have a slightly higher chance of ending before than ending after $t$ into a cycle.  Such terms have end-times uniformly spread over the periods that consist of the $19$ complete cycles within their possible durations, plus the initial $t$ portion of the cycle following those $19$. That means that such a term has probability $20t/(19+t)$ of ending less than $t$ into its end cycle, which is a bit greater than $t$.
+But terms that start some positive time $t$ into a (joint-control) cycle and end in a divided-control cycle have a slightly higher chance of ending at times before $t$ than ending at times after $t$ into a cycle.  Such terms have end-times uniformly spread over the periods that consist of the $19$ complete cycles within their possible durations, plus the initial $t$ portion of the cycle following those $19$. That means that such a term has probability $20t/(19+t)$ of ending less than $t$ into its end cycle, which is a bit greater than $t$.
 
-Taking that complication explicitly into account would involve finding an expression for the nonuniform distribution of such end-times, which from where I'm sitting looks like task better suited to the talents of others. Less imposing is the task of showing that, to a very close approximation, the distribution is in fact uniform; that is, that we can assume that it is uniform with very little effect on our calculation.
+Taking that complication explicitly into account would involve finding an expression for the nonuniform distribution of such end-times, which to my mind looks like a task better suited to the talents of others. Less imposing is the task of showing that, to a very close approximation, the distribution is in fact uniform; that is, that we can assume that it is uniform with very little effect on our calculation.
 
 Every term that ends in a divided-control cycle (every "TEDC") has its root in a term that started at the start of a joint-control cycle. The first-generation TEDCs have their ends uniformly distributed within cycles, producing uniformly-distributed starting points for second-generation TEDCs.
 
