@@ -72,8 +72,8 @@ for rep in range(num_reps):
 	# Hold elections
 	SameParty = randint(0,1)
 
-	# Fill empty seats
 	if SameParty:
+		# Fill empty seats
 		for i in Vacancies:
 			# Again we increment num_vacancies upon filling one.
 			num_vacancies += 1
