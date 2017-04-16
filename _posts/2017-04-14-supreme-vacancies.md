@@ -77,7 +77,7 @@ Here's a graph of this function together with the function $y = t_2$, which char
 
 ![Close functions.](/img/CloseFunctions.PNG)
 
-As you can see, this distribution is so extremely close to uniform that to a very good approximation we can assume that second-gen TEDCs too have end times uniformly distributed in cycles, and hence that so do third-gen, and so on. That is, we can assume that to a very good approximation all term end-times are uniformly distributed as to where they occur within cycles.
+As you can see, this distribution is so extremely close to uniform that to a very good approximation we can assume that second-gen TEDCs too have end times uniformly distributed in cycles, and hence that so do third-gen, and so on. That is, we can assume that to a very good approximation all term end-times are uniformly distributed as to where they occur within cycles. Whew.
 
 To calculate the expected length of a vacancy, we'll need to determine the distribution of term start-times. But first we'll calculate the expected length of a vacancy as a function of the time $t$ that the previous term began. We established above the chance ($(19+t)/40$) that a term starting $t$ into a cycle ends in a divided-control cycle. Because we now know that the distribution within that ending cycle is basically uniform, we expect the term, if it does end in divided control, to end halfway though a cycle, and so the expected vacancy is $3/2$ cycles---that is, half a cycle plus the one full cycle needed to produce the two elections that are expected to generate the first joint-control government.
 
