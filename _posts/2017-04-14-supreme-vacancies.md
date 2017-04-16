@@ -116,7 +116,7 @@ Verified by simulation (code below).
 
 ### Appendix 2: How Many Flips to Get a Heads?
 
-Flipping a fair coin, the expected number $E$ of flips when the first Heads occurs is $1/2$ times $1$ (half the time, it's the first flip) plus $1/2$ times $1+E$ (the other half of the time, you have one Tails and are back where you started). So:
+Flipping a fair coin, the expected number $E$ of flips when the first Heads occurs is $1/2$ times $1$ (half the time, it's the first flip) plus $1/2$ times $1+E$ (the other half of the time, you have one Tails and are back where you started, expecting to need $E$ more flips). So:
 
 $$ E = \frac{1}{2} + \frac{1}{2}(1+E)$$
 
