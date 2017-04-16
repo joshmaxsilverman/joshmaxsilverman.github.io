@@ -101,7 +101,7 @@ $$ p = \frac{39}{81} $$
 
 So $39/81$ of terms start at $t=0$. Thus the overall expected vacancy duration is:
 
-$$ \frac{39}{81} \times \frac{3(19+0}{80} 
+$$ \frac{39}{81} \times \frac{3(19+0)}{80} 
 + \frac{42}{81} \times \int_{t=0}^1\frac{3(19+t)}{80} dt $$
 
 $$ = \frac{2223}{6480} + \frac{91}{240} = \frac{13}{18} = .7\overline{2} $$
