@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Supreme Vacancies
-date: 2017/04/14
+date: 2017/04/16
 ---
 
 >Imagine that U.S. Supreme Court nominees are only confirmed if the same party holds the presidency and the Senate. What is the expected number of vacancies on the bench in the long run?
