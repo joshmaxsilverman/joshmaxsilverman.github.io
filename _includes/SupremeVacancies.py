@@ -1,12 +1,12 @@
 from random import randint,uniform
 
-num_reps = 1000000
+num_reps = 100000000
 accum = 0
 
 num_vacancies = 0
 duration_accum = 0
 
-# A running list of the vacant seats
+# A running list of the vacant seats, starting with all of them.
 Vacancies = [0,1,2,3,4,5,6,7,8]
 
 # A list of the times justices in the 9 seats are due to retire
@@ -64,7 +64,7 @@ for rep in range(num_reps):
 			# when it will or did expire.
 			NewExpiration[i] = Expiration[i]
 
-	Expiration = list(NewExpiration)
+	Expiration = NewExpiration
 	# We add up the average numbers of vacancies between reps, and will 
 	# divide by num_reps to give the overall average.
 	accum += AvgVacancies
@@ -88,3 +88,4 @@ for rep in range(num_reps):
 
 print("Average number of vacancies:",accum/num_reps)
 print("Average duration of a vacancy:",2*duration_accum/num_vacancies,"years")
+
