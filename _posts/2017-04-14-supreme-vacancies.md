@@ -22,7 +22,7 @@ Here is a broad-strokes "solution" that, while it turns out to be just a pretty 
 
 Every election has probability $1/2$ of giving joint control to one party or the other for the next two years. When that happens, all vacancies are filled immediately, and for those two years, new vacancies are filled instantly.
 
-When a seat goes vacant, then, there's _close to_ (this hides dark difficulties, to be explained soon, that are significant if not hugely so) probability $1/2$ that it's during a joint-control cycle, and so the duration of the vacancy will be $0$, and probability $1/2$ that it's a divided-control period so that the seat will be vacant for the remainder of the current election cycle (a period of close to (!) $1$ year on average) plus however long it takes for an election to produce joint control. The expected number of elections to reach the first joint-control outcome is the same as the expected number of tosses of a coin to get a heads, which is $2$ (see Appendix 2 to see why). The second election happens $2$ years after the very next election after the seat goes vacant. Therefore the expected duration of the vacancy is (close to) $\frac{1}{2}(1+2)$, or $3/2$.  
+When a seat goes vacant, then, there's _close to_ (this hides dark difficulties, to be explained soon, that are significant if not hugely so) probability $1/2$ that it's during a joint-control cycle, and so the duration of the vacancy will be $0$, and probability $1/2$ that it's a divided-control period so that the seat will be vacant for the remainder of the current election cycle (a period of close to (!) $1$ year on average) plus however long it takes for an election to produce joint control. The expected number of elections to reach the first joint-control outcome is the same as the expected number of tosses of a coin to get a heads, which is $2$ (see the Appendix to see why). The second election happens $2$ years after the very next election after the seat goes vacant. Therefore the expected duration of the vacancy is (close to) $\frac{1}{2}(1+2)$, or $3/2$.  
 
 The probability that a given seat is vacant at any one time is (close to) the ratio of expected vacancy length to the sum of expected term and vacancy lengths:
 
@@ -114,7 +114,7 @@ $$9\times \frac{\frac{13}{9}}{20 + \frac{13}{9}} = \frac{117}{193} \approx .606$
 
 Verified by simulation (code below).
 
-### Appendix 2: How Many Flips to Get a Heads?
+### Appendix: How Many Flips to Get a Heads?
 
 Flipping a fair coin, the expected number $E$ of flips when the first Heads occurs is $1/2$ times $1$ (half the time, it's the first flip) plus $1/2$ times $1+E$ (the other half of the time, you have one Tails and are back where you started, expecting to need $E$ more flips). So:
 
