@@ -32,7 +32,7 @@ That value is also (close to) the expected number of vacancies _in that one seat
 
 ### But That's Not Quite Right
 
-There are two simplifications in the reasoning above. First, it's not true that a randomly selected term is exactly equally likely to end in joint- and divided-control cycles. Second, term-ends are not exactly uniformly distributed as to where they fall within divided-control cycles. The second inexactness turns out to be negligible in effect, whereas the first is somewhat significant.
+There are two simplifications in the reasoning above. First, it's not true that a randomly selected term is exactly equally likely to end in joint- and divided-control cycles. Second, end-times are not exactly uniformly distributed as to where they fall within divided-control cycles, nor within joint-control cycles (the one entails the other given that end-times are uniformly distributed overall). The second inexactness turns out to be negligible in effect, nudging our answer within $.001$ vacancies, whereas the first is significant to the tune of more than $.02$ vacancies. 
 
 The fact that any given term (after the very first ones, which we can ignore as negligible in the long term) starts in a joint-control cycle---because only then will the Senate confirm a nomination---entails that the probability is a little more than $1/2$ that it will also end in a joint-control cycle, because there is probability $1$ that it ends in joint control if it ends in the same cycle in which it began (of which there is some positive probability up to $1/20$), and $1/2$ if it ends in any later one. 
 
