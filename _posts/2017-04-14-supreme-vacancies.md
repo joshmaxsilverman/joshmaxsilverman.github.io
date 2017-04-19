@@ -84,7 +84,7 @@ Thus the expected length in cycles of a vacancy after a term starting at $t$ is:
 
 $$\frac{21-t}{40}\times 0 + \frac{19+t}{40} \times \frac{3}{2} = \frac{3(19+t)}{80}$$
 
-Now to determine how term start-times are distributed. There are two cases. The terms that start some positive time into a joint-control cycle are very nearly uniformly distributed within such cycles (the proof of this is similar to the case of endings in divided control). And there are terms that start right when joint control newly occurs (i.e., $t=0$). We need to know what proportion of all terms are of this latter kind.
+Now to determine how term start-times are distributed. There are two cases. The terms that start some positive time into a joint-control cycle are very nearly uniformly distributed within such cycles (this follows from the same fact about endings in divided control). And there are terms that start right when joint control newly occurs (i.e., $t=0$). We need to know what proportion of all terms are of this latter kind.
 
 The terms that start at the start of a cycle (after the very start, and with exceptions of probability zero) are the successors of terms that end in divided-control cycles, and so there are exactly as many of the former as of the latter. Let $p$ be the probability that a term starts at the start of a cycle, which is also the probability that a term ends in a divided-control cycle. We will find $p$ by relying on both of those facts about it. 
 
