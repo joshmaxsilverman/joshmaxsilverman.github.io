@@ -11,6 +11,8 @@ date: 2017/04/22
 
 <!--more-->
 
+([fivethirtyeight](https://fivethirtyeight.com/features/pick-a-card-any-card/))
+
 ## Solution
 
 Without changing anything important, let's restate the situation as your being dealt cards, one at a time, from a deck. You can "hold" just once, and you win if the card you hold is higher than the cards dealt before or after it.
