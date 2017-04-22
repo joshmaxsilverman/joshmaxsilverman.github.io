@@ -19,7 +19,7 @@ Without changing anything important, let's restate the situation as your being d
 
 At every decision point, you have not lost yet, and so your current card is the highest so far dealt. Whatever the size of the deck and however many cards in total you are being dealt, the important facts you know are that you have been dealt a given card, that there are $D$ cards left to be dealt, $L$ cards lower than this one still in the deck, and $N$ cards total still in the deck. 
 
-The chance that the current card is higher than the $D$ cards left to be dealt is the chance that it's higher than the first of them, which is $L/N$ times the chance that it's also higher than the second, which is $(L-1)/(N-1)$, and so on until the last, with probability $(L-(D-1))/(N-(D-1))$. Thus the probability that the current card is the highest is:
+The chance that the current card is higher than the $D$ cards left to be dealt is the chance that it's higher than the first of them, which is $L/N$, times the chance that it's also higher than the second, which is $(L-1)/(N-1)$, and so on until the last, with probability $(L-(D-1))/(N-(D-1))$. Thus the probability that the current card is the highest is:
 
 $$\prod_{i=0}^{D-1} \frac{L-i}{N-i} =
 \frac{L!(N-D)!}{N!(L-D)!}$$
