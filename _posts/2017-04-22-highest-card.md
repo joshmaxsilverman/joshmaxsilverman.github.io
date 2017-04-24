@@ -39,6 +39,6 @@ In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to 
 ```python
 {% include PickACard.py %}
 ```
- 
- <br>
+
+<br>
  
