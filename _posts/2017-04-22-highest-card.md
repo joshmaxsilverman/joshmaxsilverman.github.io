@@ -32,5 +32,13 @@ In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to 
  |----|----|----|----|----|----|----|----|-----|
  | 93 | 93 | 92 | 90 | 88 | 86 | 82 | 74 | 55  |
  
+ Simuation (code below) shows that this strategy wins about $59\%$ of the time.
+ 
+ ### Code (Python):
+
+```python
+{% include PickACard.py %}
+```
+ 
  <br>
  
