@@ -34,7 +34,7 @@ In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to 
  
  Simuation (code below) shows that this strategy wins about $59\%$ of the time.
  
- ### Code (Python):
+### Code (Python):
 
 ```python
 {% include PickACard538.py %}
