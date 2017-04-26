@@ -47,7 +47,7 @@ In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to 
  |----|----|----|----|----|----|----|----|-----|
  | 93 | 92 | 91 | 89 | 87 | 84 | 80 | 72 | 55  |
  
-Numerically averaging the values of $P(C,9,C)$ for all possiblel first cards $C$ shows that the strategy wins about $62.2\%$ of the time.
+Numerically averaging the values of $P(C,9,C)$ for all possible first cards $C$ shows that the strategy wins about $62.2\%$ of the time.
  
  [Note: this solution replaces one that was shown to be "alternatively correct" by a helpful commenter!]
  
