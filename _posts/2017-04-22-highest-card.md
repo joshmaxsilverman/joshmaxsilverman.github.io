@@ -36,7 +36,7 @@ And our recurrence is as follows:
 $$P(C,0,H) = 
     \left\{
     \begin{array}{lr}
-      0,& \mbox{for\ } C < H \\
+      0,& \mbox{for\ } C \lt H \\
       1,& \mbox{for\ } C = H
     \end{array}$$
 
@@ -45,7 +45,7 @@ And for $D\geq 1$:
 $$P(C,D,H) = 
     \left\{
     \begin{array}{lr}
-      P_{\mbox{Discard}}(C,D,H),& \mbox{for\ } C < H \\
+      P_{\mbox{Discard}}(C,D,H),& \mbox{for\ } C \lt H \\
       \max(P_{\mbox{Hold}}(C,D),P_{\mbox{Discard}}(C,D,H)),& \mbox{for\ } C = H
     \end{array}$$
 
