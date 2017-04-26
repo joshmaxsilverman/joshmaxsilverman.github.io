@@ -17,27 +17,50 @@ date: 2017/04/22
 
 Without changing anything important, let's restate the generalized situation as your being dealt a certain number of cards, one at a time, from a deck of some size. You can "hold" just once, and you win if the card you hold is higher than the cards dealt before or after it.
 
-At every decision point (i.e., when you have a card higher than any others that have been dealt and need to decide whether to hold), whatever the size of the deck and however many cards in total you are being dealt, the important facts you know are that you have been dealt a given card $C$, that there are $D$ cards left to be dealt, $L$ cards lower than this one still in the deck (where $L$ is $C-1$ minus the number of cards already dealt), and $N$ cards total still in the deck. 
+Suppose the deck size is $S$ and a total $T$ of cards will be dealt.
 
-The chance that the current card is higher than the $D$ cards left to be dealt is the chance that it's higher than the first of them, which is $L/N$, times the chance that it's also higher than the second, which is $(L-1)/(N-1)$, and so on until the last, with probability $(L-(D-1))/(N-(D-1))$. Thus the probability that the current card is the highest is:
+At every decision point (i.e., when you have a card higher than any others that have been dealt and need to decide whether to hold), whatever values $S$ and $T$ have, the important facts you know are that you have been dealt a given card $C$, that there are $D$ cards left to be dealt, $L$ cards lower than this one still in the deck (where $L$ is $C-1$ minus the number of cards already dealt), and $N$ cards total still in the deck.  Since $L$ and $N$ are simple functions of the variables $C$ and $D$ (and the constants $S$ and $T$), it's those latter two variables that your decision depends on entirely. Nonetheless, we will also it will also be useful in our calculations to keep track of the highest card $H$ so far seen (including $C$) as we define $P(C,D,H)$, which labels the probability that you will ultimately win if you get $C$ with $D$ cards still to be dealt and $H$ the highest so far.
 
-$$\prod_{i=0}^{D-1} \frac{L-i}{N-i} =
+If $C$ itself is the highest card so far, the probability of winning by holding it is the chance that it is higher than the $D$ cards left to be dealt, which in turn is the chance $L/N$ that it's higher than the first of them, times the chance $(L-1)/(N-1)$ that it's also higher than the second, and so on until the chance $(L-(D-1))/(N-(D-1))$ that it is higher than the last. Thus the probability that the current card is the highest is:
+
+$$P_{\mbox{Hold}}(C,D) = \prod_{i=0}^{D-1} \frac{L-i}{N-i} =
 \frac{L!(N-D)!}{N!(L-D)!}$$
 
-You should discard the current card if this probability is less than $1/2$.
+This has to be compared with the probability that you will win if you discard this card and play optimally afterwards; you will of course choose the option with the higher probability of winning. We can compute this value $P_{\mbox{Discard}}(C,D,H)$ recurrently, based on averaging the chances $P(C',D-1,H')$ of winning given all the possible cards $C'$ in the next round, when there will be $D-1$ cards still to be dealt. Where $K$ is the number of cards remaining lower than $H$ (which is $H-1$ minus the number of cards already dealt), and relying on the fact that the precise values of those cards doesn't matter:
+
+$$P_{\mbox{Discard}}(C,D,H) = \frac{1}{N}\left( KP(1,D-1,H) 
++ \sum_{C'= H+1}^{S} P(C',D-1,C') \right)$$
+
+And our recurrence is as follows:
+
+$$P(C,0,H) = 
+    \left\{
+    \begin{array}{lr}
+      0,& \mbox{for\ } C < H \\
+      1,& \mbox{for\ } C = H
+    \end{array}$$
+
+And for $D\geq 1$:
+
+$$P(C,D,H) = 
+    \left\{
+    \begin{array}{lr}
+      P_{\mbox{Discard}}(C,D,H),& \mbox{for\ } C < H \\
+      \max(P_{\mbox{Hold}}(C,D),P_{\mbox{Discard}}(C,D,H)),& \mbox{for\ } C = H
+    \end{array}$$
 
 In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to $9$ decisions. Here are the thresholds below which you should discard each of the first nine cards dealt, even if it's the highest so far:
 
  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9   |
  |----|----|----|----|----|----|----|----|-----|
- | 93 | 93 | 92 | 90 | 88 | 86 | 82 | 74 | 55  |
+ | 93 | 92 | 91 | 89 | 87 | 84 | 80 | 72 | 55  |
  
- Simuation (code below) shows that this strategy wins about $59\%$ of the time.
+ Calculating the recurrence shows that the strategy wins about $62.2\%$ of the time.
  
 ### Code (Python):
 
 ```python
-{% include PickACard538.py %}
+{% include PickACardSecondTry538.py %}
 ```
 
 <br>
