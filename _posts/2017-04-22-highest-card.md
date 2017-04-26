@@ -15,9 +15,7 @@ date: 2017/04/22
 
 ## Solution
 
-Without changing anything important, let's restate the generalized situation as your being dealt a certain number of cards, one at a time, from a deck of some size. You can "hold" just once, and you win if the card you hold is higher than the cards dealt before or after it.
-
-Suppose the deck size is $S$ and a total $T$ of cards will be dealt.
+Without changing anything important, let's restate the generalized situation as your being dealt a certain number $T$ of cards, one at a time, from a deck of $S$ cards. You can "hold" just once, and you win if the card you hold is higher than the cards dealt before or after it.
 
 At every decision point (i.e., when you have a card higher than any others that have been dealt and need to decide whether to hold), whatever values $S$ and $T$ have, the important facts you know are that you have been dealt a given card $C$, that there are $D$ cards left to be dealt, $L$ cards lower than this one still in the deck (where $L$ is $C-1$ minus the number of cards already dealt), and $N$ cards total still in the deck.  Since $L$ and $N$ are simple functions of the variables $C$ and $D$ (and the constants $S$ and $T$), it's those latter two variables that your decision depends on entirely. Nonetheless, we will also it will also be useful in our calculations to keep track of the highest card $H$ so far seen (including $C$) as we define $P(C,D,H)$, which labels the probability that you will ultimately win if you get $C$ with $D$ cards still to be dealt and $H$ the highest so far.
 
