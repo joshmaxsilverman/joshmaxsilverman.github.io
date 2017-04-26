@@ -24,7 +24,7 @@ If $C$ itself is the highest card so far, the probability of winning by holding 
 $$P_{\mbox{Hold}}(C,D) = \prod_{i=0}^{D-1} \frac{L-i}{N-i} =
 \frac{L!(N-D)!}{N!(L-D)!}$$
 
-This has to be compared with the probability that you will win if you discard this card and play optimally afterwards; you will of course choose the option with the higher probability of winning. We can compute this value $P_{\mbox{Discard}}(C,D,H)$ recurrently, based on averaging the chances $P(C',D-1,H')$ of winning given all the possible cards $C'$ in the next round, when there will be $D-1$ cards still to be dealt. Where $K$ is the number of cards remaining lower than $H$ (which is $H-1$ minus the number of cards already dealt), and relying on the fact that the precise values of those cards doesn't matter:
+This has to be compared with the probability that you will win if you discard this card and play optimally afterwards; you will of course choose the option with the higher probability of winning. We can compute this value $P_{\mbox{Discard}}(C,D,H)$ recurrently, based on averaging the chances $P(C',D-1,H')$ of winning given all the possible cards $C'$ in the next round, when there will be $D-1$ cards still to be dealt. Where $K$ is the number of cards remaining lower than $H$ (which is $H-1$ minus the number, $T-D$, of cards already dealt), and relying on the fact that the precise values of those cards doesn't matter:
 
 $$P_{\mbox{Discard}}(C,D,H) = \frac{1}{N}\left( KP(1,D-1,H) 
 + \sum_{C'= H+1}^{S} P(C',D-1,C') \right)$$
