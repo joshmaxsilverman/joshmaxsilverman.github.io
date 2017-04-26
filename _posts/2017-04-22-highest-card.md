@@ -57,6 +57,8 @@ In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to 
  
  Calculating the recurrence shows that the strategy wins about $62.2\%$ of the time.
  
+ [Note: this solution replaces one that was shown to be "alternatively correct" by a helpful commenter!]
+ 
 ### Code (Python):
 
 ```python
