@@ -33,16 +33,15 @@ $$P_{\mbox{Discard}}(C,D,H) = \frac{1}{N}\left( KP(1,D-1,H)
 
 And our recurrence is as follows:
 
-$$P(C,0,H) = 1, \mbox{\ for\ } C=H\mbox{, and\ }0 \mbox{, for\ } C \lt H$$
+$$P(C,0,H) = 1, \mbox{ for } C=H\mbox{, and }0 \mbox{, for } C \lt H$$
 
-And for $D\geq 1$:
+And for $D\geq 1$, if $C \lt H$:
 
-$$P(C,D,H) = 
-    \left\{
-    \begin{array}{lr}
-      P_{\mbox{Discard}}(C,D,H),& \mbox{for\ } C \lt H \\
-      \max(P_{\mbox{Hold}}(C,D),P_{\mbox{Discard}}(C,D,H)),& \mbox{for\ } C = H
-    \end{array}$$
+$$P(C,D,H) = P_{\mbox{Discard}}(C,D,H)$$
+
+And if $C=H$:
+
+$$P(C,D,H) = \max(P_{\mbox{Hold}}(C,D),P_{\mbox{Discard}}(C,D,H))$$
 
 In the case of a deck of $100$ cards with $10$ to be dealt, you will make up to $9$ decisions. Here are the thresholds below which you should discard each of the first nine cards dealt, even if it's the highest so far:
 
