@@ -13,8 +13,8 @@ for rep in range(num_reps):
 		card = Deck.pop(randint(0,99-deal))
 		if card > Highest:
 			Highest = card
-		# The thresholds are for cards numbered 1 to 100
-		if Hold == -1 and card >= Thresholds[deal]-1:
+			# The thresholds are for cards numbered 1 to 100
+			if Hold == -1 and card >= Thresholds[deal]-1:
 			Hold = card
 	if Hold == Highest:
 		accum += 1
