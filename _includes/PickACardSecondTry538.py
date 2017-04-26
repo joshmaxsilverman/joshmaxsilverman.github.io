@@ -5,12 +5,10 @@ TotalDeals = 10
 # cards remaining to be dealt and H the highest card so far dealt 
 #(including C): P[(C,D,H)]
 P_Win = {}
+
 # The true/false value of whether it's best to hold rather than discard
 # in that situation: Hold[(C,D,H)]
 Hold = {}
-
-P_Discard = {}
-P_Hold = {}
 
 def GetP_Win(Card,StillToBeDealt,HighestSoFar):
 	global P_Win,Hold,DeckSize,TotalDeals
@@ -20,7 +18,7 @@ def GetP_Win(Card,StillToBeDealt,HighestSoFar):
 		return P_Win[(Card,StillToBeDealt,HighestSoFar)]
 
 	HaveBeenDealt = TotalDeals - StillToBeDealt
-	# Assume we'll discard and change if holding is better
+	# Assume we'll discard; change later if holding is better:
 	Hold[(Card,StillToBeDealt,HighestSoFar)] = 0
 
 	if StillToBeDealt == 0:
@@ -35,7 +33,7 @@ def GetP_Win(Card,StillToBeDealt,HighestSoFar):
 	RemainingSubHighest = max(HighestSoFar-(HaveBeenDealt-1),0)
 	Remaining = DeckSize-HaveBeenDealt
 
-	# Calculate Probability of victory if we discard.
+	# Calculate probability of victory if we discard.
 	# Probability is the average of probabilities in the next deal
 	P_Discard = (1/Remaining) * (\
 		RemainingSubHighest*GetP_Win(0,StillToBeDealt-1,HighestSoFar) + \
