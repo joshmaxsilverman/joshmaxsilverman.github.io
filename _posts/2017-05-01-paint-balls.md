@@ -133,7 +133,7 @@ $$E_1 = (B-1)^2$$
 
 $$E_2 = (B-1)^2 - \frac{B}{2}$$
 
-And for arbitrary $i > 2$,
+And for arbitrary $i$,
 
 $$iE(i) = 2E_2 + \sum_{j=2}^{i-1} \Delta_j$$
 
