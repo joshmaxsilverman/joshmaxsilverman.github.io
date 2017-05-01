@@ -73,7 +73,7 @@ For every $i$ in between, the expectation is a function of the two neighboring e
 
 The probability that we'll now go to $i-1$ given that we'll go on to win is:
 
-$$\left(\frac{(B-i)i}{B(B-1)} \cdot \frac{i-1}{B}\right \div \frac{i}{B}
+$$\left(\frac{(B-i)i}{B(B-1)} \cdot \frac{i-1}{B}\right) \div \frac{i}{B}
 = \frac{(B-i)(i-1)}{B(B-1)}
 $$
 
