@@ -155,6 +155,12 @@ $$E_i = \frac{1}{i}\left(
 B + i(B^2 -3B +1) - B(B-1) \sum_{j=2}^{i-1}\frac{i-j}{B-j}
 \right)$$
 
+If there are $B$ colors as well as balls, the expected length of the game is $E_1$. If there are $C$ colors evenly distributed among the balls, the expectation is $E_{B/C}$. 
+
+For a game with 100 balls, the graph below shows how the expected number of turns until a color wins, assuming it will, depends on how many balls are currently of that color. 
+
+![Game of 100 balls.](/img/Capture.PNG)
+
 See this [similar and perhaps tidier solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
 <br>
