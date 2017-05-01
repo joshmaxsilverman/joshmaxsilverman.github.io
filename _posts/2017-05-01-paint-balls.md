@@ -151,8 +151,8 @@ $$ = (i-2)((B-1)^2-B)-B(B-1)\sum_{j=2}^{i-1}
 \frac{i-j}{B-j}
 $$
 
-$$E_i = \frac{1}{i}\left(
-B + i(B^2 -3B +1) - B(B-1) \sum_{j=2}^{i-1}\frac{i-j}{B-j}
+$$E_i = B^2 - 3B + 1 + \frac{1}{i}\left(
+B - B(B-1) \sum_{j=2}^{i-1}\frac{i-j}{B-j}
 \right)$$
 
 If there are $B$ colors as well as balls, the expected length of the game is $E_1$. If there are $C$ colors evenly distributed among the balls, the expectation is $E_{B/C}$. 
