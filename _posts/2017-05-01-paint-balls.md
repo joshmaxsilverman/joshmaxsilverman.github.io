@@ -33,7 +33,9 @@ $C = 1 + C/3 + 2D/3$
 
 $D = 1 + D/2 + C/4$
 
-Tedious minutes later, or an instant after entering the equations into an online system of equations solver, we find that $A$, $B$, $C$, and $D$ are $9$, $8$, $7$, $11/2$.
+Tedious minutes later, or in an instant after entering the equations into [an online system of equations solver](https://www.symbolab.com/solver/system-of-equations-calculator), we find that $A$, $B$, $C$, and $D$ are $9$, $8$, $7$, and $11/2$. So we expect the game to take $9$ turns.  
+
+Which, interestingly enough, is $(4-1)^2$. Hmmm . . .
 
 ## Extra Credit
 
