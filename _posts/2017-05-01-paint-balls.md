@@ -162,7 +162,7 @@ For a game with 100 balls, the graph below shows how the expected number of turn
 
 ![Game of 100 balls.](/img/PaintBalls.png)
 
-See this [similar and perhaps tidier solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
+See this [similar and more concise solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
 <br>
  
