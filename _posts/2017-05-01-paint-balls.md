@@ -13,7 +13,7 @@ date: 2017/05/01
 
 ## Solution
 
-A possible "situation" is a numerical description of the division of the balls in to same-color groups. With $4$ balls we can label the possible situations $[1,1,1,1]$ (the situation at the start), $[2,1,1]$, $[2,2]$, $[3,1]$, and $[4]$ (the situation at the end). Each situation has a readily determined probability of being followed by each other situation:
+A possible "situation" is a numerical description of the division of the balls in to same-color groups. With $4$ balls we can label the possible situations $[1,1,1,1]$ (the situation at the start), $[2,1,1]$, $[2,2]$, $[3,1]$, and $[4]$ (the situation at the end). Each situation has a readily-determined probability of being followed by each other situation:
 
 $[1,1,1,1]$: Probability $1$ of $[2,1,1]$.
 
