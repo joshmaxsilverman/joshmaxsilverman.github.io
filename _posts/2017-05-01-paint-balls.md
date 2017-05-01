@@ -162,6 +162,12 @@ For a game with 100 balls, the graph below shows how the expected number of turn
 
 ![Game of 100 balls.](/img/PaintBalls.png)
 
+By the way, the ever-helpful [Wolfram Alpha](http://www.wolframalpha.com) tells me that the sum in the final expression for $E_i$ can be expressed as follows, where $\psi$ is the [digamma function](https://en.wikipedia.org/wiki/Digamma_function):
+
+$$(B-i)(\psi(i-B) - \psi(1-B)) + i - 1$$
+
+. . . which I suppose makes for a more "closed-form" expression.
+
 See this [similar and more concise solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
 <br>
