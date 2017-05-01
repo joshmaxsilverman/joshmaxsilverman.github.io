@@ -27,11 +27,11 @@ Where $A$, $B$, $C$, and $D$ are the expected number of turns to yield $4$ start
 
 $A = 1 + B$
 
-$B = 1 + C/6 + B/2 + D/3$
+$B = 1 + B/2 + C/6 + D/3$
 
 $C = 1 + C/3 + 2D/3$
 
-$D = 1 + D/2 + C/4$
+$D = 1 + C/4 + D/2$
 
 Tedious minutes later, or in an instant after entering the equations into [an online system of equations solver](https://www.symbolab.com/solver/system-of-equations-calculator), we find that $A$, $B$, $C$, and $D$ are $9$, $8$, $7$, and $11/2$. So we expect the game to take $9$ turns.  
 
