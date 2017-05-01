@@ -71,7 +71,7 @@ Solving,
 
 $$E_1 = E_2 + \frac{B}{2}$$
 
-For every $i$ in between, the expectation $E_i$ is $1$ plus a function of the two neighboring expectations $E_{i-1}$ and $E_{i+1}$ and of $E_i$ itself, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
+For every intermediate $i$, the expectation $E_i$ is $1$ plus a function of the two neighboring expectations $E_{i-1}$ and $E_{i+1}$ and of $E_i$ itself, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
 
 The probability that we'll now move to $i-1$, given that we'll go on to win is:
 
