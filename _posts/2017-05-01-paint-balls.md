@@ -159,7 +159,7 @@ If there are $B$ colors as well as balls, the expected length of the game is $E_
 
 For a game with 100 balls, the graph below shows how the expected number of turns until a color wins, assuming it will, depends on how many balls are currently of that color. 
 
-![Game of 100 balls.](/img/Capture.PNG)
+![Game of 100 balls.](/img/PaintBalls.png)
 
 See this [similar and perhaps tidier solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
