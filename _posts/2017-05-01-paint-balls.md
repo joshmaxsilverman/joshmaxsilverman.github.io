@@ -69,15 +69,15 @@ Solving,
 
 $$E_1 = E_2 + \frac{B}{2}$$
 
-For every $i$ in between, the expectation is $1$ plus a function of the two neighboring expectations, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
+For every $i$ in between, the expectation $E_i$ is $1$ plus a function of the two neighboring expectations $E_{i-1}$ and $E_{i+1}$ and of $E_i$ itself, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
 
-The probability that we'll now go to $i-1$ given that we'll go on to win is:
+The probability that we'll now move to $i-1$, given that we'll go on to win is:
 
 $$\left(\frac{B-i}{B}\cdot\frac{i}{B-1} \cdot \frac{i-1}{B}\right) \div \frac{i}{B}
 = \frac{(B-i)(i-1)}{B(B-1)}
 $$
 
-The probability of going to $i+1$ given a win is:
+The probability of now moving to $i+1$, given an eventual win, is:
 
 $$\left(\frac{i}{B} \cdot \frac{B}{B-1} \cdot \frac{i+1}{B}\right) \div \frac{i}{B}
 = \frac{(B-i)(i+1)}{B(B-1)}
@@ -158,7 +158,7 @@ $$ = (B-1)^2 - \frac{B-1}{i}\sum_{j=1}^{i-1}\frac{i-j}{B-j} $$
 
 If there are $B$ colors as well as balls, the expected length of the game is $E_1$. If there are $C$ colors evenly distributed among the balls, the expectation is $E_{B/C}$. 
 
-For a game with 100 balls, the graph below shows how the expected number of turns until a color wins, assuming it will, depends on how many balls are currently of that color. 
+For a game with 100 balls, the graph below shows how the expected number of turns until a color wins, assuming it will, depends on how many balls are currently of that color. (Perhaps surprisingly, $E_99$ is approximately $419$.)
 
 ![Game of 100 balls.](/img/PaintBalls.png)
 
