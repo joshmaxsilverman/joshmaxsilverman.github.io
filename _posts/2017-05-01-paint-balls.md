@@ -138,7 +138,7 @@ And for arbitrary $i > 2$,
 $$iE(i) = 2E_2 + \sum_{j=2}^{i-1} \Delta_j$$
 
 $$ = 
-2((B-1)^2-\frac{B}{2}) + \sum_{j=2}^{i-1} \left(
+2\left((B-1)^2-\frac{B}{2}\right) + \sum_{j=2}^{i-1} \left(
  (B-1)^2-B - \sum_{k=2}^{j}\frac{B(B-1)}{B-k}\right)$$
  
 Calling the complex second addend $X$,
@@ -154,6 +154,8 @@ $$
 $$E_i = \frac{1}{i}\left(
 B + i(B^2 -3B +1) - B(B-1) \sum_{j=2}^{i-1}\frac{i-j}{B-j}
 \right)$$
+
+See this [similar and perhaps tidier solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
 <br>
  
