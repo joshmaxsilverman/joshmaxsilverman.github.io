@@ -168,7 +168,7 @@ By the way, the ever-helpful [Wolfram Alpha](http://www.wolframalpha.com) tells 
 
 $$(B-i)(\psi(i-B) - \psi(1-B)) + i - 1$$
 
-. . . which I suppose makes for a more "closed-form" expression:
+. . . which I suppose makes for a more "closed-form" expression (although the advantage of that is more or less illusory, given the heayweight material that goes into defining the innocent-looking $\phi$):
 
 $$E_i = (B-1)(B - \frac{1}{i} ((B-i)(\psi(i-B) - \psi(1-B))+1))$$
 
