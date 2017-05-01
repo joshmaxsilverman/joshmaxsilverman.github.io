@@ -112,21 +112,20 @@ $$\Delta_1 = 2E_2 - 1E_1 = E_1-B $$
 
 $$\Delta_i = E_1-B - \sum_{j=2}^{i}\frac{B(B-1)}{B-j}$$
 
+And remembering that $E_B = 0$,
+
 $$BE_B = 1E_1 + \sum_{i=1}^{B-1} \Delta_i $$
 
 $$ = E_1 + \sum_{i=1}^{B-1} \left( E_1-B - \sum_{j=2}^{i}\frac{B(B-1)}{B-j}\right) = 0$$
 
 $$E_1 + (B-1)(E_1-B) - B(B-1) \sum_{i=2}^{B-1} \sum_{j=2}^{i}\frac{1}{B-j} = 0$$
 
-$$BE_1- B(B-1) - B(B-1) \sum_{i=2}^{B-1} \sum_{j=2}^{i}\frac{1}{B-j} = 0$$
-
-$$E_1- (B-1) - (B-1) \sum_{i=2}^{B-1} \sum_{j=2}^{i}\frac{1}{B-j} = 0$$
-
 $$E_1 = (B-1)\left(1 + \sum_{i=2}^{B-1} \sum_{j=2}^{i}\frac{1}{B-j}\right)$$
 
 That double-sum can be simplified to a single sum, by putting in the numerator of the summed fraction an expression for how many times the original fraction would occur in the expansion of the double-sum:
 
-$$ = \sum_{i=2}^{B-1}\frac{B-i}{B-i} = \sum_{i=2}^{B-i}1 = B-2 $$
+$$ \sum_{i=2}^{B-1} \sum_{j=2}^{i}\frac{1}{B-j}
+= \sum_{i=2}^{B-1}\frac{B-i}{B-i} = \sum_{i=2}^{B-i}1 = B-2 $$
 
 Thus,
 
@@ -152,7 +151,7 @@ $$ = (i-2)((B-1)^2-B)-B(B-1)\sum_{j=2}^{i-1}
 \frac{i-j}{B-j}
 $$
 
-$E_i = \frac{1}{i}\left(
+$$E_i = \frac{1}{i}\left(
 B + i(B^2 -3B +1) - B(B-1) \sum_{j=2}^{i-1}\frac{i-j}{B-j}
 \right)$$
 
