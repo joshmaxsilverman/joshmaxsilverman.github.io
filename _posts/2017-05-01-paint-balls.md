@@ -166,7 +166,9 @@ By the way, the ever-helpful [Wolfram Alpha](http://www.wolframalpha.com) tells 
 
 $$(B-i)(\psi(i-B) - \psi(1-B)) + i - 1$$
 
-. . . which I suppose makes for a more "closed-form" expression.
+. . . which I suppose makes for a more "closed-form" expression:
+
+$$E_i = (B-1)(B - \frac{1}{i} ((B-i)(\psi(i-B) - \psi(1-B))+1))$$
 
 See this [similar and more concise solution by Sawyer Tabony](https://twitter.com/SawyerTabony/status/858720259364311040).
 
