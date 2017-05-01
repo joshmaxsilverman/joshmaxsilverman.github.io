@@ -7,21 +7,21 @@ date: 2017/05/01
 
 >You play a game with four balls: One ball is red, one is blue, one is green and one is yellow. They are placed in a box. You draw a ball out of the box at random and note its color. Without replacing the first ball, you draw a second ball and then paint it to match the color of the first. Replace both balls, and repeat the process. The game ends when all four balls have become the same color. What is the expected number of turns to finish the game?
 
-## Solution
-
 <!--more-->
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/can-you-solve-these-colorful-puzzles/))
 
-A possible situation is a division of the balls in to same-color groups. With $4$ balls we can label the possible situations $1-1-1-1$ (the situation at the start), $2-1-1$, $2-2$, $3-1$, and $4$. Each situation has a readily determined probability of being followed by each other situation:
+## Solution
 
-$1-1-1-1$: Probability $1$ of $2-1-1$.
+A possible "situation" is a numerical description of division of the balls in to same-color groups. With $4$ balls we can label the possible situations $1,1,1,1$ (the situation at the start), $2,1,1$, $2,2$, $3,1$, and $4$. Each situation has a readily determined probability of being followed by each other situation:
 
-$2-1-1$: Probability $1/6$ of $2-2$, $1/2$ of $2-1-1$, and $1/3$ of $3-1$.
+$1,1,1,1$: Probability $1$ of $2,1,1$.
 
-$2-2$: Probability $1/3$ of $2-2$, and $2/3$ of $3-1$.
+$2,1,1$: Probability $1/6$ of $2,2$, $1/2$ of $2,1,1$, and $1/3$ of $3,1$.
 
-$3-1$: Probability $1/2$ of $3-1$, $1/4$ of $2-2$, and $1/4$ of $4$.
+$2,2$: Probability $1/3$ of $2,2$, and $2/3$ of $3,1$.
+
+$3,1$: Probability $1/2$ of $3,1$, $1/4$ of $2,2$, and $1/4$ of $4$.
 
 Where $A$, $B$, $C$, and $D$ are the expected number of turns to yield $4$ starting with each of these situations, in the order just listed, then, we have the following system of equations:
 
