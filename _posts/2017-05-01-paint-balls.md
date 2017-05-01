@@ -53,7 +53,7 @@ $$P(A | B) = \frac{P(A \& B)}{P(B)}$$
 
 In this case, the probability that we stay put at $1$ conditional on our winning is the unconditional probability that we stay put now times the probability that in that case we win, divided by the unconditional probability that from this situation we win:
 
-$$\left(\frac{B-1}{B} \cdot \frac{B-2}{B-1} \cdot \frac{1}{B}\right) \cdot\frac{1}{B}
+$$\left(\frac{B-1}{B} \cdot \frac{B-2}{B-1} \cdot \frac{1}{B}\right) \div \frac{1}{B}
 = \frac{B-2}{B}
 $$
 
