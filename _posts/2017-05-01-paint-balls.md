@@ -141,7 +141,7 @@ $$ =
 2\left((B-1)^2-\frac{B}{2}\right) + \sum_{j=2}^{i-1} \left(
  (B-1)^2-B - \sum_{k=2}^{j}\frac{B(B-1)}{B-k}\right)$$
  
-Calling the complex second addend $X$,
+Calling the second addend $X$,
 
 $$X = (i-2)((B-1)^2-B)-B(B-1)\sum_{j=2}^{i-1}\sum_{k=2}^{j}
 \frac{1}{B-k}
