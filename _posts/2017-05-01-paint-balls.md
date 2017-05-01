@@ -41,7 +41,7 @@ Which, interestingly enough, is $(4-1)^2$. Hmmm . . .
 
 >What if there are more balls and more colors?
 
-Let's ask the question, given a particular color, on average how many turns does it take for that color to win, given that it does win?
+Let's ask the question, given a particular color, on average how many turns does it take for that color to win, given that it does win? This will answer the puzzle question, because all colors are alike in this respect.
 
 Let $E_i$ be the average number of turns from now for the color to win when currently there are $i$ balls of that color.  Then, where $B$ is the number of Balls:
 
@@ -69,17 +69,17 @@ Solving,
 
 $$E_1 = E_2 + \frac{B}{2}$$
 
-For every $i$ in between the expectation is a function of the two neighboring expectations, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
+For every $i$ in between, the expectation is a function of the two neighboring expectations, weighted by how likely it is to color one more ball, or one fewer, or remain at $i$ on the next turn, again conditional on our winning.
 
 The probability that we'll now go to $i-1$ given that we'll go on to win is:
 
-$$\frac{\frac{(B-i)i}{B(B-1)} \cdot \frac{i-1}{B}}{\frac{i}{B}}}
+$$\left(\frac{(B-i)i}{B(B-1)} \cdot \frac{i-1}{B}\right \div \frac{i}{B}
 = \frac{(B-i)(i-1)}{B(B-1)}
 $$
 
 The probability of going to $i+1$ given a win is:
 
-$$\frac{\frac{i(B-i)}{B(B-1)} \cdot \frac{i+1}{B}}{\frac{i}{B}}}
+$$\left(\frac{i(B-i)}{B(B-1)} \cdot \frac{i+1}{B}\right) \div \frac{i}{B}
 = \frac{(B-i)(i+1)}{B(B-1)}
 $$
 
