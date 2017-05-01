@@ -53,7 +53,7 @@ $$P(A | B) = \frac{P(A \& B)}{P(B)}$$
 
 In this case, the probability that we stay put at $1$ conditional on our winning is the unconditional probability that we stay put now times the probability that in that case we win, divided by the unconditional probability that from this situation we win:
 
-$$\left(\frac{(B-1)}{B} \cdot \frac{B-2}{B-1}\right) \cdot\frac{1}{B}}{\frac{1}{B}}
+$$\left(\frac{B-1}{B} \cdot \frac{B-2}{B-1}\right) \cdot\frac{1}{B}}{\frac{1}{B}}
 = \frac{B-2}{B}
 $$
 
@@ -73,7 +73,7 @@ For every $i$ in between, the expectation is a function of the two neighboring e
 
 The probability that we'll now go to $i-1$ given that we'll go on to win is:
 
-$$\left(\frac{(B-i)}{B}\cdot\frac{i}{B-1} \cdot \frac{i-1}{B}\right) \div \frac{i}{B}
+$$\left(\frac{B-i}{B}\cdot\frac{i}{B-1} \cdot \frac{i-1}{B}\right) \div \frac{i}{B}
 = \frac{(B-i)(i-1)}{B(B-1)}
 $$
 
