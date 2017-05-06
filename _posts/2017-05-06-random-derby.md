@@ -22,9 +22,31 @@ Each horse's path is an asymmetric random walk. There is a large literature on t
 .001|.008|.085|.813|5.04|21.8|72.3
 
 ### Code (Python):
-
 ```python
-{% include RandomDerby.py %}
+from random import random,shuffle
+
+reps = 100000
+HorseProb = [.52 + .02*i for i in range(20)]
+Victories = [0]*20
+
+for r in range(reps):
+	Position = [0]*20
+	NoVictor = True
+	while NoVictor:
+		HorseOrder = list(range(20))
+		shuffle(HorseOrder)
+		for Horse in HorseOrder:
+			if random() < HorseProb[Horse]:
+				Position[Horse] += 1
+				if Position[Horse] == 200:
+					Victories[Horse] += 1
+					NoVictor = False
+					break
+			else:
+				Position[Horse] -= 1
+for Horse in range(20):
+	print(Horse+1,",",Victories[Horse]/reps)
+
 ```
 
 <br>
