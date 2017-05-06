@@ -137,7 +137,7 @@ $$E_2 = (B-1)^2 - \frac{B}{2}$$
 
 And for arbitrary $i$,
 
-$$iE(i) = 2E_2 + \sum_{j=2}^{i-1} \Delta_j$$
+$$iE_i = 2E_2 + \sum_{j=2}^{i-1} \Delta_j$$
 
 $$ = 
 2\left((B-1)^2-\frac{B}{2}\right) + \sum_{j=2}^{i-1} \left(
