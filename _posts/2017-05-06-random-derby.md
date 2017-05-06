@@ -15,11 +15,11 @@ date: 2017/05/06
 
 ## Solution
 
-Each horse's path is an asymmetric random walk. There is a large literature on the probabilities and expectations of such walks, and one approach would be to draw on it to find explicit, if approximate, expressions for the various probability distributions involved. But I'm pretty sure that we would have to manipulate these values numerically anyway, so there is no great benefit over simply running a Monte Carlo simulation. So that's what we do, and we find that, in a series of 100,000 races, no horse below \#14 wins even one race, and among the horses that do win, here are the percentages:
+Each horse's path is an asymmetric random walk. There is a large literature on the probabilities and expectations of such walks, and one approach would be to draw on it to find explicit, if approximate, expressions for the various probability distributions involved. But I'm pretty sure that we would have to manipulate these values numerically anyway, so there is no great benefit over simply running a Monte Carlo simulation. So that's what we do, and we find that, in a series of 100,000 races, no horse below \#14 wins even one race, and among the horses that do win, here are the percentages (which sum to greater than 1 because of ties):
 
 14 | 15 | 16 | 17 | 18 | 19 | 20 
 ---|----|----|----|----|----|---
-.001|.008|.085|.813|5.04|21.8|72.3
+.001|.008|.125|.934|5.56|23.3|74.5
 
 ### Code (Python):
 ```python
