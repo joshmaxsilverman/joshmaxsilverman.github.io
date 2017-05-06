@@ -56,6 +56,6 @@ Numerically averaging the values of $P(C,9,C)$ for all possible first cards $C$ 
 ```python
 {% include PickACardSecondTry538.py %}
 ```
-
+ 
 <br>
  
