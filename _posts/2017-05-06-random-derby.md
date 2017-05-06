@@ -33,15 +33,12 @@ for r in range(reps):
 	Position = [0]*20
 	NoVictor = True
 	while NoVictor:
-		HorseOrder = list(range(20))
-		shuffle(HorseOrder)
-		for Horse in HorseOrder:
+		for Horse in range(20):
 			if random() < HorseProb[Horse]:
 				Position[Horse] += 1
 				if Position[Horse] == 200:
 					Victories[Horse] += 1
 					NoVictor = False
-					break
 			else:
 				Position[Horse] -= 1
 for Horse in range(20):
