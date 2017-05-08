@@ -25,7 +25,7 @@ Each horse's path is an asymmetric random walk. There is a large literature on t
 ```python
 from random import random,shuffle
 
-reps = 10000
+reps = 100000
 HorseProb = [.52 + .02*i for i in range(20)]
 Victories = [0]*20
 
