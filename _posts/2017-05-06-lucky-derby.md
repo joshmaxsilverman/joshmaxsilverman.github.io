@@ -23,8 +23,6 @@ Each horse's path is an asymmetric random walk. There is a large literature on t
 
 ### Code (Python):
 ```python
-from random import random,shuffle
-
 reps = 100000
 HorseProb = [.52 + .02*i for i in range(20)]
 Victories = [0]*20
@@ -34,7 +32,7 @@ for r in range(reps):
 	NoVictor = True
 	while NoVictor:
 		for Horse in range(20):
-			Position[Horse] += [-1,1][random()<HorseProb[Horse]]
+			Position[Horse] += [-1,1][random.random() < HorseProb[Horse]]
 			if Position[Horse] == 200:
 				Victories[Horse] += 1
 				NoVictor = False
