@@ -17,6 +17,8 @@ Start by labeling the numbers:
 
 ![Long division problem, labeled.](/img/LD-labeled.png)
 
+<img src="/img/LD-labeled.png" alt="Long division problem, labeled." style="width: 200px;"/>
+
 Since $f$, which is less than $1000$, is $7$ times $a$, $a$ is $142$ or less. 
 
 Observing that $i$ required bringing down two digits, we know that the number formed by the first three digits of $i$ is less than $a$ (and so the penultimate digit of b is $0$). Thus $g$ (which is at least $1000$) minus $h$ must be $14$ or less, and so:
