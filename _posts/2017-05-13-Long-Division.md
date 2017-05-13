@@ -18,11 +18,7 @@ Start by labelling the numbers:
 
 ![Long division problem, labeled.](/img/LD-labeled.png)
 
-Since $f$, which is less that $1000$, is $7$ times $a$, $a$ is $142$ or less. Since $d$, $i$, and $j$ are at least $1000$ and are $a$ times at most $9$, $a$ is greater than $1000/9$, or at least $112$. So:
-
-$$112\leq a \leq 142$$
-
-Since it follows that $9$ times $a$ is between $1008$ and $1278$, we know that $a$, $i$, and $j$ begin with a $1$.
+Since $f$, which is less that $1000$, is $7$ times $a$, $a$ is $142$ or less. 
 
 Observing that $i$ required bringing down two digits, we know that the penultimate digit of b is $0$ because the number formed by the first three digits of $i$ is less than $a$. Thus $g$ (which is at least $1000$) minus $h$ must be $14$ or less, and so:
 
