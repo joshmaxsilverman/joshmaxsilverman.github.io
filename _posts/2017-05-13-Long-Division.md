@@ -25,7 +25,7 @@ $$986 \leq h \leq 999$$
 
 Now, $h$, having three digits, is $a$ times either $7$ or $8$. If $7$, then it is equal to $f$. But $f$ subtracted from $e$, another three-digit number, yields a three digit number, which is impossible if $f$ is $900$ or above. So $h$ is $a$ times $8$, and, being divisible by 8, can only be $992$, which makes $a$ $124$.
 
-Therefore, we know that $d$ and $i$ are $9$ times $a$, $f$ is $7$ times $a$, and $h$ is $8$ times $a$. So $b$ is $97809$, and $c$, which is $a$ times $b$, is $12128316$, and the rest of the numbers fall into place easily.
+Therefore, the four-digit $d$ and $i$ are each $9$ times $a$, and so $b$ is $97809$, and so $c$ (which is $a$ times $b$) is $12128316$, and the rest of the numbers fall into place easily.
 
 ![Long division problem, solved.](/img/LD-Solved.PNG)
 
