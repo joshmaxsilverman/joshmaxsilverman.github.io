@@ -5,8 +5,7 @@ title: Long Division
 date: 2017/05/13
 ---
 
->In the long division below, each asterisk represents a whole number — any digit from 0 to 9. Reconstruct all the calculations, given that there is no remainder.
->![Long Division Problem](/img/LD.PNG)
+>In the long division below, each asterisk represents a whole number — any digit from 0 to 9. Reconstruct all the calculations, given that there is no remainder.![Long Division Problem](/img/LD.PNG)
 
 <!--more-->
 
@@ -18,9 +17,9 @@ Start by labelling the numbers:
 
 ![Long division problem, labeled.](/img/LD-labeled.png)
 
-Since $f$, which is less that $1000$, is $7$ times $a$, $a$ is $142$ or less. 
+Since $f$, which is less than $1000$, is $7$ times $a$, $a$ is $142$ or less. 
 
-Observing that $i$ required bringing down two digits, we know that the penultimate digit of b is $0$ because the number formed by the first three digits of $i$ is less than $a$. Thus $g$ (which is at least $1000$) minus $h$ must be $14$ or less, and so:
+Observing that $i$ required bringing down two digits, we know that the number formed by the first three digits of $i$ is less than $a$ (and so the penultimate digit of b is $0$). Thus $g$ (which is at least $1000$) minus $h$ must be $14$ or less, and so:
 
 $$986 \leq h \leq 999$$
 
