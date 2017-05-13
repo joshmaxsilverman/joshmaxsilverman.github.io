@@ -6,6 +6,7 @@ date: 2017/05/13
 ---
 
 >In the long division below, each asterisk represents a whole number — any digit from 0 to 9. Reconstruct all the calculations, given that there is no remainder.
+>
 ><center><img src="/img/LD.PNG" alt="Long Division Problem" style="width: 300px"/></center>
 
 <!--more-->
