@@ -5,7 +5,8 @@ title: Long Division
 date: 2017/05/13
 ---
 
->In the long division below, each asterisk represents a whole number — any digit from 0 to 9. Reconstruct all the calculations, given that there is no remainder.![Long Division Problem](/img/LD.PNG)
+>In the long division below, each asterisk represents a whole number — any digit from 0 to 9. Reconstruct all the calculations, given that there is no remainder.
+><img src="/img/LD.PNG" alt="Long Division Problem" style="width: 300px"/>
 
 <!--more-->
 
@@ -15,9 +16,7 @@ date: 2017/05/13
 
 Start by labeling the numbers:
 
-![Long division problem, labeled.](/img/LD-labeled.png)
-
-<img src="/img/LD-labeled.png" alt="Long division problem, labeled." style="width: 200px;"/>
+<img src="/img/LD-labeled.png" alt="Long division problem, labeled." style="width: 300px;"/>
 
 Since $f$, which is less than $1000$, is $7$ times $a$, $a$ is $142$ or less. 
 
@@ -29,6 +28,6 @@ Now, $h$, having three digits, is $a$ times either $7$ or $8$. If $7$, then it i
 
 Therefore, the four-digit $d$ and $i$ are each $9$ times $a$, and so $b$ is $97809$, and so $c$ (which is $a$ times $b$) is $12128316$, and the rest of the numbers fall into place easily.
 
-![Long division problem, solved.](/img/LD-Solved.PNG)
+<img src="/img/LD-Solved.PNG" alt="Long division problem, solved." style="width: 300px"/>
 
 <br>
