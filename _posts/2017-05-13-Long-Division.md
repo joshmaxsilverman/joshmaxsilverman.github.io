@@ -13,7 +13,7 @@ date: 2017/05/13
 
 ## Solution
 
-Start by labelling the numbers:
+Start by labeling the numbers:
 
 ![Long division problem, labeled.](/img/LD-labeled.png)
 
