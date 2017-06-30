@@ -22,7 +22,7 @@ The chance that a house never gets robbed is the product of the chances that eac
 
 $$\left(\frac{N-2}{N-1}\right)^{N-1}$$
 
-If $N$ is $1000$ and $D$D is $100$, that's about $.368$.
+If $N$ is $1000$ and $D$ is $100$, that's about $.368$.
 
 The chance that house $i$ does not get robbed before its own turn to rob is:
 
