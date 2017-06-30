@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Theiving Houses
+title: Thieving Houses
 date: 2017/06/30
 ---
 
