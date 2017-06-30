@@ -46,7 +46,9 @@ $$
 $$ = \left(D - \frac{D}{N-1}\right)\left(\frac{N-2}{N-1}\right)^{N-1}
  + \frac{ND}{N-1}\left(\frac{N-2}{N-1}\right)^{N-i}$$
 
-It is easy to see that this expectation is maximized when $p_{nra}$ is maximized, which is of course when $i$ is $N$, that is, the last house to rob. If $N$ is $1000$ and $D$ is $100$, the expectation is approximately $136.833$.
+It is easy to see that this expectation is maximized when $p_{nra}$ is maximized, which is of course when $i$ is $N$, that is, the last house to rob. If $N$ is $1000$ and $D$ is $100$, the expectation is approximately $136.8$.
+
+The connection between the answers to the two parts of the puzzle ($.368$ chance of not being robbed all day and last-house expectation of $136.8$ is simple: the last house expects to retain $.368$ of its initial $100$, and expects to rob the average amount of money in all the other houses, which is either exactly $100$ (if it does not get robbed) or the very slightly higher $100/.999$ (if it does). That very slightly higher possibility adds to the overall expectation, but only a tiny amount.
 
 <center><img src="/img/ThievingHouses.PNG" alt="Lottery position versus expected day's-end fortune." style="width: 600px;"/></center>
 
