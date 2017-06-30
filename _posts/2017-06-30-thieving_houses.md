@@ -28,19 +28,17 @@ The chance that house $i$ does not get robbed after its turn to rob is:
 
 $$p_{nra} = \left(\frac{N-2}{N-1}\right)^{N-i}$$
 
-House $i$'s expectation at the end of the day is it's expected haul ($E_{haul}$) times its probability ($P_{nra}$) of retaining it:
+House $i$'s expectation at the end of the day is the sum of the expected amount ($Dp_{nrb}$) in it just before it robs and its expected haul ($E_{haul}$), times its probability ($p_{nra}$) of retaining that money:
 
-$$E_{end} = \frac{ND - D\left(\frac{N-2}{N-1}\right)^{i-1}}{N-1} \cdot
+$$E_{end} = \left[D\left(\frac{N-2}{N-1}\right)^{i-1} + 
+\frac{ND - D\left(\frac{N-2}{N-1}\right)^{i-1}}{N-1} \right] \cdot
 \left(\frac{N-2}{N-1}\right)^{N-i}
 $$
 
-$$ = \frac{D}{N-1}\left[N\left(\frac{N-2}{N-1}\right)^{N-i} - \left(\frac{N-2}{N-1}\right)^{N-1}\right]$$
+$$ = \left(D - \frac{D}{N-1}\right)\left(\frac{N-2}{N-1}\right)^{N-1}
+ + \frac{ND}{N-1}\left(\frac{N-2}{N-1}\right)^{N-i}$$
 
-It is easy to see that this expectation is maximized when $p_{nra}$ is maximized, which is of course when $i$ is $N$, that is, the last house to rob. For that house, the expectation is:
-
-$$\frac{D}{N-1}\left[N - \left(\frac{N-2}{N-1}\right)^{N-1}\right]$$
-
-If $N$ is $1000$ and $D$ is $100$, this is approximately $100.0633$.
+It is easy to see that this expectation is maximized when $p_{nra}$ is maximized, which is of course when $i$ is $N$, that is, the last house to rob. If $N$ is $1000$ and $D$ is $100$, the expectation is approximately $136.833$.
 
 
 
