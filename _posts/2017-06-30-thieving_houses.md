@@ -40,7 +40,7 @@ $$ = \left(D - \frac{D}{N-1}\right)\left(\frac{N-2}{N-1}\right)^{N-1}
 
 It is easy to see that this expectation is maximized when $p_{nra}$ is maximized, which is of course when $i$ is $N$, that is, the last house to rob. If $N$ is $1000$ and $D$ is $100$, the expectation is approximately $136.833$.
 
-<center><img src="/img/ThievingHouses.png" alt="Lottery position versus expected day's-end fortune." style="width: 300px;"/></center>
+<center><img src="/img/ThievingHouses.PNG" alt="Lottery position versus expected day's-end fortune." style="width: 300px;"/></center>
 
 <br>
  
