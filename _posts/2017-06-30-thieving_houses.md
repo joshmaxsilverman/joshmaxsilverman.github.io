@@ -13,7 +13,7 @@ date: 2017/06/30
 Suppose that every house has the same amount of cash to begin with — say \$100. Which position in the lottery has the most expected cash at the end of the day, and what is that amount?
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/who-steals-the-most-in-a-town-full-of-thieves/)
+([fivethirtyeight](https://fivethirtyeight.com/features/who-steals-the-most-in-a-town-full-of-thieves/))
 
 ## Solution
 Let there be $N$ houses initially with $D$ dollars each. The chance that house $i$ does not get robbed before its own turn to rob is:
