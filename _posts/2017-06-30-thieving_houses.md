@@ -16,7 +16,15 @@ Suppose that every house has the same amount of cash to begin with — say \$100
 ([fivethirtyeight](https://fivethirtyeight.com/features/who-steals-the-most-in-a-town-full-of-thieves/))
 
 ## Solution
-Let there be $N$ houses initially with $D$ dollars each. The chance that house $i$ does not get robbed before its own turn to rob is:
+Let there be $N$ houses initially with $D$ dollars each. 
+
+The chance that a house never gets robbed is the product of the chances that each other house fails to rob it. Since each house has chance $(N-1)/(N-2)$ of failing to rob any given house, that probability is:
+
+$$\left(\frac{N-2}{N-1}\right)^{N-1}$$
+
+If $N$ is $1000$ and $D$D is $100$, that's about $.368$.
+
+The chance that house $i$ does not get robbed before its own turn to rob is:
 
 $$p_{nrb} = \left(\frac{N-2}{N-1}\right)^{i-1}$$
 
