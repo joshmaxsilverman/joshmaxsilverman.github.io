@@ -50,10 +50,10 @@ It is easy to see that this expectation is maximized when $p_{nra}$ is maximized
 
 The connection between the answers to the two parts of the puzzle ($.368$ chance of not being robbed all day and last-house expectation of $136.8$ is simple: the last house expects to retain $.368$ of its initial $100$, and expects to rob the average amount of money in all the other houses, which is either exactly $100$ (if it does not get robbed) or the very slightly higher $100/.999$ (if it does). That very slightly higher possibility adds to the overall expectation, but only a tiny amount.
 
-The expectation of house $i$ simplifies further to:
+The expectation of house $N$ simplifies further to:
 
 $$ D \left[
-\frac{1}{\left(1+\frac{1}{N}\right)^N} + \frac{N}{N-1}\left( \frac{1}{\left(1+\frac{1}{N}\right)^{N-i}}\right)\right]$$
+\frac{1}{\left(1+\frac{1}{N}\right)^N} + 1]$$
 
 For large $N$, $(1+(1/N))^N$ approaches $e$ (thanks to John Snyder in the comments for pointing this out), and so the probability of any given house being robbed approaches $1/e$, and the expectation of the last house approaches $D(1 + 1/e)$, which you will not be shocked to learn is about $1.368$.
 
