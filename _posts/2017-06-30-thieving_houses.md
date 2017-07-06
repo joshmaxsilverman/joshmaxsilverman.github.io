@@ -54,7 +54,7 @@ The connection between the answers to the two parts of the puzzle ($.368$ chance
 
 The expectation of house $i$ simplifies further to:
 
-$$ = D \left[
+$$ D \left[
 \frac{1}{\left(1+\frac{1}{N}\right)^N} + \frac{N}{N-1}\left( \frac{1}{\left(1+\frac{1}{N}\right)^{N-i}}\right)\right]$$
 
 For large $N$, $(1+(1/N))^N$ approaches $e$ (thanks to John Snyder in the comments for pointing this out), and so the probability of any given house being robbed approaches $1/e$, and the expectation of the last house approaches $D(1 + 1/e)$, which you will not be shocked to learn is about $1.368$.
