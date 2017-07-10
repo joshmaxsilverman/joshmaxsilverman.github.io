@@ -43,7 +43,7 @@ Let's represent a critic's overall assignment of theaters as a ten-character str
     9: CCCCCCCCCC
 ```
 
-These assignments ensure that every pair of movies such that one is from an odd-numbered showing and one is from an even-numbered showing, are both watched by a critic.  But all of the pairs of movies both from odd-numbered showings or both from even-numbered showings are neglected.
+These assignments ensure that every pair of movies from an odd- and an even-numbered showing are both watched by a critic.  But all of the pairs of movies from two odd-numbered showings or from two even-numbered showings are not co-watched.
 
 We can start to repair that with $9$ more critics, using the same assignment chart as above but reading it differently, namely by considering the showings to be represented in the order 1, 3, 5, 7, 9, 2, 4, 6, 8, 10. That would cover pairs movies that are in showings whose numbers are odd and even in this ordering. Reordering, this second set of assignments is:
 
@@ -77,7 +77,7 @@ Now every pair of showings has been odd-even, and so all pairs of movies are cov
 
 The chart has an obvious pattern, which can be repeated for any  number of showings without a need for additional critics. And a similar chart can be made for any number $s$ of screens, with $s^2$ lines, and again needing to re-use the chart twice, for a total (after eliminating redundancies) of $3s^2-2s$ critics for any number of showings.
 
-I do rather doubt that this scheme is optimal, as among 21 critics, $21 \times 10 \times 9 /2 $, or 945, movie pairs are covered---more than half redundantly.
+I do doubt that this scheme is optimal, as among 21 critics, $21 \times 10 \times 9 /2 $, or 945, movie pairs are covered---more than half redundantly.
 
 <br>
  
