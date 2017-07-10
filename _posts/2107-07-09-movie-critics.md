@@ -29,7 +29,7 @@ In general terms, the problem (which is really a problem in set theory and combi
 
 What I do have is a relatively simple and effective strategy that uses a lavish staff of 21 critics.
 
-Let's represent a critic's overall assignment of theaters as a ten-character string, such as "ACCBBCAABA".  Then, nine critics could satisfy the desideratum---necessary, but not sufficient to solve the problem---of having movies in consecutive showings co-watched, as follows:
+Let's represent a critic's overall assignment of theaters as a ten-character string, such as "ACCBBCAABA".  Then, nine critics can satisfy the desideratum---necessary, but not sufficient to solve the problem---of having movies in consecutive showings co-watched, as follows:
 
 ```
     1: AAAAAAAAAA
