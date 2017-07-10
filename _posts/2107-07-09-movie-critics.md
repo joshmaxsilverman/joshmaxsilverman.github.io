@@ -29,7 +29,7 @@ In general terms, the problem (which is really a problem in set theory and combi
 
 What I do have is a relatively simple and effective strategy that uses a lavish staff of 21 critics.
 
-Let's represent a critic's overall assignment of theaters as a ten-character string, such as "ACCBBCAABA".  Then, nine critics could satisfy the desideratum---necessary, but not sufficient to solved the problem---of having movies in consecutive showings co-watched, as follows:
+Let's represent a critic's overall assignment of theaters as a ten-character string, such as "ACCBBCAABA".  Then, nine critics could satisfy the desideratum---necessary, but not sufficient to solve the problem---of having movies in consecutive showings co-watched, as follows:
 
 ```
     1: AAAAAAAAAA
@@ -43,7 +43,7 @@ Let's represent a critic's overall assignment of theaters as a ten-character str
     9: CCCCCCCCCC
 ```
 
-These assignments ensure that every pair of movies containing one from an odd- and one from an an even-numbered showing are both watched by a critic.  But all of the pairs of movies from odd-odd and even-even showings are not co-watched.
+These assignments actually ensure that every pair of movies containing one from an odd- and one from an an even-numbered showing are co-watched.  But many pairs of movies from odd-odd and even-even showings are not co-watched.
 
 We can start to repair that with $9$ more critics, using the same assignment chart as above but reading it differently, namely by considering the showings to be represented in the order 1, 3, 5, 7, 9, 2, 4, 6, 8, 10. That will cover pairs movies that are in showings whose numbers are odd and even in this ordering. Reordering, this second set of assignments is:
 
@@ -75,7 +75,7 @@ To finish up, do the same thing yet again, but scramble the ordering as follows:
 
 Now every pair of showings has been odd-even, and so all pairs of movies are covered by the 27 critics we've employed. The six constant-theater assignments in the second and third charts are redundant (we already had those assignments covered among our initial nine critics). So in the words of our President, they are fired, and in total we get by with 21 critics. 
 
-The chart has an obvious pattern, which can be repeated for any  number of showings without a need for additional critics. And a similar chart can be made for any number $s$ of screens, with $s^2$ lines, and again needing to re-use the chart twice, for a total (after eliminating redundancies) of $3s^2-2s$ critics for any number of showings.
+The first chart has an obvious pattern, which can be repeated for any  number of showings without a need for additional critics. And a similar chart can be made for any number $s$ of screens, with $s^2$ lines, and again needing to re-use the chart twice, for a total (after eliminating redundancies) of $3s^2-2s$ critics for any number of showings.
 
 I do doubt that this scheme is optimal, as among 21 critics, $21 \times 10 \times 9 /2 $, or 945, movie pairs are covered---more than half redundantly. But it's Sunday night, and it's what I got.
 
