@@ -22,7 +22,7 @@ date: 2017/07/09
 
 ## Solution
 
-There is an ambiguity in the statement of the problem. A _static_ interpretation requires us to assign critics to watch a fixed sequence of movies in advance. A _dynamic_ interpretation allows for the critics to base their plans on all the critics' evaluative judgments before every viewing. While I doubt it makes a difference, I am not sure of that, and I will operate on the assumption that the static interpretation is intended.
+There is an ambiguity in the statement of the problem. A _static_ interpretation requires us to assign critics to watch fixed sequences of movies in advance. A _dynamic_ interpretation allows for the critics to base their plans on all the critics' evaluative judgments before every viewing. While I doubt it makes a difference, I am not sure of that, and I will operate on the assumption that the static interpretation is intended.
 
 First, let's establish that for every pair of non-simultaneous movies -- all $30 \times 27 / 2$, or 405, of them --  at least one of the critics must watch both.  Suppose some pair of movies is not co-watched in that sense. Then if it contains the best and second-best movies, all we will know at the end of the festival is that every critic who has seen either of them rated it higher than every other movie they've seen. That provides no way to rank them with respect to each other. So to guarantee that we'll find the best movie, every pair of movies must be co-watched.
 
