@@ -45,7 +45,7 @@ Let's represent a critic's overall assignment of theaters as a ten-character str
 
 These assignments actually ensure that every pair of movies containing one from an odd- and one from an an even-numbered showing are co-watched.  But many pairs of movies from odd-odd and even-even showings are not co-watched.
 
-We can start to repair that with $9$ more critics, using the same assignment chart as above but reading it differently, namely by considering the showings to be represented in the order 1, 3, 5, 7, 9, 2, 4, 6, 8, 10. That will cover pairs of movies that are in showings whose numbers are odd and even in this ordering. Reordering, this second set of assignments is:
+We can start to repair that with nine more critics, using the same assignment chart as above but reading it differently, namely by considering the showings to be represented in the order 1, 3, 5, 7, 9, 2, 4, 6, 8, 10. That will cover pairs of movies that are in showings whose numbers are odd and even in this ordering. Reordering, this second set of assignments is:
 
 ```
     1: AAAAAAAAAA
