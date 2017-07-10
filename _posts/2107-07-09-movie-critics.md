@@ -78,7 +78,7 @@ To finish up, do the same thing yet again, but scramble the ordering as follows:
     9: CCCCCCCCCC
 ```
 
-Now every pair of showings has been odd-even (as concerns our first-chart strategy), and so all pairs of movies are covered by the 27 critics we've employed. The six constant-theater assignments in the second and third charts are redundant (we already had those assignments covered among our initial nine critics). So in the words of our President, they are fired, and in total we get by with 21 critics. 
+Now every pair of showings has been odd-even (as concerns our first-chart strategy), and so all pairs of movies are co-watched by the 27 critics we've employed. The six constant-theater assignments in the second and third charts are redundant (we already had those assignments covered among our initial nine critics). So in the words of our President, they are fired, and in total we get by with 21 critics. 
 
 The first chart has an obvious pattern, which can be repeated for any  number of showings without a need for additional critics. And a similar chart can be made for any number $s$ of screens, with $s^2$ lines, and again needing to re-use the chart twice, for a total (after eliminating redundancies) of $3s^2-2s$ critics for any number of showings.
 
