@@ -10,6 +10,7 @@ date: 2017/07/23
 >But now, you have a spy! You know how many soldiers your archenemy will send to each castle. The bad news, though, is that you no longer have 100 soldiers — your army suffered some losses in a previous battle.
 >
 >What is the value of the spy?
+<!--more-->
 >
 >That is, how many soldiers do you need to have in order to win, no matter the distribution of your opponent’s soldiers? Put another way: What k is the minimum number such that, for any distribution of 100 soldiers in the 10 castles by your opponent, you can distribute k soldiers and win the battle?
 
