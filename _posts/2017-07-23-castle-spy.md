@@ -16,7 +16,7 @@ date: 2017/07/23
 
 [(fivethirtyeight.com)](https://fivethirtyeight.com/features/how-much-is-a-spy-worth-in-a-warring-riddler-nation/)
 
-===Solution
+==Solution
 
 As your opponent, knowing you have a spy, how should I allocate my soldiers to make your at-least-28 points costliest? 
 
