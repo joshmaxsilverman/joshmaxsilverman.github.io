@@ -24,7 +24,7 @@ An "even-cost" strategy allocates soldiers so that for each castle the cost in s
 
 It makes sense that the even-cost strategy is optimal, in the sense of forcing you to spend the greatest number of soldiers, because if I make some castles more expensive than average, other castles have to become below-average bargains, and surely you can then allocate your soldiers to more of the bargain castles than the expensive ones.
 
-## . . . Made Rigorous
+## . . . made rigorous
 
 But fans of rigorous proofs will recognize that that's not one (the word "surely" is always a tip-off that hands are being waved). Let's try to do better!
 
