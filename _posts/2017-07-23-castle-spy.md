@@ -16,13 +16,15 @@ date: 2017/07/23
 
 [(fivethirtyeight.com)](https://fivethirtyeight.com/features/how-much-is-a-spy-worth-in-a-warring-riddler-nation/)
 
-## Solution
+## Solution . . .
 
 As your opponent, knowing you have a spy, how should I allocate my soldiers to make your at-least-28 points costliest? 
 
 An "even-cost" strategy allocates soldiers so that for each castle the cost in soldiers-per-point is the same. In this case, since there are a total of 55 points, and since the cost of your winning at any given castle is the number of soldiers I allocate to it plus one, on average over all ten castles the cost is 110/55, or 2 soldiers per point. I can arrange an even-cost situation by sending, to castle number c, 2c-1 soldiers, which uses up all of my soldiers. Your cost of victory will be the 28 points you need times the cost per point of 2 soldiers, for a total of 56 soldiers.
 
 It makes sense that the even-cost strategy is optimal, in the sense of forcing you to spend the greatest number of soldiers, because if I make some castles more expensive than average, other castles have to become below-average bargains, and surely you can then allocate your soldiers to more of the bargain castles than the expensive ones.
+
+## . . . Made Rigorous
 
 But fans of rigorous proofs will recognize that that's not one (the word "surely" is always a tip-off that hands are being waved). Let's try to do better!
 
