@@ -1,6 +1,6 @@
 from random import shuffle
 N = 100
-shufflePeriod = 10000000
+shufflePeriod = 20000000
 print(N)
 
 connected = [[]]
@@ -20,7 +20,7 @@ def explore(path):
 		shuffleCounter = 0
 		for L in connected:
 			shuffle(L)
-		print "Shuffled still",longestLength,longestPath
+		print "Shuffled. Still",longestLength,longestPath
 
 	isExtendable = 0
 	n = path[-1]
