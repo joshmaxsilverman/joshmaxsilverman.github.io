@@ -20,7 +20,7 @@ def explore(path):
 		shuffleCounter = 0
 		for L in connected:
 			shuffle(L)
-		print "Shuffled"
+		print "Shuffled still",longestLength,longestPath
 
 	isExtendable = 0
 	n = path[-1]
