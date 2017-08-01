@@ -12,7 +12,7 @@ for m in range(1,N+1):
 		if ((not m == n) and (m%n == 0 or n%m == 0)):
 			connected[m].append(n)
 
-# Prioritize well-connected neighbors
+# Prioritize poorly-connected neighbors
 for n in range(1,N+1):
 	connected[n].sort(key=lambda x:len(connected[x]))
 
