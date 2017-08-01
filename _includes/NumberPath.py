@@ -1,7 +1,6 @@
 # For fivethirtyeight.com Riddler. Search for longest path in divisor graph.
 # This produces a path of length 74 in a few seconds when run with pypy.
 
-from random import shuffle
 N = 100
 print "N:",N
 
