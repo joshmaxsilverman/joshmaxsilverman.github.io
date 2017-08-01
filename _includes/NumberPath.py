@@ -1,15 +1,17 @@
-N = 40
+N = 100
+print "N:",N
 
 connected = [[]]
 for i in range(N):
 	connected.append([])
 for m in range(1,N+1):
-	for n in range(1,N+1):
+	for n in range(N,0,-1):
 		if ((not m == n) and (m%n == 0 or n%m == 0)):
 			connected[m].append(n)
 
 def explore(path):
 	global longestLength, longestPath, connected
+
 	isExtendable = 0
 	n = path[-1]
 	for m in connected[n]:
@@ -22,13 +24,9 @@ def explore(path):
 		if len(path) > longestLength:
 			longestLength = len(path)
 			longestPath = path
+			print longestLength,longestPath
 
 longestPath = []
 longestLength = 0
 
-for n in range(1,N+1):
-	print(n)
-	explore([n])
-
-print("Longest path length is",longestLength)
-print(longestPath)
+explore([81])
