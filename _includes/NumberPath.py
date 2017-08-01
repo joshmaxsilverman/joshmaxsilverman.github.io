@@ -1,3 +1,7 @@
+# For fivethirtyeight.com Riddler. Search for longest path in divisor graph.
+# This produces a path of length 74 in a few seconds when run with pypy.
+
+from random import shuffle
 N = 100
 print "N:",N
 
@@ -8,6 +12,10 @@ for m in range(1,N+1):
 	for n in range(N,0,-1):
 		if ((not m == n) and (m%n == 0 or n%m == 0)):
 			connected[m].append(n)
+
+# Prioritize well-connected neighbors
+for n in range(1,N+1):
+	connected[n].sort(key=lambda x:len(connected[x]))
 
 def explore(path):
 	global longestLength, longestPath, connected
@@ -29,4 +37,7 @@ def explore(path):
 longestPath = []
 longestLength = 0
 
-explore([81])
+explore([92])
+for n in range(100,1,-1):
+	print n
+	explore([n])
