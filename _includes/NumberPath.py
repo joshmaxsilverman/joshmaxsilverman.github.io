@@ -35,9 +35,13 @@ def explore(path):
 			longestLength = len(path)
 			longestPath = path
 			print longestLength,longestPath
+			print "Unused:", list(set(range(1,N+1)) - set(dontUse) - set(path))
 
 longestPath = []
 longestLength = 0
 
-# Starting with 92 works best (trial and error).
+# 58, 62, and 92 yield paths of 75
 explore([92])
+for n in range(100,1,-1):
+	print n
+	explore([n])
