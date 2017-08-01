@@ -42,6 +42,4 @@ longestLength = 0
 
 # 58, 62, and 92 yield paths of 75
 explore([92])
-for n in range(100,1,-1):
-	print n
-	explore([n])
+
