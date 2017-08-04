@@ -21,7 +21,7 @@ date: 2017/08/04
 
 ### Part 1
 
-We are seeking $P(O|“O")$, which is the conditional probability that the bathroom is occupied given that the sign reads “Occupied." By the definition of conditional probability: 
+We are seeking $P(O\|“O")$, which is the conditional probability that the bathroom is occupied given that the sign reads “Occupied." By the definition of conditional probability: 
 
 $$P(O | “O") = \frac{P(O \& “O")}{P(“O")}$$
 
