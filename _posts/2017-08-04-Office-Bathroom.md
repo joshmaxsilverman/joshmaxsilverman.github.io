@@ -12,7 +12,7 @@ date: 2017/08/04
 >Two questions about this workplace situation:
 >
 >1. If you go to the bathroom and see that the sign on the door reads “Occupied,” what is the probability that the bathroom is actually occupied?
->2If the sign reads “Vacant,” what is the probability that the bathroom actually is vacant?
+>2. If the sign reads “Vacant,” what is the probability that the bathroom actually is vacant?
 >Extra credit: What happens as the percentage of conscientious bathroom users changes?
 <!--more-->
 [(fivethirtyeight.com)](https://fivethirtyeight.com/features/is-this-bathroom-occupied/)
