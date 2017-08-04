@@ -1,5 +1,5 @@
 # For fivethirtyeight.com Riddler. Search for longest path in divisor graph.
-# This produces a path of length 75 for N=100 and 547 for N=1000.
+# This produces a path of length 75 for N=100 and 551 for N=1000.
 
 #N=100
 N = 1000
