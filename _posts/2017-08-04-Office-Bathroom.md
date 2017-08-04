@@ -21,27 +21,42 @@ date: 2017/08/04
 
 ### Part 1
 
-We are seeking $P(O|“O")$, which is the conditional probability that the bathroom is occupied given that the sign reads “Occupied." By the definition of conditional probability:
+We are seeking $P(O|“O")$, which is the conditional probability that the bathroom is occupied given that the sign reads “Occupied." By the definition of conditional probability: 
+
 $$P(O | “O") = \frac{P(O \& “O")}{P(“O")}$$
+
 Start with the numerator. Label the three types of users $A$, $B$, and $C$, letting $O_A$ mean the bathroom is occupied by a type-$A$ user (and so on). Because if the bathroom is now occupied by a type-A user the sign reads whatever it was last set to read by a previous sign-setting user, who is equally likely to be of types $B$ or $C$, the chance it now reads “Occupied" is $1/2$. So:
+
 $$P(O \& “O") = P(O_A \& “O") + P(O_B \& “O") + P(O_C \& “O") $$
+
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 1 = \frac{5}{12}$$
+
 Now $P(“O")$ is $P(“O" \& O)$ plus $P(“O" \& \neg O)$. And $P(“O" \& \neg O)$ is the chance that the bathroom is unoccupied and the previous user left the sign reading “Occupied". The chance that the bathroom is unoccupied and the previous user is of any given type is $1/6$. So:
+
 $$P(“O" \& \neg O) = \frac{1}{6}\cdot \frac{1}{2} + \frac{1}{6}\cdot 1 +
 \frac{1}{6} \cdot 0 = \frac{1}{4}$$
+
 So $P(“O")$ is $5/12$ plus $1/4$, or $2/3$. And:
+
 $$P(O|“O") = \frac{P(O \& “O")}{P(“O")}
 =  \frac{\frac{5}{12}}{\frac{2}{3}} = \frac{5}{8}$$
 
 ### Part 2
 
 Proceeding analogously to Part 1:
+
 $$P(V|“V") = \frac{P(V \& “V")}{P(“V")}$$
+
 Now, $P(“V")$ is $1$ minus $P(“O")$, or $1/3$.
+
 And the chance the bathroom is vacant and the sign reads “Vacant" is based on the chance that the previous user left the sign reading that way. Because the chance a type-$A$ user would do so is again $1/2$:
+
 $$P(V \& “V") = P(V_A \& “V") + P(V_B \& “V") + P(V_C \& “V") $$
+
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 0 + \frac{1}{6} \cdot 1 = \frac{1}{4}$$
+
 And so:
+
 $$P(V|“V") = \frac{\frac{1}{4}}{\frac{1}{3}} = \frac{3}{4}$$
 
 
