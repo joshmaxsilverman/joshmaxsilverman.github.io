@@ -21,7 +21,7 @@ date: 2017/08/04
 
 ### Part 1
 
-We are seeking $P(O|``O")$, which is the conditional probability that the bathroom is occupied given that the sign reads ``Occupied." By the definition of conditional probability:
+We are seeking $P(O|\`\`O")$, which is the conditional probability that the bathroom is occupied given that the sign reads ``Occupied." By the definition of conditional probability:
 $$P(O | ``O") = \frac{P(O \& ``O")}{P(``O")}$$
 Start with the numerator. Label the three types of users $A$, $B$, and $C$, letting $O_A$ mean the bathroom is occupied by a type-$A$ user (and so on). Because if the bathroom is now occupied by a type-A user the sign reads whatever it was last set to read by a previous sign-setting user, who is equally likely to be of types $B$ or $C$, the chance it now reads ``Occupied" is $1/2$. So:
 $$P(O \& ``O") = P(O_A \& ``O") + P(O_B \& ``O") + P(O_C \& ``O") $$
