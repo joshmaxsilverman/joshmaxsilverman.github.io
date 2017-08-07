@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Office Restroom
 date: 2017/08/04
 ---
