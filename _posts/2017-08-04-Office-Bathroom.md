@@ -29,7 +29,7 @@ Start with the numerator. Label the three types of users $A$, $B$, and $C$, lett
 
 $$P(O \& “O") = P(O_A \& “O") + P(O_B \& “O") + P(O_C \& “O") $$
 
-$$= P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)
+$$= P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)$$
 
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 1 = \frac{5}{12}$$
 
@@ -59,11 +59,14 @@ And the chance the bathroom is vacant and the sign reads “Vacant" is based on 
 
 $$P(V \& “V") = P(V_A \& “V") + P(V_B \& “V") + P(V_C \& “V") $$
 
-$$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 0 + \frac{1}{6} \cdot 1 = \frac{1}{4}$$
+$$= P(“V" | L_A)P(L_A) + P(“V"|L_B)P(L_B) + P(“V" | L_C)P(L_C)$$
+
+$$= \frac{1}{2} \cdot \frac{1}{6} + 0\cdot\frac{1}{6} + 1\cdot\frac{1}{6} = \frac{1}{4}$$
 
 And so:
 
 $$P(V|“V") = \frac{\frac{1}{4}}{\frac{1}{3}} = \frac{3}{4}$$
 
+(There is an "extra credit" question on fivethirtyeight, but since it is has no single clear reading, and since on any plausible reading solving it involves nothing more than replacing some of the numerical probabilities with variables in the above reasoning, I am not going to address it.)
 
 <br>
