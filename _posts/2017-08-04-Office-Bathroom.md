@@ -67,6 +67,8 @@ And so:
 
 $$P(V|“V") = \frac{\frac{1}{4}}{\frac{1}{3}} = \frac{3}{4}$$
 
+Either way, I'd knock!
+
 (There is an "extra credit" question on fivethirtyeight, but since it is has no single clear reading, and since on any plausible reading solving it involves nothing more than replacing some of the numerical probabilities with variables in the above reasoning, I am not going to address it.)
 
 <br>
