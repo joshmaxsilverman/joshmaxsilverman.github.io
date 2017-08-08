@@ -33,10 +33,14 @@ $$ = P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)
 
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 1 = \frac{5}{12}$$
 
-Now $P(“O")$ is $P(“O" \& O)$ plus $P(“O" \& \neg O)$. And $P(“O" \& \neg O)$ is the chance that the bathroom is unoccupied and the previous user left the sign reading “Occupied". The chance that the bathroom is unoccupied and the previous user is of any given type is $1/6$. So:
+Now $P(“O")$ is $P(“O" \& O)$ plus $P(“O" \& \neg O)$. And $P(“O" \& \neg O)$ is the chance that the bathroom is unoccupied and the previous user left the sign reading “Occupied". The chance that the bathroom is unoccupied and the latest user was of any given type is $1/6$. So, (where $L_A$ means that the bathroom is unoccupied and the latest user was of type $A$, etc.):
 
-$$P(“O" \& \neg O) = \frac{1}{6}\cdot \frac{1}{2} + \frac{1}{6}\cdot 1 +
-\frac{1}{6} \cdot 0 = \frac{1}{4}$$
+$$P(“O" \& \neg O) = P(“O" \& L_A) + P(“O" \& L_B) + P(“O" \& L_C)$$
+
+$$= P(“O" | L_A)P(L_A) + P(“O"|L_B)P(L_B) + P(“O" | L_C)P(L_C)$$
+
+$$ = \frac{1}{2}\cdot \frac{1}{6} + 1\cdot\frac{1}{6} +
+0\cdot\frac{1}{6} = \frac{1}{4}$$
 
 So $P(“O")$ is $5/12$ plus $1/4$, or $2/3$. And:
 
