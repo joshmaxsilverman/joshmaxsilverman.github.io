@@ -14,6 +14,7 @@ date: 2017/08/04
 >1. If you go to the bathroom and see that the sign on the door reads “Occupied,” what is the probability that the bathroom is actually occupied?
 >2. If the sign reads “Vacant,” what is the probability that the bathroom actually is vacant?
 <!--more-->
+
 [(fivethirtyeight.com)](https://fivethirtyeight.com/features/is-this-bathroom-occupied/)
 
 ## Solution
@@ -27,6 +28,8 @@ $$P(O | “O") = \frac{P(O \& “O")}{P(“O")}$$
 Start with the numerator. Label the three types of users $A$, $B$, and $C$, letting $O_A$ mean the bathroom is occupied by a type-$A$ user (and so on). Because if the bathroom is now occupied by a type-A user the sign reads whatever it was last set to read by a previous sign-setting user, who is equally likely to be of types $B$ or $C$, the chance it now reads “Occupied" is $1/2$. So:
 
 $$P(O \& “O") = P(O_A \& “O") + P(O_B \& “O") + P(O_C \& “O") $$
+
+$$ = P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)
 
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 1 = \frac{5}{12}$$
 
