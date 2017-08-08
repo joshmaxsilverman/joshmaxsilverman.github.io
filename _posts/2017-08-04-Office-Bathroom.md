@@ -29,7 +29,7 @@ Start with the numerator. Label the three types of users $A$, $B$, and $C$, lett
 
 $$P(O \& “O") = P(O_A \& “O") + P(O_B \& “O") + P(O_C \& “O") $$
 
-$$ = P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)
+$$= P(“O" | O_A)P(O_A) + P(“O" | O_B)P(O_B) + P(“O" | O_C)P(O_C)
 
 $$= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 1 = \frac{5}{12}$$
 
