@@ -15,6 +15,8 @@ date: 2017/08/11
 
 ## Solution
 
+First we determine the _dihedral angle_ between faces of a regular tetrahedron:
+
 ![One Tetrahedron.](/img/Tetrahedron.png)
 
 ![Tetrahedron section.](/img/TetrahedronSection.png)
@@ -26,6 +28,5 @@ $$\theta = 2\arcsin{\frac{\sqrt{3}}{3}} \approx 70.53^\circ$$
 The five tetrahedra together take up five times that angle, and so what's left over is:
 
 $$ 360 - 5 \times \theta \approx 7.356^\circ$$
-
 
 <br>
