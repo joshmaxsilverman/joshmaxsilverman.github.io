@@ -15,7 +15,7 @@ date: 2017/08/11
 
 ## Solution
 
-First we determine the _dihedral angle_ between faces of a regular tetrahedron:
+First we determine the _dihedral angle_ (labeled $\theta$ in the diagrams) between faces of a regular tetrahedron:
 
 ![One Tetrahedron.](/img/Tetrahedron.png)
 
