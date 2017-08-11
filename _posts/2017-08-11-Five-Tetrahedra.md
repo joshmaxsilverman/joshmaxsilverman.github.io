@@ -21,9 +21,9 @@ First we determine the _dihedral angle_ (labeled $\theta$ in the diagrams) betwe
 
 ![Tetrahedron section.](/img/TetrahedronSection.png)
 
-$$\frac{\theta}{2} = \arcsin{\frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}}$$
+$$ \frac{\theta}{2} = \arcsin{\frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}}}$$
 
-$$\theta = 2\arcsin{\frac{\sqrt{3}}{3}} \approx 70.53^\circ$$
+$$ \theta = 2\arcsin{\frac{\sqrt{3}}{3}} \approx 70.53^\circ$$
 
 The five tetrahedra together take up five times that angle, and so what's left over is:
 
