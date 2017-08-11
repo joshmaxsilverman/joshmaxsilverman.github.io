@@ -31,4 +31,6 @@ $$ 360 - 5 \times \theta \approx 7.356^\circ$$
 
 The agony!
 
+To form a complete pentagonal loop, the dihedral angle would have to be $72^\circ$, which we could achieve by lengthening the circumferential sides of the tetrahedra from $1$ to $\sqrt{3} \times \sin{36}$, or about $1.018$.
+
 <br>
