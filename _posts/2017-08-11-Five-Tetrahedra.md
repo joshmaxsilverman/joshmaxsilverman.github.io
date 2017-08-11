@@ -29,9 +29,7 @@ The five tetrahedra together take up five times that angle, and so what's left o
 
 $$ 360 - 5 \times \theta \approx 7.356^\circ$$
 
-The agony!
-
-To form a complete pentagonal loop, the dihedral angle would have to be $72^\circ$, which we could achieve by lengthening the circumferential sides of the tetrahedra from $1$ to $\sqrt{3} \times \sin{36}$, or about $1.018$. Voila!
+To form a complete pentagonal loop, the dihedral angle would have to be $72^\circ$, which we could achieve by lengthening the circumferential sides of the tetrahedra from $1$ to $\sqrt{3}\sin{36}$, or about $1.018$. Voila: no more agony!
 
 ![Completed pentagonal ring.](/img/Completed.png)
 
