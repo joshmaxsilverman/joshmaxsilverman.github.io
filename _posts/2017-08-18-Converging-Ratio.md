@@ -49,7 +49,7 @@ We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that w
 
 So our sequence $r_0, r_1,\ldots$ is bounded (by $1+\sqrt{3}$ and 3) and monotonic (in this case, decreasing), and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  QED!
 
-It turns out that $r_i$ approaches the limit very quickly indeed. In fact, $r_10$ is identical to that value up to 12 significant digits:
+It turns out that $r_i$ approaches the limit very quickly indeed. In fact, $r_{10}$ is identical to that value up to 12 significant digits:
 
 ```
 1+sqrt(3) is  2.73205080757
