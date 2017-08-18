@@ -36,9 +36,13 @@ What we have actually shown is that, on the assumption that there _is_ a ratio $
 To do that, consider the sequence $r_0,r_1,\ldots$ of ratios of 3s to 2s that starts with the ratio of the sequence 3,3,3,2 ($r_0$ is 3), and which is such that at each step, the sequence is expanded by following the instructions of the earlier sequence. As we saw above, this means that:
 
 $$r_0 = 3$$
+
 $$r_i+1 = f(r_i)$$
+
 where:
+
 $$f(r) = \frac{3r+2}{r +1}$$
+
 We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that when fed to the function yields itself). For all $r$ greater than $1+\sqrt{3}$ (including 3), $f$ yields a value less than $r$ and greater than $1+\sqrt{3}$. This allows us to establish that there is no limit to the $r_i$ that is greater than $1+\sqrt{3}$. For suppose there is, and call it $x$. Since we know that $f(x)$ is less than $x$, we know that we can pick an $r_i$ sufficiently close to $x$ that $f(r_i)$ is close to $f(x)$ and less than $x$. 
 
 So our sequence $r_0, r_1,\ldots$ is bounded (by $1+sqrt{3}$ and 3) and monotonic (in this case, decreasing), and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  QED!
