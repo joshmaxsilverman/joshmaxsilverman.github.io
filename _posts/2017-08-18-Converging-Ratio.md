@@ -31,7 +31,7 @@ The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732.
 
 ## Not so fast!
 
-What we have actually shown is that, on the assumption that there _is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it is $1+\sqrt{3}$. It's entirely plausible that there is such a limiting ratio, but to be rigorous we need to prove it.
+What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it is $1+\sqrt{3}$. It's entirely plausible that there is such a limiting ratio, but to be rigorous we need to prove it.
 
 To do that, consider the sequence $r_0,r_1,\ldots$ of ratios of 3s to 2s that starts with the ratio of the sequence 3,3,3,2, and which is such that at each step, the sequence is expanded by following the instructions of the earlier sequence. As we saw above, this means that:
 
