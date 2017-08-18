@@ -53,7 +53,9 @@ It turns out that $r_i$ approaches the limit very quickly indeed. In fact, $r_10
 
 ```
 1+sqrt(3) is  2.73205080757
-i     r(i)
+
+i r(i)
+------
 0 3
 1 2.75
 2 2.73333333333
@@ -66,3 +68,4 @@ i     r(i)
 9 2.73205080758
 10 2.73205080757
 ```
+<br>
