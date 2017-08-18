@@ -29,7 +29,7 @@ Setting that equal to $r$ and multiplying out, we get:
 
 $$r^2 - 2r -2 = 0 $$
 
-The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732.
+The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732. We're done; right?
 
 ## Not so fast!
 
