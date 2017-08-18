@@ -21,7 +21,7 @@ date: 2017/08/18
 
 ## Solution
 
-By "the ratio of 3s to 2s in the entire sequence" we can only understand the _limit_ of the ratios of 3s to 2s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment $S$ of length $n$, the ratio of 3s to 2s is essentially $r$.  The segment $S^*$ of the sequence _contributed_ by this initial segment contains all the 3s and 2s referred to by numbers in $S$. Each 3 in $S$ contributes three 3s and a 2, and each 2 contributes two 3s and a 2.  The ratio of 3s to 2s in $S^*$, which must also be $r$, is a simple function of the ratio ($r$) of the 3s to the 2s in $S$ that contribute them. Since the proportion of 3s in $S$ is $r/(r+1)$ and the proportion of 2s is $1/(r+1)$, the ratio of 3s to 2s in $S^*$ is:
+By "the ratio of 3s to 2s in the entire sequence" we can only understand the _limit_ of the ratios of 3s to 2s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment $S$ of length $n$, the ratio of 3s to 2s is essentially $r$.  The segment $S^\*$ of the sequence _contributed_ by this initial segment contains all the 3s and 2s referred to by numbers in $S$. Each 3 in $S$ contributes three 3s and a 2, and each 2 contributes two 3s and a 2.  The ratio of 3s to 2s in $S^\*$, which must also be $r$, is a simple function of the ratio ($r$) of the 3s to the 2s in $S$ that contribute them. Since the proportion of 3s in $S$ is $r/(r+1)$ and the proportion of 2s is $1/(r+1)$, the ratio of 3s to 2s in $S^\*$ is:
 
 $$ 3\frac{r}{r+1}+2\frac{1}{r+1}} = \frac{3r+2}{r+1} = r $$
 
