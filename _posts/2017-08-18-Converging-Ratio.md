@@ -45,7 +45,7 @@ $$f(r) = \frac{3r+2}{r +1}$$
 
 ![f(r) versus r](/img/convergingratios.png)
 
-We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that when fed to the function yields itself). For all $r$ greater than $1+\sqrt{3}$ (including 3), $f$ yields a value less than $r$ and greater than $1+\sqrt{3}$. This allows us to establish that there is no limit to the $r_i$ that is greater than $1+\sqrt{3}$. For suppose there is, and call it $x$. Since we know that $f(x)$ is less than $x$, we know that we can pick an $r_i$ sufficiently close to $x$ that $f(r_i)$ is close to $f(x)$ and less than $x$. 
+We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that when fed to the function yields itself); that's where the two curves intersect in the graph. For all $r$ greater than $1+\sqrt{3}$ (including 3), $f$ yields a value less than $r$ and greater than $1+\sqrt{3}$. This allows us to establish that there is no limit to the $r_i$ that is greater than $1+\sqrt{3}$. For suppose there is, and call it $x$. Since we know that $f(x)$ is less than $x$, we know that we can pick an $r_i$ sufficiently close to $x$ that $f(r_i)$ is close to $f(x)$ and less than $x$. 
 
 So our sequence $r_0, r_1,\ldots$ is bounded (by $1+\sqrt{3}$ and 3) and monotonic (in this case, decreasing), and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  QED!
 
