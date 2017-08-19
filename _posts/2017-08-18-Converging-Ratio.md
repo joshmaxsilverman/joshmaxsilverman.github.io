@@ -25,11 +25,13 @@ By "the ratio of 3s to 2s in the entire sequence" we can only understand the _li
 
 $$3\frac{r}{r+1}+2\frac{1}{r+1} = \frac{3r+2}{r+1}$$
 
+(If that doesn't seem very intuitive, think of it as the expected number of 3s preceeding a 2.)
+
 Setting that equal to $r$ and multiplying out, we get:
 
 $$r^2 - 2r -2 = 0 $$
 
-The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732. We're done; right?
+The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732. And so we're done! _Right?_
 
 ## Not so fast!
 
