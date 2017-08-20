@@ -75,4 +75,6 @@ i r(i)
 
 (Now, the $r_i$ sequence is not the entire sequence of ratios of $3$s to $2$s of initial subsequences of our main sequence $S$, so it is logically possible that while it converges, the entire ratio sequence does not. But the $r_i$ sequence illustrates a universal fact: described segments have ratios closer to $1+\sqrt{3}$ than their describing ones, and so any subsequence with a ratio departing from $1+\sqrt{3}$ is swamped in the long run by the sequence it describes, the sequence that second sequence describes, and so on, which all together will have a limiting ratio of $1+\sqrt{3}$.)
 
+Also of interest: if, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the golden ratio, $(1+\sqrt{5})/2$, or about $1.618$.
+
 <br>
