@@ -75,6 +75,8 @@ i r(i)
 
 (Now, the $r_i$ sequence is not the entire sequence of ratios of $3$s to $2$s of initial subsequences of our main sequence $S$, so it is logically possible that while it converges, the entire ratio sequence does not. But the $r_i$ sequence illustrates a universal fact: described segments have ratios closer to $1+\sqrt{3}$ than their describing ones, and so any subsequence with a ratio departing from $1+\sqrt{3}$ is swamped in the long run by the sequence it describes, the sequence that second sequence describes, and so on, which all together will have a limiting ratio of $1+\sqrt{3}$.)
 
-Also of interest: if, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the golden ratio, $(1+\sqrt{5})/2$, or about $1.618$.
+Interesting facts:
+- If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
+- The sequences $S_2$ and $S_3$ containing the positions of within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for positive integers $m$, $\floor{m(2+\sqrt{3})}$ and $\floor{m((1+\sqrt{3})/2)$.
 
 <br>
