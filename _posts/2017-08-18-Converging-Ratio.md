@@ -51,7 +51,7 @@ $$f(r) = \frac{3r+2}{r +1}$$
 
 We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that when fed to the function yields itself); that's where the two curves intersect in the graph. For all $r$ greater than $1+\sqrt{3}$ (including $3$), $f(r)$ is less than $r$ and greater than $1+\sqrt{3}$. This allows us to establish that there is no limit to the $r_i$ that is greater than $1+\sqrt{3}$. For suppose there is, and call it $c$. Since we know that $f(c)$ is less than $c$, we know that we can pick an $r_i$ sufficiently close to $c$ that $f(r_i)$ is close enough to $f(c)$ to be less than $c$. 
 
-So our sequence $r_0, r_1,\ldots$ is bounded (by $1+\sqrt{3}$ and $3$) and monotonicly decreasing, and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  Now, the $r_i$ sequence is not the entire sequence of ratios of $3$s to $2$s of initial subsequences of our main sequence $S$, so it is logically possible that while it converges, the entire ratio sequence does not. But since we've established that the ratio $r$ for _any_ described sequence (and all sequences ending in a $2$ are described) is always $f(r)$, and hence less than the ratio for its describing sequence, we know that the total sequence of ratios cannot include the kinds of extreme wiggle that could threaten divergence. So, QED, then! 
+So our sequence $r_0, r_1,\ldots$ is bounded (by $1+\sqrt{3}$ and $3$) and monotonicly decreasing, and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  
 
 It turns out that $r_i$ approaches the limit very quickly indeed. In fact, $r_{10}$ is identical to $1+\sqrt{3}$ to twelve significant digits (I found that surprising):
 
@@ -72,4 +72,7 @@ i r(i)
 9 2.73205080758
 10 2.73205080757
 ```
+
+(Now, the $r_i$ sequence is not the entire sequence of ratios of $3$s to $2$s of initial subsequences of our main sequence $S$, so it is logically possible that while it converges, the entire ratio sequence does not. But the $r_i$ sequence illustrates a universal fact: described segments have ratios closer to $1+\sqrt{3}$ than their describing ones, and so any subsequence with a ratio departing from $1+\sqrt{3}$ is swamped in the long run by the sequence it describes, the sequence that second sequence describes, and so on, which all together will have a limiting ratio of $1+\sqrt{3}$.)
+
 <br>
