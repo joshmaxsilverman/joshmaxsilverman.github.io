@@ -21,7 +21,7 @@ date: 2017/08/18
 
 ## Solution
 
-By "the ratio of 3s to 2s in the entire sequence" we can only understand the _limit_ of the ratios of 3s to 2s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment $S$ of length $n$, the ratio of 3s to 2s is essentially $r$.  The segment $S^\*$ of the sequence _contributed_ by this initial segment contains all the 3s and 2s referred to by numbers in $S$ (it's another, longer, initial segment). Each 3 in $S$ contributes three 3s and a 2, and each 2 contributes two 3s and a 2.  The ratio of 3s to 2s in $S^\*$, which must also be $r$, is a simple function of the ratio ($r$) of the 3s to the 2s in $S$ that contribute them. Since the proportion of 3s in $S$ is $r/(r+1)$ and the proportion of 2s is $1/(r+1)$, the ratio of 3s to 2s in $S^\*$ is:
+By "the ratio of 3s to 2s in the entire sequence" we can only understand the _limit_ of the ratios of 3s to 2s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment $S$ of length $n$, the ratio of 3s to 2s is essentially $r$.  The segment $S^\*$ of the sequence _described_ by this initial segment contains all the 3s and 2s referred to by numbers in $S$ (it's another, longer, initial segment). Each 3 in $S$ describes three 3s and a 2, and each 2 describes two 3s and a 2.  The ratio of 3s to 2s in $S^\*$, which must also be $r$, is a simple function of the ratio ($r$) of the 3s to the 2s in $S$ that describe them. Since the proportion of 3s in $S$ is $r/(r+1)$ and the proportion of 2s is $1/(r+1)$, the ratio of 3s to 2s in $S^\*$ is:
 
 $$3\frac{r}{r+1}+2\frac{1}{r+1} = \frac{3r+2}{r+1}$$
 
@@ -35,9 +35,9 @@ The quadratic formula tells us that $r = 1+\sqrt{3}$, or about 2.732. And so we'
 
 ## Not so fast!
 
-What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it can only be $1+\sqrt{3}$. It's entirely plausible that there is such a limiting ratio, but to be rigorous we need to prove it.
+What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it can only be $1+\sqrt{3}$. It's certainly plausible that there is such a limiting ratio, and computing the ratio for initial subsequences encourages that thought---as the ratios are observed to tend quickly towards that value from above---but to be rigorous we need to prove it.
 
-To do that, consider the sequence $r_0,r_1,\ldots$ of ratios of 3s to 2s that starts with the ratio of the sequence 3,3,3,2, and which is such that at each step, the new sequence is created by following the instructions of the previous sequence. As we saw above, this means that:
+To do that, we will consider the sequence $r_0,r_1,\ldots$ of ratios of 3s to 2s that starts with the ratio of the sequence 3,3,3,2, and which is such that at each step, the new sequence is the one described by the previous sequence. As we saw above, this means that:
 
 $$r_0 = 3$$
 
