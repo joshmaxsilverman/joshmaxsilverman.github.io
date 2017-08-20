@@ -77,6 +77,6 @@ i r(i)
 
 Interesting facts:
 - If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
-- The sequences $S_2$ and $S_3$ containing the positions of within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for positive integers $m$, $\floor{m(2+\sqrt{3})}$ and $\floor{m((1+\sqrt{3})/2)$.
+- The sequences $S_2$ and $S_3$ containing the positions of within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for positive integers $m$, $\lfloor{m(2+\sqrt{3})}\rfloor$ and $\lfloor{m((1+\sqrt{3})/2)\rfloor$.
 
 <br>
