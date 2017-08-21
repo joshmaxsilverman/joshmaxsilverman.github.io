@@ -57,7 +57,7 @@ $$\left\lfloor m \frac{1+\sqrt{3}}{2}\right\rfloor$$
 
 Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$. (Much of the proof is lifted from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link; before seeing it I had a less elegant proof of the ratio's convergence.)
 
-Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise ($a_0$ is a $2$, but again that doesn't matter). We will show that $A$ is our self-generating sequence. 
+Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise. We will show that (after the initial $2$) $A$ is our self-generating sequence. 
 
 Notice that in our target self-generating sequence, the $i$th and $i+1$st $2$s are separated by $2$ rather than $3$ $3$s---that is, they are $3$ rather than $4$ positions apart---just in case $i$ itself is the position of a $2$. If sequence $A$ also has this property, then $A$ must be the target sequence itself.
 
