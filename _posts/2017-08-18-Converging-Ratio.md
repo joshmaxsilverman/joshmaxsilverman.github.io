@@ -43,7 +43,7 @@ Here is a plot of the positions of the positions of $2$s and $3$s in the self-ge
 
 ![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
 
-(We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$ we'd reverse that. The reason for this will become clear.)
+(We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$, which by the way does not change any other element of the sequence, we'd reverse that. The reason for this will become clear.)
 
 These lines sure look approximately linear.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the line for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
 
@@ -57,7 +57,7 @@ $$\left\lfloor m \frac{1+\sqrt{3}}{2}\right\rfloor$$
 
 Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$. (Much of the proof is lifted from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link; before seeing it I had a less elegant proof of the ratio's convergence.)
 
-Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise. We will show that (after the initial $2$) $A$ is our self-generating sequence. 
+Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$, $i = \lfloor mt\rfloor$, and is $3$ otherwise. We will show that (after the initial $2$) $A$ is our self-generating sequence. 
 
 Notice that in our target self-generating sequence, the $i$th and $i+1$st $2$s are separated by $2$ rather than $3$ $3$s---that is, they are $3$ rather than $4$ positions apart---just in case $i$ itself is the position of a $2$. If sequence $A$ also has this property, then $A$ must be the target sequence itself.
 
