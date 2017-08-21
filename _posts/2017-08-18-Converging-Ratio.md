@@ -92,7 +92,7 @@ Here is a plot of the positions of the positions of $2$s and $3$s in this sequen
 
 (We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$ we'd reverse that. The reason for this will become clear.)
 
-These lines sure look approximately linear.  Since the ratio $r$ of $3$s to $2$s is $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+sqrt(3))/2$. Similarly, the slope of the line for $2$s is $2+\sqrt(3)$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
+These lines sure look approximately linear.  Since the ratio $r$ of $3$s to $2$s is $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the line for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
 
 ![Close-up.](/img/RatiosCloseup.png)
 
