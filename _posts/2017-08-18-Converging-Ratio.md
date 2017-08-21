@@ -138,7 +138,7 @@ $$4(n+1) - \lfloor t(n+1) \rfloor -  (4n - \lfloor tn \rfloor) = 1$$
 
 Therefore:
 
-$$\lfloor t(n+1) - \lfloor tn \rfloor = 3$$
+$$\lfloor t(n+1)\rfloor - \lfloor tn \rfloor = 3$$
 
 And therefore the $n$th and $(n_1)$st $2$s in $A$ are $3$ positions apart. All of this reasoning is valid in both directions, so we have shown that $a_n$ is a $2$ iff the $n$th and $(n+1)$st $2$s in $A$ are $3$ rather than $4$ positions apart, and so $A$ is indeed our self-generating sequence.
 
