@@ -45,7 +45,7 @@ Here is a plot of the positions $2$s and $3$s in the self-generating sequence.
 
 (We are numbering from $m = 0$, and to clean up the math we count the initial position for both a $3$ and a $2$ as $0$---no harm, because starting the sequence with a $2$ does not change any other element of the sequence.)
 
-These plots sure look approximately linear with wiggles that start small, and while they remain the same absolute size, they get less significant comparatively as you zoom out.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce the average slopes of these plots. The slope of the plot for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the plot for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the two lines that have precisely those slopes.
+These plots sure look approximately linear, with wiggles that start small, and while they remain the same absolute size, they get less significant comparatively as you zoom out.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce the average slopes of these plots. The slope of the plot for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the plot for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the two lines that have precisely those slopes.
 
 ![Close-up.](/img/RatiosCloseup.png)
 
