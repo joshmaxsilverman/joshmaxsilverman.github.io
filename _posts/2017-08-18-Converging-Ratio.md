@@ -49,7 +49,7 @@ These lines sure look approximately linear.  Supposing the ratio $r$ of $3$s to 
 
 ![Close-up.](/img/RatiosCloseup.png)
 
-The plots never match the lines---they can't because the lines, having irrational slopes, have no points with integral coordinates except the origin. But the plots diverge from the lines by less than $1$ for every $m$. This suggests the following formulae for the plots, that is, for the positions of the $m$th $2$ or $3$ (where the brackets denote the _floor_ function, which yields the greatest integer less than or equal to its argument):
+The plots never match the lines at any $m$---they can't because the lines, having irrational slopes, have no points with integral coordinates except the origin. But the plots diverge from the lines by less than $1$ for every $m$. This suggests the following formulae for the plots, that is, for the positions of the $m$th $2$ or $3$ (where the brackets denote the _floor_ function, which yields the greatest integer less than or equal to its argument):
 
 $$\left\lfloor m (2+\sqrt{3})\right\rfloor$$
 
