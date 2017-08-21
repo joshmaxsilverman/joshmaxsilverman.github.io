@@ -81,7 +81,7 @@ $$\lceil (n+1)/t \rceil - \lceil n/t \rceil = 1$$
 
 Remembering that $t$ is $(2+\sqrt{3})$,
 
-$$\lceil n/(2+\sqrt{3})\rceil=
+$$\lceil n/t \rceil = \lceil n/(2+\sqrt{3})\rceil=
 \left\lceil\frac{2n-2\sqrt{3}}{4-3} \right\rceil
 = \lceil 4n -(2+\sqrt{3})n \rceil = 4n - \lfloor tn \rfloor$$
 
