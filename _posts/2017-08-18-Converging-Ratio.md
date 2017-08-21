@@ -39,58 +39,13 @@ The quadratic formula tells us that $r = 1+\sqrt{3}$, or about $2.732$. And so w
 
 What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it can only be $1+\sqrt{3}$. It's certainly plausible that there is such a limiting ratio, and computing the ratio for initial subsequences encourages that thought, as the ratios are observed to tend quickly towards that value from above. But to be rigorous we need to prove it.
 
-To do that, we will consider the sequence $r_0,r_1,\ldots$ of ratios of $3$s to $2$s that starts with the ratio of the sequence $3,3,3,2$, and which is such that at each step, the new sequence is the one described by the previous sequence. As we saw above, this means that:
-
-$$r_0 = 3$$
-
-$$r_{i+1} = f(r_i)$$
-
-where:
-
-$$f(r) = \frac{3r+2}{r +1}$$
-
-![f(r) versus r](/img/convergingratios.png)
-
-We saw above that $1+\sqrt{3}$ is a fixed point of this function (a value that when fed to the function yields itself); that's where the two curves intersect in the graph. For all $r$ greater than $1+\sqrt{3}$ (including $3$), $f(r)$ is less than $r$ and greater than $1+\sqrt{3}$. This allows us to establish that there is no limit to the $r_i$ that is greater than $1+\sqrt{3}$. For suppose there is, and call it $c$. Since we know that $f(c)$ is less than $c$, we know that we can pick an $r_i$ sufficiently close to $c$ that $f(r_i)$ is close enough to $f(c)$ to be less than $c$. 
-
-So our sequence $r_0, r_1,\ldots$ is bounded (by $1+\sqrt{3}$ and $3$) and monotonically decreasing, and has no limit greater than $1+\sqrt{3}$. It follows that it does have a limit, which can only be $1+\sqrt{3}$.  
-
-It turns out that $r_i$ approaches the limit very quickly indeed. In fact, $r_{10}$ is identical to $1+\sqrt{3}$ to twelve significant digits (I found that surprising):
-
-```
-1+sqrt(3) is  2.73205080757
-
-i r(i)
-------
-0 3
-1 2.75
-2 2.73333333333
-3 2.73214285714
-4 2.73205741627
-5 2.73205128205
-6 2.73205084164
-7 2.73205081001
-8 2.73205080774
-9 2.73205080758
-10 2.73205080757
-```
-
-(Now, the $r_i$ sequence is not the entire sequence of ratios of $3$s to $2$s of initial subsequences of our main sequence $S$, so it is logically possible that while it converges, the entire ratio sequence does not. But the $r_i$ sequence illustrates a universal fact: described segments have ratios closer to $1+\sqrt{3}$ than their describing ones, and so any subsequence with a ratio departing from $1+\sqrt{3}$ is swamped in the long run by the sequence it describes, the sequence that second sequence describes, and so on, which all together will have a limiting ratio of $1+\sqrt{3}$.)
-
-Interesting facts:
-- If we start with a $2$ instead of a $3$, the rest of the sequence is the same. The ratio of $3$s to $2$s approaches the same limit, but now from below.  The graph above shows why. 
-- If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
-- These sequences do not repeat (if they did repeat, the ratios would be rational).
-
-## A more elegant approach
-
-Here is a plot of the positions of the positions of $2$s and $3$s in this sequence.
+Here is a plot of the positions of the positions of $2$s and $3$s in the self-generating sequence.
 
 ![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
 
 (We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$ we'd reverse that. The reason for this will become clear.)
 
-These lines sure look approximately linear.  Since the ratio $r$ of $3$s to $2$s is $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the line for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
+These lines sure look approximately linear.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the line for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
 
 ![Close-up.](/img/RatiosCloseup.png)
 
@@ -100,7 +55,7 @@ $$\left\lfloor m (2+\sqrt{3})\right\rfloor$$
 
 $$\left\lfloor m \frac{1+\sqrt{3}}{2}\right\rfloor$$
 
-Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$. (Much of the following is lifted from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link.)
+Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$. (Much of the proof is lifted from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link; before seeing it I had a less elegant proof of the ratio's convergence.)
 
 Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise ($a_0$ is a $2$, but again that doesn't matter). We will show that $A$ is our self-generating sequence. 
 
@@ -110,7 +65,7 @@ So suppose $a_n$ is a $2$ for $n>0$.
 
 Then, for some integer $m>0$
 
-$n = \lfloor mt \rfloor$$
+$$n = \lfloor mt \rfloor$$
 
 Because $mt$ is never integral for $m>0$, we know that for some $m$:
 
@@ -138,8 +93,17 @@ Therefore:
 
 $$\lfloor t(n+1)\rfloor - \lfloor tn \rfloor = 3$$
 
-And therefore the $n$th and $(n_1)$st $2$s in $A$ are $3$ positions apart. All of this reasoning is valid in both directions, so we have shown that $a_n$ is a $2$ iff the $n$th and $(n+1)$st $2$s in $A$ are $3$ rather than $4$ positions apart, and so $A$ is indeed our self-generating sequence.
+And therefore the $n$th and $(n+1)$st $2$s in $A$ are $3$ positions apart. All of this reasoning is valid in both directions, so we have shown that $a_n$ is a $2$ iff the $n$th and $(n+1)$st $2$s in $A$ are $3$ rather than $4$ positions apart, and so $A$ is indeed our self-generating sequence.
 
-The sequences $S_2$ and $S_3$ containing the positions within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for all positive integers $m$, $\lfloor{m(2+\sqrt{3})}\rfloor$ and $\lfloor{m(1+\sqrt{3})/2}\rfloor$. The ratio of those irrational factors $(2+\sqrt{3})$ and $(1+\sqrt{3})/2$ is $(1+\sqrt{3})$---not coincidentally, since those factors are the average periods of $2$s and $3$s in our sequence, and so are the inverses of their densities in the sequence, and so give us a different and more elegant way to find the ratio we were seeking.
+The sequences $S_2$ and $S_3$ containing the positions within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for all positive integers $m$, $\lfloor{m(2+\sqrt{3})}\rfloor$ and $\lfloor{m(1+\sqrt{3})/2}\rfloor$. The ratio of those irrational factors $(2+\sqrt{3})$ and $(1+\sqrt{3})/2$ is $(1+\sqrt{3})$---not coincidentally, as we will see.
+
+Since the plots of the positions of $2$s and $3$s differ from the lines whose slopes are those irrational factors by less than $1$ at any point, which becomes a smaller and smaller fraction of the positions as $m$ grows large, the limiting periods of $2$s and $3$s in the sequence are given by those factors.  The inverses of those factors are the limiting densities of $2$s and $3$ in the sequence, and their ratio, which is the ratio we've been looking for all along, indeed is $(1+\sqrt{3})$.
+
+(Guy Moore in a comment to this post provides a more exact description of this convergence.)
+
+Interesting facts:
+- If we start with a $2$ instead of a $3$, the rest of the sequence is the same. The ratio of $3$s to $2$s approaches the same limit, but now from below.  The graph above shows why. 
+- If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
+- These sequences do not repeat (if they did repeat, the ratios would be rational).
 
 <br>
