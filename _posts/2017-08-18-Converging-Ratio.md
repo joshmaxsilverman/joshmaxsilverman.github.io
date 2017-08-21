@@ -21,11 +21,13 @@ date: 2017/08/18
 
 ## Solution
 
-By "the ratio of $3$s to $2$s in the entire sequence" we can only understand the _limit_ of the ratios of $3$s to $2$s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment $S$ of length $n$, the ratio of $3$s to $2$s is essentially $r$.  The segment $S^\*$ of the sequence _described_ by this initial segment contains all the $3$s and $2$s referred to by numbers in $S$ (it's another, longer, initial segment). Each $3$ in $S$ describes three $3$s and a $2$, and each $2$ describes two $3$s and a $2$.  The ratio of $3$s to $2$s in $S^\*$, which must also turn out to be $r$, is also expressible as a simple function of the ratio ($r$) of the $3$s to the $2$s in $S$ that describe them. Since the proportion of $3$s in $S$ is $r/(r+1)$ and the proportion of $2$s is $1/(r+1)$, the ratio of $3$s to $2$s in $S^\*$ is:
+By "the ratio of $3$s to $2$s in the entire sequence" we can only understand the _limit_ of the ratios of $3$s to $2$s for initial segments of the sequence as those segments get larger.  Let's call that limit $r$. Then, for a very large initial segment, call it $S$, the ratio of $3$s to $2$s is essentially $r$.  
+
+The foothold that will help us find $r$ is the relation of $S$ to an important longer initial segment. The segment $S^\*$ of the sequence _described_ by $S$ contains all the $3$s and $2$s referred to by numbers in $S$. Each $3$ in $S$ describes three $3$s and a $2$, and each $2$ describes two $3$s and a $2$.  The ratio of $3$s to $2$s in $S^\*$, which must turn out to be $r$, is also expressible as a simple function of the ratio ($r$) of the $3$s to the $2$s in $S$ that describe them. Since the proportion of $3$s in $S$ is $r/(r+1)$ and the proportion of $2$s is $1/(r+1)$, the ratio of $3$s to $2$s in $S^\*$ is:
 
 $$3\frac{r}{r+1}+2\frac{1}{r+1} = \frac{3r+2}{r+1}$$
 
-(If that doesn't seem very intuitive, think of it as the expected number of $3$s preceeding a $2$.)
+(If that doesn't seem very intuitive, think of it as the expected or average number of $3$s preceeding a $2$.)
 
 Setting that equal to $r$ and multiplying out, we get:
 
