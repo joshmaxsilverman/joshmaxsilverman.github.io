@@ -80,6 +80,7 @@ i r(i)
 Interesting facts:
 - If we start with a $2$ instead of a $3$, the rest of the sequence is the same. The ratio of $3$s to $2$s approaches the same limit, but now from below.  The graph above shows why. 
 - If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
+- These sequences do not repeat (if they did repeat, the ratios would be rational).
 
 ## A more elegant approach
 
