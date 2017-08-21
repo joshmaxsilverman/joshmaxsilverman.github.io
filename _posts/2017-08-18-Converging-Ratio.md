@@ -84,8 +84,6 @@ Interesting facts:
 
 ## A more elegant approach
 
-(Much of the following is lifted wholesale from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link.)
-
 Here is a plot of the positions of the positions of $2$s and $3$s in this sequence.
 
 ![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
@@ -102,7 +100,7 @@ $$\left\lfloor m (2+\sqrt{3})\right\rfloor$$
 
 $$\left\lfloor m \frac{1+\sqrt{3}}{2}\right\rfloor$$
 
-Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$.
+Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$. (Much of the following is lifted from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link.)
 
 Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise ($a_0$ is a $2$, but again that doesn't matter). We will show that $A$ is our self-generating sequence. 
 
