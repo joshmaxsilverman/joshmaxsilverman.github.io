@@ -80,6 +80,67 @@ i r(i)
 Interesting facts:
 - If we start with a $2$ instead of a $3$, the rest of the sequence is the same. The ratio of $3$s to $2$s approaches the same limit, but now from below.  The graph above shows why. 
 - If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
-- The sequences $S_2$ and $S_3$ containing the positions within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for all positive integers $m$, $\lfloor{m(2+\sqrt{3})}\rfloor$ and $\lfloor{m(1+\sqrt{3})/2}\rfloor$. (Those brackets indicate the _floor_ function, which gives the largest integer less than or equal to its argument.) The ratio of those irrational factors $(2+\sqrt{3})$ and $(1+\sqrt{3})/2$ is $1+\sqrt{3}$---not coincidentally, since those factors are the average periods of $2$s and $3$s in our sequence, and so are the inverses of their densities in the sequence, and so give us a different and probably more elegant way to find the ratio we were seeking (but one I didn't find until my brother pointed me to a development of it on page 178 of [this](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf)).
+
+## A more elegant approach
+
+(Much of the following is lifted wholesale from a solution to a  [Putnam Competition problem](http://www-bcf.usc.edu/~lototsky/PiMuEp/Putnam1985-2000.pdf). Thanks to my brother for the link.)
+
+Here is a plot of the positions of the positions of $2$s and $3$s in this sequence.
+
+![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
+
+(We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$ we'd reverse that. The reason for this will become clear.)
+
+These lines sure look approximately linear.  Since the ratio $r$ of $3$s to $2$s is $1+\sqrt{3}$, we can deduce their average slopes. The slope of the line for $3$s is the average number of sequence positions per occurrence of a $3$, it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+sqrt(3))/2$. Similarly, the slope of the line for $2$s is $2+\sqrt(3)$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
+
+![Close-up.](/img/RatiosCloseup.png)
+
+The plots never match the lines---they can't because the lines, having irrational slopes, have no points with integral coordinates except the origin. But the plots diverge from the lines by less than $1$ for every $m$. This suggests the following formulae for the plots, that is, for the positions of the $m$th $2$ or $3$ (where the brackets denote the _floor_ function, which yields the greatest integer less than or equal to its argument):
+
+$$\left\lfloor m (2+\sqrt{3})\right\rfloor$$
+
+$$\left\lfloor m \frac{1+\sqrt{3}}{2}\right\rfloor$$
+
+Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position $\lfloor m(2+\sqrt{3})\rfloor$, or for short, $\lfloor mt \rfloor$.
+
+Start by stipulatively defining the sequence $A=a_0,a_1,a_2,\ldots$ such that for every $i$, $a_i$ is $2$ if for some integer $m$ $i = \lfloor mt\rfloor$ and a $3$ otherwise ($a_0$ is a $2$, but again that doesn't matter). We will show that $A$ is our self-generating sequence. 
+
+Notice that in our target self-generating sequence, the $i$th and $i+1$st $2$s are separated by $2$ rather than $3$ $3$s---that is, they are $3$ rather than $4$ positions apart---just in case $i$ itself is the position of a $2$. If sequence $A$ also has this property, then $A$ must be the target sequence itself.
+
+So suppose $a_n$ is a $2$ for $n>0$.
+
+Then, for some integer $m>0$
+
+$n = \lfloor mt \rfloor$$
+
+Because $mt$ is never integral for $m>0$, we know that for some $m$:
+
+$$n < mt < n+1$$
+
+Therefore, for some $m$, $n/t < m < (n+1)/t $.
+
+So $n/t$ and $(n+1)/t$ flank an integer and so:
+
+$$\lceil (n+1)/t \rceil - \lceil n/t \rceil = 1$$
+
+(These brackets are the _ceiling_ function that returns the least integer greater than or equal to its argument.)
+
+Remembering that $t$ is $(2+\sqrt{3})$,
+
+$$\lceil n/(2+\sqrt{3})\rceil=
+\left\lceil\frac{2n-2\sqrt{3}}{4-3} \right\rceil
+= \lceil 4n -(2+\sqrt{3})n \rceil = 4n - \lfloor tn \rfloor$$
+
+Similarly for $\lceil(n+1)/t\rceil$, and so:
+
+$$4(n+1) - \lfloor t(n+1) \rfloor -  (4n - \lfloor tn \rfloor) = 1$$
+
+Therefore:
+
+$$\lfloor t(n+1) - \lfloor tn \rfloor = 3$$
+
+And therefore the $n$th and $(n_1)$st $2$s in $A$ are $3$ positions apart. All of this reasoning is valid in both directions, so we have shown that $a_n$ is a $2$ iff the $n$th and $(n+1)$st $2$s in $A$ are $3$ rather than $4$ positions apart, and so $A$ is indeed our self-generating sequence.
+
+The sequences $S_2$ and $S_3$ containing the positions within our original sequence of $2$s and $3$s, respectively, are [Beatty Sequences](http://mathworld.wolfram.com/BeattySequence.html). Numbering positions from zero, whether we start with a $2$ or a $3$, the positions of subsequent $2$s and $3$s are, for all positive integers $m$, $\lfloor{m(2+\sqrt{3})}\rfloor$ and $\lfloor{m(1+\sqrt{3})/2}\rfloor$. The ratio of those irrational factors $(2+\sqrt{3})$ and $(1+\sqrt{3})/2$ is $(1+\sqrt{3})$---not coincidentally, since those factors are the average periods of $2$s and $3$s in our sequence, and so are the inverses of their densities in the sequence, and so give us a different and more elegant way to find the ratio we were seeking.
 
 <br>
