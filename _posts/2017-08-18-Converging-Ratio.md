@@ -39,17 +39,17 @@ The quadratic formula tells us that $r = 1+\sqrt{3}$, or about $2.732$. And so w
 
 What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it can only be $1+\sqrt{3}$. It's certainly plausible that there is such a limiting ratio, and computing the ratio for initial subsequences encourages that thought, as the ratios are observed to tend quickly towards that value from above. But to be rigorous we need to prove it.
 
-Here is a plot of the positions of the positions of $2$s and $3$s in the self-generating sequence.
+Here is a plot of the positions $2$s and $3$s in the self-generating sequence.
 
 ![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
 
-(We are numbering from $m = 0$, and the first $3$ counts here as the zeroth $3$ while the first $2$ is numbered $1$. If we started the sequence with a $2$, which by the way does not change any other element of the sequence, we'd reverse that. The reason for this will become clear.)
+(We are numbering from $m = 0$, and to clean up the math we count the initial position for both a $3$ and a $2$ as $0$---no harm, because starting the sequence with a $2$ does not change any other element of the sequence.)
 
-These plots sure look approximately linear.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce their average slopes. The slope of the plot for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the plot for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the lines of precisely those slopes.
+These plots sure look approximately linear with wiggles that start small, and while they remain the same absolute size, they get less significant comparatively as you zoom out.  Supposing the ratio $r$ of $3$s to $2$s is indeed $1+\sqrt{3}$, we can deduce the average slopes of these plots. The slope of the plot for $3$s is the average number of sequence positions per occurrence of a $3$, so it is the inverse of the density of $3$s in the sequence, and so it is $(1+r)/r$, or $(1+\sqrt{3})/2$. Similarly, the slope of the plot for $2$s is $2+\sqrt{3}$. Now let's look at the same plots (in a close-up) together with the two lines that have precisely those slopes.
 
 ![Close-up.](/img/RatiosCloseup.png)
 
-The plots never match the lines at any $m$---they can't because the lines, having irrational slopes, have no points with integral coordinates except the origin. But the plots diverge from the lines by less than $1$ for every $m$. This suggests the following formulae for the plots, that is, for the positions of the $m$th $2$ or $3$ (where the brackets denote the _floor_ function, which yields the greatest integer less than or equal to its argument):
+The plots never exactly match the lines for any non-zero $m$---they can't because the lines, having irrational slopes, have no points with integral coordinates except the origin. But the plots diverge from the lines by less than $1$ at every $m$ we see. If that remains true for all $m$, then the plots are described by the following formulae for the position of the $m$th $2$ or $3$ (where the brackets denote the _floor_ function, which yields the greatest integer less than or equal to its argument):
 
 $$\left\lfloor m (2+\sqrt{3})\right\rfloor$$
 
