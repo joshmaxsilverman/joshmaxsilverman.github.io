@@ -59,7 +59,7 @@ Let's prove the conjecture that the $m$th $2$ in the sequence occurs at position
 
 Start by stipulatively defining sequence $A=a_0,a_1,a_2,\ldots$, where $a_m$ is $2$ if for some integer $n$, $m = \lfloor nt\rfloor$, and is $3$ otherwise. We will show that (after the initial $2$) $A$ is our self-generating sequence. 
 
-The definition of our self-generating sequence is equivalent to stipulating that it's a sequence of $2$s and $3$s that starts with a $3$ and in which the $i$th and $i+1$st $2$s are separated by $2$ rather than $3$ $3$s---that is, they are $3$ rather than $4$ positions apart---just in case $i$ is the position of a $2$. If sequence $A$ also has this property, then $A$ must be the target sequence itself.
+The definition of our self-generating sequence is equivalent to stipulating that it's a sequence of $2$s and $3$s that starts with a $3$ and in which a $2$ occurs at position $i$ iff the $i$th and $i+1$st $2$s are separated by $2$ rather than $3$ $3$s---that is, they are $3$ rather than $4$ positions apart. If sequence $A$ also has this property, then $A$ must be the target sequence itself.
 
 So suppose $a_j$ is a $2$ for some $j>0$.
 
