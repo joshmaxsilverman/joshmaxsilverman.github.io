@@ -71,7 +71,9 @@ Because $kt$ is never integral for $k>0$, we know that for some integer $k$:
 
 $$j < kt < j+1$$
 
-Therefore, for some integer $k$, $j/t < k < (j+1)/t $.
+Therefore, for some integer $k$:
+
+$$j/t < k < (j+1)/t $$
 
 So $j/t$ and $(j+1)/t$ flank an integer and so:
 
