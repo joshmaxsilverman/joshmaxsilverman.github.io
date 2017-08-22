@@ -105,6 +105,6 @@ Interesting facts:
 - If, instead of $3$ and $2$, we use $2$ and $1$ to form the sequence (so that it starts $2,2,1,2,2,1,2,1,\ldots$), the limiting ratio of $2$s to $1$s is the [golden ratio](http://mathworld.wolfram.com/GoldenRatio.html), $(1+\sqrt{5})/2$, or about $1.618$.
 - These sequences do not repeat (if they did repeat, the ratios would be rational).
 - [The x/y ratio of these sequences is the same as their mean value.](https://twitter.com/sanjuanmtn/status/899440696834179072)
-- And it is the same as the first element of the [eigenvector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of the matrix [$(x y; 1 1)$](https://twitter.com/jjaredsimpson/status/899708484299763712).
+- And it is the same as the first element of the [eigenvector](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of the matrix [$(x\ y; 1\ 1)$](https://twitter.com/jjaredsimpson/status/899708484299763712).
 
 <br>
