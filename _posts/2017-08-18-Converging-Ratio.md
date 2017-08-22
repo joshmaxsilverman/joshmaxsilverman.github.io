@@ -71,7 +71,7 @@ Because $kt$ is never integral for $k>0$, we know that for some integer $k$:
 
 $$j < kt < j+1$$
 
-Therefore, for some integer $k$:
+Therefore, for some integer $k > 0$:
 
 $$j/t < k < (j+1)/t $$
 
