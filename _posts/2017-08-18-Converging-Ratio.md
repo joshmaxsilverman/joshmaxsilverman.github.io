@@ -39,7 +39,7 @@ The quadratic formula tells us that $r = 1+\sqrt{3}$, or about $2.732$. And so w
 
 What we have actually shown is that, _on the assumption that there is_ a ratio $r$ that the partial ratios (ratios of initial segments) converge to, it can only be $1+\sqrt{3}$. It's certainly plausible that there is such a limiting ratio, and computing the ratio for initial subsequences encourages that thought, as the ratios are observed to tend quickly towards that value from above. But to be rigorous we need to prove it.
 
-Here is a plot of the positions $2$s and $3$s in the self-generating sequence.
+Here is a plot of the positions of $2$s and $3$s in the self-generating sequence.
 
 ![Positions of 2s and 3s in the sequence.](/img/2sAnd3s.png)
 
