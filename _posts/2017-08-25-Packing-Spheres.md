@@ -13,6 +13,8 @@ date: 2017/08/25
 
 ## Solution
 
+I'll assume without proof what seems obvious, namely, that the optimal configuration of the spheres is all-touching, so that their centers form a smaller regular tetrahedron, and that three spheres are tangent to each face (as drawn on the fiverthirtyeight post). Here's a view of one of the spheres inside the tetrahedron so-constructed.
+
 ![Sphere in tetrahedron.](/img/SphereInTetrahedron.png)
 
 Pick a side AB of the tetrahedron; we will find a formula for its length. Draw a line from A to the point P on an adjacent face where the nearest sphere (with center S) touches that face, and draw the line from P to a point Q on AB so that PQ is perpendicular to AB. The length of AB is $2r$ (two radii of the spheres) plus twice the length of AQ.
