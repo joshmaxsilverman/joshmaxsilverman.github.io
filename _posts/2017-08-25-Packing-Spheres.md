@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Packing Spheres
 date: 2017/08/25
 ---
