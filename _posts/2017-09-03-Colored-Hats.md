@@ -60,6 +60,7 @@ Suppose we receive a numeral that has a parity mismatch, which we know is becaus
 
 The hubs produced this way are:
 
+```
 0000000
 0001111
 0010011
@@ -76,6 +77,7 @@ The hubs produced this way are:
 1101100
 1110000
 1111111
+```
 
 For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). (Find a general algorithm for assigning parity bit coverage [here](https://en.wikipedia.org/wiki/Hamming_code).) And so in general we will win $N/(N+1)$ of the time.
 
