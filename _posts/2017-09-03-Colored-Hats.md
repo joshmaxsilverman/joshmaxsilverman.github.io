@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Colored Hats
 date: 2017/09/03
 ---
@@ -27,11 +27,9 @@ For any guess assigned by a strategy to a scenario there is a loss-distribution,
 
 For a simple example of this, suppose every player is assigned the incorrect guess $White$ in the all-black scenario they face in the all-black distribution, and that our strategy assigns $Pass$ to every other scenario.  Then we have just one (all-black) loss-distribution and $N$ win-distributions, namely, every one-white-hat distribution (the white-hat player faces the same scenario as in the all-black distribution and hence is assigned $White$, which in this case is correct). So a proportion $N/(N+1)$ of distributions in which a guess is made are wins.  Obviously, there are a lot of loss-distributions in this strategy in which every player passes, so we can certainly do better. But the first moral is: stack incorrect guesses into as few loss-distributions as possible.
 
-One way to extend the simple example strategy for $N=7$ is to have players guess $White$ if they see zero or two white hats, $Black$ if they see four or six, and $Pass$ otherwise. This produces wins for every distribution assigning one, three, four, and six white hats, which comprise $7+35+35+7$, or $84$ distributions, which is about $65.6\%$ of the $2^7$ or $128$ total distributions.
+The ideal extension of our simple example would be to have $16$ instances of that pattern: a "hub" losing distribution with seven "satellite" winning distributions that differ from their hub by one hat-color. Suppose we found sixteen such hubs that together with their satellites cover all $128$ distributions. Then our strategy would be for any player who sees a scenario compatible with a hub distribution to guess the color that he must have if it's _not_ a hub distribution, and for players to pass otherwise. Hub distributions themselves, then, produce seven incorrect guesses, and each non-hub distribution produces one correct guess (the other six players can see, based on the guesser's hat, that it's not a hub distribution).
 
-But we can do even better! The trick that we began the simple example with was to match a single seven-incorrect-guesses distribution with seven distributions with one correct guess and seven passes. The ideal extension of that would be to have $16$ instances of that pattern: a "hub" losing distribution with seven "satellite" winning distributions that differ from it by one hat-color. Suppose we found sixteen such hubs that together with their satellites cover all $128$ distributions. Then our strategy would be for any player who sees a scenario compatible with a hub distribution to guess the color that he must have if it's not a hub distribution, and for players to pass otherwise. Hub distributions themselves, then, produce seven incorrect guesses, and each non-hub distribution produces one correct guess (the other six players can see, based on the guesser's hat, that it's not a hub distribution).
-
-In fact this is possible. I found 16 such hub distributions computationally (the Python code is below; on average it takes about 30 repetitions). Representing black and white with $1$s and $0$s, the hub distributions are:
+In fact this is possible. Initially, I found a set of hubs computationally (the Python code is shown below; it uses some randomness and on average it takes about 30 repetitions). Representing black and white with $1$s and $0$s, the hub distributions I found that way are:
 
 ```
 0000000
@@ -52,7 +50,40 @@ In fact this is possible. I found 16 such hub distributions computationally (the
 1011000
 ```
 
-And so we will win $7/8$ of the time. As for the case of larger $N$ where $N$ is $2^M-1$ for some $M$, I conjecture that the same trick is always possible, and we win $N/(N+1)$ of the time. Given that I found the solution for $N=7$ computationally, though, I don't have a proof of that.
+And so we will win $7/8$ of the time. 
+
+The computational approach doesn't help for the general case of $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to coding theory. The problem of finding a complete set of hubs is the same as the problem of finding a signaling system with a set of binary numerals as signals, such that the receiver will be able to identify the sent signal even if one bit gets changed along the way.
+
+The computationally-found set of hubs is such a set of sixteen signals. If we receive a satellite, one-bit off from one of those, we know its hub.
+
+But we can design a set of hubs more systematically, using ideas due to [Richard Hamming](https://en.wikipedia.org/wiki/Hamming_code).  
+
+We will treat the first four of our digits as data bits; the goal of transmission is to recover the data bits that were sent. The remaining three digits are parity bits, which allow us to do this even if (exactly) one bit is erroneous. For four given data bits, we assign to a parity bits the data bits it covers. The three parity bits cover these triples of data bits: $(1,2,4), (1,3,4), (2,3,4)$. However the data bits are set, the signal is completed by setting each parity bit to the sum of the data bits, modulo $2$.
+
+Suppose we receive a numeral with a parity mismatch, owing to being one bit different than a signal. We will be able to identify that bit by looking at just which parity bits are mismatched.  There are seven different possibilities, and we have set things up so that each possibility corresponds to a different bit being erroneous.  For instance, if only the first parity bit is mismatched, then we know that it itself is in error, because an error in data bit $1$, $2$, or $4$ would lead to two or three parity mismatches. And if the second and third parity bits are mismatched, the erroneous bit must be data bit 3.
+
+The hubs produced this way are:
+
+0000000
+0001111
+0010011
+0011100
+0100101
+0101010
+0110110
+0111001
+1000110
+1001001
+1010101
+1011010
+1100011
+1101100
+1110000
+1111111
+
+For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $(2^M-1)-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). (Find a general algorithm for assigning parity bit coverage [here].) And so in general we will win $N/(N+1)$ of the time.
+
+<br>
 
 ```python
 from random import shuffle
