@@ -52,7 +52,7 @@ In fact this is possible. I found 16 such hub distributions computationally (the
 1011000
 ```
 
-And so we will $7/8$ of the time. As for the case of larger $N$ (where $N$ is of the form $2^M-1$), I conjecture that the same trick is always possible, and we win $N/(N+1)$ of the time. Given that I found the solution for $N=7$ computationally, though, I don't have a proof of that.
+And so we will win $7/8$ of the time. As for the case of larger $N$ where $N$ is $2^M-1$ for some $M$, I conjecture that the same trick is always possible, and we win $N/(N+1)$ of the time. Given that I found the solution for $N=7$ computationally, though, I don't have a proof of that.
 
 ```python
 from random import shuffle
