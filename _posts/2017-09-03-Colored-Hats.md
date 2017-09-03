@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Colored Hats
 date: 2017/09/03
 ---
