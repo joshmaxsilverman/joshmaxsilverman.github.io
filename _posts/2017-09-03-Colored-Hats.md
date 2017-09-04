@@ -77,7 +77,9 @@ The hubs generated in this way are:
 1111111
 ```
 
-For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). (Find a general algorithm for assigning parity bit coverage [here](https://en.wikipedia.org/wiki/Hamming_code).) And so in general we will win $N/(N+1)$ of the time.
+For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). The existence of an adequate scheme of assigning parity bit coverage follows from the fact that the number of subsets of size $2$ or larger of $M$ data bits is $2^M$ (for all subsets) minus $1$ (for the null subset) minus $M$ (for singleton subsets), or $N-M$, which is exactly what we need.
+
+And so in general we will win $N/(N+1)$ of the time.
 
 This was a very interesting Riddler!
 
