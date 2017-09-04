@@ -52,7 +52,7 @@ The computational approach doesn't help for the general case: of arbitrary $N$ w
 
 The problem of finding a complete set of hubs is the same as the problem of finding a signaling system with a maximally large set of $N$-digit binary numerals as signals, such that the receiver will be able to identify the sent signal even if one bit gets changed along the way. The computationally-found set of hubs for $N=7$ is such a set of sixteen signals. If we receive a satellite, one-digit off from one of those, we know its hub, because each satellite is one-digit off from only its own hub.
 
-But we can design a set of hubs more systematically, using ideas due to [Richard Hamming](https://en.wikipedia.org/wiki/Hamming_code).  
+We can design a set of siteen signals more systematically, as a [Hamming Code](https://en.wikipedia.org/wiki/Hamming_code).  
 
 We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent, and there will be one signal for each of the $16$ ways of setting those bits. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one of the seven bits is erroneous. For four given data bits, we assign to each of the parity bits a value based on the data bits it _covers_. The three parity bits cover the following triples of data bits: $(1,2,4), (1,3,4),$ and $(2,3,4)$. The signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
 
