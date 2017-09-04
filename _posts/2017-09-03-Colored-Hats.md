@@ -81,7 +81,7 @@ Every seven-digit binary numeral is either itself a signal or a one-digit varian
 1111111
 ```
 
-For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). The existence of an adequate scheme of assigning parity bit coverage follows from the fact that the number of subsets of size $2$ or larger of $M$ parity bits is $2^M$ (for all subsets) minus $1$ (for the null subset) minus $M$ (for singleton subsets), or $N-M$, which is exactly what we need for each data bit to be covered by a distinct set of parity bits.
+For an arbitrary $N$ which is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). The existence of an adequate scheme of assigning parity bit coverage follows from the fact that the number of subsets of size $2$ or larger of $M$ parity bits is $2^M$ (for all subsets) minus $1$ (for the null subset) minus $M$ (for singleton subsets), or $N-M$, which is exactly what we need for each data bit to be covered by a distinct set of parity bits.
 
 And so in general we will win $N/(N+1)$ of the time.
 
