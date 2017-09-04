@@ -56,7 +56,7 @@ But we can design a set of hubs more systematically, using ideas due to [Richard
 
 We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent, and there will be one signal for each of the $16$ ways of setting those bits. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one of the seven bits is erroneous. For four given data bits, we assign to each of the parity bits a value based the data bits it _covers_. The three parity bits cover the following triples of data bits: $(1,2,4), (1,3,4),$ and $(2,3,4)$. The signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
 
-![Bit coverage.](/img/HammingCode.svg)
+![Bit coverage.](/img/HammingCode.jpg)
 
 Suppose we receive a numeral that has a parity mismatch, and that we know that this can only be because it differs from a signal by one bit. We will be able to identify that bit by looking at just which parity bits are mismatched.  There are seven different possibilities ($2^3-1$, where the minus one is because the eighth possibility is no mismatch), and we have set things up so that each possibility corresponds to a different bit being erroneous.  To give two examples: if only the first parity bit is mismatched, then we know that it itself is in error, because an error in data bit $1$, $2$, or $4$ would lead to two or three parity mismatches. And if the second and third parity bits are mismatched, the erroneous bit must be data bit 3, which is the one bit that they and only they cover.
 
