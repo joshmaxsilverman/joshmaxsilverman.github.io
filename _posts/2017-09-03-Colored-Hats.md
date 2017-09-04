@@ -60,7 +60,7 @@ We will treat the first four of our seven digits as _data bits_; the real goal o
 
 Suppose we receive a numeral that has a parity mismatch, and that we know that this can only be because it differs from a signal by one bit. We will be able to identify that bit by looking at just which parity bits are mismatched.  There are seven different possibilities ($2^3-1$, where the minus one is because the eighth possibility is no mismatch), and we have set things up so that each possibility corresponds to a different bit being erroneous.  To give two examples: if only the first parity bit is mismatched, then we know that it itself is in error, because an error in data bit $1$, $2$, or $4$ would lead to two or three parity mismatches. And if the second and third parity bits are mismatched, the erroneous bit must be data bit 3, which is the one bit that they and only they cover.
 
-Of course we are not ourselves interested in signal transmission; the point is that this set-up generates sixteen hubs (the signals) each of which is surrounded by a unique group of seven satellites (the one-bit errors). The hubs generated in this way are:
+Every seven-digit binary numeral is either itself a signal or a one-digit variant of a signal that we can decode in this way.  Of course we are not ourselves interested in signal transmission; the point is that this method generates sixteen hubs (the signals) each of which is surrounded by a unique group of seven satellites (the one-bit errors). The hubs generated in this way are:
 
 ```
 0000000
