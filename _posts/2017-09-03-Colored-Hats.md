@@ -17,6 +17,8 @@ date: 2017/09/03
 
 ## Solution
 
+There is a very tempting line of reasoning to the effect that, because every guess has a $1/2$ chance of being correct (which is true), there can't be greater than $1/2$ chance of winning (which is false!). The trick, as we will see, is to synchronize the players' incorrect guesses. 
+
 A _distribution_ is an assignment of hat colors to players. For $N$ players, there are $2^N$ distributions.  A _scenario_, representing the information a player has to go on when deciding, is an assignment of hat colors to all but one player. A _strategy_ tells each player what to do for each scenario they might encounter. It is a function from scenarios to the set of possible actions, $\{White, Black, Pass\}$.
 
 For any guess assigned by a strategy to a scenario there is a loss-distribution, in which the guess is incorrect, and also a distribution in which it is correct (which is a win-distribution if there are no incorrect guesses assigned to other scenarios in that distribution). In order for a strategy to produce more wins than losses in the entire set of $2^N$ distributions, it must be that the loss-distributions yielded by assigned guesses overlap, in that multiple assigned guesses yield the same loss-distribution. In other words, there must be distributions such that multiple guesses assigned to scenarios in those distributions are incorrect.
@@ -81,7 +83,7 @@ For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick us
 
 And so in general we will win $N/(N+1)$ of the time.
 
-This was a very interesting Riddler!
+This was a very interesting Riddler! 
 
 <br>
 
