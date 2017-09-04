@@ -147,6 +147,7 @@ for rep in range(Reps):
 			break
 	if Unused == []:
 		print "Success at trial",rep
+		Hubs.sort()
 		for Hub in Hubs:
 			s = mod(Hub,2)
 			while len(s) < N:
