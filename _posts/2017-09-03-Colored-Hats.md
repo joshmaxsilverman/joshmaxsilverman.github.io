@@ -17,7 +17,7 @@ date: 2017/09/03
 
 ## Solution
 
-There is a very tempting line of reasoning to the effect that, because every guess has a $1/2$ chance of being correct (which is true), there can't be greater than $1/2$ chance of winning (which is false!). The trick, as we will see, is to synchronize the players' incorrect guesses. 
+There is a very tempting line of reasoning to the effect that, because every guess has a $1/2$ chance of being correct (which is true), and every victory requires at least one correct guess (also true), there can't be greater than $1/2$ chance of winning (which is false!). The trick, as we will see, is to synchronize the players' incorrect guesses. 
 
 A _distribution_ is an assignment of hat colors to players. For $N$ players, there are $2^N$ distributions.  A _scenario_, representing the information a player has to go on when deciding, is an assignment of hat colors to all but one player. A _strategy_ tells each player what to do for each scenario they might encounter. It is a function from scenarios to the set of possible actions, $\{White, Black, Pass\}$.
 
