@@ -54,7 +54,7 @@ The computationally-found set of hubs for $N=7$ is such a set of sixteen signals
 
 But we can design a set of hubs more systematically, using ideas due to [Richard Hamming](https://en.wikipedia.org/wiki/Hamming_code).  
 
-We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one bit is erroneous. For four given data bits, we assign to each of the parity bits the data bits it covers. The three parity bits cover these triples of data bits: $(1,2,4), (1,3,4), (2,3,4)$. Given some setting of the data bits, the signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
+We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one bit is erroneous. For four given data bits, we assign to each of the parity bits the data bits it covers. The three parity bits cover these triples of data bits: $(1,2,4), (1,3,4), (2,3,4)$. Given the data bits, the signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
 
 Suppose we receive a numeral that has a parity mismatch, which we know is because it differs from a signal by one bit. We will be able to identify that bit by looking at just which parity bits are mismatched.  There are seven different possibilities ($2^3-1$, where the minus one is because all-zeroes means no mismatch), and we have set things up so that each possibility corresponds to a different bit being erroneous.  To give two examples: if only the first parity bit is mismatched, then we know that it itself is in error, because an error in data bit $1$, $2$, or $4$ would lead to two or three parity mismatches. And if the second and third parity bits are mismatched, the erroneous bit must be data bit 3.
 
@@ -80,6 +80,8 @@ The hubs produced this way are:
 ```
 
 For an arbitrary $N$ that is $2^M-1$ for some $M$, we can pull the same trick using $N-M$ data bits and $M$ parity bits (which can indicate an error in $2^M-1$ ways). (Find a general algorithm for assigning parity bit coverage [here](https://en.wikipedia.org/wiki/Hamming_code).) And so in general we will win $N/(N+1)$ of the time.
+
+This was a very interesting Riddler!
 
 <br>
 
