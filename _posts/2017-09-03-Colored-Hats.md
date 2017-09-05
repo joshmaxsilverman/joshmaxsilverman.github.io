@@ -54,7 +54,7 @@ The problem of finding a complete set of hubs is the same as the problem of find
 
 We can design a set of sixteen such signals more systematically, as a [Hamming Code](https://en.wikipedia.org/wiki/Hamming_code).  
 
-We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent, and there will be one signal for each of the $16$ ways of setting those bits. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one of the seven bits is erroneous. For four given data bits, we assign to each of the parity bits a value based on the data bits it _covers_. The three parity bits cover the following sets of data bits: $\{1,2,4\}, \{1,3,4\},$ and $\{2,3,4\}$. The signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
+We will treat the first four of our seven digits as _data bits_; the real goal of signal transmission is to recover the data bits that were sent, and there will be one signal for each of the $16$ ways of setting those bits. The remaining three digits are _parity bits_, which allow the receiver to do this even if (exactly) one of the seven bits is erroneous. For four given data bits, we assign to each of the parity bits a value based on the data bits it _covers_. The three parity bits cover the following sets of data bits: $\\{1,2,4\\}, \\{1,3,4\\},$ and $\\{2,3,4\\}$. The signal is completed by setting each parity bit to the sum of the data bits it covers, modulo $2$.
 
 ![Bit coverage.](/img/HammingCode.jpg)
 
