@@ -87,7 +87,7 @@ For an arbitrary $N$ which is $2^M-1$ for some $M$, we can pull the same trick u
 
 And so in general we will win $N/(N+1)$ of the time.
 
-This was a very interesting Riddler. Thank you, Oliver Roeder and [Professor Jared Bronski](https://faculty.math.illinois.edu/~jared/)! 
+This was a very interesting Riddler. Thank you, Oliver Roeder and Riddle supplier Jared Bronski!
 
 <br>
 
