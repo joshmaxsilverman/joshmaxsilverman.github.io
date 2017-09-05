@@ -17,7 +17,7 @@ date: 2017/09/03
 
 ## Solution
 
-There is a very tempting line of reasoning to the effect that, because every guess has a $1/2$ chance of being correct (which is true), and every victory requires at least one correct guess (also true), it follows that every victory requires at least one event of probability $1/2$ to occur (right again), and so there can't be greater than $1/2$ chance of winning (but this doesn't follow, and is false!). The trick, as we will see, is to ensure that when players guess incorrectly, they do so _together_ and when correctly, alone.
+There is a very tempting line of reasoning to the effect that, because every guess has a $1/2$ chance of being correct (which is true), and every victory requires at least one correct guess (also true), it follows that every victory requires at least one event of probability $1/2$ to occur (right again), and so there can't be greater than $1/2$ chance of winning (but this doesn't follow, and is false!). The trick, as we will see, is to ensure that when players guess incorrectly, they do so _together_, and when correctly, alone.
 
 A _distribution_ is an assignment of hat colors to players. For $N$ players, there are $2^N$ distributions.  A _scenario_, representing the information a player has to go on when deciding, is an assignment of hat colors to all but one player. A _strategy_ tells each player what to do for each scenario they might encounter. It is a function from scenarios to the set of possible actions, $\{White, Black, Pass\}$.
 
