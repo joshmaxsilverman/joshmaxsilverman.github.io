@@ -48,7 +48,7 @@ And in fact this is possible! Initially, I found a set of hubs computationally. 
 1111111
 ```
 
-=== Getting Systematic
+### Getting Systematic
 
 The computational approach doesn't help for the general case of arbitrary $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to [coding theory](https://en.wikipedia.org/wiki/Forward_error_correction) (where the reason for the curious restriction to such values of $N$ will emerge). 
 
