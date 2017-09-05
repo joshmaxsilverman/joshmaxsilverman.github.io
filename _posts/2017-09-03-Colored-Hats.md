@@ -50,7 +50,7 @@ And in fact this is possible! Initially, I found a set of hubs computationally (
 
 The computational approach doesn't help for the general case of arbitrary $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to [coding theory](https://en.wikipedia.org/wiki/Forward_error_correction) (where the reason for the curious restriction to such values of $N$ will emerge). 
 
-The problem of finding a complete set of hubs (in the sense that the hubs and their disjoint sets of satellites exhaust the distributions) is the same as the problem of finding a signaling system with a maximally large set of $N$-digit binary numerals as signals, such that the receiver will be able to identify the sent signal even if one bit gets changed along the way. The computationally-found set of hubs for $N=7$ is such a set of sixteen signals. If we receive a satellite, one-digit off from a hube, we know its hub, because each satellite is one-digit off from only its own hub.
+The problem of finding a complete set of hubs (in the sense that the hubs and their disjoint sets of satellites exhaust the distributions) is the same as the problem of finding a signaling system with a maximally large set of $N$-digit binary numerals as signals, such that the receiver will be able to identify the sent signal even if one bit gets changed along the way. The computationally-found set of hubs for $N=7$ is such a set of sixteen signals. If we receive a satellite, one-digit off from a hub, we know its hub, because each satellite is one-digit off from only its own hub.
 
 We can design a set of sixteen such signals more systematically, as a [Hamming Code](https://en.wikipedia.org/wiki/Hamming_code).  
 
