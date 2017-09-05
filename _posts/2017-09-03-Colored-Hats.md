@@ -27,7 +27,7 @@ For a simple example of this, suppose that every player is assigned the incorrec
 
 The ideal extension of our simple example, in the case of $N=7$, would be to have $16$ instances of that pattern: a "hub" losing distribution with seven "satellite" winning distributions that differ from their hub by one hat-color. Suppose we found sixteen such hubs that together with their satellites cover all $128$ distributions. Then our strategy would be for any player who sees a scenario compatible with a hub distribution to guess the color that he must have if it's actually _not_ a hub distribution, and for players to pass otherwise. Hub distributions themselves, then, produce seven incorrect guesses, and each satellite distribution produces one correct guess (the other six players can see, based on the guesser's hat, that it's not a hub distribution).  This would be optimal in that the incorrect guesses are maximally stacked, and it would give a win ratio of $7/8$.
 
-And in fact this is possible! Initially, I found a set of hubs computationally (the Python code is shown below; it uses some randomness and on average it takes only about 30 repetitions). Representing black and white with $1$s and $0$s, the hub distributions I found that way are:
+And in fact this is possible! Initially, I found a set of hubs computationally. Python code is shown below; it uses some randomness and on average it takes only a few seconds to succeed. It is based on the observation that two hubs sharing no satellites is equivalent to their assigning different colors to at least three hats.  Representing black and white with $1$s and $0$s, one set of hub distributions I found that way contains these (different runnings produce different hubs):
 
 ```
 0000000
@@ -47,6 +47,8 @@ And in fact this is possible! Initially, I found a set of hubs computationally (
 1110100
 1111111
 ```
+
+===Getting Systematic q	 
 
 The computational approach doesn't help for the general case of arbitrary $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to [coding theory](https://en.wikipedia.org/wiki/Forward_error_correction) (where the reason for the curious restriction to such values of $N$ will emerge). 
 
@@ -90,13 +92,16 @@ This was a very interesting Riddler. Thank you, Oliver Roeder and [Professor Jar
 <br>
 
 ```python
+# For a given N find 2^N/(N+1) binary numerals which difffer
+# from one another in at least three digits.
+
 from random import shuffle
 
 # There are N players
 N = 7
-Reps = 100
+Reps = 100000000
 
-def mod (n,b):
+def BaseNumeral (n,b):
 	# Return a string that is the numeral for n in base b
     if n == 0:
         return '0'
@@ -106,58 +111,55 @@ def mod (n,b):
         nums.append(str(r))
     return ''.join(reversed(nums))
 
-def DifferByOneBit(m,n):
+def Pad(b,D):
+	# Add zeroes to binary numeral b until its length is D
+	while len(b)<D:
+		b = "0" + b
+	return b
+
+def DifferByAtLeastThreeBits(m,n):
 	# Do the binary representations of m and n differ by
-	# exactly one bit?
-	a = mod(min(m,n),2)
-	b = mod(max(m,n),2)
+	# at least three bits?
+	a = Pad(BaseNumeral(m,2),N)
+	b = Pad(BaseNumeral(n,2),N)
 	while len(a) < len(b):
 		a = "0" + a
 	DifferentBits = 0
 	for i in range(len(a)):
 		if not a[i] == b[i]:
 			DifferentBits += 1
-	return (DifferentBits == 1)
-
-# A number's neighbors differ from it by one bit
-Neighbors = []
-for m in range(2**N):
-	Neighbors.append([])
-	for n in range(2**N):
-		if DifferByOneBit(m,n):
-			Neighbors[m].append(n)
+	return (DifferentBits >= 3)
 
 for rep in range(Reps):
 	# Start with all zeros and all ones as initial hubs
-	Hubs = [0,2**N-1]
-	Unused = list(range(1,2**N-1))
-	for dist in Neighbors[0] + Neighbors[2**N-1]:
-		Unused.remove(dist)
-	while len(Unused) > 0:
+	Hubs = []
+	Unused = list(range(2**N))
+	while len(Hubs) < 2**N/(N+1):
 		FoundNewHub = 0
 		shuffle(Unused)
 		for TryHub in Unused:
 			Success = True
-			for Neighbor in Neighbors[TryHub]:
-				if not Neighbor in Unused:
+			for Hub in Hubs:
+				if not DifferByAtLeastThreeBits(Hub,TryHub):
+					# print Pad(BaseNumeral(Hub,2),N),Pad(BaseNumeral(TryHub,2),N),DifferByAtLeastThreeBits(Hub,TryHub)
 					Success = False
 			if Success:
 				break
 		if Success:
 			Hubs.append(TryHub)
-			for Neighbor in [TryHub]+Neighbors[TryHub]:
-				Unused.remove(Neighbor)
+			Unused.remove(TryHub)
 		else: 
 			break
-	if Unused == []:
+	if len(Hubs) == 2**N/(N+1):
 		print "Success at trial",rep
 		Hubs.sort()
 		for Hub in Hubs:
-			s = mod(Hub,2)
+			s = BaseNumeral(Hub,2)
 			while len(s) < N:
 				s = "0"+s
 			print s
 		break
+
 ```
 
 <br>
