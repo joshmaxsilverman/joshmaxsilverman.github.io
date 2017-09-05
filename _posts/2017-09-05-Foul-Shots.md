@@ -23,7 +23,7 @@ $$E_n = E_{n-1} + p(1) + (1-p)(E_n+1)$$
 
 Solving,
 
-$$E_n = \frac{1}{p}E_{n-1} + \frac{1}{p}$$
+$$E_n = \frac{1}{p} + \frac{1}{p}E_{n-1} $$
 
 Since $E_0$ is zero, $E_1$ is $1/p$, $E_2$ is $1/p+1/p^2$, and in general:
 
