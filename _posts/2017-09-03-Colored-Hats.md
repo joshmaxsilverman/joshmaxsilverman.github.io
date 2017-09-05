@@ -122,8 +122,6 @@ def DifferByAtLeastThreeBits(m,n):
 	# at least three bits?
 	a = Pad(BaseNumeral(m,2),N)
 	b = Pad(BaseNumeral(n,2),N)
-	while len(a) < len(b):
-		a = "0" + a
 	DifferentBits = 0
 	for i in range(len(a)):
 		if not a[i] == b[i]:
@@ -154,9 +152,7 @@ for rep in range(Reps):
 		print "Success at trial",rep
 		Hubs.sort()
 		for Hub in Hubs:
-			s = BaseNumeral(Hub,2)
-			while len(s) < N:
-				s = "0"+s
+			s = Pad(BaseNumeral(Hub,2),N)
 			print s
 		break
 
