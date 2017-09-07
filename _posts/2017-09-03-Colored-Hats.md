@@ -25,7 +25,7 @@ For a simple example of being wrong together and right separately, suppose that 
 
 The ideal extension of our simple example, in the case of $N=7$, would be to have $16$ instances of that same pattern: a "hub" losing distribution with seven "satellite" winning distributions each of which differs from the hub by one hat-color. Suppose we found sixteen such hubs that together with their satellites cover all $128$ distributions. Then our strategy would be for any player who sees a scenario compatible with a hub distribution to guess the color that he must have if it's actually _not_ a hub distribution, and for players to pass otherwise. Hub distributions themselves, then, produce seven incorrect guesses, and each satellite distribution produces one correct guess (the other six players can see, based on the guesser's hat, that it's not a hub distribution).  This would be optimal in that the incorrect guesses---of which there must be exactly as many as correct ones---are maximally stacked, and it would give a win ratio of $7/8$.
 
-And in fact this is possible! Initially, I found a set of hubs computationally. Python code is shown below; it uses some randomness and on average it takes under a second to succeed. It is based on the observation that two hubs sharing no satellites is equivalent to their assigning different colors to at least three hats.  Representing black and white with $1$s and $0$s, one set of hub distributions I found that way is this (different runs produce different hubs):
+And in fact this is possible! I convinced myself that such a set of hubs exists by finding one computationally. Python code is shown below; it uses some randomness and on average it takes under a second to succeed. It is based on the observation that two hubs sharing no satellites is equivalent to their assigning different colors to at least three hats.  Representing black and white with $1$s and $0$s, one set of hub distributions I found that way is this (different runs produce different hubs):
 
 ```
 0000000
@@ -48,7 +48,7 @@ And in fact this is possible! Initially, I found a set of hubs computationally. 
 
 ### Getting Systematic
 
-The computational approach doesn't help for the general case of arbitrary $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to [coding theory](https://en.wikipedia.org/wiki/Forward_error_correction) (where the reason for the curious restriction to such values of $N$ will emerge). 
+However, if we aspire to Extra Credit, the computational approach doesn't help for the general case of arbitrary $N$ where $N$ is $2^M-1$ for some $M$. For that we will need to turn to [coding theory](https://en.wikipedia.org/wiki/Forward_error_correction) (where the reason for the curious restriction to such values of $N$ will emerge). 
 
 The problem of finding a complete set of hubs (in the sense that the hubs and their disjoint sets of satellites exhaust the distributions) is the same as the problem of finding a signaling system with a maximally large set of $N$-digit binary numerals as signals, such that the receiver will be able to identify the sent signal even if one bit gets changed along the way. The computationally-found set of hubs for $N=7$ is such a set of sixteen signals. If we receive a satellite, one-digit off from a hub, we know its hub, because each satellite is one-digit off from only its own hub.
 
