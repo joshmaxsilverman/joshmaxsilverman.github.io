@@ -1,8 +1,8 @@
-# Attempted solotion of Riddler at https://fivethirtyeight.com/features/riddler-nation-goes-to-war/
+# Attempted solution of Riddler at https://fivethirtyeight.com/features/riddler-nation-goes-to-war/
 
 from random import shuffle
 
-Reps = 1000000
+Reps = 5000000
 Accum = 0
 # How many cards go face-down in a tie-break?
 CardsDown = 1
@@ -19,8 +19,8 @@ def NextRound():
 		YourCard = You.pop()
 		Pot.extend([MyCard,YourCard])
 		shuffle(Pot)
-		if MyCard < YourCard:
-			# My card beats yours (lower number = higher card)
+		if MyCard > YourCard:
+			# My card beats yours.
 			# So I get the pot of played cards.
 			Me = Pot + Me
 			# No tie to be broken
@@ -31,7 +31,7 @@ def NextRound():
 			else:
 				# You have more cards to play
 				Result = 0
-		elif YourCard < MyCard:
+		elif YourCard > MyCard:
 			You = Pot + You
 			Done = True
 			if len(Me) == 0:
@@ -54,14 +54,14 @@ def NextRound():
 					Pot.extend([Me.pop(),You.pop()])
 	return (Result == 0)
 
-# You have four of every number from 1 to 12, while I have just four 0s
+# You have four of every number from 0 to 11, while I have just four 12s
 YourCards = []
 for i in range(12):
-	YourCards.extend([i+1]*4)
+	YourCards.extend([i]*4)
 
 # Main loop
 for Rep in range(Reps):
-	Me = [0,0,0,0]
+	Me = [12,12,12,12]
 	You = list(YourCards)
 	shuffle(You)
 	while NextRound():
