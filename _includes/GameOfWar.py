@@ -1,10 +1,11 @@
 from random import shuffle
 
-Reps = 10000000
+Reps = 1000000
 Accum = 0
+CardsDown = 1
 
 def NextRound():
-	global Me,You,Result
+	global Me,You,Result,CardsDown
 	Pot = []
 	Done = False
 	while not Done:
@@ -27,27 +28,27 @@ def NextRound():
 			else: 
 				Result = 0
 		else:
-			if len(Me) < 2:
+			if len(Me) < 1 + CardsDown:
 				Done = True
 				Result = 2
-			elif len(You) < 2:
+			elif len(You) < 1 + CardsDown:
 				Done = True
 				Result = 1
 			else:
-				Pot.extend([Me.pop(),You.pop()])
+				for i in range(CardsDown):
+					Pot.extend([Me.pop(),You.pop()])
+	return Result
 
+YourCards = []
+for i in range(12):
+	YourCards.extend([i+1]*4)
 for Rep in range(Reps):
 	Me = [0,0,0,0]
-	You = []
-	for i in range(12):
-		You.extend([i+1]*4)
+	You = list(YourCards)
 	shuffle(You)
-	while True:
-		NextRound()
-		if Result == 0:
-			continue
-		elif Result == 1:
-			Accum += 1
-		break
+	while NextRound() == 0:
+		continue
+	if Result == 1:
+		Accum += 1
 
 print 1.0*Accum/Reps
