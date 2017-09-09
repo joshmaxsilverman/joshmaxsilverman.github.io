@@ -127,7 +127,6 @@ def DifferByAtLeastThreeBits(m,n):
 	return (DifferentBits >= 3)
 
 for rep in range(Reps):
-	# Start with all zeros and all ones as initial hubs
 	Hubs = []
 	Unused = list(range(2**N))
 	while len(Hubs) < 2**N/(N+1):
