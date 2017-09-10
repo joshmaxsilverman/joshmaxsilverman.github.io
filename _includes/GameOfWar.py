@@ -2,8 +2,8 @@
 
 from random import shuffle
 
-Reps = 5000000
-Accum = 0
+Reps = 10000000
+
 # How many cards go face-down in a tie-break?
 CardsDown = 1
 
@@ -60,6 +60,8 @@ for i in range(12):
 	YourCards.extend([i]*4)
 
 # Main loop
+
+Accum = 0
 for Rep in range(Reps):
 	Me = [12,12,12,12]
 	You = list(YourCards)
@@ -69,4 +71,4 @@ for Rep in range(Reps):
 	if Result == 1:
 		Accum += 1
 
-print 1.0*Accum/Reps
+print(1.0*Accum/Reps)
