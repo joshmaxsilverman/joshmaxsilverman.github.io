@@ -49,7 +49,7 @@ These planes each "lop off" a pyramidal corner of the cube (non-overlapping ones
 
 ![Lopped off cube corner.](/img/BrokenSticks2.png)
 
-For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The base area, then, is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of those lop off a volume of $1/2$, and so we conclude that half the triples of random lengths allow us to form a triangle.
+For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The volume of any pyramid is one-third of the base area times the height.  The base area is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of these lop off a volume of $1/2$, and so we conclude that half of the triples of random lengths allow us to form a triangle.
 
 ### 3
 
