@@ -88,7 +88,7 @@ $$\frac{1}{8} - 3\left(\frac{3}{8} -  \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2
 
 And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, and hence the probability that we can form an acute triangle, is twice that, or:
 
-$$3\ln(2)-2 \approx .07944$
+$$3\ln{2}-2 \approx .07944$
 
 ### 4
 
