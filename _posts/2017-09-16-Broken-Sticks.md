@@ -87,6 +87,8 @@ And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, 
 
 $$3\ln{2}-2 \approx .07944$$
 
+(The one somewhat arcane fact we've relied on is that the area of a hyperbolic sector of $y=1/x$ is the natural logarithm of its greatest $x$ coordinate. To deduce that from scratch, we'd have to rely on a little calculus, namly the fact that the integral of $1/x\ dx$ is $\ln(x)+C$.)
+
 ### 4
 
 >4. If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form an acute triangle with the sticks?
