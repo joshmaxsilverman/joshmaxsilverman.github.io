@@ -76,7 +76,7 @@ $$
 
 So we see that all of the sectors between the curvy triangle and the Problem 1 triangle have the same area. Thus, the proportion of the $x>y$ region that the curvy triangle occupies, and hence the probability that an actute triangle is formed, is:
 
-$$\frac{1}{8} - 3\left(\frac{3}{8} -  \frac{\ln{2}}{2}\right) = \frac{3\ln{2}{2} - 1$$
+$$\frac{1}{8} - 3\left(\frac{3}{8} -  \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
 
 ### 4
 
