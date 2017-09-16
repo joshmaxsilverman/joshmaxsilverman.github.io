@@ -57,9 +57,9 @@ For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ 
 
 We're back to the unit square in the $x-y$ plane, and again assuming that we're in the $1/2$ probability region where $x<y$, if we can form any triangle, the point $(x,y)$ has to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
 
-$$x^2 < (y-x)^2 + (1-y)^2 \Longleftrightarrow x < y + 1/2y -1$$
+$$x^2 < (y-x)^2 + (1-y)^2 \Longleftrightarrow x < y + \frac{1}{2y} -1$$
 
-$$(y-x)^2 < x^2 + (1-y)^2 \Longleftrightarrow y < 1/(2-2x) $$
+$$(y-x)^2 < x^2 + (1-y)^2 \Longleftrightarrow y < \frac{1}{2-2x} $$
 
 $$(1-y)^2 < x^2 + (y-x)^2$$
 
@@ -67,9 +67,9 @@ These tell us that the triangle-prone points are inside a curvy triangle formed 
 
 ![Curvy triangle.](/img/BrokenSticks3.png)
 
-The three areas trapped between the hyperbolas and the outer triangle must have equal areas. Consider a tiny square in one of them, say, the right-most one. It represents a range of points $(x,y)$ for which the side of length $x$ is too long to be a hypotenuse. But then there will be a region of exactly the same size in the upper-left region containing points $(x_1,y_1)$ for which the side of length $y_1-x_1$ is too long (just map $(x,y)$ to $(1-y,x+1-y)$).
+The three areas trapped between the hyperbolas and the outer triangle must have equal areas. The right-most and lowest regions are obviously simple translations of each other. The upper-left and rightmost regions are not, but they have the same width (in the $x$ dimension) at every value of $y$ (namely $1/(2y) - 1/2$), and therefore, by the ever-useful [Cavalieri's Principle](https://en.wikipedia.org/wiki/Cavalieri%27s_principle), have the same area.
 
-So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola ($(1-x)y = 1/2$ is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$. Thus the area in question is half of the similar region in $xy=1$.
+So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola (which has the equation $(1-x)y = 1/2$) is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$. Thus the area in question is half of the geometrically similar region in the hyperbola $xy=1$.
 
 ![Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
 
