@@ -98,7 +98,7 @@ $$A: x^2 + y^2 > z^2$$
 
 If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the constraint that $z$ is the largest as meaning that the point lies in the volume $1/3$ pyramidal portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point must lie outside of the cone $z^2=x^2+y^2$.
 
-![Cone cuts through cube.](\img\BrokenSticks4.gif)
+![Cone cuts through cube.](\img\BrokenSticks4.png)
 
 The volume inside pyramid $P$ that is also inside that cone is a quarter of a cone of height $1$ and base radius $1$. The volume of a cone is $\pi r^2 h/3$, and so the volume of the region outside of the cone in $P$ is:
 
