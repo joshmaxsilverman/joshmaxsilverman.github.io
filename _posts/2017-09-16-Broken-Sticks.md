@@ -67,12 +67,12 @@ These tell us that the triangle-prone points are inside a curvy triangle formed 
 
 ![Curvy triangle.](/img/BrokenSticks3.png)
 
-I was hoping that like the other three problem, there would be a calculus-free way to solve this one. But I can't think of one. So we haul out the heavy guns and calculate the areas of the regions between the hyperbolas and the sides of the triangle from Problem 1. First the upper-left region:
+I was hoping that like the other three problems, there would be a calculus-free way to solve this one. But I can't think of one. So we haul out the heavy guns and calculate the areas of the regions between the hyperbolas and the sides of the triangle from Problem 1. First the upper-left region:
 
 $$A_1 = \frac{3}{8} - \int_{x=0}^{1/2} \frac{1}{2-2x} dx$$
 
-$$ = \frac{3}{8} - \Bigg[_{x=0}^{1/2} -\frac{1}{2}\ln(2-2x)\Bigg]
-= \frac{3}{8}-\frac{\ln(2)}{2}$$
+$$ = \frac{3}{8} - \Bigg[_{x=0}^{1/2} -\frac{1}{2}\ln{2-2x}\Bigg]
+= \frac{3}{8}-\frac{\ln{2}}{2}$$
 
 Now the right region:
 
