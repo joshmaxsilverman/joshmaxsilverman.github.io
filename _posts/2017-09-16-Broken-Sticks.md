@@ -67,24 +67,19 @@ These tell us that the triangle-prone points are inside a curvy triangle formed 
 
 ![Curvy triangle.](/img/BrokenSticks3.png)
 
-I was hoping that like the other three problems, there would be a calculus-free way to solve this one. But I can't think of one. So we haul out the heavy guns and calculate the areas of the regions between the hyperbolas and the sides of the triangle from Problem 1. First the upper-left region:
+The three areas trapped between the hyperbolas and the outer triangle must have equal areas. Consider a tiny square in one of them, say, the right-most one. It represents a range of points $(x,y)$ for which the side of length $x$ is too long to be a hypotenuse. But then there will be a region of exactly the same size in the upper-left region containing points $(x_1,y_1)$ for which the side of length $y_1-x_1$ is too long (just map $(x,y)$ to $(1-y,x+1-y)$).
 
-$$A_1 = \frac{3}{8} - \int_{x=0}^{1/2} \frac{1}{2-2x} dx$$
+So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola ($(1-x)y = 1/2$ is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$. Thus the area in question is half of the similar region in $xy=1$.
 
-$$ = \frac{3}{8} - \Bigg[_{x=0}^{1/2} -\frac{1}{2}\ln(2-2x)\Bigg]
-= \frac{3}{8}-\frac{\ln{2}}{2}$$
+[Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
 
-Now the right region:
+The area of the shaded region (called a [hyperbolic sector](https://en.wikipedia.org/wiki/Hyperbolic_sector) is the natural logarithm of the $x$ coordinate of point $A$; so it is $\ln(2)/2$. The area of the triangle $\triangle OAB$ is $\overline{AM}\overline{OM}, which is $1/2$ times $3/2$, or $3/4$. so the area of the trapped region of interest is $\frac{3}{4} - \ln(2)$. Scaling that back to actual size, we get:
 
-$$A_2 = \frac{1}{4} - \int_{y=1/2}^1 y+\frac{1}{2y}-1\ dy$$
+$$ \frac{3}{8} - \frac{\ln(2)}{2}$$
 
-$$= \frac{1}{4} - \Bigg[_{y=1/2}^{1} \frac{y^2}{2} + \frac{\ln{y}}{2} - y\Bigg]
-= \frac{3}{8} -  \frac{\ln{2}}{2}
-$$
+Thus, the area of the curvy triangle is:
 
-So we see that all three sectors between the curvy triangle and the Problem 1 triangle have the same area. Thus, the area of the curvy triangle is:
-
-$$\frac{1}{8} - 3\left(\frac{3}{8} -  \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
+$$\frac{1}{8} - 3\left(\frac{3}{8} - \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
 
 And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, and hence the probability that we can form an acute triangle, is twice that, or:
 
