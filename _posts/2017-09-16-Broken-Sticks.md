@@ -49,7 +49,7 @@ These planes each "lop off" a pyramidal corner of the cube (non-overlapping ones
 
 ![Lopped off cube corner.](/img/BrokenSticks2.png)
 
-For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The base area, then, is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of those lop off $1/2$, and so we conclude that half the triples of random lengths allow us to form a triangle.
+For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The base area, then, is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of those lop off a volume of $1/2$, and so we conclude that half the triples of random lengths allow us to form a triangle.
 
 ### 3
 
@@ -57,9 +57,9 @@ For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ 
 
 We're back to the unit square in the $x-y$ plane, and again assuming that we're in the $1/2$ probability region where $x<y$, we have to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
 
-$$x^2 < (y-x)^2 + (1-y)^2 \leftrightarrow x < y + 1/2y -1$$
+$$x^2 < (y-x)^2 + (1-y)^2 \Longleftrightarrow x < y + 1/2y -1$$
 
-$$(y-x)^2 < x^2 + (1-y)^2 \leftrightarrow y < 1/(2-2x) $$
+$$(y-x)^2 < x^2 + (1-y)^2 \Longleftrightarrow y < 1/(2-2x) $$
 
 $$(1-y)^2 < x^2 + (y-x)^2$$
 
@@ -67,7 +67,7 @@ These tell us that the triangle-prone points are inside a curvy triangle formed 
 
 ![Curvy triangle.](/img/BrokenSticks3.png)
 
-I was hoping that like the other three problem, there were a nice, calculus-free way to solve this one. But I can't think of one. So we haul out the heavy guns and calculate the areas of the regions between the hyperbolas and the sides of the triangle from Problem 1. First the upper-left region:
+I was hoping that like the other three problem, there would be a calculus-free way to solve this one. But I can't think of one. So we haul out the heavy guns and calculate the areas of the regions between the hyperbolas and the sides of the triangle from Problem 1. First the upper-left region:
 
 $$A_1 = \frac{3}{8} - \int_{x=0}^{1/2} \frac{1}{2-2x} dx$$
 
@@ -79,20 +79,24 @@ Now the right region:
 $$A_2 = \frac{1}{4} - \int_{y=1/2}^1 y+\frac{1}{2y}-1\ dy$$
 
 $$= \frac{1}{4} - \Bigg[_{y=1/2}^{1} \frac{y^2}{2} + \frac{\ln{y}}{2} - y\Bigg]
-= \frac{3}{8} -  \frac{\ln{2}}{2}$
+= \frac{3}{8} -  \frac{\ln{2}}{2}
 $$
 
-So we see that all of the sectors between the curvy triangle and the Problem 1 triangle have the same area. Thus, the proportion of the $x>y$ region that the curvy triangle occupies, and hence the probability that an actute triangle is formed, is:
+So we see that all of the sectors between the curvy triangle and the Problem 1 triangle have the same area. Thus, the area of the curvy triangle is:
 
 $$\frac{1}{8} - 3\left(\frac{3}{8} -  \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
 
+And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, and hence the probability that we can form an acute triangle, is twice that, or:
+
+$$3\ln(2)-2 \approx .07944$
+
 ### 4
 
-Let the lengths of the sticks be $x$, $y$, and $z$, where $z$ is the largest of the three. They form an acute triangle so long as this proposition holds:
+Let the lengths of the sticks be $x$, $y$, and $z$, where $z$ is the largest of the three. They form an acute triangle so long as this inequality holds:
 
 $$A: x^2 + y^2 > z^2$$
 
-If we think of the space of possible trios of numbers $x, y, z$ as points in the unit cube, then we can think of the constraint that $z$ is the largest as meaning that the point lies in the volume $1/3$ pyramidal portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the constraint $A$ meaning that the point must lie outside of the cone defined by changing the inequality $A$ into an equation. 
+If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the constraint that $z$ is the largest as meaning that the point lies in the volume $1/3$ pyramidal portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point must lie outside of the cone $z^2=x^2+y^2$.
 
 ![Cone cuts through cube.](\img\BrokenSticks4.gif)
 
@@ -100,7 +104,7 @@ The volume inside pyramid $P$ that is also inside that cone is a quarter of a co
 
 $$\frac{1}{3} - \frac{\pi}{12}$$
 
-Multiplying by three to account for points where $x$ or $y$ is the largest, we find that the volume within the unit cube of all points lying outside the cone determined by the largest of the point's coordinates is:
+Multiplying by three to account for points where $x$ or $y$ is the largest coordinate, we find that the volume within the unit cube of all points lying outside the cone determined by the largest of the point's coordinates is:
 
 $$1 - \frac{\pi}{4} \approx 21.46%$$
 
