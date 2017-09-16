@@ -71,7 +71,7 @@ I was hoping that like the other three problems, there would be a calculus-free 
 
 $$A_1 = \frac{3}{8} - \int_{x=0}^{1/2} \frac{1}{2-2x} dx$$
 
-$$ = \frac{3}{8} - \Bigg[_{x=0}^{1/2} -\frac{1}{2}\ln{2-2x}\Bigg]
+$$ = \frac{3}{8} - \Bigg[_{x=0}^{1/2} -\frac{1}{2}\ln(2-2x)\Bigg]
 = \frac{3}{8}-\frac{\ln{2}}{2}$$
 
 Now the right region:
