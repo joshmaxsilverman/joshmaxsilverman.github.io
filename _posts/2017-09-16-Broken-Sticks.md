@@ -71,7 +71,7 @@ The three areas trapped between the hyperbolas and the outer triangle must have 
 
 So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola ($(1-x)y = 1/2$ is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$. Thus the area in question is half of the similar region in $xy=1$.
 
-[Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
+![Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
 
 The area of the shaded region (called a [hyperbolic sector](https://en.wikipedia.org/wiki/Hyperbolic_sector)) is the natural logarithm of the $x$ coordinate of point $A$; so it is $\ln(\sqrt{2})$, or $\ln(2)/2$. The area of the triangle $\triangle OAB$ is $\overline{AM}$ times $\overline{OM}$, or $1/2$ times $3/2$, or $3/4$. so the area of the trapped region of interest is $\frac{3}{4} - \ln(2)$. Scaling that back to actual size, we get:
 
