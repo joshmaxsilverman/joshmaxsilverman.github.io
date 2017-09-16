@@ -73,11 +73,11 @@ So it will suffice to find the area of one of them, and we will focus on the upp
 
 [Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
 
-The area of the shaded region (called a [hyperbolic sector](https://en.wikipedia.org/wiki/Hyperbolic_sector) is the natural logarithm of the $x$ coordinate of point $A$; so it is $\ln(2)/2$. The area of the triangle $\triangle OAB$ is $\overline{AM}\overline{OM}, which is $1/2$ times $3/2$, or $3/4$. so the area of the trapped region of interest is $\frac{3}{4} - \ln(2)$. Scaling that back to actual size, we get:
+The area of the shaded region (called a [hyperbolic sector](https://en.wikipedia.org/wiki/Hyperbolic_sector)) is the natural logarithm of the $x$ coordinate of point $A$; so it is $\ln(\sqrt{2})$, or $\ln(2)/2$. The area of the triangle $\triangle OAB$ is $\overline{AM}$ times $\overline{OM}$, or $1/2$ times $3/2$, or $3/4$. so the area of the trapped region of interest is $\frac{3}{4} - \ln(2)$. Scaling that back to actual size, we get:
 
 $$ \frac{3}{8} - \frac{\ln(2)}{2}$$
 
-Thus, the area of the curvy triangle is:
+Thus, the area of the curvy triangle is the area of the straight triangle minus three of those regions:
 
 $$\frac{1}{8} - 3\left(\frac{3}{8} - \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
 
