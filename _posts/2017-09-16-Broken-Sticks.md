@@ -93,7 +93,7 @@ Let the lengths of the sticks be $x$, $y$, and $z$, where $z$ is the largest of 
 
 $$A: x^2 + y^2 > z^2$$
 
-If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the constraint that $z$ is the largest as meaning that the point lies in the volume $1/3$ pyramidal portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point must lie outside of the cone $z^2=x^2+y^2$.
+If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the constraint that $z$ is the largest as meaning that the point lies in the volume $1/3$ portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point must lie outside of the cone $z^2=x^2+y^2$ (whose intersection with the cube is entirely within $P$).
 
 ![Cone cuts through cube.](\img\BrokenSticks4.png)
 
