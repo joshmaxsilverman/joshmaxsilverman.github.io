@@ -108,4 +108,25 @@ Multiplying by three to account for points where $x$ or $y$ is the largest coord
 
 $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
+### Empirical Verification
+
+For sanity-checking, the following Python code agrees with the above results:
+
+```
+from random import random
+Reps = 10000000
+Accum = [0,0,0,0]
+for _ in range(Reps):
+	a,b,c = random(),random(),random()
+	x,y = min(a,b),max(a,b)
+	v,u,w = x,y-x,1-y
+	S = [a,b,c]
+	S.sort()
+	Accum[0] += not (x > .5 or y < .5 or y-x <.5)
+	Accum[1] += a < b+c and b<a+c and c<a+b
+	Accum[2] += w**2<v**2+u**2 and u**2<v**2+w**2 and v**2<u**2+w**2
+	Accum[3] += S[2]**2 < S[0]**2+S[1]**2
+print [1.0*Accum[i]/Reps for i in range(4)] 
+```
+
 <br>
