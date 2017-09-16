@@ -55,7 +55,7 @@ For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ 
 
 >3. If you break a stick in two places at random, what is the probability of being able to form an acute triangle — where each angle is less than 90 degrees — with the pieces?
 
-We're back to the unit square in the $x-y$ plane, and again assuming that we're in the $1/2$ probability region where $x<y$, we have to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
+We're back to the unit square in the $x-y$ plane, and again assuming that we're in the $1/2$ probability region where $x<y$, if we can form any triangle, $(x,y)$ has to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
 
 $$x^2 < (y-x)^2 + (1-y)^2 \Longleftrightarrow x < y + 1/2y -1$$
 
