@@ -15,6 +15,8 @@ title: Breaking Sticks
 
 ## Solutions
 
+This group of puzzles has the interesting feature that they initially seem geometric---to do with stick triangles---then quickly turn into problems about random numbers, which in turn admit of simple solutions that employ geometry---but not the geometry of stick triangles!
+
 ### 1
 
 >1. If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
