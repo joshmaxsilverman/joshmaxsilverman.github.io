@@ -27,7 +27,11 @@ $$ y-x < x + (1-y) \rightarrow y < x+1/2$$
 
 $$ 1-y < x+ (y-x) \rightarrow y > 1/2$$
 
-Each of these inequalities tells us that the points in the $x-y$ plane lie to one side of a straight line. Together they determine a triangle of area $1/8$ (it's half of a quarter of the unit square). Since our assumption that $x>y$ determines a region of area $1/2$, we conclude that the proportion of $(x,y)$ pairs suited to making triangles is $1/4$.
+Each of these inequalities tells us that the points in the $x-y$ plane lie to one side of a straight line. Together they determine a triangle of area $1/8$ (it's half of a quarter of the unit square). 
+
+![Broken sticks that form a triangle.](/img/BrokenSticks1.png)
+
+Since our assumption that $x>y$ determines a region of area $1/2$, we conclude that the proportion of $(x,y)$ pairs suited to making triangles is $1/4$.
 
 ### 2
 
@@ -41,7 +45,11 @@ $$ y < x+z$$
 
 $$ z < x+ y$$
 
-These planes each "lop off" a pyramidal corner of the cube (non-overlapping ones, because at most one of the inequalities can be false). For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The base area, then, is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of those lop off $1/2$, and so we conclude that half the triples of random lengths allow us to form a triangle.
+These planes each "lop off" a pyramidal corner of the cube (non-overlapping ones, because at most one of the inequalities can be false). 
+
+![Lopped off cube corner.](/img/BrokenSticks2.png)
+
+For instance, the first lops off the pyramid that has the cube corner $(1,0,0)$ as its apex and the three adjacent corners as the corners of its triangular base. The base area, then, is $1/2$ and the height is $1$, so the lopped-off volume is $1/6$. Three of those lop off $1/2$, and so we conclude that half the triples of random lengths allow us to form a triangle.
 
 ### 3
 
