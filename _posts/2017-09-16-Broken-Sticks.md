@@ -87,6 +87,8 @@ $$3\ln{2}-2 \approx .07944$$
 
 ### 4
 
+>4. If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form an acute triangle with the sticks?
+
 Let the lengths of the sticks be $x$, $y$, and $z$, where $z$ is the largest of the three. They form an acute triangle so long as this inequality holds:
 
 $$A: x^2 + y^2 > z^2$$
