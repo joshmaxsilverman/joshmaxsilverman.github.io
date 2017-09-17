@@ -85,7 +85,7 @@ And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, 
 
 $$3\ln{2}-2 \approx 7.944\%$$
 
-(The one somewhat arcane fact we've relied on is that the area of a hyperbolic sector of $y=1/x$ is the natural logarithm of its greatest $x$ coordinate. To deduce that from scratch, we'd have to rely on a little calculus, namly the fact that the integral of $1/x\ dx$ is $\ln(x)+C$.)
+(The one somewhat arcane fact we've relied on is that the area of a hyperbolic sector of $y=1/x$ is the natural logarithm of its greatest $x$ coordinate. To deduce that from scratch, we'd have to rely on a little calculus, namly the fact that the integral of $1/x\ dx$ is $\ln(x)+C$---slightly smirching the pleasant calculus-free accessibility of these problems.)
 
 ### 4
 
