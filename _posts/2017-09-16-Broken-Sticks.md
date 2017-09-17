@@ -33,7 +33,7 @@ Each of these inequalities tells us that the points in the $x-y$ plane lie to on
 
 ![Broken sticks that form a triangle.](/img/BrokenSticks1.png)
 
-Since our assumption that $x>y$ determines a region of area $1/2$, and the case of $y>x$ is symmetrical (and of course we ignore regions of zero extent, such as the line $x=y$), we conclude that the proportion of $(x,y)$ pairs suited to making triangles is $1/4$.
+Since our assumption that $x>y$ determines a region of area $1/2$, and the case of $y>x$ is symmetrical, we conclude that the proportion of $(x,y)$ pairs suited to making triangles is $1/4$.
 
 ### 2
 
