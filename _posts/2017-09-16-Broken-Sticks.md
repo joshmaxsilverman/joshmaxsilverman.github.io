@@ -99,6 +99,31 @@ Multiplying by three to account for points where $x$ or $y$ is the largest coord
 
 $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
+### Extra Credit
+
+For the fun it let's ask for the probability that three random breaks will allow you to form a quadrilateral.
+
+Once again, this amounts to ensuring that no piece is of length greater than $1/2$. Call the points of the breaks $x$, $y$, and $z$, and assume (with probability $1/6$) that that their numerical order from least to greatest.  Then our constraints are:
+
+$$x > 0$$
+
+$$x < .5$$
+
+$$y > x$$
+
+$$y< x+1/2$$
+
+$$z>y$$
+
+$$y>z+1.2$$
+
+$$z > 1/2$$
+
+$$z < 1$$
+
+These eight constraints create the facets of a diamond-shaped region composed of two pyramids with the same square base of side $1/2$ and both of height $1/2$. The total volume is then twice $1/3$ times the base area $1/4$ times the height $1/2$, or $1/12$.  Multiplying by $6$ for the different possible size orderings of $x$, $y$, and $z$, the answer is $1/2$.
+
+
 ### Empirical Verification
 
 The following Python code agrees with the above results:
