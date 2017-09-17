@@ -105,7 +105,7 @@ The volume inside $P$ that is also inside the cone is a one-quarter pie-slice of
 
 $$\frac{1}{3} - \frac{\pi}{12}$$
 
-Multiplying by three to account for points where $x$ or $y$ is the largest coordinate, we find that the volume within the unit cube of all points lying outside the cone determined by the largest of the point's coordinates is:
+Multiplying by three to account for points where $x$ or $y$ is the largest coordinate, we find that the volume within the unit cube of every point lying outside the cone determined by the largest of the point's coordinates is:
 
 $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
