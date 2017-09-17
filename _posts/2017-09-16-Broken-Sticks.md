@@ -77,13 +77,13 @@ The area of the shaded region (called a [hyperbolic sector](https://en.wikipedia
 
 $$ \frac{3}{8} - \frac{\ln(2)}{2}$$
 
-Thus, the area of the curvy triangle is the area of the straight triangle minus three of those regions:
+The area of the curvy triangle is the area of the straight triangle minus three of those regions:
 
 $$\frac{1}{8} - 3\left(\frac{3}{8} - \frac{\ln{2}}{2}\right) = \frac{3\ln{2}}{2} - 1$$
 
 And the proportion of the region of area $1/2$ in which $x<y$ that it occupies, and hence the probability that we can form an acute triangle, is twice that, or the surprisingly small:
 
-$$3\ln{2}-2 \approx .07944$$
+$$3\ln{2}-2 \approx 7.944\%$$
 
 (The one somewhat arcane fact we've relied on is that the area of a hyperbolic sector of $y=1/x$ is the natural logarithm of its greatest $x$ coordinate. To deduce that from scratch, we'd have to rely on a little calculus, namly the fact that the integral of $1/x\ dx$ is $\ln(x)+C$.)
 
