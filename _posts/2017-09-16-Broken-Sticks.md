@@ -19,15 +19,7 @@ title: Breaking Sticks
 
 >1. If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
 
-The question is, if $x$ and $y$ are random numbers between $0$ and $1$ (with the obvious unstated assumption that the distribution of probabilities is uniform), how likely is it that the difference between them and $0$ and $1$ are such that none is greater than the sum of the other two? We can ignore (in this and the other problems) the possiblity that $x=y$, because it has zero probability. If $x$ is less than $y$, those differences are $x$, $y-x$, and $1-y$. We can focus on that case because the other case is symmetrical. The three constraints are:
-
-$$ x < (y-x) + (1-y) \Longleftrightarrow x < 1/2$$
-
-$$ y-x < x + (1-y) \Longleftrightarrow y < x+1/2$$
-
-$$ 1-y < x+ (y-x) \Longleftrightarrow y > 1/2$$
-
-Each of these inequalities tells us that the points in the $xy$-plane lie to one side of a straight line. Together they determine a triangle of area $1/8$ (it's half of a quarter of a unit square). 
+The question is, if $x$ and $y$ are random numbers between $0$ and $1$ (with the obvious unstated assumption that the distribution of probabilities is uniform), how likely is it that the differences between them and $0$ and $1$ are such that none is greater than $1/2$? We can ignore (in this and the other problems) the possiblity that $x=y$, because it has zero probability. If $x$ is less than $y$, those differences are $x$, $y-x$, and $1-y$; each must be less than $1/2$. Each of these three inequalities tells us that the points in the $xy$-plane lie to one side of a straight line. Together they determine a triangle of area $1/8$ (it's half of a quarter of a unit square). 
 
 ![Broken sticks that form a triangle.](/img/BrokenSticks1.png)
 
