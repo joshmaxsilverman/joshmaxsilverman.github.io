@@ -95,7 +95,7 @@ Let the lengths of the sticks be $x$, $y$, and $z$, and assume (with probability
 
 $$A: x^2 + y^2 > z^2$$
 
-If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the assumption that $z$ is the largest as meaning that the point lies in the volume $1/3$ portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point must lie outside of the cone $z^2=x^2+y^2$ (whose intersection with the cube is entirely within $P$).
+If we think of the space of possible triples $(x, y, z)$ as points in the unit cube, then we can think of the assumption that $z$ is the largest as meaning that the point lies in the volume-$1/3$ portion $P$ of the cube in which $z$ is greater than both $x$ and $y$. And we can think of the inequality $A$ as meaning that the point lies outside of the cone $z^2=x^2+y^2$ (whose intersection with the cube is entirely within $P$).
 
 ![Cone cuts through cube.](\img\BrokenSticks4.png)
 
