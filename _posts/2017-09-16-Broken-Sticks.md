@@ -21,7 +21,7 @@ This group of puzzles has the interesting feature that they initially seem geome
 
 >1. If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
 
-The question is, if $x$ and $y$ are random numbers between $0$ and $1$ (with the obvious unstated assumption that the distribution of probabilities is uniform), how likely is it that the difference between them and $0$ and $1$ are such that none is greater than the sum of the other two? If $x$ is less than $y$, those differences are $x$, $y-x$, and $1-y$. We can focus on that case because the other case is symmetrical, just swapping $y$ for $x$. The three constraints are:
+The question is, if $x$ and $y$ are random numbers between $0$ and $1$ (with the obvious unstated assumption that the distribution of probabilities is uniform), how likely is it that the difference between them and $0$ and $1$ are such that none is greater than the sum of the other two? We can ignore (in this and the other problems) the possiblity that $x=y$, because it has zero probability. If $x$ is less than $y$, those differences are $x$, $y-x$, and $1-y$. We can focus on that case because the other case is symmetrical, just swapping $y$ for $x$. The three constraints are:
 
 $$ x < (y-x) + (1-y) \Longleftrightarrow x < 1/2$$
 
