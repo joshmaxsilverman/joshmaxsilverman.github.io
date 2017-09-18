@@ -41,7 +41,7 @@ $$ y < x+z$$
 
 $$ z < x+ y$$
 
-Each of these planes sliced from the cube a pyramidal corner, whose own vertices are four of the cube's. The pyramids don't overlap, because at most one of the inequalities can be false. 
+Each of these planes slices from the cube a pyramidal corner, whose own vertices are four of the cube's. The pyramids don't overlap, because at most one of the inequalities can be false. 
 
 ![Lopped off cube corner.](/img/BrokenSticks2.png)
 
