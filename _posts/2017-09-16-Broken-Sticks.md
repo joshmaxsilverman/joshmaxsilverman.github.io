@@ -95,7 +95,7 @@ If we think of the space of possible triples $(x, y, z)$ as points in the unit c
 
 ![Cone cuts through cube.](\img\BrokenSticks4.png)
 
-The volume inside $P$ that is also inside the cone is a one-quarter pie-slice of a cone of height $1$ and base radius $1$. The volume of a cone is $\pi r^2 h/3$, and so the volume of the region of $P$ outside of the cone:
+The volume inside $P$ that is also inside the cone is a one-quarter pie-slice of a cone of height $1$ and base radius $1$. The volume of a cone is $\pi r^2 h/3$, and so the volume of the region of $P$ outside of the cone is:
 
 $$\frac{1}{3} - \frac{\pi}{12}$$
 
