@@ -51,7 +51,7 @@ The volume of a pyramid is one-third of the base area times the height.  The bas
 
 >If you break a stick in two places at random, what is the probability of being able to form an acute triangle — where each angle is less than 90 degrees — with the pieces?
 
-We're back to the unit square in the $xy$-plane, and again assuming that we're in the $1/2$ probability region where $x<y$, if we can form any triangle, the point $(x,y)$ has to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
+We're back to the unit square in the $xy$-plane, and again, assuming that we're in the $1/2$ probability region where $x<y$, if we can form any triangle, the point $(x,y)$ has to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
 
 $$x^2 < (y-x)^2 + (1-y)^2 \Longleftrightarrow x < y + \frac{1}{2y} -1$$
 
