@@ -142,12 +142,13 @@ Accum = [0]*5
 for _ in range(Reps):
 	S = [random(),random(),random()]
 	S.sort()
-	v,u,w = S[0],S[2]-S[0],1-S[2]
+	v,u,w = S[0],S[1]-S[0],1-S[1]
 	Accum[0] += S[0] < .5 and S[1] > .5 and S[1]-S[0] < .5
 	Accum[1] += S[0] < S[1]+S[2] and S[1]<S[0]+S[2] and S[2]<S[0]+S[1]
 	Accum[2] += w**2<v**2+u**2 and u**2<v**2+w**2 and v**2<u**2+w**2
 	Accum[3] += S[2]**2 < S[0]**2+S[1]**2
 	Accum[4] += S[0] < .5 and S[2] > .5 and S[1]-S[0] < .5 and S[2]-S[1] < .5
 print [1.0*Accum[i]/Reps for i in range(len(Accum))] 
+
 ```
 <br>
