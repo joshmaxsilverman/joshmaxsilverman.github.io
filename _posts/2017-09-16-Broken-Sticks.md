@@ -61,7 +61,7 @@ These tell us that the triangle-prone points are inside a curvy triangle formed 
 
 The three areas trapped between the hyperbolas and the outer triangle must have equal areas. The right-most and lowest regions are obviously reflections of each other. The upper-left and right-most regions are not, but they have the same width (in the $x$ dimension) at every value of $y$ (namely $1/(2y) - 1/2$), and therefore, by the ever-useful [Cavalieri's Principle](https://en.wikipedia.org/wiki/Cavalieri%27s_principle), have the same area.
 
-So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola (which has the equation $(1-x)y = 1/2$) is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$. Thus the area in question is half of the area of the geometrically similar region in the hyperbola $xy=1$.
+So it will suffice to find the area of one of them, and we will focus on the upper left. That hyperbola (which has the equation $(1-x)y = 1/2$) is just the ordinary $xy=1$, except scaled linearly by a factor of $1/\sqrt{2}$, mirrored about the $y$ axis, and shifted to the right by $1$ unit. Thus the area in question is half of the area of the geometrically similar region in the hyperbola $xy=1$.
 
 ![Translated to unit rectangular hyperbola.](/img/BrokenSticks3a.png)
 
