@@ -107,7 +107,7 @@ $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
 >If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
 
-Once again, this amounts to ensuring that no piece is of length greater than $1/2$. Call the points of the breaks $x$, $y$, and $z$, and assume (with probability $1/6$) that that their numerical order from least to greatest.  Then our constraints are:
+Once again, this amounts to ensuring that no piece is of length greater than $1/2$. Call the points of the breaks $x$, $y$, and $z$, and assume (with probability $1/6$) that that their numerical order is from least to greatest.  Then our constraints are:
 
 $$x > 0$$
 
