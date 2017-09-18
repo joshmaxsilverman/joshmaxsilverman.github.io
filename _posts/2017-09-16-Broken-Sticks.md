@@ -107,7 +107,7 @@ Once again, this amounts to ensuring that no piece is of length greater than $1/
 
 $$x > 0$$
 
-$$x < .5$$
+$$x < 1/2$$
 
 $$y > x$$
 
