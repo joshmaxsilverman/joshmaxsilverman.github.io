@@ -131,7 +131,7 @@ These eight constraints carve from the unit cube the facets of a diamond-shaped 
 
 The volume of the diamond is then twice $1/3$ times the base area $1/4$ times the height $1/2$, or $1/12$.  Multiplying by $6$ for the different possible orderings of $x$, $y$, and $z$, our answer is $1/2$.
 
-### Empirical Verification
+### Empirical Sanity-Check
 
 The following Python code agrees with the above results:
 
