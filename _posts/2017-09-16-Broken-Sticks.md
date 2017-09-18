@@ -13,7 +13,7 @@ title: Riddle Sticks
 
 Let's add, just for fun:
 
->5. If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
+> If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/will-you-be-a-ghostbuster-or-a-world-destroyer/))
 
