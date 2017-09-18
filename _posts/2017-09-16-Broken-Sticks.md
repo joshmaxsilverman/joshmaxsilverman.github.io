@@ -136,7 +136,7 @@ The volume of the diamond is then twice $1/3$ times the base area $1/4$ times th
 
 ### 6
 
-> If you break a stick in $n$ places at random, forming $n+1$ pieces, what is the probability of being able to form a polygon with the pieces?
+> If you break a stick in $n$ places at random, forming $n+1$ pieces, what is the probability of being able to form a $(n+1)$-gon with the pieces?
 
 Steam-bend the pieces to form a circular loop, retaining their order. The loop includes a "break" where the original ends meet as well as the $n$ other breaks. Consider any one of the $n+1$ breaks. It is the break at the clockwise end of a piece of length greater than $1/2$ just in case all of the other $n$ breaks are within $1/2$ of its clockwise end, in the clockwise direction. The probability of that is $(1/2)^n$. Multiplying that by the $n+1$ breaks gives the probability that there is a piece longer than $1/2$, and so the probability that we can form a polygon is $1-(n+1)(1/2)^n$.
 
