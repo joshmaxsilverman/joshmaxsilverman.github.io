@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Breaking Sticks
+title: Riddle Sticks
 ---
 
 >1. If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
