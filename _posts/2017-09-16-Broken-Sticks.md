@@ -121,8 +121,11 @@ $$z > 1/2$$
 
 $$z < 1$$
 
-These eight constraints create the facets of a diamond-shaped region composed of two pyramids with the same square base of side $1/2$ and both of height $1/2$. The total volume is then twice $1/3$ times the base area $1/4$ times the height $1/2$, or $1/12$.  Multiplying by $6$ for the different possible size orderings of $x$, $y$, and $z$, the answer is $1/2$.
+These eight constraints carve from the unit cube the facets of a diamond-shaped region composed of two pyramids with the same square base of side $1/2$ and height $1/2$. 
 
+![Diamond.](/img/BrokenSticks5.png)
+
+The volume of the diamond is then twice $1/3$ times the base area $1/4$ times the height $1/2$, or $1/12$.  Multiplying by $6$ for the different possible orderings of $x$, $y$, and $z$, our answer is $1/2$.
 
 ### Empirical Verification
 
@@ -130,18 +133,17 @@ The following Python code agrees with the above results:
 
 ```
 from random import random
-Reps = 10000000
-Accum = [0,0,0,0]
+Reps = 100000000
+Accum = [0,0,0,0,0]
 for _ in range(Reps):
-	a,b,c = random(),random(),random()
-	x,y = min(a,b),max(a,b)
-	v,u,w = x,y-x,1-y
-	S = [a,b,c]
+	S = [random(),random(),random()]
 	S.sort()
-	Accum[0] += not (x > .5 or y < .5 or y-x <.5)
-	Accum[1] += a < b+c and b<a+c and c<a+b
+	v,u,w = S[0],S[2]-S[0],1-S[2]
+	Accum[0] += S[0] < .5 and S[1] > .5 and S[1]-S[0] < .5
+	Accum[1] += S[0] < S[1]+S[2] and S[1]<S[0]+S[2] and S[2]<S[0]+S[1]
 	Accum[2] += w**2<v**2+u**2 and u**2<v**2+w**2 and v**2<u**2+w**2
 	Accum[3] += S[2]**2 < S[0]**2+S[1]**2
-print [1.0*Accum[i]/Reps for i in range(4)] 
+	Accum[4] += S[0] < .5 and S[2] > .5 and S[1]-S[0] < .5 and S[2]-S[1] < .5
+print [1.0*Accum[i]/Reps for i in range(len(Accum))] 
 ```
 <br>
