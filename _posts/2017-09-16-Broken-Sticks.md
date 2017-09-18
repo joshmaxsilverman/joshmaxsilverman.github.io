@@ -21,7 +21,7 @@ Let's add, just for fun:
 
 ### 1
 
->1. If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
+>If you break a stick in two places at random, forming three pieces, what is the probability of being able to form a triangle with the pieces?
 
 The question is, if $x$ and $y$ are random numbers between $0$ and $1$ (with the obvious unstated assumption that the distribution of probabilities is uniform), how likely is it that the differences between them and $0$ and $1$ are such that none is greater than $1/2$? We can ignore (in this and the other problems) the possiblity that $x=y$, because it has zero probability. If $x$ is less than $y$, those differences are $x$, $y-x$, and $1-y$; each must be less than $1/2$. Each of these three inequalities tells us that the points in the $xy$-plane lie to one side of a straight line. Together they determine a triangle of area $1/8$ (it's half of a quarter of a unit square). 
 
@@ -31,7 +31,7 @@ Our assumption that $x>y$ determines a region of area $1/2$, and since the case 
 
 ### 2
 
->2. If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form a triangle with them?
+>If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form a triangle with them?
 
 Now we've got three numbers, $x$, $y$, and $z$, and so we are working in the unit cube. Each of the three constraints now tells us that the triangle-making points are to one side of a plane:
 
@@ -49,7 +49,7 @@ The volume of a pyramid is one-third of the base area times the height.  The bas
 
 ### 3
 
->3. If you break a stick in two places at random, what is the probability of being able to form an acute triangle — where each angle is less than 90 degrees — with the pieces?
+>If you break a stick in two places at random, what is the probability of being able to form an acute triangle — where each angle is less than 90 degrees — with the pieces?
 
 We're back to the unit square in the $xy$-plane, and again assuming that we're in the $1/2$ probability region where $x<y$, if we can form any triangle, the point $(x,y)$ has to be inside the triangle we found in the first problem. Acuteness forces three new constraints, because each side of the triangle has to be too short to be the hypotenuse of a right triangle:
 
@@ -85,7 +85,7 @@ $$3\ln{2}-2 \approx 7.944\%$$
 
 ### 4
 
->4. If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form an acute triangle with the sticks?
+>If you select three sticks, each of random length (between 0 and 1), what is the probability of being able to form an acute triangle with the sticks?
 
 Let the lengths of the sticks be $x$, $y$, and $z$, and assume (with probability $1/3$) that $z$ is the largest of the three. They form an acute triangle so long as this inequality holds:
 
@@ -105,7 +105,7 @@ $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
 ### 5
 
->5. If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
+>If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
 
 Once again, this amounts to ensuring that no piece is of length greater than $1/2$. Call the points of the breaks $x$, $y$, and $z$, and assume (with probability $1/6$) that that their numerical order from least to greatest.  Then our constraints are:
 
