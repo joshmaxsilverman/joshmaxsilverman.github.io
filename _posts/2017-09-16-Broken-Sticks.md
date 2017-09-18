@@ -138,7 +138,7 @@ The following Python code agrees with the above results:
 ```
 from random import random
 Reps = 100000000
-Accum = [0,0,0,0,0]
+Accum = [0]*5
 for _ in range(Reps):
 	S = [random(),random(),random()]
 	S.sort()
