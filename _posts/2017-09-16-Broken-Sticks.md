@@ -11,6 +11,10 @@ title: Riddle Sticks
 
 <!--more-->
 
+Let's add, just for fun:
+
+>5. If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
+
 ([fivethirtyeight](https://fivethirtyeight.com/features/will-you-be-a-ghostbuster-or-a-world-destroyer/))
 
 ## Solutions
@@ -99,9 +103,9 @@ Multiplying by three to account for points where $x$ or $y$ is the largest coord
 
 $$1 - \frac{\pi}{4} \approx 21.46\%$$
 
-### Extra Credit
+### 5
 
-For the fun it let's ask for the probability that three random breaks will allow you to form a quadrilateral.
+>5. If you break a stick in three places at random, forming four pieces, what is the probability of being able to form a quadrilateral with the pieces?
 
 Once again, this amounts to ensuring that no piece is of length greater than $1/2$. Call the points of the breaks $x$, $y$, and $z$, and assume (with probability $1/6$) that that their numerical order from least to greatest.  Then our constraints are:
 
