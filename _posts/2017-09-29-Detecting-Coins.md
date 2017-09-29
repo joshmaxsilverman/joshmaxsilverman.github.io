@@ -25,7 +25,7 @@ So the probability that $C_2$ has more heads than $C_1$ is:
 
 $$\sum_{i=0}^{n-1} \sum_{j=i+1}^{n} B_{p_1,n,i}B_{p_2,n,j}$$
 
-Calculating this for the case of $.5$ and $.6$ is feasible in Python, and it yields a probability over .95 first at $n=143$. For a $p_2$ value below $.6$, the combinatorics are too large, and so we rely on the normal approximation to the binomial distribution:
+Calculating this for the case of $.5$ and $.6$ is feasible in Python, and it yields a probability over .95 first at $n=143$. For a $p_2$ value below $.6$, $n$ gets high enough that the combinatorics are too large for Python, and so we rely on the normal approximation to the binomial distribution:
 
 $$N_{p,n,m} = \frac{1}{\sqrt{2\pi\sigma^2}\exp\left( (m-\mu)^2/2\sigma^2 \right)}$$
 
