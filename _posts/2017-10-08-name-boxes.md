@@ -23,7 +23,7 @@ Let's go straight to the general case of $n$ players, for some even number $n$. 
 
 Suppose we try the strategy that assigns to each number up to $n/2$ the set of all numbers up to $n/2$ and to each number above $n/2$ the set of all the numbers above $n/2$. Then there will be a winning arrangement for each way of ordering those two sets, for a total of $(n/2)!^2$ arrangements.  For $n=100$, that gives a winning probability that is $12.56$ times that of the naive strategy.
 
-I have no proof that this is the optimal static strategy---although I did establish that fact computationally for $n$ values of $4$ and $6$.
+I have no proof that this is the optimal static strategy---although I did establish computationally that it is optimal for $n$ values of $4$ and $6$.
 
 ### Dynamic Strategy 
 
