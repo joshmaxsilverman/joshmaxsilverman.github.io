@@ -33,7 +33,7 @@ In particular, each player will open the box with their own number on it and fro
 
 A given arrangement partitions the boxes into a set of disjoint loops of size between $1$ and $n$, where the box after a given box in its loop is the box whose number it contains.  It is easy to see that there is a one-to-one correspondence between arrangements and ways of forming such loops of boxes. 
 
-The strategy succeeds whenever there is no loop greater than $n/2$ in length. For how many assignments is that true? We'll start by counting the assignments that create a loop of some size $s$ greater than $n/2$. There are $n \choose s$ ways to select boxes in the loop, $(s-1)!$ ways of ordering them, and $(n-s)!$ ways of assigning the remaining boxes. So the number of assignments with $s$-sized loops is:
+The strategy succeeds whenever there is no loop greater than $n/2$ in size. For how many assignments is that true? We'll start by counting the assignments that create a loop of some size $s$ greater than $n/2$. There are $n \choose s$ ways to select boxes in the loop, $(s-1)!$ ways of ordering them, and $(n-s)!$ ways of assigning the remaining boxes. So the number of assignments with $s$-sized loops is:
 
 $${n \choose s} (s-1)!(n-s)! = \frac{n!}{s}$$
 
