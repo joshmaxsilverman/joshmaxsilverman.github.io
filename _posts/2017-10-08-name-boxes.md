@@ -11,7 +11,7 @@ date: 2017-10-06
 >
 >Your goal: Concoct a strategy that beats the naive strategy — one that gives the team a better chance of winning than $1/16$.
 >
->Extra credit: Suppose there are $100$ contestants and $100$ boxes. Each player may open $50$ boxes. The chance of winning by using the naive strategy is $1$ in $2^100$, or about $1$ in $1.2\times 10^30$. How much can you improve the team’s chances?
+>Extra credit: Suppose there are $100$ contestants and $100$ boxes. Each player may open $50$ boxes. The chance of winning by using the naive strategy is $1$ in $2^{100}$, or about $1$ in $1.2\times 10^{30}$. How much can you improve the team’s chances?
 
 <!--more-->
 
