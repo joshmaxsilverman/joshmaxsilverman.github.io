@@ -57,8 +57,8 @@ Strategies = (StrategiesPerPlayer)**NumberOfPlayers
 # Strategies is the number of team strategies. 
 # The numbers from zero to Strategies-1 can be thought of as 
 # NumberOfPlayers-digit numerals in base StrategiesPerPlayer,
-# where each digit represents a player's strategy. That is,
-# each number encodes a strategy.
+# where each digit represents a player's strategy. Thus,
+# each numeral encodes a team strategy.
 
 print "For",NumberOfPlayers,"players there are", len(PlayerStrategies),"player strategies and",Strategies,"team strategies."
 
