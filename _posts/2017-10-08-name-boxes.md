@@ -13,6 +13,8 @@ date: 2017-10-06
 >
 >Extra credit: Suppose there are 100 contestants and 100 boxes. Each player may open 50 boxes. The chance of winning by using the naive strategy is 1 in 21002100, or about 1 in 1.2×10301.2×1030. How much can you improve the team’s chances?
 
+<!--more-->
+
 Let's go straight to the general case of $n$ players, for some even number $n$.  A strategy is a function from players to sets of $n/2$ numbers from $1$ to $n$. An arrangement is a function from numbers from $1$ to $n$ (numbering the players) to numbers from $1$ to $n$ (numbering the boxes). A strategy wins at an arrangement just in case the arrangement assigns to each player a number that is among those assigned to the player in the strategy.  
 
 Suppose we try the strategy that assigns to each number up to $n/2$ the set of all numbers up to $n/2$ and to each number above $n/2$ the set of all the numbers above $n/2$. Then there will be a winning arrangement for each way of ordering those two sets, for a total of $(n/2)!^2$ arrangements.  For $n=100$, that gives a winning probability that is $12.56$ times that of the naive strategy.
