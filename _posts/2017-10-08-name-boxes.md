@@ -29,7 +29,7 @@ I have no proof that this is the optimal static strategy---although I did establ
 
 But it turns out that we can vastly improve upon that with a _dynamic_ strategy that varies depending on what the players find when they open boxes.
 
-In particular, each player will open the box with their own number on it and from then on will open the box whose number they just found. Then, either the player will "loop" back to their own number within $n/2$ boxes or not.
+In particular, each player will open the box with their own number on it and from then on will open the box whose number they have just found. Then, either the player will "loop" back to their own number within $n/2$ boxes or not.
 
 A given arrangement partitions the boxes into a set of disjoint loops of size between $1$ and $n$, where the box after a given box in its loop is the box whose number it contains.  It is easy to see that there is a one-to-one correspondence between arrangements and ways of forming such loops of boxes. 
 
