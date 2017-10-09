@@ -45,6 +45,6 @@ And the probability of winning is:
 
 $$1 - \sum_{s=\frac{n}{2}+1}^{n} \frac{1}{s}$$
 
-For $n=100$, that's about $31.18%$ percent, which is an impressive improvement over the naive strategy!
+For $n=100$, that's about $31.18$ percent, which is an impressive improvement over the naive strategy!
 
 <br>
