@@ -15,88 +15,19 @@ date: 2017-10-06
 
 <!--more-->
 
-Let's go straight to the general case of $n$ players, for some even number $n$.  A strategy is a function from players to sets of $n/2$ numbers from $1$ to $n$. An arrangement is a function from numbers from $1$ to $n$ (numbering the players) to numbers from $1$ to $n$ (numbering the boxes). A strategy wins at an arrangement just in case the arrangement assigns to each player a number that is among those assigned to the player in the strategy.  
+Let's go straight to the general case of $n$ players, for some even number $n$.  A _static_ strategy is a function from players to the sets of $n/2$ numbers of the boxes they are to open, from $1$ to $n$. An arrangement is a function from numbers from $1$ to $n$ (numbering the players) to numbers from $1$ to $n$ (numbering the boxes). A strategy wins at an arrangement just in case the arrangement assigns to each player a number that is among those assigned to the player in the strategy.  
 
 Suppose we try the strategy that assigns to each number up to $n/2$ the set of all numbers up to $n/2$ and to each number above $n/2$ the set of all the numbers above $n/2$. Then there will be a winning arrangement for each way of ordering those two sets, for a total of $(n/2)!^2$ arrangements.  For $n=100$, that gives a winning probability that is $12.56$ times that of the naive strategy.
 
-```python
-NumberOfPlayers = 4
-
-# An arrangement is an assignment of players to boxes
-Arrangements = []
-def ExploreArrangements (Arrangement):
-	if len(Arrangement) == NumberOfPlayers:
-		Arrangements.append(Arrangement)
-		return
-	for Player in range(NumberOfPlayers):
-		if Player in Arrangement:
-			continue
-		NewArrangement = list(Arrangement)
-		NewArrangement.append(Player)
-		ExploreArrangements(NewArrangement)
-ExploreArrangements([])
-
-# A strategy is an assignment of NumberOfPlayers/2 boxes to each player
-PlayerStrategies = []
-def ExploreStrategies (Strategy):
-	if len(Strategy) == NumberOfPlayers/2:
-		PlayerStrategies.append(Strategy)
-		return
-	Last = -1
-	if len(Strategy):
-		Last = Strategy[-1]
-	for i in range(Last + 1, NumberOfPlayers - (NumberOfPlayers/2 - len(Strategy)) + 1):
-		NewStrategy = list(Strategy)
-		NewStrategy.append(i)
-		ExploreStrategies(NewStrategy)
-ExploreStrategies([])
-
-StrategiesPerPlayer = len(PlayerStrategies)
-
-Strategies = (StrategiesPerPlayer)**NumberOfPlayers
-# Strategies is the number of team strategies. 
-# The numbers from zero to Strategies-1 can be thought of as 
-# NumberOfPlayers-digit numerals in base StrategiesPerPlayer,
-# where each digit represents a player's strategy. Thus,
-# each numeral encodes a team strategy.
-
-print "For",NumberOfPlayers,"players there are", len(PlayerStrategies),"player strategies and",Strategies,"team strategies."
-
-def Win (Strategy,Arrangement):
-	global NumberOfPlayers
-	for Player in range(NumberOfPlayers):
-		PlayerStrategy = (Strategy/(StrategiesPerPlayer**Player))%StrategiesPerPlayer
-		if not Arrangement[Player] in PlayerStrategies[PlayerStrategy]:
-			return False
-	return True
-
-def PrintStrategy(Strategy):
-	for Player in range(NumberOfPlayers):
-		PlayerStrategy = (Strategy/(StrategiesPerPlayer**Player))%StrategiesPerPlayer
-		print PlayerStrategies[PlayerStrategy]
-
-BestStrategy = 0
-BestWinTally = 0
-for Strategy in range(Strategies):
-	WinTally = 0
-	for Arrangement in Arrangements:
-		if Win(Strategy,Arrangement):
-			WinTally += 1
-	if WinTally > BestWinTally:
-		BestWinTally = WinTally
-		BestStrategy = Strategy
-
-print "Best strategy yields",BestWinTally,"wins in",len(Arrangements),"arrangements, and is:"
-PrintStrategy(BestStrategy)
-```
+I have no proof that this is the optimal static strategy---although I did establish that fact computationally for $n$ values of $4$ and $6$.
 
 ### Dynamic Strategy 
 
-But it turns out that we can vastly improve upon that if we allow a "strategy" to vary depending on what the players find when they open boxes.
+But it turns out that we can vastly improve upon that with a _dynamic_ strategy that varies depending on what the players find when they open boxes.
 
-In particular, we instruct each player to open the box with their own number on it and from then on to open the box whose number they just found. Then, either the player will "loop" back to their own number within $n/2$ boxes or not.
+In particular, each player will open the box with their own number on it and from then on will open the box whose number they just found. Then, either the player will "loop" back to their own number within $n/2$ boxes or not.
 
-This strategy creates, from a given arrangement, a set of loops of size between $1$ and $n$, where the box after a given box in a loop is the box whose number it contains; it is easy to see that there is a one-to-one correspondence between arrangements and ways of forming such loops of boxes. 
+A given arrangement partitions the boxes into a set of disjoint loops of size between $1$ and $n$, where the box after a given box in its loop is the box whose number it contains.  It is easy to see that there is a one-to-one correspondence between arrangements and ways of forming such loops of boxes. 
 
 The strategy succeeds whenever there is no loop greater than $n/2$ in length. For how many assignments is that true? We'll start by counting the assignments that create a loop of some size $s$ greater than $n/2$. There are $n \choose s$ ways to select boxes in the loop, $(s-1)!$ ways of ordering them, and $(n-s)!$ ways of assigning the remaining boxes. So the number of assignments with $s$-sized loops is:
 
@@ -110,6 +41,6 @@ And the probability of winning is:
 
 $$1 - \sum_{s=\frac{n}{2}+1}^{n} \frac{1}{s}$$
 
-For $n=100$, that's about $31.18%$.
+For $n=100$, that's about $31.18%$, which is an impressive improvement over the naive strategy!
 
 <br>
