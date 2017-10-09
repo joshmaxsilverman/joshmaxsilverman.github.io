@@ -19,8 +19,6 @@ Let's go straight to the general case of $n$ players, for some even number $n$. 
 
 Suppose we try the strategy that assigns to each number up to $n/2$ the set of all numbers up to $n/2$ and to each number above $n/2$ the set of all the numbers above $n/2$. Then there will be a winning arrangement for each way of ordering those two sets, for a total of $(n/2)!^2$ arrangements.  For $n=100$, that gives a winning probability that is $12.56$ times that of the naive strategy.
 
-I cannot prove that this is optimal (the python code below does prove it for $n$ up to $6$), but it's Sunday night, and it's what I have.
-
 ```python
 NumberOfPlayers = 4
 
@@ -91,5 +89,27 @@ for Strategy in range(Strategies):
 print "Best strategy yields",BestWinTally,"wins in",len(Arrangements),"arrangements, and is:"
 PrintStrategy(BestStrategy)
 ```
+
+### Dynamic Strategy 
+
+But it turns out that we can vastly improve upon that if we allow a "strategy" to vary depending on what the players find when they open boxes.
+
+In particular, we instruct each player to open the box with their own number on it and from then on to open the box whose number they just found. Then, either the player will "loop" back to their own number within $n/2$ boxes or not.
+
+This strategy creates, from a given arrangement, a set of loops of size between $1$ and $n$, where the box after a given box in a loop is the box whose number it contains; it is easy to see that there is a one-to-one correspondence between arrangements and ways of forming such loops of boxes. 
+
+The strategy succeeds whenever there is no loop greater than $n/2$ in length. For how many assignments is that true? We'll start by counting the assignments that create a loop of some size $s$ greater than $n/2$. There are $n \choose s$ ways to select boxes in the loop, $(s-1)!$ ways of ordering them, and $(n-s)!$ ways of assigning the remaining boxes. So the number of assignments with $s$-sized loops is:
+
+$${n \choose s} (s-1)!(n-s)! = \frac{n!}{s}$$
+
+And the total number of losing assignments is:
+
+$$\sum_{s=\frac{n}{2}+1}^{n} \frac{n!}{s}$$
+
+And the probability of winning is:
+
+$$1 - \sum_{s=\frac{n}{2}+1}^{n} \frac{1}{s}$$
+
+For $n=100$, that's about $31.18%$.
 
 <br>
