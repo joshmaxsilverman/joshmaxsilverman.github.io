@@ -37,7 +37,7 @@ The case of your always passing is solved in exactly the same way, and the first
 
 ### Opponent plays optimally
 
-If you play optimally, again at each turn I want to maximize my expected number of wins for this game, as do you. So this time we will calculate $E(t,m,y)$ for both odd and even turns, that is, my expectation if playing at turn $t$ with $m$ points to your $y$, even if that means I'm the second player.
+If you play optimally, again at each turn I want to maximize my expected number of wins for this game, as do you. So this time we will calculate $E(t,m,y)$ for both odd and even turns, that is, my expectation if playing after turn $t$ with $m$ points to your $y$, even if that means I'm the second player.
 
 If in state $(t,m,y)$ I rush, then with probability $1/2$ each, the game will be in state $(t+1,m+1,y)$ or $(t+1,m,y+1)$, so that I will then expect, respectively, $1-E(t+1,y,m+1)$ or $1-E(t+1,y+1,m)$. That relies on the fact that a given player's expectation is always one minus the other's---it's a [zero-sum game](https://en.wikipedia.org/wiki/Zero-sum_game). So the expectation of rushing is:
 
