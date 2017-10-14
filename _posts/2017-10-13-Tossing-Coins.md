@@ -55,6 +55,8 @@ Now it's once again just a matter of working our way from the known expectations
 
 It turns out that the optimal strategy against an optimal opponent can be summed up as follows. If you're losing, pass. If you're winning, rush. If it's tied, then if the number of completed turns is divisible by $4$, pass; if it's after turn $92$ and you went first or it's the very last turn, it's a wash; otherwise rush.
 
+### Code (Python)
+
 ```python
 N = 100
 for Strategy in ("always rush","always pass","optimal"):
