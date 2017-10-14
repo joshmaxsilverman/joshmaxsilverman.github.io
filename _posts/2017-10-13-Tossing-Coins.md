@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Tossing Coins
 date: 2017/10/13
 ---
