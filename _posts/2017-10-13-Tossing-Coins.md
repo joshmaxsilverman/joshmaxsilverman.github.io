@@ -20,7 +20,7 @@ date: 2017/10/13
 
 We will rely on the computer, but not for random, Monte Carlo simulations. Each of the three problems can be solved exactly by specifying a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation), and repeatedly deducing unknown values of a function from known values. While this provides a recipe for an exact calculation, it is much too complicated a procedure for pen and paper, so we will rely on the computer to calculate expectations to high precision.
 
-A _state_ of the game is a pair $(t,m,y)$ where there have been $t$ tosses, I have $m$ and you have $y$ points. All of $t$, $m$, and $i$ are positive integers with $t\leq 100$ and $x+y \leq 200$.  $E(t,m,y)$ is my expected number of wins if it's my turn and the game is now in state $(t,m,y)$, supposing we both play optimally. We start with:
+A _state_ of the game is a triple $(t,m,y)$ where there have been $t$ tosses, I have $m$ and you have $y$ points. All of $t$, $m$, and $y$ are positive integers with $t\leq 100$ and $t \leq x+y \leq 200$.  $E(t,m,y)$ is my expected number of wins if it's my turn and the game is now in state $(t,m,y)$. We start with:
 
 $$E(100,m,y) = 1,\ 0,\ \frac{1}{2}\ \mbox{for}\ m > y,\ y>m,\
 y=m$$
@@ -31,15 +31,15 @@ Suppose you always rush and that it's my turn, in state $(t,m,y)$. Suppose also 
 
 I expect half the time to throw heads and gain either one or two points depending on my choice of rush or pass; in half of those cases you gain one point on the next turn (you throw heads) and in the other half I gain a point (you throw tails). Similarly, half the time I throw tails, so that you gain one or two points; then one of us gains one point on your flip. 
 
-So whichever choice I make there are four cases for the next two turns: I have $1/4$ chance each of ending up in a state $(t+2,m',y')$ such that we've already calculated $E(t+2,m',y')$. This allows us to calculate expectations for states where $t=98$ based on the known expectations for $t=100$, and similarly on down to $E(0,0,0)$, which is my expectation, playing optimally, as the first player. If that expectation exceeds $1/2$, it's better to play first. And in fact the expectation for the first player is about $.601766458853$.
+So whichever choice I make there are four cases for the next two turns: I have $1/4$ chance each of ending up in a state $(t+2,m',y')$ such that we've already calculated $E(t+2,m',y')$. This allows us to calculate expectations for my rushing and passing in states where $t=98$ based on the known expectations for $t=100$; $E(98,m,y)$ is then the higher of the two.  And similarly on down to $E(0,0,0)$, which is my expectation, playing optimally, as the first player. If that expectation exceeds $1/2$, it's better to play first. And in fact the expectation for the first player is about $.601766458853$.
 
 The case of your always passing is solved in exactly the same way, and the first player's expected wins per game is about $.558341814467$.
 
 ### Opponent plays optimally
 
-If you play optimally, again at each turn I want to maximize my expected number of wins for this game, as do you. So this time we will calculate $E(t,m,y)$ for both odd and even turns, representing the expected number of wins for the player whose turn it is.
+If you play optimally, again at each turn I want to maximize my expected number of wins for this game, as do you. So this time we will calculate $E(t,m,y)$ for both odd and even turns, that is, my expectation if playing at turn $t$ with $m$ points to your $y$, even if that means I'm the second player.
 
-If in state $(t,m,y)$ I rush, then with probability $1/2$ each, the game will be in state $(t+1,m+1,y)$ or $(t+1,m,y+1)$, so that I will then expect, respectively, $1-E(t+1,y,m+1)$ or $1-E(t+1,y+1,m)$. That relies on the fact that my expectation is always one minus yours---it's a [zero-sum game](https://en.wikipedia.org/wiki/Zero-sum_game). So the expectation of rushing is:
+If in state $(t,m,y)$ I rush, then with probability $1/2$ each, the game will be in state $(t+1,m+1,y)$ or $(t+1,m,y+1)$, so that I will then expect, respectively, $1-E(t+1,y,m+1)$ or $1-E(t+1,y+1,m)$. That relies on the fact that a given player's expectation is always one minus the other's---it's a [zero-sum game](https://en.wikipedia.org/wiki/Zero-sum_game). So the expectation of rushing is:
 
 $$E_{rush}(t,m,y) = 1 - \frac{1}{2}(E(t+1,y,m+1)+E(t+1,y+1,m))$$
 
@@ -65,7 +65,7 @@ for Strategy in ("always rush","always pass","optimal"):
 				E[(N,m,y)] = 1
 			elif y>m:
 				E[(N,m,y)] = 0
-			else:
+			elif m==y:
 				E[(N,m,y)] = .5
 
 	for t in range(N-1,-1,-1):
