@@ -53,7 +53,7 @@ $$E(t,m,y) = \max(E_{rush}(t,m,y),E_{pass}(t,m,y))$$
 
 Now it's once again just a matter of working our way from the known expectations for $t=100$ on down to $t=0$. We find that my expected number of wins per game is about $.489818590457$. In this case it's better to go second.
 
-It turns out that the optimal strategy against an optimal opponent can be summed up as follows. If you're losing, pass. If you're winning, rush. If it's tied, then if the number of completed turns is divisible by $4$, pass; if it's after turn $92$ and you went first or it's the very last turn, it's a wash; otherwise rush.
+It turns out that the optimal strategy against an optimal opponent can be summed up as follows. If you're losing, pass. If you're winning, rush. If it's tied, then if the number of completed turns is divisible by $4$, pass; otherwise, if it's after turn $92$ and you went first or it's the very last turn, it's a wash; otherwise, rush.
 
 ### Code (Python)
 
