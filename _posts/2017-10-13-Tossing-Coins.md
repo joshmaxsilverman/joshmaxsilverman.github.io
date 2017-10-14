@@ -83,10 +83,6 @@ for Strategy in ("always rush","always pass","optimal"):
 					E_rush = 1 - .5*E[(t+1,y,m+1)] - .5*E[(t+1,y+1,m)]
 					E_pass = 1 - .5*E[(t+1,y,m+2)] - .5*E[(t+1,y+2,m)]
 				E[(t,m,y)] = max(E_rush,E_pass)
-				#if (Strategy == "optimal") and (m==y) and (E_rush==E_pass):
-				#	print t,m,y
-				#if (Strategy == "optimal") and (y>m) and (E_rush<E_pass) and (m+y>=t) and (m+y<=2*t) and not t%2:
-				#	print t,m,y
 	print "If opponent's strategy is",Strategy,"first player's expectation is", E[(0,0,0)]
 ```
 
