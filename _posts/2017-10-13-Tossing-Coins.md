@@ -18,7 +18,7 @@ date: 2017/10/13
 
 ## Solution
 
-We will rely on the computer, but not for random, Monte Carlo simulation. Each of the three problems can be solved exactly by specifying a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation), and repeatedly deducing unknown values of a function from known values.
+We will rely on the computer, but not for random, Monte Carlo simulations. Each of the three problems can be solved exactly by specifying a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation), and repeatedly deducing unknown values of a function from known values. While this provides a recipe for an exact calculation, it is much to complicated a procedure for pen and paper, so we will rely on the computer to calculate expectations to high precision.
 
 A _state_ of the game is a pair $(t,m,y)$ where there have been $t$ tosses, I have $m$ and you have $y$ points. All of $t$, $m$, and $i$ are positive integers with $t\leq 100$ and $x+y \leq 200$.  $E(t,m,y)$ is my expected number of wins if it's my turn and the game is now in state $(t,m,y)$, supposing we both play optimally. We start with:
 
@@ -87,7 +87,8 @@ for Strategy in ("always rush","always pass","optimal"):
 				#	print t,m,y
 				#if (Strategy == "optimal") and (y>m) and (E_rush<E_pass) and (m+y>=t) and (m+y<=2*t) and not t%2:
 				#	print t,m,y
-	print "If opponent's strategy is",Strategy,"first player's expectation is", E[(0,0,0)]```
+	print "If opponent's strategy is",Strategy,"first player's expectation is", E[(0,0,0)]
+```
 
 Output:
 
