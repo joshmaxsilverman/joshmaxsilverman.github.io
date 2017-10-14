@@ -20,7 +20,7 @@ date: 2017/10/13
 
 We will rely on the computer, but not for random, Monte Carlo simulations. Each of the three problems can be solved exactly by specifying a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation), and repeatedly deducing unknown values of a function from known values. While this provides a recipe for an exact calculation, it is much too complicated a procedure for pen and paper, so we will rely on the computer to calculate expectations to high precision.
 
-A _state_ of the game is a triple $(t,m,y)$ where there have been $t$ tosses, I have $m$ and you have $y$ points. All of $t$, $m$, and $y$ are non-negative integers with $t\leq 100$ and $t \leq x+y \leq 200$.  $E(t,m,y)$ is my expected number of wins if it's my turn and the game is now in state $(t,m,y)$. We start with:
+A _state_ of the game is a triple $(t,m,y)$ where there have been $t$ tosses, I have $m$ and you have $y$ points. All of $t$, $m$, and $y$ are non-negative integers with $t\leq 100$ and $t \leq m+y \leq 200$.  $E(t,m,y)$ is my expected number of wins if it's my turn and the game is now in state $(t,m,y)$. We start with:
 
 $$E(100,m,y) = 1,\ 0,\ \frac{1}{2}\ \mbox{for}\ m > y,\ y>m,\
 y=m$$
