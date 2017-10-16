@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: Tossing Coins
+title: Optimal Coinball
 date: 2017/10/13
 ---
 
