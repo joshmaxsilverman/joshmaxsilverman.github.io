@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Optimal Coinball
 date: 2017/10/13
 ---
