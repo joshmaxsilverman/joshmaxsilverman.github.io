@@ -46,7 +46,7 @@ $$E(1,98) = 100$$
 
 And because we expect the first non-Counter to visit in $100/99$ visits, we have:
 
-$E(0,0)$ = \frac{100}{99} + E(1,0)$$
+$$E(0,0) = \frac{100}{99} + E(1,0)$$
 
 This turns out to be about a hundred visits quicker, or $73492$ visits.
 
