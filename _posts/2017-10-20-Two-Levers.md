@@ -48,7 +48,7 @@ And because we expect the first non-Counter to visit in $100/99$ visits, we have
 
 $$E(0,0) = \frac{100}{99} + E(1,0)$$
 
-This turns out to be about a hundred visits quicker, or $73492$ visits.
+This turns out to be a quicker $63393$ visits, and so we average 68493 visits.
 
 ### Code (Python)
 
