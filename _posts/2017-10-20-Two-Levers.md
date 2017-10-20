@@ -21,7 +21,7 @@ When the Counter has counted $198$, she knows that either the left lever started
 
 To calculate the expected number of trips, we will assume that the levers' starting positions are not just unknown but up or down with probability $1/2$.
 
-We'll first assume that the warden has flipped the left lever down at the start, so that the game ends when all $99$ prisoners have flipped it down twice and the Counter then arrives.  Now, suppose the left lever is newly flipped down, either by the warden or by one of the prisoners. Let $E(m,n)$ be the expected number of remaining trips, given that $m$ prisoners have flipped the left lever just once and $n$ have flipped it twice. We are looking for $E(0,0)$.  
+We'll first assume that the warden has flipped the left lever down at the start, so that the game ends when all $99$ prisoners have flipped it down twice and the Counter then arrives.  Now, suppose the left lever is newly flipped down, either by the warden or by one of the prisoners. Let $E(m,n)$ be the expected number of remaining visits, given that $m$ prisoners have flipped the left lever just once and $n$ have flipped it twice. We are looking for $E(0,0)$.  
 
 If all prisoners have flipped the left lever twice, then the game ends when the Counter next visits, which, given the $1/100$ probability of her visiting each time, is expected to be $100$ more visits. So we know that:
 
@@ -38,7 +38,7 @@ $$E(m,n) = \frac{100}{99-n}\left(
 \frac{99-m-n}{100}E(m+1,n)\
 \right)$$
 
-This lets us calculate the $E(0,0)$ is about $73,594$.
+This lets us calculate that $E(0,0)$ is about $73,594$.
 
 If the left lever starts in the up position, then the game will end when $98$ prisoners have flipped it down twice, $1$ prisoner only once, and then the Counter arrives. So we replace our initial condition in the recurrence with:
 
