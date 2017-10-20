@@ -64,25 +64,31 @@ for n in range(98,-1,-1):
 		if m < 99-n:
 			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
 		E[(m,n)] = Expect * (100.0/(99-n))
-print "Lever starts down:", E[(0,0)]
+E_down = E[(0,0)]
+print "Lever starts down:", E_down
 #Lever starts up
+E = {}
 E[(1,98)] = 100
 for n in range(98,-1,-1):
 	for m in range(99-n,-1,-1):
+		if (m,n) == (1,98):
+			continue
 		Expect = 101
 		if m > 0:
 			Expect += (m/100.0)*E[(m-1,n+1)]
 		if m < 99-n:
 			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
 		E[(m,n)] = Expect * (100.0/(99-n))
-print "Lever starts up:",100/99.0 + E[(1,0)]
-print "Average: ",(E[(0,0)]+100/99.0 + E[(1,0)])/2
+E_up = 100/99.0 + E[(1,0)]
+print "Lever starts up:",E_up
+print "Average: ",(E_down+E_up)/2
+
 ```
 Output:
 ```
 Lever starts down: 73593.9680964
-Lever starts up: 73492.9579953
-Average:  73543.4630459
+Lever starts up: 63392.9579953
+Average:  68493.4630459
 [Finished in 0.1s]
 ```
 
