@@ -44,6 +44,10 @@ If the left lever starts in the up position, then the game will end when $98$ pr
 
 $$E(1,98) = 100$$
 
-Conveniently, there is no effect on the expectation, so we already have our answer.
+And because we expect the first non-Counter to visit in $100/99$ visits, we have:
+
+$E(0,0)$ = \frac{100}{99} + E(1,0)$$
+
+This turns out to be about a hundred visits quicker, or $73492$ visits.
 
 <br>
