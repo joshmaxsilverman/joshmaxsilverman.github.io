@@ -31,7 +31,7 @@ Suppose there are $m$ prisoners who have visited once and $n$ twice. Then
 we expect the Counter to visit and flip the lever back up in $100$ visits. After the next visit after that there is $m/100$ chance that one of those $m$ visitors will have now visited twice and so we'll expect $E(m-1,n+1)$ more visits. There is $(n+1)/100$ chance one of the $n$ prisoners or the Counter will have visited, so that we'd expect $E(m,n)$ more visits. And there is $(99-m-n)$ chance that a prisoner who hadn't yet flipped the left lever has now done so, so that we'd expect $E(m+1,n)$ more visits. Therefore:
 
 $$E(m,n) = 101 + \frac{m}{100}E(m-1,n+1) +
-\frac{n+1}{100}E(n,m) + \frac{99-m-n}{100}E(m+1,n)$$
+\frac{n+1}{100}E(m,n) + \frac{99-m-n}{100}E(m+1,n)$$
 
 $$E(m,n) = \frac{100}{99-n}\left(
 101 + \frac{m}{100}E(m-1,n+1) +
