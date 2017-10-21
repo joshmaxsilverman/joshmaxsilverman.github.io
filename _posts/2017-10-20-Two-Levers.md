@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Two Levers
 date: 2017/10/20
 ---
@@ -38,7 +38,7 @@ $$E(m,n) = \frac{100}{99-n}\left(
 \frac{99-m-n}{100}E(m+1,n)\
 \right)$$
 
-This lets us calculate that $E(0,0)$ is about $73,594$.
+This lets us calculate that $E(0,0)$ is about $20,628$.
 
 If the left lever starts in the up position, then the game will end when $98$ prisoners have flipped it down twice, $1$ prisoner only once, and then the Counter arrives. So we replace our initial condition in the recurrence with:
 
@@ -48,7 +48,7 @@ And because we expect the first non-Counter to visit in $100/99$ visits, we have
 
 $$E(0,0) = \frac{100}{99} + E(1,0)$$
 
-This turns out to be a quicker $63393$ visits, and so we average 68493 visits.
+This turns out to be a quicker $20,628$ visits, and so we average $20,478$ visits.
 
 ### Code (Python)
 
