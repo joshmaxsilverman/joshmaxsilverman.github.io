@@ -28,13 +28,13 @@ If all prisoners have flipped the left lever twice, then the game ends when the 
 $$E(0,99) = 100$$
 
 Suppose there are $m$ prisoners who have visited once and $n$ twice. Then 
-we expect the Counter to visit and flip the lever back up in $100$ visits. After the next visit after that there is $m/100$ chance that one of those $m$ visitors will have now visited twice and so we'll expect $E(m-1,n+1)$ more visits. There is $(n+1)/100$ chance one of the $n$ prisoners or the Counter will have visited, so that we'd expect $E(m,n)$ more visits. And there is $(99-m-n)$ chance that a prisoner who hadn't yet flipped the left lever has now done so, so that we'd expect $E(m+1,n)$ more visits. Therefore:
+we expect the Counter to visit and flip the lever back up in $100$ visits. After the next visit after that there is $m/100$ chance that one of those $m$ visitors will have now visited twice and so we'll expect $E(m-1,n+1)$ more visits. There is $(n+1)/100$ chance one of the $n$ prisoners or the Counter will have visited, so that we'd expect $E(m,n)-100$ more visits (the minus-$100$ is because we don't need the Counter to arrive first anymore). And there is $(99-m-n)$ chance that a prisoner who hadn't yet flipped the left lever has now done so, so that we'd expect $E(m+1,n)$ more visits. Therefore:
 
 $$E(m,n) = 101 + \frac{m}{100}E(m-1,n+1) +
-\frac{n+1}{100}E(m,n) + \frac{99-m-n}{100}E(m+1,n)$$
+\frac{n+1}{100}\left(E(m,n)-100) + \frac{99-m-n}{100}E(m+1,n)$$
 
 $$E(m,n) = \frac{100}{99-n}\left(
-101 + \frac{m}{100}E(m-1,n+1) +
+100 - n + \frac{m}{100}E(m-1,n+1) +
 \frac{99-m-n}{100}E(m+1,n)\
 \right)$$
 
@@ -58,14 +58,14 @@ E = {}
 E[(0,99)] = 100
 for n in range(98,-1,-1):
 	for m in range(99-n,-1,-1):
-		Expect = 101
+		Expect = 100 - n
 		if m > 0:
 			Expect += (m/100.0)*E[(m-1,n+1)]
 		if m < 99-n:
 			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
 		E[(m,n)] = Expect * (100.0/(99-n))
 E_down = E[(0,0)]
-print "Lever starts down:", E_down
+print("Lever starts down:", E_down)
 #Lever starts up
 E = {}
 E[(1,98)] = 100
@@ -73,23 +73,22 @@ for n in range(98,-1,-1):
 	for m in range(99-n,-1,-1):
 		if (m,n) == (1,98):
 			continue
-		Expect = 101
+		Expect = 100 - n
 		if m > 0:
 			Expect += (m/100.0)*E[(m-1,n+1)]
 		if m < 99-n:
 			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
 		E[(m,n)] = Expect * (100.0/(99-n))
 E_up = 100/99.0 + E[(1,0)]
-print "Lever starts up:",E_up
-print "Average: ",(E_down+E_up)/2
-
+print ("Lever starts up:",E_up)
+print ("Average: ",(E_down+E_up)/2)
 ```
 Output:
 ```
-Lever starts down: 73593.9680964
-Lever starts up: 63392.9579953
-Average:  68493.4630459
-[Finished in 0.1s]
+Lever starts down: 20627.663050459018
+Lever starts up: 20327.663050459025
+Average:  20477.66305045902
+[Finished in 0.3s]
 ```
 
 <br>
