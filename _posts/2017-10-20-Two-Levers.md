@@ -21,30 +21,32 @@ When the Counter has counted $198$, she knows that either the left lever started
 
 To calculate the expected number of visits, we will assume that the levers' starting positions are not just unknown but up or down with probability $1/2$.
 
-We'll first assume that the warden has flipped the left lever down at the start, so that the game ends when $98$ prisoners have flipped it down twice, the remaining prisoner once, and the Counter then arrives.  Now, suppose the left lever is newly flipped down, either by the warden or by one of the prisoners, and that $m$ prisoners have flipped the left lever just once and $n$ have flipped it twice. Let $E(m,n)$ be the expected number of remaining visits. We are looking for $E(0,0)$.  
+We'll first assume that the warden has flipped the left lever down at the start, so that the game ends when $98$ prisoners have flipped it down twice, the remaining prisoner once, and the Counter then arrives.  Now, suppose the left lever is newly flipped down, either by the warden or by one of the prisoners, and that $m$ prisoners have flipped the left lever just once and $n$ have flipped it twice. Let $E_{m,n}$ be the expected number of remaining visits. We are looking for $E_{0,0}$.  
 
 If $98$ prisoners have flipped it down twice and the remaining prisoner once, then the game ends when the Counter next visits, which, given the $1/100$ probability of her visiting each time, is expected to be $100$ more visits. So we know that:
 
-$$E(1,98) = 100$$
+$$E_{1,98} = 100$$
 
-Suppose there are $m$ prisoners who have visited once and $n$ twice. Then we expect the Counter to visit and flip the lever back up in $100$ visits. After the next visit after the Counter's there is $m/100$ chance that one of those $m$ prisoners will have now visited twice and so we'll expect $E(m-1,n+1)$ more visits. There is a $(n+1)/100$ chance one of the $n$ prisoners or the Counter will have visited and done nothting, so that we'd expect $E(m,n)-100$ more visits (the game is in state $(m,n)$ and the Counter has already arrived). And there is $(99-m-n)$ chance that a prisoner who hadn't yet flipped the left lever has now done so, so that we'd expect $E(m+1,n)$ more visits. This lets us formulate the recurrence relation:
+Suppose there are $m$ prisoners who have visited once and $n$ twice. Then we expect the Counter to visit and flip the lever back up in $100$ visits. After the next visit after the Counter's there is $m/100$ chance that one of those $m$ prisoners will have now visited twice and so we'll expect $E_{m-1,n+1}$ more visits. There is a $(n+1)/100$ chance one of the $n$ prisoners or the Counter will have visited and done nothting, so that we'd expect $E_{m,n}-100$ more visits (the game is in state $(m,n)$ and the Counter has already arrived). And there is $(99-m-n)$ chance that a prisoner who hadn't yet flipped the left lever has now done so, so that we'd expect $E_{m+1,n}$ more visits. This lets us formulate the recurrence relation:
 
-$$E(m,n) = 101 + \frac{m}{100}E(m-1,n+1) +
-\frac{n+1}{100}\left(E(m,n)-100\right) + 
-\frac{99-m-n}{100}E(m+1,n)$$
+$$E_{m,n} = 101 + \frac{m}{100}E_{m-1,n+1} +
+\frac{n+1}{100}\left(E_{m,n}-100\right) + 
+\frac{99-m-n}{100}E_{m+1,n}$$
 
-$$E(m,n) = \frac{100}{99-n}\left(
-100 - n + \frac{m}{100}E(m-1,n+1) +
-\frac{99-m-n}{100}E(m+1,n)\
+$$E_{m,n} = \frac{100}{99-n}\left(
+100 - n + \frac{m}{100}E_{m-1,n+1} +
+\frac{99-m-n}{100}E_{m+1,n}\
 \right)$$
 
-And we now calculate (using the code below) that $E(0,0)$ is about $20,528$ visits.
+And we now calculate (using the code below) that $E_{0,0}$ is about $20,528$ visits.
 
 If the left lever starts in the up position, then the game will end when all $99$ prisoners have flipped it down twice and then the Counter arrives. So we replace our initial condition in the recurrence with:
 
-$$E(0,99) = 100$$
+$$E_{0,99} = 100$$
 
-And because we expect the first non-Counter to visit in $100/99$ visits, the overall expectation is not $E(0,0)$ (which is undefined in this situation because there is no flip-down after which the game is in state $(0,0)$), but $100/99 + E(1,0)$.  This turns out to be a quicker $20,428$ visits, and so we average $20,478$ visits.
+And because we expect the first non-Counter to visit in $100/99$ visits, the overall expectation is not $E_{0,0}$ (which is undefined in this situation because there is no flip-down after which the game is in state $(0,0)$), but $100/99 + E_{1,0}$.  This turns out to be a quicker $20,428$ visits, and so we average $20,478$ visits.
+
+(I have no proof that this strategy is optimal.)
 
 ### Code (Python)
 
