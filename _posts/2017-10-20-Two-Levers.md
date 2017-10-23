@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Two Levers
 date: 2017/10/20
 ---
