@@ -99,4 +99,31 @@ Average:  20477.6630505
 [Finished in 0.1s]
 ```
 
+Monte Carlo sanity-check:
+
+```python
+from random import randint
+N = 100
+reps = 100000
+accum = 0
+for rep in range(reps):
+	LeverPosition = 0
+	State = [0]*N
+	Counted = 0
+	Visits = 0
+	while Counted < 2*(N-1):
+		Visits += 1
+		Prisoner = randint(0,N-1)
+		if Prisoner == 0:
+			if LeverPosition == 0:
+				Counted += 1
+				LeverPosition = 1
+		elif State[Prisoner] < 2:
+			if LeverPosition == 1:
+				LeverPosition = 0
+				State[Prisoner] += 1
+	accum += Visits
+print accum/reps
+```
+
 <br>
