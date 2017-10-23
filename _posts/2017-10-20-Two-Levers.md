@@ -92,6 +92,7 @@ for n in range(98,-1,-1):
 E_up = 100/99.0 + E[(1,0)]
 print "Lever starts up:",E_up
 print "Average: ",(E_down+E_up)/2
+```
 Output:
 ```
 Lever starts down: 20427.6630505
