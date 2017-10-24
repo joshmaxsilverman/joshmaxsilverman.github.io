@@ -56,40 +56,35 @@ And because we expect the first non-Counter to visit in $100/99$ visits, the ove
 # have flipped the lever just once and n twice) and the
 # left lever is down.
 
-# Lever starts down, in state (0,0)
-E = {}
-# Games ends at (1,98) plus 100 for Counter to arrive
-E[(1,98)] = 100
-for n in range(98,-1,-1):
-	for m in range(99-n,-1,-1):
-		if (m,n) == (1,98):
-			continue
-		Expect = 100 - n
-		if m > 0:
-			Expect += (m/100.0)*E[(m-1,n+1)]
-		if m < 99-n:
-			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
-		E[(m,n)] = Expect * (100.0/(99-n))
-E_down = E[(0,0)]
-print "Lever starts down:", E_down
+Average = 0
 
-#Lever starts up (the game is never in state (0,0))
-E = {}
-# Game ends at (0,99) plus 100 for Counter to arrive
-E[(0,99)] = 100
-for n in range(98,-1,-1):
-	for m in range(99-n,-1,-1):
-		Expect = 100 - n
-		if m > 0:
-			Expect += (m/100.0)*E[(m-1,n+1)]
-		if m < 99-n:
-			Expect += ((99-m-n)/100.0)*E[(m+1,n)]
-		E[(m,n)] = Expect * (100.0/(99-n))
-# The first flip down is at (1,0), which occurs at 
-# expected visit 100/99
-E_up = 100/99.0 + E[(1,0)]
-print "Lever starts up:",E_up
-print "Average: ",(E_down+E_up)/2
+for StartingPosition in ("down","up"):
+	E = {}
+	if StartingPosition == "down":
+		# Lever starts down, in state (0,0)
+		# Games ends at (1,98) plus 100 for Counter to arrive
+		E[(1,98)] = 100
+	elif StartingPosition == "up":
+		# Game ends at (0,99) plus 100 for Counter to arrive
+		E[(0,99)] = 100
+	for n in range(98,-1,-1):
+		for m in range(99-n,-1,-1):
+			if StartingPosition == "down" and (m,n) == (1,98):
+				continue
+			Expect = 100 - n
+			if m > 0:
+				Expect += (m/100.0)*E[(m-1,n+1)]
+			if m < 99-n:
+				Expect += ((99-m-n)/100.0)*E[(m+1,n)]
+			E[(m,n)] = Expect * (100.0/(99-n))
+	if StartingPosition == "down":
+		Expectation = E[(0,0)]
+	elif StartingPosition == "up":
+		Expectation = 100/99.0 + E[(1,0)]
+	Average += Expectation
+	print "Lever starts",StartingPosition,":", Expectation
+Average /= 2
+print "Average: ",Average
 ```
 Output:
 ```
