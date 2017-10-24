@@ -38,13 +38,13 @@ $$E_{m,n} = \frac{100}{99-n}\left(
 \frac{99-m-n}{100}E_{m+1,n}\
 \right)$$
 
-And we now calculate (using the code below) that $E_{0,0}$ is about $20,528$ visits.
+And we now calculate (using the code below) that $E_{0,0}$ is about $20,428$ visits.
 
 If the left lever starts in the up position, then the game will end when all $99$ prisoners have flipped it down twice and then the Counter arrives. So we replace our initial condition in the recurrence with:
 
 $$E_{0,99} = 100$$
 
-And because we expect the first non-Counter to visit in $100/99$ visits, the overall expectation is not $E_{0,0}$ (which is undefined in this situation because there is no flip-down after which the game is in state $(0,0)$), but $100/99 + E_{1,0}$.  This turns out to be a quicker $20,428$ visits, and so we average $20,478$ visits.
+And because we expect the first non-Counter to visit in $100/99$ visits, the overall expectation is not $E_{0,0}$ (which is undefined in this situation because there is no flip-down after which the game is in state $(0,0)$), but $100/99 + E_{1,0}$.  This turns out to be $20,528$ visits, and so we average $20,478$ visits.
 
 (I have no proof that this strategy is optimal.)
 
