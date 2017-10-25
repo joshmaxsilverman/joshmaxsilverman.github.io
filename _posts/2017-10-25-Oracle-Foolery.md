@@ -15,16 +15,17 @@ date: 2017-10-25
 
 Think of the game like this. The correct order is not determined in advance, but the Oracle delivers messages of how many pieces are misplaced so as to try to extend the game as long as possible. The messages have to be consistent; that is, they must fit at least one possible "correct" order. You succeed the turn after his messages become consistent with just one order.
 
-The tree of possible guesses and messages is not large, so you can calculate the optimal moves for you and for the Oracle in each situation.  It turns out that optimally-played worst-case scenarios are variations on this six-guess scenario:
+The tree of possible guesses and messages is small enough so that you can calculate the optimal moves for you and for the Oracle in each situation.  It turns out that optimally-played worst-case scenarios are five-guess games, such as:
 
 | Guess | Misplaced |
 | ----- | --------- |
-| ABCD  | 3 |
-| CDAB  | 3 |
-| DCBA  | 3 |
-| BADC  | 3 |
-| DBAC  | 3 |
-| DACB  | 0 |
+| ADCB  | 2 |
+| ACDB  | 3 |
+| ACBD  | 2 |
+| ABDC  | 2 |
+| ABCD  | 0 |
+
+Notice that the third and fourth guesses are informational plays only and are guaranteed to be incorrect; each shares two characters with the second guess, which we know has three incorrect characters.
 
 ### Code (Python)
 
@@ -37,22 +38,23 @@ def DifferAtPlaces(L1,L2,n):
 			n -= 1
 	return (n == 0)
 
-def Explore(Remaining):
+def Explore(RemainingPossibilities,PreviousGuesses):
 	# Given a list of still-possible orderings, find a guess that minimizes 
 	# the maximum game length from here. Return that game length and a list
 	# of guesses from here onwards in such a game.
 	BestWorstCaseLength = 24
-	for Guess in Remaining:
+	for Guess in Possibilities:
 		WorstCaseGuessList = []
 		WorstCaseLength = 0
-		for OracleDifference in (2,3,4):
-			NewRemaining = []
-			for L in Remaining:
-				if DifferAtPlaces(Guess,L,OracleDifference):
-					NewRemaining += [L]
-			if NewRemaining == []:
+		for OracleMessage in (2,3,4):
+			NewRemainingPossibilities = [L for L in RemainingPossibilities if DifferAtPlaces(Guess,L,OracleMessage)]
+			if NewRemainingPossibilities == []:
 				continue
-			(Length,GuessList) = Explore(NewRemaining)
+			if NewRemainingPossibilities == RemainingPossibilities:
+				# Guess is silly; it would gift Oracle an extra turn
+				(Length,GuessList) = (25,[])
+			else:
+				(Length,GuessList) = Explore(NewRemainingPossibilities,PreviousGuesses+[Guess])
 			if Length > WorstCaseLength:
 				WorstCaseLength = Length
 				WorstCaseGuessList = GuessList
@@ -60,9 +62,10 @@ def Explore(Remaining):
 			BestGuess = Guess
 			BestWorstCaseLength = WorstCaseLength
 			BestGuessList = WorstCaseGuessList
-	return (BestWorstCaseLength + 1,BestGuessList + [BestGuess])
+	return (BestWorstCaseLength+1,BestGuessList + [BestGuess])
 
-print Explore(list(permutations((1,2,3,4))))
+Possibilities = list(permutations((1,2,3,4)))
+print Explore(Possibilities,[])
 ```
 
 <br>
