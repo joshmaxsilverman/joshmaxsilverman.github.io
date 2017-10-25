@@ -17,7 +17,7 @@ Think of the game like this. The correct order is not determined in advance, but
 
 The tree of possible guesses and messages is not large, so you can calculate the optimal moves for you and for the Oracle in each situation.  It turns out that optimally-played worst-case scenarios are variations on this six-guess scenario:
 
-| Order | Misplaced |
+| Guess | Misplaced |
 | ----- | --------- |
 | ABCD  | 3 |
 | CDBA  | 3 |
