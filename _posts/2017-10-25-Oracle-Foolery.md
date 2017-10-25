@@ -60,7 +60,7 @@ def Explore(Remaining):
 			BestGuess = Guess
 			BestWorstCaseLength = WorstCaseLength
 			BestGuessList = WorstCaseGuessList
-	return (BestWorstCaseLength+1,BestGuessList + [BestGuess])
+	return (BestWorstCaseLength + 1,BestGuessList + [BestGuess])
 
 print Explore(list(permutations((1,2,3,4))))
 ```
