@@ -20,7 +20,7 @@ The tree of possible guesses and messages is not large, so you can calculate the
 | Guess | Misplaced |
 | ----- | --------- |
 | ABCD  | 3 |
-| CDBA  | 3 |
+| CDAB  | 3 |
 | DCBA  | 3 |
 | BADC  | 3 |
 | DBAC  | 3 |
