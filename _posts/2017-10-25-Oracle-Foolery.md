@@ -25,7 +25,7 @@ The tree of possible guesses and messages is small enough so that you can calcul
 | ABDC  | 2 |
 | ABCD  | 0 |
 
-Notice that the third and fourth guesses are informational plays only and are guaranteed to be incorrect; each shares two characters with the second guess, which we know has three incorrect characters.
+Notice that the third and fourth guesses are informational plays only and are guaranteed to be incorrect; each shares two characters with the second guess, which we know has three incorrect characters.  If we limit you to guesses that haven't been ruled out, you can do no better (worst-case) than six guesses.
 
 ### Code (Python)
 
