@@ -46,7 +46,6 @@ for i in (2,3):
 	for j in range(21):
 		H = j*.05
 		P3[(j,i)] = (1-H) + max(0,(H-.05))*(.05*t + (1-H)) + .05*max(t,1-H)
-
 P23 = {}
 for i in range(21):
 	A = i*.05
