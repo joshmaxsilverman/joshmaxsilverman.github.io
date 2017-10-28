@@ -13,7 +13,7 @@ date: 2017-10-27
 
 ## Solution
 
-We'll work backwards, first figuring out player $3$'s prospects given what she has witnessed, including her first spin, then the joint prospects of players $2$ and $3$ given player $1$'s score and player $2$'s first spin, and finally player $1$'s prospects for holding and spinning, given the value of her first spin.
+We'll work backwards, first figuring out player $3$'s probability of winning given what she has witnessed, including her first spin, then the probability of either player $2$ or $3$ winning given player $1$'s score and player $2$'s first spin, and finally player $1$'s probabilities of winning if she holds and if she spins, given the value of her first spin.
 
 Let $H$ be the highest score so far when player $3$ spins (a player has score zero if they bust), let her first spin have value $C$, and let $t$ be $1/3$ if it's currently a tie, and $1/2$ otherwise. Then, if $C>H$, which has probability $1-H$, she holds and wins with probability $1$. If $C<H$, which has probability $\max(0,H-.05)$, she spins and has a $.05$ probability of a tie (and then probability $t$ of winning the tie-break), and probability $1-H$ of an outright win. And if $C=H$, which has probability $.05$, if $H > 1-t$, she holds and has probability $t$ of winning the tie-break, and if $H\leq 1-t$ she spins and has probability $1-H$ of winning outright.
 
