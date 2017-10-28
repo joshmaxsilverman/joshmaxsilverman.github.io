@@ -52,8 +52,11 @@ for i in range(21):
 		B1 = j*.05
 		if B1 < A:
 			P23[(i,j)] = (max(0,A-.05-B1))*P3[(i,2)] + .05*(P3[(i,3)] + .5*(1-P3[(i,3)])) + (1-A) + B1*P3[(i,2)]
-		elif B1 > A:
-			Holds = 1-P3[(j,2)]
+		else:
+			if B1 > A:
+				Holds = 1-P3[(j,2)]
+			elif B1 == A:
+				Holds = .5*(1-P3[(i,3)])
 			Spins = 0
 			for k in range(j+1,21):
 				B2 = k*.05
@@ -66,20 +69,6 @@ for i in range(21):
 					B2 = k*.05
 					P23[(i,j)] += .05*P3[(k,2)]
 				P23[(i,j)] += B1*P3[(i,2)]
-		elif B1 == A:
-			Holds = .5*(1-P3[(i,3)])
-			Spins = 0
-			for k in range(j+1,21):
-				B2 = k*.05
-				Spins += .05*(1-P3[(k,2)])
-			if Holds > Spins:
-				P23[(i,j)] = Holds + P3[(j,2)]
-			else:
-				P23[(i,j)] = Spins
-				for k in range(j+1,21):
-					B2 = k*.05
-					P23[(i,j)] += .05*P3[(k,2)]
-				P23[(i,j)] += B1*P3[(i,2)]	
 print "First Spin, P(Hold), P(Spin):"
 for h in range(1,21):
 	Holds = 0
