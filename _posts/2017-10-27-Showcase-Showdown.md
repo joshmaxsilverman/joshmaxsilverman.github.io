@@ -61,7 +61,6 @@ for i in range(21):
 				Holds = .5*(1-P3[(j,3)])
 			Spins = 0
 			for k in range(j+1,21):
-				B2 = k*.05
 				Spins += .05*(1-P3[(k,2)])
 			if Holds > Spins:
 				P23[(i,j)] = Holds + P3[(j,2)]
