@@ -35,7 +35,7 @@ $$P_{2,3}(A,B_1) = P_{2,3}(A,B_1\ \&\ B_1<A) + P_{2,3}(A,B_1\ \&\ B_1>A) + P_{2,
 
 Player $1$, with first spin value $A_1$, now has a straightforward calculation. If she holds, then there's an even chance that $B_1$ will be any of the possible values, so her chance of winning is the average of the values of $(1-P_{2,3}(A_1,B_1))$. And if she spins, for each of the values of $A_2$ between $A_1+.05$ and $1$ she has a chance of $.05$ of landing on that value and then having the probability of winning that she'd have if her first spin had that value and she held. 
 
-The upshot is that, when her first spin is $.65$ or below, it pays to spin, and when $.70$ or above, it pays to hold. But the first player is already in an unfortunate position, having less than a $31$ percent chance of winning.
+The upshot is that, when her first spin is $.65$ or below, it pays to spin, and when $.70$ or above, it pays to hold. But the first player is already in an unfortunate position, having less than a $31$ percent chance of winning if everyone plays optimally.
 
 ### Code (Python)
 
