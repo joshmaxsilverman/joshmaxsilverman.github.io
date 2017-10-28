@@ -37,6 +37,8 @@ Player $1$, with first spin value $A_1$, now has a straightforward calculation. 
 
 The upshot is that, when her first spin is $.65$ or below, it pays to spin, and when $.70$ or above, it pays to hold. But the first player is already in an unfortunate position, having less than a $31$ percent chance of winning if everyone plays optimally.
 
+[There's enough algebra here that there's a good chance a mistake or two has crept in; thanks for any corrections.]
+
 ### Code (Python)
 
 ```python
