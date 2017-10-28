@@ -15,20 +15,25 @@ date: 2017-10-27
 
 We'll work backwards, first figuring out player $3$'s prospects given what she has witnessed, including her first spin, then the joint prospects of players $2$ and $3$ given player $1$'s score and player $2$'s first spin, and finally player $1$'s prospects given her first spin.
 
-Let $H$ be the highest score so far when player $3$ spins (a player has score zero if they bust), let her first spin have value $C$, and let $t$ be $1/3$ if it's currently a tie, and $1/2$ otherwise. Then, if $C>H$, which has probability $1-H$, she holds and wins with probability $1$. If $C<H$, which has probability $H-.05$, she spins and has a $.05$ probability of a tie (and then probability $t$ of winning the tie-break), and probability $1-H$ of an outright win. And if $C=H$, which has probability $.05$, if $H > 1-t$, she holds and has probability $t$ of winning the tie-break, and if $H\leq 1-t$ she spins and has probability $1-H$ of winning outright.
+Let $H$ be the highest score so far when player $3$ spins (a player has score zero if they bust), let her first spin have value $C$, and let $t$ be $1/3$ if it's currently a tie, and $1/2$ otherwise. Then, if $C>H$, which has probability $1-H$, she holds and wins with probability $1$. If $C<H$, which has probability $\max(0,H-.05)$, she spins and has a $.05$ probability of a tie (and then probability $t$ of winning the tie-break), and probability $1-H$ of an outright win. And if $C=H$, which has probability $.05$, if $H > 1-t$, she holds and has probability $t$ of winning the tie-break, and if $H\leq 1-t$ she spins and has probability $1-H$ of winning outright.
 
 Thus we can express player $3$'s chance of winning as $P_3(H,t)$, where $t$ is $1/3$ if players $1$ and $2$ have the same score, and $.5$ otherwise.
 
+$$P_3(H,t) = (1-H) + (H-.05)(.05t + 1 - H) + \max(t,1-H)$$
 
-Let $A$ be player 1's score, and let the value of player $2$'s first spin be $B_1$.  We will calculate the probability $P_{2,3}(A,B_1)$ that one of players $2$ and $3$ will win.
+Let $A$ be player 1's score, and let $B_1$ be the value of player $2$'s first spin.  We will calculate the probability $P_{2,3}(A,B_1)$, that one of players $2$ and $3$ will go on to win.
 
-First, suppose $B_1<A$. Then player $2$ must spin; call his new total $B_2$. If $B_2<A$, which happens with probability $A-.05-B1$, then player $3$ has a $P_3(A,.5)$ chance of winning. If $B_2=A$, and there's a $.05$ chance of that, then there's a $P_3(A,1/3)$ that player $3$ wins, and a $.5 \times (1-P_3(A,1/3))$ chance that player $2$ wins in a tie-break. If $1\geq B_2>A$, and there's a $.05$ chance of that for each of the $(1-A)/.05$ possible values of $B_2$ from $A+.05$ to $1$, then there is a certainty of one of players $2$ and $3$ winning. And if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. Thus:
+First, suppose $B_1<A$. Then player $2$ must spin; call his new total $B_2$. If $B_2<A$, which happens with probability $\max(0,A-.05-B1)$ , then player $3$ has a $P_3(A,.5)$ chance of winning. If $B_2=A$, and there's a $.05$ chance of that, then there's a $P_3(A,1/3)$ that player $3$ wins, and a $.5 \times (1-P_3(A,1/3))$ chance that player $2$ wins in a tie-break. If $1\geq B_2>A$, and there's a $.05$ chance of that for each of the $(1-A)/.05$ possible values of $B_2$ from $A+.05$ to $1$, then there is a certainty of one of players $2$ and $3$ winning. And if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. This lets us calculate $P_{2,3}(A,B_1|B_1<A)$.
 
-Second, suppose $B_1>A$. If player 2 holds, he'll have $1-P_3(B_1,.5)$ chance of winning, and player $3$ will have $P_3(B_1,.5)$. If he spins, calling his new total $B_2$, then there's a $.05$ chance of each value of $B_2$ between $B_1+.05$ and $1$, and for each of those he has a $1-P_3(B_2,.5)$ chance of winning, and player $3$ has a $P_3(B_2,.5)$ chance; and if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. So $P_{2,3}(A,B_1)$ when $B_1>A$ is the hold or spin total that includes the greatest probability of player $2$ winning.
+Second, suppose $B_1>A$. If player 2 holds, he'll have $1-P_3(B_1,.5)$ chance of winning, and player $3$ will have $P_3(B_1,.5)$. If he spins, calling his new total $B_2$, then there's a $.05$ chance of each value of $B_2$ between $B_1+.05$ and $1$, and for each of those he has a $1-P_3(B_2,.5)$ chance of winning, and player $3$ has a $P_3(B_2,.5)$ chance; and if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. So $P_{2,3}(A,B_1)$ when $B_1>A$ is the hold or spin total that includes the greatest probability of player $2$ winning. This lets us calculate $P_{2,3}(A,B_1|B_1>A)$.
 
-Finally, suppose $B_1=A$. Then if player $2$ holds, player $3$ has chance $P_3(A,1/3)$ of winning and player $2$ has chance $(1/2)(1-P_3(A,1/3))$ of winning. And if he spins, calling the new total $B_2$, for each value of $B_2$ between $A+.05$ and $1$, he has chance $.05\times (1-P_3(B_2,.5))$ of winning; and if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. Again $P_{2,3}(A,B_1)$ is calculated based on whether holding or spinning is best for player $2$.
+Finally, suppose $B_1=A$. Then if player $2$ holds, player $3$ has chance $P_3(A,1/3)$ of winning and player $2$ has chance $(1/2)(1-P_3(A,1/3))$ of winning. And if he spins, calling the new total $B_2$, for each value of $B_2$ between $A+.05$ and $1$, he has chance $.05\times (1-P_3(B_2,.5))$ of winning; and if $B_2>1$, and there's a $B_1$ chance of that, then player 3 has a $P_3(A,.5)$ chance of winning. Again $P_{2,3}(A,B_1)$ is calculated based on whether holding or spinning is best for player $2$. This lets us calculate $P_{2,3}(A,B_1|B_1=A)$.
 
-Player $1$, with first spin value $A_1$, now has a straightforward calculation. If she holds, then there's an even chance that $B_1$ will be any of the possible values, so her chance of winning is the average of the values of $(1-P_{2,3}(A_1,B_1))$. And if she spins, for each of the values of $A_2$ between $A_1+.05$ and $1$ she has a chance of $.05$ of landing on that value and then having the probability of winning that she'd have if her first spin had that value and she held.
+Because the three cases partition the possibilities,
+
+$$P_{2,3}(A,B_1) = P_{2,3}(A,B_1|B_1<A) + P_{2,3}(A,B_1|B_1>A) + P_{2,3}(A,B_1|B_1=A)$$
+
+Player $1$, with first spin value $A_1$, now has a straightforward calculation. If she holds, then there's an even chance that $B_1$ will be any of the possible values, so her chance of winning is the average of the values of $(1-P_{2,3}(A_1,B_1))$. And if she spins, for each of the values of $A_2$ between $A_1+.05$ and $1$ she has a chance of $.05$ of landing on that value and then having the probability of winning that she'd have if her first spin had that value and she held. 
 
 ### Code (Python)
 
@@ -36,17 +41,17 @@ Player $1$, with first spin value $A_1$, now has a straightforward calculation. 
 P3 = {}
 for i in (2,3):
 	t = 1.0/i
-	for j in range(1,21):
+	for j in range(21):
 		H = j*.05
-		P3[(j,i)] = (1-H) + (H-.05)*(.05*t + (1-H)) + .05*max(t,1-H)
+		P3[(j,i)] = (1-H) + max(0,(H-.05))*(.05*t + (1-H)) + .05*max(t,1-H)
 
 P23 = {}
-for i in range(1,21):
+for i in range(21):
 	A = i*.05
 	for j in range(1,21):
 		B1 = j*.05
 		if B1 < A:
-			P23[(i,j)] = (A-.05-B1)*P3[(i,2)] + .05*(P3[(i,3)] + .5*(1-P3[(i,3)])) + (1-A) + B1*P3[(i,2)]
+			P23[(i,j)] = (max(0,A-.05-B1))*P3[(i,2)] + .05*(P3[(i,3)] + .5*(1-P3[(i,3)])) + (1-A) + B1*P3[(i,2)]
 		elif B1 > A:
 			Holds = 1-P3[(j,2)]
 			Spins = 0
@@ -85,7 +90,6 @@ for h in range(1,21):
 		for j in range(1,21):
 			Spins += .05*.05*(1-P23[(i,j)])
 	print h*.05, Holds, Spins
-
 ```
 
 Output:
