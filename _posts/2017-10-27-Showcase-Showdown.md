@@ -5,7 +5,7 @@ title: Showcase Showdown
 date: 2017-10-27
 ---
 
->On the brilliant and ageless game show “The Price Is Right,” there is an important segment called the Showcase Showdown. Three players step up, one at a time, to spin an enormous, sparkling wheel. The wheel has 20 segments at which it can stop, labeled from 5¢ up to \$1, in increments of 5¢. Each player can spin the wheel either one or two times. The goal is for the sum of one’s spins to get closer to \$1 than the other players, without going over. (Any sum over \$1 loses. Ties are broken by a single spin of the wheel, where the highest number triumphs.)
+>On the brilliant and ageless game show “The Price Is Right,” there is an important segment called the Showcase Showdown. Three players step up, one at a time, to spin an enormous, sparkling wheel. The wheel has 20 segments at which it can stop, labeled from five cents up to one dollar, in increments of five cents. Each player can spin the wheel either one or two times. The goal is for the sum of one’s spins to get closer to one dollar than the other players, without going over. (Any sum over a dollar loses. Ties are broken by a single spin of the wheel, where the highest number triumphs.)
 >
 >For what amounts should the first spinner stop after just one spin, assuming the other two players will play optimally?
 
