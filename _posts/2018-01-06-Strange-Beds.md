@@ -42,10 +42,9 @@ Let's again start with the pretty version of the problem. When knight $k$ arrive
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, in what fraction of cases in which there are any mismatches at all is knight $k$ mismatched? The overall fraction of cases in which there is at least one mismatch is $\frac{n-1}{n}$, and since the cases in which knight $k$ is mismatched is a subset of the cases in which there is at least one mismatch, the answer is:
+Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, in what fraction of cases in which there are any mismatches at all is knight $k$ mismatched? Using exactly similar reasoning as in part $1$, we determine that:
 
-$$P^{as-posed}_k = \frac{\frac{1}{n-k+2}}{\frac{n-1}{n}}
-= \frac{n}{(n-1)(n-k+2)}$$
+$$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
 Now that we know, in both the simple and as-posed versions of the puzzle, how likely each knight is to be mismatched, we can compute the expected number of mismatched knights by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first knight is mismatched.
 
