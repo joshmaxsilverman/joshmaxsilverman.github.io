@@ -34,9 +34,9 @@ For $7$ knights and beds, that's $5/12$.
 
 #### 2.
 
-Label the $n$ knights and beds $1$ through $n$. Call $E_n$ the expected number of mismatched knights, meaning ones who do not sleep in their own beds. 
+Label the $n$ knights and beds $1$ through $n$. We want to find the expected number of mismatched knights, meaning ones who do not sleep in their own beds. 
 
-Let's again start with the pretty version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of the remaining $\frac{1}{n-k+2}$ beds (namely beds $1,k,\ldots,n$) to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is:
+Let's again start with the pretty version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds, namely beds $1,k,k+1,\ldots,n$, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is:
 
 $$P^{simple}_k = \frac{1}{n-k+2}$$
 
@@ -53,7 +53,7 @@ $$E^{pretty}_n = \frac{n-1}{n}+\sum_{k=2}^n \frac{1}{n-k+2}
 = \sum_{i=1}^{n-1} \frac{1}{i} = H_{n-1}
 $$
 
-Here $H_n$ is the $n$th [harmonic number](http://mathworld.wolfram.com/HarmonicSeries.html) (which is defined as the sum it replaces here). This tells us that the expectation is unbounded for large $n$.
+Here $H_n$ is the $n$th [harmonic number](http://mathworld.wolfram.com/HarmonicSeries.html) (which is defined as the sum it replaces here). The harmonic numbers are unbounded, so there is no limit to the expected mismatches for large $n$.
 
 Things are again a little less elegant in the problem as-posed:
 
@@ -62,7 +62,9 @@ $$E^{as-posed}_n = 1 + \sum_{k=2}^n \frac{n}{(n-1)(n-k+2)}
 $$
 
 $$ = 1 + \frac{n}{n-1}\sum_{i=2}^n\frac{1}{i}
-=1 + \frac{n}{n-1}\cdot (H_n-1)$$
+=1 + \frac{n}{n-1}\cdot (H_n-1)
+= \frac{nH_n}{n-1}
+$$
 
 (We can again think of this as the expectation of mismatches in the subclass of cases in the pretty version where there are any mismatches at all.)
 
