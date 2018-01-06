@@ -42,7 +42,7 @@ Let's again start with the pretty version of the problem. When knight $k$ arrive
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, in what fraction of cases in which there are any mismatches at all is knight $k$ mismatched? Using exactly similar reasoning as in part $1$, we determine that:
+Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that knight $k$ is mismatched _given_ that at least one knight is mismatched? Using exactly similar reasoning as in part $1$, we determine that:
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
