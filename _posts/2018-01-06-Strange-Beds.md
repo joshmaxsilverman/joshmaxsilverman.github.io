@@ -106,7 +106,7 @@ These approaches agree with one another and with this Monte Carlo simulation:
 ```python
 from random import randint
 Reps = 1000000
-for N in range(3,8):
+for N in range(3,101):
 	Accum = 0
 	for _ in range(Reps):
 		State = list(range(N))
