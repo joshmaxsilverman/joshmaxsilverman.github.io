@@ -45,10 +45,10 @@ Now let's return to the start. Knight $1$ has, for $2\leq m \leq n$, a $1/(n-1)$
 $$ E_n = 1 + \frac{1}{n-1} \sum_{j=1}^{n-1} F_j
 $$
 
-Here are some values for small $n$:
+Here are some values for small $n$ (the exact value for seven knights, by the way, is $343/120$):
 
- n | Expected Mismatches 
- --- |:---
+n | Expected Mismatches 
+--- |:---
 2 | 2.0
 3 | 2.25
 4 | 2.44444444444
