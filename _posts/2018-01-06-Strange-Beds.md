@@ -81,7 +81,7 @@ There is an element in the expansion of this product for each way of deciding, f
 
 So we know:
 
-$$P_k = \frac{1}{n-1} \prod_{j=2}^{k-1}f(j)+1 = \frac{1}{n-1} \prod_{j=2}^{k-1} \frac{n+2-j}{n+1-j}
+$$P_k = \frac{1}{n-1} \prod_{j=2}^{k-1}(f(j)+1) = \frac{1}{n-1} \prod_{j=2}^{k-1} \frac{n+2-j}{n+1-j}
 $$
 
 If you write out the first few terms, you'll see that the product cancels nicely, leaving us with the initial numerator and final denominator:
