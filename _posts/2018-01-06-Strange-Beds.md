@@ -16,6 +16,8 @@ published: true
 
 ### Solution
 
+<br>
+
 #### 1.
 
 Let's work with $n$ knights and beds.
@@ -26,7 +28,7 @@ The stipulation that the young knight chooses among the _other_ beds introduces 
 
 In the as-posed version, though, the symmetry is not perfect. There is probability $1/(n-1)$ that the youngest chooses the oldest's bed, in which case there is no chance that the latter will sleep in his own bed. The other $(n-2)/(n-1)$ of the time, because the bed-selection rules for all but the youngest and oldest knights are symmetrical as between those two beds, the chance that the oldest knight sleeps in his own bed is $1/2$. And so the overall probability is:
 
-$$\frac{n-2}{2(n-1)}
+$$\frac{n-2}{2(n-1)}$$
 
 For $7$ knights and beds, that's $5/12$.
 
