@@ -53,7 +53,8 @@ Now that we know, in both the simple and as-posed versions of the puzzle, how li
 
 Again we start with the pretty version:
 
-$$E^{pretty}_n = \frac{n-1}{n}+\sum_{k=2}^n \frac{1}{n-k+2} 
+$$E^{pretty}_n = \sum_{k=1}^n P^{pretty}_k
+= \frac{n-1}{n}+\sum_{k=2}^n \frac{1}{n-k+2} 
 = \sum_{i=1}^{n-1} \frac{1}{i} = H_{n-1}
 $$
 
