@@ -55,7 +55,7 @@ $$
 
 Here $H_n$ is the $n$th [harmonic number](http://mathworld.wolfram.com/HarmonicSeries.html) (which is defined as the sum it replaces here). The harmonic numbers are unbounded, so there is no limit to the expected mismatches for large $n$.
 
-To get the expectation for the problem as-posed, we can again redirect the question to the pretty version and ask, in that version, among the cases in which there are any mismatches, what is the expectated number of mismatches? The total expectation in the pretty version is the sum of two values. The first is the probability that there are no mismatches times the expectation in that case; this value is of course $0$. The second is the probability that there is at least one mismatch (i.e., $\frac{n-1}{n}) times the expectation in that case (and it is _this_ expectation that we are looking for). So:
+To get the expectation for the problem as-posed, we can again redirect the question to the pretty version and ask, in that version, among the cases in which there are any mismatches, what is the expected number of mismatches? The total expectation in the pretty version is the sum of two values. The first is the probability that there are no mismatches times the expectation in that case; this value is of course $0$. The second is the probability that there is at least one mismatch (i.e., $\frac{n-1}{n}) times the expectation in that case (and it is _this_ expectation that we are looking for). So:
 
 $$E^{pretty}_n = \frac{n-1}{n}E^{as-posed}_n$$
 
