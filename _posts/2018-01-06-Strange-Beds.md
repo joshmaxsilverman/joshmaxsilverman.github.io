@@ -79,7 +79,7 @@ n | Expected Mismatches
 9 | 3.05758928571
 10 | 3.14329805996
 
-The values are confirmed by this Monte Carlo simulation, which produced the plot below:
+The values are confirmed by this Monte Carlo simulation (in Python), which produced the plot below:
 
 ```python
 from random import randint
