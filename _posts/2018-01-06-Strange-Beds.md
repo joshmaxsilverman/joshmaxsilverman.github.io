@@ -55,18 +55,11 @@ $$
 
 Here $H_n$ is the $n$th [harmonic number](http://mathworld.wolfram.com/HarmonicSeries.html) (which is defined as the sum it replaces here). The harmonic numbers are unbounded, so there is no limit to the expected mismatches for large $n$.
 
-Things are again a little less elegant in the problem as-posed:
+To get the expectation for the problem as-posed, we can again redirect the question to the pretty version and ask, in that version, among the cases in which there are any mismatches, what is the expectated number of mismatches? The total expectation in the pretty version is the sum of two values. The first is the probability that there are no mismatches times the expectation in that case; this value is of course $0$. The second is the probability that there is at least one mismatch (i.e., $\frac{n-1}{n}) times the expectation in that case (and it is _this_ expectation that we are looking for). So:
 
-$$E^{as-posed}_n = 1 + \sum_{k=2}^n \frac{n}{(n-1)(n-k+2)} 
-= 1+\frac{n}{n-1}\sum_{k=2}^n \frac{1}{n-k+2}
-$$
+$$E^{pretty}_n = \frac{n-1}{n}E^{as-posed}_n$$
 
-$$ = 1 + \frac{n}{n-1}\sum_{i=2}^n\frac{1}{i}
-=1 + \frac{n}{n-1}\cdot (H_n-1)
-= H_{n-1}\frac{n}{n-1}
-$$
-
-(We can again think of this as the expectation of mismatches in the subclass of cases in the pretty version where there are any mismatches at all.)
+$$E^{as-posed}_n = H_{n-1}\frac{n}{n-1}$$
 
 Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, and $49/20$ in the pretty version):
 
