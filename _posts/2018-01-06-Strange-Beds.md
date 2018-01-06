@@ -59,7 +59,7 @@ To get the expectation for the problem as-posed, we can again redirect the quest
 
 $$E^{pretty}_n = \frac{n-1}{n}E^{as-posed}_n$$
 
-$$E^{as-posed}_n = H_{n-1}\frac{n}{n-1}$$
+$$E^{as-posed}_n = \frac{n}{n-1}H_{n-1}$$
 
 Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, and $49/20$ in the pretty version):
 
