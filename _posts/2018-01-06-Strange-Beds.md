@@ -22,7 +22,7 @@ Let's work with $n$ knights and beds.
 
 The final open bed is that of either the youngest or the oldest knight, because every other knight will have taken their own bed if it was available.
 
-The stipulation that the young knight chooses among the _other_ beds introduces a complication that kind of messes up what is otherwise a very pretty problem. Call the "simple version" of the problem the one in which he can also end up in his own bed. In that version the oldest knight has probability $1/2$ of sleeping in his own bed, because whichever of the two possible final open beds is in fact open was the consequence of a random choice that did not privilege either over the other.
+The stipulation that the young knight chooses among the _other_ beds introduces a complication that kind of messes up what is otherwise a very pretty problem. Call the "pretty version" of the problem the one in which he can also end up in his own bed. In that version the oldest knight has probability $1/2$ of sleeping in his own bed, because whichever of the two possible final open beds is in fact open was the consequence of a random choice that did not privilege either over the other.
 
 In the as-posed version, though, the symmetry is not perfect. There is probability $1/(n-1)$ that the youngest chooses the oldest's bed, in which case there is no chance that the latter will sleep in his own bed. The other $(n-2)/(n-1)$ of the time, because the bed-selection rules for all but the youngest and oldest knights are symmetrical as between those two beds, the chance that the oldest knight sleeps in his own bed is $1/2$. And so the overall probability is:
 
@@ -34,20 +34,20 @@ For $7$ knights and beds, that's $5/12$.
 
 Label the $n$ knights and beds $1$ through $n$. Call $E_n$ the expected number of mismatched knights, meaning ones who do not sleep in their own beds. 
 
-Let's again start with the simple version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of the remaining $\frac{1}{n-k+2}$ beds (namely beds $1,k,\ldots,n$) to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is:
+Let's again start with the pretty version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of the remaining $\frac{1}{n-k+2}$ beds (namely beds $1,k,\ldots,n$) to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is:
 
 $$P^{simple}_k = \frac{1}{n-k+2}$$
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the simple version, in what fraction of cases in which there are any mismatches at all is knight $k$ mismatched? The overall fraction of cases in which there is at least one mismatch is $\frac{n-1}{n}$, and since the cases in which knight $k$ is mismatched is a subset of the cases in which there is at least one mismatch, the answer is:
+Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, in what fraction of cases in which there are any mismatches at all is knight $k$ mismatched? The overall fraction of cases in which there is at least one mismatch is $\frac{n-1}{n}$, and since the cases in which knight $k$ is mismatched is a subset of the cases in which there is at least one mismatch, the answer is:
 
 $$P^{as-posed}_k = \frac{\frac{1}{n-k+2}}{\frac{n-1}{n}}
 = \frac{n}{(n-1)(n-k+2)}$$
 
 Now that we know, in both the simple and as-posed versions of the puzzle, how likely each knight is to be mismatched, we can compute the expected number of mismatched knights by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first knight is mismatched.
 
-Again we start with the simple version:
+Again we start with the pretty version:
 
-$$E^{simple}_n = \frac{n-1}{n}+\sum_{k=2}^n \frac{1}{n-k+2} 
+$$E^{pretty}_n = \frac{n-1}{n}+\sum_{k=2}^n \frac{1}{n-k+2} 
 = \sum_{i=1}^{n-1} \frac{1}{i} = H_{n-1}
 $$
 
@@ -62,9 +62,9 @@ $$
 $$ = 1 + \frac{n}{n-1}\sum_{i=2}^n\frac{1}{i}
 =1 + \frac{n}{n-1}\cdot (H_n-1)$$
 
-(We can again think of this as the expectation of mismatches in the subclass of cases in the simple version where there are any mismatches at all.)
+(We can again think of this as the expectation of mismatches in the subclass of cases in the pretty version where there are any mismatches at all.)
 
-Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, and $49/20$ in the simple version):
+Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, and $49/20$ in the pretty version):
 
 n | Expected Mismatches 
 --- |:---
