@@ -63,7 +63,7 @@ $$
 
 $$ = 1 + \frac{n}{n-1}\sum_{i=2}^n\frac{1}{i}
 =1 + \frac{n}{n-1}\cdot (H_n-1)
-= \frac{nH_n-1}{n-1}
+= H_{n-1}\frac{n}{n-1}
 $$
 
 (We can again think of this as the expectation of mismatches in the subclass of cases in the pretty version where there are any mismatches at all.)
