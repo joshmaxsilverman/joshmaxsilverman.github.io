@@ -86,7 +86,7 @@ $$
 
 If you write out the first few terms, you'll see that the product cancels nicely, leaving us with the initial numerator and final denominator:
 
-$$ = \frac{1}{n-1}\cdot \frac{n+2-2}{n+1-(k-1)} = 
+$$ P_k = \frac{1}{n-1}\cdot \frac{n+2-2}{n+1-(k-1)} = 
 \frac{n}{(n-1)(n-k+2)}$$
 
 Now that we know how likely each knight is to be mismatched, we can compute the expected number of mismatched knights by simply adding those probabilities for $k$ from $2$ to $n$ and adding $1$ for the first, always mismatched knight:
