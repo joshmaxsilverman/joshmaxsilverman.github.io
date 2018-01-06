@@ -84,7 +84,7 @@ So we know:
 $$P_k = \frac{1}{n-1} \prod_{j=2}^{k-1}f(j)+1 = \frac{1}{n-1} \prod_{j=2}^{k-1} \frac{n+2-j}{n+1-j}
 $$
 
-And this product cancels nicely:
+If you write out the first few terms, you'll see that the product cancels nicely, leaving us with the initial numerator and final denominator:
 
 $$ = \frac{1}{n-1}\cdot \frac{n+2-2}{n+1-(k-1)} = 
 \frac{n}{(n-1)(n-k+2)}$$
