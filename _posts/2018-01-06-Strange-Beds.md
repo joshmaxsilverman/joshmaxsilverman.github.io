@@ -16,8 +16,6 @@ published: true
 
 ### Solution
 
-<br>
-
 #### 1.
 
 Let's work with $n$ knights and beds.
