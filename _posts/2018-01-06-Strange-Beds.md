@@ -22,7 +22,7 @@ Let's work with $n$ knights and beds.
 
 The final open bed is that of either the youngest or the oldest knight, because every other knight will have taken their own bed if it was available. There is probability $1/(n-1)$ that the youngest chooses the oldest's bed, in which case there is no chance the latter will sleep in his own bed. The other $(n-2)/(n-1)$ of the time, because the bed-selection rules for all but the youngest and oldest knights are symmetrical as between those two beds, the chance that the oldest knight sleeps in his own bed is $1/2$. And so the overall probability is:
 
-$$\frac{n-2}{2(n-1)}
+$$\frac{n-2}{2(n-1)}$$
 
 For $7$ knights and beds, that's $5/12$.
 
@@ -32,7 +32,7 @@ Label the $n$ knights and beds $1$ through $n$. Call $E_n$ the expected number o
 
 When a knight $k$ arrives to find his bed taken, the open beds are exactly bed $1$ and all beds greater than $k$. (If you don't find that obvious, it's easy to prove inductively.)
 
-Suppose knight $k$ arrives to find his bed already taken. Then he is in NEARLY the position of knight $1$ in a scenario with fewer ($n-k+1$, or for short, $m$) beds: he will randomly choose one of the $m$ open beds, but if he chooses bed $1$, he will be mismatched. Let's calculate the expected number $F_m$ of mismatches in such a situation.  Obviously $F_1$ is $1$. And in general $F_m$ is a function of $F_j$ for $j<m$. There is a $1/m$ chance that knight $k$ chooses bed $1$, for one mismatch, a $1/m$ chance he chooses the numerically second bed for an expectation of $1+F_{m-1}$ mismatches, a $1/m$ chance he chooses the third for an expectation of $1 + F_{m-2}$ mismatches, \ldots, a $1/m$ chance he chooses the $m$th for an expected $F_1$ mismatches. So we have the recurrence:
+Suppose knight $k$ arrives to find his bed already taken. Then he is in _nearly_ the position of knight $1$ in a scenario with fewer ($n-k+1$, or for short, $m$) beds: he will randomly choose one of the $m$ open beds, but if he chooses bed $1$, he will be mismatched. Let's calculate the expected number $F_m$ of mismatches in such a situation.  Obviously $F_1$ is $1$. And in general $F_m$ is a function of $F_j$ for $j<m$. There is a $1/m$ chance that knight $k$ chooses bed $1$, for one mismatch, a $1/m$ chance he chooses the numerically second bed for an expectation of $1+F_{m-1}$ mismatches, a $1/m$ chance he chooses the third for an expectation of $1 + F_{m-2}$ mismatches, $\ldots$, and a $1/m$ chance he chooses the $m$th for an expected $F_1$ mismatches. So we have the recurrence:
 
 $$F_1 = 1$$
 
@@ -47,21 +47,21 @@ $$
 
 Here are some values for small $n$:
 
-```
-2 , 2.0
-3 , 2.25
-4 , 2.44444444444
-5 , 2.60416666667
-6 , 2.74
-7 , 2.85833333333
-8 , 2.96326530612
-9 , 3.05758928571
-10 , 3.14329805996
-```
+ n | Expected Mismatches 
+ --- |:---
+2 | 2.0
+3 | 2.25
+4 | 2.44444444444
+5 | 2.60416666667
+6 | 2.74
+7 | 2.85833333333
+8 | 2.96326530612
+9 | 3.05758928571
+10 | 3.14329805996
 
 ### Another approach
 
-Let's ask how likely it is for a given knight, say knight $k$, to find his bed occupied. Each possible way for that to happen corresponds to an increasing sequence of numbers between $2$ and $k-1$, which number the earlier mismatches. Let one such sequence, $\sigma$, be $k_1,k_2,...k_i$. The chance for that sequence to arise and to be followed by a mismatch for $k$ is found by multiplying the chances of each step. Knight $k_1$ has $1/(n-1)$ chance of being the first mismatch. Then, knight $k_2$ has $1/(n-k_1+1)$ chance of being the second, \ldots, and finally $k$ has $1/(n-k_i+1)$ chance of being the $i+1$st mismatch. So where $f(x)$ is $1/(n-x+1)$:
+Let's ask how likely it is for a given knight, say knight $k$, to find his bed occupied. Each possible way for that to happen corresponds to an increasing sequence of numbers between $2$ and $k-1$, which number the earlier mismatches. Let one such sequence, $\sigma$, be $k_1,k_2,...k_i$. The chance for that sequence to arise and to be followed by a mismatch for $k$ is found by multiplying the chances of each step. Knight $k_1$ has $1/(n-1)$ chance of being the first mismatch. Then, knight $k_2$ has $1/(n-k_1+1)$ chance of being the second, $\ldots$, and finally $k$ has $1/(n-k_i+1)$ chance of being the $i+1$st mismatch. So where $f(x)$ is $1/(n-x+1)$:
 
 $$ P(\sigma) = \frac{1}{n-1}\prod_{j \in \sigma}f(j) $$
 
