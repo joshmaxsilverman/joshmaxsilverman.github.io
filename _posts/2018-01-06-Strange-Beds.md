@@ -45,11 +45,11 @@ $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
 So the probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And of course the probability for dude $1$ is $\frac{n-1}{n}$.
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using exactly similar reasoning as in part $1$, we determine that:
+Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using reasoning identical to what we used in part $1$, we determine that:
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
-Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first dude is mismatched. This works because the probability of a mismatch in bed $k$ is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
+Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first dude is mismatched. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
 
 Again we start with the pretty version:
 
