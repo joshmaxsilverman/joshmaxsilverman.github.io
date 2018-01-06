@@ -39,7 +39,7 @@ For $7$ dudes and beds, that's $5/12$.
 
 Label the $n$ dudes and beds $1$ through $n$.
 
-Let's again start with the pretty version of the problem. When dude $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds, namely beds $1,k,k+1,\ldots,n$, and it is occupied by a dude who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that dude $k$ ends up mismatched, is (for $k\geq2$):
+Let's again start with the pretty version of the problem. When dude $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds (namely beds $1,k,k+1,\ldots,n$) and it is occupied by a dude who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that dude $k$ ends up mismatched, is (for $k\geq2$):
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
@@ -49,7 +49,7 @@ Asking for that same probability in the as-posed version of the puzzle is equiva
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
-Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first dude is mismatched.
+Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first dude is mismatched. This works because the probability of a mismatch in bed $k$ is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
 
 Again we start with the pretty version:
 
