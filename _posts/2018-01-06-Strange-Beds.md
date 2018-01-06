@@ -28,7 +28,7 @@ $$P^{pretty}_n = \frac{1}{2}$$
 
 Asking for this probability in the problem as actually posed is equivalent to asking, in the pretty version, what the probability is that the oldest knight matches _given_ that there is at least one mismatch. We find this as follows (where $M$ means that there is at least one mismatch, $O$ means that the oldest knight sleeps in his own bed, and $P(A\|B)$ is the conditional probability of $A$ given $B$):
 
-$$P^{pretty}_n = P(M)P(O\|M) + P(\not M)P(O \| \not M) = \frac{n-1}{n}P^{as-posed}_n + \frac{1}{n}\cdot 1$$
+$$P^{pretty}_n = P(M)P(O\|M) + P(\neg M)P(O \| \neg M) = \frac{n-1}{n}P^{as-posed}_n + \frac{1}{n}\cdot 1$$
 
 $$P^{as-posed}_n = \frac{n-2}{n-1}\cdot\frac{1}{2}$$ 
 
