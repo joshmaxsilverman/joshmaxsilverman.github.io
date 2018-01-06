@@ -65,7 +65,7 @@ Let's ask how likely it is for a given knight, say knight $k$, to find his bed o
 
 $$ P(\sigma) = \frac{1}{n-1}\prod_{j \in \sigma}f(j) $$
 
-Using $f[\sigma]$ to mean the image of $f$ over $\sigma$ -- that is, the set of its values at arguments that are members of the sequence -- since $f$ is a bijective (one-to-one) function, we can write this as:
+Using $f[\sigma]$ to mean the image of $f$ over $\sigma$ --- that is, the set of its values at arguments that are members of the sequence --- since $f$ is a bijective (one-to-one) function, we can write this as:
 
 $$ P(\sigma) = \frac{1}{n-1}\prod_{i \in f[\sigma]} i $$
 
@@ -75,9 +75,9 @@ $$P_k =  \frac{1}{n-1}\sum_{S \subseteq f[S_{2,k-1}]}\prod_{j \in S}i$$
 
 In general, the sum of the products of every subset of a set is the same as the single product of the successors of every element in the set (each element increased by one). To see why, consider the set $\{2,3,4,5\}$ and the product:
 
-$$(2+1)(3+1)(4+1)(5+1)$$
+$$(2+1)(3+1)(4+1)(5+1) = 2+2\cdot 3+2\cdot 3 \cdot 4 + \cdots$$
 
-There is an element in the expansion of this product for each way of deciding, for every element of the set, whether to include it or rather the number $1$. These ways of deciding correspond to choices of subset.
+There is an element in the expansion of this product for each way of deciding, for every element of the set, whether to multiply with  it or rather the number $1$. That corresponds exactly to an arbitrary choice of subset.
 
 So we know:
 
