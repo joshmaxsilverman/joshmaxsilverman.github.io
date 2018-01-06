@@ -49,7 +49,7 @@ Asking for that same probability in the as-posed version of the puzzle is equiva
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
-Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding those probabilities for $k$ from $2$ to $n$, and adding also the probability that the first dude is mismatched. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
+Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding the probabilities for all $n$ dudes together. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
 
 Again we start with the pretty version:
 
