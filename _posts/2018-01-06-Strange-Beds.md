@@ -12,7 +12,7 @@ published: true
 
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/where-will-the-seven-dwarfs-sleep-tonight/); I've switched to knights from "dwarfs," in recognition that many differently tall people don't care for that term.)
+([fivethirtyeight](https://fivethirtyeight.com/features/where-will-the-seven-dwarfs-sleep-tonight/); I've switched to knights from "dwarfs," in recognition that the latter term is not cared for by many people who are differently tall.)
 
 ### Solution
 
