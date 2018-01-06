@@ -45,7 +45,7 @@ $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
 So the probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And of course the probability for dude $1$ is $\frac{n-1}{n}$.
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using reasoning identical to what we used in part $1$, we determine that:
+Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using reasoning identical to our approach in part $1$, we determine that:
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
