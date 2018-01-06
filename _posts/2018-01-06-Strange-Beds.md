@@ -16,7 +16,7 @@ published: true
 
 ### Solution
 
-#### 1.
+#### 1. What is the probability that the oldest dude sleeps in his own bed?
 
 Let's work with $n$ dudes and beds.
 
@@ -26,7 +26,7 @@ The stipulation that the young dude chooses among the _other_ beds introduces a 
 
 $$P^{pretty}_n = \frac{1}{2}$$
 
-Asking for this probability in the problem as actually posed is equivalent to asking, in the pretty version, what the probability is that the oldest dude matches _given_ that there is at least one mismatch. We find this as follows (where $M$ means that there is at least one mismatch, $O$ means that the oldest dude sleeps in his own bed, and $P(A\|B)$ is the conditional probability of $A$ given $B$):
+Asking for this probability in the problem as actually posed is equivalent to asking, in the pretty version, what the probability is that the oldest dude matches (sleeps in his own bed) _given_ that there is at least one mismatch. We find this as follows (where $M$ means that there is at least one mismatch, $O$ means that the oldest dude sleeps in his own bed, and $P(A\|B)$ is the conditional probability of $A$ given $B$):
 
 $$P^{pretty}_n = P(M)P(O|M) + P(\neg M)P(O | \neg M) = \frac{n-1}{n}P^{as-posed}_n + \frac{1}{n}\cdot 1$$
 
@@ -34,9 +34,9 @@ $$P^{as-posed}_n = \frac{n-2}{n-1}\cdot\frac{1}{2}$$
 
 For $7$ dudes and beds, that's $5/12$.
 
-#### 2.
+#### 2. What is the expected number of dudes who do not sleep in their own beds?
 
-Label the $n$ dudes and beds $1$ through $n$. We want to find the expected number of mismatched dudes, meaning ones who do not sleep in their own beds. 
+Label the $n$ dudes and beds $1$ through $n$.
 
 Let's again start with the pretty version of the problem. When dude $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds, namely beds $1,k,k+1,\ldots,n$, and it is occupied by a dude who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that dude $k$ ends up mismatched, is (for $k\geq2$):
 
