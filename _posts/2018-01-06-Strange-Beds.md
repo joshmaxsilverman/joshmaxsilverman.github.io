@@ -39,13 +39,13 @@ For $7$ dudes and beds, that's $5/12$.
 
 Label the $n$ dudes and beds $1$ through $n$.
 
-Let's again start with the pretty version of the problem. When dude $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds (namely beds $1,k,k+1,\ldots,n$) and it is occupied by a dude who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that dude $k$ ends up mismatched, is (for $k\geq2$):
+Let's again start with the pretty version of the problem. When dude $k$ arrives ($k\geq 2$), all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds (which are beds $1,k,k+1,\ldots,n$) and it is occupied by a dude who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that dude $k$ ends up mismatched, is:
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
-So the probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And of course the probability for dude $1$ is $\frac{n-1}{n}$.
+So the probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And the probability that dude $1$ is mismatched is $\frac{n-1}{n}$.
 
-Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using reasoning identical to our approach in part $1$, we determine that:
+Asking for the probability that dude $k$ is mismatched in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched? Using reasoning identical to our approach in part $1$, we determine that:
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
