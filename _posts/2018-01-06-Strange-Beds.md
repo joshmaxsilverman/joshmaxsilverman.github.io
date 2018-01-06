@@ -14,7 +14,7 @@ published: true
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/where-will-the-seven-dwarfs-sleep-tonight/); I've switched to dudes from "dwarfs," in recognition that the latter term is not cared for by many people who are differently tall.)
 
-### Solution
+### Solutions
 
 #### 1. What is the probability that the oldest dude sleeps in his own bed?
 
