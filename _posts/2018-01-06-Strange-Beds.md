@@ -22,7 +22,7 @@ Let's work with $n$ dudes and beds.
 
 The final open bed is that of either the youngest or the oldest dude, because every other dude will have taken their own bed if it was available.
 
-The stipulation that the young dude chooses among the _other_ beds introduces a complication that kind of messes up what is otherwise a very pretty problem. Call the "pretty version" of the problem the one in which he can also end up in his own bed. In that version the oldest dude has probability $1/2$ of sleeping in his own bed, because whichever of the two possible final open beds is in fact open was the consequence of a random choice that did not privilege either over the other.
+The stipulation that the young dude chooses among the _other_ beds introduces a complication that kind of messes up what is otherwise a very pretty problem. Call the "pretty version" of the problem the one in which he can also end up in his own bed. In that version the oldest dude has probability $1/2$ of sleeping in his own bed, because whichever of the two possible final open beds is in fact open was the consequence of a random choice (the last random choice) that did not privilege either over the other.
 
 $$P^{pretty}_n = \frac{1}{2}$$
 
