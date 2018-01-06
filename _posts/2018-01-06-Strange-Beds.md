@@ -38,9 +38,11 @@ For $7$ knights and beds, that's $5/12$.
 
 Label the $n$ knights and beds $1$ through $n$. We want to find the expected number of mismatched knights, meaning ones who do not sleep in their own beds. 
 
-Let's again start with the pretty version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds, namely beds $1,k,k+1,\ldots,n$, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is:
+Let's again start with the pretty version of the problem. When knight $k$ arrives, all $k-2$ beds from $2$ to $k-1$ are occupied (if knights $2$ to $k-2$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds, namely beds $1,k,k+1,\ldots,n$, and it is occupied by a knight who chose it randomly. So bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is the chance that knight $k$ ends up mismatched, is (for $k\geq2$):
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
+
+So the probabilities for knights $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And of course the probability for knight $1$ is $\frac{n-1}{n}$.
 
 Asking for that same probability in the as-posed version of the puzzle is equivalent to asking, in the pretty version, what is the probability that knight $k$ is mismatched _given_ that at least one knight is mismatched? Using exactly similar reasoning as in part $1$, we determine that:
 
@@ -62,7 +64,7 @@ $$E^{pretty}_n = \frac{n-1}{n}E^{as-posed}_n$$
 
 $$E^{as-posed}_n = \frac{n}{n-1}H_{n-1}$$
 
-Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, and $49/20$ in the pretty version):
+Here are some values for small $n$ (the exact expectation for seven knights, by the way, is $343/120$ in the problem as-posed, or $49/20$ in the pretty version):
 
 n | Expected Mismatches 
 --- |:---
