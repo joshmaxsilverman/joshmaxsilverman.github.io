@@ -87,17 +87,17 @@ Reps = 1000000
 for N in range(3,101):
 	Accum = 0
 	for _ in range(Reps):
-		State = list(range(N))
+		OpenBeds = list(range(N))
 		MatchCount = 0
-		del State[randint(1,N-1)]
-		if not State[0] == 0:
+		del OpenBeds[randint(1,N-1)]
+		if OpenBeds[0] == 1:
 			MatchCount += 1
 		for i in range(1,N):
-			if i in State:
-				State.remove(i)
+			if i in OpenBeds:
+				OpenBeds.remove(i)
 				MatchCount += 1
 			else:
-				del State[randint(0,N-i-1)]
+				del OpenBeds[randint(0,N-i-1)]
 		Accum += N-MatchCount
 	print N, ",", 1.0*Accum/Reps
 ```
