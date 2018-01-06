@@ -121,7 +121,7 @@ for N in range(3,8):
 			else:
 				del State[randint(0,N-i-1)]
 		Accum += N-MatchCount
-	print N, "mismatches:", 1.0*Accum/Reps, 1.0*Accum/(Reps*N)
+	print N, ",", 1.0*Accum/Reps
 ```
 
 ![Graph of expectation versus n.](/img/ExpectedMismatches.png)
