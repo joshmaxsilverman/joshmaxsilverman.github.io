@@ -99,7 +99,7 @@ The addends in the sum on the right go from $1/n$ down to $1/2$, and so they for
 
 $$E_n = 1 + \frac{n}{n-1}\cdot (H_n-1)$$
 
-The "$\frac{n}{n-1}$" in there traces back to the stipulation that the first knight cannot randomly land on his own bed. If we erase that stipulation, then that term $1$, and the expectation becomes the more elegant $H_n$.
+The "$n-1$" in there traces back to the stipulation that the first knight cannot randomly land on his own bed. If we erase that stipulation, then that term becomes $n$, and the expectation becomes the more elegant $H_n$.
 
 These approaches agree with one another and with this Monte Carlo simulation:
 
