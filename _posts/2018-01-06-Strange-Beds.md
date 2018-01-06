@@ -95,13 +95,13 @@ $$E_n = 1 + \sum_{k=2}^n \frac{n}{(n-1)(n-k+2)}
 = 1+\frac{n}{n-1}\sum_{k=2}^n \frac{1}{n-k+2}
 $$
 
-The addends in the sum on the right go from $1/n$ down to $1/2$, and so they form all but the initial element $1$ of [the Harmonic Series](http://mathworld.wolfram.com/HarmonicSeries.html). This tells us that the expectation is unbounded for large $n$, and also that we can write the expectation in a slightly tidier fashion:
+The addends in the sum on the right go from $1/n$ down to $1/2$, and so they form all but the initial element $1$ of [the Harmonic Series](http://mathworld.wolfram.com/HarmonicSeries.html). This tells us that the expectation is unbounded for large $n$, and also that we can write it in in a slightly tidier fashion:
 
 $$E_n = 1 + \frac{n}{n-1}\cdot (H_n-1)$$
 
 The "$n-1$" in there traces back to the stipulation that the first knight cannot randomly land on his own bed. If we erase that stipulation, then that term becomes $n$, the initial $1$ becomes $\frac{n-1}{n}$, and the expectation becomes $H_n - \frac{1}{n}$, or $H_{n-1}$.
 
-These approaches agree with one another and with this Monte Carlo simulation:
+Reassuringly, the two approaches agree with one another and with this Monte Carlo simulation:
 
 ```python
 from random import randint
