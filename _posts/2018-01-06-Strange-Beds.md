@@ -50,7 +50,7 @@ Asking for the probability that dude $k$ is mismatched in the as-posed version o
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
 
-Now that we know, in both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding the probabilities for all $n$ dudes together. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
+Now that we know, for both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding the probabilities for all $n$ dudes together. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
 
 Again we start with the pretty version:
 
@@ -69,7 +69,7 @@ $$E^{as-posed}_n = \frac{n}{n-1}H_{n-1}$$
 
 Here are some values for small $n$ (the exact expectation for seven dudes, by the way, is $343/120$ in the problem as posed, or $49/20$ in the pretty version):
 
-n | Expected Mismatches 
+n | $E^{as-posed}_n$
 --- |:---
 2 | 2.0
 3 | 2.25
