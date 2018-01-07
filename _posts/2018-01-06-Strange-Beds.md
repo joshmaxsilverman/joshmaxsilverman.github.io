@@ -80,12 +80,12 @@ n | Expected Mismatches
 9 | 3.05758928571
 10 | 3.14329805996
 
-The values are confirmed by this Monte Carlo simulation (in Python), which produced the plot below:
+The values are confirmed by this Monte Carlo simulation (in Python).
 
 ```python
 from random import randint
-Reps = 1000000
-for N in range(3,101):
+Reps = 10000000
+for N in range(3,11):
 	Accum = 0
 	for _ in range(Reps):
 		OpenBeds = list(range(N))
@@ -102,7 +102,7 @@ for N in range(3,101):
 		Accum += N-MatchCount
 	print N, ",", 1.0*Accum/Reps
 ```
-
+<br>
 ![Graph of expectation versus n.](/img/ExpectedMismatches.png)
 
 <br>
