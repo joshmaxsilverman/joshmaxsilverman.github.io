@@ -46,7 +46,7 @@ $$
 
 Here $H_n$ is the $n$th [harmonic number](http://mathworld.wolfram.com/HarmonicSeries.html) (the sum of the reciprocals of the first $n$ counting numbers). The harmonic numbers increase more and more slowly, but are unbounded, so there is no limit to the expected mismatches for large $n$.
 
-To get the expectation for the problem as posed, we simply need to multiply by the constant factor $\frac{n}{n-1}$ to account for the difference in every dude's mismatch probability in the sum, yielding:
+To get the expectation for the problem as posed, we simply need to multiply by the constant factor $\frac{n}{n-1}$ to account for the difference in every dude's (including dude $1$'s!) mismatch probability in the sum, yielding:
 
 $$E^{as-posed}_n = \frac{n}{n-1}H_{n-1}$$
 
