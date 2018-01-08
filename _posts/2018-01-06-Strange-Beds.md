@@ -75,8 +75,6 @@ for N in range(3,11):
 		OpenBeds = list(range(N))
 		MatchCount = 0
 		del OpenBeds[randint(1,N-1)]
-		if OpenBeds[0] == 1:
-			MatchCount += 1
 		for i in range(1,N):
 			if i in OpenBeds:
 				OpenBeds.remove(i)
