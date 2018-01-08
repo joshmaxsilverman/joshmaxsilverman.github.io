@@ -14,41 +14,26 @@ published: true
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/where-will-the-seven-dwarfs-sleep-tonight/); I've switched to dudes from "dwarfs," in recognition that the latter term is not cared for by many people who are differently tall.)
 
-### Solutions
+### Solution
 
-#### 1. What is the probability that the oldest dude sleeps in his own bed?
+The stipulation that the young dude chooses among the _other_ beds introduces a complication that slightly muddies what is otherwise a very pretty problem. Call the "pretty version" of the problem the variation in which he can also end up in his own bed. 
 
-Let's work with $n$ dudes and beds.
-
-The final open bed is that of either the youngest or the oldest dude, because every other dude will have taken their own bed if it was available.
-
-The stipulation that the young dude chooses among the _other_ beds introduces a complication that slightly muddies what is otherwise a very pretty problem. Call the "pretty version" of the problem the variation in which he can also end up in his own bed. In that version the oldest dude has probability $1/2$ of sleeping in his own bed, because whichever of the two possible final open beds is in fact open was the consequence of a random choice (the last random choice) that did not privilege either over the other.
-
-$$P^{pretty}_n = \frac{1}{2}$$
-
-Asking for this probability in the problem as actually posed is equivalent to asking, in the pretty version, what the probability is that the oldest dude matches (sleeps in his own bed) _given_ that there is at least one mismatch. We find this as follows (where $M$ means that there is at least one mismatch, $O$ means that the oldest dude sleeps in his own bed, and $P(A\|B)$ is the conditional probability of $A$ given $B$):
-
-$$P^{pretty}_n = P(M)P(O|M) + P(\neg M)P(O | \neg M)$$
-
-$$= \frac{n-1}{n}P^{as-posed}_n + \frac{1}{n}\cdot 1 = \frac{1}{2}$$
-
-$$P^{as-posed}_n = \frac{n-2}{n-1}\cdot\frac{1}{2}$$ 
-
-For $7$ dudes and beds, that's $5/12$.
-
-#### 2. What is the expected number of dudes who do not sleep in their own beds?
-
-Label the dudes and beds $1$ through $n$.
-
-Let's again start with the pretty version of the problem. When dude $k$ arrives ($k\geq 2$), all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds (which are beds $1,k,k+1,\ldots,n$) and it is occupied by a dude who chose it randomly. Bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is also the chance that dude $k$ ends up mismatched, is:
+Let's start with the pretty version of the problem. We'll work with $n$ dudes and beds, and label the dudes and beds $1$ through $n$.
+When dude $k$ arrives ($k\geq 2$), all $k-2$ beds from $2$ to $k-1$ are occupied (if dudes $2$ to $k-1$ had found them unoccupied, they'd have chosen them). One more bed is occupied among the other $n-k+2$ beds (which are beds $1,k,k+1,\ldots,n$) and it is occupied by a dude who chose it randomly. Bed $k$ is as likely as any of those to be the occupied one, and so the chance that it is occupied, which is also the chance that dude $k$ ends up mismatched, is:
 
 $$P^{pretty}_k = \frac{1}{n-k+2}$$
 
-So the mismatch probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. And the probability that dude $1$ is mismatched is $\frac{n-1}{n}$.
+So the mismatch probabilities for dudes $2,\ldots,n$ are $\frac{1}{n},\frac{1}{n-1},\ldots,\frac{1}{3},\frac{1}{2}$. (The probability that dude $1$ is mismatched is $\frac{n-1}{n}$.)
 
-Asking for the probability that dude $k$ is mismatched in the as-posed version of the puzzle is equivalent to asking, in the pretty version, for the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched. Using reasoning identical to our approach in part $1$, we determine that:
+Asking for the probability that dude $k$ is mismatched in the puzzle as actually posed is equivalent to asking, in the pretty version, for the probability that dude $k$ is mismatched _given_ that at least one dude is mismatched. We find this as follows (where $M$ means that there is at least one mismatch, $K$ means that dude $k$ is mismatched, and $P(A\|B)$ is the conditional probability of $A$ given $B$):
+
+$$P^{pretty}_k = P(M)P(K|M) + P(\neg M)P(K | \neg M)$$
+
+$$= \frac{n-1}{n}P^{as-posed}_k + \frac{1}{n}\cdot 0 = \frac{1}{n-k+2}$$
 
 $$P^{as-posed}_k = \frac{n}{(n-1)}\cdot\frac{1}{n-k+2}$$
+
+For $7$ dudes and beds, then, the oldest dude has probability $5/12$ of sleeping in his own bed.
 
 Now that we know, for both the simple and as-posed versions of the puzzle, how likely each dude is to be mismatched, we can compute the expected number of mismatched dudes by simply adding the probabilities for all $n$ dudes together. This works because the probability of a mismatch in a given bed is also the expected number of mismatches in that bed, and the expectation of any sum of values (in this case the sum of the numbers of mismatches in each of the beds) is the sum of the expectations of the individual values.
 
