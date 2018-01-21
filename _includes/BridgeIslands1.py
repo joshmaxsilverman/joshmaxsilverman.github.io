@@ -6,11 +6,13 @@ from ortools.constraint_solver import pywrapcp
 Width = 11
 Height = 8
 
-# Map 1
+# Map 1 data
 Islands = ((0,2),(1,4),(1,7),(2,0),(2,1),(2,3),(2,5),(2,6),(3,0),(3,2),(3,5),(3,6),(4,0),(4,1),(4,4),(4,6),(4,7),(5,1),(5,3),(5,5),(5,7),(6,0),(6,2),(6,4),(6,6),(7,0),(7,2),(7,3),(7,5),(7,7),(8,1),(8,3),(8,4),(9,0),(9,2),(9,4),(9,6),(9,7),(10,0),(10,1),(10,3),(10,5),(10,6))
 Signs = {(0,5):(0,1,15,0),(1,3):(0,0,0,0),(4,2):(15,5,9,6),(5,0):(10,0,11,9),(7,1):(18,3,4,9),(8,6):(0,11,3,11),(10,4):(4,9,0,15)}
 
-# Find bridgeable neighbors of every island
+# Preliminaries:
+
+## Find bridgeable neighbors of every island
 
 Neighbors = {}
 for Island in Islands:
@@ -41,8 +43,8 @@ for Island in Islands:
     elif (x,y1) in Signs:
       break
 
-# Find 4-tuples of islands, first above and neighboring the second, third left 
-# of and neighboring fourth, such that bridges would cross.
+## Find 4-tuples of islands, the first above and neighboring the second,  
+## the third left of and neighboring the fourth, such that bridges would cross.
 
 CrossThreats = []
 for Island1 in Islands:
@@ -61,6 +63,7 @@ for Island1 in Islands:
           CrossThreats.append((Island1,Island2,Island3,Island4))
 
 # Create the solver.
+
 solver = pywrapcp.Solver("Find Bridges")
 
 # Create the variables.
@@ -143,7 +146,11 @@ for Sign in Signs:
 for Island1,Island2,Island3,Island4 in CrossThreats:
   solver.Add(BridgesBetween[(Island2,Island1)]*BridgesBetween[(Island3,Island4)] == 0)
 
+# Create the "decision builder"
+
 db = solver.Phase(Vars, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
+
+# Call the solver and display the solution.
 
 if solver.Solve(db):
   solver.NextSolution()
