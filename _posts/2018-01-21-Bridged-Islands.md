@@ -20,7 +20,7 @@ Each island (represented by a circle on the diagrams below) has a value equal to
 
 ([fivethirtyeight](https://fivethirtyeight.com/features/can-you-stay-awake-for-50-hours-and-solve-150-puzzles/))
 
-These puzzles were part of the 2018 MIT [Mystery Hunt](http://www.mit.edu/~puzzle/).
+These puzzles (there are seven similar maps in addition to this one) were part of the 2018 MIT [Mystery Hunt](http://www.mit.edu/~puzzle/).
 
 ## Solution:
 
@@ -97,7 +97,7 @@ for Island1 in Islands:
 Now we bring in CP by creating a solver object:
 
 ```python
-solver = pywrapcp.Solver("Find Bridges")
+solver = pywrapcp.Solver("")
 ```
 
 Next we create the solver variables with which we will formulate the problem for the solver.  For instance, the value, or number of bridges on, island (2,1) is represented by the solver variable with the name `IslandValue_2_1`. That solver variable is the _value_ of our Python variable `Value[(2,1)]`.  Our creation of the variable builds in the constraint that the value be an integer between 1 and 8.
@@ -125,7 +125,7 @@ for Island in Islands:
       Vars.append(BridgesBetween[(Island,Neighbor)])
 ```
 
-Now we have to state the rules of the puzzle in terms of constraints on the values of these variables.  The first constraint is that the value of an island is the number of bridges from it to its neighbors.
+Now we have to state the rules of the puzzle as constraints on the values of these variables.  The first constraint is that the value of an island is the number of bridges from it to its neighbors.
 
 ```python
 for Island in Islands:
@@ -138,7 +138,7 @@ for Island in Islands:
   solver.Add(Value[Island] == sum(Bridges))
 ```
 
-The second constraint is that the sums indicated by the signs are correct, and that no addends are repeated.
+The second and third constraints are that the sums indicated by the signs are correct, and that no addends are repeated.
 
 ```python
 for Sign in Signs:
@@ -209,7 +209,7 @@ else:
   print("No solution found.")
 ```
 
-I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map in just a couple of seconds.
+I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map in just a couple of seconds.  (I should admit that this program doesn't actually check that each island can be reached from every other island, but that would not be hard to add.)
 
 The whole program is [here](/_includes/BridgeIslands1.py), and the output as run on map 1 is [here](/_includes/BridgeIslands.txt).
 
