@@ -195,21 +195,51 @@ We create a "decision builder," specifying some parameters of the solver's strat
 db = solver.Phase(Vars, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
 ```
 
-Finally we call the solver, and hope for the best.
+Finally we call the solver, and hope for the best.  There may be multiple solutions consistent with our constraints; we wait for one that yields a _connected_ map: one where you can get from any island to any other.
 
 ```python
 if solver.Solve(db):
-  solver.NextSolution()
-  print("Solution:")
-  for Island in Islands:
-    print("Island", Island, "=",Value[Island].Value())
-  for B in BridgesBetween:
-    print(B,BridgesBetween[B].Value(), "bridges")
+  while solver.NextSolution():
+    if Connected(BridgesBetween):
+      print("Solution:")
+      for Island in Islands:
+        print("Island", Island, "=",Value[Island].Value())
+      for B in BridgesBetween:
+        print(B,BridgesBetween[B].Value(), "bridges")
+      break
 else:
   print("No solution found.")
 ```
 
-I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map in just a couple of seconds.  (I should admit that this program doesn't actually check that each island can be reached from every other island, but that would not be hard to add.)
+Here's how the function `Connected` is defined (it's a _depth-first_ search):
+
+```python
+# Test whether the map is a connected graph.
+def Connected(BridgesBetween):
+  global Islands, Neighbors
+  
+  def Explore(Island):
+    Remaining.remove(Island)
+    if Remaining == []:
+      return
+    else:
+      for Neighbor in Neighbors[Island]:
+        if not Neighbor in Remaining:
+          continue
+        if (Island,Neighbor) in BridgesBetween:
+          Pair = (Island,Neighbor)
+        else:
+          Pair = (Neighbor,Island)
+        if BridgesBetween[Pair].Value() == 0:
+          continue
+        Explore(Neighbor)
+
+  Remaining = list(Islands)
+  Explore(Remaining[0])
+  return (not Remaining == [])
+  ```
+
+I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map in just a couple of seconds.
 
 The whole program is [here](/_includes/BridgeIslands1.py), and the output as run on map 1 is [here](/_includes/BridgeIslands.txt).
 
