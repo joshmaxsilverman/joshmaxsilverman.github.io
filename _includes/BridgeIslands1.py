@@ -10,6 +10,30 @@ Height = 8
 Islands = ((0,2),(1,4),(1,7),(2,0),(2,1),(2,3),(2,5),(2,6),(3,0),(3,2),(3,5),(3,6),(4,0),(4,1),(4,4),(4,6),(4,7),(5,1),(5,3),(5,5),(5,7),(6,0),(6,2),(6,4),(6,6),(7,0),(7,2),(7,3),(7,5),(7,7),(8,1),(8,3),(8,4),(9,0),(9,2),(9,4),(9,6),(9,7),(10,0),(10,1),(10,3),(10,5),(10,6))
 Signs = {(0,5):(0,1,15,0),(1,3):(0,0,0,0),(4,2):(15,5,9,6),(5,0):(10,0,11,9),(7,1):(18,3,4,9),(8,6):(0,11,3,11),(10,4):(4,9,0,15)}
 
+# Test whether the map is a connected graph.
+def Connected(BridgesBetween):
+  global Islands, Neighbors
+  
+  def Explore(Island):
+    Remaining.remove(Island)
+    if Remaining == []:
+      return
+    else:
+      for Neighbor in Neighbors[Island]:
+        if not Neighbor in Remaining:
+          continue
+        if (Island,Neighbor) in BridgesBetween:
+          Pair = (Island,Neighbor)
+        else:
+          Pair = (Neighbor,Island)
+        if BridgesBetween[Pair].Value() == 0:
+          continue
+        Explore(Neighbor)
+
+  Remaining = list(Islands)
+  Explore(Remaining[0])
+  return (Remaining == [])
+
 # Preliminaries:
 
 ## Find bridgeable neighbors of every island
@@ -64,7 +88,7 @@ for Island1 in Islands:
 
 # Create the solver.
 
-solver = pywrapcp.Solver("Find Bridges")
+solver = pywrapcp.Solver("")
 
 # Create the variables.
 
@@ -153,11 +177,13 @@ db = solver.Phase(Vars, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
 # Call the solver and display the solution.
 
 if solver.Solve(db):
-  solver.NextSolution()
-  print("Solution:")
-  for Island in Islands:
-    print("Island", Island, "=",Value[Island].Value())
-  for B in BridgesBetween:
-    print(B,BridgesBetween[B].Value(), "bridges")
+  while solver.NextSolution():
+    if Connected(BridgesBetween):
+      print("Solution:")
+      for Island in Islands:
+        print("Island", Island, "=",Value[Island].Value())
+      for B in BridgesBetween:
+        print(B,BridgesBetween[B].Value(), "bridges")
+      break
 else:
   print("No solution found.")
