@@ -1,5 +1,6 @@
 
 # We use Google's Constraint Optimization solver to solve each puzzle in a few seconds.
+# Find it at https://developers.google.com/optimization/cp/
 from ortools.constraint_solver import pywrapcp
 
 Width = 11
