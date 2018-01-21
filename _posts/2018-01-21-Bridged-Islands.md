@@ -27,12 +27,10 @@ These puzzles were part of the 2018 MIT [Mystery Hunt](http://www.mit.edu/~puzzl
 I solved the first map (displayed here) manually, and decided that these puzzles are fun, but not let's-do-eight-in-a-row fun. So I turned to the computer with a welcome excuse to try out Google's [Constraint Programming](https://developers.google.com/optimization/cp/) package, which can be used from within Python:
 
 ```python
-# We use Google's Constraint Programming solver to solve each puzzle in a few seconds.
-# Find it at https://developers.google.com/optimization/cp/
 from ortools.constraint_solver import pywrapcp
 ```
 
-I encoded the maps in two lists.  The first is a list of the coordinates of every island in the map (which is an 11 by 8 grid), and the second is a dictionary data structure assigning to the coordinates of each sign a list of four number, which are the north, south, east and west numbers on the sign:
+We encode the maps in two parts.  The first is a list of the coordinates of every island in the map (which is an 11 by 8 grid), and the second is a dictionary data structure assigning to the coordinates of each sign a list of four numbers, which are the north, south, east and west numbers on the sign:
 
 ```python
 Width = 11
@@ -102,7 +100,7 @@ Now we bring in CP by creating a solver object:
 solver = pywrapcp.Solver("Find Bridges")
 ```
 
-Next we create the variables with which we will formulate the problem for the solver.  For instance, the value, or number of bridges on, island (2,1) is represented by the CP variable with the name `IslandValue_2_1`. That solver variable is the _value_ of our Python variable `Value[(2,1)]`.  Our creation of the variable builds in the constraint that the value be an integer between 1 and 8.
+Next we create the solver variables with which we will formulate the problem for the solver.  For instance, the value, or number of bridges on, island (2,1) is represented by the solver variable with the name `IslandValue_2_1`. That solver variable is the _value_ of our Python variable `Value[(2,1)]`.  Our creation of the variable builds in the constraint that the value be an integer between 1 and 8.
 
 ```python
 Vars = []
@@ -184,7 +182,7 @@ for Sign in Signs:
     solver.Add(solver.AllDifferent(Addends))
 ```
 
-The bridges must not cross, and so for every two pairs of islands threatening a cross, the number of bridges between at least one of the pairs must be 0.
+The bridges must not cross, and so for every two pairs of islands threatening a cross, the number of bridges between the islands in at least one of the pairs must be 0.
 
 ```python
 for Island1,Island2,Island3,Island4 in CrossThreats:
