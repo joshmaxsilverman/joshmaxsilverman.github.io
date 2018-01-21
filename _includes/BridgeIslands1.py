@@ -183,7 +183,8 @@ if solver.Solve(db):
       for Island in Islands:
         print("Island", Island, "=",Value[Island].Value())
       for B in BridgesBetween:
-        print(B,BridgesBetween[B].Value(), "bridges")
+        if not BridgesBetween[B].Value() == 0:
+          print(B,BridgesBetween[B].Value(), "bridges")
       break
 else:
   print("No solution found.")
