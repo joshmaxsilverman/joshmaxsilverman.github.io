@@ -172,8 +172,6 @@ if solver.Solve(db):
       for B in BridgesBetween:
         print(B,BridgesBetween[B].Value(), "bridges")
       break
-else:
-  print("No solution found.")
 ```
 
 Here's how the function `Connected` is defined (it's a _depth-first_ search):
