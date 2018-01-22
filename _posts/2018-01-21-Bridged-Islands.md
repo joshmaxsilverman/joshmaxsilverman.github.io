@@ -30,7 +30,7 @@ I solved the first map (displayed here) manually, and decided that these puzzles
 from ortools.constraint_solver import pywrapcp
 ```
 
-We encode the maps in two parts.  The first is a list of the coordinates of every island in the map (which is an 11 by 8 grid), and the second is a dictionary data structure assigning to the coordinates of each sign a list of four numbers, which are the north, south, east and west numbers on the sign:
+We encode the maps in two parts.  The first is a list of the coordinates of every island in the map (which is an 11 by 8 grid), and the second is a dictionary data structure assigning to the coordinates of each sign a list of four numbers, which are the north, south, east and west numbers on the sign (0 means there is no number):
 
 ```python
 Width = 11
