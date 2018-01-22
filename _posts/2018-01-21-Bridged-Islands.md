@@ -132,22 +132,24 @@ for Sign in Signs:
   N,S,E,W = Signs[Sign]
   def FindAddends(x1,x2,y1,y2,xStep,yStep,Tot):
     Addends = []
-    for xx in range(x1,x2,xStep):
-      for yy in range(y1,y2,yStep):
-        if (xx,yy) in Signs:
-          break
-        if (xx,yy) in Islands:
-          Addends.append(Value[(xx,yy)])
+    xx,yy = x1,y1
+    while not (xx==x2 or yy==y2):
+      if (xx,yy) in Signs:
+        break
+      if (xx,yy) in Islands:
+        Addends.append(Value[(xx,yy)])
+      xx += xStep
+      yy += yStep
     solver.Add(sum(Addends) == Tot)
     solver.Add(solver.AllDifferent(Addends))
   if not N == 0:
-    FindAddends(x,x+1,y+1,Height,1,1,N)
+    FindAddends(x,x+1,y+1,Height,0,1,N)
   if not S == 0:
-    FindAddends(x,x+1,y-1,-1,1,-1,S)
+    FindAddends(x,x+1,y-1,-1,0,-1,S)
   if not E == 0:
-    FindAddends(x+1,Width,y,y+1,1,1,E)
+    FindAddends(x+1,Width,y,y+1,1,0,E)
   if not W == 0:
-    FindAddends(x-1,-1,y,y+1,-1,1,W)
+    FindAddends(x-1,-1,y,y+1,-1,0,W)
 ```
 
 The bridges must not cross, and so for every two pairs of islands threatening a cross, the number of bridges between the islands in at least one of the pairs must be 0.
