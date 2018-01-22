@@ -80,21 +80,22 @@ for Island in Islands:
 
 ## Sign sums are correct, and all addends differ
 
+def FindAddends(x1,x2,y1,y2,xStep,yStep,Tot):
+  Addends = []
+  xx,yy = x1,y1
+  while not (xx==x2 or yy==y2):
+    if (xx,yy) in Signs:
+      break
+    if (xx,yy) in Islands:
+      Addends.append(Value[(xx,yy)])
+    xx += xStep
+    yy += yStep
+  solver.Add(sum(Addends) == Tot)
+  solver.Add(solver.AllDifferent(Addends))
+
 for Sign in Signs:
   x,y = Sign
   N,S,E,W = Signs[Sign]
-  def FindAddends(x1,x2,y1,y2,xStep,yStep,Tot):
-    Addends = []
-    xx,yy = x1,y1
-    while not (xx==x2 or yy==y2):
-      if (xx,yy) in Signs:
-        break
-      if (xx,yy) in Islands:
-        Addends.append(Value[(xx,yy)])
-      xx += xStep
-      yy += yStep
-    solver.Add(sum(Addends) == Tot)
-    solver.Add(solver.AllDifferent(Addends))
   if not N == 0:
     FindAddends(x,x+1,y+1,Height,0,1,N)
   if not S == 0:
@@ -149,5 +150,3 @@ if solver.Solve(db):
         if not BridgesBetween[B].Value() == 0:
           print(B,BridgesBetween[B].Value(), "bridges")
       break
-else:
-  print("No solution found.")
