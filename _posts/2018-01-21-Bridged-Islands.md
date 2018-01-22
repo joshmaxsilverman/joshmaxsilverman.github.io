@@ -63,13 +63,12 @@ for Island in Islands:
 Next, we locate every case where bridges might cross one another, and we keep a list of these:
 
 ```python
+CrossThreats = []
 for (x1,y1) in Islands:
   for (x2,y2) in Islands:
     for (x3,y3) in Islands:
       for (x4,y4) in Islands:
-        if y2>=y1 or not x1==x2 or x3>=x4 or not y3==y4:
-          continue
-        if x1<=x3 or x1>=x4 or y3>=y1 or y3<=y2:
+        if y2>=y1 or not x1==x2 or x3>=x4 or not y3==y4 or x1<=x3 or x1>=x4 or y3>=y1 or y3<=y2:
           continue
         if (x2,y2) in Neighbors[(x1,y1)] and (x4,y4) in Neighbors[(x3,y3)]:
           CrossThreats.append(((x1,y1),(x2,y2),(x3,y3),(x4,y4)))
