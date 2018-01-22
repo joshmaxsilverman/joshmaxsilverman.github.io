@@ -32,20 +32,14 @@ for Island in Islands:
 ## the third left of and neighboring the fourth, such that bridges would cross.
 
 CrossThreats = []
-for Island1 in Islands:
-  for Island2 in Islands:
-    for Island3 in Islands:
-      for Island4 in Islands:
-        x1,y1 = Island1
-        x2,y2 = Island2
-        x3,y3 = Island3
-        x4,y4 = Island4
-        if y2>=y1 or not x1==x2 or x3>=x4 or not y3==y4:
+for (x1,y1) in Islands:
+  for (x2,y2) in Islands:
+    for (x3,y3) in Islands:
+      for (x4,y4) in Islands:
+        if y2>=y1 or not x1==x2 or x3>=x4 or not y3==y4 or x1<=x3 or x1>=x4 or y3>=y1 or y3<=y2:
           continue
-        if x1<=x3 or x1>=x4 or y3>=y1 or y3<=y2:
-          continue
-        if Island2 in Neighbors[Island1] and Island4 in Neighbors[Island3]:
-          CrossThreats.append((Island1,Island2,Island3,Island4))
+        if (x2,y2) in Neighbors[(x1,y1)] and (x4,y4) in Neighbors[(x3,y3)]:
+          CrossThreats.append(((x1,y1),(x2,y2),(x3,y3),(x4,y4)))
 
 # Create the solver.
 
@@ -120,7 +114,6 @@ for Island1,Island2,Island3,Island4 in CrossThreats:
 db = solver.Phase(Vars, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
 
 # Test whether the map is a connected graph.
-
 def Connected(BridgesBetween):
   global Islands, Neighbors
   
