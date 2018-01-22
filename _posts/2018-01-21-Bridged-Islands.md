@@ -92,7 +92,7 @@ for Island in Islands:
   Vars.append(Value[Island])
 ```
 
-We also have variables to represent the number of bridges between pairs of islands (an integer between 0 and 2):
+We also have variables to represent the number of bridges between pairs of neighboring islands (an integer between 0 and 2):
 
 ```python
 BridgesBetween = {}
