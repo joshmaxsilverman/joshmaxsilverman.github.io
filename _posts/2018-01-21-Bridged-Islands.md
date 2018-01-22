@@ -203,7 +203,7 @@ def Connected(BridgesBetween):
   return (not Remaining == [])
   ```
 
-I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map in just a couple of seconds.
+I didn't know whether the complexity of these puzzles would overwhelm CP, but in fact this code solves a map within a couple of seconds.
 
 The whole program is [here](/_includes/BridgeIslands1.py), and the output as run on map 1 is [here](/_includes/BridgeIslands.txt).
 
