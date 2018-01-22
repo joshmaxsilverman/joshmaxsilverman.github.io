@@ -121,21 +121,22 @@ for Island in Islands:
 The second and third constraints are that the sums indicated by the signs are correct, and that no addends are repeated.
 
 ```python
+def FindAddends(x1,x2,y1,y2,xStep,yStep,Tot):
+  Addends = []
+  xx,yy = x1,y1
+  while not (xx==x2 or yy==y2):
+    if (xx,yy) in Signs:
+      break
+    if (xx,yy) in Islands:
+      Addends.append(Value[(xx,yy)])
+    xx += xStep
+    yy += yStep
+  solver.Add(sum(Addends) == Tot)
+  solver.Add(solver.AllDifferent(Addends))
+
 for Sign in Signs:
   x,y = Sign
   N,S,E,W = Signs[Sign]
-  def FindAddends(x1,x2,y1,y2,xStep,yStep,Tot):
-    Addends = []
-    xx,yy = x1,y1
-    while not (xx==x2 or yy==y2):
-      if (xx,yy) in Signs:
-        break
-      if (xx,yy) in Islands:
-        Addends.append(Value[(xx,yy)])
-      xx += xStep
-      yy += yStep
-    solver.Add(sum(Addends) == Tot)
-    solver.Add(solver.AllDifferent(Addends))
   if not N == 0:
     FindAddends(x,x+1,y+1,Height,0,1,N)
   if not S == 0:
