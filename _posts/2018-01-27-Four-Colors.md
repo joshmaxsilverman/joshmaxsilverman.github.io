@@ -30,7 +30,7 @@ from itertools import permutations
 Cells = tuple(range(1,15))
 Areas = (0,12,12,6,12,24,12,3,6,6,9,3,6,21,12)
 Walls = ((1,2),(1,6),(2,3),(2,6),(3,4),(3,13),(4,5),(4,8),(4,9),(5,11),(6,7),(6,12),(6,13),(7,12),(7,13),(8,13),(8,14),(9,10),(9,14),(10,11))
-NColors = 3
+NColors = 4
 Colors = tuple(range(NColors))
 
 # Create the solver.
@@ -45,7 +45,7 @@ for Cell in Cells:
 
 # Constraints
 for Col in Colors:
-  c = (sum([Areas[Cell]*(Color[Cell]==Col) for Cell in Cells]) == 48)
+  c = (sum([Areas[Cell]*(Color[Cell]==Col) for Cell in Cells]) == 36)
   solver.Add(c)
 for Wall in Walls:
   solver.Add(solver.AllDifferent((Color[Wall[0]],Color[Wall[1]])))
@@ -76,6 +76,21 @@ if solver.Solve(db):
       print("Solution",Count,Solution)
 else:
   print("No solution found.")
+```
+
+The output:
+
+```
+Solution 1 [0, 1, 0, 1, 2, 2, 0, 0, 0, 3, 0, 3, 3, 1]
+Solution 2 [0, 1, 0, 1, 2, 2, 0, 0, 3, 0, 3, 3, 3, 1]
+Solution 3 [0, 1, 0, 1, 2, 2, 1, 0, 0, 1, 3, 0, 3, 3]
+Solution 4 [0, 1, 0, 2, 1, 2, 0, 0, 0, 3, 0, 3, 3, 2]
+Solution 5 [0, 1, 0, 2, 1, 2, 0, 0, 3, 0, 3, 3, 3, 2]
+Solution 6 [0, 1, 0, 2, 3, 2, 0, 0, 3, 0, 1, 3, 1, 2]
+Solution 7 [0, 1, 0, 2, 3, 2, 3, 0, 0, 3, 1, 0, 1, 2]
+Solution 8 [0, 1, 0, 2, 3, 3, 1, 0, 0, 1, 2, 0, 2, 1]
+Solution 9 [0, 1, 0, 2, 3, 3, 2, 0, 0, 2, 1, 0, 1, 2]
+[Finished in 0.3s]
 ```
 
 <br>
