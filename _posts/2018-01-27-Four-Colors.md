@@ -22,6 +22,60 @@ published: true
 See the previous post to learn more about the operation of Google's Constraint Solver that is used here as well.  In a flash we learn that there are 9 solutions with all four colors used and two with only three of the four used.  That's counting solutions as equivalent if colors are merely swapped.
 
 ```python
+# We use Google's Constraint Programming solver to solve each puzzle in a second or two.
+# Find it at https://developers.google.com/optimization/cp/
+from ortools.constraint_solver import pywrapcp
+from itertools import permutations
+
+Cells = tuple(range(1,15))
+Areas = (0,12,12,6,12,24,12,3,6,6,9,3,6,21,12)
+Walls = ((1,2),(1,6),(2,3),(2,6),(3,4),(3,13),(4,5),(4,8),(4,9),(5,11),(6,7),(6,12),(6,13),(7,12),(7,13),(8,13),(8,14),(9,10),(9,14),(10,11))
+NColors = 3
+Colors = tuple(range(NColors))
+
+# Create the solver.
+solver = pywrapcp.Solver("")
+
+# Create the variables.
+Vars = []
+Color = {}
+for Cell in Cells:
+  Color[Cell] = solver.IntVar(0,len(Colors)-1,"Color_"+str(Cell))
+  Vars.append(Color[Cell])
+
+# Constraints
+for Col in Colors:
+  c = (sum([Areas[Cell]*(Color[Cell]==Col) for Cell in Cells]) == 48)
+  solver.Add(c)
+for Wall in Walls:
+  solver.Add(solver.AllDifferent((Color[Wall[0]],Color[Wall[1]])))
+
+# Create the "decision builder"
+db = solver.Phase(Vars, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
+
+# Call the solver and display the unique solutions.
+Solutions = []
+def NewSolution():
+  for Solution in Solutions:
+    for Permute in permutations(Colors):
+      Same = True
+      for Cell in Cells:
+        if not Color[Cell].Value() == Permute[Solution[Cell-1]]:
+          Same = False
+      if Same:
+        return False
+  return True
+
+if solver.Solve(db):
+  Count = 0
+  while solver.NextSolution():
+    if NewSolution():
+      Count += 1
+      Solution = [Color[Cell].Value() for Cell in Cells]
+      Solutions.append(Solution)
+      print("Solution",Count,Solution)
+else:
+  print("No solution found.")
 ```
 
 <br>
