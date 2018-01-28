@@ -22,7 +22,7 @@ published: true
 See the previous post to learn more about the operation of Google's Constraint Solver that is used here as well.  In a flash we learn that there are 9 solutions with all four colors used and two with only three of the four used.  That's counting solutions as equivalent if colors are merely swapped.
 
 ```python
-# We use Google's Constraint Programming solver to solve each puzzle in a second or two.
+# We use Google's Constraint Programming solver to solve the puzzle in a flash.
 # Find it at https://developers.google.com/optimization/cp/
 from ortools.constraint_solver import pywrapcp
 from itertools import permutations
