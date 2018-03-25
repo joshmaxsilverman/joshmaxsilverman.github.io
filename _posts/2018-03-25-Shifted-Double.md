@@ -13,7 +13,7 @@ date: 2018/03/25
 
 ## Solution:
 
-Number the digits $d_1,...,d_n$, where $d_n$ is the most significant digit.
+Number the digits $d_1,...,d_n$, where $d_n$ is the most significant digit (the number is $d_nd_{n-1}\ldots d_2d_1$).
 
 Since the doubled number does not grow a digit, digit $d_n$ is one of $\\{1,2,3,4\\}$, and $d_1$ is either $2d_n$ or $2d_n+1$.  So there are only eight possible $\\{d_n,d_1\\}$ pairs.
 
