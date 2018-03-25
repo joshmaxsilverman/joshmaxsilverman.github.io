@@ -13,7 +13,7 @@ date: 2018/03/25
 
 ## Solution:
 
-Let the original number b $d_nd_{n-1}\ldots d_2d_1$. Since the doubled number does not grow a digit, digit $d_n$ is one of $\\{1,2,3,4\\}$, and $d_1$ is either $2d_n$ or $2d_n+1$.  So there are only eight possible $\\{d_n,d_1\\}$ pairs.
+Let the original number be $d_nd_{n-1}\ldots d_2d_1$. Since the doubled number does not grow a digit, digit $d_n$ is one of $\\{1,2,3,4\\}$, and $d_1$ is either $2d_n$ or $2d_n+1$.  So there are only eight possible $\\{d_n,d_1\\}$ pairs.
 
 Based on $d_1$, we can easily find $d_2$ and subsequent (more significant) digits in the doubled number. For instance, if $d_1$ is 4, then $d_2$ must be 8, $d_3$ must be 6 (twice 8 is 16), and $d_4$ must be 3 (carrying the 1 from 16). Proceeding like this from any $d_1$, we find ourselves in the following 18-element doubling cycle (where the star reminds us that we are carrying a 1, and so the digit cannot be $d_1$, because $d_2$ comes from doubling $d_1$ without adding a carried 1):
 
