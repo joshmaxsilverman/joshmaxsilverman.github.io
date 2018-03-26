@@ -19,6 +19,8 @@ Based on $d_1$, we can easily find $d_2$ and subsequent (more significant) digit
 
 $$1,2,4,8,6*,3*,7,4*,9,8*,7*,5*,1*,3,6,2*,5,0*,1,\ldots$$
 
+(Not coincidentally, this is the repetend (repeating portion) of the decimal representation of $1/19$.)
+
 We have a solution if we can travel along the doubling cycle from a possible (unstarred) $d_1$ to a corresponding $d_n$ that is followed by the same $d_1$. This is possible for each of the eight possible $\\{d_n,d_1\\}$ pairs. In each case a solution requires traversing the entire cycle at least once. Therefore, there are eight shortest solutions, of which all longer ones are simply repetitions, and of which the smallest is 105263157894736842.
 
 <br>
