@@ -1,110 +1,67 @@
 ---
 layout: post
 published: true
-title: Lever Box
-date: 2018/04/14
+title: Traffic Lights
+date: 2018/04/21
 ---
 
->Shut the Box is a traditional pub game played with dice and a special box. The rules are as follows: The game’s box features nine tiles bearing the numbers 1 through 9. Those tiles rest on flippable levers, all of which begin the game “open.” To start the game, you roll two standard dice. You can then “shut” any combination of number tiles that add up to the total of your dice. For example, if you roll 8, you could shut the 8; or the 1 and 7; or the 1, 3 and 4; and so on. Once a number is shut, it stays shut. After you’ve shut your chosen numbers, you roll again and repeat the process. (During the game, once the 7, 8 and 9 are shut, you may choose whether to roll one die or two dice. If any of those numbers are still open, you must roll two dice.)
->
->You win if you close all of the numbers before you run out of legal moves — that is, if you can’t shut numbers that add up to your dice count. If you play perfectly, what are your odds of successfully “shutting the box”?
-
-([fivethirtyeight](https://fivethirtyeight.com/features/can-you-find-the-perfect-poker-hand-can-you-shut-this-infernal-box/))
+>We are to walk on a rectilinear grid $N$ blocks north and $E$ blocks east, making $N$ and $E$ crossings of timed intersections. The intersections are not synchronized with each other, but there is a constant time period $T$ such that, for a given intersection, the north-south and east-west signals alternate $T/2$ intervals of displaying "GO" (we may start across) and "NO-GO" (we may not start across), along with the number of seconds until the next signal change.  What should our strategy be, so as to have the lowest expected total time waiting at intersections?
 
 <!--more-->
 
+([fivethirtyeight](https://fivethirtyeight.com/features/how-to-cross-the-street/))
+
 ## Solution
 
-There are so many possible courses of play that it's unmanageable to count the winning ones among them all.  On the other hand, with nine levers there are only $2^9$, or $512$ possible states for the levers to be in, and it is computationally manageable to calculate the odds of victory for each of those states.  
+Give the intersections coordinates: we start at $(E,N)$ and finish at $(0,0)$.  A strategy for a given intersection is a decision about what to do, based on what is displayed on the signals.  We can choose units of time so that $T$ is two units, and we can represent a strategy as a number $S(e,n)$ between $-1$ and $1$. This number represents the difference between the expected remaining total wait after crossing this intersection going east versus going north. That is, it is the expected advantage of going east.  If, $S(e,n)$ is, say, $.35$, that means that the pedestrian should go east unless east's signal is "NO-GO" and has a time-till-go of more than $.355$ units.  Negative strategy numbers represent an advantage for going north.
 
-We already know the odds for one of them: if the levers are all closed (call this state $111111111$), the probability of victory is $1$; i.e., $P(111111111) = 1$. So, $511$ states to go!
+We can start by noticing that, for every $e$, $S(e,0)$ is $1$: we wait to go east no matter what. (Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  That is, $S(i,i)$ is $0$. But we won't need to rely on this observation.)
 
-Fortunately, there's a pattern to this: for a given state $S$, we compute $P(S)$ in terms of $P(S')$ for each possible successor state $S'$.  For instance, we can compute $P(100111111)$ as follows. First, suppose we throw one die. Then we win if we throw a $5$ ($1/6$ chance of that), and we continue if we throw a $2$ ($1/6$ chance of in that case having a $P(110111111)$ chance of winning) or a $3$ ($1/6 \times P(101111111)$ chance of winning that way). So the chance we'll eventually win if we throw one die is:
+As we will see, for every other, "non-trivial," intersection $(e,n)$, strategy depends on the expected total waits, given optimal strategy, from intersections $(e-1,n)$ and $(e,n-1)$.
 
-$$P(100111111|1) = 1/6 + 1/6 \times P(110111111) + 1/6 \times P(101111111)$$
+The expected wait time at a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are the $|s|/2$ of the cases in which we find the preferred-direction signal with less than $|s|$ units to "GO."  Our average wait in those cases is also $|s|/2$, and so:
 
-We can use similar reasoning to compute the odds of winning by throwing two dice: we win if we get a $2$ and a $3$ or a $4$ and a $1$, and we progress if we get two $1$s or a $1$ and a $2$.
+$$W(e,n) = S(e,n)^2/4$$
 
-$$P(100111111|2) = 4 \times 1/36 + 1/36 \times P(110111111) + 2\times 1/36 \times P(101111111)$$
+Call $E(e,n)$ the expected total wait time remaining, given optimal strategy, on arrival at intersection $(e,n)$.  Start with intersections of the form $(e,0)$.  $E(e,0)$ is $e$ times the expected wait for an intersection's east signal to display "GO."  Half of the time, the signal already displays "GO," and the other half of the time, it averages $.5$ units until "GO," so the expected wait is $.25$, and so $S(e,0)$ is $e/4$. Similarly, for every $n$, $E(0,n)$ is $n/4$. 
 
-If we play perfectly, we will choose the higher of these two numbers, which therefore is $P(100111111)$.  Successor states always have more closed levers than earlier states, and so we can proceed by starting with the states with the most closed levers and working backwards to find $P(000000000)$, which is our answer.
+For non-trivial intersections, $E(e,n)$ is calculated from $W(e,n)$, which is the expected wait time at that intersection itself, plus a weighted sum of $E(e-1,n)$ and $E(e,n-1)$, weighted by how likely it is that we'll cross to the east and to the north:
 
-It's still a lot of work, so we automate it.  The Python code below establishes that:
+$$E(e,n) = W(e,n) + \frac{1 + S(e,n)}{2}E(e-1,n) + \frac{1 - S(e,n)}{2}E(e,n-1)$$
 
-$$P(000000000) \approx 0.0976137161704$$
+And we calculate strategies for such intersections as follows. So long as the expected total remaining waits at the two possible next intersections are within $1$ of each other:
+
+$$S(e,n) = E(e,n-1) - E(e-1,n)$$
+
+But if that value is less than $-1$ or greater than $1$, then $S(e,n)$ is $-1$ or $1$.
+
+It's a little complicated, but the upshot is that for non-trivial intersections we can calculate $E(e,n)$ from just $E(e-1,n)$ and $E(e,n-1)$.  This gives us a recurrence that lets us find, starting with the trivial expectations, $E(e,n)$ for any $(e,n)$.
+
+The Python code below implements this.  The resulting strategy always favors heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's because it's always zero-wait at centerline intersections.
 
 ```python
-# A State is a tuple of ten elements, the zeroeth of which
-# is a dummy 0, and elements 1 through 9 are 0 or 1 depending
-# on whether the corresponding lever is open or closed.
-#
-# State_Probs[State] is the probability of winning if we're
-# now in State.  The winning state has probability 1.
+E = 20
+N = 10
 
-State_Probs = {(0,1,1,1,1,1,1,1,1,1) : 1}
+# Populate trivial expecations
 
-# If we're in State, have rolled a total of Sum, and we
-# play optimally, what's the probability of winning?
+Exp = {}
+for e in range(E):
+    Exp[(e,0)] = e/4.0
+for n in range(N):
+    Exp[(0,n)] = n/4.0
 
-def Best_Prob_For(State,Sum):
-		
-	Best_Prob = 0
-
-	# Depending on State and Sum, we might flip anywhere between
-	# 1 and 4 levers.
-
-	for Num_Addends in range(1,4):
-
-		# A coded set of addends is a Num_Addends-long base-9 integer
-		# where digit i (from 0 to 8) means addend is i+1.  We loop over 
-		# all lists of Num_Addends addends from 1 to 9 even though, e.g.,
-		# there is only one set of four distinct addends that sum to a
-		# number less than or equal to 12, because brute force is quick
-		# enough here, so we keep it simple.
-
-		for Coded_Addends in range(9**Num_Addends):
-			Addends = []
-			for _ in range(Num_Addends):
-				Addends.append((Coded_Addends % 9) + 1)
-				Coded_Addends /= 9
-			if not sum(Addends) == Sum \
-				or not len(Addends) == len(set(Addends)) \
-				or 1 in [State[i] for i in Addends]:
-				continue
-			New_State_List = list(State)
-			for i in Addends:
-				New_State_List[i] = 1
-			New_State = tuple(New_State_List)
-			P = Prob_For_State(New_State)
-			if P > Best_Prob:
-				Best_Prob = P
-	return Best_Prob
-
-# How likely is it that we'll win if the box is in State?
-
-def Prob_For_State(State):
-	global State_Probs 
-
-	if State in State_Probs:
-		return State_Probs[State]
-
-	# Throw one die
-	P1 = 0	
-	if State[7:10] == (1,1,1):
-		for i in range(1,7):
-			P1 += 1.0/6 * Best_Prob_For(State,i)
-
-	# Throw two dice
-	P2 = 0
-	for i in range(1,7):
-		for j in range(1,7):
-			P2 += 1.0/36 * Best_Prob_For(State,i+j)
-	P = max(P1,P2)
-	State_Probs[State] = P
-
-	return P
-
-print "P(000000000) =", Prob_For_State((0,0,0,0,0,0,0,0,0,0))
+for e in range(1,E):
+    for n in range(1,N):
+        EE = Exp[(e-1,n)]
+        EN = Exp[(e,n-1)]
+        Strategy = EN - EE
+        if Strategy < -1:
+            Strategy = -1
+        if Strategy > 1:
+            Strategy = 1
+        WaitTimeHere = Strategy**2/4
+        Exp[(e,n)] = WaitTimeHere + EE*(1+Strategy)/2 + EN*(1-Strategy)/2
 ```
 
 <br>
