@@ -40,6 +40,8 @@ It's a little complicated, but the upshot is that for non-trivial intersections 
 The Python code below implements this.  The resulting strategy always favors heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's because it's always zero-wait at centerline intersections.
 
 
+### Expectations
+
 | | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - | 
 10 | 5.010 | 4.810 | 4.510 | 4.210 | 4.010 | 3.810 | 3.510 | 3.210 | 3.010 | 2.810 | 2.510 | 2.210 | 2.010 | 1.810 | 1.510 | 1.210 | 1.010 | 0.810 | 0.510 | 0.210 | 0.0
@@ -53,6 +55,8 @@ The Python code below implements this.  The resulting strategy always favors hea
 2 | 1.92 | 1.72 | 1.62 | 1.42 | 1.32 | 1.22 | 1.02 | 0.92 | 0.82 | 0.82 | 0.72 | 0.72 | 0.62 | 0.62 | 0.72 | 0.72 | 0.82 | 1.02 | 1.22 | 1.62 | 2.0
 1 | 1.71 | 1.51 | 1.41 | 1.31 | 1.21 | 1.01 | 0.91 | 0.91 | 0.81 | 0.71 | 0.71 | 0.71 | 0.71 | 0.71 | 0.71 | 0.81 | 1.01 | 1.21 | 1.41 | 1.81 | 2.2
 0 | 1.50 | 1.40 | 1.30 | 1.10 | 1.00 | 0.90 | 0.90 | 0.80 | 0.70 | 0.70 | 0.70 | 0.70 | 0.70 | 0.80 | 0.80 | 1.00 | 1.10 | 1.30 | 1.60 | 2.00 | 2.5
+
+### Strategies
 
 | | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - |  - | 
