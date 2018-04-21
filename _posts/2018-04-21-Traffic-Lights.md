@@ -1,0 +1,110 @@
+---
+layout: post
+published: true
+title: Lever Box
+date: 2018/04/14
+---
+
+>Shut the Box is a traditional pub game played with dice and a special box. The rules are as follows: The game’s box features nine tiles bearing the numbers 1 through 9. Those tiles rest on flippable levers, all of which begin the game “open.” To start the game, you roll two standard dice. You can then “shut” any combination of number tiles that add up to the total of your dice. For example, if you roll 8, you could shut the 8; or the 1 and 7; or the 1, 3 and 4; and so on. Once a number is shut, it stays shut. After you’ve shut your chosen numbers, you roll again and repeat the process. (During the game, once the 7, 8 and 9 are shut, you may choose whether to roll one die or two dice. If any of those numbers are still open, you must roll two dice.)
+>
+>You win if you close all of the numbers before you run out of legal moves — that is, if you can’t shut numbers that add up to your dice count. If you play perfectly, what are your odds of successfully “shutting the box”?
+
+([fivethirtyeight](https://fivethirtyeight.com/features/can-you-find-the-perfect-poker-hand-can-you-shut-this-infernal-box/))
+
+<!--more-->
+
+## Solution
+
+There are so many possible courses of play that it's unmanageable to count the winning ones among them all.  On the other hand, with nine levers there are only $2^9$, or $512$ possible states for the levers to be in, and it is computationally manageable to calculate the odds of victory for each of those states.  
+
+We already know the odds for one of them: if the levers are all closed (call this state $111111111$), the probability of victory is $1$; i.e., $P(111111111) = 1$. So, $511$ states to go!
+
+Fortunately, there's a pattern to this: for a given state $S$, we compute $P(S)$ in terms of $P(S')$ for each possible successor state $S'$.  For instance, we can compute $P(100111111)$ as follows. First, suppose we throw one die. Then we win if we throw a $5$ ($1/6$ chance of that), and we continue if we throw a $2$ ($1/6$ chance of in that case having a $P(110111111)$ chance of winning) or a $3$ ($1/6 \times P(101111111)$ chance of winning that way). So the chance we'll eventually win if we throw one die is:
+
+$$P(100111111|1) = 1/6 + 1/6 \times P(110111111) + 1/6 \times P(101111111)$$
+
+We can use similar reasoning to compute the odds of winning by throwing two dice: we win if we get a $2$ and a $3$ or a $4$ and a $1$, and we progress if we get two $1$s or a $1$ and a $2$.
+
+$$P(100111111|2) = 4 \times 1/36 + 1/36 \times P(110111111) + 2\times 1/36 \times P(101111111)$$
+
+If we play perfectly, we will choose the higher of these two numbers, which therefore is $P(100111111)$.  Successor states always have more closed levers than earlier states, and so we can proceed by starting with the states with the most closed levers and working backwards to find $P(000000000)$, which is our answer.
+
+It's still a lot of work, so we automate it.  The Python code below establishes that:
+
+$$P(000000000) \approx 0.0976137161704$$
+
+```python
+# A State is a tuple of ten elements, the zeroeth of which
+# is a dummy 0, and elements 1 through 9 are 0 or 1 depending
+# on whether the corresponding lever is open or closed.
+#
+# State_Probs[State] is the probability of winning if we're
+# now in State.  The winning state has probability 1.
+
+State_Probs = {(0,1,1,1,1,1,1,1,1,1) : 1}
+
+# If we're in State, have rolled a total of Sum, and we
+# play optimally, what's the probability of winning?
+
+def Best_Prob_For(State,Sum):
+		
+	Best_Prob = 0
+
+	# Depending on State and Sum, we might flip anywhere between
+	# 1 and 4 levers.
+
+	for Num_Addends in range(1,4):
+
+		# A coded set of addends is a Num_Addends-long base-9 integer
+		# where digit i (from 0 to 8) means addend is i+1.  We loop over 
+		# all lists of Num_Addends addends from 1 to 9 even though, e.g.,
+		# there is only one set of four distinct addends that sum to a
+		# number less than or equal to 12, because brute force is quick
+		# enough here, so we keep it simple.
+
+		for Coded_Addends in range(9**Num_Addends):
+			Addends = []
+			for _ in range(Num_Addends):
+				Addends.append((Coded_Addends % 9) + 1)
+				Coded_Addends /= 9
+			if not sum(Addends) == Sum \
+				or not len(Addends) == len(set(Addends)) \
+				or 1 in [State[i] for i in Addends]:
+				continue
+			New_State_List = list(State)
+			for i in Addends:
+				New_State_List[i] = 1
+			New_State = tuple(New_State_List)
+			P = Prob_For_State(New_State)
+			if P > Best_Prob:
+				Best_Prob = P
+	return Best_Prob
+
+# How likely is it that we'll win if the box is in State?
+
+def Prob_For_State(State):
+	global State_Probs 
+
+	if State in State_Probs:
+		return State_Probs[State]
+
+	# Throw one die
+	P1 = 0	
+	if State[7:10] == (1,1,1):
+		for i in range(1,7):
+			P1 += 1.0/6 * Best_Prob_For(State,i)
+
+	# Throw two dice
+	P2 = 0
+	for i in range(1,7):
+		for j in range(1,7):
+			P2 += 1.0/36 * Best_Prob_For(State,i+j)
+	P = max(P1,P2)
+	State_Probs[State] = P
+
+	return P
+
+print "P(000000000) =", Prob_For_State((0,0,0,0,0,0,0,0,0,0))
+```
+
+<br>
