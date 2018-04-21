@@ -19,7 +19,7 @@ We can start by noticing that, for every $e$, $S(e,0)$ is $1$: we wait to go eas
 
 As we will see, for every other, "non-trivial," intersection $(e,n)$, strategy depends on the expected total waits, given optimal strategy, from intersections $(e-1,n)$ and $(e,n-1)$.
 
-The expected wait time at a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are the $|s|/2$ of the cases in which we find the preferred-direction signal with less than $|s|$ units to "GO."  Our average wait in those cases is also $|s|/2$, and so:
+The expected wait time at a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are the $\|s\|/2$ of the cases in which we find the preferred-direction signal with less than $|s|$ units to "GO."  Our average wait in those cases is also $\|s\|/2$, and so:
 
 $$W(e,n) = S(e,n)^2/4$$
 
