@@ -15,7 +15,7 @@ date: 2018/04/21
 
 Give the intersections coordinates: we start at $(E,N)$, with $E$ and $N$ more intersections to cross going east and going north, and we finish at $(0,0)$.  A strategy for a given intersection is a decision about what to do, based on what is displayed on the signals.  We choose units of time so that $T$ is two units, and we can represent a strategy as a number $S(e,n)$ between $-1$ and $1$. This number represents the difference between the expected remaining total wait after crossing  intersection $(e,n)$ if we go north versus east there. That is, it is the expected advantage of going east.  If, $S(e,n)$ is, say, $.35$, that means that we should go east unless east's signal is "NO-GO" and has a time-until-GO of more than $.35$ units. Negative strategies represent a corresponding preference for going north.
 
-We can start by assuming that, for every $e$, $S(e,0)$ is $1$: when we have reached the northernmost street, we wait to go east no matter what. (This assumption makes sense as long as $T$ is not very large compared to the time it takes to walk a block.)
+We can start by assuming that, for every $e$, $S(e,0)$ is $1$: when we have reached the destination east-west street, we wait to go east no matter what. (This assumption makes sense as long as $T$ is not very large compared to the time it takes to walk a block.)
 
 Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.
 
@@ -47,7 +47,7 @@ The actual 538Riddler question was to find the best moves for starting at inters
 
 ![The grid, depicted.](/img/ben2.png)
 
-The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (which it likely is in a realistic scenario), wait and go east, young man.
+The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (that is, so long as the signals take more than eight seconds to switch, which is a reasonable assumption), wait and go east, young man.
 
 ### Wait-Time Expectations
 
