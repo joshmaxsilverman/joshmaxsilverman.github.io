@@ -39,7 +39,9 @@ It's a little complicated, but the upshot is that for non-trivial intersections 
 
 The Python code below implements this.  The resulting strategy always favors heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's because it's always zero-wait at centerline intersections.
 
-I was quite surprised to find that traversing a $20$ by $10$ grid, which means crossing _thirty_ intersections, the expected wait is just $1.5$ times the length of a "NO-GO" period.
+I was quite surprised to find that traversing a $20$ by $10$ grid, which means crossing _thirty_ intersections, the expected wait is just $1.5$ times the length of a "NO-GO" period.  I suppose that means that a very large percentage of the time, we cross, with zero waiting, in whichever direction is a "GO."  That tends to keep us on a $45$-degree angle for zero cost, and we can depart from that when there are low wait times to skew in the required direction.
+
+The actual 538Riddler question was to find the strategy for starting at intersection $(2,1)$. The answer is $.251$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.251$ left on its clock.
 
 ### Expectations
 
