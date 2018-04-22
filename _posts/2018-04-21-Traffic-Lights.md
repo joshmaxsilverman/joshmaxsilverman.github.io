@@ -89,7 +89,7 @@ N = 10
 
 Exp = {}
 
-# Populate trivial expecations
+# Populate trivial expectations
 for e in range(E+1):
     Exp[(e,0)] = e/4.0
 for n in range(N+1):
