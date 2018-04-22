@@ -15,7 +15,9 @@ date: 2018/04/21
 
 Give the intersections coordinates: we start at $(E,N)$, with $E$ and $N$ more intersections to cross going east and going north, and we finish at $(0,0)$.  A strategy for a given intersection is a decision about what to do, based on what is displayed on the signals.  We choose units of time so that $T$ is two units, and we can represent a strategy as a number $S(e,n)$ between $-1$ and $1$. This number represents the difference between the expected remaining total wait after crossing  intersection $(e,n)$ if we go north versus east there. That is, it is the expected advantage of going east.  If, $S(e,n)$ is, say, $.35$, that means that we should go east unless east's signal is "NO-GO" and has a time-until-GO of more than $.35$ units. Negative strategies represent a corresponding preference for going north.
 
-We can start by noticing that, for every $e$, $S(e,0)$ is $1$: when we have reached the northernmost street, we wait to go east no matter what. (Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.)
+We can start by assuming that, for every $e$, $S(e,0)$ is $1$: when we have reached the northernmost street, we wait to go east no matter what. (This assumption makes sense as long as $T$ is not very large compared to the time it takes to walk a block.)
+
+Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.)
 
 As we will see, for every other, "non-trivial," intersection $(e,n)$, best-strategy depends on the expected total waits, given optimal strategy, from each of the two possible next intersections $(e-1,n)$ and $(e,n-1)$.
 
@@ -84,14 +86,14 @@ N = 10
 Exp = {}
 
 # Populate trivial expecations
-for e in range(E):
+for e in range(E+1):
     Exp[(e,0)] = e/4.0
-for n in range(N):
+for n in range(N+1):
     Exp[(0,n)] = n/4.0
 
 # Now the non-trivial ones
-for e in range(1,E):
-    for n in range(1,N):
+for e in range(1,E+1):
+    for n in range(1,N+1):
         EE = Exp[(e-1,n)]
         EN = Exp[(e,n-1)]
         Strategy = EN - EE
