@@ -21,13 +21,13 @@ Another simple case is an intersection of the form $(i,i)$; by symmetry, neither
 
 As we will see, for every other, "non-trivial," intersection $(e,n)$, best-strategy depends on the expected total waits, given optimal strategy, from each of the two possible next intersections $(e-1,n)$ and $(e,n-1)$.
 
-The expected wait time _at_ a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are those $\|s\|/2$ of cases in which we find the preferred-direction signal with less than $\|s\|$ units to "GO."  Our average wait in those cases is also $\|s\|/2$, and so:
+The expected wait time _at_ a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are those $\|s\|/2$ of cases in which we find the preferred-direction signal showing "NO-GO" and less than $\|s\|$ units to "GO."  Our average wait in those cases is also $\|s\|/2$, and so:
 
 $$W(e,n) = S(e,n)^2/4$$
 
 Call $E(e,n)$ the expected total wait time remaining, given optimal strategy, on arrival at intersection $(e,n)$.  Start with  "trivial" intersections of the form $(e,0)$.  $E(e,0)$ is $e$ times the expected wait for an intersection's east signal to display "GO."  Half of the time, the signal already displays "GO," and the other half of the time, it averages $.5$ units until "GO," so the expected wait is $.25$, and so $S(e,0)$ is $e/4$. Similarly, for every $n$, $E(0,n)$ is $n/4$. 
 
-For non-trivial intersections, $E(e,n)$ is calculated from $W(e,n)$, which is the expected wait time at the intersection itself, plus a weighted sum of $E(e-1,n)$ and $E(e,n-1)$, weighted by how likely it is that we'll cross to the east and to the north:
+For non-trivial intersections, $E(e,n)$ is calculated from $W(e,n)$, which is the expected wait time at the intersection itself, plus a weighted sum of $E(e-1,n)$ and $E(e,n-1)$, weighted by how likely it is, given the strategy $S(e,n)$, that we'll cross to the east and to the north:
 
 $$E(e,n) = W(e,n) + \frac{1 + S(e,n)}{2}E(e-1,n) + \frac{1 - S(e,n)}{2}E(e,n-1)$$
 
