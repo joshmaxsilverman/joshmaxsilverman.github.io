@@ -13,19 +13,19 @@ date: 2018/04/21
 
 ## Solution
 
-Give the intersections coordinates: we start at $(E,N)$, with $E$ and $N$ more intersections to cross going east and going north, and we finish at $(0,0)$.  A strategy for a given intersection is a decision about what to do, based on what is displayed on the signals.  We choose units of time so that $T$ is two units, and we can represent a strategy as a number $S(e,n)$ between $-1$ and $1$. This number represents the difference between the expected remaining total wait after crossing this intersection going north versus going east. That is, it is the expected advantage of going east.  If, $S(e,n)$ is, say, $.35$, that means that we should go east unless east's signal is "NO-GO" and has a time-until-go of more than $.35$ units.  Negative strategy numbers represent an advantage for going north.
+Give the intersections coordinates: we start at $(E,N)$, with $E$ and $N$ more intersections to cross going east and going north, and we finish at $(0,0)$.  A strategy for a given intersection is a decision about what to do, based on what is displayed on the signals.  We choose units of time so that $T$ is two units, and we can represent a strategy as a number $S(e,n)$ between $-1$ and $1$. This number represents the difference between the expected remaining total wait after crossing  intersection $(e,n)$ if we go north versus east there. That is, it is the expected advantage of going east.  If, $S(e,n)$ is, say, $.35$, that means that we should go east unless east's signal is "NO-GO" and has a time-until-GO of more than $.35$ units. Negative strategies represent a corresponding preference for going north.
 
-We can start by noticing that, for every $e$, $S(e,0)$ is $1$: we wait to go east no matter what. (Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  That is, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.)
+We can start by noticing that, for every $e$, $S(e,0)$ is $1$: when we have reached the northernmost street, we wait to go east no matter what. (Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.)
 
-As we will see, for every other, "non-trivial," intersection $(e,n)$, best-strategy depends on the expected total waits, given optimal strategy, from intersections $(e-1,n)$ and $(e,n-1)$.
+As we will see, for every other, "non-trivial," intersection $(e,n)$, best-strategy depends on the expected total waits, given optimal strategy, from each of the two possible next intersections $(e-1,n)$ and $(e,n-1)$.
 
 The expected wait time _at_ a given intersection, $W(e,n)$ is a function of its strategy.  At an intersection with strategy $s$, the only situations in which we wait are those $\|s\|/2$ of cases in which we find the preferred-direction signal with less than $\|s\|$ units to "GO."  Our average wait in those cases is also $\|s\|/2$, and so:
 
 $$W(e,n) = S(e,n)^2/4$$
 
-Call $E(e,n)$ the expected total wait time remaining, given optimal strategy, on arrival at intersection $(e,n)$.  Start with intersections of the form $(e,0)$.  $E(e,0)$ is $e$ times the expected wait for an intersection's east signal to display "GO."  Half of the time, the signal already displays "GO," and the other half of the time, it averages $.5$ units until "GO," so the expected wait is $.25$, and so $S(e,0)$ is $e/4$. Similarly, for every $n$, $E(0,n)$ is $n/4$. 
+Call $E(e,n)$ the expected total wait time remaining, given optimal strategy, on arrival at intersection $(e,n)$.  Start with  "trivial" intersections of the form $(e,0)$.  $E(e,0)$ is $e$ times the expected wait for an intersection's east signal to display "GO."  Half of the time, the signal already displays "GO," and the other half of the time, it averages $.5$ units until "GO," so the expected wait is $.25$, and so $S(e,0)$ is $e/4$. Similarly, for every $n$, $E(0,n)$ is $n/4$. 
 
-For non-trivial intersections, $E(e,n)$ is calculated from $W(e,n)$, which is the expected wait time at that intersection itself, plus a weighted sum of $E(e-1,n)$ and $E(e,n-1)$, weighted by how likely it is that we'll cross to the east and to the north:
+For non-trivial intersections, $E(e,n)$ is calculated from $W(e,n)$, which is the expected wait time at the intersection itself, plus a weighted sum of $E(e-1,n)$ and $E(e,n-1)$, weighted by how likely it is that we'll cross to the east and to the north:
 
 $$E(e,n) = W(e,n) + \frac{1 + S(e,n)}{2}E(e-1,n) + \frac{1 - S(e,n)}{2}E(e,n-1)$$
 
@@ -81,14 +81,15 @@ The actual 538Riddler question was to find the strategy for starting at intersec
 E = 20
 N = 10
 
-# Populate trivial expecations
-
 Exp = {}
+
+# Populate trivial expecations
 for e in range(E):
     Exp[(e,0)] = e/4.0
 for n in range(N):
     Exp[(0,n)] = n/4.0
 
+# Now the non-trivial ones
 for e in range(1,E):
     for n in range(1,N):
         EE = Exp[(e-1,n)]
