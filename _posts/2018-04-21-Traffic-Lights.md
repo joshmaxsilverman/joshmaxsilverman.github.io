@@ -39,6 +39,7 @@ It's a little complicated, but the upshot is that for non-trivial intersections 
 
 The Python code below implements this.  The resulting strategy always favors heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's because it's always zero-wait at centerline intersections.
 
+I was quite surprised to find that traversing a $20$ by $10$ grid, which means crossing _thirty_ intersections, the expected wait is just $1.5$ times the length of a "NO-GO" period.
 
 ### Expectations
 
