@@ -47,7 +47,7 @@ The actual 538Riddler question was to find the best moves for starting at inters
 
 ![The grid, depicted.](/img/ben2.png)
 
-The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (that is, so long as the signals take more than eight seconds to switch, which is a reasonable assumption), wait and go east, young man.
+The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (that is, so long as the signals take more than four seconds to switch, which is a reasonable assumption), wait and go east, young man.
 
 ### Wait-Time Expectations
 
