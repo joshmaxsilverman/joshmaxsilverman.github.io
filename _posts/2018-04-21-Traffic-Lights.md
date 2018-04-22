@@ -37,13 +37,17 @@ $$S(e,n) = E(e,n-1) - E(e-1,n)$$
 
 But if that value is less than $-1$ or greater than $1$, then $S(e,n)$ is $-1$ or $1$.
 
-It's a little complicated, but the upshot is that for non-trivial intersections we can calculate $E(e,n)$ from just $E(e-1,n)$ and $E(e,n-1)$.  This gives us a recurrence that lets us find, starting with the trivial expectations, $E(e,n)$ for any $(e,n)$.
+It's a little complicated, but the upshot is that for non-trivial intersections we can calculate $E(e,n)$ from just $E(e-1,n)$ and $E(e,n-1)$.  This gives us a recurrence that lets us find, starting with the trivial expectations, $E(e,n)$ and $S(e,n)$ for any $(e,n)$.  Values up to $(20,10)$ are displayed below.
 
-The Python code below implements this.  The resulting strategy always favors heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's because it's always zero-wait at centerline intersections.
+The Python code below implements this.  Values up to $(20,10)$ are displayed below.  The resulting strategy always favors, to some degree, heading in a direction, if there is one, that brings the coordinates closer together; that is, towards the $e = n$ "centerline." That's probably because it's always zero-wait at centerline intersections, and when we're close to that line we can normally afford to choose whichever direction is open, again with zero wait.
 
-I was quite surprised to find that traversing a $20$ by $10$ grid, which means crossing _thirty_ intersections, the expected wait is just $1.5$ times the length of a "NO-GO" period (I was surprised enough to take the trouble to verify the results with a Monte Carlo simulation).  I suppose that that means that a very large percentage of the time, we cross in a direction that is already a "GO."  That tends to keep us on a $45$-degree angle for zero cost, and we can depart from that when there are low wait times, to skew in the required direction.
+I was quite surprised to find that in traversing an entire $20$ by $10$ grid, which means crossing _thirty_ intersections, the expected wait is just $1.5$ times the length of a single "NO-GO" period (I was surprised enough to take the trouble to verify it with a Monte Carlo simulation).  
 
-The actual 538Riddler question was to find the best moves for starting at intersection $(2,1)$ with one second remaining on the NO-GO east signal. The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (which it likely is in a realistic scenario), wait and go east, young man.
+The actual 538Riddler question was to find the best moves for starting at intersection $(2,1)$ with one second remaining on the NO-GO east signal. 
+
+![The grid, depicted.](/img/ben2.png)
+
+The answer in our grid is the strategy of $.25$, i.e., cross east if it's a "GO," or wait for the east signal to allow you to cross unless there's more than $.25$, a quarter of the "NO-GO" time (which is $T/8$), left on its clock. To walk through the reasoning that gets us there, we are choosing between crossing north, where we'd have an expected $.5$ remaining total wait time, or east, where we'd have just $.25$ more expected wait.  Waiting to cross east makes sense as long as we don't have to wait more than $.25$ to do it, which would make it cost more than it saves.  So the answer is that, so long as one second is less than $T/8$ (which it likely is in a realistic scenario), wait and go east, young man.
 
 ### Wait-Time Expectations
 
