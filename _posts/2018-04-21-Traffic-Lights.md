@@ -17,7 +17,7 @@ Give the intersections coordinates: we start at $(E,N)$, with $E$ and $N$ more i
 
 We can start by assuming that, for every $e$, $S(e,0)$ is $1$: when we have reached the northernmost street, we wait to go east no matter what. (This assumption makes sense as long as $T$ is not very large compared to the time it takes to walk a block.)
 
-Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.)
+Another simple case is an intersection of the form $(i,i)$; by symmetry, neither direction is preferable, and so it is always best to cross in whichever direction is open.  Therefore, $S(i,i)$ is $0$. While we won't need to rely on this observation, it will help us understand our results.
 
 As we will see, for every other, "non-trivial," intersection $(e,n)$, best-strategy depends on the expected total waits, given optimal strategy, from each of the two possible next intersections $(e-1,n)$ and $(e,n-1)$.
 
