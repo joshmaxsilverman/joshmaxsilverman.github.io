@@ -9,7 +9,7 @@ date: 2018/04/21
 
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/how-to-cross-the-street/))
+(Adapted from the Riddler at [fivethirtyeight](https://fivethirtyeight.com/features/how-to-cross-the-street/))
 
 ## Solution
 
