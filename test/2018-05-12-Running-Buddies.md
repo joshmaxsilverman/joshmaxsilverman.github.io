@@ -4,13 +4,7 @@ published: false
 title: Running Buddies
 date: 2018/05/12
 ---
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-    </script>
-    
+
 >Let’s say there are $N$ people going for a run, and assume that each person’s preferred running speed, call it $X_i$, is independent and normally distributed, with a mean of $\mu$ and a variance of $\sigma^2$. Or, mathematically,
 >
 >$$X_i ∼ N(\mu,\sigma^2)$$
@@ -24,6 +18,13 @@ date: 2018/05/12
 ([fivethirtyeight](https://fivethirtyeight.com/features/how-hard-is-it-to-find-a-running-buddy/))
 
 ## Solution
+
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
 
 There are at least two ambiguities here. 
 
