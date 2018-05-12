@@ -19,13 +19,6 @@ date: 2018/05/12
 
 ## Solution
 
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-    </script>
-
 There are at least two ambiguities here. 
 
 The first is that runners actually get to run with buddies only if they are partitioned into buddy groups, such that for each group, any two members of the group are within $s$ in speed (and they run together, say, at the average of their speeds). But that not only makes the problem very complicated, it also makes it not always true that a runner has a buddy if there's another runner within $s$ in speed.  So we'll assume that runners "having buddies" doesn't entail that they can all run with a buddy, but merely that there are other runners within $s$ in speed.
