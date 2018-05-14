@@ -59,7 +59,7 @@ There's no hope of a closed-form solution to the integral, so we evaluate it num
 ### Code (Python): 
 
 ```python
-from math import exp,pi,sqrt,erf,ceil,log
+from math import exp,pi,sqrt,erf
 
 def integrate(lowLimit,highLimit,function,step):
 	accum = 0
@@ -107,8 +107,3 @@ while s >= LOW_S:
 	s += STEP_FOR_S
 ```
 <br>
-
-
-
-
-
