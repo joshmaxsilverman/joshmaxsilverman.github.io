@@ -67,7 +67,7 @@ The second question asks, "What is the number of meerkats and the number of scor
 
 Finally, "Extra credit: If you start with 100 scorpions and 10 meerkats, what is the maximum number of meerkats you can have and how long would it take for both populations to return to their starting states?"
 
-The Wikipedia page on [Lotka-Volterra Systems](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) tells us that from starting points in the northeast quadrant of the plane whose axes are the numbers of predators and prey, the populations will trace a closed circuit around the non-zero equilibrium point (which in our case is $(5,20)$).  
+The Wikipedia page on [Lotka-Volterra Systems](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) tells us that from starting points in the northeast quadrant of the plane whose axes are the numbers of predators and prey, the populations will soon repeatedly trace a closed circuit around the non-zero equilibrium point (which in our case is $(5,20)$).  
 
 Integrating numerically (code below), we find that starting with $(10,100)$, we trace a full circuit every $13.45$ months, reaching a maximum of $26.90$ predators.  However, the numbers of predators and of prey dip below $1$ each cycle before recovering, so if we don't want to allow regenerating, proper critter parts into our model's ontology, it may be best to think of this as counting population by thousands, millions, or the like.
 
