@@ -26,13 +26,13 @@ The code below does essentially that using recursion.  A game state is a sequenc
 
 Using this code, we find that for 3, 4, 5, 6, and 7 players, the optimal first moves are 5, 7, 4, 4, and 10, and the payoffs for the first player are 21, 17, 12.5, 12.5 and 10, respectively. The optimally-played game of 3 players is 5, 9, 8. For 3 players playing on a clock, the optimal first move is 7, with a payoff of 31.5.
 
-For the continous case, we'll show that Ariel and Beatrice continue to profit optimally from occupying numbers 5 and 9, while now Cassandra is indifferent between any location greater than 7 and less than or equal to 8 (because for any such choice, she will claim stacks 7 and 8). The reasoning will also serve as a proof that the computationally-derived result for the discrete case is correct.  
+For the continous case, we'll show that Ariel and Beatrice continue to profit optimally from occupying numbers 5 and 9, while now Cassandra is indifferent between any location greater than 7 and less than or equal to 9 (because for any such choice, she will claim stacks 7 and 8). The reasoning will also serve as a proof that the computationally-derived result for the discrete case is correct.  
 
 Suppose first that Ariel goes below 5.  Then Beatrice can either choose 9 (to get the 19 payoff), leaving 8, 7, and 6 for Cassandra to pick up (totalling 21) with any chosen number just over 7, or Beatrice can choose a number greater than 8 and less than 9, opening up the 19 payoff to Cassandra while netting only 15 herself, or she can go below 8, opening up 8, 9, and 10 for Cassandra's payoff of 27 while she gets only 13.  So Beatrice will in fact choose 9, Cassandra will secure 6, 7, and 8, leaving Ariel with a payoff of only 15.
 
 Suppose now that Ariel chooses a number greater than 5. If it's greater than 5 but less than or equal to 6, Beatrice will choose 9 and Cassandra will choose any number closer to 5 than Ariels, for a payoff of 15, leaving Ariel with 13. If it's greater than 6, but less than or equal to 7, Beatrice will choose a number greater than or equal to 8, securing a payoff of 27, while Cassandra chooses any number nearer 6 than Ariels, for a payoff of 21, while Ariel gets 13. If greater than 7 but less than 8, Beatrice chooses any number less than or equal to 7 but closer than Ariel's, getting a payoff of 28 while Cassandra ends up with 8, 9, and 10, and Ariel gets nothing.  If it's greater than or equal to 8 but less than 9, then Beatrice choose a number less than or equal to 6 but closer to 6 than Ariel's is to 8, forcing Cassandra to choose 9, leaving Ariel with just 8. If it's 9 or greater, Ariel's payoff is at most 19.
 
-So Ariel will in fact choose 5, Beatrice 9, and Cassandra a number greater than 7 and less than or equal to 8.
+So Ariel will in fact choose 5, Beatrice 9, and Cassandra a number greater than 7 and less than or equal to 9.
 
 ### Code (Python)
 
