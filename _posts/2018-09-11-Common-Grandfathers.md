@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Common Grandfathers
-date: 9/11/2018
+date: 2018/09/11
 ---
 
 >A problem from the 1996 mathematical olympiad of the Republic of Moldova:
