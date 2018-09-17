@@ -23,7 +23,7 @@ We will show that the banker can reach arbitrarily high confidence that you have
 
 You produce a stack of six colored maps, each one a variation on your solution, with the three colors permuted in the six possible ways. The colored regions, but not the border lines, are then painted with an opaque scratch-off coating.
 
-You bring these to the banker.  He chooses a map and indicates any pair of adjacent regions he likes, and you scratch off the material to reveal the colors of those regions, showing that they are distinct.  You then recoat that map, shuffle the maps, and repeat the same challenge-and-reveal protocol until the banker is sufficiently confident that all adjacent regions on all of the maps in your stack are differently colored.  That makes him sufficiently confident that each of your six colorings is a correct solution, and that in the six colorings, each pair of adjacent regions is differently colored in all six possible ways; but he can conclude nothing more specific about the colorings.
+You bring these to the banker.  He chooses a map and indicates any pair of adjacent regions he likes, and you scratch off the material to reveal the colors of those regions, showing that they are distinct.  You then recoat that map, shuffle the maps, and repeat the same challenge-and-reveal protocol until the banker is sufficiently confident that all adjacent regions on all of the maps in your stack are differently colored.  That makes him sufficiently confident that each of your six colorings is a correct solution, and that in the six colorings, each pair of adjacent regions is differently colored in all six possible ways; but he can infer from that nothing more specific about the colorings.
 
 ### Producing full confidence
 
