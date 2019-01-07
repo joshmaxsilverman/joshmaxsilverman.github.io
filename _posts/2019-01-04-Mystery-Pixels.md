@@ -17,9 +17,9 @@ The picture is a little hard to examine, so those who want the grid in a more us
 
 ## Solution
 
-Inspection reveals a few interesting features of the pattern: 
+Inspection reveals two interesting features of the pattern: 
 - The zeroth row and column are all blue.
-- Each row (and each column), apart from the zeroth, exhibits a repeating pattern: the pattern up to but not including the $m=n$ diagonal is followed by its inverse (the order is the same but the colors are switched), after which the original pattern and the inverse are repeated, and so on (again I confess that I did not take the trouble to check all of the rows and columns for this, but it seems to be true).  It follows that the diagonal itself, apart from $(0,0)$, is composed of $1$s.
+- Each row (and each column), apart from the zeroth, exhibits a repeating pattern: the pattern up to but not including the pixel on the $m=n$ diagonal is followed by its inverse (the order is the same but the colors are switched), after which the original pattern and the inverse are repeated, and so on (again I confess that I did not take the trouble to check all of the rows and columns for this, but it seems to be true).  It follows that the diagonal itself, apart from $(0,0)$, is composed of $1$s.
 
 It turns out that these two features uniquely determine the entire pattern.  Let's see how. We'll work in a spreadsheet where $(0,0)$ is at the top-left and where blue and red are replaced by $0$ and $1$.  Start by filling in the edges and diagonal.
 
