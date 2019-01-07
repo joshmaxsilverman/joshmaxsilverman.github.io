@@ -13,7 +13,7 @@ date: 2019/01/04
 
 ![Pixelized square image.](/img/ellenberg.png)
 
-The picture is a little hard to examine, so those who want the grid in a more useful format can get a csv file [here](/files/MyteriousPixels.csv).  The program used to generate it relies on my solution (which I hope is correct, but I haven't manually or automatically compared every pixel).
+The picture is a little hard to examine, so those who want the grid in a more useful format can get a csv file [here](/files/MysteriousPixels.csv).  The program used to generate it relies on my solution (which I hope is correct, but I haven't manually or automatically compared every pixel).
 
 ## Solution
 
@@ -29,11 +29,13 @@ Looking at column $1$, we see that its initial pattern, up to but not including 
 
 ![Row and column 1 complete](/img/2.PNG)
 
-Now we see that the initial pattern for column $2$ is complete: it is $0,0$. So we continue with its inverse, namely $1,1$ and then repeat the pattern $0,0,1,1$ throughout the column.
+Now we see that the initial pattern for column $2$ is complete: it is $0,0$. So we continue with its inverse, namely $1,1$ and then repeat the pattern $0,0,1,1$ throughout the column and corresponding row:
 
 ![Row and column 2 complete](/img/3.PNG)
 
 You get the idea: this can be repeated for every row and column, to determine the value of every pixel in the grid. When we've completed the $n$th row and column, we have all of the $n+1$st row and column up to the diagonal; so we know its base pattern, which we complete with its inverse and finish the row and column by repeating the base and inverse patterns.
+
+![Grid complete](/img/4.PNG)
 
 Mathematically, we can represent the pattern as a recurrence.  Let $f(m,n)$ be the value of the pixel at $(m,n)$.  Then:
 
@@ -41,7 +43,6 @@ Mathematically, we can represent the pattern as a recurrence.  Let $f(m,n)$ be t
 - $f(m,n) = 1 - f(m,n-m)$ for $n \geq m$
 - $f(m,n) = 1 - f(m-n,n)$ for $m > n$
 
-![Grid complete](/img/4.PNG)
 
 ## Tantalizing but maybe dead-end thoughts
 
