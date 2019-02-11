@@ -19,11 +19,11 @@ Reading the question charitably (since "random integer" has no specific meaning)
 
 The product $XYZ$ is divisible by $100$ if and only if it has at least two factors of $2$ and at least two factors of $5$.  The chance that it has at least two factors of $2$ is $1$ minus the chance that it has exactly zero factors of $2$ (which is $(1/2)^3$ or $1/8$) and minus the chance that it has exactly one factor of $2$.  It has exactly one factor of two if one of the three numbers itself has exactly one factor of $2$ and the other two are odd.  A number has exactly one factor of $2$ if it is one of the half of all even numbers that is not divisible by $4$; so $1/2$ times $1/2$, or $1/4$ of all numbers have this property.  So:
 
-$$P(\text{XYZ divisible by 4}) = 1 - 1/8 - 3 \times 1/4 \times (1/2)^2 = 5/16$$
+$$P(\text{XYZ divisible by 4}) = 1 - 1/8 - 3 \times 1/4 \times (1/2)^2 = 11/16$$
 
 The calculation of the chance that $XYZ$ is divisible by $25$ is similar.  In this case, the chance that a number has exactly one factor of $5$ is the chance that it has at least one (which is $1/5$) minus the chance that it has at least two (which is $1/25$). So:
 
-$$P(\text{XYZ divisible by 25}) = 1 - (4/5)^3 - 3 \times (1/5 - 1/25) \times (4/5)^2 = 512/625$$
+$$P(\text{XYZ divisible by 25}) = 1 - (4/5)^3 - 3 \times (1/5 - 1/25) \times (4/5)^2 = 113/625$$
 
 These two probabilities are independent, because every twenty-fifth number divisible by $4$ is also divisible by $25$ (and vice versa).  Therefore the probability that $XYZ$ is divisible by both $4$ and $25$, that is, that it is divisible by $100$, is their product, which is exactly $.1243$.
 
