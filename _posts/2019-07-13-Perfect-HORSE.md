@@ -39,6 +39,6 @@ $$P(a,b,A) = \frac{P(a,b+1,A) + (1+p)P(a+1,b,B)}{2+p}$$
 
 $$P(a,b,B) = \frac{P(a+1,b,B) + (1+p)P(a,b+1,A)}{2+p}$$
 
-These equations allow us to calculate (I used a [spreadsheet](https://docs.google.com/spreadsheets/d/1kGWdQ5Qp9x__X9toe-Qa8vhY1zJXm0qt4A9vs0d7qDM/edit?usp=sharing)) all $50$ remaining values of $P(a,b,t)$, including ultimately $P(0,0,A)$, which is Ann's probability of victory. With a value of $p$ very near $1$, this comes out to approximately $.5488$.
+These equations allow us to calculate (say, with a [spreadsheet](https://docs.google.com/spreadsheets/d/1kGWdQ5Qp9x__X9toe-Qa8vhY1zJXm0qt4A9vs0d7qDM/edit?usp=sharing)) all $50$ remaining values of $P(a,b,t)$, including ultimately $P(0,0,A)$, which is Ann's probability of victory. With a value of $p$ very near $1$, this comes out to approximately $.5488$.
 
 <br>
