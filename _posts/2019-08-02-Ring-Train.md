@@ -30,6 +30,6 @@ $$4+8+\cdots+ 2^{k+1} + 2^{k+1} + 1 = 6(2^k+1) - 9 = 6N - 9$$
 
 (This relies on the fact that $1+2+4+\cdots+2^n = 2^{n+1}-1$.)
 
-So, the algorithm's complexity is on the order of $N$, which cannot be improved upon for any method that involves visiting every car on the train, which is something that obviously any counting method must involve (this is not, of course, a proof that there is no method that improves on this one at all).  And the number of steps per train car for a worst-case $N = 2^k+1$ approaches $6$ for large $k$.
+So, the algorithm's complexity is on the order of $N$, which cannot be improved upon for any method that involves visiting every car on the train, which is something that obviously any counting method must involve (this is not, of course, a proof that there is no method that improves on this at least somewhat).  And the number of steps per train car for a worst-case $N = 2^k+1$ approaches $6$ for large $k$.
 
 <br>
