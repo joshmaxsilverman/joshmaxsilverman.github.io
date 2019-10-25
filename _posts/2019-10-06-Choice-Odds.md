@@ -13,11 +13,11 @@ date: 2019/10/06
 
 ## Solution
 
-Let $B$ (also) name the proposition that choice $B$ is the answer, and let $b$ name the proposition that choice $B$ is one of the two $50:50$ choices. Then, because $P(B)$ is $.7$, and $B$ is true iff $b \,\&\, B$ is true:
+Let $B$ (also) name the proposition that choice $B$ is the answer, and let $b$ name the proposition that choice $B$ is one of the two $50\\! :\\! 50$ choices. Then, because $P(B)$ is $.7$, and $B$ is true iff $b \,\&\, B$ is true:
 
 $$P(b \,\&\, B) = .7$$
 
-If $B$ is not true (with probability $.3$), then one of the other choices is correct and will be one of the $50:50$ choices. Assuming that all incorrect choices have the same chance of being picked, $B$ has a $1/3$ chance of being the other choice selected. So:
+If $B$ is not true (with probability $.3$), then one of the other choices is correct and will be one of the $50\\! :\\! 50$ choices. Assuming that all incorrect choices have the same chance of being picked, $B$ has a $1/3$ chance of being the other choice selected. So:
 
 $$P(b \,\&\, \neg B) = .3 \cdot \frac{1}{3} = .1$$
 
