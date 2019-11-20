@@ -38,7 +38,7 @@ Since we know that $E_1$ is $0$ (a one-sided die is, I guess, a sphere with a ze
 
 Suppose that, as in the case of $E_2$, for some $n$, $E_{n-1}$ is $(n-2)/19$. Then:
 
-$$E_n = \frac{(n-1) \left( \frac{10(n-2)}{19} + 1\right)}{10n - 1)}
+$$E_n = \frac{(n-1) \left( \frac{10(n-2)}{19} + 1\right)}{10n - 1}
 = \frac{n-1}{19}
 $$
 
