@@ -51,7 +51,7 @@ Pi comes into the picture because the [central binomial coefficient](https://en.
 
 $$\frac{2}{1}\cdot\frac{2}{3}\cdot\frac{4}{3}\cdot\frac{4}{5}\cdot\frac{6}{5}\cdot\frac{6}{7}\cdots = \frac{\pi}{2}$$
 
-This equation itself can be proven in [a really cool, demystifying way](https://www-tandfonline-com.stanford.idm.oclc.org/doi/abs/10.1080/00029890.2007.11920484) "using only the mathematics taught in elementary school, that is, basic algebra, the Pythagorean theorem, and the formula $\pi r^2$ for the area of a circle of radius $r$." Don Knuth walks us through Johan Wästlund's proof in a fun lecture called ["Why Pi?"](https://www.youtube.com/watch?v=cI6tt9QfRdo) that I definitely recommend viewing).
+This equation itself can be proven in [a really cool, demystifying way](http://www.math.chalmers.se/~wastlund/monthly.pdf) "using only the mathematics taught in elementary school, that is, basic algebra, the Pythagorean theorem, and the formula $\pi r^2$ for the area of a circle of radius $r$." Don Knuth walks us through Johan Wästlund's proof in a fun lecture called ["Why Pi?"](https://www.youtube.com/watch?v=cI6tt9QfRdo) that I definitely recommend viewing).
 
 It remains to evaluate the sum:
 
