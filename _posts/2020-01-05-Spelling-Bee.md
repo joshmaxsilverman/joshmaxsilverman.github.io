@@ -43,29 +43,31 @@ with open(wordsFile,'r') as wordsFile:
     if len(word) >= 4 and len(set(word)) <=7 and not 's' in word:
       wordsList.append(word)
 
-# Scan word list for words with 7 distinct letters; these can be pangrams, and every
-# bee uses a set of letters that has a pangram.
-pangramTuples = []
-pangramSets = []   # this will let us use the issubset() method to test if a word can be made
-hiveWordLists = {} # dict from pangram letter-tuple to list of words made from the letters
+# Find all words with exactly 7 distinct letters; these can be pangrams, and every
+# bee uses such a set of letters.
+letterClusters = []
+used = []
 for word in wordsList:
   letters = lettersIn(word)
-  if len(letters) == 7 and not letters in pangramTuples:
-      pangramTuples.append(letters)
-      pangramSets.append(set(letters))
-      hiveWordLists[letters] = []
+  if len(letters) == 7 and not letters in used:
+      letterClusters.append( \
+        { 'letterTuple': letters,\
+        'letterSet': set(letters),\
+        'wordList': [] } \
+        )
+      used.append(letters)
 
 # This takes the bulk of run time
 for word in wordsList:
   letters = set(word)
-  for i in range(len(pangramSets)):
-    if letters.issubset(pangramSets[i]):
-      hiveWordLists[pangramTuples[i]].append(word)
+  for i in range(len(letterClusters)):
+    if letters.issubset(letterClusters[i]['letterSet']):
+      letterClusters[i]['wordList'].append(word)
 
 # Score a bee: words are worth their length plus 7 for a pangram
-def score(pangramTuple,centerLetter):
+def score(letterCluster,centerLetter):
   s = 0
-  for word in hiveWordLists[pangramTuple]:
+  for word in letterCluster['wordList']:
     if centerLetter in word:
       if len(word) == 4:
         s+= 1
@@ -76,17 +78,20 @@ def score(pangramTuple,centerLetter):
   return s
 
 # Score all bees, i.e., all pangram 7-tuples and all choices of center letter
-highestSoFar = [0,[]] 
-for pangramTuple in pangramTuples:
-  for centerLetter in pangramTuple:
-    s = score(pangramTuple,centerLetter) 
-    if s > highestSoFar[0]:
-      highestSoFar = [s,[pangramTuple,centerLetter]]
+highestSoFar = {'score':0}
+for letterCluster in letterClusters:
+  for centerLetter in letterCluster['letterTuple']:
+    s = score(letterCluster,centerLetter) 
+    if s > highestSoFar['score']:
+      highestSoFar = {'score': s,\
+       'letterTuple': letterCluster['letterTuple'],\
+       'centerLetter': centerLetter,\
+       'wordList': letterCluster['wordList']}
 
 # Report results
-print 'Maximum score is', highestSoFar[0], 'for the bee [(letters), center letter]:'
-print highestSoFar[1]
-words = [ word for word in hiveWordLists[tuple(highestSoFar[1][0])] if highestSoFar[1][1] in word ]
+print 'Maximum score is', highestSoFar['score'], 'for the bee [(letters), center letter]:'
+print highestSoFar['letterTuple'], ',', highestSoFar['centerLetter']
+words = [ word for word in highestSoFar['wordList'] if highestSoFar['centerLetter'] in word ]
 print 'This bee has', len(words), 'words:'
 for i in range(len(words)):
   if len(set(words[i])) == 7:
