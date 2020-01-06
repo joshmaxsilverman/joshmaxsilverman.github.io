@@ -20,6 +20,8 @@ This is a computational problem, so I'll let the code mostly speak for itself. A
 
 The code and output is supplied below. The winning bee, which produces 537 words for a score of 3,898, has letters AEGINRT, with R in the center.
 
+Note: there were errors in the originally posted code; see the comments below.
+
 ```python
 # Find the highest possible score for the NYT Spelling Bee game, using a supplied
 # word list as the dictionary. Runs in 23.3sec in pypy (a fast way to run
