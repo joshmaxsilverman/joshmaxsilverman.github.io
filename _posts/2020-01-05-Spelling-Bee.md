@@ -18,13 +18,13 @@ date: 2020-01-05
 
 This is a computational problem, so I'll let the code mostly speak for itself. A brute-force approach is feasible because there are "only" about 56,000 possible bees. The requirement that there be at least one pangram is what really constrains that number down from the millions that otherwise would be possible. There are about 8,000 sets of seven letters that yield pangrams (call these pangram-sets), and we only need to determine the words that are generable from each of them. Our approach, then, is to find all pangram-sets, and then to assign to each of them a list of all the words that can be formed from its letters. Finally, for each pangram-set we score the seven bees that can be made from it, and we report the over-all winner. 
 
-The code and output is supplied below. The winning bee, which produces 693 words for a score of 4,036, has letters AEGINRT, with R in the center.
+The code and output is supplied below. The winning bee, which produces 693 words for a score of 3,898, has letters AEGINRT, with R in the center.
 
 The Python coding was interesting to me (not a software person) partly because it was an exercise in managing the differences among three different data-structures that are collections of items: lists, tuples, and sets. Lists are ordered, alterable, and quickly addressable by index but not by member. Sets are unordered, immutable, and non-redundant, but quickly addressable by member (if you want to know whether an item is a member of a collection, a set is way speedier than a list). Tuples are ordered, immutable, quickly addressable by index but not by member, and able to serve as keys in dictionary objects (as are "frozen sets"). This task involved switching among the three as necessary for performance, logic, and programmical correctness.
 
 ```python
 # Find the highest possible score for the NYT Spelling Bee game, using a supplied
-# word list as the dictionary. Runs in 23.6sec in pypy (a fast way to run
+# word list as the dictionary. Runs in 28.3sec in pypy (a fast way to run
 # python code) on an older PC.
 
 wordsFile = "538Words.txt"
@@ -73,7 +73,10 @@ def score(pangramTuple,centerLetter):
   s = 0
   for word in hiveWordLists[pangramTuple]:
     if centerLetter in word:
-      s += len(word)
+      if len(word) == 4:
+        s+= 1
+      else:
+        s += len(word)
       if len(lettersIn(word)) == 7:
         s += 7
   return s
@@ -105,7 +108,7 @@ for i in range(len(answerList)):
 print ""
 
 # The output:
-# Maximum score is 4036 for the bee [(letters), center letter]:
+# Maximum score is 3898 for the bee [(letters), center letter]:
 # [('a', 'e', 'g', 'i', 'n', 'r', 't'), 'r']
 # This bee has  693 words:
 # aerate  AERATING  aerie  aerier  agar  ager  agger  
@@ -185,7 +188,7 @@ print ""
 # TREATING  tree  treeing  treen  tret  triage  triaging  
 # triene  triennia  trier  trig  trigger  triggering  trigging  
 # trine  trining  trinitarian  trite  triter  
-# [Finished in 23.6s]
+# [Finished in 28.3s]
 ```
 
 <br>
