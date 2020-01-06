@@ -65,9 +65,9 @@ for word in wordsList:
       cluster['wordList'].append(word)
 
 # Score a bee: words are worth their length plus 7 for a pangram
-def score(letterCluster,centerLetter):
+def score(cluster,centerLetter):
   s = 0
-  for word in letterCluster['wordList']:
+  for word in cluster['wordList']:
     if centerLetter in word:
       if len(word) == 4:
         s+= 1
@@ -79,14 +79,14 @@ def score(letterCluster,centerLetter):
 
 # Score all bees, i.e., all pangram 7-tuples and all choices of center letter
 highestSoFar = {'score':0}
-for letterCluster in letterClusters:
-  for centerLetter in letterCluster['letterTuple']:
-    s = score(letterCluster,centerLetter) 
+for cluster in letterClusters:
+  for centerLetter in cluster['letterTuple']:
+    s = score(cluster,centerLetter) 
     if s > highestSoFar['score']:
       highestSoFar = {'score': s,\
-       'letterTuple': letterCluster['letterTuple'],\
+       'letterTuple': cluster['letterTuple'],\
        'centerLetter': centerLetter,\
-       'wordList': letterCluster['wordList']}
+       'wordList': cluster['wordList']}
 
 # Report results
 print 'Maximum score is', highestSoFar['score'], 'for the bee [(letters), center letter]:'
