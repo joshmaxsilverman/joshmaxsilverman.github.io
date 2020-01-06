@@ -57,12 +57,12 @@ for word in wordsList:
         )
       used.append(letters)
 
-# This takes the bulk of run time
+# This takes the bulk of run time. Looping over words first saves a bunch of 'set' calls.
 for word in wordsList:
   letters = set(word)
-  for i in range(len(letterClusters)):
-    if letters.issubset(letterClusters[i]['letterSet']):
-      letterClusters[i]['wordList'].append(word)
+  for cluster in letterClusters:
+    if letters.issubset(cluster['letterSet']):
+      cluster['wordList'].append(word)
 
 # Score a bee: words are worth their length plus 7 for a pangram
 def score(letterCluster,centerLetter):
