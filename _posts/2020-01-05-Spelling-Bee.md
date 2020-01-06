@@ -22,34 +22,30 @@ The code and output is supplied below. The winning bee, which produces 537 words
 
 ```python
 # Find the highest possible score for the NYT Spelling Bee game, using a supplied
-# word list as the dictionary. Runs in 23.6sec in pypy (a fast way to run
+# word list as the dictionary. Runs in 23.3sec in pypy (a fast way to run
 # python code) on an older PC.
 
 wordsFile = "538Words.txt"
 
-# Return sorted list of distinct letters in the word
+# Return sorted tuple of distinct letters in the word
 def lettersIn(word):
-  letters = []
-  for letter in word:
-    if not letter in letters:
-      letters.append(letter)
+  letters = list(set(word))
   letters.sort()
-  return letters
+  return tuple(letters)
 
 # Get list of bee-possible words
 wordsList = []
 with open(wordsFile,'r') as wordsFile:
   for word in wordsFile:
     word = word[:-1] # pare trainling newline character
-    letters = lettersIn(word)
-    if len(word) >= 4 and len(letters) <=7 and not 's' in word:
+    if len(word) >= 4 and len(set(word)) <=7 and not 's' in word:
       wordsList.append(word)
 
 # Scan word list for words with 7 distinct letters; these can be pangrams, and every
 # bee uses a set of letters that has a pangram.
 pangramTuples = []
 for word in wordsList:
-  letters = tuple(lettersIn(word))
+  letters = lettersIn(word)
   if len(letters) == 7 and not letters in pangramTuples:
       pangramTuples.append(letters)
 
@@ -75,7 +71,7 @@ def score(pangramTuple,centerLetter):
         s+= 1
       else:
         s += len(word)
-      if len(lettersIn(word)) == 7:
+      if len(set(word)) == 7:
         s += 7
   return s
 
@@ -90,17 +86,13 @@ for pangramTuple in pangramTuples:
 # Report results
 print 'Maximum score is', highestSoFar[0], 'for the bee [(letters), center letter]:'
 print highestSoFar[1]
-words = hiveWordLists[tuple(highestSoFar[1][0])]
-print 'This bee has ', len([ word for word in words if highestSoFar[1][1] in word]), 'words:'
-answerList = []
-for word in words:
-  if highestSoFar[1][1] in word:
-    answerList.append(word)
-for i in range(len(answerList)):
-  if len(lettersIn(answerList[i])) == 7:
-    print answerList[i].upper(), "",
+words = [ word for word in hiveWordLists[tuple(highestSoFar[1][0])] if highestSoFar[1][1] in word ]
+print 'This bee has', len(words), 'words:'
+for i in range(len(words)):
+  if len(set(words[i])) == 7:
+    print words[i].upper(), "",
   else:
-    print answerList[i], "",
+    print words[i], "",
   if ((i+1)/7.0).is_integer():
     print ""
 print ""
@@ -186,7 +178,7 @@ print ""
 # TREATING  tree  treeing  treen  tret  triage  triaging  
 # triene  triennia  trier  trig  trigger  triggering  trigging  
 # trine  trining  trinitarian  trite  triter  
-# [Finished in 25.3s]
+# [Finished in 23.3s]
 ```
 
 <br>
