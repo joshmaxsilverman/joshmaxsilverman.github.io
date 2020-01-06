@@ -44,16 +44,14 @@ with open(wordsFile,'r') as wordsFile:
 # Scan word list for words with 7 distinct letters; these can be pangrams, and every
 # bee uses a set of letters that has a pangram.
 pangramTuples = []
+pangramSets = []   # this will let us use the issubset() method to test if a word can be made
+hiveWordLists = {} # dict from pangram letter-tuple to list of words made from the letters
 for word in wordsList:
   letters = lettersIn(word)
   if len(letters) == 7 and not letters in pangramTuples:
       pangramTuples.append(letters)
-
-hiveWordLists = {} # dict from pangram letter-tuple to list of words made from the letters
-pangramSets = []   # this will let us use the issubset() method to test if a word can be made
-for pangramTuple in pangramTuples:
-  hiveWordLists[pangramTuple] = []
-  pangramSets.append(set(pangramTuple))
+      pangramSets.append(set(letters))
+      hiveWordLists[letters] = []
 
 # This takes the bulk of run time
 for word in wordsList:
