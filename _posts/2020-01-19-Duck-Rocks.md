@@ -13,6 +13,8 @@ date: 2020-01-19
 >
 >Extra credit: What if there are three or more ducks? If they all start in the middle rock, on average, how long will it take until they are all at the same rock again?
 
+[(fivethirtyeight)](https://fivethirtyeight.com/features/can-you-track-the-delirious-ducks/)
+
 ## Solution
 
 If we start at minute $0$ on the center rock, then notice that each duck is always on side rocks at odd-numbered minutes and on non-side rocks at even-numbered minutes.
