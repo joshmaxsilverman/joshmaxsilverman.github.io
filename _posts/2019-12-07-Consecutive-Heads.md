@@ -44,6 +44,6 @@ $$\frac{0}{2}, \frac{1}{4}, \frac{1}{8}, \frac{2}{16}, \frac{3}{32}, \frac{5}{64
 
 Now, if we flip a coin until we get $HH$ (and stop), we are virtually certain (probability $1$) to succeed. But of course succeeding means either succeeding at the first flip, or at the second, or at the third, and so on. So we have established an interesting fact:
 
-$$\sum_{n=1}^\infty \frac{F_{n-1}}{n^2} = \frac{0}{2} + \frac{1}{4} + \frac{1}{8} + \frac{2}{16} + \frac{3}{32} + \frac{5}{64} + \ldots = 1$$
+$$\sum_{n=1}^\infty \frac{F_{n-1}}{2^n} = \frac{0}{2} + \frac{1}{4} + \frac{1}{8} + \frac{2}{16} + \frac{3}{32} + \frac{5}{64} + \ldots = 1$$
 
 <br>
