@@ -19,14 +19,14 @@ The simulation makes two simplifications: first, that there are a finite number 
 
 We'll randomly drop circles onto this surface, where the ratio of the area of a circle to that of the surface is the same as that of a cap to the sphere as specified in the problem.
 
-Using the code below, the $1000$-repetition average was about $567$ (and not very stable at that many reps). Surprisingly high!
+Using the code below, the $10,000$-repetition average was about $565.4$ (and not very stable at that many reps). Surprisingly high!
 
 ```python
 from random import randint
 from math import sqrt,pi,cos
 
 resolution = 500
-reps = 1000
+reps = 10000
 
 pointsList = [(x,y) for x in range(resolution) for y in range(resolution)]
 
