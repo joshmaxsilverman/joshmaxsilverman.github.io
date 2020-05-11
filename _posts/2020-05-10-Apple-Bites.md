@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Apple Bites
-date: 2020-04-12
+date: 2020-05-11
 ---
 
 >A spherical cap is a portion of the sphere's surface bounded by a circle. Given a sphere of radius $R$, how many randomly-placed caps are needed on average to cover the sphere? Assume each cap measures $R/2$ across its curved surface. (See the original framing in terms of bites of an apple at the link below.)
