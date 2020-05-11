@@ -13,7 +13,7 @@ date: 2020-04-12
 
 ## Solution
 
-This seems to be an explored, but unsolved problem in math, and so perhaps a wee bit unfair to pose as a "Riddle!" There are published results about bounds and limits, but rather than dig into those, let's just do a simulation and get a ballpark answer.
+This seems to be an [explored](https://projecteuclid-org.stanford.idm.oclc.org/euclid.acta/1485890413), but unsolved problem in math, and so perhaps a wee bit unfair to pose as a "Riddle!" There are published results about bounds and limits, but rather than dig into those, let's just do a simulation and get a ballpark answer.
 
 The simulation makes two simplifications: first, that there are a finite number of points on the surface (in particular, $500^2$), and second, that the surface is not a sphere at all but a 2-dimensional flat, square space that is wrapped around like a cylinder, except in both dimensions (like a torus topologically), so that a circle placed on it that goes past the right (or top) edge covers also part of the left (or bottom) part of the square. This surface is like a sphere in that apart from an arbitrary (in this case $(x,y)$) coordinate system, there really are no distinguished points, but its geometry is different (e.g., familiar Euclidean principles are true of its triangles, unlike those on a sphere). This makes things simpler because, unlike on a sphere, there is a very natural way to evenly populate this surface with $500^2$ points, i.e., in a $500 \times 500$ grid, and also because we can drop circles on it rather than three-dimensional caps. 
 
