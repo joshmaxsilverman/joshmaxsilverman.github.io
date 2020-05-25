@@ -72,7 +72,7 @@ P_0 &\approx \frac{1}{2}P_1 \\\
 P_1 &\approx \frac{1}{2}P_{-1} + \frac{1}{2}P_0 + \frac{1}{2}P_1
 \end{align}$$
 
-which we can solve to find $P_{-1} = P_0$ and $P_{1} = 2P_{-1}$ so that $\gamma = 2$ and $f_\text{win} = 2/(2+1).= 2/3.$ Simulating to longer times, the system does indeed converge to $f_\text{win} \approx 0.66\ldots$
+which we can solve to find $P_{-1} = P_0$ and $P_{1} = 2P_{-1}$ so that $\gamma = 2$ and $f_\text{win} = 2/(2+1).= 2/3.$ Simulating to longer times, the system does indeed converge to $f_\text{win} \approx 0.6\bar{6}.$
 
 **Generalizing Coin B** 
 
