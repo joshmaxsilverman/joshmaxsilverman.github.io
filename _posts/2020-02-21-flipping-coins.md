@@ -1,8 +1,8 @@
 ---
 layout: post
-published: True
+published: true
 title: Flipping Coins to Freedom
-date: 2020/02/21
+date: 2020-02-21
 ---
 
 >Question
