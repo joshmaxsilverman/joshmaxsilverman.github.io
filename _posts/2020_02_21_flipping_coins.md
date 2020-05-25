@@ -13,8 +13,6 @@ date: 2020/02/21
 
 ## Solution
 
-<br>
-
 The first thing to notice is that, in isolation, the coins have the same outcomes. Coin B’s distribution is just twice as wide as Coin A’s.
 
 If we imagine the game score as a line, then position $0$ is “neutral” territory, positions $1$ to $100$ are “positive” territory and positions $-100$ to $-1$ are “negative” territory. Coin A moves the score by $\pm 1$ while Coin B moves it by $\pm 2.$ 
@@ -105,3 +103,5 @@ If $r > 0.5$ then it will drift to the right more than $50\%$ of the time, obvia
 In the second case, the winning percentage is simply 
 
 $$f_\text{win} = \sum\limits_{k=N/2+1}^N\binom{100}{k} r^k (1-r)^{N-k}.$$
+
+<br>
