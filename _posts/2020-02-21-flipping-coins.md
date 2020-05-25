@@ -88,6 +88,7 @@ P_0 &= \frac{1}{2}P_1 \\\
 P_1 &= \frac{1}{2}P_0 + \frac{1}{2}P_2 \\\
 P_2 &= \frac{1}{2}P_{-1}+\frac{1}{2}P_1+\frac{1}{2}P_2
 \end{align}$$
+
 which produces $P_0 = \frac{1}{2}P_1,$ $P_1 = \frac{2}{3}P_2,$ and $P_1 = \frac{2}{3}P_2$ so that $P_2 = 3P_0$ and 
 
 $$f_\text{win} \approx \frac{\gamma}{\gamma + 1} = \dfrac{3}{4}.$$
@@ -100,6 +101,7 @@ When Coin A is biased, so that it lands $+1$ with probability $r$ and $-1$ with 
 
 If $r < 0.5,$ then it will drift to the left and it makes no sense to use since Coin B by itself offers us a winning percentage of slightly less than $50\%.$ ($50\%$ minus the probability of zero, $\binom{100}{50}\frac{1}{2^{100}}.$)
 If $r > 0.5$ then it will drift to the right more than $50\%$ of the time, obviating the use of Coin B. 
+
 In the second case, the winning percentage is simply 
 
 $$f_\text{win} = \sum\limits_{k=N/2+1}^N\binom{100}{k} r^k (1-r)^{N-k}.$$
