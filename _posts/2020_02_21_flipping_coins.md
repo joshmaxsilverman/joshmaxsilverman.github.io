@@ -1,7 +1,7 @@
 ---
 layout: post
 published: True
-title: 
+title: Flipping Coins to Freedom
 date: 2020/02/21
 ---
 
