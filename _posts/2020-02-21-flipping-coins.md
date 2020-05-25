@@ -95,7 +95,7 @@ $$f_\text{win} \approx \frac{\gamma}{\gamma + 1} = \dfrac{3}{4}.$$
 
 In general, all the probabilities between $P_0$ and $P_N$ will be the average of their neighboring probabilities, ensuring the appearance of the $N$-step staircase between the symmetric positive/negative distributions.
 
-** Extra credit**
+**Extra credit**
 
 When Coin A is biased, so that it lands $+1$ with probability $r$ and $-1$ with probability $1-r,$ the optimal strategy changes. 
 
