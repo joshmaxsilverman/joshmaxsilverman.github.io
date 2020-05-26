@@ -54,7 +54,7 @@ f_\text{win} &= \frac{A_+}{A_- + A_+ + P_0} \\\
 &= \frac{A_+}{A_+/\gamma + A_+ + P_0},
 \end{align}$$
 
-but as the system evolves, almost all probability ends up in $A_-$ and $A_+$ so we can ignore the effect of $P_0$, and $$f_\text{win} \approx \frac{\gamma}{\gamma+1}.$$
+but as the system evolves, almost all probability ends up in $A_-$ and $A_+$ so we can ignore the effect of $P_0$, and $$f_\text{win} \approx \dfrac{\gamma}{\gamma+1}.$$
 
 To find $\gamma$, we can look at the update equations from one moment to the next for the positions near the boundary:
 
@@ -68,7 +68,8 @@ On first look this seems like a mess, but we can make some simple approximations
 
 - at long times the distribution won’t change much in one time step, so $P(t+1) \approx P(t),$ so we can drop the time dependence.
 - at long times the distribution is broad, so we can assume $P_{-3} \approx P_{-1}$ and $P_1 \approx P_2.$ 
-- With these replacements, the update equations become self-consistent:
+
+With these replacements, the update equations become self-consistent:
 
 $$\begin{align}
 P_{-1} &\approx \frac{1}{2}P_{-1} + \frac{1}{2}P_0 \\\
@@ -76,7 +77,7 @@ P_0 &\approx \frac{1}{2}P_1 \\\
 P_1 &\approx \frac{1}{2}P_{-1} + \frac{1}{2}P_0 + \frac{1}{2}P_1
 \end{align}$$
 
-which we can solve to find $P_{-1} = P_0$ and $P_{1} = 2P_{-1}$ so that $\gamma = 2$ and $f_\text{win} = 2/(2+1).= 2/3.$ Simulating to longer times, the system does indeed converge to $f_\text{win} \approx 0.6\bar{6}.$
+which we can solve to find $P_{-1} = P_0$ and $P_{1} = 2P_{-1}$ so that $\gamma = 2$ and $f_\text{win} = 2/(2+1) = 2/3.$ Simulating to longer times, the system does indeed converge to $f_\text{win} \approx 0.6\bar{6}.$
 
 **Generalizing Coin B** 
 
