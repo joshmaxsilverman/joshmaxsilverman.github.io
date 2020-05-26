@@ -19,7 +19,7 @@ In light of the nested spam threads, when I first thought about this I braced fo
 
 The crucial insight is that new spam messages can spawn with equal opportunity in reply to any existing spam message. This means that whenever a new spam message is born the spam rate increases by 1 unit, $\lambda(S) = \left(1+S\right)\text{ spam / day}.$
 
-imgimgimg
+![](img/2020-04-11-spam-diagram.png)
 
 
 In other words, it's an exponential growth process: each timeline exists to make copies of itself, which we can see with a bit of cartoon calculation:
