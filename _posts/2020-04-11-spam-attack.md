@@ -41,7 +41,12 @@ $$S = e^{\lambda t} - 1.$$
 
 Writing out the rate of change for the first few probabilities
 
-$$\dot{p}_0 = -\lambda p_0$<br>$\dot{p}_1 = \lambda \left(p_0 - 2p_1\right)$<br>$\dot{p}_2 = \lambda \left(2p_1 - 3p_2\right)$<br>$\dot{p}_3 = \lambda \left(3p_2 - 4p_3\right)$$
+$$\begin{align}
+\dot{p}_0 &= -\lambda p_0 \\
+\dot{p}_1 &= \lambda \left(p_0 - 2p_1\right) \\
+\dot{p}_2 &= \lambda \left(2p_1 - 3p_2\right) \\
+\dot{p}_3 &= \lambda \left(3p_2 - 4p_3\right)
+\end{align}$$
 
 
 shows that the rate equation has the general form $\dot{p}_n = \lambda\left(n p_{n-1} - (n+1)p_n\right).$ 
