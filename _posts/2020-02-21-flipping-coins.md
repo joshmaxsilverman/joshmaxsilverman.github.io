@@ -7,7 +7,7 @@ date: 2020-02-21
 
 ## Question
 
->You can make 100 coin flips with either of two coins, **Coina A** worth $\pm1,$ and **Coin B** worth $\pm2.$ You survive if you end up with a positive score. How should you flip the coins to maximize your chances?
+>You can make 100 coin flips with either of two coins, **Coin A** worth $\pm1,$ and **Coin B** worth $\pm2.$ You survive if you end up with a positive score. How should you flip the coins to maximize your chances?
 
 <!--more-->
 
