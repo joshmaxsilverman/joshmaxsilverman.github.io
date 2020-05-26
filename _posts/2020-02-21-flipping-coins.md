@@ -43,18 +43,18 @@ However, $100$ steps is rather arbitrary and doesn’t yield much insight compar
 
 Because the transition rates are symmetric for the positive and negative territories, the shape of the distribution on either side will be identical (accounting for the fact that the step size is $2$ in the negative territory). In other words, $$P(x) = \gamma \cdot P(-x/2),$$ where $\gamma$ is some scale-factor greater than $1.$
 
-Adding all negative outcomes and all positive outcomes, the cumulative probability of a negative score $A_{-}$ and the cumulative probability of a positive score $A_+$ are related by
+Adding all negative outcomes and all positive outcomes, the cumulative probability of a negative score $S_{-}$ and the cumulative probability of a positive score $S_+$ are related by
 
-$$A_{+} = \gamma A_{-}.$$
+$$S_{+} = \gamma S_{-}.$$
 
 Including the probability of getting a $0,$ the winning percentage is 
 
 $$\begin{align}
-f_\text{win} &= \frac{A_+}{A_- + A_+ + P_0} \\\
-&= \frac{A_+}{A_+/\gamma + A_+ + P_0},
+f_\text{win} &= \frac{S_+}{S_- + S_+ + P_0} \\\
+&= \frac{S_+}{S_+/\gamma + S_+ + P_0},
 \end{align}$$
 
-but as the system evolves, almost all probability ends up in $A_-$ and $A_+$ so we can ignore the effect of $P_0$, and $$f_\text{win} \approx \dfrac{\gamma}{\gamma+1}.$$
+but as the system evolves, almost all probability ends up in $S_-$ and $S_+$ so we can ignore the effect of $P_0$, and $$f_\text{win} \approx \dfrac{\gamma}{\gamma+1}.$$
 
 To find $\gamma$, we can look at the update equations from one moment to the next for the positions near the boundary:
 
