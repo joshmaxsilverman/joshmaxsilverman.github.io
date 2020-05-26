@@ -57,7 +57,7 @@ for ltr in word:
         mackerel_states[zero_idx[0]] += 1
 ```
 
-and accessing the most flagrant state by how mackerel-full it is,`states[max(mackerel_states, key=mackerel_states.get)]`, we get $\texttt{ohio}$ which has $11342$ mackerel words. The code takes $\approx3.5\, \textrm{s}$ to run.
+and accessing the most flagrant state by how mackerel-full it is, `states[max(mackerel_states, key=mackerel_states.get)]`, we get $\texttt{ohio}$ which has $11342$ mackerel words. The code takes $\approx3.5\, \textrm{s}$ to run.
 
 Reverse-sorting the word list by word length, we can quickly find that the longest mackerels are $\texttt{counterproductivenesses}$ which is mackerel for Alabama, and $\texttt{hydrochlorofluorocarbon}$ which is mackerel for Mississippi, both of which have $23$ letters.
 
