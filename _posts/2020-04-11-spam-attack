@@ -1,8 +1,17 @@
+---
+layout: post
+published: true
+title: Spam Attack
+date: 2020/04/11
+---
 
-**The problem**
+>A post can accumulate spam comments, and each spam comment can accumulate spam comments. If each open reply thread accumulates spam at a rate of $1$ reply per day, then what is the expected number of spam posts by the end of a three day weekend?
 
-This weekend's ![FiveThirtyEight classic](https://fivethirtyeight.com/features/can-you-catch-the-free-t-shirt/) is about spam posts. In short, a post can accumulate spam comments, and each spam comment can accumulate spam comments. If each open reply thread accumulates spam at a rate of $1$ reply per day, then what is the expected number of spam posts by the end of a three day weekend?
+<!--more-->
 
+([fivethirtyeight](https://fivethirtyeight.com/features/can-you-catch-the-free-t-shirt/))
+
+## Solution
 
 **Intuitive solution**
 
@@ -131,3 +140,5 @@ $$\frac12 = 1 - (1-e^{-t\lambda})^{S_\text{median}+1}$$
 yields
 
 $$\boxed{S_\text{median} = \Biggl\lceil -\left(\dfrac{1}{\log_2\left(1-e^{-3}\right)} + 1\right)\Biggr\rceil = 13\text { spam posts}}$$
+
+<br>
