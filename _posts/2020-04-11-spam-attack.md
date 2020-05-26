@@ -86,13 +86,25 @@ can be solved with your favorite method, which might be [the method of character
 
 $$\boxed{G(t,z) = \dfrac{1}{z + (1-z)e^{t\lambda}}}.$$
 
+$$\begin{array}{c|c}
+\lambda & \langle\textbf{spam}(\text{3 days})\rangle \hline \\ 
+1 & 19 \\
+2 & 402 \\
+3 & 8102 \\
+4 & 162754 \\
+5 & 3269016 \\
+6 & 65659968 \\
+7 & 1318815733 \\
+8 & 26489122129 \\
+9 & 532048240601 \\
+10 & 10686474581523 \\
+11 & 214643579785915 \\
+12 & 4311231547115193
+\end{array}$$
 
-<h4>Mean</h4>
-
-
+**Mean**
 
 Upon taking $\partial_z G(t,z),$ gives the mean $\boxed{\langle S\rangle = e^{t\lambda} - 1}.$
-
 
 Plugging in $\lambda =$ 1 post per day and $t=$ 3 days we get an expectation of $e^3 - 1 \approx 19.08$ posts by day $3.$
 
