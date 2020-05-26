@@ -15,7 +15,7 @@ date: 2020-05-22
 
 ## Solution
 
-The straightforward approach to this puzzle is to loop over the list of $\num{200000}+$ words and then loop over the list of $50$ states to check if they have any letters in common, which is a loop of order $N_\text{word}N_\text{state}\langle \ell_\text{word}\rangle\langle \ell_\text{state}\rangle.$ 
+The straightforward approach to this puzzle is to loop over the list of $200000+$ words and then loop over the list of $50$ states to check if they have any letters in common, which is a loop of order $N_\text{word}N_\text{state}\langle \ell_\text{word}\rangle\langle \ell_\text{state}\rangle.$ 
 
 The only interesting idea here is to make a "typewriter" (the dictionary `letter_state`) that maps directly from *letter* to a $50-$entry vector the encodes which *states* the letter appears in. This cuts out the factor of $N_\text{state}\langle \ell_\text{state}\rangle$ from the main loop. It's simple to build, we just loop over the list of states and record when they contain a letter in the dictionary by adding the $1$-hot vector $\left(0 \ldots j \ldots 0\right)$ where $j$ is the number of the state. 
 
@@ -36,7 +36,7 @@ for i in range(50):
         letter_state[ltr] += np.array([1 if j == i else 0 for j in range(50)])
 ```
 
-which takes $\approx\SI{6}{\milli\second}.$ At the end of this, we're left with a map $f(\text{\letter})\rightarrow \{0,1\}^{\otimes 50}$ of vectors $\mathbf{l}_\text{a},\ldots,\mathbf{l}_\text{z}.$
+which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\text{\letter})\rightarrow \{0,1\}^{\otimes 50}$ of vectors $\mathbf{l}_\text{a},\ldots,\mathbf{l}_\text{z}.$
 
 With that in hand, we just loop over the words and sum the vectors for each letter:
 
