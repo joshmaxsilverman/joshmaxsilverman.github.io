@@ -6,7 +6,7 @@ title: About
 About me
 ===
 
-Solutions to various puzzles will accumulate here, centered around the weekly 538 riddler classic. 
+Solutions to various puzzles will accumulate here, centered around the weekly [538 Riddler Classic](https://fivethirtyeight.com/tag/the-riddler/). 
 
 
 Credits
