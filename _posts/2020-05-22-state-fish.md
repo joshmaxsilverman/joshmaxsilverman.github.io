@@ -36,7 +36,7 @@ for i in range(50):
         letter_state[ltr] += np.array([1 if j == i else 0 for j in range(50)])
 ```
 
-which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{letter})\rightarrow \left{0,1\right}^{\otimes 50}$ of vectors $\mathbf{s}_\textrm{a},\ldots,\mathbf{s}_\textrm{z}.$
+which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{letter})\rightarrow \\{0,1\\}^{\otimes 50}$ of vectors $\mathbf{s}_\textrm{a}, \ldots, \mathbf{s}_\textrm{z}.$
 
 With that in hand, we just loop over the words and sum the vectors for each letter:
 
