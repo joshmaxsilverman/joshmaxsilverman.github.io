@@ -220,14 +220,14 @@ img {
   display: block;
   padding: 10px;
   padding-left: 30px;
-  background: #4c7f7f;
+  background: #1c2f2f;
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
   font-weight: normal;
 }
 @media only screen and (max-width: 767px) {
   .navbar-custom .nav .navlinks-container.show-children {
-    background: #4c7f7f;
+    background: #1c2f2f;
   }
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
@@ -238,7 +238,7 @@ img {
     text-align: center;
   }  
   .navbar-custom .nav .navlinks-container:hover {
-    background: #4c7f7f;
+    background: #1c2f2f;
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
