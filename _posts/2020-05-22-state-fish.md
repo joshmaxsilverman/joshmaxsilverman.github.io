@@ -36,13 +36,13 @@ for i in range(50):
         letter_state[ltr] += np.array([1 if j == i else 0 for j in range(50)])
 ```
 
-which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{\letter})\rightarrow \left{0,1\right}^{\otimes 50}$ of vectors $\mathbf{l}_\textrm{a},\ldots,\mathbf{l}_\textrm{z}.$
+which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{\letter})\rightarrow \left{0,1\right}^{\otimes 50}$ of vectors $\mathbf{s}_\textrm{a},\ldots,\mathbf{s}_\textrm{z}.$
 
 With that in hand, we just loop over the words and sum the vectors for each letter:
 
-$$\mathbf{l}_\textrm{tatertot} = \mathbf{l}_\textrm{t} + \mathbf{l}_\textrm{a} + \mathbf{l}_\textrm{e} + \mathbf{l}_\textrm{r} + \mathbf{l}_\textrm{o}.$$
+$$\mathbf{s}_\textrm{tatertot} = \mathbf{s}_\textrm{t} + \mathbf{s}_\textrm{a} + \mathbf{s}_\textrm{e} + \mathbf{s}_\textrm{r} + \mathbf{s}_\textrm{o}.$$
 
-If all but one of the entries in $\mathbf{l}_\text{tatertot}$ are non-zero, then this word is a "mackerel". Accumulating each "mackerel" by the state it is a mackerel for:
+If all but one of the entries in $\mathbf{s}_\text{tatertot}$ are non-zero, then $\mathtt{tatertot}$ is a "mackerel". Accumulating each "mackerel" by the state it is a mackerel for:
 
 ```python
 mackerel_states = defaultdict(lambda: 0)
