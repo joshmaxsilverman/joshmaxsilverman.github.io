@@ -36,11 +36,11 @@ for i in range(50):
         letter_state[ltr] += np.array([1 if j == i else 0 for j in range(50)])
 ```
 
-which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\text{\letter})\rightarrow \{0,1\}^{\otimes 50}$ of vectors $\mathbf{l}_\text{a},\ldots,\mathbf{l}_\text{z}.$
+which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{\letter})\rightarrow \left{0,1\right}^{\otimes 50}$ of vectors $\mathbf{l}_\textrm{a},\ldots,\mathbf{l}_\textrm{z}.$
 
 With that in hand, we just loop over the words and sum the vectors for each letter:
 
-$$\mathbf{l}_\text{tatertot} = \mathbf{l}_\text{t} + \mathbf{l}_\text{a} + \mathbf{l}_\text{e} + \mathbf{l}_\text{r} + \mathbf{l}_\text{o}.$$
+$$\mathbf{l}_\textrm{tatertot} = \mathbf{l}_\textrm{t} + \mathbf{l}_\textrm{a} + \mathbf{l}_\textrm{e} + \mathbf{l}_\textrm{r} + \mathbf{l}_\textrm{o}.$$
 
 If all but one of the entries in $\mathbf{l}_\text{tatertot}$ are non-zero, then this word is a "mackerel". Accumulating each "mackerel" by the state it is a mackerel for:
 
@@ -57,7 +57,7 @@ for ltr in word:
         mackerel_states[zero_idx[0]] += 1
 ```
 
-and accessing the most flagrant state by how mackerel-full it is,`states[max(mackerel_states, key=mackerel_states.get)]`, we get $\texttt{ohio}$ which has $11342$ mackerel words. The code takes $\approx\SI{3.5}{\second}$ to run.
+and accessing the most flagrant state by how mackerel-full it is,`states[max(mackerel_states, key=mackerel_states.get)]`, we get $\texttt{ohio}$ which has $11342$ mackerel words. The code takes $\approx3.5\, \textrm{s}$ to run.
 
 Reverse-sorting the word list by word length, we can quickly find that the longest mackerels are $\texttt{counterproductivenesses}$ which is mackerel for Alabama, and $\texttt{hydrochlorofluorocarbon}$ which is mackerel for Mississippi, both of which have $23$ letters.
 
