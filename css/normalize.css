@@ -185,9 +185,10 @@ img {
   border: 0;
 }
 
-img[src$="centerme"] {
-  display:block;
-  margin: 0 auto;
+.center-image
+{
+    margin: 0 auto;
+    display: block;
 }
 
 /**
