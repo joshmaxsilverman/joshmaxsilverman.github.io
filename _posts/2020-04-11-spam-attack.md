@@ -47,7 +47,7 @@ $$\begin{align}
 \dot{p}_3 &= \lambda \left(3p_2 - 4p_3\right)
 \end{align}$$
 
-shows that the rate equation has the general form $\dot{p}_n = \lambda\left(np_n - (n+1)p_n\right)$
+shows that the rate equation has the general form $\dot{p}_n = \lambda\left(np_{n-1} - (n+1)p_n\right)$
 
 (note that the linearity and pseudo-telescoping nature of these terms is what justifies the intuitive solution above) 
 
