@@ -23,11 +23,11 @@ The only interesting idea here is to make a "typewriter" (the dictionary `letter
 import string
 from collections import defaultdict
 
-alphanum = dict()
+alpha_num = dict()
 alpha = string.ascii_lowercase
 
 for i in range(len(alpha)):
-    alphanum[alpha[i]] = i
+    alpha_num[alpha[i]] = i
 
 letter_state = defaultdict(lambda: np.zeros(50))
 
