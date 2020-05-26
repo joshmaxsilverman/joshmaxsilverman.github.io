@@ -25,7 +25,8 @@ One plausible strategy to bias positive outcomes is to use Coin B until a trajec
 
 We can use the difference in step size to do just this. If we use Coin A when our score is positive, then games with score $+1$ will either move to the neutral score of $0$ or move deeper into positive territory to $+2.$ If we use Coin B when our score is negative, then games with score $-1$ will either move deeper into negative territory to $-3$ or be injected directly to positive territory at $+1,$ skipping over the neutral position. 
 
-![Possible state transitions in the game. Away from the $\text{score} = 0$ state, the transition edges are identical.](/img/2020-02-21-diagram.jpg){: .center-image}
+![](/img/2020-02-21-diagram.jpg){: .center-image}
+*Possible state transitions in the game. Away from the $\text{score} = 0$ state, the transition edges are identical.*
 
 This means that while scores of $+1$ have $0\%$ chance to become negative on the next turn, scores of $-1$ have a $50\%$ chance to become positive on the next turn. 
 
@@ -97,7 +98,8 @@ which produces $P_0 = \frac{1}{2}P_1,$ $P_1 = \frac{2}{3}P_2,$ and $P_1 = \frac{
 
 $$f_\text{win} \approx \frac{\gamma}{\gamma + 1} = \dfrac{3}{4}.$$
 
-![The step-ladder joining each half of the probability distribution near the origin. Outside the latter they're identical in shape but flipped across $\text{score}=0$ and scaled by $\gamma$.](/img/2020-02-21-graph.jpg)
+![](/img/2020-02-21-graph.jpg)
+*The step-ladder joining each half of the probability distribution near the origin. Outside the latter they're identical in shape but flipped across $\text{score}=0$ and scaled by $\gamma$.*
 
 In general, all the probabilities between $P_0$ and $P_N$ will be the average of their neighboring probabilities, ensuring the appearance of the $N$-step staircase between the symmetric positive/negative distributions.
 
