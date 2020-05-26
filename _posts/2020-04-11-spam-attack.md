@@ -17,7 +17,6 @@ date: 2020/04/11
 
 In light of the nested spam threads, when I first thought about this I braced for keeping track of subprocesses of subprocesses of subprocesses. But as it turns out, all spam posts are the same in the eyes of the lord, and we only have to keep track of one top-level timeline.
 
-
 The crucial insight is that new spam messages can spawn with equal opportunity in reply to any existing spam message. This means that whenever a new spam message is born the spam rate increases by 1 unit, $\lambda(S) = \left(1+S\right)\text{ spam / day}.$
 
 imgimgimg
@@ -42,13 +41,13 @@ $$S = e^{\lambda t} - 1.$$
 Writing out the rate of change for the first few probabilities
 
 $$\begin{align}
-\dot{p}_0 &= -\lambda p_0 \\
-\dot{p}_1 &= \lambda \left(p_0 - 2p_1\right) \\
+\dot{p}_0 &= -\lambda p_0\\
+\dot{p}_1 &= \lambda \left(p_0 - 2p_1\right)\\
 \dot{p}_2 &= \lambda \left(2p_1 - 3p_2\right) \\
 \dot{p}_3 &= \lambda \left(3p_2 - 4p_3\right)
 \end{align}$$
 
-shows that the rate equation has the general form $\dot{p}_n = \lambda\left(n p_{n-1} - (n+1)p_n\right).$
+shows that the rate equation has the general form $\dot{p}_n = \lambda\left(np_{n-1} - (n+1)p_n\right).$
 
 (note that the linearity and pseudo-telescoping nature of these terms is what justifies the intuitive solution above) 
 
