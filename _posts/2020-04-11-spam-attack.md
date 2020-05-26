@@ -86,21 +86,23 @@ can be solved with your favorite method, which might be [the method of character
 
 $$\boxed{G(t,z) = \dfrac{1}{z + (1-z)e^{t\lambda}}}.$$
 
-$$\begin{array}{c|c}
-\lambda & \langle\textbf{spam}(\text{3 days})\rangle \hline \\ 
-1 & 19 \\
-2 & 402 \\
-3 & 8102 \\
-4 & 162754 \\
-5 & 3269016 \\
-6 & 65659968 \\
-7 & 1318815733 \\
-8 & 26489122129 \\
-9 & 532048240601 \\
-10 & 10686474581523 \\
-11 & 214643579785915 \\
+$$
+\begin{array}{c|c}
+\lambda & \langle\textbf{spam}(\text{3 days})\rangle\hline \\\\ 
+1 & 19 \\\\
+2 & 402 \\\\
+3 & 8102 \\\\
+4 & 162754 \\\\
+5 & 3269016 \\\\
+6 & 65659968 \\\\
+7 & 1318815733 \\\\
+8 & 26489122129 \\\\
+9 & 532048240601 \\\\
+10 & 10686474581523 \\\\
+11 & 214643579785915 \\\\
 12 & 4311231547115193
-\end{array}$$
+\end{array}
+$$
 
 **Mean**
 
