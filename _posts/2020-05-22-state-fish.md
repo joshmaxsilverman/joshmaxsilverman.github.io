@@ -36,11 +36,11 @@ for i in range(50):
         letter_state[ltr] += np.array([1 if j == i else 0 for j in range(50)])
 ```
 
-which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{letter})\rightarrow \\{0,1\\}^{\otimes 50}$ from *letters* to *vectors* $\mathbf{s}_\textrm{a}, \ldots, \mathbf{s}_\textrm{z}.$
+which takes $\approx 6\,\textrm{ms}.$ At the end of this, we're left with a map $f(\textrm{letter})\rightarrow \\{0,1\\}^{\otimes 50}$ from **letters** to **vectors** $\mathbf{s}\_\textrm{a}, \ldots, \mathbf{s}\_\textrm{z}.$
 
 With that in hand, we just loop over the words and sum the vectors for each letter:
 
-$$\mathbf{s}_\text{tatertot} = \mathbf{s}_\text{t} + \mathbf{s}_\text{a} + \mathbf{s}_\text{e} + \mathbf{s}_\text{r} + \mathbf{s}_\text{o}.$$
+$$\mathbf{s}\_\text{tatertot} = \mathbf{s}\_\text{t} + \mathbf{s}\_\text{a} + \mathbf{s}\_\text{e} + \mathbf{s}\_\text{r} + \mathbf{s}\_\text{o}.$$
 
 If all but one of the entries in $\mathbf{s}_\text{tatertot}$ are non-zero, then $\mathtt{tatertot}$ is a "mackerel". Accumulating each "mackerel" by the state it is a mackerel for:
 
