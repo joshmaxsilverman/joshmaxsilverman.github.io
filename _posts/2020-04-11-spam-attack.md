@@ -86,6 +86,15 @@ can be solved with your favorite method, which might be [the method of character
 
 $$\boxed{G(t,z) = \dfrac{1}{z + (1-z)e^{t\lambda}}}.$$
 
+**Mean**
+
+Upon taking $\partial_z G(t,z),$ gives the mean $\boxed{\langle S\rangle = e^{t\lambda} - 1}.$
+
+Plugging in $\lambda =$ 1 post per day and $t=$ 3 days we get an expectation of $e^3 - 1 \approx 19.08$ posts by day $3.$
+
+
+Slight changes in the spawn rate $\lambda$ produce massive increases in the weekend spam haul:
+
 $$
 \begin{array}{c|c}
 \lambda & \langle\textbf{spam}(\text{3 days})\rangle\\ \hline
@@ -103,17 +112,6 @@ $$
 12 & 4311231547115193
 \end{array}
 $$
-
-**Mean**
-
-Upon taking $\partial_z G(t,z),$ gives the mean $\boxed{\langle S\rangle = e^{t\lambda} - 1}.$
-
-Plugging in $\lambda =$ 1 post per day and $t=$ 3 days we get an expectation of $e^3 - 1 \approx 19.08$ posts by day $3.$
-
-
-Slight changes in the spawn rate $\lambda$ produce massive increases in the weekend spam haul:
-
-imgimgimg
 
 
 **Variance**
