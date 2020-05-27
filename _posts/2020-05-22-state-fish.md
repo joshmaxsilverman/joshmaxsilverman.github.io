@@ -50,7 +50,7 @@ mackerel_states = defaultdict(lambda: 0)
 for word in word_list:
     word_vec = np.zeros(50)
 
-for ltr in word:
+    for ltr in word:
         word_vec += letter_state[ltr]
     zero_idx = np.where(word_vec == 0)[0]
     if len(zero_idx) == 1:
