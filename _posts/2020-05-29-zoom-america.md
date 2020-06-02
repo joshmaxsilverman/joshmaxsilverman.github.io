@@ -56,7 +56,7 @@ The trouble is, depending on where our next slot leads, we could start to build 
 
 Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $3:1$ or $2:2$ balance of open slots when we're ready for surgery.
 
-![diagram of these possibilities](/img/2020-05-29-core-construction.png
+![diagram of these possibilities](/img/2020-05-29-core-construction.png)
 
 By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
 
