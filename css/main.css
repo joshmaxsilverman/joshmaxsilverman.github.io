@@ -564,6 +564,12 @@ footer .theme-by {
   border-bottom-left-radius: 5px;
 }
 
+.image-centered
+{
+margin: 0 auto;
+display: block;
+}
+
 /* --- Pager --- */
 
 .pager li a {
