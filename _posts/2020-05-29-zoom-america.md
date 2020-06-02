@@ -26,6 +26,8 @@ Some Superzoomers look like this:
 
 [stack of three superzoomer examples, superzoomer arc in blue]
 
+### Walking through the back door
+
 Thinking about the forward problem got us very little — we couldn't see a recursion and we couldn't organize the combinatorics. This got us thinking, what would it take to dismantle a Superzoomer, e.g., what is the minimal surgery we'd have to do to erase the Superzoomer? 
 
 Necessarily, we have to snip the edge of the Superzoomer. But if that's all we do, we can only reconnect that edge. So we have to cut another edge. If you do this enough times you start to see that it's always possible to pick the two edges to cut. Moreover, when you reconnect those edges, there are $3$ possible pairings, and $2$ of them make a Superzoomer.
@@ -34,7 +36,54 @@ Similarly, if you start with a call schedule that has no Superzoomer, you can tr
 
 Keeping on with this game, you can do the same with $2$ Superzoomers by cutting $3$ edges, with $3$ Superzoomers by cutting $4$ edges, and so on.
 
-This is an exhilarating realization, but is it a mirage? Aren't we 
+This is an exhilarating realization, but is it a mirage? Suppose these surgeries are always possible, aren't we cherry picking the points, spoiling the chance that this has anything to do with organically formed call schedules? No. Every call schedule is equally likely, and it doesn't matter whether we set a particular caller's interval first or last. 
 
+### But how do we pick the edges for surgery?
+
+The essential insight for this is that the Superzoomer needs to span, at a minimum, $n$ unique call-ins or hang-ups. If there are more, which there probably are, then it means that caller started and ended within the Superzoomer's calling window. So, the conditions for forming a Superzoomer are a stretch of points that contain at least a call-in or a hang-up from $n-1$ distinct callers, with empty slots on either side. 
+
+[Superzoomer condition for 2n = 10]
+
+Notice that the zone of contiguous points can be anywhere along the line, but has to contain the middle point (the zone contains at least $n-1$ points, and the earliest it can end is at position $1 + n - 1 = n$):
+
+[image of earliest ending Superzoomer possible]
+
+Start at one of the center slots and pick another at random. This is our first calling interval. Our goal is 1. to build up a core of lone call-ins, lone hang-ups, or paired call-in/hang-ups, and 2. to leave empty slots on either side. 
+
+The trouble is, depending on where our next slot leads, we could start to build up an imbalance, e.g. so that the holes are only on one side. For instance, our first slot connects to another slot on the left, so we have $2$ points on the left and $0$ on the right. If we pick our next slot to the left of the first, and _it_ connects to a point on the left, then we have $4$ on the left and $0$ on the right. Clearly, this can result in a situation where we're ready for our $2$ surgery edges. and they're both on one side of the core. 
+
+Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $3:1$ or $2:2$ balance of open slots when we're ready for surgery.
+
+[diagram of these posssibilities]
+
+By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
+
+[such an example for 2N = 10]
+
+If we have a $3:1$ balance, the potential pairings are like this, and $2$ of the $3$ form a Superzoomer. 
+
+[simple cartoon diagram]
+
+If we have a $2:2$ balance, then unless we pair the two that are on the same side of the core, we get a Superzoomer, again $2$ out of $3$.
+
+### One Superzoomer is never enough.
+
+Like we said in the hands-on feel good section, a surgery to make two Superzoomer means snipping $3$ edges. So, stop the core assembly when there are $6$ empty slots. Again, since we make sure to balance the holes, we can either have $2:4$ or $3:3$. 
+
+If we have $2:4$ then we're going to be immediately forced into three distinct $2:2$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own right-only pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the right-only pair. So, we have $3\cdot 2$ ways to pick them. 
+
+In the $3:3$ case it's clear that we have $3\cdot 2$ ways to pair them. 
+
+Generalizing to the case of $s$ Superzoomers, we either immediately get $(s+1)!$ ways to pair them or we get $(s+1)$ choice for how to pair off the right-only pair followed by $s!$ ways to pair the remaining $2s$ endpoints. 
+
+These choices are made randomly out of the $(2s+1)(2s-1)(2s-3)\cdots 3\cdot 1 = (2s+1)!!$ ways to pair off $2(s+1)$ points. 
+
+So 
+
+$$
+P(s) = \dfrac{(s+1)!}{(2s+1)!!}
+$$
+
+If we have the $4:2$ then we want the two right-most slots to form to two of the four open slots on the left of the core. Necessarily, two of the slots on the left will have to form their own arc, which can happen in $3\cdot 2$ distinct ways. As long as they cross the core, they overlap the core and each other, and therefore are Superzoomers. 
 
 <br>
