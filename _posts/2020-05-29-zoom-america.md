@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Wherefore art thou superzoomer
 date: 2018/04/21
 ---
@@ -54,7 +54,7 @@ The trouble is, depending on where our next slot leads, we could start to build 
 
 Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $3:1$ or $2:2$ balance of open slots when we're ready for surgery.
 
-[diagram of these posssibilities]
+[diagram of these possibilities]
 
 By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
 
@@ -72,6 +72,8 @@ Like we said in the hands-on feel good section, a surgery to make two Superzoome
 
 If we have $2:4$ then we're going to be immediately forced into three distinct $2:2$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own right-only pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the right-only pair. So, we have $3\cdot 2$ ways to pick them. 
 
+[drawing of the 4:2 case]
+
 In the $3:3$ case it's clear that we have $3\cdot 2$ ways to pair them. 
 
 Generalizing to the case of $s$ Superzoomers, we either immediately get $(s+1)!$ ways to pair them or we get $(s+1)$ choice for how to pair off the right-only pair followed by $s!$ ways to pair the remaining $2s$ endpoints. 
@@ -83,7 +85,5 @@ So
 $$
 P(s) = \dfrac{(s+1)!}{(2s+1)!!}
 $$
-
-If we have the $4:2$ then we want the two right-most slots to form to two of the four open slots on the left of the core. Necessarily, two of the slots on the left will have to form their own arc, which can happen in $3\cdot 2$ distinct ways. As long as they cross the core, they overlap the core and each other, and therefore are Superzoomers. 
 
 <br>
