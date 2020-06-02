@@ -60,8 +60,6 @@ Happily, this is easy to avoid. If the first slot connects to a point on the lef
 
 By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
 
-[such an example for 2N = 10]
-
 If we have a $3:1$ balance, the potential pairings are like this, and $2$ of the $3$ form a Superzoomer. 
 
 ![simple cartoon diagram](/img/2020-05-29-pairing-1-3.jpg)
