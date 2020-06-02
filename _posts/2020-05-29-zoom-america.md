@@ -9,7 +9,7 @@ date: 2020/05/29
 
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/can-you-join-the-worlds-biggest-zoom-call/))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-join-the-worlds-biggest-zoom-call/))
 
 ## Solution
 
