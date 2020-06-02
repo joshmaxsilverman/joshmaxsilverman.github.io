@@ -92,7 +92,7 @@ The pairing choices are made randomly of course, and there are
 $$(2s+1)(2s-1)(2s-3)\cdots 3\cdot 1 = (2(s+1))!!$$ 
 total ways to pair off a collection of $2(s+1)$ points (e.g. including the core-crossing Superzoomer arcs and not, as well as the cases that don't meet our Superzoom needs). 
 
-So, the probability of finding $s$ Superzoomers is
+So, the probability of finding $s$ Superzoomers (or more) is
 
 $$
 P(s) = \dfrac{(s+1)!}{(2s+1)!!}.
