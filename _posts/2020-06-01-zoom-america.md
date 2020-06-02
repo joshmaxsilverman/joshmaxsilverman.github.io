@@ -99,14 +99,4 @@ P(s) = \dfrac{(s+1)!}{(2s+1)!!}.
 $$
 
 
-.center[
-
-![My image](/img/2020-05-29-pairing-2-4.png)
-
-.caption[
-**Fig. 1:** Image caption
-]
-
-]
-
 <br>
