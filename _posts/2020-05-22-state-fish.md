@@ -11,7 +11,7 @@ date: 2020-05-22
 
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/somethings-fishy-in-the-state-of-the-riddler/))
+([FiveThirtyEight](https://fivethirtyeight.com/features/somethings-fishy-in-the-state-of-the-riddler/))
 
 ## Solution
 
