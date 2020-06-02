@@ -9,7 +9,7 @@ date: 2020/04/11
 
 <!--more-->
 
-([fivethirtyeight](https://fivethirtyeight.com/features/can-you-catch-the-free-t-shirt/))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-catch-the-free-t-shirt/))
 
 ## Solution
 
