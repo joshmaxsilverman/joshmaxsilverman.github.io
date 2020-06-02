@@ -24,6 +24,7 @@ If a Superzoomer exists they have to call in before the first person hangs up an
 
 Some Superzoomers look like this:
 
+![stack of superzoomers](img/2020-05-29-superzoomers-stack.png)
 [stack of three superzoomer examples, superzoomer arc in blue]
 
 ### Walking through the back door
@@ -34,6 +35,8 @@ Necessarily, we have to snip the edge of the Superzoomer. But if that's all we d
 
 Similarly, if you start with a call schedule that has no Superzoomer, you can trivially create one. Pick two slots such that if they were connected, they'd make a Superzoomer, connect them (making the Superzoomer), and then connect their former connected slots to form a new pair. 
 
+![superzoomer surgery](img/2020-05-29-surgery-column.png)
+
 Keeping on with this game, you can do the same with $2$ Superzoomers by cutting $3$ edges, with $3$ Superzoomers by cutting $4$ edges, and so on.
 
 This is an exhilarating realization, but is it a mirage? Suppose these surgeries are always possible, aren't we cherry picking the points, spoiling the chance that this has anything to do with organically formed call schedules? No. Every call schedule is equally likely, and it doesn't matter whether we set a particular caller's interval first or last. 
@@ -42,11 +45,11 @@ This is an exhilarating realization, but is it a mirage? Suppose these surgeries
 
 The essential insight for this is that the Superzoomer needs to span, at a minimum, $n$ unique call-ins or hang-ups. If there are more, which there probably are, then it means that caller started and ended within the Superzoomer's calling window. So, the conditions for forming a Superzoomer are a stretch of points that contain at least a call-in or a hang-up from $n-1$ distinct callers, with empty slots on either side. 
 
-[Superzoomer condition for 2n = 10]
+![Superzoomer condition for 2n = 10](img/2020-05-29-N-core.jpeg)
 
 Notice that the zone of contiguous points can be anywhere along the line, but has to contain the middle point (the zone contains at least $n-1$ points, and the earliest it can end is at position $1 + n - 1 = n$):
 
-[image of earliest ending Superzoomer possible]
+![image of earliest ending Superzoomer possible](img/2020-05-29-earliest-superzoomer.jpg)
 
 Start at one of the center slots and pick another at random. This is our first calling interval. Our goal is 1. to build up a core of lone call-ins, lone hang-ups, or paired call-in/hang-ups, and 2. to leave empty slots on either side. 
 
@@ -54,7 +57,7 @@ The trouble is, depending on where our next slot leads, we could start to build 
 
 Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $3:1$ or $2:2$ balance of open slots when we're ready for surgery.
 
-[diagram of these possibilities]
+![diagram of these possibilities](img/2020-05-29-core-construction.png
 
 By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
 
@@ -62,7 +65,7 @@ By construction, the empty slots we have when we're ready for the surgery edges 
 
 If we have a $3:1$ balance, the potential pairings are like this, and $2$ of the $3$ form a Superzoomer. 
 
-[simple cartoon diagram]
+![simple cartoon diagram](img/2020-05-29-pairing-1-3.jpg)
 
 If we have a $2:2$ balance, then unless we pair the two that are on the same side of the core, we get a Superzoomer, again $2$ out of $3$.
 
@@ -72,7 +75,7 @@ Like we said in the hands-on feel good section, a surgery to make two Superzoome
 
 If we have $2:4$ then we're going to be immediately forced into three distinct $2:2$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own right-only pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the right-only pair. So, we have $3\cdot 2$ ways to pick them. 
 
-[drawing of the 4:2 case]
+[drawing of the 4:2 case](img/2020-05-29-pairing-2-4.png)
 
 In the $3:3$ case it's clear that we have $3\cdot 2$ ways to pair them. 
 
