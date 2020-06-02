@@ -25,7 +25,6 @@ If a Superzoomer exists they have to call in before the first person hangs up an
 Some Superzoomers look like this:
 
 ![stack of superzoomers](img/2020-05-29-superzoomers-stack.png)
-[stack of three superzoomer examples, superzoomer arc in blue]
 
 ### Walking through the back door
 
@@ -75,7 +74,7 @@ Like we said in the hands-on feel good section, a surgery to make two Superzoome
 
 If we have $2:4$ then we're going to be immediately forced into three distinct $2:2$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own right-only pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the right-only pair. So, we have $3\cdot 2$ ways to pick them. 
 
-[drawing of the 4:2 case](img/2020-05-29-pairing-2-4.png)
+![drawing of the 4:2 case](img/2020-05-29-pairing-2-4.png)
 
 In the $3:3$ case it's clear that we have $3\cdot 2$ ways to pair them. 
 
