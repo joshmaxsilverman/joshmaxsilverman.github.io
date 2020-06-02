@@ -9,7 +9,7 @@ date: 2018/04/21
 
 <!--more-->
 
-([fivethirtyeight](URL))
+([FiveThirtyEight](URL))
 
 ## Solution
 
