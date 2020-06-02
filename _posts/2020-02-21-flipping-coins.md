@@ -11,7 +11,7 @@ date: 2020-02-21
 
 <!--more-->
 
-([fivethirtyeight](URL))
+([FiveThirtyEight](URL))
 
 ## Solution
 
