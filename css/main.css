@@ -554,11 +554,12 @@ footer .theme-by {
 }
 
 .caption {
-  text-align: center;
+/*   text-align: center; */
+  margin:0 auto;
   font-size: 12px;
   padding-top: 2px;
   padding-bottom:10px;
-  word-wrap: break-word;
+/*   word-wrap: break-word; */
   width: 500px;
   font-style: normal;
 /*   margin: 0px; */
