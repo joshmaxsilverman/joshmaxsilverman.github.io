@@ -554,7 +554,7 @@ footer .theme-by {
 }
 
 .caption {
-/*   text-align: center; */
+  text-align: center;
   margin:0 auto;
   font-size: 12px;
   padding-top: 2px;
