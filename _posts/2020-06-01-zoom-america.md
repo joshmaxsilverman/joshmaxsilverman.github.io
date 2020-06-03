@@ -98,5 +98,40 @@ $$
 P(s) = \dfrac{(s+1)!}{(2s+1)!!}.
 $$
 
+---
+
+Which matches the simulation
+
+![](/img/2020-05-29-templot.png){:width="500 px" class:"image-centered"}
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def round():
+  people = [];
+  max_start = 0;
+  min_end = 1;
+  for i in range (1000):
+    x, y = np.random.random(), np.random.random()
+    temp_start = min(x,y)
+    temp_end = max(x,y)
+    if temp_start > max_start:
+      max_start = temp_start
+    if temp_end < min_end:
+      min_end = temp_end
+    people.append([temp_start, temp_end])
+
+  successes=0
+  for person in people:
+    if person[0] <= min_end and person[1] >= max_start:
+      successes +=  1
+  return successes
+  
+data = np.unique([round() for i in range(10000)], return_counts=True) 
+```
+
+
 
 <br>
