@@ -102,7 +102,7 @@ $$
 
 Which matches the simulation
 
-![](/img/2020-05-29-templot.png){:width="500 px" class="image-centered"}
+![](/img/2020-05-29-templot.png){:width="400 px" class="image-centered"}
 
 
 ```python
