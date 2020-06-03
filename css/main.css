@@ -558,8 +558,10 @@ footer .theme-by {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom:10px;
+  word-wrap: break-word;
+  width: 500px;
   font-style: normal;
-  margin: 0px;
+/*   margin: 0px; */
   display: block;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
