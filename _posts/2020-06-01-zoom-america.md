@@ -26,10 +26,10 @@ If a Superzoomer exists they have to call in before the first person hangs up an
 
 Some possible Superzoomers look like this:
 
-![stack of superzoomers](/img/2020-05-29-superzoomers-stack.png "Hello"){:width="500px" class="image-centered"}
+![stack of superzoomers](/img/2020-05-29-superzoomers-stack.png){:width="500px" class="image-centered"}
 
 {:.caption}
-Two exemplary Superzoomers. In the top row we have a Superzoomer with long span, they get on the call first and hang up as soon as the last person calls in. The bottom row shows that a Superzoomer doesn't necessarily need to be on the call for long. Note that the bottom row has multiple Superzoomers beyond the one highlighted in blue.
+**Two exemplary Superzoomers.** In the top row we have a Superzoomer with long span, they get on the call first and hang up as soon as the last person calls in. The bottom row shows that a Superzoomer doesn't necessarily need to be on the call for long. Note that both rows have multiple Superzoomers beyond the one highlighted in blue.
 
 ### Walking through the back door
 
@@ -39,7 +39,10 @@ Necessarily, we have to snip the edge of the Superzoomer. But if that's all we d
 
 Similarly, if you start with a call schedule that has no Superzoomer, you can trivially create one. Pick two slots such that if they were connected, they'd make a Superzoomer, connect them (making the Superzoomer), and then connect their former connected slots to form a new pair. 
 
-![superzoomer surgery](/img/2020-05-29-surgery-column.png){:width="500px" class="image-centered"}
+![superzoomer surgery](/img/2020-05-29-surgery.gif){:width="500px" class="image-centered"}
+
+{:.caption}
+**Superzoomer rises** Two edges are targeted for removal, then a long two of the open slots are used to make a Superzoomer (who starts before the first person hangs up, and hangs up after the last person calls in). The remaining two edges are connected as well. In this case, both new callers are superzoomers.
 
 Keeping on with this game, you can do the same with $2$ Superzoomers by cutting $3$ edges, with $3$ Superzoomers by cutting $4$ edges, and so on.
 
