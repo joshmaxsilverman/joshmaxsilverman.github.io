@@ -72,23 +72,26 @@ Start at one of the center slots and pick another at random. This is our first c
 
 The trouble is, depending on where our next slot leads, we could start to build up an imbalance, e.g. so that the holes are only on one side. For instance, our first slot connects to another slot on the left, so we have $2$ points on the left and $0$ on the right. If we pick our next slot to the left of the first, and _it_ connects to a point on the left, then we have $4$ on the left and $0$ on the right. Clearly, this can result in a situation where we're ready for our $2$ surgery edges. and they're both on one side of the core. 
 
-Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $3:1$ or $2:2$ balance of open slots when we're ready for surgery.
+Happily, this is easy to avoid. If the first slot connects to a point on the left, then make the next slot the one directly to the right of the first, if this connects to a point on the right, then the imbalance will become zero. If it connects to a point on the left, it will simply maintain the current imbalance. So, if we follow this rule, we can ensure that we always end up with a $(3,1)$ or $(2,2)$ balance of open slots when we're ready for surgery.
 
 ![diagram of these possibilities](/img/2020-05-29-core-construction.png){:width="500px" class="image-centered"}
 
-By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $N - 2$ callers. 
+{:.caption}
+**A tale of two cores** Two possible constructions of the core — one leading to an imbalanced distribution of the $4$ remaining calling slots about the core, and one balanced.
 
-If we have a $3:1$ balance, the potential pairings are like this, and $2$ of the $3$ form a Superzoomer. 
+By construction, the empty slots we have when we're ready for the surgery edges are always on either side of the core, since we are obsessively picking new slots exactly adjacent to the last slot we picked. So, the core contains one or both endpoints for every other of the $(n - 2)$ callers. 
+
+If we have a $(3,1)$ balance, the potential pairings are like this, and $2$ of the $3$ form a Superzoomer. 
 
 ![simple cartoon diagram](/img/2020-05-29-pairing-1-3.jpg){:width="500px" class="image-centered"}
 
-If we have a $2:2$ balance, then unless we pair the two that are on the same side of the core, we get a Superzoomer, again $2$ out of $3$.
+If we have a $(2,2)$ balance, then unless we pair the two that are on the same side of the core, we get a Superzoomer, again $2$ out of $3$.
 
 ### One Superzoomer is never enough.
 
-Like we said in the hands-on feel good section, a surgery to make two Superzoomer means snipping $3$ edges. So, stop the core assembly when there are $6$ empty slots. Again, since we make sure to balance the holes, we can either have $2:4$ or $3:3$. 
+Like we said in the hands-on feel good section, a surgery to make two Superzoomer means snipping $3$ edges. So, stop the core assembly when there are $6$ empty slots. Again, since we make sure to balance the holes, we can either have $(2,4)$ or $(3,3)$. 
 
-If we have $2:4$ then we're going to be immediately forced into three distinct $2:2$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own one-sided pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the one-sided pair. So, we have $3\cdot 2$ ways to pick them. 
+If we have $(2,4)$ then we're going to be immediately forced into three distinct $(2,2)$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own one-sided pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the one-sided pair. So, we have $3\cdot 2$ ways to pick them. 
 
 ![drawing of the 4:2 case](/img/2020-05-29-pairing-2-4.png){:width="500px" class="image-centered"}
 
