@@ -30,7 +30,7 @@ Some possible Superzoomers look like this:
 
 {:.caption}
 
-### ddd
+ddd
 
 ### Walking through the back door
 
