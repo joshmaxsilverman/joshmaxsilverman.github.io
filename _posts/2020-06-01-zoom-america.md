@@ -54,15 +54,21 @@ No. Every call schedule is equally likely, and it doesn't matter whether we set 
 
 ### But how do we pick the edges for surgery?
 
-The essential insight for this is that the Superzoomer needs to span, at a minimum, $n$ unique call-ins or hang-ups. If there are more, which there probably are, then it means that caller started and ended within the Superzoomer's calling window. So, the conditions for forming a Superzoomer are a stretch of points that contain at least a call-in or a hang-up from $n-1$ distinct callers, with empty slots on either side. 
+The essential insight is that the Superzoomer needs to span, at a minimum, $1$ call endpoint (call-in or hang-up) for $(n-1)$ unique callers. If there are more endpoints, which there probably are, it means that some callers started *and* ended within the Superzoomer's calling window. So, the condition for forming a Superzoomer is a contiguous stretch of points that contain at least a call-in or a hang-up from $(n-1)$ distinct callers, with empty slots on either side. 
 
 ![Superzoomer condition for 2n = 10](/img/2020-05-29-N-core.jpg){:width="500px" class="image-centered"}
 
-Notice that the zone of contiguous points can be anywhere along the line, but has to contain the middle point (the zone contains at least $n-1$ points, and the earliest it can end is at position $1 + n - 1 = n$):
+{:.caption}
+**Common Core** This core contains at least one terminus for each of the $(n-1)$ callers whose times have already been picked. On either side of the core are open slots.
+
+Notice that the zone of contiguous points can be anywhere along the line, but has to contain the middle point (the zone contains at least $(n - 1)$ points, and the earliest it can end is at position $1 + (n - 1) = n$):
 
 ![image of earliest ending Superzoomer possible](/img/2020-05-29-earliest-superzoomer.jpg){:width="500px" class="image-centered"}
 
-Start at one of the center slots and pick another at random. This is our first calling interval. Our goal is 1. to build up a core of lone call-ins, lone hang-ups, or paired call-in/hang-ups, and 2. to leave empty slots on either side. 
+{:.caption}
+**Early to bed, and early to rise** The earliest possible Superzoomer is the one who is first to join, leaves right after the last person joins, and noone else hangs up in between..
+
+Start at one of the center slots and pick another at random. This is our first calling interval. Our goal is A. to build up a core of lone call-ins, lone hang-ups, or paired call-in/hang-ups, and B. to leave empty slots on either side. 
 
 The trouble is, depending on where our next slot leads, we could start to build up an imbalance, e.g. so that the holes are only on one side. For instance, our first slot connects to another slot on the left, so we have $2$ points on the left and $0$ on the right. If we pick our next slot to the left of the first, and _it_ connects to a point on the left, then we have $4$ on the left and $0$ on the right. Clearly, this can result in a situation where we're ready for our $2$ surgery edges. and they're both on one side of the core. 
 
