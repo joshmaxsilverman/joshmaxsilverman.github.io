@@ -116,7 +116,7 @@ total ways to pair off a collection of $2(s+1)$ points (e.g. including the core-
 So, the probability of finding $s$ Superzoomers (or more) is
 
 $$
-P(s) = \dfrac{(s+1)!}{(2s+1)!!}.
+P(SZ \geq s) = \dfrac{(s+1)!}{(2s+1)!!}.
 $$
 
 ---
