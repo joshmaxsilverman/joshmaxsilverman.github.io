@@ -85,23 +85,29 @@ If we have a $(3,1)$ balance, the potential pairings are like this, and $2$ of t
 
 ![simple cartoon diagram](/img/2020-05-29-pairing-1-3.jpg){:width="500px" class="image-centered"}
 
-If we have a $(2,2)$ balance, then unless we pair the two that are on the same side of the core, we get a Superzoomer, again $2$ out of $3$.
+{:.caption}
+**Decisions decisions** Since there is only $1$ open slot on the left, and there are $3$ on the right, $2$ of the slots on the right will endpoints for the same caller. If we join the lonesome empty slot to the right empty slot on the right, then that caller won't overlap with the caller formed by pairing the two rightmost slots. So, the core-spanning arc cannot land in the first slot on the right. 
+
+If we have a $(2,2)$ balance, then unless we pair the ones that are on the same side of the core, we'll get a Superzoomer, again $2$ out of $3$.
 
 ### One Superzoomer is never enough.
 
 Like we said in the hands-on feel good section, a surgery to make two Superzoomer means snipping $3$ edges. So, stop the core assembly when there are $6$ empty slots. Again, since we make sure to balance the holes, we can either have $(2,4)$ or $(3,3)$. 
 
-If we have $(2,4)$ then we're going to be immediately forced into three distinct $(2,2)$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own one-sided pair. If we pair the first slot with the left-most point on the right, then it means this will not overlap with the one-sided pair. So, we have $3\cdot 2$ ways to pick them. 
+If we have $(2,4)$ then we're going to be immediately forced into three distinct $(2,2)$ scenarios. The simple reason is that two of the slots on the right of the core have to form their own one-sided pair. If we pair the first slot (underlined blue) with the left-most point on the right, it means that this will not overlap with the one-sided pair, ruling the caller out from being a second Superzoomer. So, we have $3$ ways to pick the destination for the $1^\text{st}$ point, which leaves us with a balanced $(2,2)$ experience, which has $2$ ways of producing a Superzoomer. In all, there are $3\cdot 2$ ways to pick them. 
 
-![drawing of the 4:2 case](/img/2020-05-29-pairing-2-4.png){:width="500px" class="image-centered"}
+![](/img/2020-05-29-pairing-2-4.png){:width="500px" class="image-centered"}
 
-In the balanced $3:3$ case it's clear that we have $3\cdot 2$ ways to pair them (moreover, a few of the scenarios result in $3$ Superzoomers. 
+{:.caption}
+**One more time** We can't pair the underlined blue slot with the first open slot on the right because the resulting call wouldn't intersect the path made by thetwo leftover points on the right side.
+
+In the balanced $(3,3)$ case it's clear that we have $3\cdot 2$ ways to pair them (moreover, a few of the scenarios result in $3$ Superzoomers). 
 
 ### Let's have $s$ Superzoomers
 
 When there are an equal number of open slots on either side we immediately get $(s+1)!$ ways to pair them up.
 
-In the case when they're off by $2$, one sides has $(s-1)$ open slots and the other side has $(s+1)$ of them. There are $(s+1)$ choices for how to pair off the one-sided pair (on the side with $(s+1)$ open slots), followed by $s!$ ways to pair up the remaining $2s$ endpoints that cross the core. 
+In the case when they're off by $2$, one side has $(s-1)$ open slots and the other side has $(s+1)$ of them. There are $(s+1)$ choices for how to pair off the one-sided pair (on the side with $(s+1)$ open slots), followed by $s!$ ways to pair up the remaining $2s$ endpoints that cross the core. 
 
 The pairing choices are made randomly of course, and there are 
 $$(2s+1)(2s-1)(2s-3)\cdots 3\cdot 1 = (2s+1)!!$$ 
