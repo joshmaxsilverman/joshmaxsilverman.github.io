@@ -27,7 +27,7 @@ If a Superzoomer exists they have to call in before the first person hangs up an
 Some possible Superzoomers look like this:
 
 ![stack of superzoomers](/img/2020-05-29-superzoomers-stack.png "Hello"){:width="500px" class="image-centered"}
-{:.caption}
+{:.caption text="Test"}
 Test
 
 ### Walking through the back door
