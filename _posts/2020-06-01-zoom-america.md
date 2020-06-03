@@ -102,7 +102,7 @@ $$
 
 Which matches the simulation
 
-![](/img/2020-05-29-templot.png){:width="400 px" class="image-centered"}
+![](/img/2020-05-29-templot.png){:width="600 px" class="image-centered"}
 
 
 ```python
@@ -130,7 +130,5 @@ def round():
   
 data = np.unique([round() for i in range(10000)], return_counts=True) 
 ```
-
-
 
 <br>
