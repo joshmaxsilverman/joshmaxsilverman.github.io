@@ -2,10 +2,6 @@
 
 /* --- General --- */
 
-caption {
-  text-align: center ; 
-}
-
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
@@ -560,7 +556,7 @@ footer .theme-by {
 .caption {
   text-align: center;
   font-size: 16px;
-  padding: 5px;
+  padding: 0px;
   font-style: normal;
   margin: 0;
   display: block;
