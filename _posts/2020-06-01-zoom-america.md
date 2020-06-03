@@ -29,7 +29,7 @@ Some possible Superzoomers look like this:
 ![stack of superzoomers](/img/2020-05-29-superzoomers-stack.png "Hello"){:width="500px" class="image-centered"}
 
 {:.caption}
-ddd
+Two exemplary Superzoomers. In the top row we have a Superzoomer with long span, they get on the call first and hang up as soon as the last person calls in. The bottom row shows that a Superzoomer doesn't necessarily need to be on the call for long. But note, the bottom row has multiple Superzoomers beyond the one highlighted in blue.
 
 ### Walking through the back door
 
