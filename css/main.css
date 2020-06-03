@@ -557,7 +557,7 @@ footer .theme-by {
   text-align: center;
   margin:0 auto;
   font-size: 12px;
-  padding-top: 2px;
+  padding-top: -2px;
   padding-bottom:10px;
 /*   word-wrap: break-word; */
   width: 500px;
