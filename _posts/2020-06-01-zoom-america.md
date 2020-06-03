@@ -89,7 +89,7 @@ When there are an equal number of open slots on either side we immediately get $
 In the case when they're off by $2$, one sides has $(s-1)$ open slots and the other side has $(s+1)$ of them. There are $(s+1)$ choices for how to pair off the one-sided pair (on the side with $(s+1)$ open slots), followed by $s!$ ways to pair up the remaining $2s$ endpoints that cross the core. 
 
 The pairing choices are made randomly of course, and there are 
-$$(2s+1)(2s-1)(2s-3)\cdots 3\cdot 1 = (2(s+1))!!$$ 
+$$(2s+1)(2s-1)(2s-3)\cdots 3\cdot 1 = (2s+1)!!$$ 
 total ways to pair off a collection of $2(s+1)$ points (e.g. including the core-crossing Superzoomer arcs and not, as well as the cases that don't meet our Superzoom needs). 
 
 So, the probability of finding $s$ Superzoomers (or more) is
