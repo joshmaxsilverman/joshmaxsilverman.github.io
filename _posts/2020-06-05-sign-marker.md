@@ -42,10 +42,12 @@ If there's no undulation in the intensity then this will be zero, but if there a
 
 The average value of the intensity is sum of intensity from one tip center to the other, divided by the distance that separates them:
 
-$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right),$$
+$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)\right],$$
+
 similarly, the average squared value is
 
-$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)^2\right),$$
+$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)^2\right],$$
+
 and the standard deviation is
 
 $$\sigma = \sqrt{\langle I_\text{total}^2\rangle - \langle I_\text{total}\rangle^2}.$$
