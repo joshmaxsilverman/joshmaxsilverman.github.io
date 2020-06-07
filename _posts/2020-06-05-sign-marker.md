@@ -76,26 +76,27 @@ def intensity_series(sep):
   return [I(r, 0) + I(r, sep) for r in np.arange(0, sep, inc)]
   
 # initialize dataframe with separation values
-df = pd.DataFrame(np.arange(1, 2, inc), columns=["Separation"])
+df = pd.DataFrame(np.arange(1, 2, inc), columns=["separation"])
 
 # calculate intensity series for each value of the separation
-df['Intensities'] = df["Separation"].map(intensity_series)
+df["intensities"] = df["separation"].map(intensity_series)
+
 # calculate the standard deviation of the intensity series for each separation
-df["StdDev"] = df["Intensities"].map(np.std)
+df["stddev"] = df["intensities"].map(np.std)
 
 # find the separation that has the minimal standard deviation of ink intensities
-min_index = np.argmin(df.StdDev)
-smoothest_separation = df.loc[min_index]["Separation"]
+min_index = np.argmin(df.stddev)
+smoothest_separation = df.loc[min_index]["separation"]
 ```
 
-Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$ vs $d$:
+Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma$ vs $d$:
 
 ![plot of stddev vs d](/img/2020-06-05-stddev-sep.png){: width="400px" class="image-centered"}
 
 {:.caption}
-*The standard deviation is minimized around* $d = 1.69\text{ cm}.$
+*The standard deviation is minimized around* $d = 1.692\text{ cm}.$
 
-This is papable if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.69\text{ cm}$:
+This is palpable if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.692\text{ cm}$:
 
 ![gif movie 9](/img/2020-06-05-poster-sign-movie-column-site-gray-10ms.gif){:height="650px" class="image-centered"}
 
