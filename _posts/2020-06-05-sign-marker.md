@@ -60,20 +60,32 @@ We can calculate $\sigma$ like so:
 
 ```python
 import numpy as np
+import pandas as pd
+
+inc = 0.01
 
 def I(r, center):
+  """returns the ink intensity at point r due to a marker tip at center"""
   if 1 - (r - center)**2 >= 0:
     return 2 / np.pi * np.sqrt(1 - (r - center)**2)
   else:
     return 0
-  
-data = [(sep, [I(r, 0) + I(r, sep) for r in np.arange(0, sep, 0.001)])
-        for sep in np.arange(1, 2, 0.001)]
-  
-sigmas = np.array([(x, np.std(y)) for (x, y) in data])
 
-min_index = np.argmin(sigmas[:, 1])
-smoothest_separation = sigmas[min_index][0]
+def intensity_series(sep):
+  """returns an array of the intensity at all points between the two tips"""
+  return [I(r, 0) + I(r, sep) for r in np.arange(0, sep, inc)]
+  
+# initialize dataframe with separation values
+df = pd.DataFrame(np.arange(1, 2, inc), columns=["Separation"])
+
+# calculate intensity series for each value of the separation
+df['Intensities'] = df["Separation"].map(intensity_series)
+# calculate the standard deviation of the intensity series for each separation
+df["StdDev"] = df["Intensities"].map(np.std)
+
+# find the separation that has the minimal standard deviation of ink intensities
+min_index = np.argmin(df.StdDev)
+smoothest_separation = df.loc[min_index]["Separation"]
 ```
 
 Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$ vs $d$:
