@@ -5,7 +5,7 @@ title: Sign Markers
 date: 2020/06/06
 ---
 
->You're making a sign using a marker to draw the letters. The marker tip is a circle that's $\SI{2}{\centi\meter}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $\SI{1}{\centi\meter}$ of where it's previously been, how far apart should you make the marks?
+>You're making a sign using a marker to draw the letters. The marker tip is a circle that's $2\text{ cm}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $1\text{ cm}$ of where it's previously been, how far apart should you make the marks?
 
 <!--more-->
 
@@ -13,13 +13,14 @@ date: 2020/06/06
 
 ## Solution
 
-The major insight here is that the marker leaves ink in proportion to the surface area it has dragged over the surface. If we drag the tip in a straight line, then the ink trail will be most intense at the center, and it will taper to zero intensity $\SI{1}{\centi\meter}$ from the center.
+The major insight here is that the marker leaves ink in proportion to the surface area it has dragged over the surface. If we drag the tip in a straight line, then the ink trail will be most intense at the center, and it will taper to zero intensity $1\text{ cm}$ from the center.
 
-This intensity profile is described by some function $I^\prime(r)$ that's $1$ at the center and zero at the edge. What is it? The relative surface area that the tip drags a distance $r$ from the center is proportional to the length of the chord at that radius. Looking at the diagram, the triangle reveals that $I^\prime(r) \sim 2\sqrt{1-r^2}.$ If we add this up from one edge to the other, we get $\pi,$ so the normalized profile is $I(r) = \frac{2}{\pi}\sqrt{1-x^2}.$
+This intensity profile is described by some function $I^\prime(r)$ that's $1$ at the center and zero at the edge. What is it? The relative surface area that the tip drags a distance $r$ from the center is proportional to the length of the chord at that radius. Looking at the diagram, the triangle reveals that $I^\prime(r) \sim 2\sqrt{1-r^2}.$ If we add this up from one edge to the other, we get $\pi,$ so the normalized profile is 
+$$I(r) = \frac{2}{\pi}\sqrt{1-x^2}.$$
 
 This shows how the ink trail would look from above:
 
-![aerial view](/img/2020-06-05-tip-intensity.png){: width="500px" class="image-centered"}
+![aerial view](/img/2020-06-05-tip-intensity.png){: width="400px" class="image-centered"}
 
 {:.caption}
 *The intensity of the marker falls decays with the length of the chord that's swept out at radius* $r.$
@@ -40,10 +41,13 @@ $$\sigma^2 = \langle I_\text{total}^2\rangle - \langle I_\text{total}\rangle^2$$
 If there's no undulation in the intensity then this will be zero, but if there are peaks and valleys, it will grow. Where is it least?
 
 The average value of the intensity is sum of intensity from one tip center to the other, divided by the distance that separates them:
-$$\langle I_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right),$$
+
+$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right),$$
 similarly, the average squared value is
-$$\langle I^2_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)^2\right),$$
+
+$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)^2\right),$$
 and the standard deviation is
+
 $$\sigma = \sqrt{\langle I_\text{total}^2\rangle - \langle I_\text{total}\rangle^2}.$$
 
 We can calculate $\sigma$ like so:
