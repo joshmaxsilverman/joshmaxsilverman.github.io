@@ -13,7 +13,7 @@ date: 2020/06/06
 
 ## Solution
 
-The major insight here is that the marker leaves ink in proportion to the surface area it has dragged over the surface. If we drag the tip in a straight line, then the ink trail will be most intense at the center, and it will taper to zero intensity $\SI{1}{\centi\meter}$ from the center. 
+The major insight here is that the marker leaves ink in proportion to the surface area it has dragged over the surface. If we drag the tip in a straight line, then the ink trail will be most intense at the center, and it will taper to zero intensity $\SI{1}{\centi\meter}$ from the center.
 
 This intensity profile is described by some function $I^\prime(r)$ that's $1$ at the center and zero at the edge. What is it? The relative surface area that the tip drags a distance $r$ from the center is proportional to the length of the chord at that radius. Looking at the diagram, the triangle reveals that $I^\prime(r) \sim 2\sqrt{1-r^2}.$ If we add this up from one edge to the other, we get $\pi,$ so the normalized profile is $I(r) = \frac{2}{\pi}\sqrt{1-x^2}.$
 
