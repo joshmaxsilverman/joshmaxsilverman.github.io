@@ -46,7 +46,7 @@ $$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d
 
 and the average squared value is
 
-$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)^2\right],$$
+$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right)^2,$$
 
 and the standard deviation is
 
