@@ -67,14 +67,13 @@ def I(r, center):
   else:
     return 0
   
-data = [
-        {sep, [I(r, 0) + I(r, sep) for r in np.arange(0, sep, 0.001)]}
-        for sep in np.arange(1, 2, 0.001) 
-       ]
-       
-sigmas = np.array([(x, np.stddev(y)) for (x, y) in data])
+data = [(sep, [I(r, 0) + I(r, sep) for r in np.arange(0, sep, 0.001)])
+        for sep in np.arange(1, 2, 0.001)]
+  
+sigmas = np.array([(x, np.std(y)) for (x, y) in data])
 
-smoothest_separation = sigmas[np.argmin(sigmas[:, 1])][0]
+min_index = np.argmin(sigmas[:, 1])
+smoothest_separation = sigmas[min_index][0]
 ```
 
 Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$ vs $d$:
