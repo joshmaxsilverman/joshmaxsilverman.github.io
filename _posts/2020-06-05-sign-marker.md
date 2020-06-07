@@ -34,9 +34,9 @@ If we keep a distance of $1\text{ cm}$ between the marker trails, then the sign 
 
 So how far should we make them?
 
-First of all, let's encapsulate the insight from above. If a marker tip is dragged over a point a distance $r_1$ from its center, then the ink intensity on that sport will be $I(r_1).$ By extension, if another tip drags over the same point a distance $r_2$ from its center, then the intensities add:
+First of all, let's encapsulate the insight from above. If a marker tip is dragged over a point a distance $r_1$ from its center, then the ink intensity on that spot will be $I(r_1).$ By extension, if another tip drags over the same point a distance $r_2$ from its center, then the intensities add:
 
-$$I_\text{total} = I_1(r_1) + I_2(r_2).$$
+$$I_\text{total} = I(r_1) + I(r_2).$$
 
 The standard deviation is equal to the square root of the average value of the squared intensity minus the square of the average intensity. 
 
@@ -46,11 +46,11 @@ If there's no undulation in the intensity then this will be zero, but if there a
 
 The average value of the intensity is sum of intensity from one tip center to the other, divided by the distance that separates them:
 
-$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left[I_1(r) + I_2(d-r)\right],$$
+$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left(I(r) + I(d-r)\right),$$
 
 and the average squared value is
 
-$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left(I_1(r) + I_2(d-r)\right)^2,$$
+$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left(I(r) + I(d-r)\right)^2,$$
 
 and the standard deviation is
 
