@@ -89,7 +89,7 @@ This is papable if we look at the post as $d$ changes. Bands of light and dark a
 ![gif movie 9](/img/2020-06-05-poster-sign-movie-column-site-gray-10ms.gif){:width="250px" class="image-centered"}
 
 {:.caption}
-**Left**: *density plot of ink intensity in a region with a drawn letter.* **Right**: *zoom in on two overlapping marker trails, (red) and (blue) show the profiles of the left and right hand trails, (black) shows their superposition ($I_\text{total}$), and (gold) shows the mean intensity of ink in the letters. Around $d_\text{sep} \approx 1.69,$ the variation of $I_\text{total}$ about the mean is minimized.*
+**Top**: *density plot of ink intensity in a region with a drawn letter.* **Bottom**: *zoom in on two overlapping marker trails, (red) and (blue) show the profiles of the left and right hand trails, (black) shows their superposition ($I_\text{total}$), and (gold) shows the mean intensity of ink in the letters. Around $d_\text{sep} \approx 1.69,$ the variation of $I_\text{total}$ about the mean is minimized.*
 
 <br>
 
