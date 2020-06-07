@@ -44,7 +44,7 @@ The average value of the intensity is sum of intensity from one tip center to th
 
 $$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)\right],$$
 
-similarly, the average squared value is
+and the average squared value is
 
 $$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)^2\right],$$
 
