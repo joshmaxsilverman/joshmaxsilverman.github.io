@@ -86,7 +86,7 @@ Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$
 
 This is papable if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.69\text{ cm}$:
 
-![gif movie 9](/img/2020-06-05-poster-sign-movie-column-site-gray-10ms.gif){:width="300px" class="image-centered"}
+![gif movie 9](/img/2020-06-05-poster-sign-movie-column-site-gray-10ms.gif){:width="350px" class="image-centered"}
 
 {:.caption}
 **Top**: *density plot of ink intensity in a region with a drawn letter.* **Bottom**: *zoom in on two overlapping marker trails, (red) and (blue) show the profiles of the left and right hand trails, (black) shows their superposition ($I_\text{total}$), and (gold) shows the mean intensity of ink in the letters. Around $d_\text{sep} \approx 1.69,$ the variation of $I_\text{total}$ about the mean is minimized.*
