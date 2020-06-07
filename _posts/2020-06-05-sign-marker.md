@@ -62,12 +62,12 @@ We can calculate $\sigma$ like so:
 import numpy as np
 import pandas as pd
 
-inc = 0.01
+inc = 0.0001
 
 def I(r, center):
   """returns the ink intensity at point r due to a marker tip at center"""
-  if 1 - (r - center)**2 >= 0:
-    return 2 / np.pi * np.sqrt(1 - (r - center)**2)
+  if 1 - (r - center) ** 2 >= 0:
+    return 2 / np.pi * np.sqrt(1 - (r - center) ** 2)
   else:
     return 0
 
