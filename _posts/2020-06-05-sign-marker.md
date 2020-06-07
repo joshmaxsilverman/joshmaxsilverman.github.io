@@ -91,7 +91,7 @@ min_index = df["stddev"].idxmin()
 smoothest_separation = df.loc[min_index]["separation"]
 ```
 
-Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma$ vs $d$:
+Which gives $d_\text{smoothest} \approx 1.692\text{ cm}$ as seen in the plot of $\sigma$ vs $d$:
 
 ![plot of stddev vs d](/img/2020-06-05-stddev-sep.png){: width="400px" class="image-centered"}
 
