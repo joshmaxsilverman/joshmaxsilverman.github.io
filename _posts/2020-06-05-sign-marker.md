@@ -66,6 +66,9 @@ Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$
 
 ![plot of variance vs d]()
 
+This is apparent if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.69\text{ cm}$:
+
+![gif movie 9](/img/2020-06-05-poster-sign-movie.gif)
 
 
   
