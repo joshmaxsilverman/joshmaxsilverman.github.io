@@ -20,7 +20,7 @@ $$I(r) = \frac{2}{\pi}\sqrt{1-x^2}.$$
 
 This shows how the ink trail would look from above:
 
-![aerial view](/img/2020-06-05-tip-intensity.png){: width="400px" class="image-centered"}
+![aerial view](/img/2020-06-05-tip-intensity.png){: width="300px" class="image-centered"}
 
 {:.caption}
 *The intensity of the marker falls decays with the length of the chord that's swept out at radius* $r.$
