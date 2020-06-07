@@ -46,11 +46,11 @@ If there's no undulation in the intensity then this will be zero, but if there a
 
 The average value of the intensity is sum of intensity from one tip center to the other, divided by the distance that separates them:
 
-$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left[I_1(r) + I_2(d-r)\right],$$
+$$\langle I_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left[I_1(r) + I_2(d-r)\right],$$
 
 and the average squared value is
 
-$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right)^2,$$
+$$\langle I^2_\textrm{total}\rangle = \frac{1}{d} \int_0^d dr\, \left(I_1(r) + I_2(d-r)\right)^2,$$
 
 and the standard deviation is
 
@@ -85,7 +85,7 @@ df["intensities"] = df["separation"].map(intensity_series)
 df["stddev"] = df["intensities"].map(np.std)
 
 # find the separation that has the minimal standard deviation of ink intensities
-min_index = np.argmin(df.stddev)
+min_index = df["stddev"].idxmin()
 smoothest_separation = df.loc[min_index]["separation"]
 ```
 
