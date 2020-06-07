@@ -73,7 +73,7 @@ smoothest_separation = sigmas[np.argmin(sigmas[:, 1])][0]
 
 Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$ vs $d$:
 
-![plot of stddev vs d](/img/2020-06-05-stddev-sep.png){: width="500px" class="image-centered"}
+![plot of stddev vs d](/img/2020-06-05-stddev-sep.png){: width="400px" class="image-centered"}
 
 {:.caption}
 *The standard deviation is minimized around* $d = 1.69\text{ cm}.$
