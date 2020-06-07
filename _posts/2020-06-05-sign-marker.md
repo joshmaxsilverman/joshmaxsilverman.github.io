@@ -28,11 +28,13 @@ This shows how the ink trail would look from above:
 
 ### Close, but not too close
 
-If we keep a distance of $1\text{ cm}$ between the marker trails, then the sign will be an undulating tapestry of varying intensity, disorienting all who gaze upon it. Overlapping the trails can even it out, but if we bring them too close together, the centers will be very thick and we'll be back in the bad sign hall of fame.
+By definition, all marks on the sign will be built out out of parallel marker trails.
+
+If we keep a distance of $1\text{ cm}$ between the parallel marker trails, then the sign will be an undulating tapestry of varying intensity, disorienting all who gaze upon it. Overlapping the trails can even out the profile, but if we bring them too close together, the centers will be very thick and we'll be back in the uneven ink hall of fame.
 
 ### Overlapping trails
 
-So how far should we make them?
+So how far apart should we make them?
 
 First of all, let's encapsulate the insight from above. If a marker tip is dragged over a point a distance $r_1$ from its center, then the ink intensity on that spot will be $I(r_1).$ By extension, if another tip drags over the same point a distance $r_2$ from its center, then the intensities add:
 
@@ -64,16 +66,16 @@ import pandas as pd
 
 inc = 0.0001
 
-def I(r, center):
-  """returns the ink intensity at point r due to a marker tip at center"""
-  if 1 - (r - center) ** 2 >= 0:
-    return 2 / np.pi * np.sqrt(1 - (r - center) ** 2)
+def I(r, d):
+  """returns the ink intensity at point r due to a marker tip at d"""
+  if 1 - (r - d) ** 2 >= 0:
+    return 2 / np.pi * np.sqrt(1 - (r - d) ** 2)
   else:
     return 0
 
-def intensity_series(sep):
+def intensity_series(d):
   """returns an array of the intensity at all points between the two tips"""
-  return [I(r, 0) + I(r, sep) for r in np.arange(0, sep, inc)]
+  return [I(r, 0) + I(r, d) for r in np.arange(0, d, inc)]
   
 # initialize dataframe with separation values
 df = pd.DataFrame(np.arange(1, 2, inc), columns=["separation"])
