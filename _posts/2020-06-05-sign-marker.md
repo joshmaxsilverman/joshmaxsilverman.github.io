@@ -2,10 +2,10 @@
 layout: post
 published: false
 title: Sign Markers
-date: 2018/04/21
+date: 2020/06/06
 ---
 
->You're making a sign using a marker to draw the letters. The marker tip is a circle that's $\SI{2}{\centi\meter}$ across. If you want the marks to be as uniform as possible (as measured by the variance of the ink intensity), and you can't place the tip within $\SI{1}{\centi\meter}$ of where it's previously been, how far apart should you make the marks?
+>You're making a sign using a marker to draw the letters. The marker tip is a circle that's $\SI{2}{\centi\meter}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $\SI{1}{\centi\meter}$ of where it's previously been, how far apart should you make the marks?
 
 <!--more-->
 
@@ -19,7 +19,7 @@ This intensity profile is described by some function $I^\prime(r)$ that's $1$ at
 
 This shows how the ink trail would look from above:
 
-![side by side of profile and aerial view]()
+![aerial view](/img/2020-06-05-tip-intensity.png)
 
 ### Close, but not too close
 
@@ -32,16 +32,18 @@ So how far should we make them?
 First of all, let's encapsulate the insight from above. If a marker tip is dragged over a point a distance $r_1$ from its center, then the ink intensity on that sport will be $I(r_1).$ By extension, if another tip drags over the same point a distance $r_2$ from its center, then the intensities add:
 $$I_\text{total} = I_1(r_1) + I_2(r_2).$$
 
-The variance is equal to the average value of the squared intensity minus the square of the average intensity. 
+The standard deviation is equal to the square root of the average value of the squared intensity minus the square of the average intensity. 
 $$\sigma^2 = \langle I_\text{total}^2\rangle - \langle I_\text{total}\rangle^2$$
 If there's no undulation in the intensity then this will be zero, but if there are peaks and valleys, it will grow. Where is it least?
 
 The average value of the intensity is sum of intensity from one tip center to the other, divided by the distance that separates them:
-$$\langle I_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right).$$
-Similarly, the average squared value is
-$$\langle I^2_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)^2\right).$$
+$$\langle I_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)\right),$$
+similarly, the average squared value is
+$$\langle I^2_\textrm{total} = \frac{1}{d} \int_0^d dr \left(I_1(r) + I_2(d-r)^2\right),$$
+and the standard deviation is
+$$\sigma = \sqrt{\langle I_\text{total}^2\rangle - \langle I_\text{total}\rangle^2}.$$
 
-We can calculate $\sigma^$ like so
+We can calculate $\sigma$ like so:
 
 ```python
 import numpy as np
@@ -57,23 +59,23 @@ data = [
         for sep in np.arange(1, 2, 0.001) 
        ]
        
-vars = np.array([(x, np.var(y)) for (x, y) in data])
+sigmas = np.array([(x, np.stddev(y)) for (x, y) in data])
 
-smoothest_separation = vars[np.argmin(vars[:, 1])][0]
+smoothest_separation = sigmas[np.argmin(sigmas[:, 1])][0]
 ```
 
 Which gives $d_\text{smoothest} \approx 1.692$ as seen in the plot of $\sigma^2$ vs $d$:
 
-![plot of variance vs d]()
+![plot of stddev vs d](/img/2020-06-05-stddev-sep.png)
 
-This is apparent if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.69\text{ cm}$:
+This is papable if we look at the post as $d$ changes. Bands of light and dark are present at all values, but they're diminished in the neighborhood of $d\approx 1.69\text{ cm}$:
 
 ![gif movie 9](/img/2020-06-05-poster-sign-movie.gif){: width="600px" class="image-centered"}
 
 {:.caption}
 **Left**: density plot of ink intensity in a region with a drawn letter. **Right**: zoom in on two overlapping marker trails, (red) and (blue) show the profiles of the left and right hand trails, (black) shows their superposition ($I_\text{total}$), and (gold) shows the mean intensity of ink in the letters. Around $d_\text{sep} \approx 1.69,$ the variation of $I_\text{total}$ about the mean is minimized.
 
-  
+
   
 
 
