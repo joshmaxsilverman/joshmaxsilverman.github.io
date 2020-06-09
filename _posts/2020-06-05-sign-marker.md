@@ -20,7 +20,7 @@ The major insight here is that the marker leaves ink in proportion to the surfac
 {:.caption}
 **Intensity diagram** *the intensity of the mark left a distance $r$ from the tip's center is proportional to fraction of the circle's surface area that drags past the point, i.e., the length of the pink chord at $r.$ Using the Pythagorean theorem, the chord has length $\ell = 2\sqrt{1 - r^2}.$
 
-This intensity profile is described by some function $I(r)$ that's $1$ at the center and zero at the edge. What is it? The relative surface area that the tip drags a distance $r$ from the center is proportional to the length of the chord at that radius. Looking at the diagram, the triangle reveals that $I(r) \sim 2\sqrt{1-r^2}.$ If we add this up from one edge to the other, we get $\pi/2,$ so the normalized profile is 
+This intensity profile is described by some function $I(r)$ that's $1$ at the center and zero at the edge. What is it? The relative surface area that the tip drags a distance $r$ from the center is proportional to the length of the chord at that radius. Looking at the diagram, the triangle reveals that $I(r) \sim 2\sqrt{1-r^2}.$ If we add this up from the center to the edge, we get $\pi/2,$ so the normalized profile is 
 
 $$I(r) = \frac{4}{\pi}\sqrt{1-r^2}.$$
 
