@@ -43,9 +43,16 @@ it's a little easier to see that $P_\text{die} = \left(1-\gamma\right)/\gamma.$
 
 A colony either collapses or it doesn't, so $P_\text{die} + P_\infty = 1$ and 
 
-$$P_\infty = 1 - \dfrac{1-\gamma}{\gamma} = \dfrac{2-\gamma}{\gamma}.$$
+$$\begin{align}
+P_\infty &= 1 - P_\text{die} \\
+&= \dfrac{2-\gamma}{\gamma}.
+\end{align}$$
 
 As we expected, there's no chance of an everlasting colony if $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse $P_\infty(\gamma = 1) = 1.$
+
+### Is this real?
+
+The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2 - 0.8}{0.8}.$ Is this what happens?
 
 
 
