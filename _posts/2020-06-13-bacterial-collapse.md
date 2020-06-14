@@ -17,17 +17,25 @@ The strain in question is _Riddlerium classicum_, about which not much is known 
 
 ### Colony viability
 
-Before answering the main question, there's the issue of when the colony will be viable in the first place ($P_\infty > 0$ to be everlasting). The basic insight is that we need the expected number of cells in the next generation to be greater than $1$. In that case, the average outcome after one generation is that we have a solitary cell with the same existential crisis on its hands. So, if $\gamma < 0.5,$ we should expect that $P_\infty = 0.$
+Before answering the main question, there's the issue of when the colony will be viable in the first place ($P_\infty > 0$ to be everlasting). 
+
+The basic insight is that we need the expected number of cells in the next generation to be greater than $1$. In that case, the average outcome after one generation is that we have a solitary cell with the same existential crisis on its hands. 
+
+So, if $\gamma < 0.5,$ we should expect $P_\infty = 0.$
 
 ### Colony flourishing
 
 What if we want to go beyond the prayer of survival — how big does $\gamma$ need to be to push $P_\infty$ to whatever level we like? On first glance it seems like this could turn into a nested labyrinth of tracking the outcome for each branch of the lineage. 
 
-However, each cell has the same prospects so the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
+However, each cell has the same prospects so the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. 
+
+Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
 
 Writing down the second of these,
 
-$$P_\infty = (1-\gamma) + \gamma P_\infty^2.$$
+$$P_\ext{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
+
+
 
 
 
