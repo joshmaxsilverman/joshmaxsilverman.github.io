@@ -33,7 +33,7 @@ Symmetrically, the probability that the first cell leads to a finite colony is e
 
 Writing down the second of these,
 
-$$P_\ext{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
+$$P_\text{deadend} = (1-\gamma) + \gamma P_\text{deadend}^2.$$
 
 
 
