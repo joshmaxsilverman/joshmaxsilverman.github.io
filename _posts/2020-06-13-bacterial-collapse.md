@@ -35,7 +35,7 @@ Writing down the second of these,
 
 $$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
 
-$$1 = \fracr{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}.$$
+$$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}.$$
 
 
 
