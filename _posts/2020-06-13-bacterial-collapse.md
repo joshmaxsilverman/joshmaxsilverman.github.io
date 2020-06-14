@@ -31,11 +31,7 @@ However, each cell has the same prospects so the probability that the first cell
 
 Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
 
-Writing down the second of these,
-
-$$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
-
-This can be solved with the quadratic equation but if we divide by $P_\text{die}$ 
+Writing down the second of these says $P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$ This can be solved with the quadratic equation but if we divide by $P_\text{die}$: 
 
 $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
