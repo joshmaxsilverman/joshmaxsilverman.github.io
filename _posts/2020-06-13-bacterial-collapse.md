@@ -21,7 +21,7 @@ Before answering the main question, there's the issue of when the colony will be
 
 The basic insight is that we need the expected number of cells in the next generation to be greater than $1$. In that case, the average outcome after one generation is that we have a solitary cell with the same existential crisis on its hands. 
 
-So, if $\gamma < 0.5,$ we should expect $P_\infty = 0.$
+So, if $\gamma < 1/2,$ we should expect $P_\infty = 0.$
 
 ### Colony flourishing
 
@@ -35,7 +35,15 @@ Writing down the second of these,
 
 $$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
 
-$$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}.$$
+This can be solved with the quadratic equation but if we divide by $P_\text{die}$ 
+
+$$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
+
+it's a little easier to see that $P_\text{die} = \left(1-\gamma\right)/\gamma.$
+
+A colony either collapses or it doesn't, so $P_\text{die} + P_\infty = 1$ and 
+
+$$P_\infty = 1 - \dfrac{1-\gamma}{\gamma} = \dfrac{2-\gamma}{\gamma}$.$
 
 
 
