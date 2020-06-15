@@ -37,15 +37,21 @@ $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
 it's a little easier to see that $\boxed{P_\text{die} = \left(1-\gamma\right)/\gamma}.$
 
-A colony either collapses or it doesn't, so $P_\text{die} + P_\infty = 1,$ $P_\infty = 1 - P_\text{die}$ and
+A colony either collapses or it doesn't, so $P_\infty = 1 - P_\text{die}$ and
 
-$$\P_\infty = \max(0, dfrac{2\gamma-1}{\gamma}).$$
+$$P_\infty = \max(0, \dfrac{2\gamma-1}{\gamma}).$$
 
-As we expected, there's no chance of an everlasting colony when $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse $P_\infty(\gamma = 1) = 1.$
+As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse: $P_\infty(\gamma = 1) = 1.$
 
-### Is this real?
+### So, what happens?
 
-The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2\times0.8 - 1}{0.8}.$ Is this what happens?
+The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2\times0.8 - 1}{0.8} = 75\%.$ The simulation is straightforward, and confirms that $P_\infty(\gamma = 80\%) = 75\%$. 
+
+Simulating near the threshold is tricky because more trajectories will be on the fence between colony collapse and making it to the pantheon of everlasting colonies. If we cut the simulation off too early, e.g. by introducing a cutoff that's too high, then it will bias our estimate of $P_\infty$ to be too low (some colonies will be diddling under the threshold, before escaping). Likewise, if we introduce a low cutoff, it will look like there are everlasting colonies before the threshold. 
+
+To get around this, we can use a high cutoff, but run all colonies until they either hit the cutoff or crash to zero. This would also allow us measure the false positive rate. 
+
+Using the code below, we get good agreement with the calculation:
 
 ![](/img/2020-06-14-bacteria-collapse.png){:width="400px" class="image-centered"}
 
