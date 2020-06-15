@@ -58,7 +58,6 @@ Simulating near the threshold is tricky because more trajectories will be on the
 To get around this, we can use a high cutoff, but run all colonies until they either hit the cutoff or crash to zero. This would also allow us measure the false positive rate. 
 
 ```python
-
 import random
 import numpy as np
 
@@ -69,11 +68,15 @@ def conduct_experiment(gamma, start_count):
 
     # For 20 generations of growth
     for round in range(20):
-        # For each cell, double with probability gamma, lyse with probability (1 - gamma)
-        new_cells = sum((2 if random.random() < gamma else 0) for cell in range(cell_count))
+        # For each cell, double with probability gamma, 
+        # lyse with probability (1 - gamma)
+        new_cells = sum(
+                        (2 if random.random() < gamma else 0) 
+                        for cell in range(cell_count)
+                       )
         # Update the cell count
         cell_count = new_cells
-    # If the cell_count is bigger than cutoff, return the cell_count.
+    # If cell_count is bigger than cutoff, return cell_count.
     if cell_count > cutoff:
         return(cell_count)
     # If it's 0 or less, return 0.
