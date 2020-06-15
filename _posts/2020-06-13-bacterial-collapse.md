@@ -54,8 +54,7 @@ The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \f
 {: .caption}
 Theoretical curve in gold overlaid by results of simulation ($N=2\times 10^4$ per point). The dotted lines show the case of the original problem.
 
-```
-python
+```python
 
 import random
 import numpy as np
