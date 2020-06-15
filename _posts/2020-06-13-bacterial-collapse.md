@@ -17,7 +17,7 @@ The strain in question is _Riddlerium classicum_, about which not much is known 
 
 ### Colony viability
 
-Before answering the main question, there's the issue of when the colony will be viable in the first place ($P_\infty > 0$ to be everlasting). 
+Before answering the main question, there's the issue of when the colony will be viable in the first place (nonzero probability to be everlasting, $P_\infty > 0$). 
 
 The basic insight is that we need the expected number of cells in the next generation to be greater than $1$. In that case, the average outcome after one generation is that we have a solitary cell with the same existential crisis on its hands. 
 
@@ -41,15 +41,59 @@ $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
 it's a little easier to see that $\boxed{P_\text{die} = \left(1-\gamma\right)/\gamma}.$
 
-A colony either collapses or it doesn't, so $P_\text{die} + P_\infty = 1,$ $P_\infty &= 1 - P_\text{die}$ and
+A colony either collapses or it doesn't, so $P_\text{die} + P_\infty = 1,$ $P_\infty = 1 - P_\text{die}$ and
 
-$$\dfrac{2\gamma-1}{\gamma}.$$
+$$\P_\infty = \max(0, dfrac{2\gamma-1}{\gamma}).$$
 
-As we expected, there's no chance of an everlasting colony if $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse $P_\infty(\gamma = 1) = 1.$
+As we expected, there's no chance of an everlasting colony when $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse $P_\infty(\gamma = 1) = 1.$
 
 ### Is this real?
 
 The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2\times0.8 - 1}{0.8}.$ Is this what happens?
+
+![](2020-06-14-bacteria-collapse.png){width="400px" class="image-centered"}
+
+{: .caption}
+Theoretical curve in gold overlaid by results of simulation ($N=2\times 10^4$ per point). The dotted lines show the case of the original problem.
+
+```
+python
+
+import random
+import numpy as np
+
+cutoff = 1000
+
+def conduct_experiment(pp, start_count):
+    cell_count = start_count
+
+    # For 20 generations of growth
+    for round in range(20):
+        # For each cell, double with probability pp, lyse with probability (1 - pp)
+        new_cells = sum((2 if random.random() < pp else 0) for cell in range(cell_count))
+        # Update the cell count
+        cell_count = new_cells
+    # If the cell_count is bigger than cutoff, return the cell_count.
+    if cell_count > cutoff:
+        return(cell_count)
+    # If it's 0 or less, return 0.
+    elif cell_count <= 0:
+        return(0)
+    # Otherwise, keep running.
+    else:
+        return(conduct_experiment(pp, cell_count))
+        
+pp_values = np.arange(0, 1, 0.02)
+Ps = []
+
+for pp in pp_values:
+    # Conduct 20000 experiments for each value of pp
+    experiments = [conduct_experiment(pp, 1) for _ in range(200)]
+    # Calculate Psurvive and accumulate
+    Psurvive = np.mean([(1 if expt > 0 else 0) for expt in experiments])
+    Ps.append(Psurvive)
+
+```
 
 
 
