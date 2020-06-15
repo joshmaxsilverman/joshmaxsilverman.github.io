@@ -35,7 +35,7 @@ This can be solved with the quadratic equation but if we divide by $P_\text{die}
 
 $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
-it's a little easier to see that $P_\text{die} = \left(1-\gamma\right)/\gamma.$
+it's a little easier to see that $P_\text{die} = \min(1, \left(1-\gamma\right)/\gamma).$
 
 A colony either collapses or it doesn't, so $P_\infty = 1 - P_\text{die}$ and
 
