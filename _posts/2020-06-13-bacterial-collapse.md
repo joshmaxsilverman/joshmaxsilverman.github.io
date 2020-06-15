@@ -11,7 +11,7 @@ date: 2020/06/13
 >
 >The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). 
 >
->What's the probability that the colony is blessed with everlasting propagation? (e.g. the population never crashes to zero)
+>What's the probability that the colony is blessed with everlasting propagation? (i.e. the population never crashes to zero)
 
 <!--more-->
 
