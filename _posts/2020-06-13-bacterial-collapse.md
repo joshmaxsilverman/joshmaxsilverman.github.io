@@ -27,7 +27,7 @@ However, each cell has the same prospects so the probability that the first cell
 
 Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
 
-Writing down the second of these, 
+Writing down the second of these, we get
 
 $$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$ 
 
@@ -50,13 +50,6 @@ The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \f
 Simulating near the threshold is tricky because more trajectories will be on the fence between colony collapse and making it to the pantheon of everlasting colonies. If we cut the simulation off too early, e.g. by introducing a cutoff that's too high, then it will bias our estimate of $P_\infty$ to be too low (some colonies will be diddling under the threshold, before escaping). Likewise, if we introduce a low cutoff, it will look like there are everlasting colonies before the threshold. 
 
 To get around this, we can use a high cutoff, but run all colonies until they either hit the cutoff or crash to zero. This would also allow us measure the false positive rate. 
-
-Using the code below, we get good agreement with the calculation:
-
-![](/img/2020-06-14-bacteria-collapse.png){:width="400px" class="image-centered"}
-
-{: .caption}
-Theoretical curve in gold overlaid by results of simulation ($N=2\times 10^4$ per point). The dotted lines show the case of the original problem.
 
 ```python
 
@@ -96,9 +89,12 @@ for pp in pp_values:
 
 ```
 
+Using the code above, we get good agreement with the calculation:
 
+![](/img/2020-06-14-bacteria-collapse.png){:width="400px" class="image-centered"}
 
-
+{: .caption}
+Theoretical curve in gold overlaid by results of simulation ($N=2\times 10^4$ per point). The dotted lines show the case of the original problem.
 
 
 <br>
