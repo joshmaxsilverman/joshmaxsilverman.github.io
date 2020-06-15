@@ -19,7 +19,7 @@ date: 2020/06/13
 
 ## Solution
 
-Before answering the main question, there's the issue of when the colony will be viable in the first place (nonzero probability to be everlasting, $P_\infty > 0$). 
+Before answering the main question, there's the issue of when the colony will become viable in the first place (nonzero probability to be everlasting, $P_\infty > 0$). 
 
 The basic insight is that we need the expected number of cells in the next generation to be greater than $1$. In that case, the average outcome after one generation is that we have a solitary cell with the same existential crisis on its hands. 
 
