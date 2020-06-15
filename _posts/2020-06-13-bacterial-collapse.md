@@ -95,7 +95,6 @@ for gamma in gamma_values:
     # Calculate Psurvive and accumulate
     Psurvive = np.mean([(1 if expt > 0 else 0) for expt in experiments])
     Ps.append(Psurvive)
-
 ```
 
 Using the code above, we get good agreement with the calculation:
