@@ -64,13 +64,13 @@ import numpy as np
 
 cutoff = 1000
 
-def conduct_experiment(pp, start_count):
+def conduct_experiment(gamma, start_count):
     cell_count = start_count
 
     # For 20 generations of growth
     for round in range(20):
-        # For each cell, double with probability pp, lyse with probability (1 - pp)
-        new_cells = sum((2 if random.random() < pp else 0) for cell in range(cell_count))
+        # For each cell, double with probability gamma, lyse with probability (1 - gamma)
+        new_cells = sum((2 if random.random() < gamma else 0) for cell in range(cell_count))
         # Update the cell count
         cell_count = new_cells
     # If the cell_count is bigger than cutoff, return the cell_count.
@@ -81,14 +81,14 @@ def conduct_experiment(pp, start_count):
         return(0)
     # Otherwise, keep running.
     else:
-        return(conduct_experiment(pp, cell_count))
+        return(conduct_experiment(gamma, cell_count))
         
-pp_values = np.arange(0, 1, 0.02)
+gamma_values = np.arange(0, 1, 0.02)
 Ps = []
 
-for pp in pp_values:
-    # Conduct 20000 experiments for each value of pp
-    experiments = [conduct_experiment(pp, 1) for _ in range(200)]
+for gamma in gamma_values:
+    # Conduct 20000 experiments for each value of gamma
+    experiments = [conduct_experiment(gamma, 1) for _ in range(20000)]
     # Calculate Psurvive and accumulate
     Psurvive = np.mean([(1 if expt > 0 else 0) for expt in experiments])
     Ps.append(Psurvive)
