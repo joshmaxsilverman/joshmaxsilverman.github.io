@@ -27,9 +27,7 @@ However, each cell has the same prospects so the probability that the first cell
 
 Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
 
-Writing down the second of these, we get
-
-$$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$ 
+Writing down the second of these, we get $P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$
 
 This can be solved with the quadratic equation but if we divide by $P_\text{die}$: 
 
@@ -39,7 +37,7 @@ it's a little easier to see that $P_\text{die} = \min(1, \left(1-\gamma\right)/\
 
 A colony either collapses or it doesn't, so $P_\infty = 1 - P_\text{die}$ and
 
-$$P_\infty = \max(0, \dfrac{2\gamma-1}{\gamma}).$$
+$$\boxed{P_\infty = \max(0, \dfrac{2\gamma-1}{\gamma})}.$$
 
 As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse: $P_\infty(\gamma = 1) = 1.$
 
