@@ -5,15 +5,13 @@ title: Bacterial Collapse
 date: 2020/06/13
 ---
 
->A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $1-\gamma$ of dying, as do all of its descendants. What's the probability that the colony is blessed with everlasting propagation? (e.g. the population never crashes to zero)
+>A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $1-\gamma$ of dying, as do all of its descendants. The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). What's the probability that the colony is blessed with everlasting propagation? (e.g. the population never crashes to zero)
 
 <!--more-->
 
 ([FiveThirtyEight](https://fivethirtyeight.com/features/how-long-will-the-bacterial-colony-last/))
 
 ## Solution
-
-The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). Each cell that's born has a $20\%$ chance of dying, and an $80\%$ chance of forking into two new cells, each of which then have the same odds. 
 
 ### Colony viability
 
