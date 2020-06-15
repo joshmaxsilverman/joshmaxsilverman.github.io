@@ -47,7 +47,7 @@ As we expected, there's no chance of an everlasting colony when $\gamma < 1/2.$ 
 
 The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2\times0.8 - 1}{0.8}.$ Is this what happens?
 
-![](/img/2020-06-14-bacteria-collapse.png){: width="400px" class="image-centered"}
+![](/img/2020-06-14-bacteria-collapse.png){:width="400px" class="image-centered"}
 
 {: .caption}
 Theoretical curve in gold overlaid by results of simulation ($N=2\times 10^4$ per point). The dotted lines show the case of the original problem.
