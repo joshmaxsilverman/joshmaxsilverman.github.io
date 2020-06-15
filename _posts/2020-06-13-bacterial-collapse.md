@@ -33,7 +33,7 @@ However, each cell has the same prospects so the probability that the first cell
 
 Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
 
-![](img/2020-06-14-bacteria-collapse-diagram.jpg){: height="700px" class="image-centered"}
+![](/img/2020-06-14-bacteria-collapse-diagram.jpg){:height="700px" class="image-centered"}
 
 {:.caption}
 Each cell can either lyse with probability $\left(1-\gamma\right)$ or reproduce with probability $\gamma$.
