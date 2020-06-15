@@ -5,7 +5,7 @@ title: Bacterial Collapse
 date: 2020/06/13
 ---
 
->A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $1-\gamma$ of dying, as do all of its descendants. The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). What's the probability that the colony is blessed with everlasting propagation? (e.g. the population never crashes to zero)
+>A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $\left(1-\gamma\right)$ of lysing, as do all of its descendants. The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). What's the probability that the colony is blessed with everlasting propagation? (e.g. the population never crashes to zero)
 
 <!--more-->
 
@@ -26,6 +26,8 @@ What if we want to go beyond the prayer of survival — how big does $\gamma$ ne
 However, each cell has the same prospects so the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. 
 
 Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
+
+`<hand drawing of second situation>`
 
 Writing down the second of these, we get $P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$
 
