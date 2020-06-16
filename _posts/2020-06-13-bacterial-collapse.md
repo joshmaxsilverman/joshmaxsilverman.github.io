@@ -48,15 +48,11 @@ it's a little easier to see that $P_\text{die} = \min\left(1, \left(1-\gamma\rig
 
 A colony either collapses or it doesn't, so 
 
-$$\begin{align}
+$$\boxed{\begin{align}
 P_\infty = 1 - P_\text{die} &= 1-\min\left(1, \frac{1-\gamma}{\gamma}\right) \\
                             &= 1+\max\left(-1, \frac{\gamma-1}{\gamma}\right) \\
                             &= \max\left(0, \frac{2\gamma - 1}{\gamma}\right) \\
-\end{align}$$
-
-$P_\infty = 1 - P_\text{die}$ and
-
-$$\boxed{P_\infty = \max\left(0, \dfrac{2\gamma-1}{\gamma}\right)}.$$
+\end{align}}$$
 
 As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2.$ And when cells are everlasting, so is the colony: $P_\infty(\gamma = 1) = 1.$
 
