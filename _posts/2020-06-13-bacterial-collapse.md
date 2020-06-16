@@ -9,7 +9,7 @@ date: 2020/06/13
 
 >A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $\left(1-\gamma\right)$ of lysing, as do all of its descendants. 
 >
->The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more sucessful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). 
+>The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more successful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). 
 >
 >What's the probability that the colony is blessed with everlasting propagation? (i.e. the population never crashes to zero)
 
@@ -27,11 +27,11 @@ So, if $\gamma < 1/2,$ we should expect $P_\infty = 0.$
 
 ### Colony flourishing
 
-What if we want to go beyond the prayer of survival — how big does $\gamma$ need to be to push $P_\infty$ to whatever level we like? On first glance it seems like this could turn into a nested labyrinth of tracking the outcome for each branch of the lineage. 
+What if we want to go beyond the prayer of survival — how big does $\gamma$ need to be to push $P_\infty$ to whatever level we like? At first glance, it seems like this could turn into a nested labyrinth of tracking the outcome for each branch of the lineage. 
 
-However, each cell has the same prospects so the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. 
+However, each cell has the same prospects. So the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. 
 
-Symmetrically, the probability that the first cell leads to a finite colony is equal to the probability that it dies plus the probability that it reproduces, but both of its children's colonies spawn finite colonies.
+Symmetrically, the probability that the first cell has a finite lineage is equal to the probability that it dies plus the probability that it reproduces but both of its children have finite lineages.
 
 ![](/img/2020-06-14-bacteria-collapse-diagram.jpg){:height="700px" class="image-centered"}
 
@@ -40,17 +40,25 @@ Each cell can either lyse with probability $\left(1-\gamma\right)$ or reproduce 
 
 Writing down the second of these, we get $P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$
 
-This can be solved with the quadratic equation but if we divide by $P_\text{die}$: 
+This can be solved with the quadratic formula but if we divide by $P_\text{die}$: 
 
 $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
-it's a little easier to see that $P_\text{die} = \min(1, \left(1-\gamma\right)/\gamma).$
+it's a little easier to see that $P_\text{die} = \min\left(1, \left(1-\gamma\right)/\gamma\right).$
 
-A colony either collapses or it doesn't, so $P_\infty = 1 - P_\text{die}$ and
+A colony either collapses or it doesn't, so 
 
-$$\boxed{P_\infty = \max(0, \dfrac{2\gamma-1}{\gamma})}.$$
+$$\begin{align}
+P_\infty = 1 - P_\text{die} &= 1-\min\left(1, \frac{1-\gamma}{\gamma}\right) \\
+                            &= 1+\max\left(-1, \frac{\gamma-1}{\gamma}\right) \\
+                            &= \max\left(0, \frac{2\gamma - 1}{\gamma}\right) \\
+\end{align}$$
 
-As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2.$ Also, if there's no chance of cell death, then there's no chance of colony collapse: $P_\infty(\gamma = 1) = 1.$
+$P_\infty = 1 - P_\text{die}$ and
+
+$$\boxed{P_\infty = \max\left(0, \dfrac{2\gamma-1}{\gamma}\right)}.$$
+
+As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2.$ And when cells are everlasting, so is the colony: $P_\infty(\gamma = 1) = 1.$
 
 ### So, what happens?
 
@@ -60,7 +68,7 @@ Simulating near the threshold is tricky because more trajectories will be on the
 
 If we cut the simulation off too early, e.g. by introducing a cutoff that's too high, then it will bias our estimate of $P_\infty$ to be too low (some colonies will be diddling under the threshold, before escaping). Likewise, if we introduce a low cutoff, it will look like there are everlasting colonies before the threshold. 
 
-To get around this, we can use a high cutoff, but run all colonies until they either hit the cutoff or crash to zero. This would also allow us measure the false positive rate. 
+To get around this, we can use a high cutoff, but run all colonies until they either hit the cutoff or crash to zero. This would also allow us to measure the false positive rate. 
 
 ```python
 import random
