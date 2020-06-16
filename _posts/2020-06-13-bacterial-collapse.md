@@ -58,7 +58,7 @@ As we anticipated, there's no chance of an everlasting colony when $\gamma < 1/2
 
 ### So, what happens?
 
-The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \frac{2\times0.8 - 1}{0.8} = 75\%.$ The simulation is straightforward, and confirms that $P_\infty(\gamma = 80\%) = 75\%$. 
+The colony from the problem has $\gamma = 0.8,$ so we expect that $P_\infty = \left(2\times0.8 - 1\right)/0.8 = 75\%.$ The simulation is straightforward, and confirms that $P_\infty(\gamma = 80\%) = 75\%$. 
 
 Simulating near the threshold is tricky because more trajectories will be on the fence between colony collapse and making it to the pantheon of everlasting colonies. 
 
