@@ -25,7 +25,7 @@ Here I offer my simple approach, translated from the back of a napkin, that can 
 
 ### Preliminaries
 
-The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \left\\{1, 2^3, \ldots, n^3\right\\}$ as a proxy for the set of spheres. If the spheres are divisible into $P$ partitions then their total has to be divisible by $P.$ Also, since each partition sums to $T = \left(\sum w_i\right) / P,$ the heaviest gold sphere has to weigh less than this: $\max\left\\{w_i\right\\} \leq T.$ (if a single sphere is heavier than the target weight for a partition, it won't fit in any partition)
+The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $N$ integers $w = \left\\{1^3, 2^3, \ldots, N^3\right\\}$ as a proxy for the set of spheres. If the spheres are divisible into $P$ partitions then their total has to be divisible by $P.$ Also, since each partition sums to $T = \left(\sum w_i\right) / P,$ the heaviest gold sphere has to weigh less than this: $\max\left\\{w_i\right\\} \leq T.$ (if a single sphere is heavier than the target weight for a partition, it won't fit in any partition)
 
 ### Intuition
 
