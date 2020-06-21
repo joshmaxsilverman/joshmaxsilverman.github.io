@@ -29,7 +29,7 @@ The weight of each cube is proportional to the cube of its length dimension $M \
 
 ### Intuition
 
-The basic idea for this algorithm is to go through the list of cubes, left to right, and accumulate them in $p$ sets (that start out empty). If adding the cube to the first set would not bring its mass above the target amount of gold, the cube gets added to the first set, otherwise we try the next set. 
+The basic idea for this algorithm is to go through the list of cubes, left to right, and accumulate them in $P$ sets (that start out empty). If adding the cube to the first set would not bring its mass above the target amount of gold, the cube gets added to the first set, otherwise we try the next set. 
 
 That's basically it. After the first number is placed, we go to the next number and offer it to each set in turn. 
 
@@ -79,7 +79,7 @@ Run as is, this algorithm will retread old ground. To avoid this, we can store t
 
 Note that reverse sorting the list of cubes promotes early failure, yielding solutions much more quickly.
 
-Running this code for the first few partition sizes produces the minimum collection size for $P$-partition in $\approxi1\text{ s}$ or less for $p < 6$: 
+Running this code for the first few partition sizes produces the minimum collection size for $P$-partition in $\approx 1\text{ s}$ or less for $P < 6$: 
 
 ```python
 P = 2
