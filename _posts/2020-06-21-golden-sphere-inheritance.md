@@ -77,6 +77,50 @@ def find_partition(subsets, which_subset, numbers_left):
 
 Run as is, this algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we come across that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
 
+Running this code for the first few partition sizes produces the minimum collection size for $p$-partition in $\approxi1\text{ s}$ or less for $p < 6$:
+
+```python
+p = 2
+[[1728, 729, 512, 64, 8, 1], 
+ [1331, 1000, 343, 216, 125, 27]]
+To split the inheritance 2 ways, the king needs 12 spheres.
+Wall time: 1.91 ms
+```
+
+```python
+p = 3
+[[12167, 4913, 3375, 2744, 1331, 729, 125, 8], 
+ [10648, 8000, 4096, 1728, 512, 343, 64, 1], 
+ [9261, 6859, 5832, 2197, 1000, 216, 27]]
+To split the inheritance 3 ways, the king needs 23 spheres.
+Wall time: 1.09 s
+```
+
+```python
+p = 4
+[[13824, 5832, 2744, 64, 27, 8, 1], 
+ [12167, 9261, 729, 343], 
+ [10648, 4913, 4096, 1331, 1000, 512], 
+ [8000, 6859, 3375, 2197, 1728, 216, 125]]
+To split the inheritance 4 ways, the king needs 24 spheres.
+Wall time: 950 ms
+```
+
+```python
+p = 5
+[[13824, 3375, 729, 64, 8], 
+ [12167, 5832, 1], 
+ [10648, 4096, 2744, 512], 
+ [9261, 6859, 1728, 125, 27], 
+ [8000, 4913, 2197, 1331, 1000, 343, 216]]
+To split the inheritance 5 ways, the king needs 24 spheres.
+Wall time: 373 ms
+```
+
+For $p = 6$ my laptop ran out of RAM when I kept track of the actual solutions. By retreating to the mere question solubility, the minimum for a $6$-way split is $35$ spheres.
+
+
+
 
 
 
