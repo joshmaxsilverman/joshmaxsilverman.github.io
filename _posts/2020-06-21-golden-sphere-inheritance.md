@@ -39,8 +39,18 @@ The one wrinkle is that we can reach a dead end this way. Because there's no pla
 
 If this happens, then we'd have to reverse the last placement, and move it into the next set. This is our escape hatch, which can go all the way back to the second number placed if need be. (By symmetry, it doesn't matter where the first number is placed)
 
+Translating this strategy into Python produces the recursive function `partition` below. It keeps track of the set of subsets it's building `subsets`, which subset it's currently working on `which_subset`, and the numbers it has yet to insert `numbers_left`. The initial call is `partition([[] for _ in range(P)], 0, numbers)`. If there's a partition it returns `True` and prints the first one it finds, and returns `False` otherwise.
+
 ```python
 import copy
+
+P = 3
+N = 23
+
+numbers = [_**3 for _ in range(1, N+1)
+numbers = numbers[::-1]
+
+target = sum(numbers) / P
 
 def partition(subsets, which_subset, numbers_left):
 
