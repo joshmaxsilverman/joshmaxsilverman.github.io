@@ -25,7 +25,7 @@ Here I offer my simple approach, translated from the back of a napkin, that can 
 
 ### Preliminaries
 
-The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \left\\{1, 2^3, \ldots, n^3\right\\}$ as a proxy for the set of spheres. A necessary condition for the spheres to be divisible into $3$ partitions is that their total weight be divisible by $3,$ or $\left(\sum w_i\right)\bmod{3} = 0$. Also, since each partition will have to sum to $T = \left(\sum w_i\right) / 3,$ the heaviest gold sphere has to weigh less than this: $\max\left\\{w_i\right\\} \leq T.$ (if a single sphere is heavier than the target weight for a partition, it won't fit in any partition)
+The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \left\\{1, 2^3, \ldots, n^3\right\\}$ as a proxy for the set of spheres. If the spheres are divisible into $3$ partitions then their total has to be divisible by $3.$ Also, since each partition sums to $T = \left(\sum w_i\right) / 3,$ the heaviest gold sphere has to weigh less than this: $\max\left\\{w_i\right\\} \leq T.$ (if a single sphere is heavier than the target weight for a partition, it won't fit in any partition)
 
 ### Intuition
 
@@ -35,7 +35,7 @@ That's basically it. After the first number is placed, we go to the next number 
 
 The one wrinkle is that we can reach a dead end this way. Because there's no planning ahead, we might find ourselves in the situation where we can't place a remaining sphere into any set without putting it over the target weight. 
 
-If this happens, then we'd have to reverse the last placement, and move it into the next set. This is our escape hatch, which can go all the way back to the second number placed if need be.
+If this happens, then we'd have to reverse the last placement, and move it into the next set. This is our escape hatch, which can go all the way back to the second number placed if need be. (By symmetry, it doesn't matter where the first number is placed)
 
 ```python
 import copy
@@ -57,19 +57,27 @@ def find_partition(subsets, which_subset, numbers_left):
         if which_subset == k:
             return False
         
-        # If not, then we try to put a number in one of the subsets. If it 
-        # would make the subset sum to more than the target, then just move
-        # on to the next subset. But if it would fit, then explore that 
-        # possibility, and give the fallback move (which is to move on to 
-        # the next subset).
         tmp_subsets = copy.deepcopy(subsets)
-        if sum(subsets[which_subset]) + numbers_left[0] <= target:
-            tmp_subsets[which_subset].append(numbers_left[0])
-            return (find_partition(tmp_subsets, 0, numbers_left[1:]) 
-                    or 
-                    find_partition(subsets, which_subset + 1, numbers_left))
-        else:
+        # Try to put a number in one of the subsets. If it would make
+        # the subset sum to more than the target, then just move
+        # on to the next subset. 
+        if sum(subsets[which_subset]) + numbers_left[0] > target:
             return find_partition(subsets, which_subset + 1, numbers_left)
+            
+        # If it would fit, then explore that possibility and give the
+        # fallback move (which is to move on to the next subset).
+        else:
+            tmp_subsets[which_subset].append(numbers_left[0])
+                return (find_partition(tmp_subsets, 0, numbers_left[1:]) 
+                        or 
+                        find_partition(subsets, which_subset + 1, numbers_left))
+            
 ```
+
+Run as is, the algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we see start on that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
+
+
+
+
 
 <br>
