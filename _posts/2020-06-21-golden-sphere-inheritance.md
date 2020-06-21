@@ -61,11 +61,9 @@ def find_partition(subsets, which_subset, numbers_left):
         tmp_subsets = copy.deepcopy(subsets)
         if sum(subsets[which_subset]) + numbers_left[0] <= target:
             tmp_subsets[which_subset].append(numbers_left[0])
-            return (
-                    find_partition(tmp_subsets, 0, numbers_left[1:]) 
+            return (find_partition(tmp_subsets, 0, numbers_left[1:]) 
                     or 
-                    find_partition(subsets, which_subset + 1, numbers_left)
-                )
+                    find_partition(subsets, which_subset + 1, numbers_left))
         else:
             return find_partition(subsets, which_subset + 1, numbers_left)
 ```
