@@ -42,7 +42,7 @@ If this happens, then we'd have to reverse the last placement, and move it into 
 ```python
 import copy
 
-def find_partition(subsets, which_subset, numbers_left):
+def partition(subsets, which_subset, numbers_left):
 
     # If all the subsets sum to the target, we're done
     if all([sum(subset) == target for subset in subsets]):
@@ -65,21 +65,23 @@ def find_partition(subsets, which_subset, numbers_left):
         # the subset sum to more than the target, then move on to
         # the next subset. 
         if sum(subsets[which_subset]) + numbers_left[0] > target:
-            return find_partition(subsets, which_subset + 1, numbers_left)
+            return partition(subsets, which_subset + 1, numbers_left)
             
         # If it would fit, then explore that possibility and give the
         # fallback option of moving on to the next subset.
         else:
             alt_subsets[which_subset].append(numbers_left[0])
-            return (find_partition(alt_subsets, 0, numbers_left[1:]) 
+            return (partition(alt_subsets, 0, numbers_left[1:]) 
                     or 
-                    find_partition(subsets, which_subset + 1, numbers_left))
+                    partition(subsets, which_subset + 1, numbers_left))
             
 ```
 
 Run as is, this algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we come across that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
 
 Note that reverse sorting the list of cubes promotes early failure, yielding solutions much more quickly.
+
+### Results
 
 Running this code for the first few partition sizes produces the minimum collection size for $P$-partition in $\approx 1\text{ s}$ or less for $P < 6$: 
 
