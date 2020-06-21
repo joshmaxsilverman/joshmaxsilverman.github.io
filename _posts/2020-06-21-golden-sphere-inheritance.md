@@ -54,17 +54,17 @@ target = sum(numbers) / P
 
 def partition(subsets, which_subset, numbers_left):
 
-    # If all the subsets sum to the target, we're done
+    # If all the subsets sum to the target, we're done.
     if all([sum(subset) == target for subset in subsets]):
         print(subsets)
         return True
 
     # If we haven't solved, and there are no numbers left, it means that 
-    # this branch won't work
+    # this branch won't work.
     elif len(numbers_left) == 0:
         return False
 
-    # The first thing here checks if we're beyond the last subset. 
+    # Check if we're beyond the last subset. 
     else:
         if which_subset == P:
             return False
