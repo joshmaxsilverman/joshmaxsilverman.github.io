@@ -131,7 +131,7 @@ P & N_\text{collection} \hline
 4 & 24 \\ 
 5 & 24 \\ 
 6 & 35 \\ 
-7 & ??? \\
+7 & ???
 \end{array}
 $$
 
