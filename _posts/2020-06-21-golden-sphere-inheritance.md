@@ -34,6 +34,8 @@ The one wrinkle is that we can reach a dead end this way. Because there's no pla
 If this happens, then we'd have to reverse the last placement, and move it into the next set. This is our escape hatch, which can go all the way back to the second number placed if need be.
 
 ```python
+import copy
+
 def find_partition(subsets, which_subset, numbers_left):
 
     # If all the subsets sum to the target, we're done
@@ -56,7 +58,8 @@ def find_partition(subsets, which_subset, numbers_left):
         # on to the next subset. But if it would fit, then explore that 
         # possibility, and give the fallback move (which is to move on to 
         # the next subset).
-        if sum(tmp_subsets[which_subset]) + numbers_left[0] <= target:
+        tmp_subsets = copy.deepcopy(subsets)
+        if sum(subsets[which_subset]) + numbers_left[0] <= target:
             tmp_subsets[which_subset].append(numbers_left[0])
             return (
                     find_partition(tmp_subsets, 0, numbers_left[1:]) 
