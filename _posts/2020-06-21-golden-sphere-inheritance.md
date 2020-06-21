@@ -19,7 +19,7 @@ date: 2020/06/21
 
 ## Solution
 
-On first sight this might seem like a problem in number theory, and perhaps it is. But I, a mere rube, could not crack it on those grounds. So, then, it is a problem in set construction. 
+On first sight it might seem like King Auric has a problem in number theory, and perhaps he does. But I, a mere rube, could not crack it on those grounds. So, then, it is a problem in set construction. 
 
 Here I offer my simple approach, translated from the back of a napkin, that can find the minimum number of spheres for partitioning inheritance between $P \leq 6$ beneficiaries, and recover solution sets for $P \leq 5.$ It might be possible to push on these boundaries by exploiting more of the problem's structure.
 
