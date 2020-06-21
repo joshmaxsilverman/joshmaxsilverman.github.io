@@ -56,7 +56,7 @@ def find_partition(subsets, which_subset, numbers_left):
 
     # The first thing here checks if we're beyond the last subset. 
     else:
-        if which_subset == k:
+        if which_subset == P:
             return False
         
         alt_subsets = copy.deepcopy(subsets)
