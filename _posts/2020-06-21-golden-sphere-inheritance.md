@@ -123,6 +123,17 @@ Wall time: 373 ms
 
 For $P = 6$ my laptop ran out of RAM when keeping track of the solution set. By retreating to the mere question solubility, it shows that the minimum for a $6$-way split is $35$ spheres.
 
+$$\begin{array}{|c|c|}\hline
+P & N_\text{collection} \hline
+2 & 12 \\ \hline
+3 & 23 \\ \hline
+4 & 24 \\ \hline
+5 & 24 \\ \hline
+6 & 35 \\ \hline
+7 & \vdots \\ \hline
+8 & \vdots \\ \hline
+\end{array}$$
+
 Probing below these depths requires more insight and/or RAM than I can provide.
 
 ### Uniqueness 
