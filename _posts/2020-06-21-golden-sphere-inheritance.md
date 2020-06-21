@@ -71,9 +71,9 @@ def find_partition(subsets, which_subset, numbers_left):
         # fallback option of moving on to the next subset.
         else:
             alt_subsets[which_subset].append(numbers_left[0])
-                return (find_partition(alt_subsets, 0, numbers_left[1:]) 
-                        or 
-                        find_partition(subsets, which_subset + 1, numbers_left))
+            return (find_partition(alt_subsets, 0, numbers_left[1:]) 
+                    or 
+                    find_partition(subsets, which_subset + 1, numbers_left))
             
 ```
 
