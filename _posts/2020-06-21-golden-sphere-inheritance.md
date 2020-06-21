@@ -7,7 +7,7 @@ date: 2020/06/21
 
 ## Question
 
->King Auric's collection of unique golden spheres of integer radius $\\{1\text{ cm}, 2\text{ cm}, \ldots\\}$ is the object of his covetous children's eyes. To stave off fratri- and regicide, he will divide the gold up evenly by weight and bequeath an equal share unto each. He has the minimum number needed to do this. How many spheres does he have if he has $3$ children? What if he has $P = \\{2,3,4,5,6,\ldots\\}$ children?
+>King Auric's collection of unique golden spheres of integer radius $\left(1\text{ cm}, 2\text{ cm}, \ldots\right)$ is the object of his covetous children's eyes. To stave off fratri- and regicide, he will divide the gold up evenly by weight and bequeath an equal share unto each. He has the minimum number needed to do this. How many spheres does he have if he has $3$ children? What if he has $P = \\{2,3,4,5,6,\ldots\\}$ children?
 
 <!--more-->
 
