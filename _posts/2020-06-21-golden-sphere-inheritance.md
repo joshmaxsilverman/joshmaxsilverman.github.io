@@ -57,24 +57,28 @@ def find_partition(subsets, which_subset, numbers_left):
         if which_subset == k:
             return False
         
-        tmp_subsets = copy.deepcopy(subsets)
+        alt_subsets = copy.deepcopy(subsets)
+        
         # Try to put a number in one of the subsets. If it would make
-        # the subset sum to more than the target, then just move
-        # on to the next subset. 
+        # the subset sum to more than the target, then move on to
+        # the next subset. 
         if sum(subsets[which_subset]) + numbers_left[0] > target:
             return find_partition(subsets, which_subset + 1, numbers_left)
             
         # If it would fit, then explore that possibility and give the
-        # fallback move (which is to move on to the next subset).
+        # fallback option of moving on to the next subset.
         else:
-            tmp_subsets[which_subset].append(numbers_left[0])
-                return (find_partition(tmp_subsets, 0, numbers_left[1:]) 
+            alt_subsets[which_subset].append(numbers_left[0])
+                return (find_partition(alt_subsets, 0, numbers_left[1:]) 
                         or 
                         find_partition(subsets, which_subset + 1, numbers_left))
             
 ```
 
-Run as is, the algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we see start on that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
+Run as is, this algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we come across that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
+
+
+
 
 
 
