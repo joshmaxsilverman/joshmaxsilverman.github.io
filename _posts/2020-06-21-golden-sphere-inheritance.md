@@ -123,6 +123,10 @@ Wall time: 373 ms
 
 For $P = 6$ my laptop ran out of RAM when keeping track of the solution set. By retreating to the mere question solubility, it shows that the minimum for a $6$-way split is $35$ spheres.
 
+Probing below these depths requires more insight and RAM than I can provide.
+
+### Uniqueness 
+
 By deleting the `True` return statement, the code will continue printing solutions if there are more. As it turns out, there are multiple $24$-sphere partitions corresponding to the $P=4$ minimum.
 
 
