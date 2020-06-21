@@ -50,10 +50,11 @@ def find_partition(subsets, which_subset, numbers_left):
         if which_subset == k:
             return False
         
-        # If not, then we try to put a number in one of the subsets. If it would 
-        # make the subset sum to more than the target, then just move on to the 
-        # next subset. But if it would fit, then explore that possibility, and 
-        # give the fallback move (which is to move on to the next subset).
+        # If not, then we try to put a number in one of the subsets. If it 
+        # would make the subset sum to more than the target, then just move
+        # on to the next subset. But if it would fit, then explore that 
+        # possibility, and give the fallback move (which is to move on to 
+        # the next subset).
         if sum(tmp_subsets[which_subset]) + numbers_left[0] <= target:
             tmp_subsets[which_subset].append(numbers_left[0])
             return (
