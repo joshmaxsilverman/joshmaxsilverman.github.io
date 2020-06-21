@@ -126,13 +126,12 @@ For $P = 6$ my laptop ran out of RAM when keeping track of the solution set. By 
 $$
 \begin{array}{|c|c|}
 P & N_\text{collection} \hline
-2 & 12 \\ \hline
-3 & 23 \\ \hline
-4 & 24 \\ \hline
-5 & 24 \\ \hline
-6 & 35 \\ \hline
-7 & \vdots \\ \hline
-8 & \vdots \\ \hline
+2 & 12 \\ 
+3 & 23 \\ 
+4 & 24 \\ 
+5 & 24 \\ 
+6 & 35 \\ 
+7 & ??? \\
 \end{array}
 $$
 
