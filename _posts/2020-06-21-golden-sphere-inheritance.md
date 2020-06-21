@@ -25,7 +25,7 @@ Here I offer my simple approach, translated from the back of a napkin, that can 
 
 ### Preliminaries
 
-The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \left{1, 2^3, \ldots, n^3\right}$ as a proxy for the set of spheres. A necessary condition for the spheres to be divisible into $3$ partitions is that their total weight be divisible by $3,$ or $\left(\sum w_i\right)\bmod{3} = 0$. Also, since each partition will have to sum to $T = \left(\sum w_i\right) / 3,$ the heaviest gold sphere has to weigh less than this: $\max\left{w_i\right} \leq T.$
+The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \left\{1, 2^3, \ldots, n^3\right\}$ as a proxy for the set of spheres. A necessary condition for the spheres to be divisible into $3$ partitions is that their total weight be divisible by $3,$ or $\left(\sum w_i\right)\bmod{3} = 0$. Also, since each partition will have to sum to $T = \left(\sum w_i\right) / 3,$ the heaviest gold sphere has to weigh less than this: $\max\left\{w_i\right\} \leq T.$
 
 ### Intuition
 
