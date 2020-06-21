@@ -23,6 +23,10 @@ On first sight this might seem like a problem in number theory, and perhaps it i
 
 Here I offer my simple approach, translated from the back of a napkin, that can find the minimum number of spheres for partitioning inheritance between $p \leq 6$ beneficiaries, and recover solution sets for $p \leq 5.$ It might be possible to push on these boundaries by exploiting more of the problem's structure.
 
+### Preliminaries
+
+The weight of each cube is proportional to the cube of its length dimension $M \sim \ell^3,$ so we can just use the cubes of the first $n$ integers $w = \{1, 2^3, \ldots, n^3\}$ as a proxy for the set of spheres. A necessary condition for the spheres to be divisible into $p$ partitions is that their total weight be divisible by $p$: $\sum w_i\bmod{3} = 0$. Also, since each partition will have to sum to $T = \left(\sum w_i\right) / 3,$ the heaviest gold sphere has to weigh less than this: $\max\{w_i\} \leq T.$
+
 ### Intuition
 
 The basic idea for this algorithm is to go through the list of cubes, left to right, and accumulate them in $p$ sets (that start out empty). If adding the cube to the first set would not bring its mass above the target amount of gold, the cube gets added to the first set, otherwise we try the next set. 
