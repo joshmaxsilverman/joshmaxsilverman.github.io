@@ -142,7 +142,7 @@ $$
 $$
 
 $$\begin{array}{|c|c|}
-P & N_\text{collection} \hline
+P & N_\text{collection} \\ \hline
 2 & 12 \\
 3 & 23 \\
 4 & 24 \\
