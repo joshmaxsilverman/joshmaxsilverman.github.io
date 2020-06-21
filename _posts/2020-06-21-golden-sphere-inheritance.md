@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Golden Sphere Inheritance
 date: 2020/06/21
 ---
