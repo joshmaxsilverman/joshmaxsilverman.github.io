@@ -33,6 +33,8 @@ The basic idea for this algorithm is to go through the list of cubes, left to ri
 
 That's basically it. After the first number is placed, we go to the next number and offer it to each set in turn. 
 
+`<hand drawing of this strategy>`
+
 The one wrinkle is that we can reach a dead end this way. Because there's no planning ahead, we might find ourselves in the situation where we can't place a remaining sphere into any set without putting it over the target weight. 
 
 If this happens, then we'd have to reverse the last placement, and move it into the next set. This is our escape hatch, which can go all the way back to the second number placed if need be. (By symmetry, it doesn't matter where the first number is placed)
