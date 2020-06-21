@@ -41,7 +41,8 @@ def find_partition(subsets, which_subset, numbers_left):
         print(subsets)
         return True
 
-    # If we get to this point, and we haven't solved, it means this branch won't work
+    # If we haven't solved, and there are no numbers left, it means that 
+    # this branch won't work
     elif len(numbers_left) == 0:
         return False
 
