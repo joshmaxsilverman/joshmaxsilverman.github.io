@@ -45,15 +45,13 @@ def find_partition(subsets, which_subset, numbers_left):
     elif len(numbers_left) == 0:
         return False
 
-    # Try to put a number into one of the subsets. If adding it would make the subset sum 
-    # to more than the target, then just move on to the next subset. But if it would fit, then
-    # explore that possibility, and give the fallback move (which is to move on to the next subset)
-    # The first thing here checks if we're beyond the last subset. If we are then it logs the current
-    # subset as a failure.
+    # The first thing here checks if we're beyond the last subset. 
     else:
         if which_subset == k:
             return False
-            
+        # If not, then we try to put a number in one of the subsets. If it would make the subset sum 
+        # to more than the target, then just move on to the next subset. But if it would fit, then
+        # explore that possibility, and give the fallback move (which is to move on to the next subset)
         if sum(tmp_subsets[which_subset]) + numbers_left[0] <= target:
             tmp_subsets[which_subset].append(numbers_left[0])
             return (
