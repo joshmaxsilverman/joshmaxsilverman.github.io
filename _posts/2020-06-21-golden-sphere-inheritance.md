@@ -7,11 +7,7 @@ date: 2020/06/21
 
 ## Question
 
->King Auric adored his most prized possession: a set of perfect spheres of solid gold. There was one of each size, with diameters of 1 centimeter, 2 centimeters, 3 centimeters, and so on. Their brilliant beauty brought joy to his heart. After many years, he felt the time had finally come to pass the golden spheres down to the next generation — his three children.
->
->He decided it was best to give each child precisely one-third of the total gold by weight, but he had a difficult time determining just how to do that. After some trial and error, he managed to divide his spheres into three groups of equal weight. He was further amused when he realized that his collection contained the minimum number of spheres needed for this division. How many golden spheres did King Auric have?
->
->Extra credit: How many spheres would the king have needed to be able to divide his collection among other numbers of children: two, four, five, six or even more?
+>King Auric's collection of unique golden spheres of integer radius $\\{1\text{ cm}, 2\text{ cm}, \ldots\\}$ is the object of his covetous children's eyes. To stave off fratri- and regicide, he will divide the gold up evenly by weight and bequeath an equal share unto each. He has the minimum number needed to do this. How many spheres does he have if he has $3$ children? What if he has $P = \\{2,3,4,5,6,\ldots\\}$ children?
 
 <!--more-->
 
