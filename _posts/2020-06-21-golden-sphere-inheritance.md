@@ -29,7 +29,11 @@ The basic idea for this algorithm is to go through the list of cubes, left to ri
 
 That's basically it. After the first number is placed, we go to the next number and offer it to each set in turn. 
 
-`<hand drawing of this strategy>`
+![](/img/2020-06-21-gold-sphere-inheritance.jpg){:width="400px" class="image-centered"}
+
+{:.caption}
+Finding a $3$-partition for the $N=6$ numbers $\\{3,4,1,2,2,3\\}$. Since the sum is $15$, the target sum for each subset is $5$. The algorithm starts by placing $3$ in the first set, then tries to palce $4$ there but can't, so puts it in the second set. $1$ can fit in the first set along with $3$. The first $2$ can't fit in the first or second buckets so it goes in the third. The second $2$ also goes in the third but then the $3$ can't go anywhere. Now the algorithm backtracks, all the way to the last point where it had freedom of action. As everything after the $1$ was a forced placement, it goes back to when that move was made, and tries its second option, to pair with the $4$ in the second set. From here on out, the normal operation of the algorithm finds a $3$-partition with no difficulties.
+
 
 The one wrinkle is that we can reach a dead end this way. Because there's no planning ahead, we might find ourselves in the situation where we can't place a remaining sphere into any set without putting it over the target weight. 
 
@@ -43,7 +47,7 @@ import copy
 P = 3
 N = 23
 
-numbers = [_**3 for _ in range(1, N+1)
+numbers = [_**3 for _ in range(1, N+1)]
 numbers = numbers[::-1]
 
 target = sum(numbers) / P
