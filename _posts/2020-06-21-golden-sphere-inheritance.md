@@ -136,7 +136,7 @@ Wall time: 373 ms
 For $C = 6$ my laptop ran out of RAM when keeping track of the solution set. By retreating to the mere question of solubility, it shows that the minimum for a $6$-way split is $35$ spheres.
 
 $$\begin{array}{c|c}
-C & \min N_\text{collection} \\ \hline
+C & N_\text{min} \\ \hline
 2 & 12 \\
 3 & 23 \\
 4 & 24 \\
