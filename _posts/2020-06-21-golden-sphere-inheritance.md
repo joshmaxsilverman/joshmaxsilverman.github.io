@@ -87,7 +87,7 @@ def partition(subsets, which_subset, numbers_left):
             
 ```
 
-Run as is, this algorithm will retread old ground. To avoid this, we can store the partial solutions in a dictionary and record when they lead to failure. If we come across that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
+Run as is, this algorithm will retread old ground. To avoid this, we can [store the partial solutions in a dictionary](https://colab.research.google.com/drive/1uZMELQpizLXaPSJtp9gDMMNhR9xUBq7T#scrollTo=v1R2b2QpOz-h) and record when they lead to failure. If we come across that partial solution again we can skip it, avoiding whatever recursion it would have conjured.
 
 Note that reverse sorting the list of cubes promotes early failure, yielding solutions much more quickly.
 
