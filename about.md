@@ -12,4 +12,4 @@ Solutions to various puzzles will accumulate here, centered around the weekly [5
 Credits
 ===================
 
-This is a (free) [github Pages](https://pages.github.com/) site, a mod of [Hector Pefo's mod](https://github.com/hectorpefo/hectorpefo.github.io) of the [Beautiful Jekyll project](https://github.com/daattali/beautiful-jekyll).
+This is a (free) [github Pages](https://pages.github.com/) site, modded from [Hector Pefo's mod](https://github.com/hectorpefo/hectorpefo.github.io) of the [Beautiful Jekyll project](https://github.com/daattali/beautiful-jekyll).
