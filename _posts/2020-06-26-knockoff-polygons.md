@@ -69,7 +69,8 @@ With that in place, we need a function that can determine the orientation of thr
 The next thing we need is a map from a set of values $\\{v_1,\ldots,v_N\\}$ to the set of unique permutations of those values. To do this, I start with a set of symbols that I pair off into points ($(a,b), (c,d), \ldots$) and then permute into all possible orders. I then pair this list of points off to form lines. Finally, since this process creates redundancies, I delete the duplicates. This produces a symbolic list of all possible point orders that can then be fed specific values for the coordinates $(a,b,c,\ldots)$ to produce all potential $n$-gons.:
 
 ```mathematica
-alph = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
+alph = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, 
+        s, t, u, v, w, x, y, z}
 
 pointsMap[NN_] := (
     points = {alph[[2 # - 1]], alph[[2 #]]} & /@ Range[NN];
