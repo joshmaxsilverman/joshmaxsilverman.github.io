@@ -40,7 +40,7 @@ So, we can check if the orientations of $\\{A_1,B_1,A_2\\}$ and $\\{A_2,B_2,A_1\
 Our final set of conditions for intersection is 
 
 $$
-O(A_1,B_1,A_2) = O(A_2,B_2,A_1) \mathbf{AND} O(B_1,A_1,B_2) = O(B_2,A_2,B_1)
+\mathcal{O}(A_1,B_1,A_2) = \mathcal{O}(A_2,B_2,A_1)\ \mathbf{AND}\ \mathcal{O}(B_1,A_1,B_2) = \mathcal{O}(B_2,A_2,B_1)
 $$
 
 ```mathematica
