@@ -37,7 +37,7 @@ It's always going to be the case that if we take two points from one of the line
 
 So, we can check if the orientations of $\\{A_1,B_1,A_2\\}$ and $\\{A_2,B_2,A_1\\}$ match. That's fine if the edges have the same length. But, if one is longer than the other, we can satisfy this without the lines actually crossing. To take care of that possibility we just have to do the same check for two points of line B and one point from line A.
 
-Our final set of conditions for intersection is 
+Our final condition for intersection is:
 
 $$
 \mathcal{O}(A_1,B_1,A_2) = \mathcal{O}(A_2,B_2,A_1)\ \mathbf{AND}\ \mathcal{O}(B_1,A_1,B_2) = \mathcal{O}(B_2,A_2,B_1)
