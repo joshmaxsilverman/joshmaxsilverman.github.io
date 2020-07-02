@@ -5,11 +5,6 @@ title:
 date: 2020/06/29
 ---
 
-![](/img/2020-06-26-octagons.png){:width="600px" class="image-centered"}
-
-{:.caption}
-A set of $339$ unique octagons generated from the same $8$ points.
-
 >Suppose you have a pencil and absolutely nothing to do. What is the greatest number of hexagons you can draw using the same $6$ points? What about septagons? What about octagons? What about ...
 
 <!--more-->
@@ -65,7 +60,34 @@ With that in place, we need a function that can determine the orientation of thr
   )
 ```
 
+The next thing we need is a map from a set of values $\\{v_1,\ldots,v_N\\}$ to the set of unique permutations of those values. To do this, I start with a set of symbols that I pair off into points ($(a,b), (c,d), \ldots$) and then permute into all possible orders. I then pair this list of points off to form lines. Finally, since this process creates redundancies, I delete the duplicates. This produces a symbolic list of all possible point orders that can then be fed specific values for the coordinates $(a,b,c,\ldots)$ to produce all potential $n$-gons.:
 
+```mathematica
+alph = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
+
+pointsMap[NN_] := (
+    points = {alph[[2 # - 1]], alph[[2 #]]} & /@ Range[NN];
+  	perms = Permutations[points[[2 ;; -1]]];
+  	perms = Join[{points[[1]]}, #] & /@ perms;
+  	setsOfLines = 
+      Table[{#[[i]], #[[1 + i~Mod~NN]]}, {i, 1, NN}] & /@ perms;
+  	tmp = SortBy[#, First] & /@ # & /@ setsOfLines;
+  	tmp = Sort /@ tmp;
+  	tmp = DeleteDuplicates[tmp];
+    Return[tmp];
+  )
+```
+
+From here, the approach is simply to hill climb. The logic is 
+
+```
+1. Generate random values for the coordinates.
+2. Go through all possible N-gons and count how many were intersection free.
+3. If that's lower than the current minimum number of intersections, set it to the new minimum.
+4. Repeat.
+```
+
+This is a probabilistic approach and, so, you can never know that you've actually found the maximum. But you can put a lower bound on the probability of any potential maxima that are still hiding.
 
 ```mathematica  
 hasNoIntersectionFast[setOfLines_] := (
@@ -75,7 +97,52 @@ hasNoIntersectionFast[setOfLines_] := (
    ];
   Return[True]
   )
+
+maps = pointsMap[NN];
+
+roundZ[] :=
+ (
+  data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
+  intersectionCount = 0;
+  For[j = 1, j <= Length@data, j++,
+   If[intersectionCount >= minCount - 1, Return[Infinity]];
+   If[! hasNoIntersection[data[[j]]], intersectionCount++];
+   ];
+  minCount = intersectionCount;
+  Print[Length@data - intersectionCount];
+  AppendTo[pointsRecord, data];
+  )
+
+minCount = Infinity;
+pointsRecordZ = {};
+Do[
+  roundZ[];
+  If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
+   Print[minCount]];,
+  {round, 1, 500}
+  ];
 ```
+
+For $N \leq 7$, the algorithm runs for a few seconds before stalling, presumably at the maximum. The $N=8$ run continued hill climbing for about $40\text{ min}$ before finding an arrangement with $339$ different octagons after which it found no better arrangement for $5\text{ hours}.$ 
+
+$$
+\begin{array}{c|c}
+N & \text{Unique $N$-gons founds} \hline \\
+3 & 1 \\
+4 & 3 \\
+5 & 8 \\
+6 & 29 \\
+7 & 92 \\
+8 & 339
+\end{array}
+$$
+
+Here we present, in all its majesty, $339$ unique octagones using one of the maximal octagonal sets the algorithm found:
+
+![](/img/2020-06-26-octagons.png){: width="500px" class="image-centered"}
+
+{:.caption}
+A set of $339$ unique octagons generated from the same $8$ points.
 
 <br>
 
