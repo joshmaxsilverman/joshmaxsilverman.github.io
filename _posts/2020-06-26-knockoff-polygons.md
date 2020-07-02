@@ -97,7 +97,7 @@ From here, the approach is simply to hill climb. The logic is
 
 ```
 1. Generate a set of random values for the coordinates.
-2. Go through all possible its N-gons and count how many had intersections.
+2. Go through all its possible N-gons and count how many had intersections.
 3. If that's lower than the current minimum, set it as the new minimum.
 4. Repeat.
 ```
