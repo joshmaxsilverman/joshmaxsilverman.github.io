@@ -74,13 +74,15 @@ alph = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
 pointsMap[NN_] := (
     points = {alph[[2 # - 1]], alph[[2 #]]} & /@ Range[NN];
 
-    (*Add the first point at the end, to cut down on redundancy
-    prior to deduping*)
-    
+    (* add the first point at the end, to cut down on redundancy
+    prior to deduping *)
     perms = Permutations[points[[2 ;; -1]]];
     perms = Join[{points[[1]]}, #] & /@ perms;
+    (* turn each permutation into a set of edges *)
     setsOfLines = 
       Table[{#[[i]], #[[1 + i~Mod~NN]]}, {i, 1, NN}] & /@ perms;
+    (* sort the lines within each edge set, and
+    then sort the edge set, then deduplicate *)
     tmp = SortBy[#, First] & /@ # & /@ setsOfLines;
     tmp = Sort /@ tmp;
     tmp = DeleteDuplicates[tmp];
@@ -100,36 +102,45 @@ From here, the approach is simply to hill climb. The logic is
 This is a probabilistic approach and, so, you can never know that you've actually found an optimal set. But you can put a lower bound on the probability of any potential optima that are still hiding. In the code below, we bail out of a set of random points as soon as we determine that it can't beat the current optimum.
 
 ```mathematica  
-hasNoIntersectionFast[setOfLines_] := (
-  pairs = Subsets[setOfLines, {2}];
-  For[i = 1, i <= Length@pairs, i++,
-   If[intersection[pairs[[i]][[1]], pairs[[i]][[2]]], Return[False]];
-   ];
-  Return[True]
-  )
+hasNoIntersection[setOfLines_] :=
+ (
+    (* loop over all ordered pairs of edges looking for an intersection.
+    if there isn't one, return True. *)
+    pairs = Subsets[setOfLines, {2}];
+    For[i = 1, i <= Length@pairs, i++,
+        If[intersection[pairs[[i]][[1]], pairs[[i]][[2]]], Return[False]];
+    ];
+    Return[True]
+ ) 
 
 maps = pointsMap[NN];
 
 round[] :=
  (
-  data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
-  intersectionCount = 0;
-  For[j = 1, j <= Length@data, j++,
-   If[intersectionCount >= minCount - 1, Return[Infinity]];
-   If[! hasNoIntersection[data[[j]]], intersectionCount++];
-   ];
-  minCount = intersectionCount;
-  Print[Length@data - intersectionCount];
-  AppendTo[pointsRecord, data];
-  )
+    data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
+    intersectionCount = 0;
+    
+    (* go through all edge sets, checking for intersections,
+    if there's no intersection, increase the count of intersection-free
+    N-gons. if there are already too many invalid N-gons for this to be 
+    a new optimum, move on to the next round. *)
+    For[j = 1, j <= Length@data, j++,
+        If[intersectionCount >= minCount - 1, Return[Infinity]];
+        If[! hasNoIntersection[data[[j]]], intersectionCount++];
+    ];
+    minCount = intersectionCount;
+    Print[Length@data - intersectionCount];
+    AppendTo[pointsRecord, data];
+ )
 
 minCount = Infinity;
 pointsRecord = {};
+
 Do[
-  round[];
-  If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
-   Print[minCount]];,
-  {round, 1, 500}
+    round[];
+    If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
+        Print[minCount]];,
+    {round, 1, 500}
   ];
 ```
 
