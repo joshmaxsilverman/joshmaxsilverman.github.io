@@ -79,9 +79,11 @@ pointsMap[NN_] := (
     prior to deduping *)
     perms = Permutations[points[[2 ;; -1]]];
     perms = Join[{points[[1]]}, #] & /@ perms;
+    
     (* turn each permutation into a set of edges *)
     setsOfLines = 
       Table[{#[[i]], #[[1 + i~Mod~NN]]}, {i, 1, NN}] & /@ perms;
+      
     (* sort the lines within each edge set, and
     then sort the edge set, then deduplicate *)
     tmp = SortBy[#, First] & /@ # & /@ setsOfLines;
