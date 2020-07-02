@@ -120,7 +120,7 @@ NN = 6
 (* make the map once, before the loop *)
 maps = pointsMap[NN];
 
-round[] :=
+tryRandomSet[] :=
  (
     (* generate random coordinate values for the points *)
     data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
@@ -143,7 +143,7 @@ minCount = Infinity;
 pointsRecord = {};
 
 Do[
-    round[];
+    tryRandomSet[];
     If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
         Print[minCount]];,
     {round, 1, 10000}
