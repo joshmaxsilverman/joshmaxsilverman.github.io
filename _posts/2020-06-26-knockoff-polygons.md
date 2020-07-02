@@ -18,5 +18,9 @@ A set of $339$ unique octagons generated from the same $8$ points.
 
 ## Solution
 
+```mathematica
+Range[4]
+```
+
 <br>
 
