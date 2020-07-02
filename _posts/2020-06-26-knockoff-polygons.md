@@ -34,7 +34,7 @@ It's always going to be the case that if we take two points from one of the line
 
 `<diagram of orientation conditions>`
 
-So, we can check if the orientations $\mathcal{O}(A_1,B_1,A_2)$ and $\mathcal{O}(A_2,B_2,A_1)$ match. That's fine if the edges have the same length. But, if one is longer than the other, we can satisfy this without the lines actually crossing. To take care of that possibility we just have to do the same check for two points of line B and one point from line A.
+So, we can check if the orientations $\mathcal{O}(A_1,B_1,A_2)$ and $\mathcal{O}(A_2,B_2,A_1)$ match (both clockwise or both counterclockwise). That's fine if the edges have the same length. But, if one is longer than the other, we can satisfy this without the lines actually crossing. To take care of that possibility we just have to do the same check for two points of line B and one point from line A.
 
 `<drawing of differing lengths counterexample>`
 
