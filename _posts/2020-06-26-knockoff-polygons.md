@@ -31,7 +31,7 @@ B_1.y &> A_2.y
 \end{align}
 $$
 
-But this is too naive since we don't know what order the points will be in. With a little bit of care we can make it robust to order. 
+But this is too naive since, when we generate the points randomly, we won't know what order the points will be in. With a little bit of care we can make it robust to order. 
 
 It's always going to be the case that if we take two points from one of the lines and one point from the other, whichever way we do this, they'll have to have the same orientation (clockwise or counterclockwise). 
 
@@ -40,7 +40,7 @@ So, we can check if the orientations of $\\{A_1,B_1,A_2\\}$ and $\\{A_2,B_2,A_1\
 Our final set of conditions for intersection is 
 
 $$
-O(\\{A_1,B_1,A_2\\}) = O(\\{A_2,B_2,A_1\\}) \mathbf{AND} O(\\{B_1,A_1,B_2\\}) &= O(\\{B_2,A_2,B_1\\})
+O(\\{A_1,B_1,A_2\\}) = O(\\{A_2,B_2,A_1\\}) \mathbf{AND} O(\\{B_1,A_1,B_2\\}) = O(\\{B_2,A_2,B_1\\})
 $$
 
 ```mathematica
