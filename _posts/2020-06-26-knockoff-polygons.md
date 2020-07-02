@@ -146,7 +146,7 @@ Do[
     round[];
     If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
         Print[minCount]];,
-    {round, 1, 500}
+    {round, 1, 10000}
   ];
 ```
 
