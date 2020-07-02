@@ -81,9 +81,9 @@ pointsMap[NN_] := (
 From here, the approach is simply to hill climb. The logic is 
 
 ```
-1. Generate random values for the coordinates.
-2. Go through all possible N-gons and count how many were intersection free.
-3. If that's lower than the current minimum number of intersections, set it to the new minimum.
+1. Generate a set of random values for the coordinates.
+2. Go through all possible its N-gons and count how many had intersections.
+3. If that's lower than the current minimum, set it as the new minimum.
 4. Repeat.
 ```
 
