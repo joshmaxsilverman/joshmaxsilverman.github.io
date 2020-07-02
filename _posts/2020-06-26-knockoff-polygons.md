@@ -13,7 +13,7 @@ date: 2020/06/29
 
 ## Solution
 
-As I have no real insight into the geometry of the problem, my basic approach is to generate all possible sequences of the $6$ vertices, connect the edges, check for intersections, and move on to the next one if an intersection is found. The trick is being able to tell when two lines have an intersection. The other idea is to fail quickly.
+As I have no real insight into the geometry of the problem, my basic approach is to generate $6$ random points, form all possible $N$-gons from them, check them all for intersections, and move on to a new set of random points if the old maximum isn't deposed. The trick is being able to tell when two lines have an intersection. The other idea is to fail quickly.
 
 If we draw two lines on a page, it's easy to come up with a condition for the crossing.
 
