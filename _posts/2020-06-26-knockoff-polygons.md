@@ -46,8 +46,7 @@ $$
 ```mathematica
 
 intersection[lineA_, lineB_] := (
-  If[Length@DeleteDuplicates@Flatten[{lineA, lineB}, 1] != 4, 
-   Return[False]];
+  If[Length@DeleteDuplicates@Flatten[{lineA, lineB}, 1] != 4, Return[False]];
   If[orientation[lineA[[1]], lineA[[2]], lineB[[1]]] !=
      orientation[lineA[[1]], lineA[[2]], lineB[[2]]], Return[False]];
   If[orientation[lineB[[1]], lineB[[2]], lineA[[1]]] !=
