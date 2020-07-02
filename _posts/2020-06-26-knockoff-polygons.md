@@ -5,7 +5,7 @@ title:
 date: 2020/06/29
 ---
 
->Suppose you have a pencil and absolutely nothing to do. What is the greatest number of hexagons you can draw using the same $6$ points? What about septagons? What about octagons? What about ...
+>Suppose you have a pencil, a hexagon, and absolutely nothing to do. What is the greatest number of knockoff hexagons you can draw using the same $6$ points as the original hexagons? What about septagons? What about octagons? What about ...
 
 <!--more-->
 
@@ -127,7 +127,7 @@ For $N \leq 7$, the algorithm runs for a few seconds before stalling, presumably
 
 $$
 \begin{array}{c|c}
-N & \text{Unique $N$-gons founds} \\ \hline
+N & \text{Unique $N$-gons found} \\ \hline
 3 & 1 \\
 4 & 3 \\
 5 & 8 \\
