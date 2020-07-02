@@ -13,7 +13,7 @@ date: 2020/06/29
 
 ## Solution
 
-My basic approach to this problem is to generate all possible sequences of the $6$ vertices, connect the edges, check for intersections, and move on to the next one if an intersection is found. The trick is being able to tell when two lines have an intersection. 
+As I have no real insight into the geometry of the problem, my basic approach is to generate all possible sequences of the $6$ vertices, connect the edges, check for intersections, and move on to the next one if an intersection is found. The trick is being able to tell when two lines have an intersection. The other principle is to fail quickly.
 
 If we draw two lines on a page, it's easy to come up with a condition for the crossing.
 
@@ -93,7 +93,7 @@ From here, the approach is simply to hill climb. The logic is
 4. Repeat.
 ```
 
-This is a probabilistic approach and, so, you can never know that you've actually found the maximum. But you can put a lower bound on the probability of any potential maxima that are still hiding.
+This is a probabilistic approach and, so, you can never know that you've actually found an optimal set. But you can put a lower bound on the probability of any potential optima that are still hiding. In the code below, we bail out of a set of random points as soon as we determine that it can't beat the current optimum.
 
 ```mathematica  
 hasNoIntersectionFast[setOfLines_] := (
@@ -149,6 +149,8 @@ Here we present, in all its majesty, $339$ unique octagons using one of the maxi
 
 {:.caption}
 A set of $339$ unique octagons generated from the same $8$ points.
+
+I tried going for a more involved genetic approach, being less aggressive in repicking random points as the score improves, but I ran out of Saturday. 
 
 <br>
 
