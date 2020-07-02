@@ -122,6 +122,7 @@ maps = pointsMap[NN];
 
 round[] :=
  (
+    (* generate random coordinate values for the points *)
     data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
     intersectionCount = 0;
     
