@@ -100,7 +100,7 @@ hasNoIntersectionFast[setOfLines_] := (
 
 maps = pointsMap[NN];
 
-roundZ[] :=
+round[] :=
  (
   data = maps /. Table[alph[[i]] -> RandomReal[], {i, 1, 2*NN}];
   intersectionCount = 0;
@@ -114,9 +114,9 @@ roundZ[] :=
   )
 
 minCount = Infinity;
-pointsRecordZ = {};
+pointsRecord = {};
 Do[
-  roundZ[];
+  round[];
   If[round~Mod~100 == 0, Print["Round: " <> ToString[round]]; 
    Print[minCount]];,
   {round, 1, 500}
@@ -127,7 +127,7 @@ For $N \leq 7$, the algorithm runs for a few seconds before stalling, presumably
 
 $$
 \begin{array}{c|c}
-N & \text{Unique $N$-gons founds} \hline \\
+N & \text{Unique $N$-gons founds} \\ \hline
 3 & 1 \\
 4 & 3 \\
 5 & 8 \\
