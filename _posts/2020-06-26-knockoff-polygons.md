@@ -30,7 +30,7 @@ $$
 
 But this is too naive since, when we generate the points randomly, we won't know what order the points will be in. With a little bit of care we can make it robust to order. 
 
-It's always going to be the case that if we take two points from one of the lines and one point from the other, whichever way we do this, they'll have to have the same orientation \(\mathcal{O}\) (clockwise or counterclockwise). 
+It's always going to be the case that if we take two points from one of the lines and one point from the other, whichever way we do this, they'll have to have the same orientation $\mathcal{O}$ (clockwise or counterclockwise). 
 
 `<diagram of orientation conditions>`
 
