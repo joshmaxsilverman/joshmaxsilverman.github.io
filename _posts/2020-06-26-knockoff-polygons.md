@@ -132,7 +132,7 @@ Do[
 For $N \leq 7$, the algorithm runs for a few seconds before stalling, presumably at the maximum. The $N=8$ run continued hill climbing for about $40\text{ min}$ before finding an arrangement with $339$ different octagons after which it found no better arrangement for $5\text{ hours}.$ 
 
 $$
-\begin{array}{|c|c|} \\ \hline
+\begin{array}{|c|c|} \hline
 N & \text{Unique $N$-gons found} \\ \hline
 3 & 1 \\
 4 & 3 \\
