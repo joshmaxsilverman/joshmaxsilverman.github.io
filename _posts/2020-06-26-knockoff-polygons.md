@@ -17,7 +17,10 @@ As I have no real insight into the geometry of the problem, my basic approach is
 
 If we draw two lines on a page, it's easy to come up with a condition for the crossing.
 
-`<drawing of two crossing lines>`
+![](/img/2020-06-29-crossing-lines.jpg){:width="350px" class="image-centered"}
+
+{:.caption}
+Crossing arrangement.
 
 $$
 \begin{align}
@@ -32,11 +35,17 @@ But this is too naive since, when we generate the points randomly, we won't know
 
 It's always going to be the case that if we take two points from one of the lines and one point from the other, whichever way we do this, they'll have to have the same orientation, $\mathcal{O}$ (clockwise or counterclockwise). 
 
-`<diagram of orientation conditions>`
+![](/img/2020-06-29-orientation-conditions-diagram.jpg){:width="450px" class="image-centered"}
+
+{:.caption}
+Orientation conditions for two crossings, and a non-crossing.
 
 So, we can check if the orientations $\mathcal{O}(A_1,B_1,A_2)$ and $\mathcal{O}(A_2,B_2,A_1)$ match (both clockwise or both counterclockwise). That's fine if the edges have the same length. But, if one is longer than the other, we can satisfy this without the lines actually crossing. To take care of that possibility we just have to do the same check for two points of line B and one point from line A.
 
-`<drawing of differing lengths counterexample>`
+![](/img/2020-06-29-crossing-counterexample.jpg){:width="500px" class="image-centered"}
+
+{:.caption}
+Counter example for simple two-corner conditions.
 
 Our final condition for intersection is:
 
