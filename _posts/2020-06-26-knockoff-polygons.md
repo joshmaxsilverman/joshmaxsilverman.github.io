@@ -9,7 +9,7 @@ date: 2020/06/29
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-connect-the-dots/))
 
 ## Solution
 
