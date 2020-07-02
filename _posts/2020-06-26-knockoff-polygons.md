@@ -73,6 +73,8 @@ alph = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
 
 pointsMap[NN_] := (
     points = {alph[[2 # - 1]], alph[[2 #]]} & /@ Range[NN];
+    (*Add the first point at the end, to cut down on redundancy
+    prior to deduping*)
   	perms = Permutations[points[[2 ;; -1]]];
   	perms = Join[{points[[1]]}, #] & /@ perms;
   	setsOfLines = 
