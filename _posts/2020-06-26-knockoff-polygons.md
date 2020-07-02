@@ -17,7 +17,7 @@ My basic approach to this problem is to generate all possible sequences of the $
 
 If we draw two lines on a page, it's easy to come up with a condition for the crossing.
 
-<drawing of two crossing lines>
+`<drawing of two crossing lines>`
 
 $$
 \begin{align}
@@ -32,11 +32,11 @@ But this is too naive since, when we generate the points randomly, we won't know
 
 It's always going to be the case that if we take two points from one of the lines and one point from the other, whichever way we do this, they'll have to have the same orientation (clockwise or counterclockwise). 
 
-<diagram of orientation conditions>
+`<diagram of orientation conditions>`
 
 So, we can check if the orientations of $\\{A_1,B_1,A_2\\}$ and $\\{A_2,B_2,A_1\\}$ match. That's fine if the edges have the same length. But, if one is longer than the other, we can satisfy this without the lines actually crossing. To take care of that possibility we just have to do the same check for two points of line B and one point from line A.
 
-<drawing of differing lengths counterexample>
+`<drawing of differing lengths counterexample>`
 
 Our final condition for intersection is:
 
