@@ -76,13 +76,14 @@ pointsMap[NN_] := (
 
     (*Add the first point at the end, to cut down on redundancy
     prior to deduping*)
-  	perms = Permutations[points[[2 ;; -1]]];
-  	perms = Join[{points[[1]]}, #] & /@ perms;
-  	setsOfLines = 
+    
+    perms = Permutations[points[[2 ;; -1]]];
+    perms = Join[{points[[1]]}, #] & /@ perms;
+    setsOfLines = 
       Table[{#[[i]], #[[1 + i~Mod~NN]]}, {i, 1, NN}] & /@ perms;
-  	tmp = SortBy[#, First] & /@ # & /@ setsOfLines;
-  	tmp = Sort /@ tmp;
-  	tmp = DeleteDuplicates[tmp];
+    tmp = SortBy[#, First] & /@ # & /@ setsOfLines;
+    tmp = Sort /@ tmp;
+    tmp = DeleteDuplicates[tmp];
     Return[tmp];
   )
 ```
