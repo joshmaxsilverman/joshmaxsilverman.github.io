@@ -116,6 +116,8 @@ hasNoIntersection[setOfLines_] :=
     Return[True]
  ) 
 
+NN = 6
+(* make the map once, before the loop *)
 maps = pointsMap[NN];
 
 round[] :=
