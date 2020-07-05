@@ -112,6 +112,6 @@ which is enough to start working.
 
 The column of bare $x$ powers becomes $x/(1-x).$ 
 
-The terms with $S(1)$ are $2S(1)\left(x^3/3+x^4/4+x^5/5 + \ldots)$ and the terms with $S(2)$ are $2S(2)\left(x^4/4+x^5/5+x^6/6 + \ldots\right).$
+The terms with $S(1)$ are $2S(1)\left(x^3/3+x^4/4+x^5/5 + \ldots\right)$ and the terms with $S(2)$ are $2S(2)\left(x^4/4+x^5/5+x^6/6 + \ldots\right).$
 
 <br>
