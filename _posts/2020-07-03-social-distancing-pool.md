@@ -19,7 +19,7 @@ Suppose the first swimmer jumps in and she goes into the fourth lane. By the soc
 
 In other words, the total number of swimmers we expect, given that the first swimmer hopped into lane $4$ is the swimmer in lane $4$ plus the expected number of swimmers in a $2$ lane pool plus the expected number of swimmers in a $5$ lane pool.
 
-$$E(10 | \text{first swimmer in lane 4}) = 1 + E(2) + E(6)$$
+$$E(10 | \text{first swimmer in lane 4}) = 1 + E(2) + E(5)$$
 
 If the first swimmer had instead gone into the second lane, we'd get 
 
