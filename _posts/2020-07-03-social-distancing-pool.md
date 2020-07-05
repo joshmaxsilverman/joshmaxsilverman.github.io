@@ -146,8 +146,12 @@ So $\text{(some function of $x$)} = -\int dx\ 2x/(1-x) = 2x + 2\log(x-1)$ and $e
 
 $$\begin{align}
 G(x)e^{2x}\left(1-x\right)^2 &= C + \int dx\ e^{2x} \\
-G(x)e^{2x}\left(1-x\right)^2 &= C - \frac12 e^{2x} \\
-G(x) &= \frac{C - \frac12 e^{2x}}{\left(1-x\right)^2}
+G(x)e^{2x}\left(1-x\right)^2 &= C + \frac12 e^{2x} \\
+G(x) &= \frac{Ce^{-2x} + \frac12}{\left(1-x\right)^2}
 \end{align}$$
+
+By the series definition, $G(0)$ should be zero, so $C = -\frac12$ and
+
+$$G(x) = \frac12 \frac{1-e^{-2x}}{\left(1-x\right)^2}$$
 
 <br>
