@@ -27,9 +27,10 @@ $$E(6 | \text{first swimmer in lane 2}) = 1 + E(3)$$
 
 Since there's an equal chance of the first swimmer going in any lane, the expected number of swimmers in the pool is
 
-$$
-E(6) = \frac{2\left(1 + E(4)\right) + 2\left(1 + E(3)\right) + 2\left(1 + E(1) + E(2)\right)}{6}
-$$
+$$\begin{align}
+E(6) &= \frac{2\left(1 + E(4)\right) + 2\left(1 + E(3)\right) + 2\left(1 + E(1) + E(2)\right)}{6} \\
+     &= 1 + 2\frac{E(1) + E(2) + E(3) + E(4)}{6}
+\end{align}$$
 
 Diagramatically, we can picture this recursion like
 
