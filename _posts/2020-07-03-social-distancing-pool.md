@@ -13,23 +13,22 @@ date: 2020/07/04
 
 ## Solution
 
-The easiest way to get started on this problem is to get started on this problem. 
+The easiest way to get started on this problem is to get started on this problem. But let's start simple, with $6$ lanes.
 
-Suppose the first swimmer jumps in and she goes into the fourth lane. By the social distancing rule, this means that no other swimmer can go into the third lane or the fifth lane. We effectively now have two copies of the original problem playing out in lanes $1$ through $2$ ($2$ lanes) and in lanes $6$ through $10$ ($5$ lanes).
+Suppose the first swimmer jumps in and she goes into the third lane. By the social distancing rule, this means that no other swimmer can go into the second lane or the fourth lane. We effectively now have two copies of the original problem playing out in lane $1$ and in lanes $5$ through $6$.
 
-In other words, the total number of swimmers we expect, given that the first swimmer hopped into lane $4$ is the swimmer in lane $4$ plus the expected number of swimmers in a $2$ lane pool plus the expected number of swimmers in a $5$ lane pool.
+In other words, the total number of swimmers we expect, given that the first swimmer hopped into lane $3$ is the swimmer in lane $3$ plus the expected number of swimmers in a $1$ lane pool plus the expected number of swimmers in a $2$ lane pool.
 
-$$E(10 | \text{first swimmer in lane 4}) = 1 + E(2) + E(5)$$
+$$E(6 | \text{first swimmer in lane 3}) = 1 + E(1) + E(2)$$
 
 If the first swimmer had instead gone into the second lane, we'd get 
 
-$$E(10 | \text{first swimmer in lane 2}) = 1 + E(7)$$
+$$E(6 | \text{first swimmer in lane 2}) = 1 + E(3)$$
 
 Since there's an equal chance of the first swimmer going in any lane, the expected number of swimmers in the pool is
 
-$$\begin{align}
-E(10) = &\frac{1}{N}(2\left(1 + E(8)\right) + 2\left(1 + E(7)\right) + 2\left(1 + E(1) + E(6)\right) \\
-        &+ 2(1 + E(2) + E(5)) + 2(1 + E(3) + E(4)) 
-\end{align}$$
+$$
+E(6) = \frac{2\left(1 + E(4)\right) + 2\left(1 + E(3)\right) + 2\left(1 + E(1) + E(2)\right)}{6}
+$$
 
 <br>
