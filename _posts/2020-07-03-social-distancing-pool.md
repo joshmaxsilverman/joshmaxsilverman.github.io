@@ -97,17 +97,21 @@ Starting from
 
 $$S(n) = 1 + 2\frac{S(1) + S(2) + \ldots + S(n-2)}{n}$$
 
-we want to get $G = \sum_n S(n)x^n.$ Going line by line,
+we want to get $G(x) = \sum_n S(n)x^n.$ Going line by line,
 
 $$\begin{align}
 \sum_n S(n)x^n &= x\\
-&= x^2 \\
-&= x^3 + \frac23 S(1)x^3 \\
-&= x^4 + \frac24 S(1)x^4 + \frac24 S(2) x^4 \\
-&= x^5 + \frac25 S(1)x^5 + \frac25 S(2) x^5 + \frac25 S(3) x^5 \\
-&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7
+&= x^2 + \\
+&= x^3 + \frac23 S(1)x^3 + \\
+&= x^4 + \frac24 S(1)x^4 + \frac24 S(2) x^4 + \\
+&= x^5 + \frac25 S(1)x^5 + \frac25 S(2) x^5 + \frac25 S(3) x^5 + \\
+&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7 +
 \end{align}$$
 
 which is enough to start working.
+
+The column of bare $x$ powers becomes $x/(1-x).$ 
+
+The terms with $S(1)$ are $2S(1)\left(x^3/3+x^4/4+x^5/5 + \ldots)$ and the terms with $S(2)$ are $2S(2)\left(x^4/4+x^5/5+x^6/6 + \ldots\right).$
 
 <br>
