@@ -28,8 +28,8 @@ $$E(10 | \text{first swimmer in lane 2}) = 1 + E(7)$$
 Since there's an equal chance of the first swimmer going in any lane, the expected number of swimmers in the pool is
 
 $$\begin{align}
-E(10) = &\frac{1}{N}\left(2\left(1 + E(8)\right) + 2\left(1 + E(7)\right) + 2\left(1 + E(1) + E(6)\right) \\
-        &+ 2(1 + E(2) + E(5)) + 2(1 + E(3) + E(4)\right) 
+E(10) = &\frac{1}{N}(2\left(1 + E(8)\right) + 2\left(1 + E(7)\right) + 2\left(1 + E(1) + E(6)\right) \\
+        &+ 2(1 + E(2) + E(5)) + 2(1 + E(3) + E(4)) 
 \end{align}$$
 
 <br>
