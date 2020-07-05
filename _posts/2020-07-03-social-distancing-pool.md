@@ -140,6 +140,8 @@ G^\prime(x) &= \frac{1}{\left(1-x\right)^2} + 2\frac{x}{1-x}G(x) \\
 G^\prime(x) - \frac{2x}{1-x}G(x) &= \frac{1}{\left(1-x\right)^2} 
 \end{align}$$
 
-The left side looks like the derivative of $G(x)\times e^\text{some function of $x$}$ where the derivative of $\text{some function of $x$}$ is $-2x/(1-x).$
+The left side looks like the derivative of $G(x)\times e^\text{(some function of $x$)}$ where the derivative of $\text{(some function of $x$)}$ is $-2x/(1-x).$ So $\text{(some function of x)} = \int dx\ 2x/(1-x) = -2x - 2\log(x-1)$ and
+
+$$G(x)e^{-2x - 2\log(x-1)} = \int dx\ \frac{1}{\left(1-x\right)^2}$$
 
 <br>
