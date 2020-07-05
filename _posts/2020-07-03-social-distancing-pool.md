@@ -19,17 +19,17 @@ Suppose the first swimmer jumps in and she goes into the third lane. By the soci
 
 In other words, the total number of swimmers we expect, given that the first swimmer hopped into lane $3$ is the swimmer in lane $3$ plus the expected number of swimmers in a $1$ lane pool plus the expected number of swimmers in a $2$ lane pool.
 
-$$E(6 | \text{first swimmer in lane 3}) = 1 + E(1) + E(2)$$
+$$S(6 | \text{first swimmer in lane 3}) = 1 + S(1) + S(2)$$
 
 If the first swimmer had instead gone into the second lane, we'd get 
 
-$$E(6 | \text{first swimmer in lane 2}) = 1 + E(3)$$
+$$S(6 | \text{first swimmer in lane 2}) = 1 + S(3)$$
 
 Since there's an equal chance of the first swimmer going in any lane, the expected number of swimmers in the pool is
 
 $$\begin{align}
-E(6) &= \frac{2\left(1 + E(4)\right) + 2\left(1 + E(3)\right) + 2\left(1 + E(1) + E(2)\right)}{6} \\
-     &= 1 + 2\frac{E(1) + E(2) + E(3) + E(4)}{6}
+S(6) &= \frac{2\left(1 + S(4)\right) + 2\left(1 + S(3)\right) + 2\left(1 + S(1) + S(2)\right)}{6} \\
+     &= 1 + 2\frac{S(1) + S(2) + S(3) + S(4)}{6}
 \end{align}$$
 
 Diagramatically, we can picture this recursion like
@@ -38,20 +38,20 @@ Diagramatically, we can picture this recursion like
 
 Generalizing, this becomes the recursive equation
 
-$$E(N) = 1 + 2\frac{E(1) + E(2) + \ldots + E(N-2)}{N}.$$
+$$S(N) = 1 + 2\frac{S(1) + S(2) + \ldots + S(N-2)}{N}.$$
 
-## Recursive evaluation
+### Recursive evaluation
 
 We can code this up (in Python) like
 
 ```python
-def gf(n):
+def S(n):
     if n == 0:
         return 0
     elif n == 1 or n == 2:
         return 1
     else:
-        return (1 + 1/n * (2 * sum(gf(i) for i in range(n-1))))
+        return (1 + 1/n * (2 * sum(S(i) for i in range(n-1))))
 ```
 
 This works but, since it's a recursive function, it's much faster if we remember earlier evaluations:
@@ -60,31 +60,54 @@ This works but, since it's a recursive function, it's much faster if we remember
 from collections import defaultdict
 memo = defaultdict(lambda: False)
 
-def gf(n):
+def S(n):
     if n == 0:
         return 0
     elif n == 1 or n == 2:
         return 1
     else:
-        return (1 + 1/n * (2 * sum(memoized_gf(i) for i in range(n-1))))
+        return (1 + 1/n * (2 * sum(memoized_S(i) for i in range(n-1))))
         
-def memoized_gf(n):
+def memoized_S(n):
     if memo[n]:
         return memo[n]
     else:
-        memo[n] = gf(n)
-    return gf(n)
+        memo[n] = S(n)
+    return S(n)
 ```
 
-Calculating `gf(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it tot he next level, we find crushing linearity.
+Calculating `S(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it tot he next level, we find crushing linearity.
 
 ![](/img/2020-07-03-social-distancing-pool.png){:width="450px" class="image-centered"}
 
 {:.caption}
 After the initial values, this thing gets very linear.
 
-## What's that slope?
+### What's that slope?
 
-ddd
+With the numbers from the script, we could divide the rise of the line by its run and get a slope. But what is its closed form?
+
+The simple truth is that we don't deserve to know, not yet at least. We haven't put in the work.
+
+To go about it, I will return to the generating function, last employed in a similar capacity to how we'll use it here: [providing rigorous justification for an answer that we basically already had](https://joshmaxsilverman.github.io/2020-04-11-spam-attack/).
+
+For a gentler introduction on how to use them, here's my guide:
+
+Starting from
+
+$$S(n) = 1 + 2\frac{S(1) + S(2) + \ldots + S(n-2)}{n}$$
+
+we want to get $G = \sum_n S(n)x^n.$ Going line by line,
+
+$$\begin{align}
+\sum_n S(n)x^n &= x\\
+&= x^2 \\
+&= x^3 + \frac23 S(1)x^3 \\
+&= x^4 + \frac24 S(1)x^4 + \frac24 S(2) x^4 \\
+&= x^5 + \frac25 S(1)x^5 + \frac25 S(2) x^5 + \frac25 S(3) x^5 \\
+&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7
+\end{align}$$
+
+which is enough to start working.
 
 <br>
