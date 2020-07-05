@@ -36,4 +36,53 @@ Diagramatically, we can picture this recursion like
 
 `<diagram of recursive pools>`
 
+Generalizing, this becomes the recursive equation
+
+$$E(N) = 1 + 2\frac{E(1) + E(2) + \ldots + E(N-2)}{N}.$$
+
+We can code this up (in Python) like
+
+```python
+def gf(n):
+    if n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return (1 + 1/n * (2 * sum(gf(i) for i in range(n-1))))
+```
+
+This works but, since it's a recursive function, it's much faster if we remember earlier evaluations:
+
+```python
+from collections import defaultdict
+memo = defaultdict(lambda: False)
+
+def gf(n):
+    if n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return (1 + 1/n * (2 * sum(memoized_gf(i) for i in range(n-1))))
+        
+def memoized_gf(n):
+    if memo[n]:
+        return memo[n]
+    else:
+        memo[n] = gf(n)
+    return gf(n)
+```
+
+Calculating `gf(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$.
+
+![](/img/2020-07-03-social-distancing-pool.png){:width="450px" class="image-centered"}
+
+{:.caption}
+After the initial values, this thing gets very linear.
+
+## What's that slope?
+
+ddd
+
 <br>
