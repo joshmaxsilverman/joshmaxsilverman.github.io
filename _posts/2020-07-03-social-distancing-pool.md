@@ -31,4 +31,8 @@ $$
 E(6) = \frac{2\left(1 + E(4)\right) + 2\left(1 + E(3)\right) + 2\left(1 + E(1) + E(2)\right)}{6}
 $$
 
+Diagramatically, we can picture this recursion like
+
+`<diagram of recursive pools>`
+
 <br>
