@@ -136,7 +136,10 @@ This can be solved with integrating factors.
 
 $$\begin{align}
 G(x) &= \frac{x}{1-x} + \int dx\, \frac{x}{1-x} 2G(x) \\
-G^\prime(x) &= \frac{1}{\left(1-x\right)^2} + 2\frac{x}{1-x}G(x)
+G^\prime(x) &= \frac{1}{\left(1-x\right)^2} + 2\frac{x}{1-x}G(x) \\
+G^\prime(x) - \frac{2x}{1-x}G(x) &= \frac{1}{\left(1-x\right)^2} 
 \end{align}$$
+
+The left side looks like the derivative of $G(x)\times e^\text{some function of $x$}$ where the derivative of $\text{some function of $x$}$ is $-2x/(1-x).$
 
 <br>
