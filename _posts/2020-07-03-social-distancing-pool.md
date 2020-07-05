@@ -105,7 +105,8 @@ $$\begin{align}
 &= x^3 + \frac23 S(1)x^3 + \\
 &= x^4 + \frac24 S(1)x^4 + \frac24 S(2) x^4 + \\
 &= x^5 + \frac25 S(1)x^5 + \frac25 S(2) x^5 + \frac25 S(3) x^5 + \\
-&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7 +
+&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7 + 
+&= x^7 + \ldots
 \end{align}$$
 
 which is enough to start working.
