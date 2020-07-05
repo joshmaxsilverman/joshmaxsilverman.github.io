@@ -40,6 +40,8 @@ Generalizing, this becomes the recursive equation
 
 $$E(N) = 1 + 2\frac{E(1) + E(2) + \ldots + E(N-2)}{N}.$$
 
+## Recursive evaluation
+
 We can code this up (in Python) like
 
 ```python
@@ -74,7 +76,7 @@ def memoized_gf(n):
     return gf(n)
 ```
 
-Calculating `gf(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$.
+Calculating `gf(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it tot he next level, we find crushing linearity.
 
 ![](/img/2020-07-03-social-distancing-pool.png){:width="450px" class="image-centered"}
 
