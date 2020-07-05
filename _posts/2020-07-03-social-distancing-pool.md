@@ -15,12 +15,18 @@ date: 2020/07/04
 
 The easiest way to get started on this problem is to get started on this problem. 
 
-Suppose the first swimmer jumps in and she goes into the $4^\text{th}$ lane. By the social distancing rule, this means that no other swimmer can go into the $3^\text{rd}$ lane or the $5^\text{th}$ lane. We effectively now have two copies of the original problem playing out in lanes $1$ through $2$ ($2$ lanes) and in lanes $6$ through $10$ ($5$ lanes).
+Suppose the first swimmer jumps in and she goes into the fourth lane. By the social distancing rule, this means that no other swimmer can go into the third lane or the fifth lane. We effectively now have two copies of the original problem playing out in lanes $1$ through $2$ ($2$ lanes) and in lanes $6$ through $10$ ($5$ lanes).
 
 In other words, the total number of swimmers we expect, given that the first swimmer hopped into lane $4$ is the swimmer in lane $4$ plus the expected number of swimmers in a $2$ lane pool plus the expected number of swimmers in a $5$ lane pool.
 
-$$E(10 | \text{swimmer in lane 4}) = 1 + E(2) + E(6)$$
+$$E(10 | \text{first swimmer in lane 4}) = 1 + E(2) + E(6)$$
 
+If the first swimmer had instead gone into the second lane, we'd get 
 
+$$E(10 | \text{first swimmer in lane 2}) = 1 + E(7)$$
+
+Since there's an equal chance of the first swimmer going in any lane, the expected number of swimmers in the pool is
+
+$$E(10) = \frac{2\left(1 + E(8)\right) + 2(1 + E(7)) + 2(1 + E(1) + E(6)) + 2(1 + E(2) + E(5)) + 2(1 + E(3) + E(4)}{N}$$
 
 <br>
