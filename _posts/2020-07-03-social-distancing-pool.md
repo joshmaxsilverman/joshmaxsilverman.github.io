@@ -136,7 +136,7 @@ This can be solved with integrating factors.
 
 $$\begin{align}
 G(x) &= \frac{x}{1-x} + \int dx\, \frac{x}{1-x} 2G(x) \\
-G'(x) &= \frac{1}{\left(1-x)^2} + 2\frac{x}{1-x}G(x)
+G^\prime(x) &= \frac{1}{\left(1-x\right)^2} + 2\frac{x}{1-x}G(x)
 \end{align}$$
 
 <br>
