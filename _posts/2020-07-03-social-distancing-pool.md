@@ -113,9 +113,7 @@ which is enough to start working.
 
 The column of bare $x$ powers becomes $x/(1-x).$ 
 
-The terms with $S(1)$ are $2S(1)\left(x^3/3+x^4/4+x^5/5 + \ldots\right)$ and the terms with $S(2)$ are $2S(2)\left(x^4/4+x^5/5+x^6/6 + \ldots\right).$
-
-Putting it together
+Grouping terms,
 
 $$G(x) = \frac{x}{1-x} + 2S(1)\left(\frac{x^3}{3}+\frac{x^4}{4}+\frac{x^5}{5} + \ldots\right) + 2S(2)\left(\frac{x^4}{4}+\frac{x^5}{5} + \frac{x^6}{6} \ldots\right) + \ldots$$
 
