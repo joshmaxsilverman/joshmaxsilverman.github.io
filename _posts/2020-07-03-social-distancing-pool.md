@@ -102,15 +102,15 @@ After the initial values, this thing gets very linear.
 
 For reference, here are the first few coefficients:
 
-$$\begin{array}{c|c}
+$$\begin{array}{|c|c|} \hline
 n & \text{S(n)} \\ \hline
-1 & 1 \\
-2 & 1 \\
-3 & 5/3 \\
-4 & 2 \\
-5 & 37/15 \\
-6 & 26/9 \\
-7 & 349/105
+1 & 1 \\ \hline
+2 & 1 \\ \hline
+3 & 5/3 \\ \hline
+4 & 2 \\ \hline
+5 & 37/15 \\ \hline
+6 & 26/9 \\ \hline 
+7 & 349/105 \\ \hline
 \end{array}$$
 
 ### What's that slope?
