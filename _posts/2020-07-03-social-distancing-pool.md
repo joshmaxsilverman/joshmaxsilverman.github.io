@@ -43,6 +43,20 @@ Generalizing, this becomes the recursive equation
 
 $$S(N) = 1 + 2\frac{S(1) + S(2) + \ldots + S(N-2)}{N}.$$
 
+### So... how many swimmers?
+
+Before moving on to finer points, let's use the formula to find the expected number of swimmers in a $5$ lane pool. First of all, we have the base cases of $1$ and $2$ lane pools, for which we can only fit a single swimmer so $S(1) = S(2) = 1.$ 
+
+For $5$ lanes, we get
+
+$$S(5) = 1 + 2\frac{S(1) + S(2) + S(3)}{5}$$
+
+plugging in $S(3) = 1 + 2S(1)/3 = 5/3$ and the bases cases, we get
+
+$$S(5) = 1 + 2\frac{1 + 1 + 5/3}{5} = 1 + 2\frac{11/3}{5} = \frac{37}{15}.$$
+
+So, on average, $5 - 37/15 \approx 2.53$ swimmers willl be left crying on the side of the pool.
+
 ### Recursive evaluation
 
 We can code this up (in Python) like
@@ -94,7 +108,7 @@ The simple truth is that we don't deserve to know, not yet at least. We haven't 
 
 To go about it, I will return to the generating function, last employed in a similar capacity to how we'll use it here: [providing rigorous justification for an answer that we basically already had](https://joshmaxsilverman.github.io/2020-04-11-spam-attack/).
 
-For a gentler introduction on how to use them, here's my guide:
+For a gentler introduction on how to use them, [here's my guide](/img/generating-dice.pdf).
 
 Starting from
 
@@ -108,7 +122,7 @@ $$\begin{align}
 &= x^3 + \frac23 S(1)x^3 + \\
 &= x^4 + \frac24 S(1)x^4 + \frac24 S(2) x^4 + \\
 &= x^5 + \frac25 S(1)x^5 + \frac25 S(2) x^5 + \frac25 S(3) x^5 + \\
-&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7 + 
+&= x^6 + \frac26 S(1)x^6 + \frac26 S(2) x^6 + \frac26 S(3) x^6 + \frac26 S(4) x^7 + \\
 &= x^7 + \ldots
 \end{align}$$
 
@@ -169,7 +183,7 @@ $$G = \frac12 \left(1 - \sum_j \frac{\left(-2\right)^j}{j!}\right) \left(\sum_k 
 
 So the terms in the expansion have the form 
 
-$$\frac{\left(-2\right)^{k-1}}{k!}(j+1)x^j$$
+$$\frac{\left(-2\right)^{j-1}}{j!}(k+1)x^k$$
 
 Since we're looking for the coefficient on $x^n,$ we can set $j + k = n$ so that becomes $\left(-2\right)^{k-1}(n-k+1)/k!$ and we sum over all possible $k$, so
 
