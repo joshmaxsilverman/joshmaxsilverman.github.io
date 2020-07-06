@@ -154,4 +154,20 @@ By the series definition, $G(0)$ should be zero, so $C = -\frac12$ and
 
 $$G(x) = \frac12 \frac{1-e^{-2x}}{\left(1-x\right)^2}$$
 
-<br>
+Remember, the whole idea is that the series expansion of $G(x)$ will have the $S(n)$ as its coefficients. Doing this, we get
+
+$$x+x^2+\frac{5}{3}x^3+2 x^4+\frac{37}{15}x^5+\frac{26}{9}x^6+\frac{349}{105}x^7+\ldots$$
+
+which matches what we got with the script.
+
+At last, we can go for the coefficient on $x^n$, $S(n).$ The numerator and denominator expand to 
+
+$$G = \left(1 - \sum_j \frac{\left(-2\right)^j}{j!}\right) \left(\sum_k (k+1) x^k\right)$$
+
+So the terms in the expansion have the form 
+
+$$\frac{\left(-2\right)^k}{k!}(j+1)x^j$$
+
+Since we're looking for the coefficient on $x^n,$ we can set $j + k = n$ so that becomes $\frac{\left(-2\right)^k(n-k+1)}{k!}$ and we sum over all possible $k$, so
+
+$$\left[x^n\right]G(x) = \sum\limits_{k=1}{n} \frac{\left(-2\right)^k(n-k+1)}{k!} $$
