@@ -5,7 +5,7 @@ title: Social Distance Swimming Pool
 date: 2020/07/04
 ---
 
->Question: It's 8:59 at the 10-lane town pool and the coronavirus is absolutely ripping. In an effort to mitigate the spread, swimmers must stay at least one lane apart. In one minute, the swimmers will hop into the pool, one lane at a time, until it becomes impossible to obey social distancing. If there are 10 swimmers, how many do you expect to be left crying on the side of the pool?
+>Question: It's 8:59 at the $N$-lane town pool and the coronavirus is absolutely ripping. In an effort to mitigate the spread, swimmers must stay at least one lane apart. In one minute, the swimmers will hop into the pool, one lane at a time, until it becomes impossible to obey social distancing. If there are $N$ swimmers, how many do you expect to be left crying on the side of the pool?
 
 <!--more-->
 
