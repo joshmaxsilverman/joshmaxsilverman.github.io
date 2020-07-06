@@ -150,8 +150,8 @@ $$G(x) = \frac{x}{1-x} + 2S(1)\left(\frac{x^3}{3}+\frac{x^4}{4}+\frac{x^5}{5} + 
 Recognizing the term by term integrals,
 
 $$\begin{align}
-G(x) &= \frac{x}{1-x} + 2S(1)\int dx\,\left(x^2 + x^3 + x^4\right) + 2S(2)\left(\int dx\, x^3 + x^4 + x^5\right) + \ldots \\
-     &= \frac{x}{1-x} + 2S(1)\int dx\, \left(\frac{x^2}{1-x}\right) + 2S(2)\left(\int dx\, \frac{x^3}{1-x}\right) + \ldots \\
+G(x) &= \frac{x}{1-x} + 2S(1)\int dx\,\left(x^2 + x^3 + x^4\right) + 2S(2)\int dx\, \left(x^3 + x^4 + x^5\right) + \ldots \\
+     &= \frac{x}{1-x} + 2S(1)\int dx\, \left(\frac{x^2}{1-x}\right) + 2S(2)\int dx\, \left(\frac{x^3}{1-x}\right) + \ldots \\
      &= \frac{x}{1-x} + 2\int dx\, \frac{1}{1-x}\left(S(1)x^2 + S(2)x^3 + S(3)x^4 + \ldots\right) \\
      &= \frac{x}{1-x} + 2\int dx\, \frac{x}{1-x}\left(S(1)x + S(2)x^2 + S(3)x^3 + \ldots\right)
 \end{align}$$
