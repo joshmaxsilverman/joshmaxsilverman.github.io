@@ -34,7 +34,10 @@ S(6) &= \frac{2\left(1 + S(4)\right) + 2\left(1 + S(3)\right) + 2\left(1 + S(1) 
 
 Diagramatically, we can picture this recursion like
 
-`<diagram of recursive pools>`
+![](/img/2020-07-06-social-distance-pool-animation.gif){:width="500px" class="image-centered"}
+
+{:caption}
+Illustrating the pool recursion induced by the first swimmer hopping in the third lane.
 
 Generalizing, this becomes the recursive equation
 
