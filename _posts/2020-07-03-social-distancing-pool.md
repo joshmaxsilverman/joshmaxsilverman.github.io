@@ -103,7 +103,7 @@ After the initial values, this thing gets very linear.
 For reference, here are the first few coefficients:
 
 $$\begin{array}{c|c}
-n & \text{S(n) \\ \hline
+n & \text{S(n)} \\ \hline
 1 & 1 \\
 2 & 1 \\
 3 & 5/3 \\
