@@ -162,12 +162,16 @@ which matches what we got with the script.
 
 At last, we can go for the coefficient on $x^n$, $S(n).$ The numerator and denominator expand to 
 
-$$G = \left(1 - \sum_j \frac{\left(-2\right)^j}{j!}\right) \left(\sum_k (k+1) x^k\right)$$
+$$G = \frac12 \left(1 - \sum_j \frac{\left(-2\right)^j}{j!}\right) \left(\sum_k (k+1) x^k\right)$$
 
 So the terms in the expansion have the form 
 
-$$\frac{\left(-2\right)^k}{k!}(j+1)x^j$$
+$$\frac{\left(-2\right)^{k-1}}{k!}(j+1)x^j$$
 
-Since we're looking for the coefficient on $x^n,$ we can set $j + k = n$ so that becomes $\frac{\left(-2\right)^k(n-k+1)}{k!}$ and we sum over all possible $k$, so
+Since we're looking for the coefficient on $x^n,$ we can set $j + k = n$ so that becomes $\left(-2\right)^{k-1}(n-k+1)/k!$ and we sum over all possible $k$, so
 
-$$\left[x^n\right]G(x) = \sum\limits_{k=1}{n} \frac{\left(-2\right)^k(n-k+1)}{k!} $$
+$$\left[x^n\right]G(x) = \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}(n-k+1)}{k!} $$
+
+when $n$ goes to infinity we can pull the $(n-k+1)$ out in front
+
+$$\left[x^n\right]G(x) \approx n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}}{k!} = \frac12 n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k}}{k!} = \frac12 - \frac{ne^{-2}}{2}$$
