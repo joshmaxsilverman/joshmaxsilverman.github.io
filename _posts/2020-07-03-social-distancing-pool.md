@@ -9,7 +9,7 @@ date: 2020/07/04
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-stay-in-your-lane/))
 
 ## Solution
 
