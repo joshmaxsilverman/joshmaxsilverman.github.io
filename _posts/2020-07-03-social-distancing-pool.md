@@ -174,4 +174,4 @@ $$\left[x^n\right]G(x) = \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}(n-k+1)}
 
 when $n$ goes to infinity we can pull the $(n-k+1)$ out in front
 
-$$\left[x^n\right]G(x) \approx n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}}{k!} = \frac12 n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k}}{k!} = \frac12 - \frac{ne^{-2}}{2}$$
+$$\left[x^n\right]G(x) \approx n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}}{k!} = \frac12 n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k}}{k!} = n\left(\frac12 - \frac{e^{-2}}{2}\right)$$
