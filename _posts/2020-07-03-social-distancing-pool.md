@@ -93,12 +93,25 @@ def memoized_S(n):
     return S(n)
 ```
 
-Calculating `S(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it tot he next level, we find crushing linearity.
+Calculating `S(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it to the next level, we find crushing linearity.
 
 ![](/img/2020-07-03-social-distancing-pool.png){:width="450px" class="image-centered"}
 
 {:.caption}
 After the initial values, this thing gets very linear.
+
+For reference, here are the first few coefficients:
+
+$$\begin{array}{c|c}
+n & \text{S(n) \\ \hline
+1 & 1 \\
+2 & 1 \\
+3 & 5/3 \\
+4 & 2 \\
+5 & 37/15 \\
+6 & 26/9 \\
+7 & 349/105
+\end{array}$$
 
 ### What's that slope?
 
@@ -128,7 +141,7 @@ $$\begin{align}
 
 which is enough to start working.
 
-The column of bare $x$ powers becomes $x/(1-x).$ 
+The column of bare powers of $x$ becomes $x/(1-x).$ 
 
 Grouping terms,
 
