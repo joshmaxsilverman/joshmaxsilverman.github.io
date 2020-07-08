@@ -121,6 +121,8 @@ The simple truth is that we don't deserve to know, not yet at least. We haven't 
 
 To go about it, I will return to the generating function, last employed in a similar capacity to how we'll use it here: [providing rigorous justification for an answer that we basically already had](https://joshmaxsilverman.github.io/2020-04-11-spam-attack/).
 
+The basic idea (and miracle) is that it is easier to solve for the object $G = \sum S(n)x^n$ than it is to solve for $S(n)$ directly, and that once we have $G$, we can Taylor expand, and the coefficient on $x^n$, noted $\left[x^n\right]G$ is equal to $S(n).$
+
 For a gentler introduction on how to use them, [here's my guide](/img/generating-dice.pdf).
 
 Starting from
