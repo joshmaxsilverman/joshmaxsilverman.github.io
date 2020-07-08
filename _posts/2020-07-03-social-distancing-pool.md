@@ -158,12 +158,12 @@ G(x) &= \frac{x}{1-x} + 2S(1)\int dx\,\left(x^2 + x^3 + x^4\right) + 2S(2)\int d
 
 The series inside the integral is just the generating function $G(x)$ so we get
 
-$$G(x) = \frac{x}{1-x} + \int dx\, \frac{x}{1-x} 2G(x).$$
+$$G(x) = \frac{x}{1-x} + 2\int dx\, \frac{x}{1-x} G(x).$$
 
 This can be solved with integrating factors.
 
 $$\begin{align}
-G(x) &= \frac{x}{1-x} + \int dx\, \frac{x}{1-x} 2G(x) \\
+G(x) &= \frac{x}{1-x} + 2\int dx\, \frac{x}{1-x} G(x) \\
 G^\prime(x) &= \frac{1}{\left(1-x\right)^2} + 2\frac{x}{1-x}G(x) \\
 G^\prime(x) - \frac{2x}{1-x}G(x) &= \frac{1}{\left(1-x\right)^2} 
 \end{align}$$
