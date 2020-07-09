@@ -208,4 +208,4 @@ working in the limit where $n$ is large, we can pull the $(n-k+1)$ out in front
 
 $$\left[x^n\right]G(x) \approx n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}}{k!} = \frac12 n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k}}{k!} = n\left(\frac12 - \frac{e^{-2}}{2}\right)$$
 
-which shows, at last, that the slope of the graph is $\left(1-e^{-2}\right)/2 \approx 43.2$ As a check, we calculate `recursive_S(100) = 43.53023...`, not bad.
+which shows, at last, that the slope of the graph is $\left(1-e^{-2}\right)/2 \approx 43.2$ As a check, we calculate `S(100) = 43.53023...`, not bad.
