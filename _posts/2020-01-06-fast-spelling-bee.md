@@ -13,7 +13,7 @@ date: 2020/01/06
 
 ## Solution
 
-#Plan
+### Plan
 
 The big idea here is to only ever make linear passes over the list. The logic of the two major passes is
 
@@ -47,7 +47,7 @@ def subsets(s):
         yield from combinations(s, size)
 ```
 
-#Speed-enabling data structure
+### Speed-enabling data structure
 
 This code creates a dictionary from all ordered stems of pangrams to their corresponding pangrams. For example, for the pangram `ABCDEF` this would associate the keys `'A'`, `'AB'`, `'ABC'`, `'ABCD'`, `'ABCDE'`, and `'ABCDEF'` to `"ABCDEF"`. 
 
@@ -70,7 +70,7 @@ def word_score(word):
     return (1 if len(word) == 4 else len(word)) + (7 if len(set(word)) == 7 else 0)
 ```
 
-#Accumulate the scores
+### Accumulate the scores
 
 This code goes through the list of words, and adds the word score to every relevant pangram. The pangram score dictionary is keyed by a tuple of `(middle_letter, pangram)` so I loop over the word to distribute the scores to all relevant `(middle_letter, pangram)` destinations.
 
@@ -83,7 +83,7 @@ for word in valid_words:
             pangram_scores[pangram][letter] += word_score(word)
 ```
 
-#Find the max
+### Find the max
 
 This code loops over the two level dictionary to find the max.
 
