@@ -24,7 +24,6 @@ The big idea here is to only ever make linear passes over the list. The logic of
 from collections import defaultdict
 from itertools import combinations
 import urllib
-import time
 
 words = urllib.request.urlopen('https://norvig.com/ngrams/enable1.txt')
 words = [word.decode('utf-8').rstrip() for word in words]
@@ -54,7 +53,6 @@ This code creates a dictionary from all ordered stems of pangrams to their corre
 This is the key to the speed of this approach. Instead of testing which pangrams a word is a subset of, we can directly map from the letters in a word to all the relevant pangrams.
 
 ```python
-%time
 for pangram in pangrams:
     keys = [''.join(tup) for tup in list(subsets(sorted(set(pangram))))]
     for key in keys:
@@ -75,7 +73,6 @@ def word_score(word):
 This code goes through the list of words, and adds the word score to every relevant pangram. The pangram score dictionary is keyed by a tuple of `(middle_letter, pangram)` so I loop over the word to distribute the scores to all relevant `(middle_letter, pangram)` destinations.
 
 ```python
-%time
 for word in valid_words:
     word_key = ''.join(sorted(set(word)))
     for pangram in word_to_pangram[word_key]:
@@ -97,7 +94,6 @@ for key1 in pangram_scores:
             tmp_pangram = (key1, key2)
 
 print(tmp_max, tmp_pangram)
-print("--- %s seconds ---" % (time.time() - start_time))
 ```
 
 
