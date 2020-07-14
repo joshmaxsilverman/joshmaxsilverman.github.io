@@ -21,10 +21,10 @@ date: 2020/01/06
 $$\begin{array}{|c|c|} \hline
 \textbf{Quantity} & \textbf{Value} \\ \hline
 \text{words} & 172820 \\ \hline
-\text{pangrams} & \binom{26}{7} = 3315312000 \\ \hline
+\text{pangrams} & 7\binom{26}{7} = 4604600 \\ \hline
 \end{array}$$
 
-On first glance, these numbers are daunting. A naive search would need to generate some $\approx 3\times10^9$ games, and compare them against $\approx 1.5\times10^5$ words, a hefty $\approx 5\times10^{14}$ comparisons. Simply looping over a list that long (without any string operations) would take about $200\ \text{days}$ in a Colab notebook. Hopefully there is some structure we can exploit.
+On first glance, these numbers are daunting. A naive search would need to generate some $\approx 5\times10^6$ games, and compare them against $\approx 1.5\times10^5$ words, a hefty $\approx 10^{12}$ comparisons. Simply looping over a list that long (without any string operations) would take about $10\ \text{hours}$ in a Colab notebook. Hopefully there is some structure we can exploit.
 
 
 ### Plan
