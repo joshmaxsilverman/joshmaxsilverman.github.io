@@ -22,9 +22,9 @@ $$\begin{array}{|c|c|} \hline
 \textbf{Quantity} & \textbf{Value} \\ \hline
 \text{words} & 172820 \\ 
 \text{pangrams} & 3315312000 \\ \hline
-\end{align}$$
+\end{array}$$
 
-On first glance, these numbers are daunting. A naive search would need to generate some $\approx 3\times10^9$ games, and compare them against $\approx 1.5\times10^5$ words, a hefty $\approx 5\times10^14$ comparisons. Simply looping over a list (without any string operations) that long would take about $550\ \text{days}$ in a Colab notebook. Evidently, there must be some structure we can exploit.
+On first glance, these numbers are daunting. A naive search would need to generate some $\approx 3\times10^9$ games, and compare them against $\approx 1.5\times10^5$ words, a hefty $\approx 5\times10^{14}$ comparisons. Simply looping over a list that long (without any string operations) would take about $200\ \text{days}$ in a Colab notebook. Hopefully there is some structure we can exploit.
 
 
 ### Plan
