@@ -29,7 +29,7 @@ On first glance, these numbers are daunting. A naive search would need to genera
 
 ### Plan
 
-The big idea here is to only ever make linear passes over the list. The logic of the two major passes is
+The big idea here is to only ever make linear passes over the word list, and avoid looping the list of possible pangrams entirely. The logic of the two major passes is
 
 1. accumulate the possible pangrams and populate a data structure that can receive score increments for given `middle letter/pangram` pairs as we loop over the word list a second time.
 2. loop over the words and distribute their scores to the relevant destination in `pangram_scores`
