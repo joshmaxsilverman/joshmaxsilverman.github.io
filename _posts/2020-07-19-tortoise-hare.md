@@ -48,7 +48,7 @@ $$d_\text{tortoise}(t) = \Delta_T\left(1+t\right)H(t)$$
 
 Unless they hit the finish line in a multiple of minutes, they'll have a small fraction of the journey they happens after the last road stretching. With this in mind, Tortoise's distance becomes:
 
-$$d_\text{tortoise}(t_\text{finish}) = \Delta_T\left(1+\lfloor t_\text{finish}\rfloor\right)H(\lfloor t_\text{finish}\rfloor) + \Delta_T\left(t_\text{finish} - \lfloor t_\text{finish}\rfloor\right)$$
+$$d_\text{tortoise}(t) = \Delta_T\left(1+\lfloor t\rfloor\right)H(\lfloor t\rfloor) + \Delta_T\left(t - \lfloor t\rfloor\right)$$
 
 ### The finish line
 
