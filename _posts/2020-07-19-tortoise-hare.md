@@ -34,7 +34,7 @@ $$d_\text{tortoise}(t) = \left[d_\text{tortoise}(t-1) + \Delta_T\right]\frac{t+1
 Recursing one step, 
 
 $$\begin{align}
-d_\text{tortoise}(t) &= \left[\left[d_\text{tortoise}(t-2) + \Delta_T\right]\frac{t}{t-1} + \Delta_T\right]\frac{t+1}{t} \\
+d_\text{tortoise}(t) &= \left(\left[d_\text{tortoise}(t-2) + \Delta_T\right)\frac{t}{t-1} + \Delta_T\right]\frac{t+1}{t} \\
 &= d_\text{tortoise}(t-2)\frac{t+1}{t-1} + \Delta_T\frac{t+1}{t-1} + \Delta_T\frac{t+1}{t}
 \end{align}$$
 
