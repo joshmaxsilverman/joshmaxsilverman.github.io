@@ -52,7 +52,7 @@ $$d_\text{tortoise}(t) = \Delta_T\left(1+\lfloor t\rfloor\right)H(\lfloor t\rflo
 
 ### The finish line
 
-The position of the finish line is just $\Delta_L\left(1+t\right)$ which means that Hare should begin when $d_\text{tortoise}(t) = 20\% \times \left(1 + \lfloor t\rfloor\right)\Delta_L$ or 
+The position of the finish line is just $\Delta_L\left(1+\lfloor t\rfloor\right)$ which means that Hare should begin when $d_\text{tortoise}(t) = 20\% \times \left(1 + \lfloor t\rfloor\right)\Delta_L$ or 
 
 $$\begin{align}
 \Delta_T\left(1+\lfloor t\rfloor\right)H(\lfloor t\rfloor) + \Delta_T\left(t - \lfloor t\rfloor\right) &= 20\%\times \Delta_L\left(1+\lfloor t\rfloor\right)\\
