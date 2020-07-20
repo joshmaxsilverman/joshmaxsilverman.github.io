@@ -90,7 +90,9 @@ We can plug the $3$ minutes $40$ second delay time into the expressions for Tort
 For reference, Hare's position over time is equal to
 
 $$\begin{align}
-d_\text{hare}(t,t_\text{start}) &= \left(\lceil t_\text{start}\rceil - t_\text{start}\right)\Delta_H \frac{1 + \lfloor t\rfloor}{1 + \lfloor t_\text{start}\rfloor} \\ &+ \Delta_H\left(1+\lfloor t\rfloor\right)\left[H(\lfloor t\rfloor) - H\left(\lfloor t_\text{start}\rfloor + 1\right)\right] \\ &+ \Delta_H \left(t - \lfloor t\rfloor\right)
+d_\text{hare}(t,t_\text{start}) &= \left(\lceil t_\text{start}\rceil - t_\text{start}\right)\Delta_H \frac{1 + \lfloor t\rfloor}{1 + \lfloor t_\text{start}\rfloor} \\ &+ \Delta_H\left(1+\lfloor t\rfloor\right)\left[H(\lfloor t\rfloor) - H\left(\lfloor t_\text{start}\rfloor + 1\right)\right] \\ &+ \Delta_H \left(t - \lfloor t\rfloor\right),
 \end{align}$$
+
+where $\Delta_H = 5/4.$
 
 <br>
