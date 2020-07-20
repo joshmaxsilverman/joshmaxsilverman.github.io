@@ -13,8 +13,6 @@ date: 2020/07/19
 
 ## Solution
 
-### Insight
-
 On the standard issue road that doesn't magically extend by $10$ miles every minute, the problem is a bit simpler. Because Hare can cover $25\%$ more ground than Tortoise in the same amount of time, they should wait until the distance that Tortoise has left to go is $4/5$ of the distance that Hare has left to go, i.e., $4/5\times 10\,\text{miles} = 8\,\text{miles}$.
 
 As it happens, this is the key to the rubber band road as well. 
