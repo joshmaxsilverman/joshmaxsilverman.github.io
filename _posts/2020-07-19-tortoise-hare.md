@@ -5,7 +5,7 @@ title: A Trip Down Rubber Band Road
 date: 2020/07/19
 ---
 
->**Question** Tortoise and Hare are having a stroll down a 10 mile road — Tortoise can run at a healthy clip of $60$ mph while Hare can run at an even healthier clip of $75$ mph. But that's not all... the road is magic and every minute, on the minute, the road is stretched uniformly by $10$ miles. If Tortoise and Hare want to finish their stroll at the same time, how long should Hare hang back after Tortoise gets started?
+>**Question:** Tortoise and Hare are having a stroll down a 10 mile road — Tortoise can run at a healthy clip of $60$ mph while Hare can run at an even healthier clip of $75$ mph. But that's not all... the road is magic and every minute, on the minute, the road is stretched uniformly by $10$ miles. If Tortoise and Hare want to finish their stroll at the same time, how long should Hare hang back after Tortoise gets started?
 
 <!--more-->
 
