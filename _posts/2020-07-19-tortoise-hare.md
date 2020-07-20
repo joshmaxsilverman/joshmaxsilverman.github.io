@@ -77,7 +77,13 @@ and Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 ### Checking Our Work
 
-`<graph>`
-`<intersection graph>`
+We can plug in the $3$ minutes $40$ second delay time and plot the position of Tortoise and Hare over time. Indeed they overlap with the finish line at exactly the same time.
+
+![](/img/graph1.png)
+
+![](/img/graph2.png)
+
+![](/img/graph3.png)
+
 
 <br>
