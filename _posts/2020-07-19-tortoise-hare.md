@@ -5,7 +5,7 @@ title: A Trip Down Rubber Band Road
 date: 2020/07/19
 ---
 
->Question
+>**Question** Tortoise and Hare are having a stroll down a 10 mile road — Tortoise can run at a healthy clip of $60$ mph while Hare can run at an even healthier clip of $75$ mph. But that's not all... the road is magic and every minute, on the minute, the road is stretched uniformly by $10$ miles. If Tortoise and Hare want to finish their stroll at the same time, how long should Hare hang back after Tortoise gets started?
 
 <!--more-->
 
@@ -77,7 +77,9 @@ and Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 ### Checking Our Work
 
-We can plug in the $3$ minutes $40$ second delay time and plot the position of Tortoise and Hare over time. Indeed they overlap with the finish line at exactly the same time.
+To figure out when the race finishes, we apply the same logic from above, but now looking for when Tortoise is at $100\%$ the length of the road. This means we want the first $\lfloor t\rfloor$ for which $H(\lfloor t\rfloor) > 10.$ We can solve this numerically to find $\lfloor t\rfloor = 12367.$ So, the final road stretch will occur at $t = 12366\,\text{min}$ and we can solve the linear equation for the crossing at $t_\text{finish} = 12366 + 123670 - H(12366) (1 + 12366) \approx 12366.468116653079\text{ min}$
+
+We can plug the $3$ minutes $40$ second delay time into the expressions for Tortoise and Hare's distance, and plot their position over time. Indeed they overlap with the finish line at exactly the same time.
 
 ![](/img/graph1.png)
 
@@ -85,5 +87,8 @@ We can plug in the $3$ minutes $40$ second delay time and plot the position of T
 
 ![](/img/graph3.png)
 
+For reference, Hare's position over time is equal to
+
+$$d_\text{hare}(t) = \left(\lceil t_\text{start}\rceil - t_\text{start}\right)\Delta_H \frac{1 + \lfloor t_\text{finish}\rfloor}{1 + \lfloor t_\text{start}\rfloor} + \Delta_H\left(1+\lfloor t_\text{finish}\rfloor\right)\left[H(\lfloor t_\text{finish}\rfloor) - H\left(\lfloor t_\text{start}\rfloor + 1\right)\right] + \Delta_H \left(t_\text{finish} - \lfloor t_\text{finish}\rfloor\right)$$
 
 <br>
