@@ -50,12 +50,21 @@ Unless they hit the finish line in a multiple of minutes, they'll have a small f
 
 $$d_\text{tortoise}(t_\text{finish}) = \Delta_T\left(1+\lfloor t_\text{finish}\rfloor\right)H(\lfloor t_\text{finish}\rfloor) + \Delta_T\left(t_\text{finish} - \lfloor t_\text{finish}\rfloor\right)$$
 
-###The finish line
+### The finish line
 
 The position of the finish line is just $\Delta_L\left(1+t\right)$ which means that Hare should begin when $d_\text{tortoise}(t) = 20\% \times \left(1 + \lfloor t\rfloor\right)\Delta_L$ or 
 
-$$\Delta_T\left(1+\lfloor t_\text{finish}\rfloor\right)H(\lfloor t_\text{finish}\rfloor) + \Delta_T\left(t_\text{finish} - \lfloor t_\text{finish}\rfloor\right) = 20\%\times \Delta_L\left(1+\lfloor t_\text{finish}\rfloor\right)$$
+$$\begin{align}
+\Delta_T\left(1+\lfloor t\rfloor\right)H(\lfloor t\rfloor) + \Delta_T\left(t - \lfloor t\rfloor\right) &= 20\%\times \Delta_L\left(1+\lfloor t\rfloor\right)\\
+&= 2\left(1+\lfloor t\rfloor\right)
+\end{align}$$
 
-The fractional part is, by definition, less than $1$, so we can drop it and see when the harmonic pieces alone wouldNo harmonic number is equal to $8$ and this raises the fact issue of non-integer driving times for the tortoise (and later the hare).
+The fractional part is less than $1$ by definition, so we can drop it and see when the harmonic pieces alone would eclipse the right hand side:
+
+$$\left(1 + \lfloor t\rfloor\right)H(\lfloor t\rfloor) > 2\left(1 + \lfloor t\rfloor\right).$$
+
+As the $\left(1+\lfloor t\rfloor\right)$ factor drops out, we just need to find the first time when $1 + \frac12 + \frac13 + \ldots + \frac{1}{t} > 2,$ which is when $t=4$. This means that Tortoise is $20\%$ along the road sometime between the third and fourth minutes. 
+
+
 
 <br>
