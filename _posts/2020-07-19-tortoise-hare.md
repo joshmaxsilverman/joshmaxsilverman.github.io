@@ -68,7 +68,7 @@ As the $\left(1+\lfloor t\rfloor\right)$ factor drops out, we just need to find 
 So, with $\Delta_T = 1,$ the fractional part of the time is
 
 $$\begin{align}
-\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+\lfloor 3\rfloor\right)H\left(\lfloor 3\rfloor\right) \\
+\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+ 3\right)H\left( 3\right) \\
 &=8 - 4\times H(3) \\
 &= \frac23
 \end{align}$$
