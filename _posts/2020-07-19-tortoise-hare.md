@@ -78,6 +78,6 @@ and Hare should start $3$ minutes and $40$ seconds after Tortoise.
 ### Checking Our Work
 
 `<graph>`
-
+`<intersection graph>`
 
 <br>
