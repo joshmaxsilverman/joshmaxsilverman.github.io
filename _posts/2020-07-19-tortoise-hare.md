@@ -65,7 +65,7 @@ $$\left(1 + \lfloor t\rfloor\right)H(\lfloor t\rfloor) > 2\left(1 + \lfloor t\rf
 
 As the $\left(1+\lfloor t\rfloor\right)$ factor drops out, we just need to find the first time when $1 + \frac12 + \frac13 + \ldots + \frac{1}{t} > 2,$ which is when $t=4$. This means that Tortoise is $20\%$ along the road sometime between the third and fourth minutes. 
 
-So, with $\Delta_T = 1,$
+So, with $\Delta_T = 1,$ the fractional part of the time is
 
 $$\begin{align}
 \left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+\lfloor 3\rfloor\right)H\left(\lfloor 3\rfloor\right) \\
@@ -73,7 +73,7 @@ $$\begin{align}
 &= \frac23
 \end{align}$$
 
-So, Hare should start $3$ minutes and $40$ seconds after Tortoise.
+and Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 ### Checking Our Work
 
