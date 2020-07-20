@@ -15,7 +15,7 @@ date: 2020/07/19
 
 ### Insight
 
-On the regulation issue road that doesn't magically extend by $12$ miles every minute, the problem is a bit simpler. Because the Hare can cover $5/4$ as much ground as the Tortoise in the same amount of time, they should wait until the distance the Tortoise has to go is $4/5$ of the distance that the Hare has to go. In other words, $4/5\times 10\,\text{miles} = 8\,\text{miles}$.
+On the regulation issue road that doesn't magically extend by $12$ miles every minute, the problem is a bit simpler. Because the Hare can cover $25\%$ more ground than the Tortoise in the same amount of time, they should wait until the distance the Tortoise has to go is $4/5$ of the distance that the Hare has to go. In other words, $4/5\times 10\,\text{miles} = 8\,\text{miles}$.
 
 As it happens, this is the key to the magical road as well. 
 
@@ -68,7 +68,7 @@ As the $\left(1+\lfloor t\rfloor\right)$ factor drops out, we just need to find 
 So, with $\Delta_T = 1,$
 
 $$\begin{align}
-\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3) - \left(1+\lfloor 3\rfloor\right)H(\lfloor 3\rfloor) \\
+\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+\lfloor 3\rfloor\right)H\left(\lfloor 3\rfloor\right) \\
 &=8 - 4\times H(3) \\
 &= \frac23
 \end{align}$$
