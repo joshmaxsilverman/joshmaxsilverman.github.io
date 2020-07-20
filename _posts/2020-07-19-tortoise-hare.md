@@ -15,13 +15,13 @@ date: 2020/07/19
 
 ### Insight
 
-On the regulation issue road that doesn't magically extend by $12$ miles every minute, the problem is a bit simpler. Because the Hare can cover $25\%$ more ground than the Tortoise in the same amount of time, they should wait until the distance the Tortoise has to go is $4/5$ of the distance that the Hare has to go. In other words, $4/5\times 10\,\text{miles} = 8\,\text{miles}$.
+On the standard issue road that doesn't magically extend by $10$ miles every minute, the problem is a bit simpler. Because Hare can cover $25\%$ more ground than Tortoise in the same amount of time, they should wait until the distance that Tortoise has left to go is $4/5$ of the distance that Hare has left to go, i.e., $4/5\times 10\,\text{miles} = 8\,\text{miles}$.
 
-As it happens, this is the key to the magical road as well. 
+As it happens, this is the key to the rubber band road as well. 
 
-When the Tortoise starts walking down the magic road, they make it $1\,\text{mile}$, or $10\%$ of the way, before the road stretches. While this stretch adds road to the path before them, it does nothing to affect the fractional progress the Tortoise has made along the road. 
+When Tortoise starts walking down the rubber band road, they make it $1\,\text{mile}$, or $10\%$ of the way, before the road stretches. While this stretch adds road to the path before them, it does nothing to affect the fractional progress they've made made along the road. 
 
-In other words, whenever the Hare starts down the road, they are dealing with the same problem the Tortoise is, just longer. All of the proportional stretching from that point on will be identical for Tortoise and Hare. 
+In other words, whenever Hare starts down the road, they are going to be dealing with the same problem as Tortoise, just longer. All of the proportional stretching from that point on will be identical for Tortoise and Hare. 
 
 So, as on the non-magical road, Hare should start when Tortoise is $20\%$ of the way to the end of the road.
 
