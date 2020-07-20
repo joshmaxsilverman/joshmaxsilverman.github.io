@@ -68,16 +68,16 @@ As the $\left(1+\lfloor t\rfloor\right)$ factor drops out, we just need to find 
 So, with $\Delta_T = 1,$ the fractional part of the time is
 
 $$\begin{align}
-\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+ 3\right)H\left( 3\right) \\
-&=8 - 4\times H(3) \\
-&= \frac23
+\left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+ 3\right)H\left( 3\right)\,\text{min}\\
+&=8 - 4\times H(3)\,\text{min} \\
+&= \frac23\,\text{min}
 \end{align}$$
 
 and Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 ### Checking Our Work
 
-To figure out when the race finishes, we apply the same logic from above, but now looking for when Tortoise is at $100\%$ the length of the road. This means we want the first $\lfloor t\rfloor$ for which $H(\lfloor t\rfloor) > 10.$ We can solve this numerically to find $\lfloor t\rfloor = 12367.$ So, the final road stretch will occur at $t = 12366\,\text{min}$ and we can solve the linear equation for the crossing at $t_\text{finish} = 12366 + 123670 - H(12366) (1 + 12366) \approx 12366.468116653079\text{ min}$
+To figure out when the race finishes, we apply the same logic from above, but now looking for when Tortoise is at $100\%$ the length of the road. This means we want the first $\lfloor t\rfloor$ for which $H(\lfloor t\rfloor) > 10.$ We can solve this numerically to find $\lfloor t\rfloor = 12367\,\text{min}.$ So, the final road stretch will occur at $t = 12366\,\text{min}$ and we can solve the linear equation for the crossing at $t_\text{finish} = 12366 + 123670 - H(12366) (1 + 12366) \approx 12366.468116653079\,\text{min}$
 
 We can plug the $3$ minutes $40$ second delay time into the expressions for Tortoise and Hare's distance, and plot their position over time. Indeed they overlap with the finish line at exactly the same time.
 
