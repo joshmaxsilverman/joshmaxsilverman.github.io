@@ -40,7 +40,7 @@ Continuing on in this way we get to
 
 $$d_\text{tortoise}(t) = d_\text{tortoise}(0)\left(t+1\right) + \Delta_T\left(t+1\right)\left(1 + \frac12 + \frac13 + \cdots + \frac1t\right)$$
 
-but since $d_\text{tortoise}(0) = 0$ and the series is the Harmonic series, this is just 
+but since $d_\text{tortoise}(0) = 0$ and the sum is the \(t^\text{th}\) Harmonic number, this is just 
 
 $$d_\text{tortoise}(t) = \Delta_T\left(1+t\right)H(t)$$
 
