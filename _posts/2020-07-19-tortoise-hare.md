@@ -79,11 +79,20 @@ To figure out when the race finishes, we apply the same logic from above, but no
 
 We can plug the $3$ minutes $40$ second delay time into the expressions for Tortoise and Hare's distance, and plot their position over time. Indeed they overlap with the finish line at exactly the same time.
 
-![](/img/graph1.png)
+![](/img/2020_07_19_graph_first_20.png) {: width="400px" class="image-centered"}
 
-![](/img/graph2.png)
+{:.caption}
+Plot of the finish line, tortoise, and hare over the first $20$ mins of the stroll.
 
-![](/img/graph3.png)
+![](/img/2020_07_19_graph_first_12367.png) {: width="400px" class="image-centered"}
+
+{:.caption}
+Plot of the finish line, tortoise, and hare over the entire stroll.
+
+![](/img/2020_07_19_graph_end.png.png) {: width="400px" class="image-centered"}
+
+{:.caption}
+Plot of the finish line, tortoise, and hare intersecting at the end of the stroll, $t_\text{finish} = 12366 + 123670 - H[12366] (1 + 12366).$
 
 For reference, Hare's position over time is equal to
 
