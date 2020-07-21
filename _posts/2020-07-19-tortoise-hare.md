@@ -17,7 +17,7 @@ On the standard issue road that doesn't magically extend by $10$ miles every min
 
 As it happens, this is the key to the rubber band road as well. 
 
-When Tortoise starts walking down the rubber band road, they make it $1\,\text{mile}$, or $10\%$ of the way, before the road stretches. While this stretch adds road to the path before them, it does nothing to affect the fractional progress they've made made along the road. 
+When Tortoise starts walking down the rubber band road, they make it $1\,\text{mile}$, or $10\%$ of the way, before the road stretches. While this stretch adds road to the path before them, it does nothing to affect the fractional progress they've made along the road. 
 
 In other words, whenever Hare starts down the road, they are going to be dealing with the same problem as Tortoise, just longer. All of the proportional stretching from that point on will be identical for Tortoise and Hare. 
 
