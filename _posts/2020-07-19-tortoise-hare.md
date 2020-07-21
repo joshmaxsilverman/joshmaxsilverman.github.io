@@ -32,7 +32,7 @@ $$d_\text{tortoise}(t) = \left[d_\text{tortoise}(t-1) + \Delta_T\right]\frac{t+1
 Recursing one step, 
 
 $$\begin{align}
-d_\text{tortoise}(t) &= \left(\left[d_\text{tortoise}(t-2) + \Delta_T\right)\frac{t}{t-1} + \Delta_T\right]\frac{t+1}{t} \\
+d_\text{tortoise}(t) &= \left(\left[d_\text{tortoise}(t-2) + \Delta_T\right]\frac{t}{t-1} + \Delta_T\right)\frac{t+1}{t} \\
 &= d_\text{tortoise}(t-2)\frac{t+1}{t-1} + \Delta_T\frac{t+1}{t-1} + \Delta_T\frac{t+1}{t}
 \end{align}$$
 
@@ -68,10 +68,10 @@ So, with $\Delta_T = 1,$ the fractional part of the time is
 $$\begin{align}
 \left(t - \lfloor t\rfloor\right) &= 2\left(1 + 3\right) - \left(1+ 3\right)H\left( 3\right)\,\text{min}\\
 &=8 - 4\times H(3)\,\text{min} \\
-&= \frac23\,\text{min}
+&= \frac23\,\text{min},
 \end{align}$$
 
-and Hare should start $3$ minutes and $40$ seconds after Tortoise.
+so Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 ### Checking Our Work
 
