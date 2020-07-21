@@ -89,7 +89,7 @@ Plot of the finish line, tortoise, and hare over the first $20$ mins of the stro
 {:.caption}
 Plot of the finish line, tortoise, and hare over the entire stroll.
 
-![](/img/2020_07_19_graph_end.png.png){:width="300px" class="image-centered"}
+![](/img/2020_07_19_graph_end.png){:width="300px" class="image-centered"}
 
 {:.caption}
 Plot of the finish line, tortoise, and hare intersecting at the end of the stroll, $t_\text{finish} = 12366 + 123670 - H[12366] (1 + 12366).$
