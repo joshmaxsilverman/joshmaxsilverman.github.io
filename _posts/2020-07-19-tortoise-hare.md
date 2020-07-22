@@ -94,6 +94,11 @@ Plot of the finish line, tortoise, and hare over the entire stroll.
 {:.caption}
 Plot of the finish line, tortoise, and hare intersecting at the end of the stroll, $t_\text{finish} \approx 12366.4.$
 
+![](/img/2020-07-19-graph_relative.png){:width="300px" class="image-centered"}
+
+{:.caption}
+Plot of the tortoise and hare's distance relative to the finish line throughout the stroll.
+
 For reference, Hare's position over time is equal to
 
 $$\begin{align}
