@@ -52,7 +52,7 @@ That means there can't exist a rearrangement of the $5$ students that maps onto 
 Generalizing, we get 
 
 $$\begin{align}
-0 &= \sum\limits_{i=2}^{n} \text{move}_i \\
+0 &= \text{move}_2 + \text{move}_3 + \ldots + \text{move}_n \\
  &=1 + 2 + \ldots + \overbrace{\left(n-1\right)}^\text{odd} \bmod n \\
  &= \frac{n(n-1)}{2} \bmod n
 \end{align}$$
