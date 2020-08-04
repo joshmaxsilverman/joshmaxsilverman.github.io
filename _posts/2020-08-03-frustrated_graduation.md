@@ -35,7 +35,7 @@ Let’s say we have an even number of students, $6$ for argument’s sake, the f
 
 ![](/img/2020-08-03-valid-moves.jpg){:width="400px" class="image-centered"}
 
-The others need to move $1$, $2$, $3$, $4$, or $5$ places from where they currently are (since the first student already used the $\text{``0"}$-move. Student $6$ can’t move $1$ spot (or they’d overlap with Student $1$), Student $5$ can’t move $2$ spots, etc. In other words, those last $5$ students have to map among themselves. 
+The others need to move $1$, $2$, $3$, $4$, or $5$ places from where they currently are (since the first student already used the $\text{"0"}$-move. Student $6$ can’t move $1$ spot (or they’d overlap with Student $1$), Student $5$ can’t move $2$ spots, etc. In other words, those last $5$ students have to map among themselves. 
 
 ![](/img/2020-08-03-move-mapper.jpg){:width="400px" class="image-centered"}
 
