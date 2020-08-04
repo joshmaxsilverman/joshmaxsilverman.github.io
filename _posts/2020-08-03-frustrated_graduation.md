@@ -13,12 +13,13 @@ date: 2020/08/03
 
 ## Solution
 
+The first useful thing I did was find a construction for arrangements of odd numbers of students where no two students remain in the same relative position after rearranging.
 
 ### Construction for odd number of students 
 
-First I found a repeatable approach for odd numbers of students. since any exchange of positions is rotationally symmetric, we can trivially keep one student in their original spot. Hold them in their spot and swap every subsequent even/odd student pair. that will put the odd register ahead of the even register, breaking all their relative orders, but preserving all the relative orders within the even and odd registers. 
+Since any exchange of positions is rotationally symmetric, we can trivially keep one student in their original spot. Hold them in their spot and swap every subsequent even/odd student pair. That will put the odd register ahead of the even register, breaking all their relative orders, but preserving all the relative orders within the even and odd registers. 
 
-From there, remove the middle swap and move the remaining swaps toward the middle, this will break up the edge of the odd and even registers. Ratcheting the swaps like this eats the even and odd registers from the outside in, eventually moving all the odd numbered students to the front of the line (in order) and all the even numbered students to the back (in order). This manifestly destroys all the original orderings. 
+From there, I remove the middle swap and move the remaining swaps toward the middle, breaking up the edges of the odd and even registers. Ratcheting the swaps like this eats the even and odd registers from the outside in, eventually moving all the odd numbered students to the front of the line (in order) and all the even numbered students to the back (in order). This manifestly destroys all the original orderings. 
 
 ![](/img/2020-08-03-odd-swaps.jpg){:width="400px" class="image-centered"}
 
