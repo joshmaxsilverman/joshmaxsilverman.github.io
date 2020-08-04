@@ -35,4 +35,9 @@ the sum $\left(2+3+4+5+6\right)$ disappears from both sides. The other sum $\lef
 
 That means there can't exist a rearrangement of the $5$ students that maps onto their original positions while moving them all distinct distances from their starting positions.
 
+/img/2020-08-03-remapping-calculation.jpg
+/img/2020-08-03-move-mapper.jpg
+/img/2020-08-03-valid-moves.jpg
+/img/2020-08-03-odd-swaps.jpg
+
 <br>
