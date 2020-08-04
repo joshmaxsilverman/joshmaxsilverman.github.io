@@ -51,9 +51,9 @@ That means there can't exist a rearrangement of the $5$ students that maps onto 
 
 Generalizing, we get 
 
-$$begin{align}
+$$\begin{align}
 0 &= 1 + 2 + \ldots + \overbrace{n}^\text{odd} \bmod (n+1) \\
- &= \frac{n(n+1)}{2} \bmod (n+1) \\
+ &= \frac{n(n+1)}{2} \bmod (n+1)
 \end{align}$$
 
 which isn't true when $n$ is odd.
