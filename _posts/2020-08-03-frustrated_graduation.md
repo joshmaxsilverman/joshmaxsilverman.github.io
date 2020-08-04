@@ -43,10 +43,19 @@ For that to be true that sum of the new positions has to equal the sum of the or
 
 $$\overbrace{(2+3+4+5+6) + (1+2+3+4+5)}^\text{new positions} = \overbrace{(2+3+4+5+6)}^\text{old positions} \bmod 6.$$
 
-The sum $\left(2+3+4+5+6\right)$ disappears from both sides. The other sum $\left(1+2+3+4+5\right)$ has an odd number of odd numberwhich is odd $\bmod 6$, which means the equation is false. 
+The sum $\left(2+3+4+5+6\right)$ disappears from both sides. The other sum $\left(1+2+3+4+5\right)$ has an odd number of odd number which is odd $\bmod 6$, which means the equation is false. 
 
 ![](/img/2020-08-03-remapping-calculation.jpg){:width="400px" class="image-centered"}
 
 That means there can't exist a rearrangement of the $5$ students that maps onto their original positions while moving them all distinct distances from their starting positions.
+
+Generalizing, we get 
+
+$$]begin{align}
+0 &= 1 + 2 + \ldots + \overbrace{n}^\text{odd} \bmod (n+1) \\
+ &= \frac{n(n+1)}{2} \bmod (n+1) \\
+\end{align}$$
+
+which isn't true when $n$ is odd.
 
 <br>
