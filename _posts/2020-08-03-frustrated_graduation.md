@@ -52,7 +52,8 @@ That means there can't exist a rearrangement of the $5$ students that maps onto 
 Generalizing, we get 
 
 $$\begin{align}
-0 &= 1 + 2 + \ldots + \overbrace{n}^\text{odd} \bmod (n+1) \\
+0 &= \sum\limits_{i=2}^{n} \text{move}_i
+ &=1 + 2 + \ldots + \overbrace{n}^\text{odd} \bmod (n+1) \\
  &= \frac{n(n+1)}{2} \bmod (n+1)
 \end{align}$$
 
