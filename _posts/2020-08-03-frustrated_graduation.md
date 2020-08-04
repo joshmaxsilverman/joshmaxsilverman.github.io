@@ -59,4 +59,6 @@ $$\begin{align}
 
 which isn't true when $n$ is even.
 
+So, the smallest $n$ can be is the first even number over $100$, $102.$
+
 <br>
