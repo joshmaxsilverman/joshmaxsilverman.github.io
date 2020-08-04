@@ -5,7 +5,7 @@ title: Frustrated Graduation
 date: 2020/08/03
 ---
 
->**Question**: A gaggle of graduates gather round a gargoyle who genuflects until they gear up in a circle upon which they (the gargoyle) announce, I thought no two of you were now in the same position relative to one another but alas I am mistaken, you comprise a number of $N$ students above $100$ such that you are the least populous class size for which it is simply not possible for less than $2$ of you to have remained in the correct relative position. How many students are in this graduation class?
+>**Question**: A gaggle of graduates gathers round a gargoyle who genuflects until they gear up in a circle upon which they (the gargoyle) announce, I thought no two of you were now in the same position relative to one another but alas I am mistaken, you comprise a number larger than $100$ such that you are the least populous class size for which it is simply not possible for less than $2$ of you to have remained in the correct relative position. How many students are in this graduation class?
 
 <!--more-->
 
@@ -19,7 +19,7 @@ The first useful thing I did was find a construction for arrangements of odd num
 
 Since any exchange of positions is rotationally symmetric, we can trivially keep one student in their original spot. Hold them in their spot and swap every subsequent even/odd student pair. That will put the odd register ahead of the even register, breaking all their relative orders, but preserving all the relative orders within the even and odd registers. 
 
-From there, I remove the middle swap and move the remaining swaps toward the middle, breaking up the edges of the odd and even registers. Ratcheting the swaps like this eats the even and odd registers from the outside in, eventually moving all the odd numbered students to the front of the line (in order) and all the even numbered students to the back (in order). This manifestly destroys all the original orderings. 
+From there, I remove the middle swap and move the remaining swaps toward the middle, breaking up the edges of the odd and even registers. Ratcheting the swaps like this eats the even and odd registers from the outside in, eventually moving all the odd-numbered students to the front of the line (in order) and all the even-numbered students to the back (in order). This manifestly destroys all the original orderings. 
 
 ![](/img/2020-08-03-odd-swaps.jpg){:width="400px" class="image-centered"}
 
@@ -39,7 +39,7 @@ The others need to move $1$, $2$, $3$, $4$, or $5$ places from where they curren
 
 ![](/img/2020-08-03-move-mapper.jpg){:width="400px" class="image-centered"}
 
-For that to be true that sum of the new positions has to equal the sum of the original positions:
+For that to be true, the sum of the new positions has to equal the sum of the original positions:
 
 $$\overbrace{(2+3+4+5+6) + (1+2+3+4+5)}^\text{new positions} = \overbrace{(2+3+4+5+6)}^\text{old positions} \bmod 6.$$
 
