@@ -53,10 +53,10 @@ Generalizing, we get
 
 $$\begin{align}
 0 &= \sum\limits_{i=2}^{n} \text{move}_i
- &=1 + 2 + \ldots + \overbrace{n}^\text{odd} \bmod (n+1) \\
- &= \frac{n(n+1)}{2} \bmod (n+1)
+ &=1 + 2 + \ldots + \overbrace{\left(n-1\right)}^\text{odd} \bmod n \\
+ &= \frac{n(n-1)}{2} \bmod n
 \end{align}$$
 
-which isn't true when $n$ is odd.
+which isn't true when $n$ is even.
 
 <br>
