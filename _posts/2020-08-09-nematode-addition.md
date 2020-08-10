@@ -66,7 +66,13 @@ $$\mathbf{T} = \frac12 \vert 3\rangle\langle 2\vert + \frac12 \vert 2\rangle\lan
 
 In general, the probability of the $i\leftarrow j$ transition is equal to the number of ways of having $i-j$ procreations out of $\lfloor j/2\rfloor$ pairs divided by $2^{\lfloor j/2\rfloor}$:
 
-$$T_{ji} = \dfrac{\dbinom{\lfloor j/2\rfloor}{i-j}}{2^{\lfloor j/2\rfloor}}\vert i\rangle\langle j\vert$$
+$$T_{ji} = \dfrac{1}{2^{\lfloor j/2\rfloor}}\dbinom{\lfloor j/2\rfloor}{i-j}$$
+
+Once we have $\vert\psi_t\rangle,$ we can simply take its dot product with the vector $\left(1,2,\ldots,\max w\right)$ to get the expectation value
+
+$$langle w \rangle = \left(\mathbf{T}^t\vert\psi_t\rangle\right)\cdot\left(1,2,\ldots,\max w\right)$$
+
+To find the greatest possible number of worms on day $t$, each of the $\lfloor w/2\rfloor pairs would have to successfully reproduce each day which would increase the number of worms by $50\%,$ so, $\max w_t = \lfloor \frac32 \max w_{t-1}\rfloor.$ We can use this to set the size of our matrix and composition vectors.
 
 Coding this up, we get 
 
