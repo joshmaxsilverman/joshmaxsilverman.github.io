@@ -58,6 +58,11 @@ So, we expect the mean number of worms to go like
 
 $$\boxed{\langle w_t\rangle \approx 2\times \left(\dfrac54\right)^{t-1}}.$$ 
 
+![](/img/2020-08-07-nematode-drawing.jpg){:width="400px" class="image-centered"}
+
+{:.caption}
+Diagram of the approximation
+
 At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by day $15$ in the dish, the mean prediction is good to within $1\%.$
 
 ### Exact computation
