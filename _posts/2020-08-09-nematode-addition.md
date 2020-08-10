@@ -29,7 +29,7 @@ $$\langle w_2\rangle = \frac14 \times 2 + \frac12 \times 3 + \frac14 \times 4 = 
 
 From here, things start getting more complicated. The branches terminating with $2$ or $3$ nematodes are presented again with the options we've already seen. But the branch with $4$ nematodes now has $2$ pairs and so can make jumps of size $0,$ $1,$ or $2,$ — starting the third day with $4,$ $5,$ or $6$ worms. It could be that both pairs fail to procreate yielding $0$ new worms ($ p = 1/2^2$), or that both succeed and yield $2$ new worms (also $p = 1/2^2$), or it could be that one pair succeeds and the other fails, yielding $1$ new worm ($p=2\times 1/2^2 = 1/2$).
 
-Carrying on in this way, we find $\left(1+1\right)^4 = .$
+Carrying on in this way, we find $\left(1+1\right)^4 = 141/32.$
 
 ### False starts
 
@@ -58,7 +58,7 @@ So, we expect the mean number of worms to go like
 
 $$\boxed{\langle w_t\rangle = 2\times \left(\dfrac54\right)^t}.$$ 
 
-At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by $141/32$ days in the dish, the mean prediction is good to within $0.2\%.$
+At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by day $15$ in the dish, the mean prediction is good to within $1\%.$
 
 ### Exact computation
 
