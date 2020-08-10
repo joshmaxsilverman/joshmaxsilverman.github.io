@@ -41,7 +41,10 @@ When there are $w$ worms in the dish, there are roughly $w/2$ pairs.
 
 We expect half of these to procreate, yielding $\frac12\times w/2 = w/4$ new worms. So, on average, one day in the dish produces the transition
 
-$$w\rightarrow w + w/4 = w\times\left(1 + \frac14\right)$$
+$$\begin{align}
+w &\rightarrow w + w/4 \\
+&= w\times\left(1 + \frac14\right)
+\end{align}$$
 
 and after $t$ days
 
