@@ -43,7 +43,7 @@ Ultimately, what led to real progress was good old fashioned physics math.
 
 When there are $w$ worms in the dish, there are roughly $w/2$ pairs. 
 
-We expect half of these to procreate, yielding $\frac12\times w/2 = w/4$ new worms. So, on average, one day in the dish produces the transition
+We expect half of these pairs to procreate, yielding $1/2\times w/2 = w/4$ new worms. So, on average, one day in the dish produces the transition
 
 $$\begin{align}
 w &\rightarrow w + w/4 \\
