@@ -106,7 +106,7 @@ For[day = 1, day <= 23, day++,
   ];
 ```
 
-![](/img/2020-08-07-nematode_solution.png){:width="400px" class="image-centered"}
+![](/img/2020-08-07-nematode_plot.png){:width="400px" class="image-centered"}
 
 {:.caption}
 Comparison of the exact result with transfer matrices to the back of the envelope approximation.
