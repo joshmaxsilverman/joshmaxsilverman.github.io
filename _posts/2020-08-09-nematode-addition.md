@@ -19,9 +19,13 @@ On the face of it, this addition scheme presents us with a rich cascade of branc
 
 Let's take a look at some of the cases.
 
-With two nematodes in the dish, there is $1$ pair which can either reproduce or not, each with equal likelihood. The expected number of nematodes after $1$ step is then $\langle w_1\rangle = \frac12 \times 2 + \frac12 \times 3 = 2.5$ 
+With two nematodes in the dish, there is $1$ pair which can either reproduce or not, each with equal likelihood. The expected number of nematodes after $1$ step is then 
 
-In the next step we essentially have the same problem because whether we have $2$ or $3$ nematodes, we can only form $1$ pair. So, the $2$ nematode dish will become either a $2$ or $3$ nematode dish and the $3$ nematode dish will become wither a $3$ or $4$ nematode dish. The probabilities are symmetric, so the expectation after $2$ steps is $\langle w_2\rangle = \frac14 \times 2 + \frac12 \times 3 + \frac14 \times 4 = 3.$
+$$\langle w_1\rangle = \frac12 \times 2 + \frac12 \times 3 = 2.5$$ 
+
+In the next step we essentially have the same problem because whether we have $2$ or $3$ nematodes, we can only form $1$ pair. So, the $2$ nematode dish will become either a $2$ or $3$ nematode dish and the $3$ nematode dish will become wither a $3$ or $4$ nematode dish. The probabilities are symmetric, so the expectation after $2$ steps is 
+
+$$\langle w_2\rangle = \frac14 \times 2 + \frac12 \times 3 + \frac14 \times 4 = 3.$$
 
 From here, things start getting more complicated. The branches terminating with $2$ or $3$ nematodes are presented again with the options we've already seen. But the branch with $4$ nematodes now has $2$ pairs and so can make jumps of size $0,$ $1,$ or $2,$ — starting the third day with $4,$ $5,$ or $6$ worms. It could be that both pairs fail to procreate yielding $0$ new worms ($ p = 1/2^2$), or that both succeed and yield $2$ new worms (also $p = 1/2^2$), or it could be that one pair succeeds and the other fails, yielding $1$ new worm ($p=2\times 1/2^2 = 1/2$).
 
