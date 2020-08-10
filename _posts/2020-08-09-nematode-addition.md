@@ -5,7 +5,11 @@ title:
 date: 2020/08/09
 ---
 
->Question It's year 4 of quarantine and all computing power is reserved for face filters that make you look like a baby or the GEICO lizard. If you want to crunch numbers there's a new calculator in town — the _C. elegans_ petri dish. To add two numbers $x$ and $y$ you gather as many nematodes, put them in the dish, and come back the next day to see how many nematodes there are. The nematodes will pair bond (sex doesn't matter, _C. elegans_ are hermaphroditic) and each pair will procreate, or not, with probability $1/2.$ It's noisy, and it's random, but that's the best we can do in these trying times. To raise a number $x$ to the $n^\text{th}$ power, you gather as many nematodes and leave them in the dish $n$ days, and however many there are upon your return is $x^n.$ Under these rules, what is $(1+1)^n$?
+>**Question** It's year 5 of quarantine and all computing power is reserved for face filters that make you look like a baby or the GEICO lizard. If you want to crunch numbers there's a new calculator in town — the _C. elegans_ petri dish. 
+>
+>To add two numbers $x$ and $y$ you gather as many nematodes, put them in the dish, and come back the next day to see how many nematodes there are. The nematodes will pair bond (sex doesn't matter, _C. elegans_ are almost all hermaphroditic) and each pair will procreate (yielding one new worm), or not, with probability $1/2.$ 
+>
+>It's noisy, and it's random, but that's the best we can do in these trying times. To raise a number $x$ to the $n^\text{th}$ power, you gather as many nematodes and leave them in the dish for $n$ days, and however many there are upon your return is $x^n.$ Under these rules, what is $(1+1)^n$?
 
 <!--more-->
 
@@ -13,7 +17,7 @@ date: 2020/08/09
 
 ## Solution
 
-On the face of it, this addition scheme presents us with a rich cascade of branching paths each of which lead in turn to cascades of their own. Every time we gain two nematodes, we gain another pair, and so unlock new possibilities. 
+On the face of it, this addition scheme presents us with a rich cascade of branching paths each of which leads in turn to cascades of their own. Every time we gain two nematodes, we gain another pair, and so unlock new possibilities. 
 
 ### Getting the lay of the land
 
@@ -23,13 +27,13 @@ With two nematodes in the dish, there is $1$ pair which can either reproduce or 
 
 $$\langle w_1\rangle = \frac12 \times 2 + \frac12 \times 3 = 2.5$$ 
 
-In the next step we essentially have the same problem because whether we have $2$ or $3$ nematodes, we can only form $1$ pair. So, the $2$ nematode dish will become either a $2$ or $3$ nematode dish and the $3$ nematode dish will become wither a $3$ or $4$ nematode dish. The probabilities are symmetric, so the expectation after $2$ steps is 
+In the next step we essentially have the same problem because whether we have $2$ or $3$ nematodes, we can only form $1$ pair. So, the $2$ nematode dish will become either a $2$ or $3$ nematode dish and the $3$ nematode dish will become either a $3$ or $4$ nematode dish. The probabilities are symmetric, so the expectation after $2$ steps is 
 
 $$\langle w_2\rangle = \frac14 \times 2 + \frac12 \times 3 + \frac14 \times 4 = 3.$$
 
 From here, things start getting more complicated. The branches terminating with $2$ or $3$ nematodes are presented again with the options we've already seen. But the branch with $4$ nematodes now has $2$ pairs and so can make jumps of size $0,$ $1,$ or $2,$ — starting the third day with $4,$ $5,$ or $6$ worms. It could be that both pairs fail to procreate yielding $0$ new worms ($ p = 1/2^2$), or that both succeed and yield $2$ new worms (also $p = 1/2^2$), or it could be that one pair succeeds and the other fails, yielding $1$ new worm ($p=2\times 1/2^2 = 1/2$).
 
-Carrying on in this way, we find $\left(1+1\right)^4 = 141/32.$
+Carrying on in this way, we find $\left(1+1\right)^4 = 141/32 \approx 4.41.$
 
 ### False starts
 
@@ -39,7 +43,7 @@ Another futile effort was to cast the transitions between petri dishes in the la
 
 ### Physics 
 
-Ultimately, what led to real progress was good old fashioned physics math.
+Ultimately, what led to real progress was good old fashioned physics chutzpah.
 
 When there are $w$ worms in the dish, there are roughly $w/2$ pairs. 
 
