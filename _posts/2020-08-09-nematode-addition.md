@@ -51,17 +51,24 @@ So, we expect the mean number of worms to go like
 
 $$\boxed{\langle w_t\rangle = 2\times \left(\dfrac54\right)^t}.$$ 
 
-At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by $XYZ$ days in the dish, the mean prediction is good to within $0.2\%.$
+At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by $141/32$ days in the dish, the mean prediction is good to within $0.2\%.$
 
 ### Exact computation
 
 If we have the probability of going from one number of nematodes to another in the span of a day, we can put them in a transition matrix $\mathbf{T}.$ Likewise, we can store the information about the probability distribution for the number of nematodes in various realizations of the system in a vector like $\vert \psi_t\rangle  = \left(p_1, p_2, \ldots, p_n\right).$ In this representation, we can get the proabability distribution on day $n$ by operating on $\vert\psi_0\rangle$ with the matrix $\mathbf{T}$, $n$ times:
 $$\vert\psi_t\rangle = \mathbf{T}^n \cdot \vert\psi_0\rangle$$
 
-We can write each element of the transition matrix like $p_{i\leftarrow j} \vert i\rangle\langle j\vert$ where $p_{i\leftarrow j}$ is the probability of moving from  a $j$ nematode dish to a $i$ nematode dish, and $\vert i\rangle\langle j\vert$ indicates that it's the $\left(j,i\right)$ entry in the matrix. Writing out all the terms relevant for the first three days (where we'll generate at most $6$ nematodes), we have
+We can write each element of the transition matrix like $p_{i\leftarrow j} \vert i\rangle\langle j\vert$ where $p_{i\leftarrow j}$ is the probability of moving from  a $j$ nematode dish to a $i$ nematode dish, and $\vert i\rangle\langle j\vert$ indicates that it's the $\left(j,i\right)$ entry in the matrix. 
+
+Writing out all the terms relevant for the first three days (where we'll generate at most $6$ nematodes), we have
 
 $$\mathbf{T} = \frac12 \vert 3\rangle\langle 2\vert + \frac12 \vert 2\rangle\langle 2\vert + \frac12 \vert 4\rangle\langle 3\vert + \frac12 \vert 3\rangle\langle 3\vert + \frac{1}{2 ^2}\vert 4\rangle\langle 4\vert + \frac{1}{2}\vert 5\rangle\langle 4\vert + \frac{1}{2 ^2}\vert 6\rangle\langle 4\vert + \ldots$$
 
+In general, the probability of the $i\leftarrow j$ transition is equal to the number of ways of having $i-j$ procreations out of $\lfloor j/2\rfloor$ pairs divided by $2^{\lfloor j/2\rfloor}$:
+
+$$T_{j,i} = \frac{\binom{\lfloor j/2\rfloor}{i-j}}{2^{\lfloor j/2\rfloor}}\vert i\rangle\langle j\vert$$
+
+Coding this up, we get 
 
 
 
