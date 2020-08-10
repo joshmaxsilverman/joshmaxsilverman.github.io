@@ -101,7 +101,7 @@ support[day_] :=
  Table[If[i == 2, 1, 0], {i, 1, highest[day]}]
    
 data = {};
-For[day = 1, day <= 24, day++,
+For[day = 1, day <= 23, day++,
   AppendTo[data, {day, support[day].Table[i, {i, 1, highest[day]}]}];
   ];
 ```
