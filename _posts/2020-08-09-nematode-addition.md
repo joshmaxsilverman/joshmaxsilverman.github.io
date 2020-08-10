@@ -66,7 +66,7 @@ $$\mathbf{T} = \frac12 \vert 3\rangle\langle 2\vert + \frac12 \vert 2\rangle\lan
 
 In general, the probability of the $i\leftarrow j$ transition is equal to the number of ways of having $i-j$ procreations out of $\lfloor j/2\rfloor$ pairs divided by $2^{\lfloor j/2\rfloor}$:
 
-$$T_{j,i} = \frac{\binom{\lfloor j/2\rfloor}{i-j}}{2^{\lfloor j/2\rfloor}}\vert i\rangle\langle j\vert$$
+$$T_{ji} = \dfrac{\dbinom{\lfloor j/2\rfloor}{i-j}}{2^{\lfloor j/2\rfloor}}\vert i\rangle\langle j\vert$$
 
 Coding this up, we get 
 
