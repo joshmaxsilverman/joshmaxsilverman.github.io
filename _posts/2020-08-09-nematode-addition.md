@@ -70,6 +70,28 @@ $$T_{j,i} = \frac{\binom{\lfloor j/2\rfloor}{i-j}}{2^{\lfloor j/2\rfloor}}\vert 
 
 Coding this up, we get 
 
+```mathematica
+highest[1] = 2;
+highest[n_] := Floor[3/2 highest[n - 1]];
 
+T[NN_] := (
+  Table[
+   Table[
+    If[j <= i, Binomial[IntegerPart[j/2], i - j]/2^IntegerPart[j/2], 
+     0],
+    {j, 1, NN}],
+   {i, 1, NN}
+   ])
+   
+support[day_] := 
+ MatrixPower[SparseArray[T[highest[day]]], day - 1].
+ Table[
+   If[i == 2, 1, 0], {i, 1, highest[day]}]
+   
+data = {};
+For[day = 1, day <= 24, day++,
+  AppendTo[data, {day, support[day].Table[i, {i, 1, highest[day]}]}];
+  ];
+```
 
 <br>
