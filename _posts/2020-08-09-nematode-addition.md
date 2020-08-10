@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: 
 date: 2020/08/09
 ---
