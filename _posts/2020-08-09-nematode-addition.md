@@ -35,15 +35,22 @@ Another futile effort was to cast the transitions between petri dishes in the la
 
 ### Physics 
 
-Ultimately, what led to real progress was good old fashioned physics math. 
+Ultimately, what led to real progress was good old fashioned physics math.
 
-In the dish, if we have $w$ worms there are roughly $w/2$ pairs. We expect half of these to procreate, yielding $\frac12\times w/2 = w/4$ new worms. So, on average, one day in the dish produces the transition
+When there are $w$ worms in the dish, there are roughly $w/2$ pairs. 
+
+We expect half of these to procreate, yielding $\frac12\times w/2 = w/4$ new worms. So, on average, one day in the dish produces the transition
 $$w\rightarrow w + w/4 = w\times\left(1 + \frac14\right)$$
 and after $t$ days
 $$w(t) = w(0)\times \left(1+\frac14\right)^t.$$
 So, we expect the mean number of worms to go like
 $$\boxed{\langle w(t)\rangle = 2\times \left(\dfrac54\right)^t}.$$ 
-At early times this estimate will underwhelm, since the expectations 
+At early times this estimate will underwhelm, since the gap between mean (e.g. $2.5$) and realizable states (e.g. $2$ and $3$) is significant. But as time goes on, the mean behavior dominates and the approximation will get better and better. As we'll see below, by $XYZ$ days in the dish, the mean prediction is good to within $0.2\%.$
+
+### Exact computation
+
+If we have the probability of going from one number of nematodes to another in the span of a day, we can put them in a transition matrix $\mathbf{T}.$ Likewise, we can store the information about the probability distribution for the number of nematodes in various realizations of the system in a vector like $\vert \psi_t\rangle  = \left(p_1, p_2, \ldots, p_n\right).$ In this representation, we can get the proabability distribution on day $n$ by operating on $\vert\psi_0\rangle$ with the matrix $\mathbf{T}$, $n$ times:
+$$\vert\psi_t\rangle = \mathbf{T}^n \cdot \vert\psi_0\rangle$$
 
 
 
