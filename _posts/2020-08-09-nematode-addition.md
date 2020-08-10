@@ -83,7 +83,7 @@ highest[n_] := Floor[3/2 highest[n - 1]];
 T[NN_] := (
   Table[
    Table[
-    If[j <= i, Binomial[IntegerPart[j/2], i - j]/2^IntegerPart[j/2], 
+    If[j <= i, Binomial[Floor[j/2], i - j]/2^Floor[j/2], 
      0],
     {j, 1, NN}],
    {i, 1, NN}
