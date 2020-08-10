@@ -98,8 +98,7 @@ T[NN_] := (
    
 support[day_] := 
  MatrixPower[SparseArray[T[highest[day]]], day - 1].
- Table[
-   If[i == 2, 1, 0], {i, 1, highest[day]}]
+ Table[If[i == 2, 1, 0], {i, 1, highest[day]}]
    
 data = {};
 For[day = 1, day <= 24, day++,
