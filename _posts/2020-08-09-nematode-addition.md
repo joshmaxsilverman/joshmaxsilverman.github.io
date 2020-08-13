@@ -13,7 +13,7 @@ date: 2020/08/09
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-reach-the-beach/))
 
 ## Solution
 
