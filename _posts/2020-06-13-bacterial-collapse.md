@@ -5,9 +5,7 @@ title: Bacterial Collapse
 date: 2020/06/13
 ---
 
-## Question
-
->A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $\left(1-\gamma\right)$ of lysing, as do all of its descendants. 
+>**Question**: A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $\left(1-\gamma\right)$ of lysing, as do all of its descendants. 
 >
 >The strain in question is _Riddlerium classicum_, about which not much is known apart from its cataclysmic reproductive viability, $\gamma = 80\%$ (real bacteria are far more successful, Fig 4 in [Robust Growth of _Escherichia coli_](https://jun.ucsd.edu/files/publications/RobustGrowth_complete_CurrBiol2010.pdf)). 
 >
