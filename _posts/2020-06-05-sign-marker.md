@@ -5,7 +5,7 @@ title: Sign Markers
 date: 2020/06/06
 ---
 
->You're making a sign using a marker to draw the letters. The marker tip is a circle that's $2\text{ cm}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $1\text{ cm}$ of where it's previously been, how far apart should you make the marks?
+>**Question**: You're making a sign using a marker to draw the letters. The marker tip is a circle that's $2\text{ cm}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $1\text{ cm}$ of where it's previously been, how far apart should you make the marks?
 
 <!--more-->
 
