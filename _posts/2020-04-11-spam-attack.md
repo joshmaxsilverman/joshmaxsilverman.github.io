@@ -5,7 +5,7 @@ title: Spam Attack
 date: 2020/04/11
 ---
 
->A post can accumulate spam comments, and each spam comment can accumulate spam comments. If each open reply thread accumulates spam at a rate of $1$ reply per day, then what is the expected number of spam posts by the end of a three day weekend?
+>**Question**: A post can accumulate spam comments, and each spam comment can accumulate spam comments. If each open reply thread accumulates spam at a rate of $1$ reply per day, then what is the expected number of spam posts by the end of a three day weekend?
 
 <!--more-->
 
@@ -36,7 +36,6 @@ $$S = e^{\lambda t} - 1.$$
 
 
 **Rigorous solution**
-
 
 Writing out the rate of change for the first few probabilities
 
