@@ -5,7 +5,7 @@ title:
 date: 2020/06/29
 ---
 
->Suppose you have a pencil, a hexagon, and absolutely nothing to do. What is the greatest number of knockoff hexagons you can draw using the same $6$ points as the original hexagons? What about septagons? What about octagons? What about ...
+>**Question**: Suppose you have a pencil, a hexagon, and absolutely nothing to do. What is the greatest number of knockoff hexagons you can draw using the same $6$ points as the original hexagons? What about septagons? What about octagons? What about ...
 
 <!--more-->
 
