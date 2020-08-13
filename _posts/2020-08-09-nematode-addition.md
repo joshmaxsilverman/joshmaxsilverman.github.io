@@ -2,7 +2,6 @@
 layout: post
 published: true
 title: Nematode Addition
-image: /img/house.png
 date: 2020/08/09
 ---
 
