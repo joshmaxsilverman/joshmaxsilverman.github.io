@@ -5,9 +5,7 @@ title: State Fish
 date: 2020-05-22
 ---
 
-## Question
-
->Find the longest words that share letters with only 49 of the 50 U.S. states. Extra: find the state with the most such words.
+>**Question**: Find the longest words that share letters with only 49 of the 50 U.S. states. Extra: find the state with the most such words.
 
 <!--more-->
 
