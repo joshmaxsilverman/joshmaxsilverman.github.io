@@ -5,7 +5,7 @@ title:
 date: 2020/08/09
 ---
 
->**Question** It's year 5 of quarantine and all computing power is reserved for face filters that make you look like a baby or the GEICO lizard. If you want to crunch numbers there's a new calculator in town — the _C. elegans_ petri dish. 
+>**Question**: It's year 5 of quarantine and all computing power is reserved for face filters that make you look like a baby or the GEICO lizard. If you want to crunch numbers there's a new calculator in town — the _C. elegans_ petri dish. 
 >
 >To add two numbers $x$ and $y$ you gather as many nematodes, put them in the dish, and come back the next day to see how many nematodes there are. The nematodes will pair bond (sex doesn't matter, _C. elegans_ are almost all hermaphroditic) and each pair will procreate (yielding one new worm), or not, with probability $1/2.$ 
 >
