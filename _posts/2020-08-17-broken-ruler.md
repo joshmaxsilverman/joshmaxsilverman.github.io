@@ -19,28 +19,22 @@ The approach here will be to find the probability distribution for the length of
 
 ### Does it cover?
 
-The first non-trivial issue here is the probability that a random interval of length $\ell$ will cover the point $x=1/2.$ 
+The first non-trivial issue here is the probability that a random interval of length $\ell$ will cover the point $1/2.$ 
 
 First of all, if $\ell \geq 1/2,$ then this probability is $1$ — there's no way to place an interval of length $\ell > 1/2$ without encompassing the middle of the ruler. So, whatever expression we find, we expect it to equal $1$ when $\ell = 1/2.$
 
-For a ruler of length $\ell,$ the total length of the region where we can place its leftmost point is $1-\ell$ (we can't place it any further, or its right most point would include points not on the original ruler). 
+For a ruler of length $\ell,$ the total length of the region where we can place the shard's leftmost point is $1-\ell$ (we can't place it any further, or its right most point would include points not on the original ruler). And if the shard's leftmost point starts more than a distance $\ell$ away, it won't reach $1/2.$ 
 
-How far can the shard's leftmost point ve from $x=1/2$? It can start at most a distance $\ell$ away. 
-
-So, the probability that a random shard of length $\ell$ covers the halfway point is 
-
-$$P_\text{cover} = \frac{\ell}{1-\ell}$$
-
-which equals $1$ when $\ell = 1/2,$ as we had hoped.
+So, the probability that a random shard of length $\ell$ covers the halfway point is $P_\text{cover} = \ell/(1-\ell),$ which equals $1$ when $\ell = 1/2,$ as we had hoped. To summarize,
 
 $$\begin{cases}
-\dfrac{l}{1-l} & \text{when $\ell < 1/2$} \\
-1 & \text{when \ell \geq 1/2$}
+\dfrac{l}{1-l} & \text{when } $\ell < 1/2$ \\
+1 & \text{when } \ell \geq 1/2$}.
 \end{cases}
 $$
 
 ### Cases
 
-To summarize, 
+There are two fundamentally distinct cases. The first is where shard is formed from two points where the ruler has broken. When $\ell < 1/2$, this is the only way for the shard to form. 
 
 <br>
