@@ -13,7 +13,7 @@ date: 2020/08/17
 
 ## Solution
 
-At first I solved the $4$-piece case with a cobbled-together multivariable integral to get $\langle\ell\rangle = 15/23$, and expected the $N$-piece case to involve sums of compound integrals. However, following compelling empirical results from [Goh Pi Han](https://colab.research.google.com/drive/1Fp7Dku78OgxM0KhSbRMFubCFIaAUDCKt?usp=sharing), we were inspired to look for a simple perspective.
+At first I solved the $4$-piece case with a cobbled-together multivariable integral, to get $\langle\ell\rangle = 15/23$, I expected the $N$-piece case to involve sums of compound integrals and was going to leave it alone. However, in light of compelling empirical results from [Goh Pi Han](https://colab.research.google.com/drive/1Fp7Dku78OgxM0KhSbRMFubCFIaAUDCKt?usp=sharing), we were inspired to look for a simple perspective.
 
 The approach is to find the probability distribution for the length of the shard that includes the $\text{6 inch}$ mark ($x=1/2$ for the purpose of this solution). The the main insight is that for a length $\ell$ interval to cover the point $1/2,$ all we need is that two points are a distance $\ell$ apart and that no other points interrupt that interval (or else it would become a covering interval of length $\ell^\prime < \ell$).
 
