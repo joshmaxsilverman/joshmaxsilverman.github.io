@@ -29,7 +29,7 @@ So, the probability that a random shard of length $\ell$ covers the halfway poin
 
 $$P_\text{cover}=\begin{align}
 \dfrac{l}{1-l} & \text{when } \ell \lt 1/2 \\
-1 & \text{when } \ell \geq 1/2}.
+1 & \text{when } \ell \geq 1/2.
 \end{align}$$
 
 ### Cases
