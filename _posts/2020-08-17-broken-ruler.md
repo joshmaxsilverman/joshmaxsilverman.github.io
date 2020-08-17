@@ -32,6 +32,8 @@ $$P_\text{cover}(\ell)=\begin{cases}
 1 & \text{when } \ell \geq 1/2.
 \end{cases}$$
 
+![](/img/2020-08-17-pcover.jpg){:width="400px" class="image-centered"}
+
 ### Cases
 
 There are two umbrella cases:
@@ -42,6 +44,8 @@ There are two umbrella cases:
 ### Two breakpoints
 
 The first case involves several things: **a**. the random interval has to contain $1/2,$ **b**. no points can be within $\ell$ of the left end of the shard, **c**. the right end of the shard has to be a distance $\ell$ from the left end, **d**. the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
+
+![](/img/2020-08-17-inside_shard.jpg){:width="400px" class="image-centered"}
 
 Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)^{n-1}.$ Part **d** contributes $2\times\binom{N}{2}$ (the $2$ because $x_i$ on the left with $x_j$ on the right is distinct from the reverse). Part **c** is a bit tricky. The first and last point have to be chosen a distance $\ell$ apart. However, each point is a random draw of uniform probability. As we've already ensured that the other $\left(n-1\right)$ points are a distance of at least $\ell$ from the first, this factor is just $1.$
 
@@ -60,6 +64,8 @@ $$P_1(\ell) =
 0 & \text{when } \ell \lt 1/2 \\
 2\binom{N}{1}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
 \end{cases}$$
+
+![](/img/2020-08-17-side-shard.jpg){:width="400px" class="image-centered"}
 
 ### Complete pdf
 
