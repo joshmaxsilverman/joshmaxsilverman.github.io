@@ -108,7 +108,5 @@ $$\langle\ell\rangle = \frac{2-2^{-n}}{n+1}$$
 
 suggesting there's a simpler solution.
 
-Altogether, 
-
 
 <br>
