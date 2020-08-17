@@ -43,16 +43,16 @@ There are two umbrella cases:
 
 The first case involves several things: **a**. the random interval has to contain $1/2,$ **b**. no points can be within $\ell$ of the left end of the shard, **c**. the right end of the shard has to be a distance $\ell$ from the left end, **d**. the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
 
-Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)^{n-1}.$ Part **d** contributes $2\times\binom{N,2}$ (the $2$ because $x_i$ on the left with $x_j$ on the right is distinct from the reverse). Part **c** is a bit tricky. The first and last point have to be chosen a distance $\ell$ apart. However, each point is a random draw of uniform probability. As we've already ensured that the other $\left(n-1\right)$ points are a distance of at least $\ell$ from the first, this factor is just $1.$
+Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)^{n-1}.$ Part **d** contributes $2\times\binom{N}{2}$ (the $2$ because $x_i$ on the left with $x_j$ on the right is distinct from the reverse). Part **c** is a bit tricky. The first and last point have to be chosen a distance $\ell$ apart. However, each point is a random draw of uniform probability. As we've already ensured that the other $\left(n-1\right)$ points are a distance of at least $\ell$ from the first, this factor is just $1.$
 
-In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is $$P_2(\ell) = 2\binom{N,2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
+In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is $$P_2(\ell) = 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
 
 ### One breakpoint
 
-For the case where only one end of the shard is a breakpoint, the calculation is straightforward. The first point is picked with uniform probability, all $\left(n-1\right)$ remaining points have to be picked outside of the interval $\left[0,x\right),$ and there are $\binom{N,1}$ ways to select the first point. Since there's a symmetric set of cases when the unbroken endpoint is at the $\text{12 inch}$ mark, we multiply by $2$. 
+For the case where only one end of the shard is a breakpoint, the calculation is straightforward. The first point is picked with uniform probability, all $\left(n-1\right)$ remaining points have to be picked outside of the interval $\left[0,x\right),$ and there are $\binom{N}{1}$ ways to select the first point. Since there's a symmetric set of cases when the unbroken endpoint is at the $\text{12 inch}$ mark, we multiply by $2$. 
 
 Putting it all together, the one breakpoint shard's distribution is 
 
-$$P_1(\ell) = 2\binom{N,1}\left(1-\ell\right)^{n-1}.$$
+$$P_1(\ell) = 2\binom{N}{1}\left(1-\ell\right)^{n-1}.$$
 
 <br>
