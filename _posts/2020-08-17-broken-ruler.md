@@ -27,10 +27,10 @@ For a ruler of length $\ell,$ the total length of the region where we can place 
 
 So, the probability that a random shard of length $\ell$ covers the halfway point is $P_\text{cover} = \ell/(1-\ell),$ which equals $1$ when $\ell = 1/2,$ as we had hoped. To summarize,
 
-$$P_\text{cover}=\begin{align}
+$$P_\text{cover}=\begin{cases}
 \dfrac{l}{1-l} & \text{when } \ell \lt 1/2 \\
 1 & \text{when } \ell \geq 1/2.
-\end{align}$$
+\end{cases}$$
 
 ### Cases
 
