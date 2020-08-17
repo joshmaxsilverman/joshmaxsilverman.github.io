@@ -100,7 +100,7 @@ $$
 
 Plotting this against a histogram with $N=10\, 000$ points, it looks pretty good:
 
-![](/img/2020-08-17-histogram.png){:width="400px" class="image-centered"}
+![](/img/2020-08-17-histogram.png){:width="450px" class="image-centered"}
 
 ### Expected shard length
 
