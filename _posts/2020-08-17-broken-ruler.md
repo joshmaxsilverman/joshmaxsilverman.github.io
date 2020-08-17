@@ -51,18 +51,32 @@ $$P_2(\ell) = 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
 
 ### One breakpoint
 
-For the case where only one end of the shard is a breakpoint, the calculation is straightforward. The first point is picked with uniform probability, all $\left(n-1\right)$ remaining points have to be picked outside of the interval $\left[0,x\right),$ and there are $\binom{N}{1}$ ways to select the first point. Since there's a symmetric set of cases when the unbroken endpoint is at the $\text{12 inch}$ mark, we multiply by $2$. Though there is $100\%$ chance for this shard to cover $1/2$ (since such a shard must have $\ell\geq 1/2$), we include $P_\text{cover}(\ell)$ for ceremonial purposes.
+For the case where only one end of the shard is a breakpoint, the calculation is straightforward. The first point is picked with uniform probability, all $\left(n-1\right)$ remaining points have to be picked outside of the interval $\left[0,x\right),$ and there are $\binom{N}{1}$ ways to select the first point. Since there's a symmetric set of cases when the unbroken endpoint is at the $\text{12 inch}$ mark, we multiply by $2$. Since such a shard must have $\ell\geq 1/2$, there is $100\%$ chance for this shard to cover $1/2.$ 
 
 Putting it all together, the one breakpoint shard's distribution is 
 
 $$P_1(\ell) = 
 \begin{cases}
 0 & \text{when } \ell \lt 1/2 \\
-2\binom{N}{1}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
+2\binom{N}{1}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
 \end{cases}$$
 
 ### Complete pdf
 
-With these two cases in hand, the overall pdf is just $P_\text{total}(\ell) = P_1(\ell) + P_2(\ell)$ which has a jump discontinuity at $\ell=1/2$
+With these two cases in hand, the overall pdf is just $P_\text{total}(\ell) = P_1(\ell) + P_2(\ell)$ which has a jump discontinuity at $\ell=1/2$. When $\ell<1/2$ there's just the two-breakpoint shard, and
+
+$$\begin{align}
+P_\text{total}(\ell) &= 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1} \\
+&= 2\binom{N}{2}\frac{\ell}{1-\ell}\left(1-\ell\right)^{n-1} \\
+&= 2\binom{N}{2}\ell\left(1-\ell\right)^{n-2}
+$$
+
+When $\ell \geq 1/2,$ both kinds of shard are possible and (with $P_\text{cover}(\ell) = 1$ when $\ell > 1/2$), we have
+
+$$\begin{align}
+P_\text{total}(\ell) &= 2\binom{N}{2}\ell\left(1-\ell\right)^{n-2} + 2\binom{N}{1}\left(1-\ell\right)^{n-1} \\
+&= 2\left(1-\ell\right)^{n-1}\left(\binom{N}{1} + \binom{N}{2}\right) \\
+&= 2\left(1-\ell\right)^{n-1}\binom{N+1}{2}
+\end{align}$$
 
 <br>
