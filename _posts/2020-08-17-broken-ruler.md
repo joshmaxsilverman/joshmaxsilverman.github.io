@@ -102,7 +102,11 @@ $$\begin{align}
 \end{align}
 $$
 
-The first integral can be got through $u = -\frac{1}{n-1}\left(1-\ell\right)^{n-1},$ leading to $1-(n+1)/2^n.$ The second can be got through $u = \left(1-\ell\right)^n,$ leading to $(1+n)/2^n.$
+which comes out to the absolutely miraculous
+
+$$\langle\ell\rangle = \frac{2-2^{-n}}{n+1}$$
+
+suggesting there's a simpler solution.
 
 Altogether, 
 
