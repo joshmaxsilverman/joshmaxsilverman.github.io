@@ -85,7 +85,7 @@ $$
 
 So
 
-$$P_text{total}(\ell) = 
+$$P_\text{total}(\ell) = 
 \begin{cases}
 2\binom{N}{2}\ell\left(1-\ell\right)^{n-2} & \text{when } \ell \lt 1/2 \\
 2\binom{N+1}{2}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2
@@ -97,12 +97,12 @@ $$
 With the pdf in hand, we can find $\langle\ell\rangle$ by integration:
 
 $$\begin{align}
-\langle\ell\rangle &= \int\limits_0^\ell d\ell\,  P_\text{total}(\ell) \\
-&= 2\binom{N}{2}\int\limits_0^{1/2} d\ell\, \ell\left(1-\ell\right)^{n-2} + 2\binom{N+1}{2}\int\limits_{1/2}^1 d\ell\, \left(1-\ell\right)^{n-1}
+\langle\ell\rangle &= \int\limits_0^\ell d\ell\, \ell P_\text{total}(\ell) \\
+&= 2\binom{N}{2}\int\limits_0^{1/2} d\ell\, \ell^2 \left(1-\ell\right)^{n-2} + 2\binom{N+1}{2}\int\limits_{1/2}^1 d\ell\, \ell\left(1-\ell\right)^{n-1}
 \end{align}
 $$
 
-The first integral can be got through $u = -\frac{1}{n-1}\left(1-\ell\right)^{n-1},$ leading to $1-(n+1)/2^n.$ The second can be got through $u = 1-\ell,$ leading to $(1+n)/2^n.$
+The first integral can be got through $u = -\frac{1}{n-1}\left(1-\ell\right)^{n-1},$ leading to $1-(n+1)/2^n.$ The second can be got through $u = \left(1-\ell\right)^n,$ leading to $(1+n)/2^n.$
 
 Altogether, 
 
