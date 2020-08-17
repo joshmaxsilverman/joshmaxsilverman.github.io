@@ -98,6 +98,10 @@ $$P_\text{total}(\ell) =
 \end{cases}
 $$
 
+Plotting this against a histogram with $N=10\, 000$ points, it looks pretty good:
+
+![](/img/2020-08-17-histogram.png){:width="400px" class="image-centered"}
+
 ### Expected shard length
 
 With the pdf in hand, we can find $\langle\ell\rangle$ by integration:
@@ -110,9 +114,6 @@ $$
 
 which comes out to the absolutely miraculous
 
-$$\langle\ell\rangle = \frac{2-2^{-n}}{n+1}$$
-
-suggesting there's a simpler solution.
-
+$$\boxed{\langle\ell\rangle = \frac{2-2^{-n}}{n+1}}.$$
 
 <br>
