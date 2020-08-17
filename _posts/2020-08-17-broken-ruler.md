@@ -27,7 +27,7 @@ For a ruler of length $\ell,$ the total length of the region where we can place 
 
 So, the probability that a random shard of length $\ell$ covers the halfway point is $P_\text{cover} = \ell/(1-\ell),$ which equals $1$ when $\ell = 1/2,$ as we had hoped. To summarize,
 
-$$P_\text{cover}=\begin{cases}
+$$P_\text{cover}(\ell)=\begin{cases}
 \dfrac{l}{1-l} & \text{when } \ell \lt 1/2 \\
 1 & \text{when } \ell \geq 1/2.
 \end{cases}$$
@@ -39,9 +39,11 @@ There are two umbrella cases:
 - where the shard is formed from two points where the ruler has broken. When $\ell < 1/2$, this is the only way for the shard to form. 
 - when $\ell \geq 1/2$ it becomes possible for the shard to stretch all the way from an original endpoint of the ruler (say the $0\text{ inch}$ mark) past $1/2.$ 
 
-The first case involves several things: a. the random interval has to contain $1/2,$ b. no points can be within $\ell$ of the left end of the shard, c. the right end of the shard has to be a distance $\ell$ from the left end, the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
+The first case involves several things: **a**. the random interval has to contain $1/2,$ **b**. no points can be within $\ell$ of the left end of the shard, **c**. the right end of the shard has to be a distance $\ell$ from the left end, **d**. the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
 
+Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)^{n-1}.$ Part **d** contributes $2\times\binom{N,2}$ (the $2$ because $x_i$ on the left with $x_j$ on the right is distinct from the reverse). Part **c** is a bit tricky. The first and last point have to be chosen a distance $\ell$ apart. However, each point is a random draw of uniform probability. As we've already ensured that the other $\left(n-1\right)$ points are a distance of at least $\ell$ from the first, this factor is just $1.$
 
+In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is $$P_2(\ell) = 2\binom{N,2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
 
 
 
