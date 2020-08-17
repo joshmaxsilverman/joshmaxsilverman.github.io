@@ -107,7 +107,7 @@ Plotting this against a histogram with $N=10\, 000$ points, it looks pretty good
 With the pdf in hand, we can find $\langle\ell\rangle$ by integration:
 
 $$\begin{align}
-\langle\ell\rangle &= \int\limits_0^\ell d\ell\, \ell P_\text{total}(\ell) \\
+\langle\ell\rangle &= \int\limits_0^\ell d\ell\, \ell \times P_\text{total}(\ell) \\
 &= 2\binom{N}{2}\int\limits_0^{1/2} d\ell\, \ell^2 \left(1-\ell\right)^{n-2} + 2\binom{N+1}{2}\int\limits_{1/2}^1 d\ell\, \ell\left(1-\ell\right)^{n-1}
 \end{align}
 $$
