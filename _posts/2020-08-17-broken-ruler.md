@@ -45,7 +45,9 @@ The first case involves several things: **a**. the random interval has to contai
 
 Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)^{n-1}.$ Part **d** contributes $2\times\binom{N}{2}$ (the $2$ because $x_i$ on the left with $x_j$ on the right is distinct from the reverse). Part **c** is a bit tricky. The first and last point have to be chosen a distance $\ell$ apart. However, each point is a random draw of uniform probability. As we've already ensured that the other $\left(n-1\right)$ points are a distance of at least $\ell$ from the first, this factor is just $1.$
 
-In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is $$P_2(\ell) = 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
+In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is 
+
+$$P_2(\ell) = 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
 
 ### One breakpoint
 
