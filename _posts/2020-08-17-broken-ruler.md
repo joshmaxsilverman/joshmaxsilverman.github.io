@@ -29,11 +29,20 @@ So, the probability that a random shard of length $\ell$ covers the halfway poin
 
 $$P_\text{cover}=\begin{cases}
 \dfrac{l}{1-l} & \text{when } \ell \lt 1/2 \\
-\hfil 1 & \text{when } \ell \geq 1/2.
+1 & \text{when } \ell \geq 1/2.
 \end{cases}$$
 
 ### Cases
 
-There are two fundamentally distinct cases. The first is where shard is formed from two points where the ruler has broken. When $\ell < 1/2$, this is the only way for the shard to form. 
+There are two umbrella cases:
+
+- where the shard is formed from two points where the ruler has broken. When $\ell < 1/2$, this is the only way for the shard to form. 
+- when $\ell \geq 1/2$ it becomes possible for the shard to stretch all the way from an original endpoint of the ruler (say the $0\text{ inch}$ mark) past $1/2.$ 
+
+The first case involves several things: a. the random interval has to contain $1/2,$ b. no points can be within $\ell$ of the left end of the shard, c. the right end of the shard has to be a distance $\ell$ from the left end, the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
+
+
+
+
 
 <br>
