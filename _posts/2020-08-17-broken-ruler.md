@@ -23,7 +23,7 @@ The first non-trivial issue here is the probability that a random interval of le
 
 First of all, if $\ell \geq 1/2,$ then this probability is $1$ — there's no way to place an interval of length $\ell > 1/2$ without encompassing the middle of the ruler. So, whatever expression we find, we expect it to equal $1$ when $\ell = 1/2.$
 
-For a ruler of length $\ell,$ the total length of the region where we can place the shard's leftmost point is $1-\ell$ (we can't place it any further, or its right most point would include points not on the original ruler). And if the shard's leftmost point starts more than a distance $\ell$ away, it won't reach $1/2.$ 
+For a ruler of length $\ell,$ the total length of the region where we can place the shard's leftmost point is $\left(1-\ell\right)$ (we can't place it any further, or its right most point would include points not on the original ruler). And if the shard's leftmost point starts more than a distance $\ell$ away, it won't reach $1/2.$ 
 
 So, the probability that a random shard of length $\ell$ covers the halfway point is $P_\text{cover} = \ell/(1-\ell),$ which equals $1$ when $\ell = 1/2,$ as we had hoped. To summarize,
 
