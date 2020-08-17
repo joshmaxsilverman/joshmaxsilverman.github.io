@@ -55,6 +55,14 @@ For the case where only one end of the shard is a breakpoint, the calculation is
 
 Putting it all together, the one breakpoint shard's distribution is 
 
-$$P_1(\ell) = 2\binom{N}{1}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
+$$P_1(\ell) = 
+\begin{cases}
+0 & \text{when } \ell \lt 1/2 \\
+2\binom{N}{1}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
+\end{cases}$$
+
+### Complete pdf
+
+With these two cases in hand, the overall pdf is just $P_\text{total}(\ell) = P_1(\ell) + P_2(\ell)$ which has a jump discontinuity at $\ell=1/2$
 
 <br>
