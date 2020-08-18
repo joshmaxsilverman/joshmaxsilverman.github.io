@@ -83,7 +83,7 @@ When $\ell \geq 1/2,$ both kinds of shard are possible and (with $P_\text{cover}
 
 $$
 \begin{align}
-P_\text{total}(\ell) &= 2\binom{N}{2}\ell\left(1-\ell\right)^{n-2} + 2\binom{N}{1}\left(1-\ell\right)^{n-1} \\
+P_\text{total}(\ell) &= 2\binom{N}{2}\left(1-\ell\right)^{n-1} + 2\binom{N}{1}\left(1-\ell\right)^{n-1} \\
 &= 2\left(1-\ell\right)^{n-1}\left[\binom{N}{1} + \binom{N}{2}\right] \\
 &= 2\left(1-\ell\right)^{n-1}\binom{N+1}{2}
 \end{align}
