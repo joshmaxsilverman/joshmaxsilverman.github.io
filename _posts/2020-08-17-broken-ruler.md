@@ -116,9 +116,12 @@ which comes out to the absolutely miraculous
 
 $$\boxed{\langle\ell\rangle = \frac{2-2^{-n}}{n+1}}.$$
 
+Plugging in the values of $n,$ we find the expected lengths for the first few number of breakpoints, reproducing $15/32$ for $n=4$ breaks, as we expect:
+
 $$
 \begin{array}{|c|c|}\hline
- 0 & 1 \\ \hline
+ n & \langle\ell\rangle \\ \hline
+ 0 & 1 \\
  1 & \frac{3}{4} \\
  2 & \frac{7}{12} \\
  3 & \frac{15}{32} \\
