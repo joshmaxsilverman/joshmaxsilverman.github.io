@@ -116,4 +116,20 @@ which comes out to the absolutely miraculous
 
 $$\boxed{\langle\ell\rangle = \frac{2-2^{-n}}{n+1}}.$$
 
+$$
+\begin{array}{|c|c|}\hline
+ 0 & 1 \\ \hline
+ 1 & \frac{3}{4} \\
+ 2 & \frac{7}{12} \\
+ 3 & \frac{15}{32} \\
+ 4 & \frac{31}{80} \\
+ 5 & \frac{21}{64} \\
+ 6 & \frac{127}{448} \\
+ 7 & \frac{255}{1024} \\
+ 8 & \frac{511}{2304} \\
+ 9 & \frac{1023}{5120} \\
+ 10 & \frac{2047}{11264} \\ \hline
+\end{array}
+$$
+
 <br>
