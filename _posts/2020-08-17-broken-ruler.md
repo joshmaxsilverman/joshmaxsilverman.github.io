@@ -43,7 +43,7 @@ There are two umbrella cases:
 
 ### Two breakpoints
 
-The first case involves several things: **a**. the random interval has to contain $1/2,$ **b**. no points can be within $\ell$ of the left end of the shard, **c**. the right end of the shard has to be a distance $\ell$ from the left end, **d**. the number of ways we can pick $2$ endpoints out of the $N$ breakpoints $\{x_1,x_2,\ldots,x_N\}.$
+The first case involves several things: **a**. the random interval has to contain $1/2,$ **b**. no points can be within $\ell$ of the left end of the shard, **c**. the right end of the shard has to be a distance $\ell$ from the left end, **d**. the number of ways we can pick $2$ endpoints out of the $n$ breakpoints $\{x_1,x_2,\ldots,x_n\}.$
 
 ![](/img/2020-08-17-inside_shard.jpg){:width="400px" class="image-centered"}
 
@@ -51,7 +51,7 @@ Parts **a** and **b** contribute $P_\text{cover}(\ell)\times \left(1-\ell\right)
 
 In total, the distribution of lengths $\ell$ for a shard with two breakpoints for ends is 
 
-$$P_2(\ell) = 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
+$$P_2(\ell) = 2\binom{n}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1}.$$
 
 ### One breakpoint
 
@@ -62,7 +62,7 @@ Putting it all together, the one breakpoint shard's distribution is
 $$P_1(\ell) = 
 \begin{cases}
 0 & \text{when } \ell \lt 1/2 \\
-2\binom{N}{1}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
+2\binom{n}{1}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2.
 \end{cases}$$
 
 ![](/img/2020-08-17-side-shard.jpg){:width="400px" class="image-centered"}
@@ -73,9 +73,9 @@ With these two cases in hand, the overall pdf is just $P_\text{total}(\ell) = P_
 
 $$
 \begin{align}
-P_\text{total}(\ell) &= 2\binom{N}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1} \\
-&= 2\binom{N}{2}\frac{\ell}{1-\ell}\left(1-\ell\right)^{n-1} \\
-&= 2\binom{N}{2}\ell\left(1-\ell\right)^{n-2}
+P_\text{total}(\ell) &= 2\binom{n}{2}P_\text{cover}(\ell)\left(1-\ell\right)^{n-1} \\
+&= 2\binom{n}{2}\frac{\ell}{1-\ell}\left(1-\ell\right)^{n-1} \\
+&= 2\binom{n}{2}\ell\left(1-\ell\right)^{n-2}
 \end{align}
 $$
 
@@ -83,9 +83,9 @@ When $\ell \geq 1/2,$ both kinds of shard are possible and (with $P_\text{cover}
 
 $$
 \begin{align}
-P_\text{total}(\ell) &= 2\binom{N}{2}\left(1-\ell\right)^{n-1} + 2\binom{N}{1}\left(1-\ell\right)^{n-1} \\
-&= 2\left(1-\ell\right)^{n-1}\left[\binom{N}{1} + \binom{N}{2}\right] \\
-&= 2\left(1-\ell\right)^{n-1}\binom{N+1}{2}
+P_\text{total}(\ell) &= 2\binom{n}{2}\left(1-\ell\right)^{n-1} + 2\binom{N}{1}\left(1-\ell\right)^{n-1} \\
+&= 2\left(1-\ell\right)^{n-1}\left[\binom{n}{1} + \binom{n}{2}\right] \\
+&= 2\left(1-\ell\right)^{n-1}\binom{n+1}{2}
 \end{align}
 $$
 
@@ -93,12 +93,12 @@ So
 
 $$P_\text{total}(\ell) = 
 \begin{cases}
-2\binom{N}{2}\ell\left(1-\ell\right)^{n-2} & \text{when } \ell \lt 1/2 \\
-2\binom{N+1}{2}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2
+2\binom{n}{2}\ell\left(1-\ell\right)^{n-2} & \text{when } \ell \lt 1/2 \\
+2\binom{n+1}{2}\left(1-\ell\right)^{n-1} & \text{when } \ell \geq 1/2
 \end{cases}
 $$
 
-Plotting this against a histogram with $N=10\, 000$ points, it looks pretty good:
+Plotting this against an empirical pdf with $N=10\, 000$ points, it looks pretty good:
 
 ![](/img/2020-08-17-histogram.png){:width="450px" class="image-centered"}
 
@@ -108,7 +108,7 @@ With the pdf in hand, we can find $\langle\ell\rangle$ by integration:
 
 $$\begin{align}
 \langle\ell\rangle &= \int\limits_0^\ell d\ell\, \ell \times P_\text{total}(\ell) \\
-&= 2\binom{N}{2}\int\limits_0^{1/2} d\ell\, \ell^2 \left(1-\ell\right)^{n-2} + 2\binom{N+1}{2}\int\limits_{1/2}^1 d\ell\, \ell\left(1-\ell\right)^{n-1}
+&= 2\binom{n}{2}\int\limits_0^{1/2} d\ell\, \ell^2 \left(1-\ell\right)^{n-2} + 2\binom{n+1}{2}\int\limits_{1/2}^1 d\ell\, \ell\left(1-\ell\right)^{n-1}
 \end{align}
 $$
 
