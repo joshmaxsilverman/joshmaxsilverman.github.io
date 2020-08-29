@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: An End to War
 date: 2020/08/28
 ---
