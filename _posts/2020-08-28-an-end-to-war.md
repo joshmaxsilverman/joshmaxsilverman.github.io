@@ -40,8 +40,8 @@ as well.
 As there are $2n$ pairs, the overall probability of no ties is
 
 $$\begin{align}
-P(\text{no ties}) &= \limit\limits_{n\rightarrow\infty}\left(1-\frac{3}{4n}\right)^{2n} \\
-&= \limit\limits_{n\rightarrow\infty}\left(1 - \frac{3/2}{2n}\right)^{2n}
+P(\text{no ties}) &= \lim\limits_{n\rightarrow\infty}\left(1-\frac{3}{4n}\right)^{2n} \\
+&= \lim\limits_{n\rightarrow\infty}\left(1 - \frac{3/2}{2n}\right)^{2n}
 \end{align}$$
 
 which is the definitional form for $e^{-3/2}.$
