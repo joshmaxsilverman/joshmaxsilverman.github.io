@@ -56,16 +56,18 @@ which is approximately $3.32489848\times 10^{-9}.$
 
 Answering the original question, we should expect to wait $T = 1/P(\text{rout})$ games to bear witness to the rout, or roughly $300,000,000$ games.
 
-![](/img/2020-08-28-P-no-tie.png){: width="400px" class="image-centered"}
-
-{:.caption}
-
-Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r$
-
 ### Generalizing
 
 In general, we can have $r$ ranks and $s$ suits. In that case, the number of hands is $s\times r/2$ and we have
 
 $$\boxed{P(\text{rout}) = \frac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
+
+We can compare the asymptotic prediction for $P(\text{no tie})$ to a computer simulation for different values of $s$ and $r$. When there are many different suits $s$ we should expect to need many different ranks, since the probability of double collisions rises with the number of suits. The asymptotic result is already quite good for the standard deck.
+
+![](/img/2020-08-28-P-no-tie.png){: width="400px" class="image-centered"}
+
+{:.caption}
+
+Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The green dot indicates the result for a standard deck of cards.
 
 <br>
