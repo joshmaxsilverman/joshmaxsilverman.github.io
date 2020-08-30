@@ -29,11 +29,11 @@ Getting an exact answer for $P(\text{no ties})$ calls for detailed combinatorics
 
 We can build the shuffled War deck one pair at a time, working with $4r$ total cards in the limit where $r$ is large. For each pair, the first card is drawn uniformly and the second card needs to be one of the $4r - 3$ remaining cards that don't have the same rank. The probability of this happening is 
 
-$$P(\text{no match in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
+$$P(\text{no tie in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
 If we were dealing with small $r$ then we'd have to consider the possibility that subsequent pairs involve a rank that has already paired. However, the probability of this happening when $r$ is large is **very small$^\dagger$** compared to the probability of forming a tie with an unused rank. So, the probability for a tie in the second pair is
 
-$$P(\text{no match in second pair}) = 1 - \frac{3}{4r}$$
+$$P(\text{no tie in second pair}) = 1 - \frac{3}{4r}$$
 
 as well. 
 
