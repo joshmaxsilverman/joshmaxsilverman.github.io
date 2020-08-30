@@ -62,12 +62,18 @@ In general, we can have $r$ ranks and $s$ suits. In that case, the number of han
 
 $$\boxed{P(\text{rout}) = \frac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
 
-We can compare the asymptotic prediction for $P(\text{no tie})$ to a computer simulation for different values of $s$ and $r$. When there are many different suits $s$ we should expect to need many different ranks, since the probability of double collisions rises with the number of suits. The asymptotic result is already quite good for the standard deck.
+We can compare the asymptotic prediction for $P(\text{no tie})$ to a computer simulation for different values of $s$ and $r$. 
+
+When there are many different suits $s,$ we should expect to need many different ranks $r$ for a good prediction. This is because the probability of ranks with multiple pairs rises with the number of suits, and our calculation explicitly ignores that possibility. As the green dot shows, the asymptotic result is already quite good for the standard deck.
 
 ![](/img/2020-08-28-P-no-tie.png){: width="400px" class="image-centered"}
 
 {:.caption}
 
 Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The green dot indicates the result for a standard deck of cards.
+
+### Underwriting the ignorance of ranks with multiple pairs
+
+...
 
 <br>
