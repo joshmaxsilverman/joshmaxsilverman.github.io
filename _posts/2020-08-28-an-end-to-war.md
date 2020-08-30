@@ -31,7 +31,7 @@ We can build the shuffled War deck one pair at a time, working with $4r$ total c
 
 $$P(\text{no match in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
-If we were dealing with small $r$ then we'd have to consider the possibility that subsequent pairs involve a card that has already paired. However, the probability of this happening when $r$ is large is $0.$ So, the probability for a tie in the second pair is
+If we were dealing with small $r$ then we'd have to consider the possibility that subsequent pairs involve a rank that has already paired. However, the probability of this happening when $r$ is large is **very small$^\dagger$** compared to the probability of forming a tie with a new rank. So, the probability for a tie in the second pair is
 
 $$P(\text{no match in second pair}) = 1 - \frac{3}{4r}$$
 
@@ -72,7 +72,9 @@ When there are many different suits $s,$ we should expect to need many different
 
 Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The green dot indicates the result for a standard deck of cards.
 
-### Underwriting the ignorance of ranks with multiple pairs
+---
+
+### $^\dagger$Underwriting the ignorance of ranks with multiple pairs
 
 ...
 
