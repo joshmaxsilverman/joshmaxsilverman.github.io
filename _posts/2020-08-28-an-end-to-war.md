@@ -60,6 +60,6 @@ Answering the original question, we should expect to wait $T = 1/P(\text{rout})$
 
 In general, we can have $r$ ranks and $s$ suits. In that case, the number of hands is $s\times r/2$ and we have
 
-$$\boxed{P(\text{rout}) = \frac{1}{2^{s\times r/2}}e^{-(s-1)/2}}$$
+$$\boxed{P(\text{rout}) = \frac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
 
 <br>
