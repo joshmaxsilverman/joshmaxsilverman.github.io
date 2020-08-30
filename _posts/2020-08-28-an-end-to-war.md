@@ -31,7 +31,7 @@ We can build the shuffled War deck one pair at a time, working with $4r$ total c
 
 $$P(\text{no match in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
-If we were dealing with small $r$ then we'd have to consider the possibility that the second pair involves one of the cards that appeared in the first. However, the probability of this happening when $r$ is large is $0.$ So, the probability for a tie in the second pair is also
+If we were dealing with small $r$ then we'd have to consider the possibility that subsequent pairs involve a card that has already paired. However, the probability of this happening when $r$ is large is $0.$ So, the probability for a tie in the second pair is
 
 $$P(\text{no match in second pair}) = 1 - \frac{3}{4r}$$
 
