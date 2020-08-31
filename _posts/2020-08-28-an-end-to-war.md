@@ -17,7 +17,7 @@ This problem has two pieces, one is the probability that the shuffle is such tha
 
 $$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}).$$
 
-The second part is easy, given that we have an outcome with no ties, the probability that Duane's friend's grandchild wins every one is just $1/2^{26},$ or, in the general case where there are $4r$ cards ($4$ of each of $r$ kinds, where $r=13$ for the standard deck),
+The second part is easy, given that we have an outcome with no ties, the probability that Duane's friend's grandchild wins every one is just $1/2^{26},$ or, in the general case where there are $4r$ cards ($4$ each of $r$ kinds, where $r=13$ for the standard deck),
 
 $$P(\text{rout}|\text{no ties}) = \dfrac{1}{2^{2r}}.$$
 
@@ -27,7 +27,7 @@ As near as I can tell, there is no way to go straight for the probability of zer
 
 ### Infinite ranks
 
-We can build the shuffled War deck one pair at a time, working with $4r$ total cards in the limit where $r$ is large ($r=13$ in a standard deck of cards). For each pair, the first card is drawn uniformly and the second card needs to be one of the $4r - 3$ remaining cards that don't have the same rank. The probability of this happening is 
+We can build the shuffled War deck one pair at a time, working with $4r$ total cards in the limit where the number of ranks, $r,$ is large. For each pair, the first card is drawn uniformly and the second card needs to be one of the $4r - 3$ remaining cards that don't have the same rank. The probability of this happening is 
 
 $$P(\text{no tie in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
