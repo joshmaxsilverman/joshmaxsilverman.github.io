@@ -13,7 +13,7 @@ date: 2020/08/28
 
 ## Solution
 
-This problem has two pieces, one is the probability that the shuffle is such that every pair of cards has an unambiguous outcome, and the second is that every one of these matchups has the same victor. So,
+This problem has two pieces, one is the probability that the shuffle is such that every pair of cards has an unambiguous outcome, and the second is that every one of these matchups is won by Duane's friend's grandchild. So,
 
 $$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}).$$
 
@@ -54,7 +54,7 @@ which is approximately $3.32489848\times 10^{-9}.$
 
 ### Expected waiting time
 
-Answering the original question, we should expect to wait $T = 1/P(\text{rout})$ games to bear witness to the rout, or roughly $300,000,000$ games.
+Answering the original question, we should expect to wait $T = P(\text{rout})^{-1}$ games to bear witness to the rout, or roughly $300,000,000$ games.
 
 ### Generalizing
 
@@ -64,7 +64,7 @@ $$\boxed{P(\text{rout}) = \dfrac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
 
 We can compare the asymptotic prediction for $P(\text{no tie})$ to a computer simulation for different values of $s$ and $r$. 
 
-When there are many different suits $s,$ we should expect to need many different ranks $r$ for a good prediction. This is because the probability of ranks with multiple pairs rises with the number of suits, and our calculation explicitly ignores that possibility. As the green dot shows, the asymptotic result is already quite good for the standard deck, accurate to within $\lt 6\%.$
+When there are many different suits $s,$ we should expect to need many different ranks $r$ for a good prediction. This is because the asymptotic model assumes that the density of any given rank will be low. As the black dot shows, the asymptotic result is already quite good for the standard deck, accurate to within $\lt 6\%.$
 
 ![](/img/2020-08-28-P-no-tie-1000000-black.png 
 ){: width="600px" class="image-centered"}
