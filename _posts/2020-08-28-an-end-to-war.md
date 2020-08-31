@@ -67,7 +67,7 @@ We can compare the asymptotic prediction for $P(\text{no tie})$ to a computer si
 When there are many different suits $s,$ we should expect to need many different ranks $r$ for a good prediction. This is because the probability of ranks with multiple pairs rises with the number of suits, and our calculation explicitly ignores that possibility. As the green dot shows, the asymptotic result is already quite good for the standard deck, accurate to within $\lt 6\%.$
 
 ![](/img/2020-08-28-P-no-tie-1000000-black.png 
-){: width="500px" class="image-centered"}
+){: width="600px" class="image-centered"}
 
 {:.caption}
 
