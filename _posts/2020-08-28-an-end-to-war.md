@@ -13,11 +13,11 @@ date: 2020/08/28
 
 ## Solution
 
-This problem has two pieces, one is the probability that the shuffle is such that every pair of cards has an unambiguous outcome, and the second is that every one of these matchups is won by Duane's friend's grandchild. So,
+This problem has two pieces, one is the probability that the shuffle is such that every pair of cards has an unambiguous outcome, and the second is that every one of these matchups is won by your friend Duane's friend's grandchild. So,
 
 $$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}).$$
 
-The second part is easy, given that we have an outcome with no ties, the probability that Duane's friend's grandchild wins every one is just $1/2^{26},$ or, in the general case where there are $4r$ cards ($4$ each of $r$ kinds, where $r=13$ for the standard deck),
+The second part is easy, given that we have an outcome with no ties, the probability that your friend Duane's friend's grandchild wins every one is just $1/2^{26},$ or, in the general case where there are $4r$ cards ($4$ each of $r$ kinds, where $r=13$ for the standard deck),
 
 $$P(\text{rout}|\text{no ties}) = \dfrac{1}{2^{2r}}.$$
 
@@ -46,7 +46,7 @@ P(\text{no ties}) &\approx \left(1-\frac{3}{4r}\right)^{2r} \\
 
 which, when we take $\lim\limits_{r\rightarrow\infty},$ is the definitional form for $e^{-3/2}.$
 
-Putting it all together, the probability that Duane's friend's grandchild wins their War match in a $2r=26$ hand rout is approximately
+Putting it all together, the probability that your friend Duane's friend's grandchild wins their War match in a $2r=26$ hand rout is approximately
 
 $$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}) = \frac{1}{2^{2r}}e^{-3/2}$$
 
