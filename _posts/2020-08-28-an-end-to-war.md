@@ -58,7 +58,7 @@ Answering the original question, we should expect to wait $T = 1/P(\text{rout})$
 
 ### Generalizing
 
-In general, we can have $r$ ranks and $s$ suits. For a general deck, the number of hands playerd is $s\times r/2,$ the probability $\left(1-\frac{3}{2r}\right)$ becomes $\left(1-\frac{s-1}{2}\frac{1}{sr/2}\right)$ and we have
+In general, we can have $r$ ranks and $s$ suits. For a general deck, the number of hands playerd is $s\times r/2,$ the probability $\left(1-\frac{3}{2}\frac{1}{2r}\right)$ becomes $\left(1-\frac{s-1}{2}\frac{1}{sr/2}\right)$ and we have
 
 $$\boxed{P(\text{rout}) = \dfrac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
 
