@@ -9,7 +9,7 @@ date: 2020/08/28
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-cover-the-globe/))
 
 ## Solution
 
