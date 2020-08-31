@@ -35,7 +35,7 @@ If we were dealing with small $r$ then we'd need to consider the possibility tha
 
 $$P(\text{no tie in second pair}) \approx 1 - \frac{3}{4r}$$
 
-as well (since $4r \gg 1$). Each time we pick new cards, we are much more likely to pick cards from an unused rank than to revisit an existing one.
+as well (since $4r \gg 2$). Each time we pick new cards, we are much more likely to pick cards from an unused rank than to revisit an existing one.
 
 As there are $2r$ pairs, the overall probability of no ties is
 
