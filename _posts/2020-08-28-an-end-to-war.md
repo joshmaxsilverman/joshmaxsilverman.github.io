@@ -15,7 +15,7 @@ date: 2020/08/28
 
 This problem has two pieces, one is the probability that the shuffle is such that every pair of cards has an unambiguous outcome, and the second is that every one of these matchups has the same victor. So,
 
-$$P(\text{rout}) = P(\text{rout}|\text{no ties})P(\text{no ties}).$$
+$$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}).$$
 
 The second part is easy, given that we have an outcome with no ties, the probability that Duane's friend's grandchild wins every one is just $1/2^{26},$ or, in the general case where there are $4r$ cards ($4$ of each of $r$ kinds, where $r=13$ for the standard deck),
 
