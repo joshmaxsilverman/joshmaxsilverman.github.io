@@ -27,7 +27,7 @@ As near as I can tell, there is no way to go straight for the probability of zer
 
 ### Infinite ranks
 
-We can build the shuffled War deck one pair at a time, working with $4r$ total cards in the limit where $r$ is large. For each pair, the first card is drawn uniformly and the second card needs to be one of the $4r - 3$ remaining cards that don't have the same rank. The probability of this happening is 
+We can build the shuffled War deck one pair at a time, working with $4r$ total cards in the limit where $r$ is large ($r=13$ in a standard deck of cards). For each pair, the first card is drawn uniformly and the second card needs to be one of the $4r - 3$ remaining cards that don't have the same rank. The probability of this happening is 
 
 $$P(\text{no tie in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
