@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: An End to War
 date: 2020/08/28
 ---
@@ -23,7 +23,7 @@ $$P(\text{rout}|\text{no ties}) = \dfrac{1}{2^{2r}}.$$
 
 ### No ties
 
-Getting an exact answer for $P(\text{no ties})$ calls for detailed combinatorics and, as far as I can tell, there is no way to go straight for the probability of zero collisions, $P_\text{rout}.$ However, it may be possible to get the asymptotic result with a lot less effort. And the asymptotic result might be accurate surprisingly early on in the $r\rightarrow\infty$ path.
+Getting an exact answer for $P(\text{no ties})$ calls for detailed combinatorics and, as far as I can tell, there is no way to go straight for the probability of zero collisions, $P_\text{rout}.$ However, it is possible to get the asymptotic result with a lot less effort. Also, the asymptotic result might be accurate surprisingly early on in $r\rightarrow\infty$ path.
 
 ### Infinite ranks
 
@@ -31,22 +31,22 @@ We can build the shuffled War deck one pair at a time, working with $4r$ total c
 
 $$P(\text{no tie in first pair}) = \frac{4r-3}{4r} = 1 - \frac{3}{4r}$$
 
-If we were dealing with small $r$ then we'd have to consider the possibility that subsequent pairs involve a rank that has already paired. However, the probability of this happening when $r$ is large is **very small$^\dagger$** compared to the probability of forming a tie with an unused rank. So, the probability for a tie in the second pair is
+If we were dealing with small $r$ then we'd need to consider the possibility that subsequent pairs involve a rank that's already been paired. However, the probability of this happening when $r$ is large is small compared to the prospect of forming a tie with an unused rank. So, the probability for a tie in the second pair is
 
-$$P(\text{no tie in second pair}) = 1 - \frac{3}{4r}$$
+$$P(\text{no tie in second pair}) \approx 1 - \frac{3}{4r}$$
 
-as well. 
+as well (since $4r \gg 1$). Each time we pick new cards, we are much more likely to pick cards from an unused rank than to revisit an existing one.
 
 As there are $2r$ pairs, the overall probability of no ties is
 
 $$\begin{align}
-P(\text{no ties}) &= \left(1-\frac{3}{4r}\right)^{2r} \\
+P(\text{no ties}) &\approx \left(1-\frac{3}{4r}\right)^{2r} \\
 &= \left(1 - \frac{3/2}{2r}\right)^{2r}
 \end{align}$$
 
 which, when we take $\lim\limits_{r\rightarrow\infty},$ is the definitional form for $e^{-3/2}.$
 
-Putting it all together, the probability of Duane's friend's grandchild winning their War match in a $2r=26$ hand route is approximately
+Putting it all together, the probability that Duane's friend's grandchild wins their War match in a $2r=26$ hand rout is approximately
 
 $$P(\text{rout}) = P(\text{rout}|\text{no ties})\times P(\text{no ties}) = \frac{1}{2^{2r}}e^{-3/2}$$
 
@@ -58,7 +58,7 @@ Answering the original question, we should expect to wait $T = 1/P(\text{rout})$
 
 ### Generalizing
 
-In general, we can have $r$ ranks and $s$ suits. In that case, the number of hands is $s\times r/2$ and we have
+In general, we can have $r$ ranks and $s$ suits. For a general deck, the number of hands playerd is $s\times r/2,$ the probability $(1-3/(2r))$ becomes $(1-(s-1)/(sr))$ Wand we have
 
 $$\boxed{P(\text{rout}) = \dfrac{1}{2^{sr/2}}e^{-(s-1)/2}}$$
 
@@ -73,10 +73,5 @@ When there are many different suits $s,$ we should expect to need many different
 
 Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The black dot indicates the result for a standard deck of cards.
 
----
-
-### $^\dagger$Underwriting the ignorance of ranks with multiple pairs
-
-...
 
 <br>
