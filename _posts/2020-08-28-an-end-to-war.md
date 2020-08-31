@@ -23,7 +23,7 @@ $$P(\text{rout}|\text{no ties}) = \dfrac{1}{2^{2r}}.$$
 
 ### No ties
 
-Getting an exact answer for $P(\text{no ties})$ calls for detailed combinatorics and, as far as I can tell, there is no way to go straight for the probability of zero collisions, $P_\text{rout}.$ However, it is possible to get the asymptotic result with a lot less effort. Also, the asymptotic result might be accurate surprisingly early on in $r\rightarrow\infty$ path.
+As near as I can tell, there is no way to go straight for the probability of zero ties, $P(\text{no ties})$ and getting an exact answer calls for detailed accounting and combinatorics. However, it is possible to get the asymptotic result with a lot less effort. Also, the asymptotic result might be accurate surprisingly early on in the $r\rightarrow\infty$ path.
 
 ### Infinite ranks
 
