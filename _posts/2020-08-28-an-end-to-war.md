@@ -71,7 +71,7 @@ When there are many different suits $s,$ we should expect to need many different
 
 {:.caption}
 
-Comparison of theoretical (solid lines) and empirical (dotted lines) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The black dot indicates the result for a standard deck of cards.
+Comparison of theoretical (solid lines) and empirical (dotted lines, $N=1,000,000$ points per condition) results for $P(\text{no tie})$ for different values of $s$ and $r.$ The black dot indicates the result for a standard deck of cards.
 
 
 <br>
