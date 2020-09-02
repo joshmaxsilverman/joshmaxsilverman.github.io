@@ -85,14 +85,12 @@ testNDecks[ranks_, suits_, NN_] := {ranks,
    Mean@ParallelTable[testDeck[ranks, suits], {i, 1, NN}]};
    
 allData = Monitor[
-  AbsoluteTiming[
    Table[
     Table[
      testNDecks[ranks, suits, 1000000],
      {ranks, 2, 20}
      ],
     {suits, 2, 10}
-    ]
    ],
   {suits, ranks}
   ]
