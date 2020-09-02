@@ -73,6 +73,8 @@ When there are many different suits $s,$ we should expect to need many different
 
 Comparison of asymptotic prediction (thick lines) and empirical results (thin lines, $N=1,000,000$ points per condition) for $P(\text{no tie})$ for different values of $s$ and $r.$ The black dot indicates the result for a standard deck of cards.
 
+Here's the Mathematica code used to generate the data above:
+
 ```mathematica
 testDeck[ranks_, suits_] := (
   tempDeck = Table[i~Mod~ranks + 1, {i, 1, suits ranks}];
