@@ -75,9 +75,9 @@ Comparison of asymptotic prediction (thick lines) and empirical results (thin li
 
 ```mathematica
 testDeck[ranks_, suits_] := (
-  deck = Table[i~Mod~ranks + 1, {i, 1, suits ranks}];
-  	deck = RandomSample[deck, suits ranks];
-  	paired = Partition[deck, 2];
+  tempDeck = Table[i~Mod~ranks + 1, {i, 1, suits ranks}];
+  	tempDeck = RandomSample[tempDeck, suits ranks];
+  	paired = Partition[tempDeck, 2];
   Return[
    If[AllTrue[paired, #[[1]] != #[[2]] &], 1, 0]
    ];)
