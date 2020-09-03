@@ -83,6 +83,7 @@ testDeck[ranks_, suits_] := (
   Return[
    If[AllTrue[paired, #[[1]] != #[[2]] &], 1, 0]
    ];)
+   
 testNDecks[ranks_, suits_, NN_] := {ranks, 
    Mean@ParallelTable[testDeck[ranks, suits], {i, 1, NN}]};
    
