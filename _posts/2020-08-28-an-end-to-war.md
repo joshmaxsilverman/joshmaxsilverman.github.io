@@ -78,8 +78,8 @@ Here's the Mathematica code used to generate the data above:
 ```mathematica
 testDeck[ranks_, suits_] := (
   tempDeck = Table[i~Mod~ranks + 1, {i, 1, suits ranks}];
-  	tempDeck = RandomSample[tempDeck, suits ranks];
-  	paired = Partition[tempDeck, 2];
+  tempDeck = RandomSample[tempDeck, suits ranks];
+  paired = Partition[tempDeck, 2];
   Return[
    If[AllTrue[paired, #[[1]] != #[[2]] &], 1, 0]
    ];)
