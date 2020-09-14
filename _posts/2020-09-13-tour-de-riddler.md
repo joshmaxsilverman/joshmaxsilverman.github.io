@@ -15,9 +15,9 @@ date: 2020/09/13
 
 With a lot of time on the bike, our troubled rider has a think. Their inner voice, which is decent at mental arithmetic says
 
-- "if I start in first, I stay in first"
-- "if I start in second, I stay in second if the person in first is not on the team ($p=1/3$)"
-- "if I start in third I stay in third if the person in fourth is not on the team ($p=1/3$)"
+- "if I start first I stay in first"
+- "if I start second I stay in second if the person in first is not on the team ($p=1/3$)"
+- "if I start third I stay in third if the person in fourth is not on the team ($p=1/3$)"
 - "if I start last I stay last"
 
 According to this logic, they're expected score is 
