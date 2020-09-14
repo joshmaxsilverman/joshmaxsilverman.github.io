@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Tour de Riddler
 date: 2020/09/13
 ---
 
