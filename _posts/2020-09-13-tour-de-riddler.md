@@ -13,7 +13,7 @@ date: 2020/09/13
 
 ## Solution
 
-With a lot of time on the bike, our troubled rider has a think. Their inner voice, which is decent at mental arithmetic says
+With a lot of time on the bike, our troubled rider has a think. Their inner voice, which is decent at mental arithmetic, says
 
 - "if I start first I stay in first,
 - if I start second I stay in second if the person in first is not on the team ($p=1/3$),
