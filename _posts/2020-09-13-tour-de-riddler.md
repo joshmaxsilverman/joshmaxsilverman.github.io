@@ -28,6 +28,6 @@ $$\begin{align}
 &\approx 2.42 
 \end{align}$$
 
-It would be fun to extend this problem to the more disastrous case where there are $N$ cooperating teams, your contemptuous partner, and you. Maybe I'll do that sometime this week.
+It would be fun to extend this problem to the more disastrous case where there are $N$ cooperating teams, your contemptuous erstwhile partner, and you. Maybe I'll do that sometime this week.
 
 <br>
