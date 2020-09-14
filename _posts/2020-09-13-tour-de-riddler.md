@@ -22,7 +22,7 @@ With a lot of time on the bike, our troubled rider has a think. Their inner voic
 
 According to this logic, they're expected score is 
 
-$$\frac{5 + (1/3\times 3 + 2/3\times 2) + (1/3\times 2 + 2/3\times 1) + 1)}{4} =29/12 \approx 2.41 $$
+$$\langle S\rangle = \frac{5 + (1/3\times 3 + 2/3\times 2) + (1/3\times 2 + 2/3\times 1) + 1)}{4} =29/12 \approx 2.41 $$
 
 It would be fun to extend this problem to the more disastrous case where there are $N$ cooperating teams, your contemptuous partner, and you. Maybe I'll do that sometime this week.
 
