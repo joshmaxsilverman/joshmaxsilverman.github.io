@@ -20,7 +20,7 @@ With a lot of time on the bike, our troubled rider has a think. Their inner voic
 - if I start third I stay in third if the person in fourth is not on the team ($p=1/3$),
 - if I start last I stay last."
 
-According to this logic, they're expected score is 
+According to this logic, their expected score is 
 
 $$\langle S\rangle = \frac{5 + (1/3\times 3 + 2/3\times 2) + (1/3\times 2 + 2/3\times 1) + 1)}{4} =29/12 \approx 2.41 $$
 
