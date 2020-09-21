@@ -65,7 +65,7 @@ We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ l
 
 For example, a $(W,L) = (10,3)$ tree is laid out below.
 
-![](/img/5637347A-6208-421C-A627-6534199B7BB9.jpeg){:width="450px" class="image-centered"}
+![](/img/3ABBB341-6F9A-48AC-93B1-69FA2509FEFB.jpeg){:width="450px" class="image-centered"}
 
 {:.caption}
 
