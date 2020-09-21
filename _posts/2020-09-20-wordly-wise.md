@@ -63,11 +63,13 @@ In fact, the best strategy is still to use a single binary tree.
 
 We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ leftover words off the bottom like ornaments. Each of the extra nodes requires $(18+1)$ questions reflecting the $18$ needed to get to the end of the binary tree plus $1$ extra question to distinguish it from the number it hangs from. 
 
+For example, a $(W,L) = (10,3)$ tree is laid out below.
+
 ![](5637347A-6208-421C-A627-6534199B7BB9.jpeg){:width="450px" class="image-centered"}
 
 {:.caption}
 
-Proof of concept for laying out a tree of $W=10$ words, with $L=\lfloor\log_2 W\rfloor = 3$ layers in the core binary tree.
+Proof of concept for laying out a tree of $W=10$ words, with $L=\lfloor\log_2 W\rfloor = 3$ layers in the core binary tree. The numbers are shown in red while the number of questions they require is shown in green.
 
 This brings the average number of questions to 
 
