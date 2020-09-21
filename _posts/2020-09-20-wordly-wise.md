@@ -5,7 +5,7 @@ title: Wordly Wise
 date: 2020/09/20
 ---
 
->Question Every night your children change their favorite word and refuse to let you go to bed until you guess which word it is. If you guess wrong, they'll tell you if their word comes before or after yours in a list of all words. If there are $W = 267,751$ words that they're knowledgable about, how many guesses will you take, on average, to uncover their word?
+>**Question**: Every night your children change their favorite word and refuse to let you go to bed until you guess which word it is. If you guess wrong, they'll tell you if their word comes before or after yours in a list of all words. If there are $W = 267,751$ words that they're knowledgable about, how many guesses will you take, on average, to uncover their word?
 
 <!--more-->
 
