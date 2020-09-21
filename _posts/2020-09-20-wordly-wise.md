@@ -38,7 +38,7 @@ nodes in it, which comes out to $$2^{n+1} - 1.$$
 
 If the kids pick their word at random, then there will be $1$ node that takes $1$ question, $2$ nodes that take $2$ questions, $4$ nodes that take $3$ questions, and so on, leading to
 
-$$\langle Q\rangle = \dfrac{\sum\limits_1^n i \times 2^{i-1}}{\sum\limits_1^n 2^{i-1}} = \dfrac{2^n(n-1)+1}{2^n-1}$$
+$$\langle Q\rangle = \dfrac{\sum\limits^n i \times 2^{i-1}}{\sum\limits^n 2^{i-1}} = \dfrac{2^n(n-1)+1}{2^n-1}$$
 
 Plugging in $n=2$ and $n=3$ as a sanity check, we get $5/3$ and $17/7,$ as expected.
 
