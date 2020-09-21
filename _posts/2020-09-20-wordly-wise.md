@@ -38,28 +38,30 @@ nodes in it, which comes out to $$2^{n+1} - 1.$$
 
 If the kids pick their word at random, then there will be $1$ node that takes $1$ question, $2$ nodes that take $2$ questions, $4$ nodes that take $3$ questions, and so on, leading to
 
-$$\langle Q\rangle = \dfrac{\sum\limits_{i=0}^{n} i 2^{i-1}}{\sum\limits_{i=0}^{n} 2^{i-1}}$$
+$$\langle Q\rangle = \dfrac{\sum\limits_1^n i 2^{i-1}}{\sum\limits_1^n 2^{i-1}}$$
 
 Plugging in $n=2$ and $n=3$ as a sanity check, we get $5/3$ and $17/7,$ as expected.
 
 
 ### Non-binary trees
 
-For dictionaries with $2^n - 1$ words, the question format implicates the binary tree as the natural strategy for extracting the secret word. It's as efficient as possible given the means of interrogation. 
+For dictionaries with $2^{n+1} - 1$ words, the question format implicates the $n$-layer binary tree as the natural strategy for extracting the secret word. It's as efficient as possible given the means of interrogation. 
 
 That's great, but $267,751$ is not of the form $2^n - 1.$ What do we do when the number of words is not equal to $1$ less than a power of $2$?
 
 Well, $\lfloor\log_2 267,751\rfloor = 18,$ so $267,751$ is $2^{18} - 1$ with $5608$ left over.
 
-Perhaps we could put $2^{18}-1$ of the numbers into a binary tree, and put the first $5608$ numbers into their own set. Surely, we could sift through the $5608$ numbers in fewer questions than the smallest binary tree that could contain them, which can hold $2^{13} - 1$ numbers. However, this gives a guaranteed extra question for all $267,751$ numbers (to tell which tree it's in) in exchange for getting just under $(2^{13}\times 12 + 1)/(2^{13}-1) \approx 12$ questions on $5608$ of the numbers.
+Perhaps we could put $2^{18}-1$ of the numbers into a $17$-layer binary tree, and put the first $5608$ numbers into their own set. Surely, we could sift through the $5608$ numbers in fewer questions than the smallest binary tree that could contain them, which can hold $2^{13} - 1$ numbers. However, this gives a guaranteed extra question for all $267,751$ numbers (to tell which tree it's in) in exchange for getting just under $(2^{13}\times 12 + 1)/(2^{13}-1) \approx 12$ questions on $5608$ of the numbers.
 
 That doesn't seem worth it. 
 
 In fact, the best strategy is still to use a single binary tree. 
 
-We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ leftover words off the bottom like ornaments. Each of the extra nodes requires $(18+1)$ questions reflecting the $18$ needed to get to the end of the binary tree plus $1$ extra question to distinguish it from the number it hangs from. 
+We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ leftover words off the bottom like ornaments. Each of the extra nodes requires $(17+1)$ questions reflecting the $17$ needed to get to the end of the binary tree plus $1$ extra question to distinguish it from the number it hangs from. 
 
+This brings the average number of questions to 
 
+$$\langle Q\rangle = \dfrac{\sum\limits_1^L i 2^{i-1} + (W - (2^L-1))}{W}$$
 
 --
 
