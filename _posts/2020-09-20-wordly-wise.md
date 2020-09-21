@@ -49,9 +49,9 @@ For dictionaries with $2^n - 1$ words, the question format implicates the binary
 
 That's great, but $267,751$ is not of the form $2^n - 1.$ What do we do when the number of words is not equal to $1$ less than a power of $2$?
 
-Well, $\lfloor\log_2 267751\rfloor = 18,$ so $267,751$ is $2^{18} - 1$ with $5608$ left over.
+Well, $\lfloor\log_2 267,751\rfloor = 18,$ so $267,751$ is $2^{18} - 1$ with $5608$ left over.
 
-Perhaps we could put $2^{18}-1$ of the numbers into a binary tree, and put the first $5608$ numbers into their own set. Surely, we could sift through the $5608$ numbers in fewer questions than the smallest binary tree that could contain them, which can hold $2^{13} - 1$ numbers. However, this gives a guaranteed extra question for all $267,751$ numbers (to tell which tree it's in) in exchange for getting just under $(2^{13}\times 12 + 1)/(2^{13}-1)$ approx 12$ questions on $5608$ of the numbers.
+Perhaps we could put $2^{18}-1$ of the numbers into a binary tree, and put the first $5608$ numbers into their own set. Surely, we could sift through the $5608$ numbers in fewer questions than the smallest binary tree that could contain them, which can hold $2^{13} - 1$ numbers. However, this gives a guaranteed extra question for all $267,751$ numbers (to tell which tree it's in) in exchange for getting just under $(2^{13}\times 12 + 1)/(2^{13}-1) \approx 12$ questions on $5608$ of the numbers.
 
 That doesn't seem worth it. 
 
