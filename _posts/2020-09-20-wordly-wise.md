@@ -21,7 +21,7 @@ Let's think about how things should go if we had $3$ items. If we first asked if
 
 Similarly, if we had $7$ items, we could ask about $4$ first. $1/7$ of the time we'll learn that we guessed right while $3/7$ of the time we'll have guessed too high and the other $3/7$ of the time we'll have guessed too low. If we guessed too high or too low, then we're back in the $3$-number case. So, on average, we'd need 
 
-$$1\times\frac17 + (2 + 1)\times\frac47 = 17/7 \approx 2.43$$
+$$1\times\frac17 + 2\times\frac27 + (2 + 1)\times\frac47 = 17/7 \approx 2.43$$
 
 The pattern here is that in every layer we double the number of numbers, and that each node is halfway between the nodes that emerge from it. These are called binary trees. 
 
