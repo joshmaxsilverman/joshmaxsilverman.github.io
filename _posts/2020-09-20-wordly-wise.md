@@ -65,7 +65,7 @@ We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ l
 
 This brings the average number of questions to 
 
-$$\langle Q\rangle = \dfrac{2^L(L-1) + 1 + (L+1)(W - (2^{L+1}-1))}{W}$$
+$$\langle Q\rangle = \dfrac{2^L(L-1) + 1 + (L+1)(W - (2^L-1))}{W}$$
 
 where $L = \lfloor\log_2 W\rfloor,$ as before. 
 
