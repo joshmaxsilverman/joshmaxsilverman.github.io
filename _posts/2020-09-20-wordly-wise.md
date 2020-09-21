@@ -74,11 +74,4 @@ Plugging in $(W,L) = (267715, 18),$ we get
 $$\langle Q\rangle = \dfrac{4,563,001}{267,751} \approx 17.042\,\text{questions}$$
 
 
-
---
-
-$$\langle Q\rangle = \dfrac{\sum\limits_{i=0}^{n-2} i 2^{i-1}}{\sum\limits_{i=0}^{n-1} 2^{i-1}} + (n-1)\left(2^{n-1} + 2^n\right) = \frac{2^{n-1}(2n-3) + 1}{2^n-1}$$
-
-Plugging in $n=2$ and $n=3$ as a sanity check, we get $1$ and $13/7,$ as expected.
-
 <br>
