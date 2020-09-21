@@ -65,11 +65,11 @@ We simply put $2^{18}-1$ of the numbers into a binary tree and hang the $5608$ l
 
 For example, a $(W,L) = (10,3)$ tree is laid out below.
 
-![](5637347A-6208-421C-A627-6534199B7BB9.jpeg){:width="450px" class="image-centered"}
+![](/img/5637347A-6208-421C-A627-6534199B7BB9.jpeg){:width="450px" class="image-centered"}
 
 {:.caption}
 
-Proof of concept for laying out a tree of $W=10$ words, with $L=\lfloor\log_2 W\rfloor = 3$ layers in the core binary tree. The numbers are shown in red while the number of questions they require is shown in green.
+Proof of concept for laying out a tree of $W=10$ words, with $L=\lfloor\log_2 W\rfloor = 3$ layers in the core binary tree. The numbers are shown in red while the number of questions they require is shown in green. By inspection, $\langle Q\rangle = 29/10,$ in agreement with the prediction of the formula.
 
 This brings the average number of questions to 
 
