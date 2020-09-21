@@ -69,7 +69,7 @@ $$\langle Q\rangle = \dfrac{2^L(L-1) + 1 + (L+1)(W - (2^{L+1}-1))}{W}$$
 
 where $L = \lfloor\log_2 W\rfloor,$ as before. 
 
-Plugging in $(W,L) = (267715, 18),$ we get 
+Plugging in $(W,L) = (267751, 18),$ we get 
 
 $$\langle Q\rangle = \dfrac{4,563,001}{267,751} \approx 17.042\,\text{questions}$$
 
