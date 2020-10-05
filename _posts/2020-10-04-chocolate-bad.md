@@ -121,11 +121,13 @@ If we take these results for granted, we can use induction to show that the recu
 
 However, we'll now switch to an intuitive picture of the hidden pendulum that drives the system toward balance so that $P(m,d) = 1/2$ for all $m$ and $d.$
 
-### Lane model
+### The power of physics
 
-The striking thing about this bag is how it can restore balance. To get a handle on this, I focus on how the system switches back and forth between the $\mathbf{M}$ and $\mathbf{D}$ states and, in particular, how it behaves when it's very imbalanced.
+The striking thing about this bag is how it can restore balance. To get a handle on this, I focus on how the system switches back and forth between the $\mathbf{M}$ and $\mathbf{D}$ states and, in particular, how it behaves when it's very imbalanced. 
 
-Because the $\mathbf{BS}$ (blank slate) state is just a stopover, a temporary state we reside in while we restart the game, we will immediately determine the system's next state rather than keeping track of a bunch of $\mathbf{BS}$ states.
+To do this, we'll abandon analyzing individual systems and look at the average system as it settles down to $\left(0,0\right).$
+
+**Note**: because the $\mathbf{BS}$ (blank slate) state is just a stopover, a temporary state we reside in while we restart the game, we will immediately determine the system's next state rather than keeping track of a bunch of $\mathbf{BS}$ states.
 
 Suppose we find ourselves having just eaten a soymilk chocolate, with the bag in the state $\left(m,d\right).$ What is the relative likelihood of our next moves? 
 
@@ -158,10 +160,28 @@ $$p_{m\downarrow} = \left(\frac{1}{f_d^2} -1\right)p_{d\downarrow}.$$
 
 What this says is that when $f_d$ is small, the bag will force us to each soymilk chocolates significantly faster than we eat dark chocolates. In fact, it will drive the system in this direction until the term in parenthesis is equal to $1$ (which makes the rates equal), but this doesn't happen until $f_d = 1/\sqrt{2} \approx 0.7071.$ 
 
-Putting this into plain English, when we've just eaten a soymilk chocolate, and soymilk chocolates outnumber dark chocolates, the probability that we continue to eat milk chocolate is **much** greater than the probability we switch to dark chocolate. Furthermore, due to the intrinsic inertia of the states, we will be favore to do this until $f_d$ swings up to $0.7071,$ past the balance point $f_d = f_m = 1/2.$ 
+Let's put this into plain English: 
+
+- when we've just eaten a soymilk chocolate, and soymilk chocolates outnumber dark chocolates, the probability that we continue to eat milk chocolate is **much** greater than the probability we switch to dark chocolate. 
+- due to the intrinsic inertia of the states, we will be favored to do this until $f_d$ swings up to $0.7071,$ past the balance point $f_d = f_m = 1/2.$ 
+
+The analysis we just performed was for when we've just eaten a soymilk chocolate. If we did the same analysis for when we've just eaten a dark chocolate, we get the similar result
+
+$$$$p_{d\downarrow} = \left(\frac{1}{f_m^2} -1\right)p_{m\downarrow},$$
+
+which has the same qualitative behavior.
+
+### Ensemble mean
+
+We can think of the average behavior as a point in $\left(m,d\right)$ space that approaches the origin as we eat the chocolates in the bag:
 
 ![](/img/2020-10-04-graph-scheme.png){:width="450px" class="image-centered"}
 
+Our analysis above suggests that points under the $m=d$ (with more $m$ than $d$) line will race horizontally toward the line, overshoot so that $f_d \approx 1/\sqrt{2}$ and then dive vertically, oscillating in this way down to the origin, hugging the line $m=d.$ Likewise, points above the $m=d$ line (with more $d$ than $m$) will dive vertically down to the line overshoot a bit, then race horizontally back to the line, oscillating down to the origin. 
+
+Because the imbalance in transition probabilities gets much stronger (ex. $\sim 1/f_d^2$) when there's a strong imbalance, **all bags**, no matter how "extreme" their imbalance, will be driven strongly toward the line $m=d$ before oscillating down to the origin in unison.
+
+Therefore, we expect the average bag to finish the game in the $\left(1,1\right)$ state, a coin flip between soymilk and dark chocolate.
 
 <br>
 
