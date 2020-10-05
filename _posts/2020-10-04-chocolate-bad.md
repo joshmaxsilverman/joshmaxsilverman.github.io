@@ -135,7 +135,7 @@ The probability of the first event is $m/\left(m+d\right)$ and the second has pr
 
 The other thing we could do is to eat a dark chocolate, which can be achieved if we draw a dark chocolate, start the game over, and then pick another dark chocolate, which has probability $d^2/\left(m+d\right)^2.$
 
-![](/img/2020-10-04-MD-state-transition.png){:width="400 px" class="image-centered"}
+![](/img/2020-10-04-MD-state-transition.png){:width="400px" class="image-centered"}
 
 So, starting in the $\mathbf{M}$ state, the probability that we eat another soymilk chocolate is
 
