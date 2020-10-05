@@ -134,6 +134,8 @@ $$p_{d\downarrow} = \left(\frac{1}{f_m^2} -1\right)p_{m\downarrow},$$
 
 which has the same qualitative behavior.
 
+![](/img/2020-10-04-rate-graph.png){:width="450px" class="image-centered"}
+
 ### Ensemble mean
 
 We can think of the average behavior as a point in $\left(m,d\right)$ space that approaches the origin as we eat the chocolates in the bag:
