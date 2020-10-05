@@ -46,10 +46,10 @@ Suppose we have $2$ soymilk chocolates and $3$ dark chocolates, so our system st
 The orders in which we can eat these chocolates while having a soymilk chocolate be our last are these four:
 
 $$\begin{align}
-& \mathbf{M}\mathbf{S}\mathbf{S}\mathbf{S}\mathbf{M} \\
-& \mathbf{S}\mathbf{M}\mathbf{S}\mathbf{S}\mathbf{M} \\
-& \mathbf{S}\mathbf{S}\mathbf{M}\mathbf{S}\mathbf{M} \\
-& \mathbf{S}\mathbf{S}\mathbf{S}\mathbf{M}\mathbf{M}
+& \mathbf{M}\rightarrow\mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{M} \\
+& \mathbf{S}\rightarrow\mathbf{M}\rightarrow\mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{M} \\
+& \mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{M}\rightarrow\mathbf{S}\rightarrow\mathbf{M} \\
+& \mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{S}\rightarrow\mathbf{M}\rightarrow\mathbf{M}
 \end{align}$$
 
 
