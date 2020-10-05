@@ -121,7 +121,7 @@ If we take these results for granted, we can use induction to show that the recu
 
 However, we'll now switch to an intuitive picture of the hidden pendulum that drives the system toward balance so that $P(m,d) = 1/2$ for all $m$ and $d.$
 
-### The power of physics
+### Bag dynamics
 
 The striking thing about this bag is how it can restore balance. To get a handle on this, I focus on how the system switches back and forth between the $\mathbf{M}$ and $\mathbf{D}$ states and, in particular, how it behaves when it's very imbalanced. 
 
@@ -178,6 +178,8 @@ We can think of the average behavior as a point in $\left(m,d\right)$ space that
 ![](/img/2020-10-04-graph-scheme.png){:width="450px" class="image-centered"}
 
 Our analysis above suggests that points under the $m=d$ (with more $m$ than $d$) line will race horizontally toward the line, overshoot so that $f_d \approx 1/\sqrt{2}$ and then dive vertically, oscillating in this way down to the origin, hugging the line $m=d.$ Likewise, points above the $m=d$ line (with more $d$ than $m$) will dive vertically down to the line overshoot a bit, then race horizontally back to the line, oscillating down to the origin. 
+
+![](/img/2020-10-04-point-dynamics.png){:width="450px" class="image-centered"}
 
 Because the imbalance in transition probabilities gets much stronger (ex. $\sim 1/f_d^2$) when there's a strong imbalance, **all bags**, no matter how "extreme" their imbalance, will be driven strongly toward the line $m=d$ before oscillating down to the origin in unison.
 
