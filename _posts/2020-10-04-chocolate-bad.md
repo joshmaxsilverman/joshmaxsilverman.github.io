@@ -66,7 +66,7 @@ The other thing we could do is to eat a dark chocolate, which can be achieved if
 
 So, starting in the $\mathbf{M}$ state, the probability that we eat another soymilk chocolate is
 
-$$p_{m\downarrow} = \dfrac{m^2 + 2md}{\left(m+d\right)^2 = \dfrac{\left(m+d\right)^2 - d^2}{\left(m+d\right)^2}$$
+$$p_{m\downarrow} = \dfrac{m^2 + 2md}{\left(m+d\right)^2} = \dfrac{\left(m+d\right)^2 - d^2}{\left(m+d\right)^2}$$
 
 and the probability that we eat a dark chocolate is
 
