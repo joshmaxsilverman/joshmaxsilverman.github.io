@@ -62,12 +62,12 @@ In total, $\mathbf{MDDDM}$ has probability $2/5\times \left(3/4\right)^2 \times 
 
 Proceeding by the same rules, the probabilities of the rest are
 
-$$\begin{array}{c|c}
+$$\begin{array}{|c|c|} \hline
 \text{move} & P(\text{move}) \\ \hline
 \mathbf{MDDDM} & 2/5\times\left(3/4\right)^2\times\left(1/3\times 2/3+2/3\right)\left(1/2\times 1/2+1/2\right)\times 1 = 3/20\\
 \mathbf{DMDDM} & 3/5\times\left(2/4\right)^2\left(2/3\right)^2\left(1/2\times 1/2+1/2\right)\times 1 = 1/20 \\
 \mathbf{DDMDM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\right)^2\left(1/2\right)^2\times 1 = 1/20 \\
-\mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\times 1/3+1/3\right)\times 1\times 1 = 1/4
+\mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\times 1/3+1/3\right)\times 1\times 1 = 1/4 \\ \hline
 \end{array}$$
 
 Adding these up, incredibily, we get $3/20 + 1/20+1/20 + 5/20 = 1/2.$
