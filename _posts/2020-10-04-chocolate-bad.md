@@ -5,7 +5,9 @@ title: A Bag of Chocolates
 date: 2020/10/04
 ---
 
->Question
+>**Question**: Your good friend, the Count, is back from $6$ years on a pirate ship and, as promised, she has brought with her, among other gifts, various and sundry, a bag of chocolates. But not just any bag of a chocolates, a velvet bag of chocolates. And not just any bag of velvet chocolates, but one that contains \(d\) dark chocolates, \(m\) soymilk chocolates, and has a built-in game whose rules determine when you can eat them!
+
+The rules are as follows: 1. pick any chocolate from the bag and consume it, 2. pick another chocolate from the bag and eat it if it's the same kind as the one you just consumed, otherwise place it back in the bag and return to step 1. Just as you're about the get started, your well traveled friend says "hey, one more rule, you win this game if the very last chocolate you eat is a soymilk chocolate." What is the probability that you win the game?
 
 <!--more-->
 
