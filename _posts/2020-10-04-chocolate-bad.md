@@ -13,7 +13,7 @@ date: 2020/10/04
 
 ## Solution
 
-At the bottom of this bag hides a small amplitude pendulum. But first we'll work out the structue of the bag's states and the transitions that happen between them.
+At the bottom of this bag hides a small amplitude pendulum. But first we'll work out the structure of the bag's states and the transitions that happen between them.
 
 ### Intuition
 
@@ -52,13 +52,15 @@ $$\begin{align}
 \mathbf{D} \rightarrow \mathbf{D} \rightarrow \mathbf{D} \rightarrow \mathbf{M} \rightarrow \mathbf{M}
 \end{align}$$
 
-We can calculate the probability of each trajectory in turn.
+Because of the rules of the game, there are two ways for us to eat the same kind of chocolate twice in a row, but only one way for us to switch from one chocolate type to another. 
 
-Because of the rules of the game, there are two ways for us to eat the same kind of chocolate twice in a row, but only one way for us to switch from one chocolate type to another. Let's calculate.
+Let's calculate the probability of each trajectory in turn.
+
+### $\mathbf{MDDDM}$
 
 The probability of drawing an $\mathbf{M}$ first is $2/5.$ From there, we switch to $\mathbf{D}$ which means we drew a $\mathbf{D},$ restarting the game, and then drew $\mathbf{D}$ again, which has overall probability $\left(3/4\right)^2.$ The next move is back to $\mathbf{D}$ which can happen either by direct transition (probability $2/3$) or by drawing a soymilk chocolate, restarting the game, and then drawing a dark chocolate again (probability $1/3\times 2/3$), giving the step overall probability $2/3 + 1/3\times 2/3 = 8/9.$ The next step is another draw of $\mathbf{D}$ which has probability $1/2 + \left(1/2\right)^2$ (we can draw dark directly, or draw milk chocolate, restart the game, and draw dark again) and the last step is forced.
 
-In total, $\mathbf{MDDDM}$ has probability $2/5\times \left(3/4\right)^2 \times 8/9 \times 1/2 = 9/40.$
+In total, $\mathbf{MDDDM}$ has probability $2/5\times \left(3/4\right)^2 \times 8/9 \times 1/2 = 3/20.$
 
 Proceeding by the same rules, the probabilities of the rest are
 
@@ -70,7 +72,7 @@ $$\begin{array}{|c|c|} \hline
 \mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\times 1/3+1/3\right)\times 1\times 1 = 1/4 \\ \hline
 \end{array}$$
 
-Adding these up, incredibily, we get $3/20 + 1/20+1/20 + 5/20 = 1/2.$
+Adding these up, incredibly, we get $3/20 + 1/20+1/20 + 5/20 = 1/2.$
 
 This matches our expectation that the bag has built-in dynamics that abhor imbalanced states, but $1/2$ seems a little perfect. 
 
