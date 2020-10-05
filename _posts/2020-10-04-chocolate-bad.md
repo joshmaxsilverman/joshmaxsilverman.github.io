@@ -160,7 +160,8 @@ Following the diagram above, we can generate the entire recursion relation. At t
 
 Carrying on like this, we get 
 
-$$P(m,d) = \frac{m}{m+d}\frac{d}{m+d-1}P(m-1,d) + \frac{m}{m+d}\frac{m-1}{m+d-1}\frac{d}{m+d-2}P(m-2,d) + \frac{m}{m+d}\frac{m-1}{m+d-1}\frac{m-2}{m+d-2}\frac{d}{m+d-3}P(m-3,d) + \ldots + \frac{d}{m+d}\frac{m}{m+d-1}P(m,d-1) + \frac{d}{m+d}\frac{d-1}{m+d-1}\frac{m}{m+d-2}P(m,d-2) + \frac{d}{m+d}\frac{d-1}{m+d-1}\frac{d-2}{m+d-2}\frac{m}{m+d-3}P(m,d-3) + \ldots$$
+$$\begin{align}
+P(m,d) &= \frac{m}{m+d}\frac{d}{m+d-1}P(m-1,d) \\ &+ \frac{m}{m+d}\frac{m-1}{m+d-1}\frac{d}{m+d-2}P(m-2,d) \\ &+ \frac{m}{m+d}\frac{m-1}{m+d-1}\frac{m-2}{m+d-2}\frac{d}{m+d-3}P(m-3,d) \\ &+ \ldots + \frac{d}{m+d}\frac{m}{m+d-1}P(m,d-1) \\ &+ \frac{d}{m+d}\frac{d-1}{m+d-1}\frac{m}{m+d-2}P(m,d-2) \\ &+ \frac{d}{m+d}\frac{d-1}{m+d-1}\frac{d-2}{m+d-2}\frac{m}{m+d-3}P(m,d-3) \\ &+ \ldots \end{align}$$
 
 
 It seems awfully odd that $P\left(2,3\right)$ is $1/2$ (as are $P(1,1)$ and $P(2,1)$ and $P(1,2).$ To quickly check what's going on, we can simulate with the code below. Indeed, we find $1/2$ everywhere we look.
