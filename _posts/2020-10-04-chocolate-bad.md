@@ -174,8 +174,7 @@ import random
 import copy
 import numpy as np
 
-N_soymilk = 2
-N_dark = 8
+N_soymilk, N_dark = (2, 8)
 chocolates = ["SOYMILK"] * N_soymilk + ["DARK"] * N_dark
 
 def round():
