@@ -192,7 +192,7 @@ def round():
     else:
         return(0)
         
-results = [round() for _ in range(10000000)]
+results = [round() for _ in range(10_000_000)]
 np.mean(results)
 ```
 
