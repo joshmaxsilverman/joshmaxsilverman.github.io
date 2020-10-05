@@ -64,10 +64,10 @@ Proceeding by the same rules, the probabilities of the rest are
 
 $$\begin{array}{c|c}
 \text{moves} & P(\text{moves}) \\
-\mathbf{MDDDM} & 2/5\times\left(3/4\right)^2\times\left(1/3\times2/3+2/3\right)\left(1/2\times1/2+1/2\right)\times1 \\
-\mathbf{DMDDM} & 3/5\times\left(2/4\right)^2\left(2/3\right)^2\left(1/2\times1/2+1/2\right)\times1 \\
-\mathbf{DDMDM} & 3/5\left(2/4\times2/4+2/4\right)\left(2/3\right)^2\left(1/2\right)^2 \\
-\mathbf{DDDMM} & 3/5\left(2/4\times2/4+2/4right)\left(2/3\times1/3+1/3\right)\times1\times1
+\mathbf{MDDDM} & 2/5\times\left(3/4\right)^2\times\left(1/3\times 2/3+2/3\right)\left(1/2\times 1/2+1/2\right)\times 1 \\
+\mathbf{DMDDM} & 3/5\times\left(2/4\right)^2\left(2/3\right)^2\left(1/2\times 1/2+1/2\right)\times 1 \\
+\mathbf{DDMDM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\right)^2\left(1/2\right)^2\times 1 \\
+\mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4right)\left(2/3\times 1/3+1/3\right)\times 1\times 1
 \end{array}$$
 
 ### Lane model
