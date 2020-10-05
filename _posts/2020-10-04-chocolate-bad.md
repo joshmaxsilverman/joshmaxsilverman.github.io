@@ -98,7 +98,8 @@ import copy
 
 N_soymilk = 2;
 N_dark = 8;
-chocolates = ["SOYMILK" for _ in range(N_soymilk)] + ["DARK" for _ in range(N_dark)]
+chocolates = ["SOYMILK" for _ in range(N_soymilk)] +
+             ["DARK" for _ in range(N_dark)]
 
 def round():
     last = "NA"
