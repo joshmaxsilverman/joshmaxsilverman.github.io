@@ -63,12 +63,32 @@ In total, $\mathbf{MDDDM}$ has probability $2/5\times \left(3/4\right)^2 \times 
 Proceeding by the same rules, the probabilities of the rest are
 
 $$\begin{array}{c|c}
-\text{moves} & P(\text{moves}) \\
-\mathbf{MDDDM} & 2/5\times\left(3/4\right)^2\times\left(1/3\times 2/3+2/3\right)\left(1/2\times 1/2+1/2\right)\times 1 \\
-\mathbf{DMDDM} & 3/5\times\left(2/4\right)^2\left(2/3\right)^2\left(1/2\times 1/2+1/2\right)\times 1 \\
-\mathbf{DDMDM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\right)^2\left(1/2\right)^2\times 1 \\
-\mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\times 1/3+1/3\right)\times 1\times 1
+\text{move} & P(\text{move}) \\ \hline
+\mathbf{MDDDM} & 2/5\times\left(3/4\right)^2\times\left(1/3\times 2/3+2/3\right)\left(1/2\times 1/2+1/2\right)\times 1 = 3/20\\
+\mathbf{DMDDM} & 3/5\times\left(2/4\right)^2\left(2/3\right)^2\left(1/2\times 1/2+1/2\right)\times 1 = 1/20 \\
+\mathbf{DDMDM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\right)^2\left(1/2\right)^2\times 1 = 1/20 \\
+\mathbf{DDDMM} & 3/5\left(2/4\times 2/4+2/4\right)\left(2/3\times 1/3+1/3\right)\times 1\times 1 = 1/4
 \end{array}$$
+
+Adding these up, incredibily, we get $3/20 + 1/20+1/20 + 5/20 = 1/2.$
+
+This matches our expectation that the bag has built-in dynamics that abhor imbalanced states, but $1/2$ seems a little perfect. 
+
+To show that this is true in general, we need to keep track of how $P(m,d)$ relates to $P(m-1,d), P(m,d-1), \ldots, P(m-2,d-1), \ldots.$
+
+### Recursion
+
+$P(m,d)$ refers to the probability that the last chocolate we eat is a soymilk one, given that we start the game in the state $\left(m,d\right).$ However, in the course of the game, we're not always starting new games. In fact, as long as we're amidst a string of $\mathbf{M}$ or $\mathbf{D},$ we won't be in the new game state $\mathbf{BS}.$ 
+
+However, whenever we draw a chocolate different from the last one we've consumed, then we're starting a new game. With this in mind, we can keep track of how we enter the $\mathbf{BS}$ state.
+
+At the beginning of the game, we either enter the $\mathbf{M}$ or $\mathbf{D}$ state. If we enter the $\mathbf{M}$ state and we don't draw a soymilk chocolate on our next attempt, then we'll start a new game in the state $\left(m-1,d\right).$ Likewise, if we do draw another soymilk chocolate, but then draw a dark chocolate, we'll start a new game in the $\left(m-2,d\right)$ state. 
+
+Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $100\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $0\%$ chance to end in a soymilk chocolate. Carrying on like this, we get 
+
+![](/img/PNG image.png)
+
+
 
 ### Lane model
 
