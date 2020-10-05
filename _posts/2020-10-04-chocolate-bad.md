@@ -145,6 +145,21 @@ and the probability that we eat a dark chocolate is
 
 $$p_{d\downarrow} = \dfrac{d^2}{\left(m+d\right)^2.}$$
 
+Dividing these two transition probabilities, we get
+
+$$\begin{align}
+\dfrac{p_{m\downarrow}}{p_{d\downarrow}} &= \dfrac{\left(m+d\right)^2 - d^2}{d^2} \\
+&= \dfrac{\left(m+d\right)^2}{d^2} - 1
+\end{align}$$
+
+or, writing $d/\left(m+d\right)$ as $f_d$ (the fraction of chocolates that are dark), we have
+
+$$p_{m\downarrow} = \left(\frac{1}{f_d^2} -1\right)p_{d\downarrow}.$$
+
+What this says is that when $f_d$ is small, the bag will force us to each soymilk chocolates significantly faster than we eat dark chocolates. In fact, it will drive the system in this direction until the term in parenthesis is equal to $1$ (which makes the rates equal), but this doesn't happen until $f_d = 1/\sqrt{2} \approx 0.7071.$ 
+
+Putting this into plain English, when we've just eaten a soymilk chocolate, and soymilk chocolates outnumber dark chocolates, the probability that we continue to eat milk chocolate is **much** greater than the probability we switch to dark chocolate. Furthermore, due to the intrinsic inertia of the states, we will be favore to do this until $f_d$ swings up to $0.7071,$ past the balance point $f_d = f_m = 1/2.$ 
+
 ![](/img/2020-10-04-graph-scheme.png){:width="450px" class="image-centered"}
 
 
