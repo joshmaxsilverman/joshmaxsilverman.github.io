@@ -76,49 +76,6 @@ This matches our expectation that the bag has built-in dynamics that abhor imbal
 
 To show that this is true in general, we need to keep track of how $P(m,d)$ relates to $P(m-1,d), P(m,d-1), \ldots, P(m-2,d-1), \ldots.$
 
-### Recursion
-
-$P(m,d)$ refers to the probability that the last chocolate we eat is a soymilk one, given that we start the game in the state $\left(m,d\right).$ However, in the course of the game, we're not always starting new games. In fact, as long as we're amidst a string of $\mathbf{M}$ or $\mathbf{D},$ we won't be in the new game state $\mathbf{BS}.$ 
-
-However, whenever we draw a chocolate different from the last one we've consumed, then we're starting a new game. With this in mind, we can keep track of how we enter the $\mathbf{BS}$ state.
-
-At the beginning of the game, we either enter the $\mathbf{M}$ or $\mathbf{D}$ state. If we enter the $\mathbf{M}$ state and we don't draw a soymilk chocolate on our next attempt, then we'll start a new game in the state $\left(m-1,d\right).$ Likewise, if we do draw another soymilk chocolate, but then draw a dark chocolate, we'll start a new game in the $\left(m-2,d\right)$ state. 
-
-Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $100\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $0\%$ chance to end in a soymilk chocolate. 
-
-Carrying on like this, we get 
-
-![](/img/PNG image.png)
-
-It seems awfully odd that $P\left(2,3\right)$ is $1/2$ (as are $P(1,1)$ and $P(2,1)$ and $P(1,2).$ To quickly check what's going on, we can simulate with the code below. Indeed, we find $1/2$ everywhere we look.
-
-```python
-import random
-import copy
-
-N_soymilk = 2;
-N_dark = 8;
-chocolates = ["SOYMILK" for _ in range(N_soymilk)] +
-             ["DARK" for _ in range(N_dark)]
-
-def round():
-    last = "NA"
-    bag = copy.deepcopy(chocolates)
-    while len(bag) > 1:
-        candidate = random.sample(bag, 1)[0]
-        if last == "NA" or candidate == last:
-            bag.remove(candidate)
-            last = candidate
-        else:
-            last = "NA"
-    if bag[0] == "SOYMILK":
-        return(1)
-    else:
-        return(0)
-```
-
-If we take these results for granted, we can use induction to show that the recursion equation indeed generates $1/2$ in any higher cases we wish to check. 
-
 However, we'll now switch to an intuitive picture of the hidden pendulum that drives the system toward balance so that $P(m,d) = 1/2$ for all $m$ and $d.$
 
 ### Bag dynamics
@@ -156,7 +113,7 @@ $$\begin{align}
 
 or, writing $d/\left(m+d\right)$ as $f_d$ (the fraction of chocolates that are dark), we have
 
-$$p_{m\downarrow} = \left(\frac{1}{f_d^2} -1\right)p_{d\downarrow}.$$
+$$p_{m\downarrow} = \left(\frac{1}{f_d^2} - 1\right)p_{d\downarrow}.$$
 
 What this says is that when $f_d$ is small, the bag will force us to each soymilk chocolates significantly faster than we eat dark chocolates. In fact, it will drive the system in this direction until the term in parenthesis is equal to $1$ (which makes the rates equal), but this doesn't happen until $f_d = 1/\sqrt{2} \approx 0.7071.$ 
 
@@ -167,7 +124,7 @@ Let's put this into plain English:
 
 The analysis we just performed was for when we've just eaten a soymilk chocolate. If we did the same analysis for when we've just eaten a dark chocolate, we get the similar result
 
-$$$$p_{d\downarrow} = \left(\frac{1}{f_m^2} -1\right)p_{m\downarrow},$$
+$$p_{d\downarrow} = \left(\frac{1}{f_m^2} -1\right)p_{m\downarrow},$$
 
 which has the same qualitative behavior.
 
@@ -184,6 +141,51 @@ Our analysis above suggests that points under the $m=d$ (with more $m$ than $d$)
 Because the imbalance in transition probabilities gets much stronger (ex. $\sim 1/f_d^2$) when there's a strong imbalance, **all bags**, no matter how "extreme" their imbalance, will be driven strongly toward the line $m=d$ before oscillating down to the origin in unison.
 
 Therefore, we expect the average bag to finish the game in the $\left(1,1\right)$ state, a coin flip between soymilk and dark chocolate.
+
+### Recursion
+
+$P(m,d)$ refers to the probability that the last chocolate we eat is a soymilk one, given that we start the game in the state $\left(m,d\right).$ However, in the course of the game, we're not always starting new games. In fact, as long as we're amidst a string of $\mathbf{M}$ or $\mathbf{D},$ we won't be in the new game state $\mathbf{BS}.$ 
+
+However, whenever we draw a chocolate different from the last one we've consumed, then we're starting a new game. With this in mind, we can keep track of how we enter the $\mathbf{BS}$ state.
+
+At the beginning of the game, we either enter the $\mathbf{M}$ or $\mathbf{D}$ state. If we enter the $\mathbf{M}$ state and we don't draw a soymilk chocolate on our next attempt, then we'll start a new game in the state $\left(m-1,d\right).$ Likewise, if we do draw another soymilk chocolate, but then draw a dark chocolate, we'll start a new game in the $\left(m-2,d\right)$ state. 
+
+Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $100\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $0\%$ chance to end in a soymilk chocolate. 
+
+Carrying on like this, we get 
+
+![](/img/PNG image.png)
+
+It seems awfully odd that $P\left(2,3\right)$ is $1/2$ (as are $P(1,1)$ and $P(2,1)$ and $P(1,2).$ To quickly check what's going on, we can simulate with the code below. Indeed, we find $1/2$ everywhere we look.
+
+```python
+import random
+import copy
+
+N_soymilk = 2;
+N_dark = 8;
+chocolates = ["MILK"] * N_milk + ["DARK"] * N_dark
+
+def round():
+    last = "NA"
+    bag = copy.deepcopy(chocolates)
+    while len(bag) > 1:
+        candidate = random.sample(bag, 1)[0]
+        if last == "NA" or candidate == last:
+            bag.remove(candidate)
+            last = candidate
+        else:
+            last = "NA"
+    if bag[0] == "SOYMILK":
+        return(1)
+    else:
+        return(0)
+        
+results = [round() for _ in range(10000000)]
+np.mean(results)
+```
+
+If we take these results for granted, we can use induction to show that the recursion equation indeed generates $1/2$ in any higher cases we wish to check. 
 
 <br>
 
