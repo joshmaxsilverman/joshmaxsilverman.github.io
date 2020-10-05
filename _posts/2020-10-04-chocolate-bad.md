@@ -58,7 +58,7 @@ Because of the rules of the game, there are two ways for us to eat the same kind
 
 The probability of drawing an $\mathbf{M}$ first is $2/5.$ From there, we switch to $\mathbf{D}$ which means we drew a $\mathbf{D},$ restarting the game, and then drew $\mathbf{D}$ again, which has overall probability $\left(3/4\right)^2.$ The next move is back to $\mathbf{D}$ which can happen either by direct transition (probability $2/3$) or by drawing a soymilk chocolate, restarting the game, and then drawing a dark chocolate again (probability $1/3\times 2/3$), giving the step overall probability $2/3 + 1/3\times 2/3 = 8/9.$ The next step is another draw of $\mathbf{D}$ which has probability $1/2 + \left(1/2\right)^2$ (we can draw dark directly, or draw milk chocolate, restart the game, and draw dark again) and the last step is forced.
 
-In total, $\mathbf{MDDDM}$ has probability $2/5\times left(3/4\right)^2 \times 8/9 \times 1/2 = 9/40.$
+In total, $\mathbf{MDDDM}$ has probability $2/5\times \left(3/4\right)^2 \times 8/9 \times 1/2 = 9/40.$
 
 Proceeding by the same rules, the probabilities of the rest are
 
