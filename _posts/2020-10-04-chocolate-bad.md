@@ -109,6 +109,5 @@ and the probability that we eat a dark chocolate is
 $$p_{d\downarrow} = \dfrac{d^2}{\left(m+d\right)^2.}$$
 
 
-
 <br>
 
