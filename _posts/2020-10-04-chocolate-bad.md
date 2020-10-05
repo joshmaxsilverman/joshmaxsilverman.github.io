@@ -117,17 +117,25 @@ def round():
         return(0)
 ```
 
-If we take these results for granted, we can use induction to show that the recursion equation indeed generates $1/2$ in any higher case we wish to check. However, we'll switch now to an intuitive picture of the hidden pendulum that drives the system toward balance so that $P(m,d) = 1/2$ for all $m$ and $d.$
+If we take these results for granted, we can use induction to show that the recursion equation indeed generates $1/2$ in any higher cases we wish to check. 
+
+However, we'll now switch to an intuitive picture of the hidden pendulum that drives the system toward balance so that $P(m,d) = 1/2$ for all $m$ and $d.$
 
 ### Lane model
 
-Suppose we enter the $\mathbf{M}$ state. What can happen?
+The striking thing about this bag is how it can restore balance. To get a handle on this, I focus on how the system switches back and forth between the $\mathbf{M}$ and $\mathbf{D}$ states and, in particular, how it behaves when it's very imbalanced.
+
+Because the $\mathbf{BS}$ (blank slate) state is just a stopover, a temporary state we reside in while we restart the game, we will immediately determine the system's next state rather than keeping track of a bunch of $\mathbf{BS}$ states.
+
+Suppose we find ourselves having just eaten a soymilk chocolate, with the bag in the state $left(m,d\right).$ What is the relative likelihood of our next moves? 
 
 One thing we could do is to eat another soymilk chocolate, which can be achieved either by picking a soymilk chocolate on our next draw, or by picking a dark chocolate, starting the game over, and then picking a milk chocolate. 
 
 The probability of the first event is $m/\left(m+d\right)$ and the second has probability $md/\left(m+d\right)^2.$
 
 The other thing we could do is to eat a dark chocolate, which can be achieved if we draw a dark chocolate, start the game over, and then pick another dark chocolate, which has probability $d^2/\left(m+d\right)^2.$
+
+![](2020-10-04-MD-state-transition.png){:width="400 px" class="image-centered"}
 
 So, starting in the $\mathbf{M}$ state, the probability that we eat another soymilk chocolate is
 
@@ -137,6 +145,9 @@ and the probability that we eat a dark chocolate is
 
 $$p_{d\downarrow} = \dfrac{d^2}{\left(m+d\right)^2.}$$
 
+![](/img/2020-10-04-graph-scheme.png)
+
 
 <br>
+
 
