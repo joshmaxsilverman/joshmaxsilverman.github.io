@@ -152,11 +152,15 @@ However, whenever we draw a chocolate different from the last one we've consumed
 
 At the beginning of the game, we either enter the $\mathbf{M}$ or $\mathbf{D}$ state. If we enter the $\mathbf{M}$ state and we don't draw a soymilk chocolate on our next attempt, then we'll start a new game in the state $\left(m-1,d\right).$ Likewise, if we do draw another soymilk chocolate, but then draw a dark chocolate, we'll start a new game in the $\left(m-2,d\right)$ state. 
 
+![](/img/2020-10-04-recursion-diagram.png){:width="450px" class="image-centered"}
+
+![](/img/PNG image.png)
+
 Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $100\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $0\%$ chance to end in a soymilk chocolate. 
 
 Carrying on like this, we get 
 
-![](/img/PNG image.png)
+
 
 It seems awfully odd that $P\left(2,3\right)$ is $1/2$ (as are $P(1,1)$ and $P(2,1)$ and $P(1,2).$ To quickly check what's going on, we can simulate with the code below. Indeed, we find $1/2$ everywhere we look.
 
