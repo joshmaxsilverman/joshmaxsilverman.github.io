@@ -165,7 +165,7 @@ Starting from the state $\mathbf{M},$ we have probability $m/(d+e+m)$ of immedia
 $$\begin{align}
 p_{\downarrow m} &= \dfrac{m}{d+e+m} + \frac{m(d+e)}{(d+e+m)^2} \\
 &= \dfrac{m^2 + 2m(d+e)}{(d+e+m)^2} \\
-&= \dfrac{(d+e+m)^2 - (d^2 + e^2)}{(d+e+m)^2}
+&= \dfrac{(d+e+m)^2 - (d + e)^2}{(d+e+m)^2}
 \end{align}$$
 
 To go $\mathbf{M} \rightarrow \mathbf{D}$ or $\mathbf{M}\rightarrow\mathbf{E},$ we need to draw a dark or enegry chocolate, ans then draw another dark or energy chocolate. The probability of doing this is then
@@ -175,14 +175,14 @@ $$ p_{\downarrow m\text{ or } d} = \dfrac{(d+e)^2}{(d+e+m)^2} $$
 Taking the ratio of these two probabilities, we find
 
 $$\begin{align}
-\dfrac{p_{\downarrow m}}{ p_{\downarrow m\text{ or } d}} = \dfrac{(d+e+m)^2 - (d^2 + e^2)}{(d+e)^2} \\
+\dfrac{p_{\downarrow m}}{ p_{\downarrow m\text{ or } d}} = \dfrac{(d+e+m)^2 - (d + e)^2}{(d+e)^2} \\
 &= \dfrac{(d+e+m)^2}{(d+e)^2} - 1 \\ 
 &= \dfrac{1}{(1 - f_m)^2} - 1,
 \end{align}$$
 
 which reflects the same message as before. If we've just eaten a soymilk chocolate, and the fractional composition of the bag is biased toward $m,$ then the odds are that we'll continue to eat $m,$ overswinging a bit before we're likely to switch to eating one of the other chocolates. 
 
-So, the system is again driven toward balance, and the ensemble mean will end up in the $\left(1,1,1\right)$ state where it is equally likely that we eat soymilk $\mathbf{M}$, dark $\mathbf{D},$ or eneergy $\mathbf{E]$ chocolate, last.
+So, the system is again driven toward balance, and the ensemble mean will end up in the $\left(1,1,1\right)$ state where it is equally likely that we eat soymilk $\mathbf{M}$, dark $\mathbf{D},$ or eneergy $\mathbf{E}$ chocolate, last.
 
 ### Recursion
 
