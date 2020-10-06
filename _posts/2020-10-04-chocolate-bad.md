@@ -182,7 +182,7 @@ $$\begin{align}
 
 which reflects the same message as before. If we've just eaten a soymilk chocolate, and the fractional composition of the bag is biased toward $m,$ then the odds are that we'll continue to eat $m,$ overswinging a bit before we're likely to switch to eating one of the other chocolates. 
 
-So, the system is again driven toward balance, and the ensemble mean will end up in the $\left(1,1,1\right)$ state where it is equally likely that we eat soymilk $\mathbf{M}$, dark $\mathbf{D},$ or eneergy $\mathbf{E}$ chocolate, last.
+So, the system is again driven toward balance, and the ensemble mean will end up in the $\left(1,1,1\right)$ state where it is equally likely that we eat soymilk $\mathbf{M}$, dark $\mathbf{D},$ or energy $\mathbf{E}$ chocolate, last.
 
 ### Recursion
 
