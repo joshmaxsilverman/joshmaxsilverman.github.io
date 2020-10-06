@@ -175,7 +175,7 @@ $$ p_{\downarrow m\text{ or } d} = \dfrac{(d+e)^2}{(d+e+m)^2} $$
 Taking the ratio of these two probabilities, we find
 
 $$\begin{align}
-\dfrac{p_{\downarrow m}}{ p_{\downarrow m\text{ or } d}} = \dfrac{(d+e+m)^2 - (d + e)^2}{(d+e)^2} \\
+\dfrac{p_{\downarrow m}}{ p_{\downarrow m\text{ or } d}} &= \dfrac{(d+e+m)^2 - (d + e)^2}{(d+e)^2} \\
 &= \dfrac{(d+e+m)^2}{(d+e)^2} - 1 \\ 
 &= \dfrac{1}{(1 - f_m)^2} - 1,
 \end{align}$$
