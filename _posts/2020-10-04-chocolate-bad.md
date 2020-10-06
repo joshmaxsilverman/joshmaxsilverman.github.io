@@ -160,7 +160,7 @@ At the beginning of the game, we either enter the $\mathbf{M}$ or $\mathbf{D}$ s
 
 ![](/img/2020-10-04-recursion-diagram.png){:width="450px" class="image-centered"}
 
-Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $100\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $0\%$ chance to end in a soymilk chocolate. 
+Following the diagram above, we can generate the entire recursion relation. At the base of the left hand chain, we have the state $\left(1,0\right)$ which has $0\%$ probability to end in a soymilk chocolate. Similarly, if we reach the bottom of the right hand chain, we have the state $\left(0,1\right)$ which has $100\%$ chance to end in a soymilk chocolate. 
 
 Carrying on like this, we get 
 
