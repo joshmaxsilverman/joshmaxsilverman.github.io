@@ -233,5 +233,5 @@ np.mean(results)
 Indeed, we find $1/2$ everywhere we look. If we take this result for granted, we can use induction to show that the recursion equation generates $1/2$ in any higher case we wish to check, though we won't in this slender margin. 
 
 <br>
-
+ 
 
