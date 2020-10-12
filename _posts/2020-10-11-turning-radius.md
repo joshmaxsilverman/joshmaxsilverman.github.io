@@ -5,7 +5,7 @@ title: A Tale of Two U-turns
 date: 2020/10/11
 ---
 
->Question
+>**Question**: You're driving your truck — which has the footprint of a bicycle — down to the grocery store to pick up yams for the big day. Boy do you love yourself some yams! When you're halfway there, you realize you left your mask at home. What a klutz! You make a U-turn, pointing holding your front tire $30\,^\circ$ to the left until you turn around. When you're almost home, you stroke your chin, contemplating your own forgetfulness, when you realize the mask has been on your face the whole time! Always one to outdo yourself, you decide that for your next U-turn, you're going to angle the back tire $30\,^\circ$ of its own! What are your turning radii in either case?
 
 <!--more-->
 
