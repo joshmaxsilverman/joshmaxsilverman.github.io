@@ -18,7 +18,7 @@ date: 2020/10/11
 The motion of the truck abides two basic rules:
 
 - each tire points tangential to its current path
-- with wheels fixed, the situation is not chnaged by how we look at it, so the truck travels in a circle
+- with wheels fixed, the situation is not changed by how we look at it, so the truck travels in a circle
 
 ### Situation 1
 
