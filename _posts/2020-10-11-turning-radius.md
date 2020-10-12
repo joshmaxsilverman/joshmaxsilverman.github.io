@@ -54,6 +54,18 @@ R\times\cos\theta &= \ell/2 \\
 R &= \dfrac{\ell}{2\cos\theta}
 \end{align}$$
 
+### General case
+
+In general, the front and back tries can be at whatever angles $\phi$ and $\psi$ that we please, in which case $\ell$ is the sum of the cosine projections of the large and small radii:
+
+$$\ell = R\cos\phi + r\cos\psi$$
+
+but the small radius $r$ is related to $R$ by $r = \sin\psi \times R/\sin\phi,$ so
+
+$$\begin{align}
+\left(\cos\phi + \cos\psi\sin\psi/\sin\phi\right) \times R &= ell \\
+R &= \dfrac{\ell}{\cos\phi + \cos\psi\sin\psi/\sin\phi}
+\end{align}$$
 
 
 
