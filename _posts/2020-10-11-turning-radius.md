@@ -26,7 +26,7 @@ The body of the truck points from one tire to the other. Since the back tire is 
 
 To find the larger circle, we can project out a truck length away from the back tire $\ell,$ and wherever the front tire lands determines the outer circle which determines the turning radius. 
 
-![](/img/2020-10-09-turning-radius-situation-1.png){:width="400px" class="image centered"}
+![](/img/2020-10-09-turning-radius-situation-1.png){:width="450px" class="image-centered"}
 
 The small and large radii form right angles their respective tires, so $\ell$ is the projection of $R$ at the angle $\left(\pi/2 - \theta\right)$ and
 
@@ -44,7 +44,7 @@ First of all, the two tires have to tilt in opposite directions relative to the 
 
 The tightest circle they can manage is by pointing the full $30^\circ$ in opposing directions. And because they have the same angle, they'll be on the same circle. 
 
-![](/img/2020-10-09-turning-radius-situation-2.png){:width="400px" class="image centered"}
+![](/img/2020-10-09-turning-radius-situation-2.png){:width="450px" class="image-centered"}
 
 From the drawing, half the length of the truck $\ell/2$ is the projection of $R$ at the angle $\left(\pi/2-\theta\right),$ so
 
