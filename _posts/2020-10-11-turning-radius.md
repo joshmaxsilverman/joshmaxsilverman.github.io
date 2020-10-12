@@ -63,7 +63,7 @@ $$\ell = R\sin\phi + r\sin\psi$$
 but the small radius $r$ is related to $R$ by $r = \cos\phi \times R/\cos\psi,$ so
 
 $$\begin{align}
-\left(\sin\phi + \sin\psi\cos\phi/\cos\psi\right) \times R &= ell \\
+\left(\sin\phi + \sin\psi\cos\phi/\cos\psi\right) \times R &= \ell \\
 R &= \dfrac{\ell}{\sin\phi + \sin\psi\cos\phi/\cos\psi} \\
 &= \dfrac{\ell\cos\psi}{\sin\phi\cos\psi + \sin\psi\cos\phi} \\
 &= \dfrac{\cos\psi}{\sin\left(\phi+\psi\right)}\times\ell
