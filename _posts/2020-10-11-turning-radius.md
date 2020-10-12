@@ -73,6 +73,6 @@ R &= \dfrac{\ell}{\sin\phi + \sin\psi\cos\phi/\cos\psi} \\
 &= \dfrac{\cos\psi}{\sin\left(\phi+\psi\right)}\times\ell
 \end{align}$$
 
-which reduces to $\ell/\sin\phi$ when we plug in $\psi=0$ and to $\ell/\left(2\sin\phi\right)$ when $\psi=\phi.$
+which reduces to $\ell/\cos\phi$ when we plug in $\psi=0$ and to $\ell/\left(2\cos\phi\right)$ when $\psi=\phi.$
 
 <br>
