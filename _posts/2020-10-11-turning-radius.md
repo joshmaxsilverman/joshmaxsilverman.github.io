@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: A Tale of Two U-turns
 date: 2020/10/11
 ---
@@ -58,13 +58,15 @@ R &= \dfrac{\ell}{2\cos\theta}
 
 In general, the front and back tries can be at whatever angles $\phi$ and $\psi$ that we please, in which case $\ell$ is the sum of the cosine projections of the large and small radii:
 
-$$\ell = R\cos\phi + r\cos\psi$$
+$$\ell = R\sin\phi + r\sin\psi$$
 
-but the small radius $r$ is related to $R$ by $r = \sin\psi \times R/\sin\phi,$ so
+but the small radius $r$ is related to $R$ by $r = \cos\phi \times R/\cos\psi,$ so
 
 $$\begin{align}
-\left(\cos\phi + \cos\psi\sin\psi/\sin\phi\right) \times R &= ell \\
-R &= \dfrac{\ell}{\cos\phi + \cos\psi\sin\psi/\sin\phi}
+\left(\sin\phi + \sin\psi\cos\phi/\cos\psi\right) \times R &= ell \\
+R &= \dfrac{\ell}{\sin\phi + \sin\psi\cos\phi/\cos\psi} \\
+&= \dfrac{\ell\cos\psi}{\sin\phi\cos\psi + \sin\psi\cos\phi} \\
+&= \dfrac{\cos\psi}{\sin\left(\phi+\psi\right)}\times\ell
 \end{align}$$
 
 
