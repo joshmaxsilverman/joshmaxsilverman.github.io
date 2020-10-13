@@ -35,9 +35,9 @@ To find the larger circle, we can project out a truck length away from the back 
 The small and large radii form right angles their respective tires, so $\ell$ is the projection of $R$ at the angle $\left(\pi/2 - \theta\right)$ and
 
 $$\begin{align}
-R\times \sin\left(\pi/2 - \theta\right) &= \ell \\
-R\times\cos\theta &= \ell \\
-R &= \dfrac{\ell}{\cos\theta}
+R\times \cos\left(\pi/2 - \theta\right) &= \ell \\
+R\times\sin\theta &= \ell \\
+R &= \dfrac{\ell}{\sin\theta}
 \end{align}$$
 
 ### Situation 2
@@ -53,9 +53,9 @@ The tightest circle they can manage is by pointing the full $30^\circ$ in opposi
 From the drawing, half the length of the truck $\ell/2$ is the projection of $R$ at the angle $\left(\pi/2-\theta\right),$ so
 
 $$\begin{align}
-R\times\sin\left(\pi/2 - \theta\right) &= \ell/2 \\
-R\times\cos\theta &= \ell/2 \\
-R &= \dfrac{\ell}{2\cos\theta}
+R\times\cos\left(\pi/2 - \theta\right) &= \ell/2 \\
+R\times\sin\theta &= \ell/2 \\
+R &= \dfrac{\ell}{2\sin\theta}
 \end{align}$$
 
 ### General case
@@ -73,6 +73,6 @@ R &= \dfrac{\ell}{\sin\phi + \sin\psi\cos\phi/\cos\psi} \\
 &= \dfrac{\cos\psi}{\sin\left(\phi+\psi\right)}\times\ell
 \end{align}$$
 
-which reduces to $\ell/\cos\phi$ when we plug in $\psi=0$ and to $\ell/\left(2\cos\phi\right)$ when $\psi=\phi.$
+which reduces to $\ell/\sin\phi$ when we plug in $\psi=0$ and to $\ell/\left(2\sin\phi\right)$ when $\psi=\phi.$
 
 <br>
