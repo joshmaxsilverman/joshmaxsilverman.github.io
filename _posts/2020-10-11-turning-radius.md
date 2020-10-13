@@ -37,7 +37,8 @@ The small and large radii form right angles their respective tires, so $\ell$ is
 $$\begin{align}
 R\times \cos\left(\pi/2 - \theta\right) &= \ell \\
 R\times\sin\theta &= \ell \\
-R &= \dfrac{\ell}{\sin\theta}
+R &= \dfrac{\ell}{\sin\theta} \\
+&= \dfrac{\ell}{\sin\pi/3}
 \end{align}$$
 
 ### Situation 2
@@ -55,7 +56,8 @@ From the drawing, half the length of the truck $\ell/2$ is the projection of $R$
 $$\begin{align}
 R\times\cos\left(\pi/2 - \theta\right) &= \ell/2 \\
 R\times\sin\theta &= \ell/2 \\
-R &= \dfrac{\ell}{2\sin\theta}
+R &= \dfrac{\ell}{2\sin\theta} \\
+&= \dfrac{\ell}{2\sin\pi/3}
 \end{align}$$
 
 ### General case
