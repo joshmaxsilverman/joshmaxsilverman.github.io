@@ -33,7 +33,7 @@ $$x^\prime = x + \text{a tiny amount}.$$
 
 Since Player 1's patch is assumed to be unappealing, Player 2 and Player 3 are in a battle for the territory $\left(0,x\right)$ that's up for grabs. Player 2 wants to choose $x^\prime < x$ so that Player 3 is not benefitted by betting $x^\pprime > x^\prime,$ stealing Player 2's territory. This is so if Player 2 takes exactly half the available territory, i.e. $x^\prime = \frac12 x.$ 
 
-So, both Player 2 and Player 3 have chance $x/2$ to win. 
+So, both Player 2 and Player 3 have chance $\frac12 x$ to win. 
 
 ### A well-balanced throne
 
