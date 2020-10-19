@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: The Price is Wrong
 date: 2020/10/18
 ---
