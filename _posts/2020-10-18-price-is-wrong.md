@@ -5,7 +5,7 @@ title: The Price is Wrong
 date: 2020/10/18
 ---
 
->Question
+>**Question**:
 
 <!--more-->
 
@@ -13,8 +13,35 @@ date: 2020/10/18
 
 ## Solution
 
-### Starting from the front
+### Starting from the back
 
+This is basically a territory game. Since the price is random, each player's incentive is to stake out as big a patch of territory as they can without making it unstable. It becomes unstable when it makes more sense for a subsequent player to steal it than to stake out their own territory.
+
+If a player guesses $x \elem \left(0, 1\right)$ and nobody else guesses an $x^\prime > x,$ then the player will win if the revealed price is $x$ or greater. In other words, the player would have a probability $1-x$ of winning.
+
+### Protect the throne
+
+Now, if Player 1 chooses $x$ near $0,$ then Player 2 can make a big piece of territory by guessing $x^\prime$ just slightly more than $x.$ This would give Player 1 a chance $\left(x^\prime-x\right)$ of winning, which can be made arbitrarilty small. So, they would actually be incentivized to take a smaller piece of territory so that their territory is not appealing to the Player 3, who would have the same opportunity to steal theirs. 
+
+For this reason, Player 1 wants to choose $x$ near $1$. Suppose, for the moment, that Player 1 has chosen $x$ so that it won't be appealing for Player 2 or Player 3 to try and steal it by picking 
+
+$$x^\prime = x + \text{a tiny amount}.$$
+
+Since Player 1's patch is assumed to be unappealing, Player 2 and Player 3 are in a battle for the territory $\left(0,x\right)$ that's up for grabs. Player 2 wants to choose $x^\prime < x$ so that Player 3 is not benefitted by betting $x^pprime > x^\prime,$ stealing Player 2's territory. This is so if Player 2 takes exactly half the available territory, i.e. $x^\prime = \frac12 x.$ 
+
+So, both Player 2 and Player 3 have chance $x/2$ to win. 
+
+### A well-balanced throne
+
+Now, we assumed that Player 1 picked their price such that it's not appealing to steal from them. If that's the case, Player 1's chance is at most equal to Player 2 and Player 3's. In other words,
+
+$$1-x = x/2$
+
+which is solved when $x=2/3.$
+
+### A note
+
+Because of the tie-breaker condition, which settles the case where everybody guessed higher than the revealed price, Player 3 can actually guess any price between $0$ and $1/3$ without changing their outcome. 
 
 
 <br>
