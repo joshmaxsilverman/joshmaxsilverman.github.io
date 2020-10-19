@@ -41,7 +41,7 @@ Now, we assumed that Player 1 picked their price such that it's not appealing to
 
 $$1-x = x/2$$
 
-which is solved when $\boxed{x=2/3}.$
+which is solved when $x=2/3,$ giving Player 1 a chance $1-x=1/3$ of winning.
 
 ### A note
 
