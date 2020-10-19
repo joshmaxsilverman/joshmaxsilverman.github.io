@@ -17,7 +17,7 @@ date: 2020/10/18
 
 This is basically a territory game. Since the price is random, each player's incentive is to stake out as big a patch of territory as they can without making it unstable. It becomes unstable when it makes more sense for a subsequent player to steal it than to stake out their own territory.
 
-If a player guesses $x \elem \left(0, 1\right)$ and nobody else guesses an $x^\prime > x,$ then the player will win if the revealed price is $x$ or greater. In other words, the player would have a probability $1-x$ of winning.
+If a player guesses $x \in \left(0, 1\right)$ and nobody else guesses an $x^\prime > x,$ then the player will win if the revealed price is $x$ or greater. In other words, the player would have a probability $1-x$ of winning.
 
 ### Protect the throne
 
@@ -35,9 +35,9 @@ So, both Player 2 and Player 3 have chance $x/2$ to win.
 
 Now, we assumed that Player 1 picked their price such that it's not appealing to steal from them. If that's the case, Player 1's chance is at most equal to Player 2 and Player 3's. In other words,
 
-$$1-x = x/2$
+$$1-x = x/2$$
 
-which is solved when $x=2/3.$
+which is solved when $\boxed{x=2/3}.$
 
 ### A note
 
