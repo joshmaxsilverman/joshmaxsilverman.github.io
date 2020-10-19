@@ -5,7 +5,11 @@ title: The Price is Wrong
 date: 2020/10/18
 ---
 
->**Question**: The ghost of Bob Parker takes a break from saving animals to remind you of your invitation to pandemic Price is Right, with Drew Carey. Usually, you're up against some real price wizards, but since nobody has been to a store in $7$ months, everyone is on a level playing field and has no idea about prices. With the prices effectively random, you're left to pure strategy to prevail at the game. As a refresher, everyone guesses the price of the product in succession such that the later contestants can hear the guess of the earlier contestants. Whoever guesses highest without exceeding the true price of the item wins. In the case that everyone guesses too high, the game goes to whoever guessed closest. If you are the first to guess, and all the players are perfectly rational, what is the probability that you win the game?
+>**Question**: The ghost of Bob Parker takes a break from saving animals to remind you of your invitation to pandemic Price is Right, with Drew Carey. Usually, you're up against some real price wizards, but since nobody has been to a store in $7$ months, everyone is on a level playing field and has no idea about prices. 
+>
+>With the prices effectively random, you're left to pure strategy to prevail at the game. As a refresher, everyone guesses the price of the product in succession such that the later contestants can hear the guess of the earlier contestants. Whoever guesses highest without exceeding the true price of the item wins. In the case that everyone guesses too high, the game goes to whoever guessed closest. 
+>
+>If you are the first to guess, and all the players are perfectly rational, what is the probability that you win the game?
 
 <!--more-->
 
