@@ -53,8 +53,7 @@ except that the sum is equal to $1$ and we always pull out the value of $v_1,$ s
 
 As a result, the total weight of all elections with $N$ candidates is the volume of the standard $(N-1)$-dimensional simplex
 
-$$\begin{align}
-w_\text{total} &= \text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1).$$
+$$w_\text{total} = \text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1).$$
 
 The probability of a runoff election is simply
 
