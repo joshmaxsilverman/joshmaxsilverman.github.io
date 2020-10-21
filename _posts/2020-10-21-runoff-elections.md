@@ -23,16 +23,16 @@ where $v_i$ is the vote percentage for candidate $i.$ When all the percentages s
 
 When we consider the shape formed by space between the axes and the plane, it's known as a simplex, and contains all points for which $v_1+v_2+\ldots+v_n\leq 1.$
 
-In general, an $n$-dimensional simplex has volume $1/n!.$ If we adjust things so that $v_1+v_2+\ldots+v_n\leq a,$ this modified simplex has volume 
+In general, an $n$-dimensional simplex has [volume $1/n!.$](https://en.m.wikipedia.org/wiki/Simplex#Volume) If we adjust things so that $v_1+v_2+\ldots+v_n\leq a,$ this modified simplex has volume 
 
 $$\text{Vol}(v_1+v_2+\ldots+v_n\leq a) = \dfrac{a^n}{n!}.$$
 
 Now let's look at some elections. If an election has no runoff, it means that one of the candidates managed to get $v_i > 50\%.$ That means that they have a tuple like
 
-$$\left(0.2, 0.15, 0.51, 0.14\right)$$
+$$\text{election} = \left(0.2, 0.15, 0.51, 0.14\right)$$
 
 If we bring out the winner's coordinate, then this becomes 
 
-$$\left(0.51, \overbrace{\left(0.2, 0.15, 0.14\right)}^{v_1 + v_2 + v_3 \leq \frac12}\right)$$
+$$\text{election} = 0.51 \times, \overbrace{\left(0.2, 0.15, 0.14\right)}^{v_1 + v_2 + v_3 \leq \frac12}$$
 
 <br>
