@@ -55,7 +55,7 @@ $$w_\text{total} = \text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1).$$
 
 ### Volume of the standard simplex
 
-In general, an $n$-dimensional simplex has [volume $1/n!$](https://en.m.wikipedia.org/wiki/Simplex#Volume). If we adjust things so that $v_1+v_2+\ldots+v_n\leq a,$ this modified simplex has volume 
+An $n$-dimensional simplex has [volume $1/n!$](https://en.m.wikipedia.org/wiki/Simplex#Volume). If we generalize things so that $v_1+v_2+\ldots+v_n\leq a,$ this modified simplex has volume 
 
 $$\text{Vol}(v_1+v_2+\ldots+v_n\leq a) = \dfrac{a^n}{n!}.$$
 
