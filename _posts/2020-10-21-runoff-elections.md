@@ -25,7 +25,7 @@ where $v_i$ is the vote percentage for candidate $i.$
 
 When all the percentages satisfy $0\leq v_i \leq 1,$ the set of possible outcomes forms a plane. For two candidates, this is just a line in the plane; for three candidates this is an equilateral triangle in $\text{3D},$ and so on.
 
-When we consider the shape formed by space between the axes and the plane, it's known as a simplex, and contains all points for which $v_1+v_2+\ldots+v_n\leq 1.$ This means that the plane contains the actual elections while the volume contains that define a valid election with $n+1$ participants, i.e. by adding another candidate with vote percentage $v_{n+1} = \left(1-\sum_{i=1}^N v_i\right).$
+When we consider the shape formed by space between the axes and the plane, it's known as a simplex, and contains all points for which $v_1+v_2+\ldots+v_n\leq 1.$ This means that the plane contains the actual elections while the volume contains that define a valid election with $n+1$ participants, i.e. by adding another candidate with vote percentage $v_{n+1} = \left(1-\sum\limits_{i=1}^N v_i\right).$
 
 ### Weight as volume
 
