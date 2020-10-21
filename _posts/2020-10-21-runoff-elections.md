@@ -29,7 +29,17 @@ $$\text{election} = \left(0.2, 0.15, 0.51, 0.14\right)$$
 
 If we bring out the winner's coordinate, then this becomes 
 
-$$\text{election} = 0.51 \times, \overbrace{\left(0.2, 0.15, 0.14\right)}^{v_1 + v_2 + v_3 \leq \frac12}$$
+$$\text{election} = 0.51 \times \overbrace{\left(0.2, 0.15, 0.14\right)}^{v_1 + v_2 + v_3 \leq \frac12}.$$
+
+So, every possible election without runoff is in a $1:1$ correspondence with a tuple whose sum is less than $1/2.$ These are exactly the points that are in the interior of the $(n-1)$ dimensional simplex with side length $a=1/2.$ 
+
+In every election with runoff, the winning candidate could have been in $1$ of $N$ locations in the tuple so the total weight of runoff elections is
+
+$$p_\text{runoff} = N\times\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12).$$
+
+If we look at a general election (with or without runoff) we can do the same: 
+
+$$\text{election} = \left(0.24, 0.15, 0.47, 0.14\right) \rightarrow 0.24\times\overbrace{\left(0.15, 0.47, 0.14\right)}^{v_1 + v_2 + v_3 \leq \frac12}$$
 
 ---
 
