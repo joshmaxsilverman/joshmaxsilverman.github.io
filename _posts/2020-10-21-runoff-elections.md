@@ -72,7 +72,7 @@ With this in hand, the probability of a runoff election is
 $$\begin{align}
 P(\text{runoff}) &= N\times\dfrac{\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12)}{\text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1)} \\
 &= 1 - \dfrac{\frac{1}{2^{N-1}(N-1)!}}{\frac{1}{(N-1)!}} \\
-&= 1 - \dfrac{N}{2^{N-1}}.
+&= \boxed{1 - \dfrac{N}{2^{N-1}}}.
 \end{align}$$
 
 which is $1/4$ for $3$ candidates, $1/2$ for $4$ candidates, $11/16$ for $5$ candidates, $13/16$ for $6$ candidates, etc.
