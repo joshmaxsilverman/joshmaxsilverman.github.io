@@ -13,17 +13,15 @@ date: 2020/10/21
 
 ## Solution
 
-I initially held off on this problem because I couldn't interpret the intended probability model for the vote totals.
-
-According to @xaqwg's tweet, we are filtering the set of all sums for the cases where 
+I initially held off on this problem because I couldn't interpret the intended probability model for the vote totals. But according to [@xaqwg's clarifying tweet](https://mobile.twitter.com/xaqwg/status/1317117282213122052), we are filtering the set of all sums for the cases where 
 
 $$v_1 + v_2 + \ldots + v_n = 1$$
 
-where $v_i$ is the vote percentage for candidate $i.$ 
+where $v_i$ is the vote percentage for candidate $i.$ Were we to discretize the possible vote percentages, this is equivalent to weighting each possibility a single time, which corresponds to some nice geometry...
 
 ### Geometry of an election
 
-When all the percentages satisfy $0\leq v_i \leq 1,$ the set of possible outcomes forms a plane. For two candidates, this is just a line in the plane; for three candidates this is an equilateral triangle in $\text{3D},$ and so on.
+The percentages satisfy $0\leq v_i \leq 1,$ so the set of possible outcomes forms a plane. For two candidates, this is just a line in the plane; for three candidates, this is an equilateral triangle in $\text{3D},$ and so on into higher dimensions for more and more candidates.  
 
 When we consider the shape formed by space between the axes and the plane, it's known as a simplex, and contains all points for which $v_1+v_2+\ldots+v_n\leq 1.$ This means that the plane contains the actual elections while the volume contains that define a valid election with $n+1$ participants, i.e. by adding another candidate with vote percentage $v_{n+1} = \left(1-\sum\limits_{i=1}^N v_i\right).$
 
@@ -60,7 +58,7 @@ The probability of a runoff election is simply
 $$\begin{align}
 P(\text{runoff}) &= 1-P(\text{no runoff}) \\
 &= 1-\dfrac{w_\text{no runoff}}{w_\text{total}} \\
-&= 1 - \dfrac{N\times\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12)}{\text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1)}.
+&= 1 - N\times\dfrac{\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12)}{\text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1)}.
 \end{align}$$
 
 ### Volume of the standard simplex
@@ -69,5 +67,14 @@ In general, an $n$-dimensional simplex has [volume $1/n!.$](https://en.m.wikiped
 
 $$\text{Vol}(v_1+v_2+\ldots+v_n\leq a) = \dfrac{a^n}{n!}.$$
 
+With this in hand, the probability of a runoff election is 
+
+$$\begin{align}
+P(\text{runoff}) &= N\times\dfrac{\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12)}{\text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1)} \\
+&= 1 - \dfrac{\frac{1}{2^{N-1}(N-1)!}}{\frac{1}{(N-1)!}} \\
+&= 1 - \dfrac{N}{2^{N-1}}.
+\end{align}$$
+
+which is $1/4$ for $3$ candidates, $1/2$ for $4$ candidates, $11/16$ for $5$ candidates, $13/16$ for $6$ candidates, etc.
 
 <br>
