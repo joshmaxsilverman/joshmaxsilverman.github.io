@@ -67,7 +67,7 @@ $$\begin{align}
 P(\text{runoff}) &= 1-P(\text{no runoff}) \\
 &= 1-\dfrac{w_\text{no runoff}}{w_\text{total}} \\
 &= 1 - N\times\dfrac{\text{Vol}(v_1 + v_2 + \ldots + v_{n-1} \leq \frac12)}{\text{Vol}(v_1 + v_2 + \ldots + v_{N-1} \leq 1)} \\
-&= 1 - \dfrac{\frac{1}{2^{N-1}(N-1)!}}{\frac{1}{(N-1)!}} \\
+&= 1 - N\times\dfrac{\frac{1}{2^{N-1}(N-1)!}}{\frac{1}{(N-1)!}} \\
 &= \boxed{1 - \dfrac{N}{2^{N-1}}}.
 \end{align}$$
 
