@@ -27,7 +27,7 @@ The percentages satisfy $0\leq v_i \leq 1,$ so the set of possible outcomes form
 
 When we consider the shape formed by space between the axes and the plane, it's known as a simplex, and contains all points for which $v_1+v_2+\ldots+v_N\leq 1.$ 
 
-This means that the plane contains the actual elections while the volume contains points that could define a valid election with $n+1$ participants. We can realize that $(N+1)$-candidate election by adding another candidate whose vote percentage is $v_{N+1} = \left(1-\sum\limits_{i=1}^N v_i\right).$
+This means that the plane contains the actual elections while the volume contains points that could define a valid election with $N+1$ participants. We can realize that $(N+1)$-candidate election by adding another candidate whose vote percentage is $v_{N+1} = \left(1-\sum\limits_{i=1}^N v_i\right).$
 
 ### Weight as volume
 
