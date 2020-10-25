@@ -35,7 +35,7 @@ $$\frac12 + \frac12L_\text{steal} + \frac12\left(1-L_\text{steal}\right)D_\text{
 
 which has a geometric series in $\left(1-L_\text{steal}\right)D_\text{miss},$ and is equal to
 
-$$\frac12 + \frac12\dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}.$$
+$$\frac12\left(1 + \dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}\right).$$
 
 Once Lebron takes possession, the possibilities get more intricate. But a shift in perspective makes it manageable.
 
@@ -61,8 +61,16 @@ To account for the fact that this step can loop an infinite number of times, we 
 
 $$\dfrac{1}{1 - L_\text{miss}\times\text{Davis does something}\times L_\text{steal}}.$$
 
-However, $\text{Davis does something}$ accounts for an infinite number of possibilities itself, which we found above. So, the total probability of all the things the ball can do before Lebron scores is equal to
+But $\text{Davis does something}$ accounts for an infinite number of possibilities itself, which we found above, so the total probability of all the things the ball can do before Lebron scores is equal to
 
-$$\dfrac{1}{1 - \dfrac{L_\text{miss}\times L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}$$
+$$\dfrac{1}{1 - \dfrac{L_\text{miss}\times L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}.$$
+
+### Putting it altogether
+
+The last step is for Lebron to actualy score, which happens with probability $L_\text{score}$ when Lebron has possession of the ball. So, the probability that Lebron wins the game is
+
+$$
+P_\text{Lebron} = \overbrace{\frac12\left(1 + \dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}\right)}^\text{Lebron gets the ball before the game is over}\overbrace{\dfrac{1}{1 - \dfrac{L_\text{miss}\times L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}}^\text{Davis does some stuff, but doesn't score}\overbrace{L_\text{score}}^\text{Lebron scores}
+$$
 
 <br>
