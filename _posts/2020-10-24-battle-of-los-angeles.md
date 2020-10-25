@@ -35,7 +35,7 @@ $$\frac12 + \frac12L_\text{steal} + \frac12\left(1-L_\text{steal}\right)D_\text{
 
 which has a geometric series in $\left(1-L_\text{steal}\right)D_\text{miss},$ and is equal to
 
-$$\frac12 + \dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}.$$
+$$\frac12 + \frac12\dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}.$$
 
 ### Diagrammatics
 
