@@ -23,7 +23,7 @@ Lebron could start with the ball, shoot and miss, steal it from Davis, shoot and
 
 Despite the variety, we can diagram the possibilities in three main steps. The first is from the beginning of the game $\mathbf{B},$ the second is Lebron possessing the ball $\mathbf{L}$ and the third is Lebron scoring $\mathbf{S}.$ 
 
-From the top, Lebron can start with the ball (probability $1/2$), or it can go to Davis who shoots and misses $0$ or more times before Lebron steals it. If Davis shoots it and misses, it means that Lebron failed to steal it, so the probability for Davis to miss a shot is $\left(1-L_\text{steal}\right)D_\text{miss}.$
+From the top, Lebron can start with the ball (probability $1/2$), or it can go to Davis (probability $1/2$) who shoots and misses $0$ or more times before Lebron steals it (probabiliy $L_\text{steal}$). If Davis shoots it and misses, it means that Lebron failed to steal it, so the probability for Davis to miss a shot is $\left(1-L_\text{steal}\right)D_\text{miss}.$
 
 Since the steps
 
@@ -37,14 +37,32 @@ which has a geometric series in $\left(1-L_\text{steal}\right)D_\text{miss},$ an
 
 $$\frac12 + \frac12\dfrac{L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}.$$
 
+Once Lebron takes possession, the possibilities get more intricate. But a shift in perspective makes it manageable.
+
 ### Diagrammatics
 
-In the first step, we discovered a geometric series hiding out in the possible ways that Davis can possess the ball without scoring before it goes to Lebron for the first time. But that's because we started by enumerating possibilities. If we think about the structure of things, we can generate the infinite possibilities by design. 
+In the first step, we discovered a geometric series hiding out in the possible ways that Davis can possess the ball without scoring. But that's because we started by enumerating possibilities. If we think about the structure of things, we can generate the infinite possibilities by design. 
 
 Above, the terms $\left(1-L_\text{steal}\right)$ and $D_\text{miss}$ always appear, together, $0$ or more times in a row, and they're always followed by a Lebron steal on the right. Seeing this, we can just think of $\left(1-L_\text{steal}\right)D_\text{miss}$ as a repeatable block, and the entire set of possibilities for Davis doing things with the ball before Lebron takes possession as
 
 $$\overbrace{\dfrac{1}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}^\text{Davis missing}\times L_\text{steal}$$
 
-$$
+### Second stage
+
+In the second stage, we are waiting for Lebron to make a shot. Before that happens, Lebron can miss a shot before Davis misses one or more shots before Lebron steals the ball back from Davis. 
+
+But once the ball is back to Lebron, he can miss another shot and embark on another excursion into Davis possessions. It helps if we think at this second layer of abstraction first. Lebron can miss a shot, followed by Davis doing something, followed by Lebron stealing it back. And he can do this a potentially infinite number of times before taking a shot and making it. 
+
+This makes a block 
+
+$$L_\text{miss}\times\text{Davis does something}\times L_\text{steal}.$$
+
+To account for the fact that this step can loop an infinite number of times, we have
+
+$$\dfrac{1}{1 - L_\text{miss}\times\text{Davis does something}\times L_\text{steal}}.$$
+
+However, $\text{Davis does something}$ accounts for an infinite number of possibilities itself, which we found above. So, the total probability of all the things the ball can do before Lebron scores is equal to
+
+$$\dfrac{1}{1 - \dfrac{L_\text{miss}\times L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}$$
 
 <br>
