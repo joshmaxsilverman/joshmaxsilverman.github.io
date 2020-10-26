@@ -90,6 +90,6 @@ L_\text{steal} &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\te
 &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)D_\text{score}}{2D_\text{score}P_\text{Lebron} + L_\text{score}\left(2-D_\text{score}-2P_\text{Lebron}\right)}
 \end{align}$$
 
-
+Plugging in $L_\text{score} = D_\text{score} = P_\text{Lebron} = 1/2$ shows that we need $\boxed{L_\text{steal} = 1/3}$ for Lebron to have a $50\%$ chance to win.
 
 <br>
