@@ -77,7 +77,10 @@ As a quick test, we can check the case where $L_\text{steal} = 0$ and $L_\text{s
 
 But our solution can handle the problem, whatever their individual shooting percentages. We can solve the equation above for $L_\text{steal}$ so that we can find the required steal probability needed as a function of Lebron's desired winning percentage:
 
-$$L_\text{steal} = \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\text{miss}-1\right)}{L_\text{score}\left(1+D_\text{miss}\right)+2P_\text{Lebron}\left(L_\text{miss}-D_\text{miss}\right)}$$
+$$\begin{align}
+L_\text{steal} &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\text{miss}-1\right)}{L_\text{score}\left(1+D_\text{miss}\right)+2P_\text{Lebron}\left(L_\text{miss}-D_\text{miss}\right)} \\
+&= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)D_\text{score}}{2D_\text{score}P_\text{Lebron} + L_\text{score}\left(2-D_\text{score}-2P_\text{Lebron}\right)}
+\end{align}$$
 
 
 
