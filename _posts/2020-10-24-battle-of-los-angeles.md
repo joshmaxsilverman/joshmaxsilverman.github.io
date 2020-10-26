@@ -110,4 +110,10 @@ L_\text{steal} &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\te
 
 Plugging in $L_\text{score} = D_\text{score} = P_\text{Lebron} = 1/2$ shows that we need $\boxed{L_\text{steal} = 1/3}$ for Lebron to have a $50\%$ chance to win.
 
+![](/img/2020-10-14-lebron-davis-graph.png){:width="500px" class="image-centered"}
+
+{:.caption}
+
+$P_\text{Lebron}$ vs. $L_\text{steal}$ for various values of $\left(L_\text{score},D_\text{score}\right).$ The curve for $\left(L_\text{score}=0.05,D_\text{score}=0.95\right)$ is plotted in $\color{orange}\text{red},$ the curve for $\left(L_\text{score}=0.5,D_\text{score}=0.5\right)$ is plotted in $\color{orange}\text{blue},$ the curve for $\left(L_\text{score}=0.7,D_\text{score}=0.2\right)$ is plotted in $\color{orange}\text{orange},$ and the curve for $\left(L_\text{score}=0.97,D_\text{score}=0.1\right)$ is plotted in $\color{orange}\text{blue}.$  
+
 <br>
