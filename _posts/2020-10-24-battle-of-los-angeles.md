@@ -110,6 +110,10 @@ L_\text{steal} &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\te
 
 Plugging in $L_\text{score} = D_\text{score} = P_\text{Lebron} = 1/2$ shows that we need $\boxed{L_\text{steal} = 1/3}$ for Lebron to have a $50\%$ chance to win.
 
+### $1$ on $1$ multiverse
+
+Using the general result can explore the outcome for any combination of shot percentages for Lebron and Davis as a function of the steal probability $L_\text{steal}.$ Even when Lebron's shot percentage gets very low ($\approx 5\%$), he can still manage to win as long as $L_\text{steal}$ is high enough, though it has to be $\gtrsim 80\%$ before he has a reasonable chance.
+
 ![](/img/2020-10-14-lebron-davis-graph.png){:width="500px" class="image-centered"}
 
 {:.caption}
