@@ -27,7 +27,7 @@ Lebron could start with the ball, shoot and miss, steal it from Davis, shoot and
 
 Sample trajectory where the game starts ($\mathbf{S}$) with Davis winning the coin flip (ball to $\mathbf{D}$), followed by Davis missing a shot (ball back to $\mathbf{D}$), followed by Lebron stealing the ball (ball to $\mathbf{L}$), followed by Lebron scoring (game ends at $\mathbf{LS}$).
 
-Despite the variety, we can consider the possibilities in three main steps. The first is from the beginning of the game $\mathbf{B},$ the second is Lebron possessing the ball $\mathbf{L}$ and the third is Lebron scoring $\mathbf{S}.$ 
+Despite the variety, we can consider the possibilities in three main steps. The first is from the beginning of the game $\mathbf{S},$ the second is Lebron possessing the ball $\mathbf{L}$ and the third is Lebron scoring $\mathbf{LS}.$ In the first and second steps, the ball can spend time with Davis ($\mathbf{D}$) before going back to Lebron.
 
 From the top, Lebron can start with the ball (probability $1/2$), or it can go to Davis (probability $1/2$) who shoots and misses $0$ or more times before Lebron steals it (probabiliy $L_\text{steal}$). If Davis shoots it and misses, it means that Lebron failed to steal it, so the probability for Davis to miss a shot is $\left(1-L_\text{steal}\right)D_\text{miss}.$
 
