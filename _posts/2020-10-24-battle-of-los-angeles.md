@@ -65,7 +65,7 @@ But $\text{Davis does something}$ accounts for an infinite number of possibiliti
 
 $$\dfrac{1}{1 - \dfrac{L_\text{miss}\times L_\text{steal}}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}.$$
 
-### Putting it altogether
+### Putting it all together
 
 The last step is for Lebron to actualy score, which happens with probability $L_\text{score}$ when Lebron has possession of the ball. So, the probability that Lebron wins the game is
 
@@ -75,7 +75,15 @@ $$
 
 As a quick test, we can check the case where $L_\text{steal} = 0$ and $L_\text{steal}=1.$ When Lebron and Davis have identical shooting percentages of $1/2$, this yields $P_\text{Lebron}=1/4$ and $P_\text{Lebron}=1,$ which makes sense. If Lebron can't steal, his only chance is to win the coin flip and make his shot, $1/2\times 1/2$ and if he can always steal, then Davis can't shoot, so Lebron always wins.
 
-But our solution can handle the problem, whatever their individual shooting percentages. We can solve the equation above for $L_\text{steal}$ so that we can find the required steal probability needed as a function of Lebron's desired winning percentage:
+If we plug in $D_\text{miss} = L_\text{miss} = 1/2,$ we can see how $P_\text{Lebron}$ varies as a function of $L_\text{steal}$ in the standard problem. Doing so, the expression for $P_\text{Lebron}$ collapses to
+
+$$P_\text{Lebron} = \frac14\left(1 + 3L_\text{steal}\right).$$
+
+But our solution can handle the problem, whatever their individual shooting percentages.
+
+### Finding $L_\text{steal}$
+
+We can solve the equation above for $L_\text{steal}$ so that we can find the required steal probability needed as a function of Lebron's desired winning percentage:
 
 $$\begin{align}
 L_\text{steal} &= \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\text{miss}-1\right)}{L_\text{score}\left(1+D_\text{miss}\right)+2P_\text{Lebron}\left(L_\text{miss}-D_\text{miss}\right)} \\
