@@ -25,7 +25,7 @@ Lebron could start with the ball, shoot and miss, steal it from Davis, shoot and
 
 {:.caption}
 
-The shbhs
+Sample trajectory where the game starts ($\mathbf{S}$) with Davis winning the coin flip (ball to $\mathbf{D}$), followed by Davis missing a shot (ball back to $\mathbf{D}$), followed by Lebron stealing the ball (ball to $\mathbf{L}$), followed by Lebron scoring (game ends at $\mathbf{LS}$).
 
 Despite the variety, we can consider the possibilities in three main steps. The first is from the beginning of the game $\mathbf{B},$ the second is Lebron possessing the ball $\mathbf{L}$ and the third is Lebron scoring $\mathbf{S}.$ 
 
