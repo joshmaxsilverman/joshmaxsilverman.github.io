@@ -21,7 +21,11 @@ To start, it's good to get a handle on the kinds of games we can expect.
 
 Lebron could start with the ball, shoot and miss, steal it from Davis, shoot and miss again, before Davis shoots and misses, before Lebron fails to steal the ball, before Davis shoots and scores. Just as easily, Davis could take the first possession, Lebron could fail to steal, and then Davis could score on his first shot attempt. There are $7$ steps in the first version and $3$ in the second, and there infinitely many other cases to consider, some of which are infinitely long.
 
-![](/img/2020-10-24-lebron-davis-basketbal-trajectory.jpg){:width="250 px" class="image centered"}
+![](/img/2020-10-24-lebron-davis-basketbal-trajectory.jpg){:width="200px" class="image-centered"}
+
+{:.caption}
+
+The shbhs
 
 Despite the variety, we can consider the possibilities in three main steps. The first is from the beginning of the game $\mathbf{B},$ the second is Lebron possessing the ball $\mathbf{L}$ and the third is Lebron scoring $\mathbf{S}.$ 
 
