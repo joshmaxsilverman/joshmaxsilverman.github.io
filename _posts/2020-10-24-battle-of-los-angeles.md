@@ -75,7 +75,9 @@ $$
 
 As a quick test, we can check the case where $L_\text{steal} = 0$ and $L_\text{steal}=1.$ When Lebron and Davis have identical shooting percentages of $1/2$, this yields $P_\text{Lebron}=1/4$ and $P_\text{Lebron}=1,$ which makes sense. If Lebron can't steal, his only chance is to win the coin flip and make his shot, $1/2\times 1/2$ and if he can always steal, then Davis can't shoot, so Lebron always wins.
 
-But our solution can handle the problem, whatever their individual shooting percentages. We can solve the equation above for $L_\text{steal}$ so that we can find the required steal probability needed as a function of Lebron's desired winning percentage.
+But our solution can handle the problem, whatever their individual shooting percentages. We can solve the equation above for $L_\text{steal}$ so that we can find the required steal probability needed as a function of Lebron's desired winning percentage:
+
+$$L_\text{steal} = \dfrac{\left(2P_\text{Lebron}-L_\text{score}\right)\left(D_\text{miss}-1\right)\right)}{L_\text{score}\left(1+D_\text{miss}\right)+2P_\text{Lebron}\left(L_\text{miss}-D_\text{miss}\right)}$$
 
 
 
