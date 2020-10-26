@@ -49,9 +49,17 @@ Once Lebron takes possession, the possibilities get more intricate. But a shift 
 
 In the first step, we discovered a geometric series hiding out in the possible ways that Davis can possess the ball without scoring. But that's because we started by enumerating possibilities. If we think about the structure of things, we can generate the infinite possibilities by design. 
 
-Above, the terms $\left(1-L_\text{steal}\right)$ and $D_\text{miss}$ always appear, together, $0$ or more times in a row, and they're always followed by a Lebron steal on the right. Seeing this, we can just think of $\left(1-L_\text{steal}\right)D_\text{miss}$ as a repeatable block, and the entire set of possibilities for Davis doing things with the ball before Lebron takes possession as
+Above, the terms $\left(1-L_\text{steal}\right)$ and $D_\text{miss}$ always appear, together, $0$ or more times in a row, and they're always followed by a Lebron steal on the right. Seeing this, we can think of $\left(1-L_\text{steal}\right)D_\text{miss}$ as a repeatable block:
 
-$$\overbrace{\dfrac{1}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}^\text{Davis missing}\times L_\text{steal}$$
+![](/img/2020-10-24-lebron-davis-basketball-unit.jpg){:width="400px" class="image-centered"}
+
+The entire set of possibilities for Davis doing things with the ball before Lebron takes possession is given by
+
+![](/img/2020-10-24-lebron-davis-basketball-start.jpg){:width="600px" class=image-centered"}
+
+or, in symbols:
+
+$$\overbrace{\dfrac{1}{1 - \left(1-L_\text{steal}\right)D_\text{miss}}}^\text{Davis misses $0$ or more times}\times L_\text{steal}.$$
 
 ### Second stage
 
