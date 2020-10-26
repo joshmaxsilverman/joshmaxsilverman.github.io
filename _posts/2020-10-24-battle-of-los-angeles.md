@@ -59,7 +59,7 @@ For Davis to have a shot attempt means that Lebron failed to steal the ball (pro
 
 The entire set of possibilities for Davis doing things with the ball before Lebron takes possession is one element from the set of looped units, followed by a steal from Lebron, represented as
 
-![](/img/2020-10-24-lebron-davis-basketball-start.jpg){:width="600px" class=image-centered"}
+![](/img/2020-10-24-lebron-davis-basketball-start.jpg){:width="600px" class="image-centered"}
 
 or, in symbols:
 
