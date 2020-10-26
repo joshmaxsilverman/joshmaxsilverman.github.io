@@ -51,9 +51,13 @@ In the first step, we discovered a geometric series hiding out in the possible w
 
 Above, the terms $\left(1-L_\text{steal}\right)$ and $D_\text{miss}$ always appear, together, $0$ or more times in a row, and they're always followed by a Lebron steal on the right. Seeing this, we can think of $\left(1-L_\text{steal}\right)D_\text{miss}$ as a repeatable block:
 
-![](/img/2020-10-24-lebron-davis-basketball-unit.jpg){:width="400px" class="image-centered"}
+![](/img/2020-10-24-lebron-davis-basketball-unit.jpg){:width="300px" class="image-centered"}
 
-The entire set of possibilities for Davis doing things with the ball before Lebron takes possession is given by
+{:.caption}
+
+For Davis to have a shot attempt means that Lebron failed to steal the ball (probability $\left(1-L_\text{steal}\right)$), followed by the missed shot from Davis (probability $D_\text{miss}$).
+
+The entire set of possibilities for Davis doing things with the ball before Lebron takes possession is one element from the set of looped units, followed by a steal from Lebron, represented as
 
 ![](/img/2020-10-24-lebron-davis-basketball-start.jpg){:width="600px" class=image-centered"}
 
