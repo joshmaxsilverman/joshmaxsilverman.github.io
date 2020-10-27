@@ -118,6 +118,5 @@ Using the general result can explore the outcome for any combination of shot per
 
 {:.caption}
 
-$P_\text{Lebron}$ vs. $L_\text{steal}$ for various values of $\left(L_\text{score},D_\text{score}\right).$ The curve for $\left(L_\text{score}=0.05,D_\text{score}=0.95\right)$ is plotted in $\color{red}{\text{red}},$ the curve for $\left(L_\text{score}=0.5,D_\text{score}=0.5\right)$ is plotted in $\color{blue}{\text{blue}},$ the curve for $\left(L_\text{score}=0.7,D_\text{score}=0.2\right)$ is plotted in $\color{orange}{\text{orange}},$ and the curve for $\left(L_\text{score}=0.97,D_\text{score}=0.1\right)$ is plotted in $\color{green}{\text{green}}.$  
-
+$P_\text{Lebron}$ vs. $L_\text{steal}$ for various values of $\left(L_\text{score},D_\text{score}\right).$ The curves are plotted for $\color{red}{\left(L_\text{score}=0.05,D_\text{score}=0.95\right)},$ $\color{blue}{\left(L_\text{score}=0.5,D_\text{score}=0.5\right)}$ $\color{orange}{\left(L_\text{score}=0.7,D_\text{score}=0.2\right)},$ and $\color{green}{\left(L_\text{score}=0.97,D_\text{score}=0.1\right)}.$
 <br>
