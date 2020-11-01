@@ -21,6 +21,19 @@ A round constitutes $N$ people counting themselves off around the circle until t
 
 Evidently, $N$ is bigger than the number of people, since it doesn't skip an equal number of people in the first three rounds. So, that counting $N$ positions ends the first round at position $19$ means that $N$ is equal to $19$ plus some number of multiples of the number of people, $P$. In other words
 
-$$ N = 19 + \text{some integer}\times P. $$
+$$ N = 18 + \text{some integer}\times P. $$
+
+Likewise, the other two facts lead to
+
+$$\begin{align}
+N &= 31 + \text{some other integer}\times (P - 1) \\
+N &= 0 + \text{yet another integer}\times (P - 2).
+\end{align}$$
+
+This tells us that there are three equivalent representations for $N.$ My first instinct was to set them equal to each other to find a relationship between the undetermined integers. 
+
+But, before doing this, let's settle on some symbols. We'll call the remainders (like $18,$ $31,$ and $0$) $r_1,$ $r_2,$ and $r_3,$ and the modular bases (like $61,$ $60,$ and $59$) $m_1,$ $m_2,$ and $m_3.$ Also, we'll call the undetermined integers $x_1,$ $x_2,$ and $x_3.$
+
+
 
 <br>
