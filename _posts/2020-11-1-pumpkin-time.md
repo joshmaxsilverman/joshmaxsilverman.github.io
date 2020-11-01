@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: It's Pumpkin Time
 date: 2020/11/1
 ---
