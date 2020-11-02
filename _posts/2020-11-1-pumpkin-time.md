@@ -173,11 +173,23 @@ To place $\mathbf{E},$ we take $4$ steps back modulo $5$ which is $4\bmod5=4,$ w
 
 $$\mathbf{A}\mathbf{C}\mathbf{D}\mathbf{B}\mathbf{E}\star$$
 
-The last step is to find the absolute position of $\mathbf{E}.$ Since the first step eliminates $\mathbf{E},$ the position of $\mathbf{E}$ is simply $4\bmod 6 = 4$ which means that $\star$ is at position $5$ (since it's directly to the right of $\mathbf{E}.$ So, the survivor is player $5,$ as we found above. 
+The last step is to find the absolute position of $\mathbf{E}.$ Since the first step eliminates $\mathbf{E},$ the position of $\mathbf{E}$ is simply $4\bmod 6 = 4$ which means that $\star$ is at position $5$ (since it's directly to the right of $\mathbf{E}$). So, the survivor is player $5,$ as we found above. 
 
 Translating the position bookkeeping from above into modular arithmetic, we found that the position of $\star$ is equal to
 
 $$\left(\left(\left(\left(\left(\left(4 + 0\right)\bmod 1 + 4\right)\bmod 2 + 4\right)\bmod 3 + 4\right)\bmod 4 + 4\right) \bmod 5 + 4\right) \bmod 6$$
 
+Coding this up, we have
+
+```python
+N = 136231
+def pumpkin_champ_offset(players):
+  if players == 1:
+    return 0
+   else:
+    return (N + pumpkin_champ_offset(players - 1)) % players
+```
+
+which gives `7` to the left of player $1,$ i.e. player $8.$
 
 <br>
