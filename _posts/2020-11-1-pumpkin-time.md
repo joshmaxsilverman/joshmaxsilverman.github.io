@@ -135,13 +135,13 @@ while True:
 
 which yields $5399$ and can be plugged into the result for $N$ to find:
 
-$$N = \overbrace{5399}^{\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}}\times\overbrace{\left(18\times60\times59 + 31\times59\times61 + 0\times59\times60\right)}^{\left(r_1n_2n_3 + r_2n_1n_3 + r_3n_1n_2\right)}\bmod 61\times60\times59 = \boxed{136231}$$
+$$N = \overbrace{5399}^{\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}}\times\overbrace{\left(18\times60\times59 + 31\times59\times61 + 0\times59\times60\right)}^{\left(r_1n_2n_3 + r_2n_1n_3 + r_3n_1n_2\right)}\bmod 61\times60\times59 = 136231$$
 
-making the "real" $N$ equal to $N^\prime = N + 1 = 136232$ adjusting for our convention.
+making the "real" $N$ equal to $\boxed{N^\prime = N + 1 = 136232}$ adjusting for our convention.
 
 This is the minimal value of $N^\prime,$ but in general we can add any multiple of $n_1\cdot n_2\cdot n_3$ so that
 
-$$N = 136232 + 215940\cdot x.$$
+$$N^\prime = 136232 + 215940\cdot x.$$
 
 ### Who is the champion, my friend?
 
