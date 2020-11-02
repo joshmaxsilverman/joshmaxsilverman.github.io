@@ -210,7 +210,7 @@ def pumpkin_champ_offset(players):
     return (N + pumpkin_champ_offset(players - 1)) % players
 ```
 
-which gives `57` to the left of player $1,$ i.e. player $58.$
+which gives `57` to the left of player $1,$ i.e. player $\boxed{\text{player }58}.$
 
 ### A win for David S. Pumpkins?
 
@@ -233,6 +233,6 @@ while True:
         break
 ```
 
-Which returns $140$ as the minimal $N$ for which player $1$ wins.
+Which returns $\boxed{N = 140}$ as the minimal $N$ for which player $1$ wins.
 
 <br>
