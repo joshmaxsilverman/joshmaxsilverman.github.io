@@ -43,26 +43,26 @@ The representation $r_1 + m_1\times x_1$ clearly has a remainder of $r_1$ when d
 Setting the first two representations equal, and using the symbols laid out above, we have
 
 $$\begin{align}
-r_1 + m_1\times x_1 &= r_2 + m_2\times x_2 \\
-m_1\times x_1 &= \left(r_2 - r_1\right) + m_2\times x_2
+r_1 + m_1\times x_1 &= r_2 \mod m_2 \\
+m_1\times x_1 &= \left(r_2 - r_1\right) + m_2\times x_2 \mod m_2
 \end{align}$$
 
-At this point it might seem like we could divide by $m_1$ and call it a day, but we want a solution in the integers, not in the reals. So we have to find an integer $m_1^{-1}$ such that $m_1 \times m_1^{-1} = 1$ modulo $m_2.$ In other words, $m_1^{-1}$ is the inverse of $m_1$ modulo $m_2.$ 
+At this point it might seem like we could divide by $m_1$ and call it a day, but we want a solution in the integers, not in the reals. So we have to find an integer $m_1^{-1}$ such that $m_1 \times m_1^{-1} = 1$ modulo $m_2.$ In other words, $m_1^{-1}$ is the inverse of $m_1,$ modulo $m_2.$ 
 
 So, if we can solve
 
-$$m_1\times m_1^{-1} \bmod m_2,$$ 
+$$m_1\times m_1^{-1} \equiv 1 \bmod m_2,$$ 
 
 then we'll have
 
-$$x_1 = m_1^{-1}\times\left(r_2 - r_1\right) + m_1^{-1}\times m_2\times x_2 \mod m_2.$$
+$$x_1 = m_1^{-1}\times\left(r_2 - r_1\right) \mod m_2.$$
 
-Going back out of modulo $m_2,$ and plugging back into the first representation, we have
+Going back out of modulo $m_2$ we can add back $m_2x_2$ and, plugging into the first representation, we have
 
 $$\begin{align}
 N &= r_1 + m_1 \times x_1 \\
-&= r_1 + m_1\times\left(m_1^{-1}\times\left(r_2 - r_1\right) + m_1^{-1}\times m_2\times x_2\right) \\
-&= r_1 + m_1^{-1}m_1\left(r_2 - r_1\right) + m_1^{-1}m_2x_2
+&= r_1 + m_1\times\left(m_1^{-1}\times\left(r_2 - r_1\right) + m_2\times x_2\right) \\
+&= r_1 + m_1^{-1}m_1\left(r_2 - r_1\right) + m_1m_2x_2
 \end{align}$$
 
 <br>
