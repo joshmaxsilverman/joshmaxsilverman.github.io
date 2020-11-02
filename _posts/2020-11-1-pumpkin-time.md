@@ -67,6 +67,42 @@ N &= r_1 + m_1 \times x_1 \\
 
 We can check that this satisfies the first two remainder conditions. Since the second and third terms are proportional to $m_1,$ and so are zero modulo $m_1,$ it clearly has remainder $r_1$ then divided by $m_1.$ Since the last term is proportional to $m_2,$ the $m_1^{-1}m_1$ is $1$ modulo $m_2,$ the first and second terms boil down to $r_1 + \left(r_2 - r_1\right) = r_2$ modulo $m_2,$ as we wanted.
 
-My plan was to then solve the second and third relations for $x_2$ in terms of $x_3$ and use it to generalize, but there's a problem.
+My plan was to then solve the second and third relations for $x_2$ in terms of $x_3$ and use it to generalize, but there's a problem. The inverse $m_1^{-1}$ is computed modulo $m_2.$ If we equate the third representation to the joint one, the inverse we calculate for $m_3$ will be modulo $m_2.$ We can perhaps consciously calculate it modulo $m_1m_3$ but then we realize we need to adjust the modulo for the calculation for $m_1^{-1}$ too. There is probably a way to adjust this approach, but it's not inherently symmetric to the fact that all three modulos are on the same footing.
+
+This sent me back to the drawing board to look for a symmetric approach. 
+
+### Once bitten, twice shy
+
+Going back to the three relations, we have
+
+$$\begin{align}
+N &= r_1 \bmod m_1 \\
+N &= r_2 \bmod m_2 \\
+N &= r_3 \bmod m_3.
+\end{align}$$
+
+The problem with our last approach is that it put the constraints onto the same modulo two at a time. Once we put equations in the same modulo, we can do ordinary algebraic things like addition, subtraction, multiplication, and inversion. 
+
+If we have an equation like $7 \bmod 5 = 2,$ then it is automatically the case that $7c \bmod \left(5c\right) = 2.$ Multiplying by the same factor in front of and behind the $\bmod$ leaves the truth of the statement alone. 
+
+We can use this as inspiration to put all three constraints into modulo $m_1m_2m_3.$ Multiplying the first equation by $m_2m_3,$ the second by $m_1m_3,$ and the third by $m_1m_2,$ we get
+
+$$\begin{align}
+Nm_2m_3 &= r_1m_2m_3 \bmod m_1m_2m_3 \\
+Nm_1m_3 &= r_2m_1m_3 \bmod m_1m_2m_3 \\
+Nm_1m_2 &= r_3m_1m_2 \bmod m_1m_2m_3.
+\end{align}$$
+
+With like modulo, we can add these equations so that
+
+$$N\left(m_2m_3 + m_1m_3 + m_1m_2\right) = \left(r_1m_2m_3 + r_2m_1m_3 + r_3m_1m_2\right) \bmod m_1m_2m_3.$$
+
+Solving
+
+$$\left(m_2m_3 + m_1m_3 + m_1m_2\right)\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}\equiv 1 \bmod m_1m_2m_3$$
+
+for $\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}$ and multiplying the joint relationship by it, we can solve for $N:$
+
+$$N = \left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1} \left(r_1m_2m_3 + r_2m_1m_3 + r_3m_1m_2\right).$$
 
 <br>
