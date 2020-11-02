@@ -65,4 +65,8 @@ N &= r_1 + m_1 \times x_1 \\
 &= r_1 + m_1^{-1}m_1\left(r_2 - r_1\right) + m_1m_2x_2
 \end{align}$$
 
+We can check that this satisfies the first two remainder conditions. Since the second and third terms are proportional to $m_1,$ and so are zero modulo $m_1,$ it clearly has remainder $r_1$ then divided by $m_1.$ Since the last term is proportional to $m_2,$ the $m_1^{-1}m_1$ is $1$ modulo $m_2,$ the first and second terms boil down to $r_1 + \left(r_2 - r_1\right) = r_2$ modulo $m_2,$ as we wanted.
+
+My plan was to then solve the second and third relations for $x_2$ in terms of $x_3$ and use it to generalize, but there's a problem.
+
 <br>
