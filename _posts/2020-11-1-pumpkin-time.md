@@ -153,15 +153,15 @@ No matter what, we start with the winner, who we represent by
 
 $$\star$$
 
-We know that in the step before, we had another player $A,$ who we can place to the left (or right) of $\star$ (at this point it doesn't matter since things are rotationally symmetric), so we have
+We know that in the step before, we had another player $\mathbf{A},$ who we can place to the left (or right) of $\star$ (at this point it doesn't matter since things are rotationally symmetric), so we have
 
 $$\mathbf{A}\star$$
 
-Now, in the step before that, we had a third player $B.$ To figure out where $B$ was, we have to figure out where the final round began. If $N\bmod 2 = 0,$ then it started with $\star,$ meaning that player $B$ was $0$ steps to the left of $\star$ when they were eliminated. On the other hand, if $N\bmod 2 = 1,$ then it started with $\mathbf{A},$ meaning that player $B$ was $1$ step to the right of $\star$ when they were eliminated.  This brings us to
+Now, in the step before that, we had a third player $\mathbf{B}.$ To figure out where $\mathbf{B}$ was, we have to figure out where the final round began. If $N\bmod 2 = 0,$ then it started with $\star,$ meaning that player $\mathbf{B}$ was $0$ steps to the left of $\star$ when they were eliminated. On the other hand, if $N\bmod 2 = 1,$ then it started with $\mathbf{A},$ meaning that player $\mathbf{B}$ was $1$ step to the right of $\star$ when they were eliminated.  This brings us to
 
 $$\mathbf{A}\mathbf{B}\star$$
 
-Now, we have to place player $C$ back into the circle. We take $4$ steps back modulo $P = 3$ (the current number of players) and get $4\bmod3=1,$ meaning they were $1$ step to the left of where we just placed $B$:
+Now, we have to place player $\mathbf{C}$ back into the circle. We take $4$ steps back modulo $P = 3$ (the current number of players) and get $4\bmod3=1,$ meaning they were $1$ step to the left of where we just placed $\mathbf{B}$:
 
 $$\mathbf{A}\mathbf{C}\mathbf{B}\star$$
 
@@ -179,7 +179,7 @@ Translating the position bookkeeping from above into modular arithmetic, we foun
 
 $$\left(\left(\left(\left(\left(\left(4 + 0\right)\bmod 1 + 4\right)\bmod 2 + 4\right)\bmod 3 + 4\right)\bmod 4 + 4\right) \bmod 5 + 4\right) \bmod 6$$
 
-Coding this up, we have
+Coding this up, we have (using the minimal $N$ from the main problem)
 
 ```python
 N = 136231
@@ -191,5 +191,26 @@ def pumpkin_champ_offset(players):
 ```
 
 which gives `7` to the left of player $1,$ i.e. player $8.$
+
+The second extra credit asks (abandoning the three constraint equations) what is the smallest value of $N$ that will lead to player $1$ winning. 
+
+Now we have to vary $N$ so we slightly redefine `pumpkin_champ()`:
+
+```python
+def pumpkin_champ_offset(players, N):
+    if players == 1:
+        return 0
+    else:
+        return (N + pumpkin_champ_offset(players - 1, N)) % players
+
+N = 1
+while True:
+    N += 1
+    if pumpkin_champ_offset(61, N) == 0:
+        print("The minimal N is " + str(N))
+        break
+```
+
+Which returns $140$ as he minimal $N$ for which player $1$ wins.
 
 <br>
