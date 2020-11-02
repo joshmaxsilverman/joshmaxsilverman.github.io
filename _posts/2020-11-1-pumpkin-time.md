@@ -27,7 +27,7 @@ _Disclaimer_: Through studious indifference, I have managed to $30$ virtually un
 
 {:.caption}
 
-David S. Pumpkins, the erstwhile host of It's Pumpkin Time!
+David S. Pumpkins, the erstwhile host of Damn That's a Hot Pumpkin!
 
 ### The Pumpkin Shuffle
 
