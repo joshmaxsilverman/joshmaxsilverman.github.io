@@ -21,7 +21,7 @@ date: 2020/11/1
 
 ## Solution
 
-_Disclaimer_: Through studious indifference, I have managed to $30$ virtually undisturbed by any known results in number theory. So I am able to document here a voyage of personal discovery, stumbling through basic ideas about how the integer numbers relate to themselves.
+_Disclaimer_: Through studious indifference, I have managed $\sim 3$ decades on Earth virtually undisturbed by any known results in number theory. So I am able to document here a voyage of personal discovery, stumbling through basic ideas about how the integer numbers relate to themselves.
 
 ![](/img/2020-11-1-david-s-pumpkins.JPG){:width=500px" class="image-centered"}
 
@@ -33,7 +33,9 @@ David S. Pumpkins, the erstwhile host of Damn That's a Hot Pumpkin!
 
 A round constitutes $N$ people counting themselves off around the circle until the last of them says $"N"$ and is eliminated for getting caught holding the David S. Pumpkin's hot pumpkin, and the next round begins with the person to their left. We're told that the first three people to be eliminated are positioned $18,$ $31,$ and $0$ positions to the left of the person who started their round and that there are $61$ people in the circle at the beginning of the game. 
 
-Evidently, $N$ is bigger than the number of people, since it doesn't skip an equal number of people in the first three rounds. So, that counting $N$ positions ends the first round at position $19$ means that $N$ is equal to $19$ plus some number of multiples of the number of people, $P$. In other words
+**Note**: In this solution, I'm going to work in the zero index convention so that the person at the origin is person zero. The "real" $N$ will be $N^\prime = N + 1.$
+
+Evidently, $N$ is bigger than the number of people, since it doesn't skip an equal number of people in the first three rounds. So, that counting $N$ positions ends the first round at position $18$ means that $N$ is equal to $18$ plus some number of multiples of the number of people, $P$. In other words
 
 $$ N = 18 + \text{some integer}\times P. $$
 
@@ -95,7 +97,7 @@ $$
 
 The problem with our last approach is that it put the constraints onto the same modulo two at a time. Once we put equations in the same modulo, we can do ordinary algebraic things like addition, subtraction, multiplication, and inversion. 
 
-If we have an equation like $7 \bmod 5 = 2,$ then it is automatically the case that $7c \bmod \left(5c\right) = 2.$ Multiplying by the same factor in front of and behind the $\bmod$ leaves the truth of the statement alone. 
+If we have an equation like $7 \bmod 5 = 2$ then, as long as $c$ is not a divisor of $5$ (or vice versa), it is automatically the case that $7c \bmod \left(5c\right) = 2.$ Multiplying by the same factor in front of and behind the $\bmod$ leaves the truth of the statement alone. 
 
 We can use this as inspiration to put all three constraints into modulo $n_1n_2n_3.$ Multiplying the first equation by $n_2n_3,$ the second by $n_1n_3,$ and the third by $n_1n_2,$ we get
 
@@ -117,6 +119,8 @@ for $\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}$ and multiply the joint relation
 
 $$N = \left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1} \left(r_1n_2n_3 + r_2n_1n_3 + r_3n_1n_2\right).$$
 
+Note that this breaks if $\left(n_2n_3 + n_1n_3 + n_1n_2\right)$ is proportional to the modulo $n_1n_2n_3$ since $0$ has no inverse.
+
 A short program can be used to find $\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}$
 
 ```python
@@ -133,9 +137,11 @@ which yields $5399$ and can be plugged into the result for $N$ to find:
 
 $$N = \overbrace{5399}^{\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}}\times\overbrace{\left(18\times60\times59 + 31\times59\times61 + 0\times59\times60\right)}^{\left(r_1n_2n_3 + r_2n_1n_3 + r_3n_1n_2\right)}\bmod 61\times60\times59 = \boxed{136231}$$
 
-This is the minimal value of $N,$ but in general we can add any multiple of $n_1\cdot n_2\cdot n_3$ so that
+making the "real" $N$ equal to $N^\prime = N + 1 = 136232$ adjusting for our convention.
 
-$$N = 136231 + 215940\cdot x.$$
+This is the minimal value of $N^\prime,$ but in general we can add any multiple of $n_1\cdot n_2\cdot n_3$ so that
+
+$$N = 136232 + 215940\cdot x.$$
 
 ### Who is the champion, my friend?
 
@@ -196,7 +202,7 @@ $$\left(\left(\left(\left(\left(\left(4 + 0\right)\bmod 1 + 4\right)\bmod 2 + 4\
 Coding this up, we have (using the minimal $N$ from the main problem)
 
 ```python
-N = 136231
+N = 136232
 def pumpkin_champ_offset(players):
   if players == 1:
     return 0
@@ -204,7 +210,7 @@ def pumpkin_champ_offset(players):
     return (N + pumpkin_champ_offset(players - 1)) % players
 ```
 
-which gives `7` to the left of player $1,$ i.e. player $8.$
+which gives `57` to the left of player $1,$ i.e. player $58.$
 
 ### A win for David S. Pumpkins?
 
@@ -227,6 +233,6 @@ while True:
         break
 ```
 
-Which returns $140$ as he minimal $N$ for which player $1$ wins.
+Which returns $140$ as the minimal $N$ for which player $1$ wins.
 
 <br>
