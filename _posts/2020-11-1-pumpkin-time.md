@@ -5,15 +5,15 @@ title: It's Pumpkin Time
 date: 2020/11/1
 ---
 
->**Question**: It's Halloween Eve and famous ambassador (ambassador of pumpkins) David S. Pumpkins has appeared out of the clear blue sky to invade your apartment complexes elevator. "Join me", he entices, for a few rounds of "Damn That's a Hot Pumpkin" his crazy new game that's been sweeping the nation. Altogether, there are $61$ people, including David S. Pumpkins himself.
+>**Question**: It's Halloween Eve and famous ambassador (ambassador of pumpkins) David S. Pumpkins has appeared out of the clear blue sky to invade your apartment complex's elevator. "Join me", he entices, for a few rounds of "Damn That's a Hot Pumpkin" his crazy new game that's been sweeping the nation. Altogether, there are $61$ people, including David S. Pumpkins himself.
 >
-> The rules are simple, everyone gets in a circle, including David S. Pumpkins, and starts counting from $1$ to a number $N,$ that's specified by David S. Pumpkins himself. When his watch strikes "pumpkin time" the players start passing the pumpkin to the left, counting the numbers one by one, until hey get to $N.$ When his happens, the person who said $N$ is eliminated, and the next round begins, starting with the person to their left.
+> The rules are simple, everyone gets in a circle, including David S. Pumpkins, and starts counting from $1$ to a number $N$ that's specified by David S. Pumpkins himself. When his watch strikes "pumpkin time" the players start passing the pumpkin to the left, counting the numbers one by one, until they get to $N.$ When this happens, the person who said $N$ is eliminated, and the next round begins, starting with the person to their left.
 >
-> Watching a few rounds, you see that the first person to be eliminated was $18$ positions to the left of David S. Pumpkins, the second person was $31$ position to the left of whoever started their round, and the thid person eliminated themselves was the very person who began round three! What is the smallest value of $N$ for which this would be possible?
+> Distrusting of his pumpkin ways, you hang back and watch a few rounds from the wall. You see that the first person to be eliminated was $18$ positions to the left of David S. Pumpkins, the second person was $31$ positions to the left of whoever started their round, and the third person eliminated was the very person who began round three! What is the smallest value of $N$ for which this would be possible?
 >
 > After solving that, David S. Pumpkins proffers another: who will win this game?
 >
-> After solving that, David S. Pumpkins has had it up to here with other people winning his hot pumpkin games, and says "I'll show you how to do it!!1" Putting aside the constraints from the first two problems, what value of $N$ should David S. Pumpkins pick so that he himself is the person to win the game?
+> After solving that, David S. Pumpkins has had it up to here with other people winning his hot pumpkin games, and says "I'll show you how to do it!!1" Putting aside the constraints from the first two problems, what value of $N$ should David S. Pumpkins pick so that he himself is the person to win the game Damn That's a Hot Pumpkin?
 
 <!--more-->
 
