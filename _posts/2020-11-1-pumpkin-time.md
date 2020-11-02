@@ -121,12 +121,27 @@ $$N = \overbrace{5399}^{\left(n_2n_3 + n_1n_3 + n_1n_2\right)^{-1}}\times\overbr
 
 This is the minimal value of $N,$ but in general we can add any multiple of $n_1\cdot n_2\cdot n_3$ so that
 
-$$N = 136231 + 215940\cdot z.$$
+$$N = 136231 + 215940\cdot x.$$
 
 ### Who is the champion, my friend?
 
-The extra credit asks who would actually win the game if we use this minimal value for $N?$
+The extra credit asks who would actually win the game if we use this minimal value for $N?$ Since the constraints are expressed in the form "the person $M$ positions to the left of the starting point was eliminated", we've been able to remain blissfully ignorant of the fact that one index disappears every round. 
 
+If there are $P = 6$ players to begin, and $N=4$ then the pumpkin will start with player 1, go to player 4, and take player 4 out of the system:
+
+$$\mathbf{1} 2 3 4 5 6 \rightarrow 1 2 3 \mathbf{4} 5 6 \rightarrow 1 2 3 5 6$$
+In the next round, the pumpkin will start with player 5, move to player 2, and take player 2 out of the system
+$$1 2 3 \mathbf{5} 6 \rightarrow 1 \mathbf{2} 3 5 6 \rightarrow 1 3 5 6.$$
+The next round will go 
+$$1\mathbf{3}56\rightarrow \mathbf{1}356\rightarrow 356.$$
+The next round will go 
+$$\mathbf{3}56\rightarrow \mathbf{3}56\rightarrow 56.$$
+and the final round will go
+$$5\mathbf{6}\rightarrow 5\mathbf{6}\rightarrow 5.$$
+
+The third round passes the position of an eliminated player, and makes us contend with the fact that we've lost an index. Let's see if we can calculate the number of the second eliminated player.
+
+On the first pass, we start at the origin and simply count up $N = 4$ positions to position $4$ and eliminate player $#4.$ In the next round we start at 
 
 
 <br>
