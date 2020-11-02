@@ -192,7 +192,9 @@ def pumpkin_champ_offset(players):
 
 which gives `7` to the left of player $1,$ i.e. player $8.$
 
-The second extra credit asks (abandoning the three constraint equations) what is the smallest value of $N$ that will lead to player $1$ winning. 
+### A win for David S. Pumpkins?
+
+The second extra credit asks (abandoning the three constraint equations) what is the smallest value of $N$ that will lead to player $1$, i.e. David S. Pumpkins himself, winning. 
 
 Now we have to vary $N$ so we slightly redefine `pumpkin_champ()`:
 
