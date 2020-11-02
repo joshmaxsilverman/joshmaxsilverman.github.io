@@ -5,17 +5,25 @@ title: It's Pumpkin Time
 date: 2020/11/1
 ---
 
->Question
+>**Question**: It's Halloween Eve and famous ambassador (ambassador of pumpkins) David S. Pumpkins has appeared out of the clear blue sky to invade your apartment complexes elevator. "Join me", he entices, for a few rounds of "Damn That's a Hot Pumpkin" his crazy new game that's been sweeping the nation. Altogether, there are $61$ people, including David S. Pumpkins himself.
+>
+> The rules are simple, everyone gets in a circle, including David S. Pumpkins, and starts counting from $1$ to a number $N,$ that's specified by David S. Pumpkins himself. When his watch strikes "pumpkin time" the players start passing the pumpkin to the left, counting the numbers one by one, until hey get to $N.$ When his happens, the person who said $N$ is eliminated, and the next round begins, starting with the person to their left.
+>
+> Watching a few rounds, you see that the first person to be eliminated was $18$ positions to the left of David S. Pumpkins, the second person was $31$ position to the left of whoever started their round, and the thid person eliminated themselves was the very person who began round three! What is the smallest value of $N$ for which this would be possible?
+>
+> After solving that, David S. Pumpkins proffers another: who will win this game?
+>
+> After solving that, David S. Pumpkins has had it up to here with other people winning his hot pumpkin games, and says "I'll show you how to do it!!1" Putting aside the constraints from the first two problems, what value of $N$ should David S. Pumpkins pick so that he himself is the person to win the game?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/beware-the-hot-pumpkin/))
 
 ## Solution
 
 _Disclaimer_: Through studious indifference, I have managed to $30$ virtually undisturbed by any known results in number theory. So I am able to document here a voyage of personal discovery, stumbling through basic ideas about how the integer numbers relate to themselves.
 
-![](2020-11-1-david-s-pumpkins.JPG){:width=500px" class="image-centered"}
+![](/img/2020-11-1-david-s-pumpkins.JPG){:width=500px" class="image-centered"}
 
 {:.caption}
 
