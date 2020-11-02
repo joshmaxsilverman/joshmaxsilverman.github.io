@@ -163,7 +163,7 @@ $$\mathbf{A}\mathbf{B}\star$$
 
 Now, we have to place player $C$ back into the circle. We take $4$ steps back modulo $P = 3$ (the current number of players) and get $4\bmod3=1,$ meaning they were $1$ step to the left of where we just placed $B$:
 
-$$\mathbf{A]\mathbf{C}\mathbf{B}\star$$
+$$\mathbf{A}\mathbf{C}\mathbf{B}\star$$
 
 To place player $\mathbf{D},$ we take $4$ steps back modulo $P=4$ and get $4\bmod4=0$ meaning the were also standing $1$ step to the left of $\star$ when they were eliminated. We have
 
