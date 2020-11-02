@@ -129,7 +129,7 @@ The extra credit asks who would actually win the game if we use this minimal val
 
 In the forward problem, we do indeed have to keep track of indices. For example, if there are $P = 6$ players to begin, and $N=4$ then the pumpkin will start with player $1$, go to player $4$, and take player 4 out of the system:
 
-$$\mathbf{1} 2 3 4 5 6 \rightarrow 1 2 3 \mathbf{4} 5 6 \rightarrow 1 2 3 5 6$$
+$$\mathbf{1} 2 3 4 5 6 \rightarrow 1 2 3 \mathbf{4} 5 6 \rightarrow 1 2 3 \mathbf{5} 6$$
 
 In the next round, the pumpkin will start with player 5, move to player 2, and take player 2 out of the system
 
@@ -153,7 +153,31 @@ No matter what, we start with the winner, who we represent by
 
 $$\star$$
 
+We know that in the step before, we had another player $A,$ who we can place to the left (or right) of $\star$ (at this point it doesn't matter since things are rotationally symmetric), so we have
 
+$$\mathbf{A}\star$$
+
+Now, in the step before that, we had a third player $B.$ To figure out where $B$ was, we have to figure out where the final round began. If $N\bmod 2 = 0,$ then it started with $\star,$ meaning that player $B$ was $0$ steps to the left of $\star$ when they were eliminated. On the other hand, if $N\bmod 2 = 1,$ then it started with $\mathbf{A},$ meaning that player $B$ was $1$ step to the right of $\star$ when they were eliminated.  This brings us to
+
+$$\mathbf{A}\mathbf{B}\star$$
+
+Now, we have to place player $C$ back into the circle. We take $4$ steps back modulo $P = 3$ (the current number of players) and get $4\bmod3=1,$ meaning they were $1$ step to the left of where we just placed $B$:
+
+$$\mathbf{A]\mathbf{C}\mathbf{B}\star$$
+
+To place player $\mathbf{D},$ we take $4$ steps back modulo $P=4$ and get $4\bmod4=0$ meaning the were also standing $1$ step to the left of $\star$ when they were eliminated. We have
+
+$$\mathbf{A}\mathbf{C}\mathbf{D}\mathbf{B}\star$$
+
+To place $\mathbf{E},$ we take $4$ steps back modulo $5$ which is $4\bmod5=4,$ which brings us to $\left(1 + 4\right) \bmod 5 = 0$ steps to the left of $\star.$ In other words, $\mathbf{E}$ is directly to the left of $\star,$ bringing us to
+
+$$\mathbf{A}\mathbf{C}\mathbf{D}\mathbf{B}\mathbf{E}\star$$
+
+The last step is to find the absolute position of $\mathbf{E}.$ Since the first step eliminates $\mathbf{E},$ the position of $\mathbf{E}$ is simply $4\bmod 6 = 4$ which means that $\star$ is at position $5$ (since it's directly to the right of $\mathbf{E}.$ So, the survivor is player $5,$ as we found above. 
+
+Translating the position bookkeeping from above into modular arithmetic, we found that the position of $\star$ is equal to
+
+$$\left(\left(\left(\left(\left(\left(4 + 0\right)\bmod 1 + 4\right)\bmod 2 + 4\right)\bmod 3 + 4\right)\bmod 4 + 4\right) \bmod 5 + 4\right) \bmod 6$$
 
 
 <br>
