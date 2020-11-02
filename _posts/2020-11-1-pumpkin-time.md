@@ -97,12 +97,32 @@ With like modulo, we can add these equations so that
 
 $$N\left(m_2m_3 + m_1m_3 + m_1m_2\right) = \left(r_1m_2m_3 + r_2m_1m_3 + r_3m_1m_2\right) \bmod m_1m_2m_3.$$
 
-Solving
+If we solve
 
 $$\left(m_2m_3 + m_1m_3 + m_1m_2\right)\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}\equiv 1 \bmod m_1m_2m_3$$
 
-for $\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}$ and multiplying the joint relationship by it, we can solve for $N:$
+for $\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}$ and multiply the joint relationship by it, then we can compute $N:$
 
 $$N = \left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1} \left(r_1m_2m_3 + r_2m_1m_3 + r_3m_1m_2\right).$$
+
+A short program can be used to find $\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}$
+
+```python
+(m_1, m_2, m_3) = (61, 60, 59)
+inverse = 0
+while True:
+  inverse += 1
+  if inverse * (m_1 * m_2 + m_2 * m_3 + m_3 * m_1) % (m_1 * m_2 * m_3) == 1:
+    print(inverse)
+    break
+    
+> 5399
+```
+
+which can then be plugged into the result to find $N$:
+
+$$N = \overbrace{5399}^{\left(m_2m_3 + m_1m_3 + m_1m_2\right)^{-1}}\times\overbrace{\left(18\times60\times59 + 31\times59\times61 + 0\times59\times60\right)}^{\left(r_1m_2m_3 + r_2m_1m_3 + r_3m_1m_2\right)}\bmod 61\times60\times59 = \boxed{136231}$$
+
+$136231$
 
 <br>
