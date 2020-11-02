@@ -15,6 +15,12 @@ date: 2020/11/1
 
 _Disclaimer_: Through studious indifference, I have managed to $30$ virtually undisturbed by any known results in number theory. So I am able to document here a voyage of personal discovery, stumbling through basic ideas about how the integer numbers relate to themselves.
 
+![](2020-11-1-david-s-pumpkins.JPG){:width=500px" class="image-centered"}
+
+{:.caption}
+
+David S. Pumpkins, the erstwhile host of It's Pumpkin Time!
+
 ### The Pumpkin Shuffle
 
 A round constitutes $N$ people counting themselves off around the circle until the last of them says $"N"$ and is eliminated for getting caught holding the David S. Pumpkin's hot pumpkin, and the next round begins with the person to their left. We're told that the first three people to be eliminated are positioned $18,$ $31,$ and $0$ positions to the left of the person who started their round and that there are $61$ people in the circle at the beginning of the game. 
