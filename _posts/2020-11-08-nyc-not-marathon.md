@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Not a Marathon
 date: 2020/11/08
 ---
@@ -35,8 +35,20 @@ or, as the time increments become continuous
 
 $$ X_\text{total} = \int\limits_0^{T} \dfrac{dt}{r_0 + \left(r_1 - r_0\right)\dfrac{t}{T}} $$
 
+### From $t$ to $r$ and back again
+
 Changing variables to $r = r_0 + \left(r_1-r_0\right)t/T,$ so $dt =  T\, dr/\left(r_1 - r_0\right)$ and
 
 $$ X_\text{total} = \dfrac{T}{r_1 - r_0}\int\limits_{r_0}^{r_1}\dfrac{dr}{r} = \dfrac{1}{r_1 - r_0}T \log \dfrac{r_1}{r_0}$$
+
+which comes to $$ X_\text{total} = \dfrac{1}{2\text{ minutes per mile}} T \log \dfrac54 \text{ miles},$$
+
+or, solving for $T,$
+
+$$ T = 20\text{ miles}times 2\text {minutes per mile} / {\log \frac54} \approx 179.25\text{ minutes}$$
+
+which is just under the three hours it takes when the treadmill is set to a constant rate of $9\text{ minutes per mile}.$
+
+Inspecting the steps in the integral, this undershooting is true whether we accelerate or decelerate the treadmill over time. In fact, the undershoot becomes more substantial as we widen the window around the $9\text{ minutes per mile}.$
 
 <br>
