@@ -45,10 +45,12 @@ which comes to $$ X_\text{total} = \dfrac{1}{2\text{ minutes per mile}} T \log \
 
 Solving for $T,$
 
-$$ T = 20\text{ miles}\times 2\text{ minutes per mile} / {\log \frac54} \approx 179.25\text{ minutes}$$
+$$ T = 20\text{ miles}\times 2\text{ minutes per mile} / {\log \frac54} \approx 179.26\text{ minutes}$$
 
 which is just under the three hours it takes when the treadmill is set to a constant rate of $9\text{ minutes per mile}.$
 
-Inspecting the steps in the integral, this undershooting is true whether we accelerate or decelerate the treadmill over time. In fact, the undershoot becomes more substantial as we widen the window around the $9\text{ minutes per mile}.$
+### General considerations
+
+Inspecting the steps in the calculation, this undershooting is true whether we accelerate or decelerate the treadmill over time. In fact, the undershoot becomes more substantial as we widen the window around the $9\text{ minutes per mile}.$
 
 <br>
