@@ -23,12 +23,12 @@ $$d = r_0 + \left(r_1 - r_0\right)\dfrac{t}{T}.$$
 
 $r$ is the ratio of the incremental time taken to the incremental distance travelled
 
-$$ r(t) = \dfrac{\Delta t}{\Delta x}. $$
+$$ r(t_i) = \dfrac{\Delta t_i}{\Delta x_i}. $$
 
-Inverting, this becomes $\Delta x = \Delta t / r$ so that
+Inverting, this becomes $\Delta x_i = \Delta t_i / r(t_i)$ so that
 
-$$\begin{align} X_\text{total} &= \sum \Delta x \\
-&= \sum \dfrac{\Delta t}{r(t)}
+$$\begin{align} X_\text{total} &= \sum_i \Delta x_i \\
+&= \sum_i \dfrac{\Delta t_i}{r(t_i)}
 \end{align}$$
 
 or, as the time increments become continuous
