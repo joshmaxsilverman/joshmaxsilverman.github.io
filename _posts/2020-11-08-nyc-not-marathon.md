@@ -37,15 +37,15 @@ $$ X_\text{total} = \int\limits_0^{T} \dfrac{dt}{r_0 + \left(r_1 - r_0\right)\df
 
 ### From $t$ to $r$ and back again
 
-Changing variables to $r = r_0 + \left(r_1-r_0\right)t/T,$ so $dt =  T\, dr/\left(r_1 - r_0\right)$ and
+Changing variables to $r = r_0 + \left(r_1-r_0\right)t/T,$ so that $dt =  T\, dr/\left(r_1 - r_0\right)$ we find
 
 $$ X_\text{total} = \dfrac{T}{r_1 - r_0}\int\limits_{r_0}^{r_1}\dfrac{dr}{r} = \dfrac{1}{r_1 - r_0}T \log \dfrac{r_1}{r_0}$$
 
-which comes to $$ X_\text{total} = \dfrac{1}{2\text{ minutes per mile}} T \log \dfrac54 \text{ miles},$$
+which comes to $$ X_\text{total} = \dfrac{1}{2\text{ minutes per mile}} T \log \dfrac54 \text{ miles}.$$
 
-or, solving for $T,$
+Solving for $T,$
 
-$$ T = 20\text{ miles}times 2\text {minutes per mile} / {\log \frac54} \approx 179.25\text{ minutes}$$
+$$ T = 20\text{ miles}\times 2\text{minutes per mile} / {\log \frac54} \approx 179.25\text{ minutes}$$
 
 which is just under the three hours it takes when the treadmill is set to a constant rate of $9\text{ minutes per mile}.$
 
