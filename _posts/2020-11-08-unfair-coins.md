@@ -65,7 +65,7 @@ $$\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\}\times\{\mathbf{HT},\mathbf{HHT},\ma
 
 is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition 
 
-$$\\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\\}\times\\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\\}.$$
+$$\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\}\times\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\}.$$
 
 As it turns out, every partition that can be formed with mixes of $2$ and $3$ flip events are just collapses of partitions of the set of $3$ flip events. So, $19$ is all there is.
 
