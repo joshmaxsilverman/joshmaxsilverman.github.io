@@ -29,19 +29,19 @@ If we group some of the other terms with $p^3$ ($\mathbf{HHH}$), it will still h
 
 For example, if we group $\mathbf{HHH}$ and $\mathbf{THT}$ as our new "heads", they'll have total probability $p^3 + p(1-p)^2$ which hits $1/2$ at $p^* \approx 0.77184.$
 
-The same is true of $(1-p)^3$ ($\mathbf{TTT}$), but any polynomial anchored by $p^3$ can be converted into a polynomial anchored by $(1-p)^3$ through the substitution $p \rightarrow 1-p.$
+The same is true of $(1-p)^3$ ($\mathbf{TTT}$), but any polynomial anchored by $p^3$ can be converted into a polynomial anchored by $(1-p)^3$ through the substitution $p \rightarrow (1-p).$
 
 If the partition containing $p^3$ contains $n$ elements, then the complementary partition contains $2^3 - n$ elements. This means we can restrict our attention to partitions of size $4$ or less. Also, all even partitions (sets of size $4$) cross $1/2$ at $p=1/2,$ which means we can further restrict our attention to sets of size $3$ or less.
 
-Finally, if a set contains $p$ and $1-p$ then it will cross $p = 1/2$ twice.
+Finally, if a set contains $p$ and $1-p$ then it will cross $p = 1/2$ twice (and it cannot generate a second partition since $p$ and $(1-p)$ are in the same polynomial).
 
 ### Some counting
 
 So, the question is how many ways can we pair the other terms with $p^3.$
 
-There are $\binom{2}{2} + \binom{2}{1} + \binom{2}{0}$ ways to pair $p^3$ with $2$or fewer distinct cross terms ($p(1-p)^2$ or $(1-p)^2p$) as well as $2$ ways to pair it with a pair of the same kind of cross term. These kinds of polynomials will each generate a root and their counterpart (found by the $p\rightarrow 1-p$ substitution) will generate another. 
+There are $\binom{2}{2} + \binom{2}{1} + \binom{2}{0}$ ways to pair $p^3$ with $2$ or fewer distinct cross terms ($p(1-p)^2$ or $(1-p)^2p$) as well as $2$ ways to pair it with a pair of the same kind of cross term. These kinds of polynomials will each generate a root and their counterpart (found by the $p\rightarrow (1-p)$ substitution) will generate another. 
 
-There are also polynomimals that contain both $p^3$ and $(1-p)^3$ (and therefore have no counterpart via the $p\rightarrow 1-p$ substitution). There are $\binom{2}{1} + \binom{2}{0}$ of these, each of which has $2$ distinct roots.
+There are also polynomimals that contain both $p^3$ and $(1-p)^3$ (and therefore have no counterpart via the $p\rightarrow (1-p)$ substitution). There are $\binom{2}{1} + \binom{2}{0}$ of these, each of which has $2$ distinct roots.
 
 Altogether this makes for 
 
