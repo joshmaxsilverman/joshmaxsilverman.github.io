@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Fair unfair coins
+title: Fair Unfair Coins
 date: 2020/11/09
 ---
 
