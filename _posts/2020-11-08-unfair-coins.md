@@ -35,7 +35,7 @@ The same is true of $(1-p)^3$ ($\mathbf{TTT}$), but any polynomial anchored by $
 
 If the partition containing $p^3$ contains $n$ elements, then the complementary partition contains $2^3 - n$ elements. This means we can restrict our attention to partitions of size $4$ or less. Also, all even partitions (sets of size $4$) cross $1/2$ at $p=1/2,$ which means we can further restrict our attention to sets of size $3$ or less.
 
-Finally, if a set contains $p$ and $1-p$ then it will cross $p = 1/2$ twice (and it cannot generate a second partition since $p$ and $(1-p)$ are in the same polynomial).
+Finally, if a set contains $p^3$ and $(1-p)^3$ then it will cross $p = 1/2$ twice (and it cannot generate a second partition since $p^3$ and $(1-p)^3$ are in the same polynomial).
 
 ### Some counting
 
