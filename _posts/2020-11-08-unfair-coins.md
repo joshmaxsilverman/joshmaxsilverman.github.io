@@ -19,11 +19,11 @@ We want to find an exhaustive set of outcomes that can be partitioned into two g
 
 Taking all the outcomes for $3$ coin flips, we get the probabilities
 
-$$ \left{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}}\right} .$$
+$$ \\{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}}\\} .$$
 
 ### Some basics
 
-Of these, only $p^3$ and $(1-p)^3$ can eclipse $1/2$ on their own (at $1/\sqrt[3]{2}$ and $1-1/\sqrt[3]{2}$). The maximum value of $p^2(1-p)$ (and of $p(1-p)^2$) is just $4/27.$ 
+Of these, only $p^3$ and $(1-p)^3$ can eclipse $1/2$ on their own (at $ p = 1/\sqrt[3]{2}$ and $p = 1-1/\sqrt[3]{2}$). The maximum values of $p^2(1-p)$ and $p(1-p)^2$ are just $4/27.$ 
 
 If we group some of the other terms with $p^3$ ($\mathbf{HHH}$), it will still hit $1/2$ but at a $p > 1/\sqrt[3]{2},$ i.e. it will be pushed toward the middle. 
 
@@ -59,10 +59,8 @@ $$\boxed{18 + 1} = 19.$$
 
 ### Fewer flips
 
-{HHH, THT, THH} {HTH, HTT, HHT, TTT, TTH}
+It might seem like we've missed some cases, for example, $$\\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\\}\times\\{\mathbf{HT},\mathbf{HHT}, \mathbf{TT}\\}$$ is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition $
 
-It might seem like we've missed some cases, for example, $$\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\right}\times\{\mathbf{HT},\mathbf{HHT}, \mathbf{TT}\}$$ is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition $
-
-$\left{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\}\times\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\right}$$
+$\\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\\}\times\\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\\}$$
 
 <br>
