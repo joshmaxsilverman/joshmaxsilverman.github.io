@@ -19,7 +19,7 @@ We want to find an exhaustive set of outcomes that can be partitioned into two g
 
 Taking all the outcomes for $3$ coin flips, we get the probabilities
 
-$$ \{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}}\} .$$
+$$ \left{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}}\right} .$$
 
 ### Some basics
 
@@ -45,7 +45,11 @@ There are also polynomimals that contain both $p^3$ and $(1-p)^3$ (and therefore
 
 Altogether this makes for 
 
-$$ 2\times\left[\left(\binom{2}{2} + \binom{2}{1} + \binom{2}{0} + 2\right) + \left(\binom{2}{1} + \binom{2}{0}\right)\right] = 2\times 6 + 2\times 3 = 18 $$
+$$\begin{align} 
+S &= 2\times\left(\binom{2}{2} + \binom{2}{1} + \binom{2}{0} + 2 + \binom{2}{1} + \binom{2}{0}\right) \\
+&= 2\times 6 + 2\times 3 \\
+&= 18 
+\end{align}$$
 
 distinct roots.
 
@@ -59,6 +63,6 @@ $$\boxed{18 + 1} = 19.$$
 
 It might seem like we've missed some cases, for example, $$\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\right}\times\{\mathbf{HT},\mathbf{HHT}, \mathbf{TT}\}$$ is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition $
 
-$\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\}\times\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbace{\mathbf{TTT},\ mathbf{TTH}}^\mathbf{TT}\}$$
+$\left{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\}\times\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\right}$$
 
 <br>
