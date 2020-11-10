@@ -5,15 +5,17 @@ title: Fair unfair coins
 date: 2020/11/09
 ---
 
->Question
+>**Question**: after a life of flipping fair coins, you've had enough. Your new mission is to construct elaborate and worthless schemes to extract virtual fair coins out of $3$ flips of a crooked one. Ever the positivist, you want to know just how many crooked coins there can be that suit your campaign. For how many values of $p$ can a fair coin be simulated using no more than $3$ flips?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-make-an-unfair-coin-fair/))
 
 ## Solution
 
-Von Neumann's probabilistic coin flip rests on the fact that the probability of $\mathbf{HT}$ and the probability of $\mathbf{TH}$ are both equal to $p(1-p).$ But it ignores two outcomes — $\mathbf{HH}$ and $\mathbf{TT}.$ 
+Von Neumann's probabilistic coin flip rests on the fact that the probability of $\mathbf{HT}$ and the probability of $\mathbf{TH}$ are both equal to $p(1-p).$ But it ignores two outcomes — $\mathbf{HH}$ and $\mathbf{TT}.$ Those terms are important if we want to simulate a fair coin in a finite number of flips.
+
+### Distilling the problem
 
 We want to find an exhaustive set of outcomes that can be partitioned into two groups each with probability $1/2.$
 
