@@ -41,7 +41,7 @@ Finally, if a set contains $p$ and $1-p$ then it will cross $p = 1/2$ twice (and
 
 So, the question is how many ways can we pair the other terms with $p^3.$
 
-There are $\binom{2}{2} + \binom{2}{1} + \binom{2}{0}$ ways to pair $p^3$ with $2$ or fewer distinct cross terms ($p(1-p)^2$ or $(1-p)^2p$) as well as $2$ ways to pair it with a pair of the same kind of cross term. These kinds of polynomials will each generate a root and their counterpart (found by the $p\rightarrow (1-p)$ substitution) will generate another. 
+There are $\binom{2}{2} + \binom{2}{1} + \binom{2}{0}$ ways to pair $p^3$ with $2$ or fewer distinct cross terms ($p^2(1-p)$ or $p(1-p)^2$) as well as $2$ ways to pair it with a pair of the same kind of cross term. These kinds of polynomials will each generate a root and their counterpart (found by the $p\rightarrow (1-p)$ substitution) will generate another. 
 
 There are also polynomimals that contain both $p^3$ and $(1-p)^3$ (and therefore have no counterpart via the $p\rightarrow (1-p)$ substitution). There are $\binom{2}{1} + \binom{2}{0}$ of these, each of which has $2$ distinct roots.
 
