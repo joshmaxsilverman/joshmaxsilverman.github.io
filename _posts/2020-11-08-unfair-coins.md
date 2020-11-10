@@ -19,7 +19,7 @@ We want to find an exhaustive set of outcomes that can be partitioned into two g
 
 Taking all the outcomes for $3$ coin flips, we get the probabilities
 
-$$ \\{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}}\\} .$$
+$$ \\{\overbrace{\mathbf{HHH}}^{p^2}, \overbrace{\mathbf{HHT}}^{p^2(1-p)}, \overbrace{\mathbf{HTH}}^{p^2(1-p)}, \overbrace{\mathbf{HTT}}^{p(1-p)^2}, \overbrace{\mathbf{THH}}^{(1-p)p^2}, \overbrace{\mathbf{TTH}}^{(1-p)^2p}, \overbrace{\mathbf{THT}}^{(1-p)^2p}, \overbrace{\mathbf{TTT}}^{(1-p)^3}\\}.$$
 
 ### Some basics
 
@@ -59,8 +59,14 @@ $$\boxed{18 + 1} = 19.$$
 
 ### Fewer flips
 
-It might seem like we've missed some cases, for example, $$\\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\\}\times\\{\mathbf{HT},\mathbf{HHT}, \mathbf{TT}\\}$$ is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition $
+It might seem like we've missed some cases, for example, 
 
-$\\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\\}\times\\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\\}$$
+$$\\{\mathbf{HHH}, \mathbf{TH}, \mathbf{TT}\\}\times\\{\mathbf{HT},\mathbf{HHT},\mathbf{TT}\\}$$ 
+
+is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition $
+
+$\\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\\}\times\\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\\}.$$
+
+As it turns out, every partition that can be formed with mixes of $2$ and $3$ flip events are just collapses of partitions of the set of $3$ flip events. So, $19$ is all there is.
 
 <br>
