@@ -59,13 +59,31 @@ Finally, we neglected even partitions, all of which cross $1/2$ at $p=1/2,$ so w
 
 $$\boxed{S^\prime = 18 + 1 = 19}.$$
 
+![](/img/2020-11-08-gdPoly.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+The $18$ polynomials that achieve $P_\text{head} = 1/2$ at $p$ away from $1/2.$
+
+![](/img/2020-11-08-hfPoly.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+The various polynomials that achieve $P_\text{head} = 1/2$ at $p = 1/2.$ Some of these repeat the root at $P = 1/\sqrt{2}$ and $\left(1-1/\sqrt{2}\right).$
+
+![](/img/2020-11-08-bdPoly.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+The various polynomials that can't achieve $P_\text{head} = 1/2$ for any value of $p.$
+
 ### Fewer flips
 
 It might seem like we've missed some cases, for example, 
 
 $$\{\mathbf{HHH}, \mathbf{TH}\}\times\{\mathbf{HT},\mathbf{HHT},\mathbf{TT}\}$$ 
 
-is a valid set that crosses $1/2$ at $p=0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition 
+is a valid set that crosses $1/2$ at $p\approx 0.64780.$ However, that's because it's a collapse over the marginal distributions in the partition 
 
 $$\{\mathbf{HHH}, \overbrace{\mathbf{THT}, \mathbf{THH}}^\mathbf{TH}\}\times\{\overbrace{\mathbf{HTH}, \mathbf{HTT}}^\mathbf{HT}, \mathbf{HHT}, \overbrace{\mathbf{TTT},\mathbf{TTH}}^\mathbf{TT}\}.$$
 
