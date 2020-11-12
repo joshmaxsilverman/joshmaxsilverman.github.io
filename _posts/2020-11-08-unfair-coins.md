@@ -59,6 +59,8 @@ Finally, we neglected even partitions, all of which cross $1/2$ at $p=1/2,$ so w
 
 $$\boxed{S^\prime = 18 + 1 = 19}.$$
 
+### Seeing the forest
+
 ![](/img/2020-11-08-gdPoly.png){:width="400px" class="image-centered"}
 
 {:.caption}
@@ -77,7 +79,7 @@ The various polynomials that achieve $P_\text{head} = 1/2$ at $p = 1/2.$ Some of
 
 The various polynomials that can't achieve $P_\text{head} = 1/2$ for any value of $p.$
 
-### Fewer flips
+### Fewer flips?
 
 It might seem like we've missed some cases, for example, 
 
