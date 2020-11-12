@@ -61,7 +61,7 @@ $$\boxed{S^\prime = 18 + 1 = 19}.$$
 
 ### Seeing the forest
 
-We can visualize the $18$ sets that support a fair coin constructions for a "bent" value of $p$:
+We can visualize the polynomials for the $18$ sets that support a fair coin constructions for a "bent" value of $p$:
 
 ![](/img/2020-11-08-gdPoly.png){:width="400px" class="image-centered"}
 
@@ -69,7 +69,7 @@ We can visualize the $18$ sets that support a fair coin constructions for a "ben
 
 The $18$ polynomials that achieve $P_\text{head} = 1/2$ at $p$ away from $1/2.$
 
-as well as the sets that permit constructions for the trivial value of $p=1/2$:
+as well as the polynomials for sets that permit constructions for the trivial value of $p=1/2$:
 
 ![](/img/2020-11-08-hfPoly.png){:width="400px" class="image-centered"}
 
@@ -77,7 +77,7 @@ as well as the sets that permit constructions for the trivial value of $p=1/2$:
 
 The various polynomials that achieve $P_\text{head} = 1/2$ at $p = 1/2.$ Some of these repeat the root at $P = 1/\sqrt{2}$ and $\left(1-1/\sqrt{2}\right).$
 
-Finally, the sets that permit constructions for no values of $p,$ fair or otherwise.
+Finally, the polynomials for sets that permit constructions for no values of $p,$ fair or otherwise.
 
 ![](/img/2020-11-08-bdPoly.png){:width="400px" class="image-centered"}
 
