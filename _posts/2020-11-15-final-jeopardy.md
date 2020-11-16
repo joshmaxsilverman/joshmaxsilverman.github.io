@@ -86,13 +86,13 @@ In particular, all players who hit the Daily Double on their first guess will ha
 
 $$\{\boxed{t_1}\}$$
 
-As we said, all players who hit the Daily Double on their first tile will recieve the full $\$1,000.$ 
+As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ 
 
 **Second tile Daily Double**
 
 $$\{t_1, \boxed{t_2}\}$$
 
-For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\$200$ tiles, one of the six $\$400$ tiles, one of the six $\$600$ tiles, or one of the six $\$800$ tiles on their first tile. 
+For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\\$200$ tiles, one of the six $\\$400$ tiles, one of the six $\\$600$ tiles, or one of the six $\\$800$ tiles on their first tile. 
 
 $$\begin{array}{|c|c|c|} \\ \hline
 W & \text{ways} & \Delta \\ \hline
