@@ -13,25 +13,25 @@ date: 2020/11/16
 
 ## Solution
 
-This problem is about devastation — games where our team gets to a point where they have a $99%$ chance to win only to completely blow the lead and lose the game. 
+This problem is about devastation — games where our team gets to a point where they have a $99\%$ chance (or greater) to win only to completely blow the lead and lose the game. 
 
 ### Trajectory probabilities
 
-By implication, there are points in the space of scores $(w,\ell)$ where there is a $99\%$ or greater chance for the player in the lead to go on to win. If we can find the set of those points, $\mathcal{S},$ then the probability of witnessing a collapse is just
+By implication, there are points in the space of scores $(w,\ell)$ where there is a $99\%$ or greater chance for the Birds to maintain their lead and go on to win. If we can find the set of those points, $\mathcal{S},$ then the probability of witnessing a collapse is just
 
 $$P_\text{collapse} = \sum_{S_i\in\mathcal{S}} P(\text{start} \rightarrow S_i)\times P(S_i \rightarrow\text{collapse}).$$
 
-Here, $P(S_i\rightarrow\text{collapse})$ is the probability that after reaching the point $S_i,$ the player in the lead goes on to lose the game. We don't care how the game makes it from $S_i$ to a loss, any path will do.
+Here, $P(S_i\rightarrow\text{collapse})$ is the probability that after reaching the point $S_i$ (with $w \gt \ell$) the Birds go on to lose the game. We don't care how the Birds makes it from $S_i$ to a loss, any path will do.
 
 $P(\text{start}\rightarrow S_i)$ is the probability that a game makes it to the point $S_i.$ More specifically, it's the probability that the game makes it to $S_i$ before visiting any other point in $\mathcal{S}$ — if it's already been to $\mathcal{S}$ we ignore it since we don't want to double count. The fact that we need to classify trajectories according to which point in $\mathcal{S}$ they visit first makes this quantity tricky to calculate.
 
-### From $\mathcal{S} to an $L$ — the likelihood of collapse
+### From $\mathcal{S}$ to an $L$ — the likelihood of collapse
 
-If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find the points of $\mathcal{S}$ simply by scanning the grid for points where it is $ \leq 1\%.$
+If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find the points of $\mathcal{S}$ simply by scanning the grid for points where it is $ \lt 1\%.$
 
-The Birds will lose if they get to $51$ losses. If we're at the point $(w, \ell)$ then we need to lose $51 - \ell$ more games to win. We can do that in a number of ways. We could lose $(51 - \ell)$ straight games, we could win $1$ game amidst losing $(51 - \ell)$, etc. In fact, we can win as many as $(51 - w - 1)$ more games so long as we lose $(51-\ell)$ of them in the process. 
+The Birds will lose if they get to $51$ losses. If they're at the point $(w, \ell)$ then they need to lose $(51 - \ell)$ more games to win. THey can do that in a number of ways. They could lose $(51 - \ell)$ straight games, they could win $1$ game amidst losing $(51 - \ell)$, etc. In fact, they can win as many as $(51 - w - 1)$ more games so long as they lose $(51-\ell)$ of them in the process. 
 
-The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - (w + \ell)}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
+The number of paths the Birds can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - (w + \ell)}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
 
 $$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - (w + \ell)}} \sum_{\ell^\prime = 51 - \ell}^{101 - (w + \ell)} \binom{100 - (w + \ell)}{\ell^\prime}. $$
 
@@ -65,7 +65,7 @@ But the set is structured such that a boundary points of $\mathcal{S}$ separate 
 
 ### Getting to $\mathcal{S}$
 
-To find the probabilities $P(\text{start}\rightarrow S_i)$ an analytic approach for first visitation is tough since the points of $\mathcal{S}$ change their distance from the line $w=\ell$ over time. To get around this, I deployed $1,000,000$ random walkers on the grid and kept track of the fraction of the time that a point in $\mathcal{S}$ was encountered. As soon as either one such point was encountered, or the line $w + \ell = 101$ was encountered, the run stopped and a new one was started. 
+To find the probabilities $P(\text{start}\rightarrow S_i),$ an analytic approach for first visitation is tough since the points of $\mathcal{S}$ change their distance from the line $w=\ell$ over time. To get around this, I deployed $1,000,000$ random walkers on the grid and kept track of the fraction of the time that a point in $\mathcal{S}$ was encountered. As soon as either one such point was encountered, or the line $w + \ell = 101$ was encountered, the run stopped and a new one was started. 
 
 First, we make a dictionary to store the probabilities for all the points of $\mathcal{S}:$
 
@@ -95,9 +95,7 @@ for _ in range(N):
 The total probability of arriving in this set is found through
 
 ```python
-total_P = 0
-for k, v in point_hits.items():
-    total_P += v
+total_P = sum(v for k, v in point_hits.items())
 ```
 
 which produces $P(\text{start}\rightarrow \mathcal{S}) \approx 0.304.$
@@ -124,7 +122,7 @@ which comes to
 
 $$\boxed{P_\text{collapse} \approx 0.0021132670677359183} $$
 
-### Continous
+### Continous (in progress)
 
 When the gameplay becomes continuous, the "coin" becomes a random walk which is distributed like 
 
