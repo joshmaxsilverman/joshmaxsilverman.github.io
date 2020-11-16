@@ -57,47 +57,5 @@ Because the daily double is placed randomly, the expected value of $f$ is $1/2$ 
 
 $$\langle W^\prime \rangle = 3T/2 = \\$27,000.$$
 
-### Small fixes
-
-Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\\$1000$ at their disposal.
-
-Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\\$200,$ $\\$400,$ $\\$600,$ $\\$800,$ and $\\$1,000,$ we have to subtract off the average value of a single tile:
-
-$$\langle \text{Base value of tiles}\rangle = T - \frac{\\$200 + \\$400 +\\$600 + \\$800 + \\$1,000}{5} = \\$17,400 $$
-
-To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\\$400$ when they hit the daily double, we can imagine that they bet their $\\$400,$ win it, and then receive a one-time bonus of $\\$600$ to make up for the gap between their accumulated winnings and the $\\$1000$ floor. 
-
-So, everyone gets to double their winnings. The daily double can fall at any point between Tile $0$ (when the player would have $\\$0$ accumulated) and Tile $30$ (when the player would be close to the maximum amount they could accumulate). On Tile $30$ the player will have collected all but one of the tiles, so they'd have an average of $\\$18,000 - \\$600 = \\$17400.$ The distribution is symmetric about the middle, so the average amount gained by betting their winnings is 
-
-$$\frac{\\$0 + \\$17,400}{2} = \\$8,700.$$
-
-### Big fixes
-
-So far, we've calculated the base amount that any player can expect due to collecting the tiles and the winnings betting mechanism and those contributions come to $\\$17,400 + \\$8,700 = \\$26,100,$ slightly under the level of the naive model. However, we still have to add in the adjustments due to the players who hit the Daily Double when they were under the threshold. 
-
-In particular, all players who hit the Daily Double on their first guess will have had $\\$0$ at that point, and therefore need to be credited a full $\\$1,000.$ Players who hit the Daily Double on their second tile will also be under the threshold unless they happened to land on a $\\$1,000$ tile on their first turn. In general, this is a combinatorics problem, counting the number of ways a player could have been under the threshold when they hit the Daily Double.
-
-$$\{\boxed{t_1}\}$$
-
-As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ Since a player has a probability of $1/30$ to experience this outcome, it contributes $\\$1,000/30$ to the expected value. 
-
-$$\{t_1, \boxed{t_2}\}$$
-
-For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\\$200$ tiles, one of the six $\\$400$ tiles, one of the six $\\$600$ tiles, or one of the six $\\$800$ tiles on their first tile. 
-
-$$\begin{array}{c|c|c} \\ \hline
-W & \text{ways} & \Delta \\ \hline
-\\$200 & 6 & \\$800 \\ \hline
-\\$400 & 6 & \\$600 \\ \hline
-\\$600 & 6 & \\$400 \\ \hline
-\\$800 & 6 & \\$200 \\ \hline
-\end{array}$$
-
-Since there are $30$ ways to pick the first tile, this contributes 
-
-$$\frac{1}{30}\left(6\times \\$200 + 6\times \\$400 + 6\times \\$600 + 6\times \\$800\right) = \\$400$$
-
-to the expected value of the threshold adjustment.
-
 
 <br>
