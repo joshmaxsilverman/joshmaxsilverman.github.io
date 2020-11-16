@@ -128,7 +128,7 @@ $$ \frac{30\times \$600 + 72 \times \$400 + 102\times \$200}{30\times 29} = \$22
 
 $$\{t_1, t_2, t_3, \boxed{t_4}\}$$
 
-At the fourth tile, the possibilities start to tighten up. At this point, a player can only have $\$600$ or $\$800$ while subsuming the threshold. $\$600$ means getting a $\$200$ tile for each of the first three tiles, and $\$800$ gettings two $\$200$s and a $\$400$ in any order
+At the fourth tile, the possibilities start to tighten up. At this point, a player can only have $\\$600$ or $\\$800$ while subsuming the threshold. $\\$600$ means getting a $\\$200$ tile for each of the first three tiles, and $\\$800$ gettings two $\\$200$s and a $\\$400$ in any order
 
 $$\begin{array}{c|c|c} \\ \hline
 W & \text{ways} & \Delta \\ \hline
@@ -145,14 +145,14 @@ $$ \frac{120\times\$400 + 540\times \$200}{30\times29\times28} = \$130/609 \appr
 
 $$\{t_1, t_2, t_3, t_4, \boxed{t_5}\}$$
 
-Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\$200$ tiles on the first four tiles. This bonus has $6\times5\times4\times3$ ways to happen and has a small expected value
+Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\\$200$ tiles on the first four tiles. This bonus has $6\times5\times4\times3$ ways to happen and has a small expected value
 
 $$\frac{360\times \$200}{30\times29\times28\times27} = \$20/5481 \approx \$0.0036$$
 
 
 ### Putting it all together
 
-To recap, we broke up the expected value into the base value of the tiles and the bonus. We further split the bonus up into the part that comes from betting your winnings and the history dependent subsidy issued to players who hit the Daily Double before they'd accumulated $\$1,000.$ 
+To recap, we broke up the expected value into the base value of the tiles and the bonus. We further split the bonus up into the part that comes from betting your winnings and the history dependent subsidy issued to players who hit the Daily Double before they'd accumulated $\\$1,000.$ 
 
 Adding it all up, we have
 
