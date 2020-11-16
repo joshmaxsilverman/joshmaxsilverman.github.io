@@ -93,6 +93,18 @@ for _ in range(N):
             break
 ```
 
-The total probability of arriving in this set is 
+The total probability of arriving in this set is found through
+
+```python
+total_P = 0
+for k, v in point_hits.items():
+    total_P += v
+```
+
+which produces $P(\text{start}\rightarrow \mathcal{S}) \approx 0.304.$
+
+To find the total probability of witnessing the Birds collapse, we sum over all the points of $\mathcal{S}$ the probability of arriving at point $S_i$ from the origin multiplied by the probability of collapsing from point $S_i:$
+
+
 
 <br>
