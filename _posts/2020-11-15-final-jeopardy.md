@@ -20,6 +20,7 @@ In both strategies, the thresholded bonus rule is in play: if the player has acc
 For the row by row strategy, we can just go one tile at a time. If the accumulated winnings by the Daily Double tile are less than $\\$1,000,$ then we get $\\$1,000$ to bet with. Otherwise, we bet all our accumulated winnings, doubling our money. Also, we do not get the face value of the tile we hit the Daily Double on. Saving the math for the extra credit, we can just code up the logic above with a short Python script. It shows that the expected value of this strategy is $\\$23,800:$
 
 ```python
+
 import numpy as np
 
 tiles = 6 * [200] + 6 * [400] + 6 * [600] + 6 * [800] + 6 * [1000]
@@ -35,6 +36,7 @@ for _ in range(0, len(tiles)):
     prizes.append(temp_total)
     
 print(np.mean(prizes))
+
 ```
 
 ## Random guessing
@@ -166,5 +168,33 @@ $$
 ### Is it real?
 
 The $30$-tile board has too any orderings to exhaustively simulate, but a $\$2,000,000$ round simulation produced an estimate of $\approx\$26,149.43$ for the expected value of the random strategy. A $9$-tile version of the Jeopardy board (three $\$200$ tiles, three $\$400$ tiles, three $\$600$ tiles) only has $9!$ orders and can be exactly simulated. Doing the same analysis we just did for the $30$-tile board gives an expected value of $\\$105100/21$[$\approx\\$5004.76$](https://www.wolframalpha.com/input/?i=3600+-+1%2F3*%28200%2B400%2B600%29+%2B+%280+%2B+3200%29%2F2+%2B+1%2F9*1000+%2B+1%2F9*1%2F9*%283*800%2B3*600%2B3*400%29+%2B+1%2F9*1%2F%289*8%29*%286*600%2B18*400%2B24*200%29+%2B+1%2F9*1%2F%289*8*7%29*%286*400%2B54*200%29), which agrees exactly with the exhaustive simulation.
+
+```python
+
+import random
+import numpy as np
+
+prices = 3 * [200] + 3 * [400] + 3 * [600]
+perms = list(permutations(prices))
+
+prizes = []
+
+for round in range(len(perms)):
+    
+    temp_tiles = perms[round]
+    
+    winnings = []
+
+    for _ in range(0, len(temp_tiles)):
+        DD_winning = sum(temp_tiles[:_])
+        if DD_winning < 1000:
+            DD_winning = 1000
+        round_winnings = DD_winning + sum(temp_tiles) - temp_tiles[_]
+        winnings.append(round_winnings)
+    
+    prizes.append(winnings)
+
+np.mean([item for lst in prizes for item in lst])
+```
 
 <br>
