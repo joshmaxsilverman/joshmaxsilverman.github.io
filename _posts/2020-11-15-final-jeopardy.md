@@ -171,7 +171,7 @@ $$
 
 ### Is it real?
 
-The $30$-tile board has too any orderings to exhaustively simulate, but a $\\$2,000,000$ round simulation produced an estimate of $\approx\\$26,149.43$ for the expected value of the random strategy. A $9$-tile version of the Jeopardy board (three $\\$200$ tiles, three $\\$400$ tiles, three $\\$600$ tiles) only has $9!$ orders and can be exactly simulated. Doing the same analysis we just did for the $30$-tile board gives an expected value of $\\$105100/21$[$\approx\\$5004.76$](https://www.wolframalpha.com/input/?i=3600+-+1%2F3*%28200%2B400%2B600%29+%2B+%280+%2B+3200%29%2F2+%2B+1%2F9*1000+%2B+1%2F9*1%2F9*%283*800%2B3*600%2B3*400%29+%2B+1%2F9*1%2F%289*8%29*%286*600%2B18*400%2B24*200%29+%2B+1%2F9*1%2F%289*8*7%29*%286*400%2B54*200%29), which agrees exactly with the exhaustive simulation.
+The $30$-tile board has too any orderings to exhaustively simulate, but an $N = 2,000,000$ round simulation produced an estimate of $\approx\\$26,149.43$ for the expected value of the random strategy. A $9$-tile version of the Jeopardy board (three $\\$200$ tiles, three $\\$400$ tiles, three $\\$600$ tiles) only has $9!$ orders and can be exactly simulated. Doing the same analysis we just did for the $30$-tile board gives an expected value of $\\$105100/21$[$\approx\\$5004.76$](https://www.wolframalpha.com/input/?i=3600+-+1%2F3*%28200%2B400%2B600%29+%2B+%280+%2B+3200%29%2F2+%2B+1%2F9*1000+%2B+1%2F9*1%2F9*%283*800%2B3*600%2B3*400%29+%2B+1%2F9*1%2F%289*8%29*%286*600%2B18*400%2B24*200%29+%2B+1%2F9*1%2F%289*8*7%29*%286*400%2B54*200%29), which agrees exactly with the exhaustive simulation.
 
 ```python
 
