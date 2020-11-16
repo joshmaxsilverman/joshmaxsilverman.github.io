@@ -173,6 +173,7 @@ The $30$-tile board has too any orderings to exhaustively simulate, but a $\\$2,
 
 import random
 import numpy as np
+from itertools import permutations
 
 prices = 3 * [200] + 3 * [400] + 3 * [600]
 perms = list(permutations(prices))
