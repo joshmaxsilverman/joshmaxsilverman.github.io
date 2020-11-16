@@ -163,7 +163,7 @@ To recap, we broke up the expected value into the base value of the tiles and th
 Adding it all up, we have
 
 $$\begin{align}
-\langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\$1000 + \$400 + \$2240/29 + \$130/609 + \$20/5481}^\text{ways to subsume threshold} \\
+\langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\left(\$1000 + \$400 + \$2240/29 + \$130/609 + \$20/5481\right)}^\text{ways to subsume threshold} \\
 &= \$26,100  + \$115685/2349 \\
 &\approx \$26,149.25
 \end{align}
