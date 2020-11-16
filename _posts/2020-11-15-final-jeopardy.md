@@ -158,8 +158,13 @@ Adding it all up, we have
 
 $$\begin{align}
 \langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\$1000 + \$400 + \$2240/29 + \$130/609 + \$20/5481}^\text{ways to subsume threshold} \\
-&= \$26,100  + \$115685/2349 \approx \$26,149.25
+&= \$26,100  + \$115685/2349 \\
+&\approx \$26,149.25
 \end{align}
 $$
+
+### Is it real?
+
+The $30$-tile board has too any orderings to exhaustively simulate, but a $\$2,000,000$ round simulation produced an estimate of $\approx\$26,149.43$ for the expected value of the random strategy. A $9$-tile version of the Jeopardy board (three $\$200$ tiles, three $\$400$ tiles, three $\$600$ tiles) only has $9!$ orders and can be exactly simulated. Doing the same analysis we just did for the $30$-tile board gives an expected value of $\$5004.
 
 <br>
