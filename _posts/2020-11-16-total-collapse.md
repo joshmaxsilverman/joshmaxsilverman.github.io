@@ -67,6 +67,32 @@ But the set is structured such that a boundary points of $\mathcal{S}$ separate 
 
 To find the probabilities $P(\text{start}\rightarrow S_i)$ an analytic approach for first visitation is tough since the points of $\mathcal{S}$ change their distance from the line $w=\ell$ over time. To get around this, I deployed $1,000,000$ random walkers on the grid and kept track of the fraction of the time that a point in $\mathcal{S}$ was encountered. As soon as either one such point was encountered, or the line $w + \ell = 101$ was encountered, the run stopped and a new one was started. 
 
+First, we make a dictionary to store the probabilities for all the points of $\mathcal{S}:$
 
+```python
+point_hits = {}
+for _ in points:
+    point_hits[tuple(_)] = 0
+```
+
+Then we deploy the random walkers:
+
+
+```python
+%%time
+N = 1_000_000
+for _ in range(N):
+    pt = np.array([0,0])
+    while sum(pt) < 101:
+        if random.random() <= 0.5:
+            pt += [1,0]
+        else:
+            pt += [0,1]
+        if tuple(pt) in points:
+            point_hits[tuple(pt)] += 1 / N
+            break
+```
+
+The total probability of arriving in this set is 
 
 <br>
