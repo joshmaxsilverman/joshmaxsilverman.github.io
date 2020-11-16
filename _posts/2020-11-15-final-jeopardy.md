@@ -13,11 +13,11 @@ date: 2020/11/15
 
 ## Solution
 
-In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\\$1,000$ by the time they hit the Daily Double, they get house money to be with in the amount of $\\$1,000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
+In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\$1,000$ by the time they hit the Daily Double, they get house money to be with in the amount of $\$1,000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
 
 ## Row by row
 
-For the row by row strategy, we can just go one tile at a time. If the accumulated winnings by the Daily Double tile are less than $\\$1,000,$ then we get $\\$1,000$ to bet with. Otherwise, we bet all our accumulated winnings, doubling our money. Also, we do not get the face value of the tile we hit the Daily Double on. Saving the math for the extra credit, we can just code up the logic above with a short Python script. It shows that the expected value of this strategy is $\\$23,800:$
+For the row by row strategy, we can just go one tile at a time. If the accumulated winnings by the Daily Double tile are less than $\$1,000,$ then we get $\$1,000$ to bet with. Otherwise, we bet all our accumulated winnings, doubling our money. Also, we do not get the face value of the tile we hit the Daily Double on. Saving the math for the extra credit, we can just code up the logic above with a short Python script. It shows that the expected value of this strategy is $\$23,800:$
 
 ```python
 import numpy as np
@@ -45,7 +45,7 @@ $$W = \text{Base value of tiles} + \text{Daily Double bonus}.$$
 
 ### Simple model
 
-We can make a first pass at the answer with an audacious approximation. The number of cases where the thresholded bonus gets applied (handing the player $\\$1000$ to bet with) are relatively few, so if we ignore them it shouldn't have a huge impact on the answer.
+We can make a first pass at the answer with an audacious approximation. The number of cases where the thresholded bonus gets applied (handing the player $\$1,000$ to bet with) are relatively few, so if we ignore them it shouldn't have a huge impact on the answer.
 
 Putting them to the side, we can focus on the core of the bonus mechanism: allowing the player to bet their accumulated winnings. 
 
@@ -60,30 +60,30 @@ $$\langle W^\prime \rangle = 3T/2 = \$27,000.$$
 
 ### Small fixes
 
-Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\\$1,000$ at their disposal.
+Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\$1,000$ at their disposal.
 
-Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\\$200,$ $\\$400,$ $\\$600,$ $\\$800,$ and $\\$1,000,$ we have to subtract off the average value of a single tile:
+Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\$200,$ $\$400,$ $\$600,$ $\$800,$ and $\$1,000,$ we have to subtract off the average value of a single tile:
 
 $$\langle \text{Base value of tiles}\rangle = T - \frac{\$200 + \$400 + \$600 + \$800 + \$1,000}{5} = \$17,400 $$
 
-To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\\$400$ when they hit the daily double, we can imagine that they bet their $\\$400,$ win it, and then receive a one-time bonus of $\\$600$ to make up for the gap between their accumulated winnings and the $\\$1,000$ floor. 
+To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\$400$ when they hit the daily double, we can imagine that they bet their $\$400,$ win it, and then receive a one-time bonus of $\$600$ to make up for the gap between their accumulated winnings and the $\$1,000$ floor. 
 
-So, everyone gets to double their winnings. The daily double can fall at any point between Tile $0$ (when the player would have $\\$0$ accumulated) and Tile $30$ (when the player would be close to the maximum amount they could accumulate). On Tile $30$ the player will have collected all but one of the tiles, so they'd have an average of $\\$18,000 - \\$600 = \\$17,400.$ The distribution is symmetric about the middle, so the average amount gained by betting their winnings is 
+So, everyone gets to double their winnings. The daily double can fall at any point between Tile $0$ (when the player would have $\\$0$ accumulated) and Tile $30$ (when the player would be close to the maximum amount they could accumulate). On Tile $30$ the player will have collected all but one of the tiles, so they'd have an average of $\$18,000 - \$600 = \$17,400.$ The distribution is symmetric about the middle, so the average amount gained by betting their winnings is 
 
 $$\frac{\$0 + \$17,400}{2} = \$8,700.$$
 
 
 ### Big fixes
 
-So far, we've calculated the base amount that any player can expect due to collecting the tiles and the winnings betting mechanism and those contributions come to $\\$17,400 + \\$8,700 = \\$26,100,$ slightly under the level of the naive model. However, we still have to add in the adjustments due to the players who hit the Daily Double when they were under the threshold. 
+So far, we've calculated the base amount that any player can expect due to collecting the tiles and the winnings betting mechanism and those contributions come to $\$17,400 + \$8,700 = \$26,100,$ slightly under the level of the naive model. However, we still have to add in the adjustments due to the players who hit the Daily Double when they were under the threshold. 
 
-In particular, all players who hit the Daily Double on their first guess will have had $\\$0$ at that point, and therefore need to be credited a full $\\$1,000.$ Players who hit the Daily Double on their second tile will also be under the threshold unless they happened to land on a $\\$1,000$ tile on their first turn. In general, this is a combinatorics problem, counting the number of ways a player could have been under the threshold when they hit the Daily Double.
+In particular, all players who hit the Daily Double on their first guess will have had $\\$0$ at that point, and therefore need to be credited a full $\$1,000.$ Players who hit the Daily Double on their second tile will also be under the threshold unless they happened to land on a $\$1,000$ tile on their first turn. In general, this is a combinatorics problem, counting the number of ways a player could have been under the threshold when they hit the Daily Double.
 
 **First tile Daily Double**
 
 $$\{\boxed{t_1}\}$$
 
-As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ 
+As we said, all players who hit the Daily Double on their first tile will recieve the full $\$1,000.$ 
 
 **Second tile Daily Double**
 
@@ -91,7 +91,7 @@ $$\{t_1, \boxed{t_2}\}$$
 
 For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\$200$ tiles, one of the six $\$400$ tiles, one of the six $\$600$ tiles, or one of the six $\$800$ tiles on their first tile. 
 
-$$\begin{array}{c|c|c} \\ \hline
+$$\begin{array}{|c|c|c|} \\ \hline
 W & \text{ways} & \Delta \\ \hline
 \$200 & 6 & \$800 \\ \hline
 \$400 & 6 & \$600 \\ \hline
