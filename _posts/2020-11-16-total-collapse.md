@@ -31,7 +31,7 @@ If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find th
 
 The Birds will lose if they get to $51$ losses. If we're at the point $(w, \ell)$ then we need to lose $51 - \ell$ more games to win. We can do that in a number of ways. We could lose $(51 - \ell)$ straight games, we could win $1$ game amidst losing $(51 - \ell)$, etc. In fact, we can win as many as $(51 - w - 1)$ more games so long as we lose $(51-\ell)$ of them in the process. 
 
-The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - w - \ell}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
+The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - (w + \ell)}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
 
 $$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - (w + \ell)}} \sum_{\ell^\prime = 51 - \ell}^{101 - (w + \ell)} \binom{100 - (w + \ell)}{\ell^\prime}. $$
 
