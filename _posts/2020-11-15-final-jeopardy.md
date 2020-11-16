@@ -13,11 +13,11 @@ date: 2020/11/15
 
 ## Solution
 
-In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\\$1,000$ by the time they hit the Daily Double, they get house money to be with in the amount of $\\$1,000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
+In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\\$1,000$ by the time they hit the Daily Double, they get house money to bet with in the amount of $\\$1,000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
 
 ## Row by row
 
-For the row by row strategy, we can just go one tile at a time. If the accumulated winnings by the Daily Double tile are less than $\\$1,000,$ then we get $\\$1,000$ to bet with. Otherwise, we bet all our accumulated winnings, doubling our money. Also, we do not get the face value of the tile we hit the Daily Double on. Saving the math for the extra credit, we can just code up the logic above with a short Python script. It shows that the expected value of this strategy is $\\$23,800:$
+For the row by row strategy, we can just go one tile at a time. If the accumulated winnings by the Daily Double tile are less than $\\$1,000,$ then we get $\\$1,000$ to bet with. Otherwise, we bet all our accumulated winnings, doubling our money. Also, we do not get the face value of the tile we hit the Daily Double on. Saving the math for the second case, we can just code up the logic above with a short Python script. It shows that the expected value of this strategy is $\\$23,800:$
 
 ```python
 
@@ -26,7 +26,7 @@ import numpy as np
 tiles = 6 * [200] + 6 * [400] + 6 * [600] + 6 * [800] + 6 * [1000]
 prizes = []
 
-for _ in range(0, len(tiles)):
+for _ in range(len(tiles)):
     (temp_total, DD_bonus) = (0, 0)
     if sum(tiles[:_]) < 1000:
         DD_bonus = 1000
@@ -47,7 +47,7 @@ $$W = \text{Base value of tiles} + \text{Daily Double bonus}.$$
 
 ### Simple model
 
-We can make a first pass at the answer with an audacious approximation. The number of cases where the thresholded bonus gets applied (handing the player $\$1,000$ to bet with) are relatively few, so if we ignore them it shouldn't have a huge impact on the answer.
+We can make a first pass at the answer with an audacious approximation. The cases where the thresholded bonus gets applied (handing the player $\\$1,000$ to bet with) are relatively few, so if we ignore them it shouldn't have a huge impact on the answer.
 
 Putting them to the side, we can focus on the core of the bonus mechanism: allowing the player to bet their accumulated winnings. 
 
@@ -92,7 +92,7 @@ In general, this is a combinatorics problem, counting the number of ways a playe
 
 $$\{\boxed{t_1}\}$$
 
-As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ 
+As we said, all players who hit the Daily Double on their first tile will receive the full $\\$1,000.$ 
 
 **Second tile Daily Double**
 
@@ -153,7 +153,7 @@ $$\{t_1, t_2, t_3, t_4, \boxed{t_5}\}$$
 
 Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\\$200$ tiles on the first four tiles. This bonus has $6\times5\times4\times3$ ways to happen and has a small expected value
 
-$$\frac{360\times \$200}{30\times29\times28\times27} = \$20/5481 \approx \$0.0036$$
+$$\frac{360\times \$200}{30\times29\times28\times27} = \$200/1827 \approx \$0.11$$
 
 
 ### Putting it all together
@@ -163,9 +163,9 @@ To recap, we broke up the expected value into the base value of the tiles and th
 Adding it all up, we have
 
 $$\begin{align}
-\langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\left(\$1000 + \$400 + \$2240/29 + \$130/609 + \$20/5481\right)}^\text{ways to subsume threshold} \\
-&= \$26,100  + \$115685/2349 \\
-&\approx \$26,149.25
+\langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\left(\$1000 + \$400 + \$2240/29 + \$1300/203 + \$200/1827\right)}^\text{ways to subsume threshold} \\
+&= \$26,100  + \$38726/783 \\
+&\approx \$26,149.46
 \end{align}
 $$
 
@@ -175,7 +175,6 @@ The $30$-tile board has too any orderings to exhaustively simulate, but an $N = 
 
 ```python
 
-import random
 import numpy as np
 from itertools import permutations
 
@@ -189,7 +188,7 @@ for round in range(len(perms)):
     temp_tiles = perms[round]
     winnings = []
 
-    for _ in range(0, len(temp_tiles)):
+    for _ in range(len(temp_tiles)):
         
         DD_winning = sum(temp_tiles[:_])
         
