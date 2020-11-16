@@ -49,7 +49,7 @@ def P_to_lose(w, l):
     return P
 ```
 
-As expected, this gives $1/2^{51-\ell)$ for the points $\left(50, \ell\right),$ and $5/16$ for $(49, 48).$
+As expected, this gives $1/2^{51-\ell}$ for the points $\left(50, \ell\right),$ and $5/16$ for $(49, 48).$
 
 Running this over the half grid, it identifies $632$ points for which $P_\text{loss} < 1\%,$ i.e. the points of $\mathcal{S}.$ 
 
