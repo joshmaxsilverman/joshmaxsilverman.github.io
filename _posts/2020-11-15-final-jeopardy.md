@@ -63,7 +63,7 @@ Of course, this is wrong. We've neglected a few things: we do not get the value 
 
 Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\\$200,$ $\\$400,$ $\\$600,$ $\\$800,$ and $\\$1,000,$ we have to subtract off the average value of a single tile:
 
-$$\langle \text{Base value of tiles}\rangle = T - \frac{\\$200 + \\$400 +$\\$600 + \\$800 + \\$1,000}{5} = \\$17,400 $$
+$$\langle \text{Base value of tiles}\rangle = T - \frac{\\$200 + \\$400 +\\$600 + \\$800 + \\$1,000}{5} = \\$17,400 $$
 
 To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\\$400$ when they hit the daily double, we can imagine that they bet their $\\$400,$ win it, and then receive a one-time bonus of $\\$600$ to make up for the gap between their accumulated winnings and the $\\$1000$ floor. 
 
