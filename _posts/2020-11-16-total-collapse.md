@@ -25,6 +25,12 @@ Here, $P(S_i\rightarrow\text{collapse})$ is the probability that after reaching 
 
 $P(\text{start}\rightarrow S_i)$ is the probability that a game makes it to the point $S_i.$ More specifically, it's the probability that the game makes it to $S_i$ before visiting any other point in $\mathcal{S}$ — if it's already been to $\mathcal{S}$ we ignore it since we don't want to double count. The fact that we need to classify trajectories according to which point in $\mathcal{S}$ they visit first makes this quantity tricky to calculate.
 
+![](/img/2020-11-15-total-collapse-diagram.JPG){:width="500px" class="image-centered}
+
+{:.caption}
+
+The Birds start things off with with a lead, then go under, then rocket up to a point in $\mathcal{S}$ before completely blowing the lead and ending up in the $\mathbf{LOSS ZONE}.$
+
 ### From $\mathcal{S}$ to an $L$ — the likelihood of collapse
 
 If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find the points of $\mathcal{S}$ simply by scanning the grid for points where it is $ \lt 1\%.$
