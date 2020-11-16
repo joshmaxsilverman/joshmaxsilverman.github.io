@@ -187,13 +187,15 @@ prizes = []
 for round in range(len(perms)):
     
     temp_tiles = perms[round]
-    
     winnings = []
 
     for _ in range(0, len(temp_tiles)):
+        
         DD_winning = sum(temp_tiles[:_])
+        
         if DD_winning < 1000:
             DD_winning = 1000
+        
         round_winnings = DD_winning + sum(temp_tiles) - temp_tiles[_]
         winnings.append(round_winnings)
     
