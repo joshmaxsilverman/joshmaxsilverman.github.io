@@ -51,18 +51,16 @@ Putting them to the side, we can focus on the core of the bonus mechanism: allow
 
 In this case, the player gets the combined total of all the tiles on the board plus the total of the tiles they'd won by the time they hit the daily double. Ignoring the discrete nature of the tiles, we can say that the player hit the daily double when they were a fraction $f$ to accumulating all the value on the board. If each tile's value is $t_i$ then the total value is $T = \sum_i t_i$ and the player's winnings come to
 
-$$\langle W^\prime \rangle = 3T/2 = \\$27,000.$$
-
 $$W^\prime = T + f\times T$$
 
 Because the daily double is placed randomly, the expected value of $f$ is $1/2$ and 
 
-
+$$\langle W^\prime \rangle = 3T/2 = \$27,000.$$
 
 
 ### Small fixes
 
-Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\\$1000$ at their disposal.
+Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\\$1,000$ at their disposal.
 
 Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\\$200,$ $\\$400,$ $\\$600,$ $\\$800,$ and $\\$1,000,$ we have to subtract off the average value of a single tile:
 
