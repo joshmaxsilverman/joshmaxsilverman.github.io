@@ -149,7 +149,7 @@ W & \text{ways} & \Delta \\ \hline
 
 This bonus has an expected value of
 
-$$ \frac{120\times\$400 + 540\times \$200}{30\times29\times28} = \$130/609 \approx \$0.21. $$
+$$ \frac{120\times\$400 + 540\times \$200}{30\times29\times28} = \$1300/203 \approx \$6.40 $$
 
 
 **Fifth tile Daily Double**
