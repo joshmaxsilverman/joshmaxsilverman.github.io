@@ -94,7 +94,7 @@ $$\{t_1, \boxed{t_2}\}$$
 
 For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\\$200$ tiles, one of the six $\\$400$ tiles, one of the six $\\$600$ tiles, or one of the six $\\$800$ tiles on their first tile. 
 
-$$\begin{array}{c|c|c}
+$$\begin{array}{|c|c|c|} \hline
 W & \text{ways} & \Delta \\ \hline
 \$200 & 6 & \$800 \\ \hline
 \$400 & 6 & \$600 \\ \hline
@@ -130,7 +130,7 @@ $$\{t_1, t_2, t_3, \boxed{t_4}\}$$
 
 At the fourth tile, the possibilities start to tighten up. At this point, a player can only have $\\$600$ or $\\$800$ while subsuming the threshold. $\\$600$ means getting a $\\$200$ tile for each of the first three tiles, and $\\$800$ gettings two $\\$200$s and a $\\$400$ in any order
 
-$$\begin{array}{c|c|c} \\ \hline
+$$\begin{array}{|c|c|c|} \hline
 W & \text{ways} & \Delta \\ \hline
 \$600 & 6\times 5\times 4 & \$400 \\ \hline
 \$800 & 6\times5\times6\times3 & \$200 \\ \hline
