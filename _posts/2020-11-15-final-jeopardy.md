@@ -111,7 +111,7 @@ $$\frac{6\times \$200 + 6\times \$400 + 6\times \$600 + 6\times \$800}{30} = \$4
 
 $$\{t_1, t_2, \boxed{t_3}\}$$
 
-The number of ways to subsume the threshold expands when a player hits the Double on their third tile, at which point they can have $\$400,$ $\$600$ or $\$800.$ Having $\$400$ corresponds to getting a $\$200$ tile on each of the first two tiles, which can be done $6\times 5$ different ways. Getting $\$600$ means drawing a $\$200$ and a $\$400$ for the first two tiles (in any order) which can happen in $6\times 6\times 2$ different ways. Getting an $\$800$ can happen in one of two ways, the first is similar to $\$400$ and has $6\times 5$ distinct ways to occur, while the second consists of getting a $\$600$ and a $\$200$ in either order, which has $2\times 6\times 6$ ways to occur. 
+The number of ways to subsume the threshold expands when a player hits the Double on their third tile, at which point they can have $\\$400,$ $\\$600$ or $\\$800.$ Having $\\$400$ corresponds to getting a $\\$200$ tile on each of the first two tiles, which can be done $6\times 5$ different ways. Getting $\\$600$ means drawing a $\\$200$ and a $\\$400$ for the first two tiles (in any order) which can happen in $6\times 6\times 2$ different ways. Getting an $\\$800$ can happen in one of two ways, the first is similar to $\\$400$ and has $6\times 5$ distinct ways to occur, while the second consists of getting a $\\$600$ and a $\\$200$ in either order, which has $2\times 6\times 6$ ways to occur. 
 
 $$\begin{array}{c|c|c} \\ \hline
 W & \text{ways} & \Delta \\ \hline
