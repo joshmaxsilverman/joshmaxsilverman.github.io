@@ -66,9 +66,9 @@ Let's deal with the first thing first. The total value of the tiles is $T = \sum
 
 $$\langle \text{Base value of tiles}\rangle = T - \frac{\$200 + \$400 + \$600 + \$800 + \$1,000}{5} = \$17,400 $$
 
-To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\$400$ when they hit the daily double, we can imagine that they bet their $\$400,$ win it, and then receive a one-time bonus of $\$600$ to make up for the gap between their accumulated winnings and the $\$1,000$ floor. 
+To get a handle on the bonus we can split it into two pieces, the core winnings betting piece, and the adjustment for the players who are under the threshold. Concretely, if a player has $\\$400$ when they hit the daily double, we can imagine that they bet their $\\$400,$ win it, and then receive a one-time bonus of $\\$600$ to make up for the gap between their accumulated winnings and the $\\$1,000$ floor. 
 
-So, everyone gets to double their winnings. The daily double can fall at any point between Tile $0$ (when the player would have $\\$0$ accumulated) and Tile $30$ (when the player would be close to the maximum amount they could accumulate). On Tile $30$ the player will have collected all but one of the tiles, so they'd have an average of $\$18,000 - \$600 = \$17,400.$ The distribution is symmetric about the middle, so the average amount gained by betting their winnings is 
+So, everyone gets to double their winnings. The daily double can fall at any point between Tile $0$ (when the player would have $\\$0$ accumulated) and Tile $30$ (when the player would be close to the maximum amount they could accumulate). On Tile $30$ the player will have collected all but one of the tiles, so they'd have an average of $\\$18,000 - \\$600 = \\$17,400.$ The distribution is symmetric about the middle, so the average amount gained by betting their winnings is 
 
 $$\frac{\$0 + \$17,400}{2} = \$8,700.$$
 
