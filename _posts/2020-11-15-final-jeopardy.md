@@ -84,6 +84,11 @@ $$ \boxed{\text{Core bonus} = \frac{\$0 + \$17,400}{2} = \$8,700}. $$
 
 So far, we've calculated the base amount that any player can expect due to collecting the tiles and the winnings betting mechanism and those contributions come to $\\$17,400 + \\$8,700 = \\$26,100,$ slightly under the level of the naive model. However, we still have to add in the adjustments due to the players who hit the Daily Double when they were under the threshold. 
 
+$$\begin{align}
+\text{Winnings} &= \text{Base value of tiles} + \text{Bonus} \\
+\text{Bonus} &= \text{Core bonus} + \text{Adjustment for threshold}
+\end{align}$$
+
 In particular, all players who hit the Daily Double on their first guess will have had $\\$0$ at that point, and therefore need to be credited a full $\\$1,000.$ Players who hit the Daily Double on their second tile will also be under the threshold unless they happened to land on a $\\$1,000$ tile on their first turn. 
 
 In general, this is a combinatorics problem, counting the number of ways a player could have been under the threshold when they hit the Daily Double.
