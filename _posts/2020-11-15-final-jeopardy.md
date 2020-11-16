@@ -60,9 +60,9 @@ $$\langle W^\prime \rangle = 3T/2 = \$27,000.$$
 
 ### Small fixes
 
-Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\$1,000$ at their disposal.
+Of course, this is wrong. We've neglected a few things: we do not get the value of the Daily Double tile, the tiles are discrete, and the threshold ensures that nobody bets with less than $\\$1,000$ at their disposal.
 
-Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\$200,$ $\$400,$ $\$600,$ $\$800,$ and $\$1,000,$ we have to subtract off the average value of a single tile:
+Let's deal with the first thing first. The total value of the tiles is $T = \sum_i t_i,$ but we don't get the full value of $T,$ we skip out on the value of the Daily Double tile $t_d.$ Since $t_d$ is equally likely to be any of the tiles, which are evenly split between $\\$200,$ $\\$400,$ $\\$600,$ $\\$800,$ and $\\$1,000,$ we have to subtract off the average value of a single tile:
 
 $$\langle \text{Base value of tiles}\rangle = T - \frac{\$200 + \$400 + \$600 + \$800 + \$1,000}{5} = \$17,400 $$
 
