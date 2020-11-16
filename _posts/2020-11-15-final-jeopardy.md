@@ -94,7 +94,7 @@ $$\{t_1, \boxed{t_2}\}$$
 
 For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\\$200$ tiles, one of the six $\\$400$ tiles, one of the six $\\$600$ tiles, or one of the six $\\$800$ tiles on their first tile. 
 
-$$\begin{array}{|c|c|c|} \\ \hline
+$$\begin{array}{c|c|c} \\ \hline
 W & \text{ways} & \Delta \\ \hline
 \$200 & 6 & \$800 \\ \hline
 \$400 & 6 & \$600 \\ \hline
