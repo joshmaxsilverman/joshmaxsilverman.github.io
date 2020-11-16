@@ -105,6 +105,12 @@ which produces $P(\text{start}\rightarrow \mathcal{S}) \approx 0.304.$
 
 To find the total probability of witnessing the Birds collapse, we sum over all the points of $\mathcal{S}$ the probability of arriving at point $S_i$ from the origin multiplied by the probability of collapsing from point $S_i:$
 
+```python
+fff
+```
 
+which comes to 
+
+$$P_\text{collapse} \approx 0.0021132670677359183 $$
 
 <br>
