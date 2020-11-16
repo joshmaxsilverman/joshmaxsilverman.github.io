@@ -13,7 +13,7 @@ date: 2020/11/15
 
 ## Solution
 
-In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\$1000$ by the time they hit the Daily Double, they get house money to be with in the amount of $\$1000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
+In both strategies, the thresholded bonus rule is in play: if the player has accumulated less than $\\$1000$ by the time they hit the Daily Double, they get house money to be with in the amount of $\\$1000,$ otherwise they can use their own winnings to bet. The row by row strategy has just $30$ cases to consider since there is one guessing order and $30$ possible locations for the Daily Double. However, the random strategy has $30! \approx 2.7\times 10^{32}$ possible orderings, each of which can be interrupted by the Daily Double at $30$ different points. 
 
 ## Row by row
 
