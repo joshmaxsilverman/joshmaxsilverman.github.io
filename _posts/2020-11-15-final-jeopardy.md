@@ -83,7 +83,7 @@ In particular, all players who hit the Daily Double on their first guess will ha
 
 $$\{\boxed{t_1}\}$$
 
-As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ Since a player has a probability of $1/30$ to experience this outcome, it contributes $\\$1,000/30 \approx \$33.33$ to the expected value. 
+As we said, all players who hit the Daily Double on their first tile will recieve the full $\\$1,000.$ 
 
 **Second tile Daily Double**
 
@@ -99,11 +99,11 @@ W & \text{ways} & \Delta \\ \hline
 \$800 & 6 & \$200 \\ \hline
 \end{array}$$
 
-Since there are $30$ ways to pick the first tile, and a probability of $1/30$ to hit the daily double on the second tile, this contributes 
+Since there are $30$ ways to pick the first tile, this bonus has an expected value of
 
-$$\frac{1}{30}\frac{6\times \$200 + 6\times \$400 + 6\times \$600 + 6\times \$800}{30} = \approx\$13.33$$
+$$\frac{6\times \$200 + 6\times \$400 + 6\times \$600 + 6\times \$800}{30} = \$400.$$
 
-to the expected value of the threshold adjustment.
+
 
 **Third tile Daily Double**
 
@@ -116,11 +116,9 @@ W & \text{ways} & \Delta \\ \hline
 \$800 & 6\times 5  + 6\times 6\times 2 & \$200 \\ \hline
 \end{array}$$
 
-Since there are $30\times 29$ different ways to pick the first two tiles and a probability of $1/30$ to hit the daily double on the third tile, this contributes
+Since there are $30\times 29$ different ways to pick the first two tiles this bonus has an expected value of
 
-$$ \frac{1}{30}\frac{30\times \$600 + 72 \times \$400 + 102\times \$200}{30\times 29} = \$272/87 \approx \$3.13 $$
-
-to the expected value of the threshold adjustment.
+$$ \frac{30\times \$600 + 72 \times \$400 + 102\times \$200}{30\times 29} = \$2240/29 \approx \$77.24.$$
 
 **Fourth tile Daily Double**
 
@@ -132,19 +130,17 @@ W & \text{ways} & \Delta \\ \hline
 \$800 & 6\times5\times6\times3 & \$200 \\ \hline
 \end{array}$$
 
-This contributes
+This bonus has an expected value of
 
-$$\frac{1}{30}\frac{120\times\$400 + 540\times \$200}{30\times29\times28} \approx \$0.21 $$
+$$ \frac{120\times\$400 + 540\times \$200}{30\times29\times28} = \$130/609 \approx \$0.21. $$
 
-to the expected value of the threshold adjustment.
 
 **Fifth tile Daily Double**
 
-Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\$200$ tiles on the first four tiles. This has $6\times5\times4\times3$ ways to happen and contributes a tiny amount
+Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\$200$ tiles on the first four tiles. This bonus has $6\times5\times4\times3$ ways to happen and has a small expected value
 
-$$\frac{1}{30}\frac{360\times \$200}{30\times29\times28\times27} \approx \$0.004$$
+$$\frac{360\times \$200}{30\times29\times28\times27} = \$20/5481 \approx \$0.0036$$
 
-to the expected value of the threshold adjustment.
 
 ### Putting it all together
 
@@ -152,6 +148,10 @@ To recap, we broke up the expected value into the base value of the tiles and th
 
 Adding it all up, we have
 
-$$\langle W\rangle = \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \overbrace{\$33.33 + \$13.33 + \$3.13 + \$0.21 + \$0.004}^\text{ways to subsume threshold} \approx \$26,150$$
+$$\begin{align}
+\langle W\rangle &= \overbrace{\$17,400}^\text{Base value of tiles} + \overbrace{\$8,700}^\text{core bonus} + \frac{1}{30}\overbrace{\$1000 + \$400 + \$2240/29 + \$130/609 + \$20/5481}^\text{ways to subsume threshold} \\
+&= \$26,100  + \$115685/2349 \approx \$26,149.25
+\end{align}
+$$
 
 <br>
