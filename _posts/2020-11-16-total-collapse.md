@@ -44,13 +44,14 @@ $$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - (w + \ell)}} \sum_{\ell^\prime = 51
 Coding it up in Python
 
 ```python
+from scipy.special import comb as binom
+
 def P_to_lose(w, l):
     P = 0
     # have to lose at least (51 - l) more times
     min_losses = 51 - l
     max_losses = 101 - (w + l)
     
-    lower = 0
     for losses in range(min_losses, max_losses + 1):
         wins = 101 - (w + l) - losses
         P += binom(wins + losses, losses) / 2 ** (101 - (w + l)) 
