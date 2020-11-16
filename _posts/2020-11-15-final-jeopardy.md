@@ -89,7 +89,7 @@ As we said, all players who hit the Daily Double on their first tile will reciev
 
 $$\{t_1, \boxed{t_2}\}$$
 
-For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\\$200$ tiles, one of the six $\\$400$ tiles, one of the six $\\$600$ tiles, or one of the six $\\$800$ tiles on their first tile. 
+For players who hit the Double on their second tile, there are $24$ ways for them to be under the betting threshold: if they hit one of the six $\$200$ tiles, one of the six $\$400$ tiles, one of the six $\$600$ tiles, or one of the six $\$800$ tiles on their first tile. 
 
 $$\begin{array}{c|c|c} \\ \hline
 W & \text{ways} & \Delta \\ \hline
@@ -104,8 +104,9 @@ Since there are $30$ ways to pick the first tile, this bonus has an expected val
 $$\frac{6\times \$200 + 6\times \$400 + 6\times \$600 + 6\times \$800}{30} = \$400.$$
 
 
-
 **Third tile Daily Double**
+
+$$\{t_1, t_2, \boxed{t_3}\}$$
 
 The number of ways to subsume the threshold expands when a player hits the Double on their third tile, at which point they can have $\$400,$ $\$600$ or $\$800.$ Having $\$400$ corresponds to getting a $\$200$ tile on each of the first two tiles, which can be done $6\times 5$ different ways. Getting $\$600$ means drawing a $\$200$ and a $\$400$ for the first two tiles (in any order) which can happen in $6\times 6\times 2$ different ways. Getting an $\$800$ can happen in one of two ways, the first is similar to $\$400$ and has $6\times 5$ distinct ways to occur, while the second consists of getting a $\$600$ and a $\$200$ in either order, which has $2\times 6\times 6$ ways to occur. 
 
@@ -122,6 +123,8 @@ $$ \frac{30\times \$600 + 72 \times \$400 + 102\times \$200}{30\times 29} = \$22
 
 **Fourth tile Daily Double**
 
+$$\{t_1, t_2, t_3, \boxed{t_4}\}$$
+
 At the fourth tile, the possibilities start to tighten up. At this point, a player can only have $\$600$ or $\$800$ while subsuming the threshold. $\$600$ means getting a $\$200$ tile for each of the first three tiles, and $\$800$ gettings two $\$200$s and a $\$400$ in any order
 
 $$\begin{array}{c|c|c} \\ \hline
@@ -136,6 +139,8 @@ $$ \frac{120\times\$400 + 540\times \$200}{30\times29\times28} = \$130/609 \appr
 
 
 **Fifth tile Daily Double**
+
+$$\{t_1, t_2, t_3, t_4, \boxed{t_5}\}$$
 
 Finally, the player could hit the Double on their fifth tile. There is only one way to subsume the threshold this way, which is by getting four $\$200$ tiles on the first four tiles. This bonus has $6\times5\times4\times3$ ways to happen and has a small expected value
 
