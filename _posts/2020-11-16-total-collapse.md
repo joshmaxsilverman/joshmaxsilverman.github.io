@@ -102,6 +102,8 @@ for k, v in point_hits.items():
 
 which produces $P(\text{start}\rightarrow \mathcal{S}) \approx 0.304.$
 
+For many points $(w, \ell),$ the first passage probability to $(w, \ell)$ is significantly smaller than the arrival probability given by enumerating the trajectories to it, which is what we can do risk-free for $P(S_i\rightarrow\text{collapse}).$ This indicates that a large fraction of trajectories to points in $\mathcal{S]$ encounter multiple $S_i$.
+
 To find the total probability of witnessing the Birds collapse, we sum over all the points of $\mathcal{S}$ the probability of arriving at point $S_i$ from the origin multiplied by the probability of collapsing from point $S_i:$
 
 ```python
