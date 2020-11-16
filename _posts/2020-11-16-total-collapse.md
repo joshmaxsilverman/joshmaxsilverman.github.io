@@ -106,7 +106,7 @@ total_P = sum(v for k, v in point_hits.items())
 
 which produces $P(\text{start}\rightarrow \mathcal{S}) \approx 0.304.$
 
-For many points $(w, \ell),$ the first passage probability to $(w, \ell)$ is significantly smaller than the arrival probability given by enumerating the trajectories to it, which is what we can do risk-free for $P(S_i\rightarrow\text{collapse}).$ This indicates that a large fraction of trajectories to points in $\mathcal{S]$ encounter multiple $S_i$.
+For many points $(w, \ell),$ the first passage probability to $(w, \ell)$ is significantly smaller than the arrival probability given by enumerating the trajectories to it, which is what we can do risk-free for $P(S_i\rightarrow\text{collapse}).$ This indicates that a large fraction of trajectories to points in $\mathcal{S}$ encounter multiple $S_i$.
 
 To find the total probability of witnessing the Birds collapse, we sum over all the points of $\mathcal{S}$ the probability of arriving at point $S_i$ from the origin multiplied by the probability of collapsing from point $S_i:$
 
@@ -134,5 +134,5 @@ When the gameplay becomes continuous, the "coin" becomes a random walk which is 
 
 $$P(x,t) = \frac{1}{\sqrt{4\pi D (T - t)}}e^{-x^2/{2D(T - t)}}.$$
 
-We just need to find the curve of points for which $P_\text{loss}(w,\ell) = 1\%$ which involves inverting $P(x,t)$ for $x$ as a function of $(T - t),$ the time remaining before the end of the run. As the first passage problem still involves a mobile boundary, we take a computational approach to finding those probabilities in this case as well. 
+We just need to find the curve of points for which $P_\text{loss}(w,\ell) = 1\%$ which involves inverting $P(x,t)$ for $x$ as a function of $(T - t),$ the time remaining before the end of the run. As the first passage problem still involves a mobile boundary, (barring fundamental breakthroughs), we take a computational approach to finding those probabilities in this case as well. 
 <br>
