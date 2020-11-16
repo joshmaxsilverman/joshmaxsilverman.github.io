@@ -79,7 +79,6 @@ Then we deploy the random walkers:
 
 
 ```python
-%%time
 N = 1_000_000
 for _ in range(N):
     pt = np.array([0,0])
@@ -123,4 +122,11 @@ which comes to
 
 $$\boxed{P_\text{collapse} \approx 0.0021132670677359183} $$
 
+### Continous
+
+When the gameplay becomes continuous, the "coin" becomes a random walk which is distributed like 
+
+$$P(x,t) = \frac{1}{\sqrt{4\pi D (T - t)}e^{-x^2/{2D(T - t)}}.$$
+
+We just need to find the curve of points for which $P_\text{loss}(w,\ell) = 1\%$ which involves inverting $P(x,t)$ for $x$ as a function of $(T - t),$ the time remaining before the end of the run. As the first passage problem still involves a mobile boundary, we take a computational approach to finding those probabilities in this case as well. 
 <br>
