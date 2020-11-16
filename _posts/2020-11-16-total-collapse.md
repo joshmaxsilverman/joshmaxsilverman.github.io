@@ -49,4 +49,20 @@ def P_to_lose(w, l):
     return P
 ```
 
+As expected, this gives $1/2^{51-\ell)$ for the points $\left(50, \ell\right),$ and $5/16$ for $(49, 48).$
+
+Running this over the half grid, it identifies $632$ points for which $P_\text{loss} < 1\%,$ i.e. the points of $\mathcal{S}.$ 
+
+```python
+points = [] 
+for w in range(1, 51):
+    for l in range(0, w):
+        if P_to_lose(w, l) <= 0.01:
+            points.append(tuple([w,l]))
+```
+
+But the set is structured such that a boundary points of $\mathcal{S}$ separate its interior from the rest of the $(w,\ell)$ plane. Therefore, only these boundary points can be points of first visitation. 
+
+
+
 <br>
