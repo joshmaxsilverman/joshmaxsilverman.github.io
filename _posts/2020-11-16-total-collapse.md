@@ -17,7 +17,7 @@ This problem is about devastation — games where our team gets to a point where
 
 ### Trajectory probabilities
 
-By implication, there are points in the space of scores $(w,\ell)$ where there is a $99%$ or greater chance for the player in the lead to go on to win. If we can find the set of those points, $\mathcal{S},$ then the probability of witnessing a collapse is just
+By implication, there are points in the space of scores $(w,\ell)$ where there is a $99\%$ or greater chance for the player in the lead to go on to win. If we can find the set of those points, $\mathcal{S},$ then the probability of witnessing a collapse is just
 
 $$P_\text{collapse} = \sum_{S_i\in\mathcal{S}} P(\text{start} \rightarrow S_i)\times P(S_i \rightarrow\text{collapse}).$$
 
@@ -27,10 +27,12 @@ $P(\text{start}\rightarrow S_i)$ is the probability that a game makes it to the 
 
 ### From $\mathcal{S} to an $L$ — the likelihood of collapse
 
-If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find the points of $\mathcal{S}.$ We simply scan the grid for $P((w, \ell)\rightarrow\text{collapse}) < 1%.$
+If we can calculate $P((w,\ell) \rightarrow\text{collapse})$ then we can find the points of $\mathcal{S}$ simply by scanning the grid for points where it is $ \leq 1\%.$
 
 The Birds will lose if they get to $51$ losses. If we're at the point $(w, \ell)$ then we need to lose $51 - \ell$ more games to win. We can do that in a number of ways. We could lose $(51 - \ell)$ straight games, we could win $1$ game amidst losing $(51 - \ell)$, etc. In fact, we can win as many as $51 - w - 1$ more games so long as we lose $(51-\ell)$ of them in the process. 
 
-The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ Actually, the game is effectively over once we hit $51$ losses, so the last move has to be a loss. This means that we actually have 
+The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - w - \ell}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
+
+$$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - w - \ell} \sum_{w^prime = 0}^{w^\prime = 51 - \ell - 1} \binom{ w^\prime + \ell^\prime}{w^\prime}. $$
 
 <br>
