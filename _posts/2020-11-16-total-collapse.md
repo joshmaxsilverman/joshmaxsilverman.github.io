@@ -126,7 +126,7 @@ $$\boxed{P_\text{collapse} \approx 0.0021132670677359183} $$
 
 When the gameplay becomes continuous, the "coin" becomes a random walk which is distributed like 
 
-$$P(x,t) = \frac{1}{\sqrt{4\pi D (T - t)}e^{-x^2/{2D(T - t)}}.$$
+$$P(x,t) = \frac{1}{\sqrt{4\pi D (T - t)}}e^{-x^2/{2D(T - t)}}.$$
 
 We just need to find the curve of points for which $P_\text{loss}(w,\ell) = 1\%$ which involves inverting $P(x,t)$ for $x$ as a function of $(T - t),$ the time remaining before the end of the run. As the first passage problem still involves a mobile boundary, we take a computational approach to finding those probabilities in this case as well. 
 <br>
