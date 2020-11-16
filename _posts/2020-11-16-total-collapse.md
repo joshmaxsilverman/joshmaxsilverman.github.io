@@ -63,6 +63,10 @@ for w in range(1, 51):
 
 But the set is structured such that a boundary points of $\mathcal{S}$ separate its interior from the rest of the $(w,\ell)$ plane. Therefore, only these boundary points can be points of first visitation. 
 
+### Getting to $\mathcal{S}$
+
+To find the probabilities $P(\text{start}\rightarrow S_i)$ an analytic approach for first visitation is tough since the points of $\mathcal{S}$ change their distance from the line $w=\ell$ over time. To get around this, I deployed $1,000,000$ random walkers on the grid and kept track of the fraction of the time that a point in $\mathcal{S}$ was encountered. As soon as either one such point was encountered, or the line $w + \ell = 101$ was encountered, the run stopped and a new one was started. 
+
 
 
 <br>
