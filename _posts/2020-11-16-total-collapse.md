@@ -33,6 +33,6 @@ The Birds will lose if they get to $51$ losses. If we're at the point $(w, \ell)
 
 The number of paths we can take that win $w^\prime$ games and lose $\ell^\prime$ games is just $\binom{w^\prime + \ell^\prime}{\ell^\prime}.$ When the game picks up from $(w, \ell),$ the total number of trajectories it can take is $2^{101 - w - \ell}.$ So, the total probability of a loss starting at the point $(w, \ell)$ is
 
-$$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - w - \ell} \sum_{w^prime = 0}^{w^\prime = 51 - \ell - 1} \binom{ w^\prime + \ell^\prime}{w^\prime}. $$
+$$ P_\text{loss}(w,\ell) = \frac{1}{2^{101 - w - \ell}} \sum_{w^prime = 0}^{w^\prime = 51 - \ell - 1} \binom{ w^\prime + \ell^\prime}{w^\prime}. $$
 
 <br>
