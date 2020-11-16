@@ -56,7 +56,7 @@ $$W^\prime = T + f\times T$$
 Because the daily double is placed randomly, the expected value of $f$ is $1/2$ and 
 
 $$\begin{align}
-\langle W^\prime \rangle &= 3T/2 \\
+\langle W^\prime \rangle &= \frac{3}{2}\times T \\
 &= \$27,000.
 \end{align}$$
 
