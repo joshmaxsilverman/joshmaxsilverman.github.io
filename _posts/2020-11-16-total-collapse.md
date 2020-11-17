@@ -29,7 +29,7 @@ $P(\text{start}\rightarrow S_i)$ is the probability that a game makes it to the 
 
 {:.caption}
 
-The Birds start things off with with a lead, then go under, then rocket up to a point in $\mathcal{S}$ before completely blowing the lead and ending up in the $\mathbf{LOSS\, ZONE}.$
+The Birds start things off with a lead, then go under, then rocket up to a point in $\mathcal{S}$ before completely blowing the lead and ending up in the $\mathbf{LOSS\, ZONE}.$
 
 ### From $\mathcal{S}$ to an $L$ — the likelihood of collapse
 
@@ -122,7 +122,7 @@ for pt in points:
         None
     else:
         P_first_arrival = (point_hits[tuple([w,l])] + point_hits[tuple([l,w])]) / 2
-        P_collapse += P_first_arrival(w, l) * P_to_lose(w, l)
+        P_collapse += P_first_arrival * P_to_lose(w, l)
 
 P_collapse
 ```
