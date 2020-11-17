@@ -133,7 +133,7 @@ $$\boxed{P_\text{collapse} \approx 0.0021132670677359183} $$
 
 ### Continous 
 
-In [Emma Knight's writeup](https://www.math.uwaterloo.ca/~e3knight/riddlers/RiddlerNov132020.pdf), she formulates a "failed" analytic approach with a very self-consistent equation for $P_\text{collapse}.$ She starts out, as we do above, by noticing that the probability of collapse is given by the probability of reaching a point in $\mathcal{S}$ multiplied by the probability of proceeding to lose. 
+In [Emma Knight's writeup](https://www.math.uwaterloo.ca/~e3knight/riddlers/RiddlerNov132020.pdf), she formulates an "inaccurate" analytic approach with a very self-consistent equation for $P_\text{collapse}.$ She starts out, as we do above, by noticing that the probability of collapse is given by the probability of reaching a point in $\mathcal{S}$ multiplied by the probability of proceeding to lose. 
 
 Optimistically:
 
@@ -143,7 +143,7 @@ What she then notices is that every single trajectory that ends in a win is, at 
 
 So
 
-$$$P(\text{start}\rightarrow\mathcal{S}) = 1/2 + P_\text{collapse},$$
+$$P(\text{start}\rightarrow\mathcal{S}) = 1/2 + P_\text{collapse},$$
 
 making the original equation
 
