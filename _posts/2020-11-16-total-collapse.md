@@ -131,12 +131,35 @@ which comes to
 
 $$\boxed{P_\text{collapse} \approx 0.0021132670677359183} $$
 
-### Continous (in progress)
+### Continous 
 
-~~When the gameplay becomes continuous, the "coin" becomes a random walk which is distributed like~~
+In [Emma Knight's writeup](https://www.math.uwaterloo.ca/~e3knight/riddlers/RiddlerNov132020.pdf), she formulates a "failed" analytic approach with a very self-consistent equation for $P_\text{collapse}.$ She starts out, as we do above, by noticing that the probability of collapse is given by the probability of reaching a point in $\mathcal{S}$ multiplied by the probability of proceeding to lose. 
 
-~~$$P(x,t) = \frac{1}{\sqrt{4\pi D (T - t)}}e^{-x^2/{4D(T - t)}}.$$~~
+Optimistically:
 
-~~We just need to find the curve of points for which $P_\text{loss}(w,\ell) = 1\%$ which involves inverting $P(x,t)$ for $x$ as a function of $(T - t),$ the time remaining before the end of the run. As the first passage problem still involves a mobile boundary, (barring fundamental breakthroughs), we take a computational approach to finding those probabilities in this case as well. ~~
+$$P_\text{collapse} = P(\text{start}\rightarrow\mathcal{S})\times P(\mathcal{S}\rightarrow\text{collapse})$$
+
+What she then notices is that every single trajectory that ends in a win is, at some point, in the set $\mathcal{S}$ though possibly not until the final flip. So, the total probability of entering the set $\mathcal{S}$ is $1/2$ (all the winning trajectories) plus $P_\text{collapse}$ (the probability of reaching the set $\mathcal{S}$ before going on to lose).
+
+So
+
+$$$P(\text{start}\rightarrow\mathcal{S}) = 1/2 + P_\text{collapse},$$
+
+making the original equation
+
+$$P_\text{collapse} = \left(1/2 + P_\text{collapse}\right)\times P(\mathcal{S}\rightarrow\text{collapse})$$
+
+At this point we run into the issue that, for the discrete case, hardly any of the frontier points of $\mathcal{S}$ have $P(S_i\rightarrow\text{collapse}) = 99/100.$ They all overshoot it by varying degrees. This is why we had to formulate the binomial sum above, to account for the variation in $P(\mathcal{S}\rightarrow\text{collapse}).$
+
+However, Emma's model is actually a huge success. In the continuum limit, there is no guesswork about the value of $P(\mathcal{S}\rightarrow\text{collapse}),$ we can find a smooth curve for which it's actually equal to $99\%$ on the nose. If we replace $99\%$ with the generic $1-f$ then
+
+$$P_\text{collapse} = \frac{1}{f}\left(1/2 + P_\text{collapse}\right)$$
+
+which leads to 
+
+$$P_\text{collapse} = \frac12 \frac{f}{1-f}.$$
+
+For the case at hand, this predicts a continuum value of $P_\text{collapse} = 1/198.$ For $75\%,$ we get $P_\text{collapse} = 1/6$ and for $65\%$ we get $7/26.$
+
 
 <br>
