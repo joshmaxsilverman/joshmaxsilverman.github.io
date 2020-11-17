@@ -151,13 +151,13 @@ $$P_\text{collapse} = \left(1/2 + P_\text{collapse}\right)\times P(\mathcal{S}\r
 
 At this point we run into the issue that, for the discrete case, hardly any of the frontier points of $\mathcal{S}$ have $P(S_i\rightarrow\text{collapse}) = 99/100.$ They all overshoot it by varying degrees. This is why we had to formulate the binomial sum above, to account for the variation in $P(\mathcal{S}\rightarrow\text{collapse}).$
 
-However, Emma's model is actually a huge success. In the continuum limit, there is no guesswork about the value of $P(\mathcal{S}\rightarrow\text{collapse}),$ we can find a smooth curve for which it's actually equal to $99\%$ on the nose. If we replace $99\%$ with the generic $1-f$ then
+However, Emma's model is actually a huge success in the continuum limit. In the continuum, there is no guesswork about the value of $P(\mathcal{S}\rightarrow\text{collapse}),$ it's actually equal to $99\%$ on the nose for the frontier of $\mathcal{S}.$ If we replace $99\%$ with the generic $1-f$ then
 
 $$P_\text{collapse} = \frac{1}{f}\left(1/2 + P_\text{collapse}\right)$$
 
 which leads to 
 
-$$P_\text{collapse} = \frac12 \frac{f}{1-f}.$$
+$$\boxed{P_\text{collapse} = \frac12 \frac{f}{1-f}}.$$
 
 For the case at hand, this predicts a continuum value of $P_\text{collapse} = 1/198.$ For $75\%,$ we get $P_\text{collapse} = 1/6$ and for $65\%$ we get $7/26.$
 
