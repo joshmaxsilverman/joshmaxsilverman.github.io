@@ -68,6 +68,7 @@ for w in range(1, 51):
     for l in range(0, w):
         if P_to_lose(w, l) <= 0.01:
             points.append(tuple([w,l]))
+            points.append(tuple([l,w]))
 ```
 
 But the set is structured such that a boundary points of $\mathcal{S}$ separate its interior from the rest of the $(w,\ell)$ plane. Therefore, only these boundary points can be points of first visitation. 
