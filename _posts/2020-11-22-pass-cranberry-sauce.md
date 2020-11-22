@@ -15,7 +15,13 @@ This placement is no small decision though. You want to punish your naughty Uncl
 
 ## Solution
 
+the cranberry sauce on the table sweeps out a widening arc of diners who've had it, dividing the table into two sections. if the sauce wanders inside the arc, then nobody new gets the sauce, and if it reaches the egde then the arc expands. 
+
+by construction, the the section of people who have not had the sauce is continous and winnows from each side until there's only one person left. 
+
 ### Neighbor to neighbor
+
+
 
 ### Unrolling the table
 
