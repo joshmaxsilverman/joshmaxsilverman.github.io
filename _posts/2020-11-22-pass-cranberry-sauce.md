@@ -27,7 +27,7 @@ of course it could also have happened in the reverse order, meandering clockwise
 
 the probability for the person at position $i$ to be the last one visited is the sum of the probability of these two events
 
-$$ L(10) = \overbrace{\gamma(1\rightarrow 9 \setminus 11)}^\text{without hitting $11$}\times \overbrace{\gamma(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma(11\rightarrow 9)}^\text{without hitting $10$} $$
+$$ L(10) = \overbrace{\gamma(1\rightarrow 9\midd !11)}^\text{without hitting $11$}\times \overbrace{\gamma(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma(11\rightarrow 9)}^\text{without hitting $10$} $$
 
 ### Unrolling the table
 
