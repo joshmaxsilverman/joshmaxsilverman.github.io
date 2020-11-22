@@ -15,6 +15,16 @@ This placement is no small decision though. You want to punish your naughty Uncl
 
 ## Solution
 
+### Neighbor to neighbor
 
+### Unrolling the table
+
+### Evolutionary fixing
+
+### Being last
+
+### Cases and graphs
+
+### A time to be alone
 
 <br>
