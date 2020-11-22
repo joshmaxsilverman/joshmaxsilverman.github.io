@@ -17,11 +17,17 @@ This placement is no small decision though. You want to punish your naughty Uncl
 
 the cranberry sauce on the table sweeps out a widening arc of diners who've had it, dividing the table into two sections. if the sauce wanders inside the arc, then nobody new gets the sauce, and if it reaches the egde then the arc expands. 
 
-by construction, the the section of people who have not had the sauce is continous and winnows from each side until there's only one person left. 
+by construction, the section of people who have not had the sauce is continous, and winnows from each side until there's only one person left. 
 
 ### Neighbor to neighbor
 
+for someone to be the last person remaining, the arc of the visited has to broaden til it reaches their neighbors, one after the other. for instance, if the sauce meandered its way from position $1$ to position $11$ (without hitting position $9$ in the process) before turning around and meandering its way to position $9$ (without hitting position $10$ in the process), then the person at position $10$ would be the last to receive the sauce.
 
+of course it could also have happened in the reverse order, meandering clockwise to visit position $9$ (without hitting position $11$) before meandering back to position $11$ (without hitting position $10$).
+
+the probability for the person at position $i$ to be the last one visited is the sum of the probability of these two events
+
+$$ P(i) = P(1\rightarrow (i-1)\setminus (i+1))\times P((i-1)\rightarrow (i+1)\setminus i) + P(1\rightarrow (i+1)\setminus (i-1))\times P((i+1)\rightarrow (i-1)\setminus i) $$
 
 ### Unrolling the table
 
