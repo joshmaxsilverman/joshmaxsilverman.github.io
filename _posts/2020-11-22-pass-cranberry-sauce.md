@@ -27,7 +27,7 @@ of course it could also have happened in the reverse order, meandering clockwise
 
 the probability for the person at position $i$ to be the last one visited is the sum of the probability of these two events
 
-$$ P(i) = \overbrace{P(1\rightarrow (i-1))}^\text{without hitting $(i+1)$}\times \overbrace{P((i-1)\rightarrow (i+1))}^\text{without hitting $i$} + \overbrace{P(1\rightarrow (i+1))}^\text{without hitting $(i-1)$}\times \overbrace{P((i+1)\rightarrow (i-1))}^\text{without hitting $i$} $$
+$$ \small P_\text{last}(i) = \overbrace{P(1\rightarrow (i-1))}^\text{without hitting $(i+1)$}\times \overbrace{P((i-1)\rightarrow (i+1))}^\text{without hitting $i$} + \overbrace{P(1\rightarrow (i+1))}^\text{without hitting $(i-1)$}\times \overbrace{P((i+1)\rightarrow (i-1))}^\text{without hitting $i$} $$
 
 ### Unrolling the table
 
