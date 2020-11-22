@@ -31,7 +31,8 @@ the probability for the person at position $i$ to be the last one visited is the
 
 $$ L(10) = \overbrace{\gamma(1\rightarrow 9)}^\text{without hitting $11$}\times \overbrace{\gamma(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma(11\rightarrow 9)}^\text{without hitting $10$} $$
 
-each factor $\overbrace{\gamma_k(i\rightarrow j)}^\text{without hitting $k$}$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+each factor $\overbrace{\gamma_k(i\rightarrow j)}$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+
 
 ### Unrolling the table
 
