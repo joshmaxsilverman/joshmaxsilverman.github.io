@@ -23,13 +23,13 @@ by construction, the section of people who have not had the sauce is continous, 
 
 for someone to be the last person remaining, the arc of the visited has to broaden til it reaches their neighbors, one after the other. for instance, if the sauce meandered its way from position $1$ to position $11$ (without hitting position $9$ in the process) before turning around and meandering its way to position $9$ (without hitting position $10$ in the process), then the person at position $10$ would be the last to receive the sauce.
 
-<image of this path>
+(image of this path)
 
 of course it could also have happened in the reverse order, meandering clockwise to visit position $9$ (without hitting position $11$) before meandering back to position $11$ (without hitting position $10$).
 
 the probability for the person at position $i$ to be the last one visited is the sum of the probability of these two events
 
-$$ L(10) = \overbrace{\gamma(1\rightarrow 9)}^\text{without hitting $11$}\times \overbrace{\gamma(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma(11\rightarrow 9)}^\text{without hitting $10$} $$
+$$ L(10) = \overbrace{\gamma_{11}(1\rightarrow 9)}^\text{without hitting $11$}\times \overbrace{\gamma_{10}(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma_{9}(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma_{10}(11\rightarrow 9)}^\text{without hitting $10$} $$
 
 each factor $\gamma_k(i\rightarrow j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
 
