@@ -54,45 +54,45 @@ as we said above, the original problem breaks into four cases of this cliff prob
 
 by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P_N(N)=1$ since it means we're at position $N$ already. with these boundary values, we can solve the problem by finding a recurrence relationship connecting the survival probability from adjacent positions. 
 
-the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{b}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{f}$):
+the probability that we survive to step $N$ from step $m$ is the probability that we take a step away from the cliff (probability $\gamma_\text{f}$) and survive from step $(m+1)$, plus the probability that we take a step toward the cliff (probability $\gamma_\text{b}$) and survive from step $(m-1)$:
 
-$$P_N(m) = P_N(m-1)\cdot\gamma_\text{f} + P_N(m+1)\cdot\gamma_\text{b}$$
+$$P_N(m) = P_N(m-1)\cdot\gamma_\text{b} + P_N(m+1)\cdot\cdot\gamma_\text{f}$$
 
 the two transition probabilities add to $1$ so we can turn this into a relationship between consecutive differences:
 
 $$
-\left(\gamma_\text{f} + \gamma_\text{b}\right)\cdot P_N(m) = \gamma_\text{f}\cdot P_N(m-1) + \gamma_\text{b}\cdot P_N(m+1)
+\left(\gamma_\text{f} + \gamma_\text{b}\right)\cdot P_N(m) = \gamma_\text{b}\cdot P_N(m-1) + \gamma_\text{f}\cdot P_N(m+1)
 $$
 
 and, so
 
 $$\begin{align}
-\gamma_\text{b}\cdot P_N(m+1) - \gamma_\text{b}\cdot P_N(m) &= \gamma_\text{f}P_N(m) - \gamma_\text{f}\cdot P_N(m-1) \\
-\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{f}}{\gamma_\text{b}}\left(P_N(m) - P_N(m-1)\right)
+\gamma_\text{f}\cdot P_N(m+1) - \gamma_\text{f}\cdot P_N(m) &= \gamma_\text{b}P_N(m) - \gamma_\text{b}\cdot P_N(m-1) \\
+\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{b}}{\gamma_\text{f}}\left(P_N(m) - P_N(m-1)\right)
 \end{align}$$
 
 we can plug this equation back in to itself so that after one step we have 
 
-$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2\left[P_N(m-1) - P_N(m-2)\right]. $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2\left[P_N(m-1) - P_N(m-2)\right]. $$
 
 it recurses all the way down to 
 
-$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
 
 if we add these tersm from $m=0$ up to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) &= P_N(1)\left[\frac{\gamma_\text{f}}{\gamma_\text{b}} + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right] \\
-&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}
+P_N(j+1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
+&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^{j+1}}{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}
 \end{align}$$
 
-if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{f}/\gamma_\text{b})/(1 - \left(\gamma_\text{f}/\gamma_\text{b}\right)^N).$
+if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{b}/\gamma_\text{f})/(1 - \left(\gamma_\text{b}/\gamma_\text{f}\right)^N).$
 
 the overall probability of making it to step $N$, starting from step $i,$ without falling off the cliff is
 
-$$ P_N(i) = \dfrac{1-\left(\gamma_\text{f}/\gamma_\text{b}\right)^i}{1-\left(\gamma_\text{f}/\gamma_\text{b}\right)^N} $$
+$$ P_N(i) = \dfrac{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^i}{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^N} $$
 
-notice that $\gamma\text{f}$ and $\gamma\text{b}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
+notice that $\gamma\text{b}$ and $\gamma\text{f}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
 
 ### Being last
 
@@ -104,19 +104,19 @@ unrolling the table, we have
 
 (image of unrolled table)
 
-starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
-the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{(N-1)}(1).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
+the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{(N-1)}(1).$ since we're moving to the left, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
-if instead, we first move to $(x+1),$ we need to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point. Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
+if instead, we first move to $(x+1),$ we need to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point. Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ since we're moving to the left, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
-the trip back is the mirror image of the trip back in the first scenario so the probability is again $P_{(N-1)}(1).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+the trip back is the mirror image of the trip back in the first scenario so the probability is again $P_{(N-1)}(1).$ since we're moving to the right, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
 putting it all together, we have
 
-$$ L(x) = \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{x-2}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-x}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} $$
+$$ L(x) = \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{x-2}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-x}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} $$
 
-or, writing $\gamma_\text{f}/\gamma_\text{b}$ as $\phi,$
+or, writing $\gamma_\text{b}/\gamma_\text{f}$ as $\phi,$
 
 $$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
 
