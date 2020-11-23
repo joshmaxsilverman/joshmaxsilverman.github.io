@@ -118,7 +118,7 @@ $$ L(x) = \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{x-2}}{1-(\frac{\g
 
 or, writing $\gamma_\text{f}/\gamma_\text{b}$ as $\phi,$
 
-$$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-(1/\phi)^{N-1}} + \frac{1 - (1/\phi)^{N-x}}{1-(1/\phi)^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
+$$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
 
 ### Cases and graphs
 
