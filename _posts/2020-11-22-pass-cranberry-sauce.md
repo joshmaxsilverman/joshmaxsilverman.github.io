@@ -33,7 +33,7 @@ of course it could also have happened in the reverse order, meandering clockwise
 
 the probability for the person at $i$ to be the last one visited is the sum of the probability of these two events
 
-$$\require{cancel} L(10) = \overbrace{\gamma_\cancel{11}(1\rightarrow 9)}^\text{without hitting $11$}\times \overbrace{\gamma_\cancel{10}(9\rightarrow 11)}^\text{without hitting $10$} + \overbrace{\gamma_\cancel{9}(1\rightarrow 11)}^\text{without hitting $9$}\times \overbrace{\gamma_\cancel{10}(11\rightarrow 9)}^\text{without hitting $10$} $$
+$$\require{cancel} L(10) = \gamma_\cancel{11}(1\rightarrow 9)\times \gamma_\cancel{10}(9\rightarrow 11) + \gamma_\cancel{9}(1\rightarrow 11)\times \gamma_\cancel{10}(11\rightarrow 9) $$
 
 each factor $\require{cancel}\gamma_\cancel{k}(i\rightarrow j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
 
