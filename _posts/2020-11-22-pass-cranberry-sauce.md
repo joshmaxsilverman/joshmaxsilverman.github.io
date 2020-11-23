@@ -92,7 +92,7 @@ the overall probability of making it to step $N$, starting from step $i,$ withou
 
 $$ P_N(i) = \dfrac{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^i}{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^N} $$
 
-notice that $\gamma\text{b}$ and $\gamma\text{f}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
+notice that $\gamma_\text{b}$ and $\gamma_\text{f}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
 
 ### Being last
 
@@ -119,6 +119,8 @@ $$ L(x) = \frac{1 - (\frac{\ell}{r})^{x-2}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac
 or, writing $\gamma_\text{b}/\gamma_\text{f}$ as $\phi,$
 
 $$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
+
+this is a monstrous expression, but with a little bit of algebra, it simplifies nicely.
 
 ### Cases and graphs
 
