@@ -59,34 +59,34 @@ by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P
 
 the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{b}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{f}$):
 
-$$P_N(m) = P_N(m-1)\cdot\gamma_\text{forward} + P_N(m+1)\cdot\gamma_\text{backward}$$
+$$P_N(m) = P_N(m-1)\cdot\gamma_\text{f} + P_N(m+1)\cdot\gamma_\text{b}$$
 
 the two transition probabilities add to $1$ so we can turn this into a relationship between consecutive differences:
 
 $$
-\left(\gamma_\text{forward} + \gamma_\text{backward}\right)\cdot P_N(m) = \gamma_\text{forward}\cdot P_N(m-1) + \gamma_\text{backward}\cdot P_N(m+1)
+\left(\gamma_\text{f} + \gamma_\text{b}\right)\cdot P_N(m) = \gamma_\text{f}\cdot P_N(m-1) + \gamma_\text{b}\cdot P_N(m+1)
 $$
 
 and, so
 
 $$\begin{align}
-\gamma_\text{backward}\cdot P_N(m+1) - \gamma_\text{backward}\cdot P_N(m) &= \gamma_\text{forward}P_N(m) - \gamma_\text{forward}\cdot P_N(m-1) \\
-\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{forward}}{\gamma_\text{backward}}\left(P_N(m) - P_N(m-1)\right)
+\gamma_\text{b}\cdot P_N(m+1) - \gamma_\text{b}\cdot P_N(m) &= \gamma_\text{f}P_N(m) - \gamma_\text{f}\cdot P_N(m-1) \\
+\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{f}}{\gamma_\text{b}}\left(P_N(m) - P_N(m-1)\right)
 \end{align}$$
 
 we can plug this equation back in to itself so that after one step we have 
 
-$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2\left[P_N(m-1) - P_N(m-2)\right]. $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2\left[P_N(m-1) - P_N(m-2)\right]. $$
 
 it recurses all the way down to 
 
-$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
 
 if we add the left hand side from $m=0$ to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) &= P_N(1)\left(\left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right) + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2 + \ldots + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^j\right) 
-&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)}
+P_N(j+1) &= P_N(1)\left(\left(\frac{\gamma_\text{f}}{\gamma_\text{}}\right) + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right) 
+&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)}
 \end{align}$$
 
 ### Being last
