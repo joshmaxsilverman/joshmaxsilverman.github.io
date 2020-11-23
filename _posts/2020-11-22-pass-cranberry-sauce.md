@@ -122,9 +122,26 @@ $$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/
 
 this is a monstrous expression, but with a little bit of algebra, it simplifies nicely:
 
-$$ L(x) = \phi^x\frac{\phi^{-1} - 1}{\phi - \phi^N}.$$
+$$ L(x) = \phi^{x-1}\frac{\phi^{-1} - 1}{1 - \phi^{N-1}}.$$
+
+every term here is constant for a given value of $\phi$ so that the only piece varying is the $\phi^{x-1}$ out front. this means that the ratio of consecutive probabilities, e.g. $L(2)/L(3)$ is equal to $r$ so that person $2$ is $r$ times as likely to be the last person sauced compared to person $3$, and that person $3$ is $r$ times as likely to be last sauced as person $4.$
 
 ### Cases and graphs
+
+the first case to check is the one where there's no imbalance and the sauce has equal chance to go left or right. in this case $\phi=1.$ based on the simple analysis above, $L(x)$ will be a constant function over the $(N-1)$ diners: $L(x) = 1/(N-1).$
+
+
+if we care to be careful, we can use l'Hopital's rule to evaluate the limit as $\phi$ approaches $1:$
+
+$$begin{align}
+\limit_{\phi \rightarrow 1} \frac{\phi^{-1} - 1}{1 - \phi^{N-1}} &= \frac{\frac{d}{d\phi}(\phi^{-1} - 1)}{\frac{d}{d\phi}(1 - \phi^{N-1})} \\
+&= \frac{-1}{-(N-1)} \\
+&= \frac{1}{N-1}.
+\end{align}$$
+
+no matter how we cut it, every person on the circle becomes equally likely to be last to get that famous sauce. for better or worse, there's no way to target Uncle Zach when $\ell = r.$
+
+
 
 ### A time to be alone
 
