@@ -114,11 +114,11 @@ the trip back is the mirror image of the trip back in the first scenario so the 
 
 putting it all together, we have
 
-$$ L(x) = \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{x-2}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{1}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-x}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{1}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} $$
+$$ L(x) = \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{x-2}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-x}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} $$
 
 or, writing $\gamma_\text{f}/\gamma_\text{b}$ as $\phi,$
 
-$$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - (1/\phi)^{1}}{1-(1/\phi)^{N-1}} + \frac{1 - (1/\phi)^{N-x}}{1-(1/\phi)^{N-2}}\cdot \frac{1 - (\phi)^{1}}{1-(\phi)^{N-1}}} $$
+$$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-(1/\phi)^{N-1}} + \frac{1 - (1/\phi)^{N-x}}{1-(1/\phi)^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
 
 ### Cases and graphs
 
