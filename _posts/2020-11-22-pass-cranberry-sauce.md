@@ -85,13 +85,33 @@ $$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}
 if we add these tersm from $m=0$ up to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) &= P_N(1)\left[\left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right) + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right] \\
-&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)}
+P_N(j+1) &= P_N(1)\left[\frac{\gamma_\text{f}}{\gamma_\text{b}} + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right] \\
+&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}
 \end{align}$$
 
 if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{f}/\gamma_\text{b})/(1 - \left(\gamma_\text{f}/\gamma_\text{b}\right)^N).$
 
+the overall probability of making it to step $N$, starting from step $i,$ without falling off the cliff is
+
+$$ P_N(i) = \dfrac{1-\left(\gamma_\text{f}/\gamma_\text{b}\right)^i}{1-\left(\gamma_\text{f}/\gamma_\text{b}\right)^N} $$
+
+notice that $\gamma\text{f}$ and $\gamma\text{b}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
+
 ### Being last
+
+with the cliff problem in hand, we just have to figure out the general form for the paths
+
+(image of paths that leave $x$ for last (circular))
+
+unrolling the table, we have
+
+(image of unrolled table)
+
+starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_(N-2)(N-x).$
+
+the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{N-1}(1).$ 
+
+
 
 ### Cases and graphs
 
