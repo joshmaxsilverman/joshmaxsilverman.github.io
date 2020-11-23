@@ -133,7 +133,7 @@ the first case to check is the one where there's no imbalance and the sauce has 
 
 if we care to be careful, we can use l'Hopital's rule to evaluate the limit as $\phi$ approaches $1:$
 
-$$begin{align}
+$$\begin{align}
 \lim_{\phi \rightarrow 1} \frac{\phi^{-1} - 1}{1 - \phi^{N-1}} &= \frac{\frac{d}{d\phi}(\phi^{-1} - 1)}{\frac{d}{d\phi}(1 - \phi^{N-1})} \\
 &= \frac{-1}{-(N-1)} \\
 &= \frac{1}{N-1}.
