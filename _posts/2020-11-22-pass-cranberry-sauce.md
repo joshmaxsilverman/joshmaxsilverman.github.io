@@ -115,7 +115,7 @@ Putting it all together, we have
 
 $$ L(x) = \frac{1 - (\frac{\ell}{r})^{x-2}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac{1 - \frac{r}{\ell}}{1-(\frac{r}{\ell})^{N-1}} + \frac{1 - (\frac{r}{\ell})^{N-x}}{1-(\frac{r}{\ell})^{N-2}}\cdot \frac{1 - \frac{\ell}{r}}{1-(\frac{\ell}{r})^{N-1}}, $$
 
-or, writing $\ell/r$ as $\phi,$
+or, writing $\phi = \ell/r,$ we have:
 
 $$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}}. $$
 
