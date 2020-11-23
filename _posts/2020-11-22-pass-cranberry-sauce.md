@@ -64,7 +64,7 @@ $$P_N(m) = P_N(m-1)\cdot\gamma_\text{forward} + P_N(m+1)\cdot\gamma_\text{backwa
 the two transition probabilities add to $1$ so we can turn this into a relationship between consecutive differences:
 
 $$
-\left(\gamma_\text{forward} + \gamma_\text{backward}\right)\cdot P_N(m) &= \gamma_\text{forward}\cdot P_N(m-1) + \gamma_\text{backward}\cdot P_N(m+1)
+\left(\gamma_\text{forward} + \gamma_\text{backward}\right)\cdot P_N(m) = \gamma_\text{forward}\cdot P_N(m-1) + \gamma_\text{backward}\cdot P_N(m+1)
 $$
 
 and, so
