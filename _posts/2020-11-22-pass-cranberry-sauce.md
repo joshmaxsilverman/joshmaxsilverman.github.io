@@ -151,13 +151,13 @@ Below is a graph comparing $5\times 10^6$-run simulations of the system for vari
 
 {:.caption}
 
-$5\times 10^6$ round simulation of the $N=20$ person table for $\color{blue}{\ell = r}$ and $\color{Goldenrod}{r = 0.6} .$
+$5\times 10^6$ round simulation of the $N=20$ person table for $\color{blue}{\ell = r}$ and $\color{Yellow}{r = 0.6} .$
 
 ![](/img/2020-11-21-plotAll.png){:width="400px" class="image-centered"}
 
 {:.caption}
 
-$5\times 10^6$ round simulation of the $N=20$ person table for $\color{blue}{\ell = r},$ $\color{Goldenrod}{r = 0.6},$ $\color{LimeGreen}{r = 0.68},$ $\color{Salmon}{r = 0.75} ,$ $\color{Purple}{r = 0.82} ,$ $\color{orange}{r = 0.90} ,$ and $\color{SkyBlue}{r = 0.95} $ (logarithmic vertical axis).
+$5\times 10^6$ round simulation of the $N=20$ person table for $\color{blue}{\ell = r},$ $\color{Yellow}{r = 0.6},$ $\color{LimeGreen}{r = 0.68},$ $\color{Salmon}{r = 0.75} ,$ $\color{Purple}{r = 0.82} ,$ $\color{orange}{r = 0.90} ,$ and $\color{SkyBlue}{r = 0.95} $ (logarithmic vertical axis).
 
 Pretty good.
 
