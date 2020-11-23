@@ -67,7 +67,7 @@ $$
 and, so
 
 $$\begin{align}
-\gamma_\text{f}\cdot P_N(m+1) - \gamma_\text{f}\cdot P_N(m) &= \gamma_\text{b}P_N(m) - \gamma_\text{b}\cdot P_N(m-1) \\
+\gamma_\text{f}\cdot P_N(m+1) - \gamma_\text{f}\cdot P_N(m) &= \gamma_\text{b}\cdot P_N(m) - \gamma_\text{b}\cdot P_N(m-1) \\
 \left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{b}}{\gamma_\text{f}}\left(P_N(m) - P_N(m-1)\right)
 \end{align}$$
 
