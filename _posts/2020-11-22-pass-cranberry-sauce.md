@@ -148,6 +148,8 @@ if we want Uncle Zach to be last to get that famous sauce, our best bet is to pu
 
 below is a graph comparing $10^6$-run simulations of the system for various values of $\phi$ for the $20$ person table along with the analytical prediction.
 
+(the graph mentioned)
+
 pretty good.
 
 ### A time to be alone
