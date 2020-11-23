@@ -146,9 +146,19 @@ the scale factor is essentially insensitive to $N$ once there are more than $4$ 
 
 if we want Uncle Zach to be last to get that famous sauce, our best bet is to put him to the left of where the sauce begins its voyage.
 
-below is a graph comparing $10^6$-run simulations of the system for various values of $\phi$ for the $20$ person table along with the analytical prediction.
+below is a graph comparing $5\times 10^6$-run simulations of the system for various values of $\phi$ for the $20$ person table along with the analytical prediction.
 
-(the graph mentioned)
+![](/img/2020-11-21-plotLinear.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+Fig
+
+![](/img/2020-11-21-plotAll.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+Fig
 
 pretty good.
 
