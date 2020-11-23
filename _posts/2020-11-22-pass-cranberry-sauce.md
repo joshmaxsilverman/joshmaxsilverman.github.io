@@ -25,7 +25,7 @@ for someone to be the last person remaining, the arc of the visited has to broad
 
 for instance, if the sauce meandered its way from position $1$ to position $11$ (without hitting position $9$ in the process) before turning around and meandering its way to position $9$ (without hitting position $10$ in the process), then the person at position $10$ would be the last to receive the sauce. 
 
-we can call the probability of the first path segment $\require{cancel}\gamma_\cancel{9}(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\gamma_\cancel{10}(11\rightarrow 9).$
+we can call the probability of the first path segment $\require{cancel}\gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\gamma_\cancel{10}(11\rightarrow 9).$
 
 (image of this path)
 
