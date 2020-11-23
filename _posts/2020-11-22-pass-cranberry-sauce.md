@@ -120,7 +120,9 @@ or, writing $\gamma_\text{b}/\gamma_\text{f}$ as $\phi,$
 
 $$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}} $$
 
-this is a monstrous expression, but with a little bit of algebra, it simplifies nicely.
+this is a monstrous expression, but with a little bit of algebra, it simplifies nicely:
+
+$$ L(x) = \phi^x\frac{\phi^{-1} - 1}{\phi - \phi^N}.$$
 
 ### Cases and graphs
 
