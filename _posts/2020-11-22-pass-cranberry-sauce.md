@@ -86,7 +86,7 @@ P_N(j+1) - P(1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\
 P_N(j+1) &= P_N(1) \frac{1 - \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^{j+1}}{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}
 \end{align}$$
 
-if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{b}/\gamma_\text{f})/(1 - \left(\gamma_\text{b}/\gamma_\text{f}\right)^N).$
+if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P_N(1) = (1-\gamma_\text{b}/\gamma_\text{f})/(1 - \left(\gamma_\text{b}/\gamma_\text{f}\right)^N).$
 
 the overall probability of making it to step $N$, starting from step $i,$ without falling off the cliff is
 
