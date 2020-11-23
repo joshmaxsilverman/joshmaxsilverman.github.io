@@ -59,7 +59,21 @@ by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P
 
 the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{backward}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{forward}$):
 
-$$P_N(m) = \ell\times$$
+$$P_N(m) = \gamma_\text{forward}\times P_N(m-1) + \gamma_\text{backward}\times P_N(m+1)$$
+
+the two transition probabilities add to $1$ so we can turn this into a relationship between consecutive differences:
+
+$$\begin{align}
+\gamma_\text{forward}\times P_N(m-1) + \gamma_\text{backward}\times P_N(m+1) &= P_N(m) \\
+ &= \left(\gamma_\text{forward} + \gamma_\text{backward}\right)P_N(m)
+\end{align}$$
+
+and, so
+
+$$\begin{align}
+\gamma_\text{backward}\times P_N(m+1) - \gamma_\text{backward}\times P_N(m) &= \gamma_\text{forward}P_N(m) - \gamma_\text{forward}\times P_N(m-1) \\
+\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{forward}}{\gamma_\text{backward}}\left(P_N(m) - P_N(m-1)\right)
+\end{align}$$
 
 ### Being last
 
