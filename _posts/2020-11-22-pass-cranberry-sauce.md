@@ -142,6 +142,18 @@ no matter how we cut it, every person on the circle becomes equally likely to be
 
 as we noticed above, the probability distribution of the last person to get sauced will always be a geometric distribution that (when $\phi < 1$) decays like $\phi^{x-1}$ with its overall scale set by $(\phi^{-1} - 1)/(\phi^{N-1} - 1)$
 
+the scale factor is essentially insensitive to $N$ once there are more than $4$ people. for more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. so, when $\phi < 1,$ the probability is exponentially supressed as we go counterclockwise around the circle. 
+
+if we want Uncle Zach to be last to get that famous sauce, our best bet is to put him to the left of where the sauce begins its voyage.
+
+below is a graph comparing $N=10^6$-run simulations of the system for various values of $\phi$ for the $20$ person table along with the analytical prediction.
+
+pretty good.
+
 ### A time to be alone
+
+of course, just because everyone is equally likely to get the sauce last when $\phi=1$ doesn't mean that they'll all wait the same amount of time to get it when they do. we can extend our analysis from above to find the expected amount of time the person who gets the sauce last will wait when they do get it last.
+
+...
 
 <br>
