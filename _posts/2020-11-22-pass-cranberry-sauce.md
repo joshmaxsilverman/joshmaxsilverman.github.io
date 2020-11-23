@@ -41,7 +41,11 @@ $$\require{cancel} L(i) = \gamma(1\xrightarrow{\cancel{i+1}} (i-1))\times \gamma
 
 ### Unrolling the table
 
-it's easier to think about this problem if we "unroll" the circle.
+it's easier to think about this problem if we "unroll" the circle. there are $N$ positions in total and we unroll them so that we have a line going from position $1$ to $N.$ since almost all trajectories will cross between $1$ and $N,$ we add a redundant copy of positions $x$ to $N$ to the left of $1$:
+
+(image of the unrolled line)
+
+all possibile trajectories we're interested in will take place along this line.
 
 ### Evolutionary fixing
 
