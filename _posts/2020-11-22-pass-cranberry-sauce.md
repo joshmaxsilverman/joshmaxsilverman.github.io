@@ -57,7 +57,7 @@ as we said above, the original problem breaks into four cases of this cliff prob
 
 by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P_N(N)=1$ since it means we're at position $N$ already. with these boundary values, we can solve the problem by finding a recurrence relationship connecting the survival probability from adjacent positions. 
 
-the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{backward}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{forward}$):
+the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{b}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{f}$):
 
 $$P_N(m) = P_N(m-1)\cdot\gamma_\text{forward} + P_N(m+1)\cdot\gamma_\text{backward}$$
 
@@ -86,7 +86,7 @@ if we add the left hand side from $m=0$ to $m=j$ then we get
 
 $$\begin{align}
 P_N(j+1) &= P_N(1)\left(\left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right) + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2 + \ldots + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^j\right) 
-&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)P_N(1)}
+&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)}
 \end{align}$$
 
 ### Being last
