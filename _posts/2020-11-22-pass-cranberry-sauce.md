@@ -25,17 +25,17 @@ for someone to be the last person remaining, the arc of the visited has to broad
 
 for instance, if the sauce meandered its way from position $1$ to position $11$ (without hitting position $9$ in the process) before turning around and meandering its way to position $9$ (without hitting position $10$ in the process), then the person at position $10$ would be the last to receive the sauce. 
 
-we can call the probability of the first path segment $\require{cancel}\gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\gamma_\cancel{10}(11\rightarrow 9).$
+we can call the probability of the first path segment $\require{cancel}\gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\gamma(11\xrightarrow{\cancel{10}} 9).$
 
 (image of this path)
 
-of course it could also have happened in the reverse order, meandering clockwise to visit $9$ (without hitting $11$) before meandering back to $11$ (without hitting $10$). this has total probability $\gamma_\cancel{11}(1\rightarrow 9)\times \gamma_\cancel{10}(9\rightarrow 11).$
+of course it could also have happened in the reverse order, meandering clockwise to visit $9$ (without hitting $11$) before meandering back to $11$ (without hitting $10$). this has total probability $\gamma(1\xrightarrow{\cancel{11}} 9)\times \gamma(9\xrightarrow{\cancel{10}} 11).$
 
 the probability for the person at $i$ to be the last one visited is the sum of the probability of these two events
 
-$$\require{cancel} L(10) = \gamma_\cancel{11}(1\rightarrow 9)\times \gamma_\cancel{10}(9\rightarrow 11) + \gamma_\cancel{9}(1\rightarrow 11)\times \gamma_\cancel{10}(11\rightarrow 9) $$
+$$\require{cancel} L(10) = \gamma(1\xrightarrow{\cancel{11}} 9)\times \gamma(9\xrightarrow{\cancel{10}} 11) + \gamma(1\xrightarrow{\cancel{9}} 11)\times \gamma(11\xrightarrow{\cancel{10}} 9) $$
 
-each factor $\require{cancel}\gamma_\cancel{k}(i\rightarrow j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+each factor $\require{cancel}\gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
 
 
 ### Unrolling the table
