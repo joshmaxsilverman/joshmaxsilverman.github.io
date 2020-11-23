@@ -103,7 +103,7 @@ With the cliff problem in hand, we just have to figure out the general form for 
 
 ![](/img/2020-11-21-trajectories.jpg){:width="500px" class="image-centered"}
 
-Starting from position $1,$ if the sauce moves to $(x-1)$ first then it has to get there without touching $(x+1).$ In effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." Also, $(x-i)$ is $(N-2)$ steps from the cliff. This trajectory therefore has probability $P_{(N-2)}(N-x).$ Since this has the sauce moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+Starting from position $1,$ if the sauce moves to $(x-1)$ first then it has to get there without touching $(x+1)$ ($\color{green}{\text{green}}$ path). In effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." Also, $(x-i)$ is $(N-2)$ steps from the cliff. This trajectory therefore has probability $P_{(N-2)}(N-x).$ Since this has the sauce moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
 The path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ This trajectory therefore has probability $P_{(N-1)}(1).$ Since this has the sauce moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
