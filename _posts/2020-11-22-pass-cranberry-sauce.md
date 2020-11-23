@@ -140,7 +140,7 @@ $$\begin{align}
 
 no matter how we cut it, every person on the circle becomes equally likely to be last to get that famous sauce. for better or worse, there's no way to target Uncle Zach when $\ell = r.$
 
-as we noticed above, the probability distribution of the last person to get sauced will always be a geometric distribution that (when $\phi < 1$) decays like $\phi^{x-1}$ with its overall scale set by $(\phi^{-1} - 1)/(\phi^{N-1} - 1)$
+as we noticed above, the probability distribution of the last person to get sauced will always be a geometric progression that (when $\phi < 1$) decays like $\phi^{x-1}$ with its overall scale set by $(\phi^{-1} - 1)/(\phi^{N-1} - 1)$
 
 the scale factor is essentially insensitive to $N$ once there are more than $4$ people. for more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. so, when $\phi < 1,$ the probability is exponentially suppressed as we go counterclockwise around the circle. 
 
