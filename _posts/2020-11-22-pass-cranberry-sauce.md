@@ -101,11 +101,7 @@ notice that $\gamma_\text{b}$ and $\gamma_\text{f}$ correspond to whatever the t
 
 with the cliff problem in hand, we just have to figure out the general form for the paths
 
-(image of paths that leave $x$ for last (circular))
-
-unrolling the table, we have
-
-(image of unrolled table)
+![](/img/2020-11-21-trajectories.jpg){:width="500px" class="image-centered"}
 
 starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
