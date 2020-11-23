@@ -5,6 +5,7 @@ title: Pass the Cranberry Sauce
 date: 2020/11/22
 ---
 
+
 >**Question**: it's Thanksgiving and your family is gathered 'round the circular dinner table, Tofurkey in the middle, as is tradition. When the time comes, your Aunt Riddla brings out her famous cranberry sauce, handing it to you to place on the table. Wherever you place it, the person sitting there will take some sauce and then pass it randomly to one of their neighbors with probability $r$ to the right, and probability $\ell$ to the left. 
 >
 >This placement is no small decision though. You want to punish your naughty Uncle Zach so that he gets the cranberry sauce last! Where should you start the sauce off on its journey if you want Uncle Zach to be the most likely to be the last person to get that famous cranberry sauce?
@@ -27,7 +28,7 @@ for instance, if the sauce meandered its way from position $1$ to position $11$ 
 
 we can call the probability of the first path segment $\require{cancel}\Gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\Gamma(11\xrightarrow{\cancel{10}} 9).$
 
-(image of this path)
+![](/img/2020-11-21-circle-trajectory.jpeg){:width="400px" class="image-centered"}
 
 of course it could also have happened in the reverse order, meandering clockwise to visit $9$ (without hitting $11$) before meandering back to $11$ (without hitting $10$). this has total probability $\Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\xrightarrow{\cancel{10}} 11).$
 
@@ -40,7 +41,7 @@ $$\require{cancel} L(10) = \Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\x
 
 it's easier to think about this problem if we "unroll" the circle. there are $N$ positions in total and we unroll them so that we have a line going from position $1$ to $N.$ since almost all trajectories will cross between $1$ and $N,$ we add a redundant copy of positions $x$ to $N$ to the left of $1$:
 
-(image of the unrolled line)
+![](/img/2020-11-21-unrolled-table.jpeg){:width="600px" class="image-centered"}
 
 all possible trajectories we're interested in will take place along this line.
 
@@ -49,6 +50,8 @@ all possible trajectories we're interested in will take place along this line.
 each factor $\require{cancel}\Gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability that, starting from position $i$, we end up at position $j$ without ever touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
 
 essentially, we start out some number of steps from a cliff, and we want to know how likely we are to make it another $\lvert j-i\rvert)$ steps away from the cliff. if we step off the cliff at any point then the path doesn't count. 
+
+![](/img/2020-11-21-cliff-fall.jpeg){:width="400px" class="image-centered"}
 
 as we said above, the original problem breaks into four cases of this cliff problem. if we solve it then the original problem is a calculation. let's call $P_N(m)$ is the probability that we make it to $N$ steps from the cliff given that we start out $m$ steps from the cliff. 
 
