@@ -89,6 +89,8 @@ P_N(j+1) &= P_N(1)\left[\left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right) + \
 &= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)}
 \end{align}$$
 
+if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{f}/\gamma_\text{b})/(1 - \left(\gamma_\text{f}/\gamma_\text{b}\right)^N).$
+
 ### Being last
 
 ### Cases and graphs
