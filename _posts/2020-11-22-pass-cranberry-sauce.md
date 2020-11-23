@@ -35,12 +35,17 @@ the probability for the person at $i$ to be the last one visited is the sum of t
 
 $$\require{cancel} L(10) = \gamma(1\xrightarrow{\cancel{11}} 9)\times \gamma(9\xrightarrow{\cancel{10}} 11) + \gamma(1\xrightarrow{\cancel{9}} 11)\times \gamma(11\xrightarrow{\cancel{10}} 9) $$
 
-each factor $\require{cancel}\gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+in general, the probability for the person at position $i$ to be the last to get the sauce is 
 
+$$\require{cancel} L(i) = \gamma(1\xrightarrow{\cancel{i+1}} (i-1))\times \gamma((i-1)\xrightarrow{\cancel{i}} (i+1)) + \gamma(1\xrightarrow{\cancel{(i-1)}} (i+1))\times \gamma((i+1)\xrightarrow{\cancel{i}} (i-1)) $$
 
 ### Unrolling the table
 
+it's easier to think about this problem if we "unroll" the circle.
+
 ### Evolutionary fixing
+
+each factor $\require{cancel}\gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
 
 ### Being last
 
