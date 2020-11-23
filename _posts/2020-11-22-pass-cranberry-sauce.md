@@ -82,10 +82,10 @@ it recurses all the way down to
 
 $$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
 
-if we add the left hand side from $m=0$ to $m=j$ then we get
+if we add these tersm from $m=0$ up to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) &= P_N(1)\left(\left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right) + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right) \\
+P_N(j+1) &= P_N(1)\left[\left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right) + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^2 + \ldots + \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^j\right] \\
 &= P_N(1) \frac{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{f}}{\gamma_\text{b}}\right)}
 \end{align}$$
 
