@@ -33,11 +33,8 @@ of course it could also have happened in the reverse order, meandering clockwise
 
 the probability for the person at $i$ to be the last one visited is the sum of the probability of these two events
 
-$$\require{cancel} L(10) = \Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\xrightarrow{\cancel{10}} 11) + \Gamma(1\xrightarrow{\cancel{9}} 11)\times \Gamma(11\xrightarrow{\cancel{10}} 9) $$
+$$\require{cancel} L(10) = \Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\xleftarrow{\cancel{10}} 11) + \Gamma(1\xleftarrow{\cancel{9}} 11)\times \Gamma(11\xrightarrow{\cancel{10}} 9). $$
 
-in general, the probability for the person at position $i$ to be the last to get the sauce is 
-
-$$\require{cancel} L(i) = \Gamma(1\xrightarrow{\cancel{i+1}} (i-1))\times \Gamma((i-1)\xrightarrow{\cancel{i}} (i+1)) + \Gamma(1\xrightarrow{\cancel{(i-1)}} (i+1))\times \Gamma((i+1)\xrightarrow{\cancel{i}} (i-1)) $$
 
 ### Unrolling the table
 
@@ -107,11 +104,17 @@ unrolling the table, we have
 
 (image of unrolled table)
 
-starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_(N-2)(N-x).$
+starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
-the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{N-1}(1).$ 
+the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{(N-1)}(1).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
+if instead, we first move to $(x+1),$ we need to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point. Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
+the trip back is the mirror image of the trip back in the first scenario so the probability is again $P_{(N-1)}(1).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+
+putting it all together, we have
+
+$$ L(n) = \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{x-2}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{1}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-x}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{1}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} $$
 
 ### Cases and graphs
 
