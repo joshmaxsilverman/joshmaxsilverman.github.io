@@ -76,11 +76,18 @@ $$\begin{align}
 
 we can plug this equation back in to itself so that after one step we have 
 
-$$ \left(P_N(m+1) - P_N(m)\right) = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2\left(P_N(m-1) - P_N(m-2)\right). $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2\left[P_N(m-1) - P_N(m-2)\right]. $$
 
 it recurses all the way down to 
 
-$$ \left(P_N(m+1) - P_N(m)\right) = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^m\left(P_N(1) - P_N(0)\right). $$
+$$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
+
+if we add the left hand side from $m=0$ to $m=j$ then we get
+
+$$\begin{align}
+P_N(j+1) &= P_N(1)\left(\left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right) + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^2 + \ldots + \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^j\right) 
+&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)^{j+1}}{1 - \left(\frac{\gamma_\text{forward}}{\gamma_\text{backward}}\right)P_N(1)}
+\end{align}$$
 
 ### Being last
 
