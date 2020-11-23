@@ -25,19 +25,19 @@ for someone to be the last person remaining, the arc of the visited has to broad
 
 for instance, if the sauce meandered its way from position $1$ to position $11$ (without hitting position $9$ in the process) before turning around and meandering its way to position $9$ (without hitting position $10$ in the process), then the person at position $10$ would be the last to receive the sauce. 
 
-we can call the probability of the first path segment $\require{cancel}\gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\gamma(11\xrightarrow{\cancel{10}} 9).$
+we can call the probability of the first path segment $\require{cancel}\Gamma(1\xrightarrow{\cancel{9}} 11)$ signifying that it goes from $1$ to $11$ without bumping into $9.$ likewise, the probability of the second half is $\Gamma(11\xrightarrow{\cancel{10}} 9).$
 
 (image of this path)
 
-of course it could also have happened in the reverse order, meandering clockwise to visit $9$ (without hitting $11$) before meandering back to $11$ (without hitting $10$). this has total probability $\gamma(1\xrightarrow{\cancel{11}} 9)\times \gamma(9\xrightarrow{\cancel{10}} 11).$
+of course it could also have happened in the reverse order, meandering clockwise to visit $9$ (without hitting $11$) before meandering back to $11$ (without hitting $10$). this has total probability $\Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\xrightarrow{\cancel{10}} 11).$
 
 the probability for the person at $i$ to be the last one visited is the sum of the probability of these two events
 
-$$\require{cancel} L(10) = \gamma(1\xrightarrow{\cancel{11}} 9)\times \gamma(9\xrightarrow{\cancel{10}} 11) + \gamma(1\xrightarrow{\cancel{9}} 11)\times \gamma(11\xrightarrow{\cancel{10}} 9) $$
+$$\require{cancel} L(10) = \Gamma(1\xrightarrow{\cancel{11}} 9)\times \Gamma(9\xrightarrow{\cancel{10}} 11) + \Gamma(1\xrightarrow{\cancel{9}} 11)\times \Gamma(11\xrightarrow{\cancel{10}} 9) $$
 
 in general, the probability for the person at position $i$ to be the last to get the sauce is 
 
-$$\require{cancel} L(i) = \gamma(1\xrightarrow{\cancel{i+1}} (i-1))\times \gamma((i-1)\xrightarrow{\cancel{i}} (i+1)) + \gamma(1\xrightarrow{\cancel{(i-1)}} (i+1))\times \gamma((i+1)\xrightarrow{\cancel{i}} (i-1)) $$
+$$\require{cancel} L(i) = \Gamma(1\xrightarrow{\cancel{i+1}} (i-1))\times \Gamma((i-1)\xrightarrow{\cancel{i}} (i+1)) + \Gamma(1\xrightarrow{\cancel{(i-1)}} (i+1))\times \Gamma((i+1)\xrightarrow{\cancel{i}} (i-1)) $$
 
 ### Unrolling the table
 
@@ -47,9 +47,19 @@ it's easier to think about this problem if we "unroll" the circle. there are $N$
 
 all possibile trajectories we're interested in will take place along this line.
 
-### Evolutionary fixing
+### Cliff dancing
 
-each factor $\require{cancel}\gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability of paths that go from position $i$ to position $j$ without touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+each factor $\require{cancel}\Gamma(i\xrightarrow{\cancel{k}} j)$ is the total probability that, starting from position $i$, we end up at position $j$ without ever touching position $k.$ each term has its own start and terminus as well as its own position to avoid, but the problem is generic. 
+
+essentially, we start out some number of steps from a cliff, and we want to know how likely we are to make it another $\lvert j-i\rvert)$ steps away from the cliff. if we step off the cliff at any point then the path doesn't count. 
+
+as we said above, the original problem breaks into four cases of this cliff problem. if we solve it then the original problem is a calculation. let's call $P_N(m)$ is the probability that we make it to $N$ steps from the cliff given that we start out $m$ steps from the cliff. 
+
+by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P_N(N)=1$ since it means we're at position $N$ already. with these boundary values, we can solve the problem by finding a recurrence relationship connecting the survival probability from adjacent positions. 
+
+the probability that we make it to step $m$ is the probability that we make it to step $(m+1)$ and the take a step toward the cliff (probability $\gamma_\text{backward}$), plus the probability that we make it to step $(m-1)$ and then take a step away from the cliff (probability $\gamma_\text{forward}$):
+
+$$P_N(m) = \ell\times$$
 
 ### Being last
 
