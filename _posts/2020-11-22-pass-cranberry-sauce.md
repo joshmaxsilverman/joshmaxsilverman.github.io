@@ -105,7 +105,7 @@ With the cliff problem in hand, we just have to figure out the general form for 
 
 Starting from position $1,$ if the sauce moves to $(x-1)$ first then it has to get there without touching $(x+1)$ ($\color{green}{\text{green}}$ path). In effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." Also, $(x-i)$ is $(N-2)$ steps from the cliff. This trajectory therefore has probability $P_{(N-2)}(N-x).$ Since this has the sauce moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
-The path from $(x-1)$ to $(x+1)$ ($\color{Amber}{\text{yellow}}$ path) is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ This trajectory therefore has probability $P_{(N-1)}(1).$ Since this has the sauce moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
+The path from $(x-1)$ to $(x+1)$ ($\color{Goldenrod}{\text{yellow}}$ path) is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ This trajectory therefore has probability $P_{(N-1)}(1).$ Since this has the sauce moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
 If, instead, the sauce first moves to $(x+1),$ it needs to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point ($\color{red}{\text{red}}$ path). Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ Since this has the sauce moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
