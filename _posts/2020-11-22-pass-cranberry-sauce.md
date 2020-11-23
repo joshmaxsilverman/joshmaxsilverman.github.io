@@ -42,7 +42,7 @@ it's easier to think about this problem if we "unroll" the circle. there are $N$
 
 (image of the unrolled line)
 
-all possibile trajectories we're interested in will take place along this line.
+all possible trajectories we're interested in will take place along this line.
 
 ### Cliff dancing
 
@@ -56,7 +56,7 @@ by definition $P_N(0)=0$ as it means we start in freefall from the cliff, and $P
 
 the probability that we survive to step $N$ from step $m$ is the probability that we take a step away from the cliff (probability $\gamma_\text{f}$) and survive from step $(m+1)$, plus the probability that we take a step toward the cliff (probability $\gamma_\text{b}$) and survive from step $(m-1)$:
 
-$$P_N(m) = P_N(m-1)\cdot\gamma_\text{b} + P_N(m+1)\cdot\cdot\gamma_\text{f}$$
+$$P_N(m) = P_N(m-1)\cdot\gamma_\text{b} + P_N(m+1)\cdot\gamma_\text{f}$$
 
 the two transition probabilities add to $1$ so we can turn this into a relationship between consecutive differences:
 
@@ -79,7 +79,7 @@ it recurses all the way down to
 
 $$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
 
-if we add these tersm from $m=0$ up to $m=j$ then we get
+if we add these terms from $m=0$ up to $m=j$ then we get
 
 $$\begin{align}
 P_N(j+1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
@@ -92,7 +92,7 @@ the overall probability of making it to step $N$, starting from step $i,$ withou
 
 $$ P_N(i) = \dfrac{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^i}{1-\left(\gamma_\text{b}/\gamma_\text{f}\right)^N} $$
 
-notice that $\gamma_\text{b}$ and $\gamma_\text{f}$ correspond to whatever the transition probabilities are in the forward and backward directions of motion, respectively, so we'll have to 
+notice that $\gamma_\text{b}$ and $\gamma_\text{f}$ correspond to whatever the transition probabilities are in the backward and forward directions of motion, respectively, so we'll have to 
 
 ### Being last
 
@@ -142,7 +142,7 @@ no matter how we cut it, every person on the circle becomes equally likely to be
 
 as we noticed above, the probability distribution of the last person to get sauced will always be a geometric distribution that (when $\phi < 1$) decays like $\phi^{x-1}$ with its overall scale set by $(\phi^{-1} - 1)/(\phi^{N-1} - 1)$
 
-the scale factor is essentially insensitive to $N$ once there are more than $4$ people. for more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. so, when $\phi < 1,$ the probability is exponentially supressed as we go counterclockwise around the circle. 
+the scale factor is essentially insensitive to $N$ once there are more than $4$ people. for more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. so, when $\phi < 1,$ the probability is exponentially suppressed as we go counterclockwise around the circle. 
 
 if we want Uncle Zach to be last to get that famous sauce, our best bet is to put him to the left of where the sauce begins its voyage.
 
