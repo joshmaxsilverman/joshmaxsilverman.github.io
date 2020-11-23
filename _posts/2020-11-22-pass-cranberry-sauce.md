@@ -68,7 +68,7 @@ and, so
 
 $$\begin{align}
 \gamma_\text{f}\cdot P_N(m+1) - \gamma_\text{f}\cdot P_N(m) &= \gamma_\text{b}\cdot P_N(m) - \gamma_\text{b}\cdot P_N(m-1) \\
-\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{b}}{\gamma_\text{f}}\left(P_N(m) - P_N(m-1)\right)
+\left(P_N(m+1) - P_N(m)\right) &= \frac{\gamma_\text{b}}{\gamma_\text{f}}\cdot\left(P_N(m) - P_N(m-1)\right)
 \end{align}$$
 
 we can plug this equation back in to itself so that after one step we have 
@@ -79,11 +79,11 @@ it recurses all the way down to
 
 $$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^m\left[P_N(1) - P_N(0)\right]. $$
 
-if we add these terms from $m=0$ up to $m=j$ then we get
+if we add these terms from $m=1$ up to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
-&= P_N(1) \frac{1 - \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^{j+1}}{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}
+P_N(j+1) - P(1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
+P_N(j+1) &= P_N(1) \frac{1 - \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^{j+1}}{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}
 \end{align}$$
 
 if the dancer gets to step $N$ then they've survived and $P_N(N)=1$ so $P(1) = (1-\gamma_\text{b}/\gamma_\text{f})/(1 - \left(\gamma_\text{b}/\gamma_\text{f}\right)^N).$
