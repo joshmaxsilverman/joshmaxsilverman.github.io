@@ -104,17 +104,17 @@ unrolling the table, we have
 
 (image of unrolled table)
 
-starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
+starting from position $1,$ if we move to $(x-1)$ first then we need to get there without touching $(x+1).$ in effect, the cliff is at position $(x+1),$ which means that $1$ is $N-(x+1)+1 = N-x$ steps from the "cliff." also, $(x-i)$ is $(N-2)$ steps from the cliff. this trajectory therefore has probability $P_{(N-2)}(N-x).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
-the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{(N-1)}(1).$ since we're moving to the left, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+the path from $(x-1)$ to $(x+1)$ is $N-1$ steps long and the "cliff" for this segment is located one step away at $x.$ this trajectory therefore has probability $P_{(N-1)}(1).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
-if instead, we first move to $(x+1),$ we need to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point. Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ since we're moving to the left, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
+if instead, we first move to $(x+1),$ we need to get there without touching $(x-i),$ which places the cliff $(x-2)$ steps from the starting point. Also, $(x+1)$ is $(N-2)$ steps from the cliff, so the survival probability is $P_{(N-2)}(x-2).$ since we're moving to the left, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
 
-the trip back is the mirror image of the trip back in the first scenario so the probability is again $P_{(N-1)}(1).$ since we're moving to the right, $\gamma_\text{f} = \ell$ and $\gamma_\text{b} = r.$
+the trip back is the mirror image of the trip back in the first scenario so the probability is again $P_{(N-1)}(1).$ since we're moving to the right, $\gamma_\text{f} = r$ and $\gamma_\text{b} = \ell.$
 
 putting it all together, we have
 
-$$ L(x) = \frac{1 - (\frac{\gamma_\text{b}}{\gamma_\text{f}})^{x-2}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{f}}{\gamma_\text{b}}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-1}} + \frac{1 - (\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-x}}{1-(\frac{\gamma_\text{f}}{\gamma_\text{b}})^{N-2}}\cdot \frac{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}{1-(\frac{\gamma_\text{b}}{\gamma_\text{f}})^{N-1}} $$
+$$ L(x) = \frac{1 - (\frac{\ell}{r})^{x-2}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac{1 - \frac{r}{\ell}}{1-(\frac{r}{\ell})^{N-1}} + \frac{1 - (\frac{r}{\ell})^{N-x}}{1-(\frac{r}{\ell})^{N-2}}\cdot \frac{1 - \frac{\ell}{r}}{1-(\frac{\ell}{r})^{N-1}} $$
 
 or, writing $\gamma_\text{b}/\gamma_\text{f}$ as $\phi,$
 
