@@ -129,7 +129,7 @@ The fractional term here is constant for a given value of $\phi,$ so the only pi
 
 The first case to check is the one where there's no imbalance and the sauce has equal chance to go left or right. In this case $\phi=1.$ based on the simple analysis above, $L(x)$ will be a constant function over the $(N-1)$ diners: $L(x) = 1/(N-1).$
 
-If we care to be careful, we can use L'Hopital's rule to evaluate the limit as $\phi$ approaches $1:$
+If we care to be careful, we can use L'H\^{o}pital's rule to evaluate the limit as $\phi$ approaches $1:$
 
 $$\begin{align}
 \lim_{\phi \rightarrow 1} \frac{\phi^{-1} - 1}{1 - \phi^{N-1}} &= \frac{\frac{d}{d\phi}\rvert_{\phi=1}(\phi^{-1} - 1)}{\frac{d}{d\phi}\rvert_{\phi=1}(1 - \phi^{N-1})} \\
