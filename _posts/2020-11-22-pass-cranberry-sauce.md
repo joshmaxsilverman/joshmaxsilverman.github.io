@@ -114,7 +114,7 @@ The trip back ($\color{orange}{\text{orange}}$ path) is the mirror image of the 
 Putting it all together, we have
 
 $$\begin{align}
-L(x) &= P_{(N-2)}(N-x\rvert \rightarrow)\cdot P_{(N-1)}(1\rvert\leftarrow) + P_{(N-2)}(x-2\rvert \leftarrow)\cdot P_{(N-1)}(1\rvert\rightarrow) \\
+L(x) &= \overrightarrow{P}_{(N-2)}(N-x\rvert \rightarrow)\cdot P_{(N-1)}(1\rvert\leftarrow) + P_{(N-2)}(x-2\rvert \leftarrow)\cdot P_{(N-1)}(1\rvert\rightarrow) \\
 &= \frac{1 - (\frac{\ell}{r})^{N-x}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac{1 - \frac{r}{\ell}}{1-(\frac{r}{\ell})^{N-1}} + \frac{1 - (\frac{r}{\ell})^{x-2}}{1-(\frac{r}{\ell})^{N-2}}\cdot \frac{1 - \frac{\ell}{r}}{1-(\frac{\ell}{r})^{N-1}}, 
 \end{align}$$
 
