@@ -85,7 +85,7 @@ $$ \left[P_N(m+1) - P_N(m)\right] = \left(\frac{\gamma_\text{b}}{\gamma_\text{f}
 If we add these terms from $m=1$ up to $m=j$ then we get
 
 $$\begin{align}
-P_N(j+1) - P(1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
+P_N(j+1) - P_N(1) &= P_N(1)\left[\frac{\gamma_\text{b}}{\gamma_\text{f}} + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^2 + \ldots + \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^j\right] \\
 P_N(j+1) &= P_N(1) \frac{1 - \left(\frac{\gamma_\text{b}}{\gamma_\text{f}}\right)^{j+1}}{1 - \frac{\gamma_\text{b}}{\gamma_\text{f}}}.
 \end{align}$$
 
