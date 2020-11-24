@@ -113,11 +113,11 @@ The trip back ($\color{orange}{\text{orange}}$ path) is the mirror image of the 
 
 Putting it all together, we have
 
-$$ L(x) = \frac{1 - (\frac{\ell}{r})^{x-2}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac{1 - \frac{r}{\ell}}{1-(\frac{r}{\ell})^{N-1}} + \frac{1 - (\frac{r}{\ell})^{N-x}}{1-(\frac{r}{\ell})^{N-2}}\cdot \frac{1 - \frac{\ell}{r}}{1-(\frac{\ell}{r})^{N-1}}, $$
+$$ L(x) = \frac{1 - (\frac{\ell}{r})^{N-x}}{1-(\frac{\ell}{r})^{N-2}}\cdot \frac{1 - \frac{r}{\ell}}{1-(\frac{r}{\ell})^{N-1}} + \frac{1 - (\frac{r}{\ell})^{x-2}}{1-(\frac{r}{\ell})^{N-2}}\cdot \frac{1 - \frac{\ell}{r}}{1-(\frac{\ell}{r})^{N-1}}, $$
 
-or, writing $\phi = \ell/r,$ we have:
+or, writing $\phi = r/\ell,$ we have:
 
-$$ \boxed{L(x) = \frac{1 - \phi^{x-2}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{N-x}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}}. $$
+$$ \boxed{L(x) = \frac{1 - \phi^{N-x}}{1-\phi^{N-2}}\cdot \frac{1 - 1/\phi}{1-1/\phi^{N-1}} + \frac{1 - 1/\phi^{x-2}}{1-1/\phi^{N-2}}\cdot \frac{1 - \phi}{1-\phi^{N-1}}}. $$
 
 This is a monstrous expression, but with a little bit of algebra, it simplifies nicely:
 
@@ -141,7 +141,7 @@ No matter how we cut it, every person on the circle becomes equally likely to be
 
 As we noticed above, the probability distribution of the last person to get sauced will always be a geometric progression that (when $\phi < 1$) decays like $\phi^{x-1}$ with its overall scale set by $(\phi^{-1} - 1)/(\phi^{N-1} - 1).$
 
-The scale factor is essentially insensitive to $N$ once there are more than $4$ people. For more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. So, when $\phi < 1,$ the probability is exponentially suppressed as we go counterclockwise around the circle. 
+The scale factor is essentially insensitive to $N$ once there are more than $4$ people. For more and more people, we access small tail probabilities, but leave the rightward positions near $1$ almost unchanged. So, when the walk is right-biased $\phi < 1,$ the probability is exponentially suppressed as we go counterclockwise around the circle. 
 
 If we want Uncle Zach to be last to get that famous sauce, our best bet is to put him to the left of where the sauce begins its voyage.
 
