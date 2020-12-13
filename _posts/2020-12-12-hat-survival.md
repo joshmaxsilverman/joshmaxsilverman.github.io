@@ -29,10 +29,11 @@ If I'm in the $2$-person row, then all I see is the color status of the people i
 
 So, each person guesses correctly $81$ times, always. This makes $5\times81=405$ total correct guesses, which is more than enough to have $1$ in each of the $243$ cases. We just need to distribute these 405 correct guesses so that they pattern the rows.
 
+### First row
 
+The best the first row can do is to distribute themselves so that the first person is correct in $1/3$ of cases, the second person is correct in 
 
-
-
+Making for a total of $\left(1+2/3+(2/3)^2\right)\times 81 = 171$ correct guesses.
 
 
 
