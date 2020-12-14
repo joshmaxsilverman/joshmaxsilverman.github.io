@@ -15,7 +15,7 @@ date: 2020/12/12
 
 If everybody guesses blue for all inputs, then there will be someone correct in every case where someone has a blue hat. there are just $2^5$ ways to build red-green ONLY patterns, so we start of with $3^5 - 2^5 = 211$ correct guesses.
 
-Not coincidentally, this is the expected number of survival cases when everyone guesses at random ($243\times\left(1-\left(2/3\right)^5\right)$).
+Not coincidentally, this is the expected number of survival cases when everyone guesses at random ($243\times(1-(2/3)^5)$).
 
 So, we need to move relocate some correct guesses from the cases that have multiple correct guesses to those that have none. 
 
@@ -33,7 +33,7 @@ So, each person guesses correctly $81$ times, always. This makes $5\times81=405$
 
 If we only adjust the guesses of the people in the second row, then we can't outperform the $211$ benchmark of random guessing. 
 
-Suppose we change player $4$'s strategy, which is currently $S_4(\_, \_, \_)\rightarrow {\color{blue}\text{B}},$ so that $S_4(R,R,R)\rightarrow {\color{red}\text{R}}.$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
+Suppose we change player $4$'s strategy, which is currently $$S_4(\_, \_, \_)\rightarrow {\color{blue}\text{B}},$$ so that $$S_4(R,R,R)\rightarrow {\color{red}\text{R}}.$$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
 
 The same is true if we only adjust the strategies of the people in the first row. So, if we want to add successful predictions in currently barren cases while preserving the ones we have already, we have to make balanced changes.
 
@@ -41,7 +41,7 @@ What remains is to go through the $29$ other cases with no blue and make compens
 
 ### Viva la evolution
 
-We can go through this exercise, bringing the $\color{blue}\text{blue}$-less cases into the light, case by case, or we can turn to the guiding warmth of natural selection. 
+We can go through this exercise, bringing the $\color{blue}{\text{blue}}$-less cases into the light, case by case, or we can turn to the guiding warmth of natural selection. 
 
 In a sense, each player's strategy $S_i,$ is a gene whose purpose it to make effective predictions in light of the $4$ other genes. Whenever we alter what a strategy $S_i$ does in response to a particular state of the opposing row, it is a mutation. 
 
