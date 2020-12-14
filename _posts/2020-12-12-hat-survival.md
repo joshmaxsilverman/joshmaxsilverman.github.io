@@ -59,7 +59,7 @@ However, it could be that several mutations have to occur in concert before we c
 
 Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation:
 
-![](/img/2020-12-12-hat-hostage-graph.png){:width=250px" class="image-centered"}
+![](/img/2020-12-12-hat-hostage-graph.png){:width="250px" class="image-centered"}
 
 At the outset, almost every mutation we attempt has a beneficial impact as it explores strategies that spread the correct predictions out of the rows that have "too many" correct predictions, where "just right" is $405/243 = 5/3$ successful predictions per row.
 
