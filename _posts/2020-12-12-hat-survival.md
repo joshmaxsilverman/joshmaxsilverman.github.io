@@ -63,8 +63,8 @@ At the outset, almost every mutation we attempt has a beneficial impact as it ex
 
 After the initial rise, we see the importance of neutral mutations which the organism churns through for a long time as it wanders toward the tweaks that can bring the last few cases into the fold. 
 
-$$\begin{array}{c|c|c|c|c}
-C_4 & C_5 & \hat{C}_1 & \hat{C}_2 & \hat{C}_3 \\
+$$\begin{array}{c|c|c|c|c} \hline
+C_4 & C_5 & S_1 & S_2 & S_3 \\ \hline
 0 & 0 & 2 & 0 & 2 \\
 0 & 1 & 2 & 0 & 0 \\
 0 & 2 & 2 & 2 & 0 \\
@@ -73,7 +73,7 @@ C_4 & C_5 & \hat{C}_1 & \hat{C}_2 & \hat{C}_3 \\
 1 & 2 & 1 & 0 & 2 \\
 2 & 0 & 2 & 1 & 1 \\
 2 & 1 & 0 & 2 & 1 \\
-2 & 2 & 1 & 1 & 0
+2 & 2 & 1 & 1 & 0 \\ \hline
 \end{array}$$
  
  2
