@@ -130,6 +130,8 @@ The more restrictive we make the evolutionary strategy, the longer it takes to f
 
 Running in this restricted mode, we can see the minimal number of **necessary** mutations which hovers at just under $30.$
 
+<plot forthcoming>
+
 ### The code
 
 The code below simulates the constrained case where all three strategies mutate together, which is less visually offensive than the code that mutates each strategy individually:
