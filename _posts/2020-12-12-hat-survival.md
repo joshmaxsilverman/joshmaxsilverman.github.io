@@ -63,6 +63,52 @@ At the outset, almost every mutation we attempt has a beneficial impact as it ex
 
 After the initial rise, we see the importance of neutral mutations which the organism churns through for a long time as it wanders toward the tweaks that can bring the last few cases into the fold. 
 
+$$\begin{array}{c|c|c|c|c}
+C_4 & C_5 & \hat{C}_1 & \hat{C}_2 & \hat{C}_3 \\
+0 & 0 & 2 & 0 & 2 \\
+0 & 1 & 2 & 0 & 0 \\
+0 & 2 & 2 & 2 & 0 \\
+1 & 0 & 0 & 0 & 2 \\
+1 & 1 & 1 & 0 & 1 \\
+1 & 2 & 1 & 0 & 2 \\
+2 & 0 & 2 & 1 & 1 \\
+2 & 1 & 0 & 2 & 1 \\
+2 & 2 & 1 & 1 & 0
+\end{array}$$
+ 
+ 2
+ 
+ {(0, 0, 0): 2, 2
+ (0, 0, 1): 0, 2
+ (0, 0, 2): 2,2
+ (0, 1, 0): 1,0
+ (0, 1, 1): 0,2
+ (0, 1, 2): 0,1
+ (0, 2, 0): 1,0
+ (0, 2, 1): 0,2
+ (0, 2, 2): 2,1
+ (1, 0, 0): 2,0
+ (1, 0, 1): 0,0
+ (1, 0, 2): 2,2
+ (1, 1, 0): 2,0
+ (1, 1, 1): 0,0
+ (1, 1, 2): 0,1
+ (1, 2, 0): 0,0
+ (1, 2, 1): 0,0
+ (1, 2, 2): 0,0
+ (2, 0, 0): 0,1
+ (2, 0, 1): 0,2
+ (2, 0, 2): 2,0
+ (2, 1, 0): 1,1
+ (2, 1, 1): 1,2
+ (2, 1, 2): 1,1
+ (2, 2, 0): 1,2
+ (2, 2, 1): 1,2
+ (2, 2, 2): 1,2
+
+
+
+
 ### Restricted evolution
 
 The more restrictive we make the evolutionary strategy, the longer it takes to find a solution. We could make each row into a gene, in which case we force the row to do a more disruptive mutation, which takes much longer than when we allow each player's strategy to mutate independently. Likewise, if we only accept mutations that improve the predictions, we can easily get stuck on local optima that are better or as good as all their neighbors, but worse than none of them. 
