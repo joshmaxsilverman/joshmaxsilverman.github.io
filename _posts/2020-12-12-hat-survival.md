@@ -45,7 +45,7 @@ We can go through this exercise, bringing the $\color{blue}{\text{blue}}$-less c
 
 In a sense, each player's strategy $S_i,$ is a gene whose purpose it to make effective predictions in light of the $4$ other genes. Whenever we alter what a strategy $S_i$ does in response to a particular state of the opposing row, it is a mutation. 
 
-Concretely, the strategy of a player in the first row is a function from $C^2$ to $C$: $S_i(C_4, C_5) \rightarrow C_i.$ Likewise, the strategy of a player in the second row is a function from $C^3$ to $C$: $S_i(C_1, C_2, C_3) \rightarrow C_i.$
+Concretely, the strategy of a player in the first row is a function from $C^2$ to $C$: $$S_i(C_4, C_5) \rightarrow C_i.$$ Likewise, the strategy of a player in the second row is a function from $C^3$ to $C$: $$S_i(C_1, C_2, C_3) \rightarrow C_i.$$
 
 When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
 
