@@ -55,7 +55,7 @@ $$S_i(C_1, C_2, C_3) \rightarrow \hat{S}_i.$$
 
 When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
 
-![](/img/2020-12-12-hat-hostages-landscape.jpg){:width="500px" class="image-centered"}
+![](/img/2020-12-12-hat-hostages-landscape.jpg){:width="600px" class="image-centered"}
 
 {:.caption}
 
@@ -137,8 +137,6 @@ The code below simulates the constrained case where all three strategies mutate 
 ```python
 import random
 import copy
-import matplotlib.pyplot as plt
-import pandas as pd
 
 cases = [[a,b,c,d,e] for a in range(3) 
                      for b in range(3) 
@@ -168,7 +166,7 @@ while current_best_score < 243:
     (tmp_predUp, tmp_predLow) = (copy.deepcopy(predUp), copy.deepcopy(predLow))
     # Pick the new predictions for the two selected cases
     tmp_predUp[upper_key_to_mutate] = random.choices([0,1,2], k=3)
-    tmp_predLow[lower_key_to_mutate]) = random.choices([0,1,2], k=2) 
+    tmp_predLow[lower_key_to_mutate] = random.choices([0,1,2], k=2) 
     # Count the number of successful predictions of mutated strategy
     test_score = testRows(tmp_predUp, tmp_predLow)
     
