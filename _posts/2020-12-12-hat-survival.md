@@ -9,7 +9,7 @@ date: 2020/12/12
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/how-high-can-you-count-with-menorah-math/))
 
 ## Solution
 
@@ -33,7 +33,7 @@ So, each person guesses correctly $81$ times, always. This makes $5\times81=405$
 
 If we only adjust the guesses of the people in the second row, then we can't outperform the $211$ benchmark of random guessing. 
 
-Suppose we change player $4$'s strategy, which is currently $$S_4(\_, \_, \_)\rightarrow {\color{blue}\text{B}},$$ so that $$S_4(R,R,R)\rightarrow {\color{red}\text{R}}.$$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
+Suppose we change player $4$'s strategy, which is currently $$S_4(\_, \_, \_)\rightarrow {\color{blue}{\text{B}}},$$ so that $$S_4(R,R,R)\rightarrow {\color{red}{\text{R}}}.$$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
 
 The same is true if we only adjust the strategies of the people in the first row. So, if we want to add successful predictions in currently barren cases while preserving the ones we have already, we have to make balanced changes.
 
