@@ -68,7 +68,7 @@ After the initial rise, we see the importance of neutral mutations which the org
 **Evolved strategy for players $3,$ $4,$ and $5.$**
 
 $$
-\begin{array}{|ccc|c|c|} \hline
+\begin{array}{|cc|c|c|c|} \hline
 C_4 & C_5 & \hat{S}_1 & \hat{S}_2 & \hat{S}_3 \\ \hline
 0 & 0 & 2 & 0 & 2 \\
 0 & 1 & 2 & 0 & 0 \\
