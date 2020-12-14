@@ -130,7 +130,7 @@ The more restrictive we make the evolutionary strategy, the longer it takes to f
 
 Running in this restricted mode, we can see the minimal number of **necessary** mutations which hovers at just under $30.$
 
-<plot forthcoming>
+(plot forthcoming)
 
 ### The code
 
