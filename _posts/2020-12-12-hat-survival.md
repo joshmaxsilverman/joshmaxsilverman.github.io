@@ -120,6 +120,10 @@ The more restrictive we make the evolutionary strategy, the longer it takes to f
 
 Running in this restricted mode, we can see the minimal number of **necessary** mutations which hovers at just under $30.$
 
+### The code
+
+The code below simulates the constrained case where all three strategies mutate together, which is less visually offensive than the code that mutates each strategy individually:
+
 ```python
 import random
 import copy
@@ -147,12 +151,14 @@ current_best_score = 0
 joint_record = []
 
 while current_best_score < 243:
-
-    # Mutate the current strategy
-    (upper_key_to_mutate, lower_key_to_mutate) = (random.choice(list(predUp.keys())), random.choice(list(predLow.keys())))
+    # Pick the cases to mutate
+    upper_key_to_mutate = random.choice(list(predUp.keys()))
+    lower_key_to_mutate = random.choice(list(predLow.keys()))
+    # Copy the current strategies
     (tmp_predUp, tmp_predLow) = (copy.deepcopy(predUp), copy.deepcopy(predLow))
-    (tmp_predUp[upper_key_to_mutate], tmp_predLow[lower_key_to_mutate]) = (random.choices([0,1,2], k=3), random.choices([0,1,2], k=2))
-    
+    # Pick the new predictions for the two selected cases
+    tmp_predUp[upper_key_to_mutate] = random.choices([0,1,2], k=3)
+    tmp_predLow[lower_key_to_mutate]) = random.choices([0,1,2], k=2) 
     # Count the number of successful predictions of mutated strategy
     test_score = testRows(tmp_predUp, tmp_predLow)
     
