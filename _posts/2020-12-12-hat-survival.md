@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Hat Hostage Strategies
 date: 2020/12/12
 ---
