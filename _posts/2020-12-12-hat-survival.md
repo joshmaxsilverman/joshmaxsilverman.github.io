@@ -13,7 +13,7 @@ date: 2020/12/12
 
 ## Solution
 
-If everybody guesses blue for all inputs, then there will be someone correct in every case where someone has a blue hat. there are just $2^5$ ways to build red-green ONLY patterns, so we start of with $3^5 - 2^5 = 211$ correct guesses.
+If everybody guesses $\color{blue}{\text{blue}}$ for all inputs, then there will be someone correct in every case where someone has a $\color{blue}{\text{blue}}$ hat. there are just $2^5$ ways to build $\color{red}{\text{red}}$-$\color{green}{\text{green}}$ ONLY patterns, so we start of with $3^5 - 2^5 = 211$ correct guesses.
 
 Not coincidentally, this is the expected number of survival cases when everyone guesses at random ($243\times(1-(2/3)^5)$).
 
@@ -33,11 +33,11 @@ So, each person guesses correctly $81$ times, always. This makes $5\times81=405$
 
 If we only adjust the guesses of the people in the second row, then we can't outperform the $211$ benchmark of random guessing. 
 
-Suppose we change player $4$'s strategy, which is currently $$S_4(\_, \_, \_)\rightarrow {\color{blue}{\text{B}}},$$ so that $$S_4(R,R,R)\rightarrow {\color{red}{\text{R}}}.$$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
+Suppose we change player $4$'s strategy, which is currently $$S_4(\_, \_, \_)\rightarrow {\color{blue}{\text{B}}},$$ so that $$S_4(R,R,R)\rightarrow {\color{red}{\text{R}}}.$$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are $\color{red}{\text{red}}$, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are $\color{red}{\text{red}}$, and $C_4$ is $\color{blue}{\text{blue}},$ negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
 
 The same is true if we only adjust the strategies of the people in the first row. So, if we want to add successful predictions in currently barren cases while preserving the ones we have already, we have to make balanced changes.
 
-What remains is to go through the $29$ other cases with no blue and make compensatory adjustments so they end up with successful predictions.
+What remains is to go through the $29$ other cases with no $\color{blue}{\text{blue}}$ and make compensatory adjustments so they end up with successful predictions.
 
 ### Viva la evolution
 
@@ -60,6 +60,8 @@ After the initial rise, we see the importance of neutral mutations which the org
 ### Restricted evolution
 
 The more restrictive we make the evolutionary strategy, the longer it takes to find a solution. We could make each row into a gene, in which case we force the row to do a more disruptive mutation, which takes much longer than when we allow each player's strategy to mutate independently. Likewise, if we only accept mutations that improve the predictions, we can easily get stuck on local optima that are better or as good as all their neighbors, but worse than none of them. 
+
+Running in this restricted mode, we can see the minimal number of **necessary** mutations which hovers at just under $30.$
 
 
 <br>
