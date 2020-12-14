@@ -57,7 +57,9 @@ When a mutation occurs, we can compare how the "organism" does with that mutatio
 
 However, it could be that several mutations have to occur in concert before we can expect to see a positive impact. So, we can also accept the "neutral" mutations that don't improve, but also don't hurt our predictions. 
 
-Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation. 
+Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation:
+
+![](/img/2020-12-12-hat-hostage-graph.png){:width=400px" class="image-centered"}
 
 At the outset, almost every mutation we attempt has a beneficial impact as it explores strategies that spread the correct predictions out of the rows that have "too many" correct predictions, where "just right" is $405/243 = 5/3$ successful predictions per row.
 
