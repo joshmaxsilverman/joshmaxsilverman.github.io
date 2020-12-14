@@ -31,9 +31,33 @@ So, each person guesses correctly $81$ times, always. This makes $5\times81=405$
 
 ### Row life
 
-If we only adjust the guesses of the people in the first row, we can't outperform the $211$ benchmark of random guessing. Whatever adjustments we make are random with respect to the guesses of the people in the second row. The same is true if we only adjust the strategies of the people in the second row. 
+If we only adjust the guesses of the people in the second row, then we can't outperform the $211$ benchmark of random guessing. 
 
+Suppose we change player $4$'s strategy, which is currently $S_4(\_, \_, \_)\rightarrow {\color{blue}\text{B}},$ so that $S_4(R,R,R)\rightarrow {\color{red}\text{R}}.$ This will lead to a newly successful prediction in the case where $C_1, C_2, C_3,$ $C_4$ and $C_5$ are red, but it will spoil the prediction in the case where $C_1, C_2, C_3$ and $C_5$ are red, and $C_4$ is blue, negating the gain. Since player $5$ doesn't know the value of $C_4,$ they can't affect their strategy to compensate.
 
+The same is true if we only adjust the strategies of the people in the first row. So, if we want to add successful predictions in currently barren cases while preserving the ones we have already, we have to make balanced changes.
+
+What remains is to go through the $29$ other cases with no blue and make compensatory adjustments so they end up with successful predictions.
+
+### Viva la evolution
+
+We can go through this exercise, bringing the $\color{blue}\text{blue}$-less cases into the light, case by case, or we can turn to the guiding warmth of natural selection. 
+
+In a sense, each player's strategy $S_i,$ is a gene whose purpose it to make effective predictions in light of the $4$ other genes. Whenever we alter what a strategy $S_i$ does in response to a particular state of the opposing row, it is a mutation. 
+
+When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
+
+However, it could be that several mutations have to occur in concert before we can expect to see a positive impact. So, we can also accept the "neutral" mutations that don't improve, but also don't hurt our predictions. 
+
+Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation. 
+
+At the outset, almost every mutation we attempt has a beneficial impact as it explores strategies that spread the correct predictions out of the rows that have "too many" correct predictions, where "just right" is $405/243 = 5/3$ successful predictions per row.
+
+After the initial rise, we see the importance of neutral mutations which the organism churns through for a long time as it wanders toward the tweaks that can bring the last few cases into the fold. 
+
+### Restricted evolution
+
+The more restrictive we make the evolutionary strategy, the longer it takes to find a solution. If we force the each row to pick a case to mutate at the same time, it will take a lot longer than when we allow each player's strategy to mutate independently. Likewise, if we only accept mutations that improve the predictions, we can easily get stuck on local optima that are better or as good as all their neighbors, but worse than none of them. 
 
 
 <br>
