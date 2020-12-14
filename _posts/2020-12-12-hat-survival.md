@@ -15,7 +15,7 @@ date: 2020/12/12
 
 If everybody guesses $\color{blue}{\text{blue}}$ for all inputs, then there will be someone correct in every case where someone has a $\color{blue}{\text{blue}}$ hat. there are just $2^5$ ways to build $\color{red}{\text{red}}$-$\color{green}{\text{green}}$ ONLY patterns, so we start of with $3^5 - 2^5 = 211$ correct guesses.
 
-Not coincidentally, this is the expected number of survival cases when everyone guesses at random ($243\times(1-(2/3)^5)$).
+Not coincidentally, this is the expected number of survival cases when everyone guesses at random, $243\times(1-(2/3)^5) = 211$.
 
 So, we need to move relocate some correct guesses from the cases that have multiple correct guesses to those that have none. 
 
