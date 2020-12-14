@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Hat Hostage Strategies
 date: 2020/12/12
 ---
 
@@ -13,11 +13,11 @@ date: 2020/12/12
 
 ## Solution
 
-if everybody guesses blue for all inputs, then there will be someone correct in every case where someone has a blue hat. there are just 2^5 ways to build red-green ONLY patterns, so we start of with 3^5 - 2^5 = 211 correct guesses.
+If everybody guesses blue for all inputs, then there will be someone correct in every case where someone has a blue hat. there are just $2^5$ ways to build red-green ONLY patterns, so we start of with $3^5 - 2^5 = 211$ correct guesses.
 
-not coincidentally, this is the expected number of survival cases when everyone guesses at random.
+Not coincidentally, this is the expected number of survival cases when everyone guesses at random ($243\times\left(1-\left(2/3\right)^5\right)$).
 
-we need to move relocate some correct guesses from the cases that have multiple correct guesses to those that have none. 
+So, we need to move relocate some correct guesses from the cases that have multiple correct guesses to those that have none. 
 
 ### A number of good guesses
 
@@ -45,6 +45,8 @@ We can go through this exercise, bringing the $\color{blue}\text{blue}$-less cas
 
 In a sense, each player's strategy $S_i,$ is a gene whose purpose it to make effective predictions in light of the $4$ other genes. Whenever we alter what a strategy $S_i$ does in response to a particular state of the opposing row, it is a mutation. 
 
+Concretely, the strategy of a player in the first row is a function from $C^2$ to $C$: $S_i(C_4, C_5) \rightarrow C_i.$ Likewise, the strategy of a player in the second row is a function from $C^3$ to $C$: $S_i(C_1, C_2, C_3) \rightarrow C_i.$
+
 When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
 
 However, it could be that several mutations have to occur in concert before we can expect to see a positive impact. So, we can also accept the "neutral" mutations that don't improve, but also don't hurt our predictions. 
@@ -57,7 +59,7 @@ After the initial rise, we see the importance of neutral mutations which the org
 
 ### Restricted evolution
 
-The more restrictive we make the evolutionary strategy, the longer it takes to find a solution. If we force the each row to pick a case to mutate at the same time, it will take a lot longer than when we allow each player's strategy to mutate independently. Likewise, if we only accept mutations that improve the predictions, we can easily get stuck on local optima that are better or as good as all their neighbors, but worse than none of them. 
+The more restrictive we make the evolutionary strategy, the longer it takes to find a solution. We could make each row into a gene, in which case we force the row to do a more disruptive mutation, which takes much longer than when we allow each player's strategy to mutate independently. Likewise, if we only accept mutations that improve the predictions, we can easily get stuck on local optima that are better or as good as all their neighbors, but worse than none of them. 
 
 
 <br>
