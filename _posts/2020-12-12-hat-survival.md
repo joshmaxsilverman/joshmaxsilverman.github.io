@@ -55,6 +55,12 @@ $$S_i(C_1, C_2, C_3) \rightarrow \hat{S}_i.$$
 
 When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
 
+![](/img/2020-12-12-hat-hostages-landscape.jpg){:width="500px" class="image-centered"}
+
+{:.caption}
+
+**Fig**: a figurative evolutionary landscape for the problem. The $x$ and $y$ axes represent different mutations of the same strategy and the $z$ axis represents the total number of the possible $243$ cases that the corresponding strategy makes at least one successful prediction in. Whenever a strategy is mutated it can increase the number of successful cases, decrease them, or leave them unchanged. If we only accept the good or neutral improvements then we can hill climb. One deceiving aspect is that mutations have many more effective directions in which to explore, so we aren't necessarily trapped at a local optima with respect to all moves.
+
 However, it could be that several mutations have to occur in concert before we can expect to see a positive impact. So, we can also accept the "neutral" mutations that don't improve, but also don't hurt our predictions. 
 
 Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation:
