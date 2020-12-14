@@ -47,11 +47,11 @@ In a sense, each player's strategy $S_i,$ is a gene whose purpose it to make eff
 
 Concretely, the strategy of a player in the first row is a function from $C^2$ to $C$: 
 
-$$S_i(C_4, C_5) \rightarrow C_i.$$ 
+$$S_i(C_4, C_5) \rightarrow \hat{S}_i.$$ 
 
 Likewise, the strategy of a player in the second row is a function from $C^3$ to $C$: 
 
-$$S_i(C_1, C_2, C_3) \rightarrow C_i.$$
+$$S_i(C_1, C_2, C_3) \rightarrow \hat{S}_i.$$
 
 When a mutation occurs, we can compare how the "organism" does with that mutation as compared to without. If we only accept mutations that have a positive impact on predictions, then we should expect the track record to improve over time. 
 
@@ -67,7 +67,7 @@ After the initial rise, we see the importance of neutral mutations which the org
 
 $$
 \begin{array}{|c|c|c|c|c|} \hline
-C_4 & C_5 & S_1 & S_2 & S_3 \\ \hline
+C_4 & C_5 & \hat{S}_1 & \hat{S}_2 & \hat{S}_3 \\ \hline
 0 & 0 & 2 & 0 & 2 \\
 0 & 1 & 2 & 0 & 0 \\
 0 & 2 & 2 & 2 & 0 \\
@@ -82,7 +82,7 @@ $$
  
 $$
 \begin{array}{|c|c|c|c|c|} \hline
-C_1 & C_2 & C_3 & S_4 & S_5 \\ \hline
+C_1 & C_2 & C_3 & \hat{S}_4 & \hat{S}_5 \\ \hline
 0 & 0 & 0 & 2 & 2 \\
 0 & 0 & 1 & 0 & 2 \\ 
 0 & 0 & 2 & 2 & 2 \\
