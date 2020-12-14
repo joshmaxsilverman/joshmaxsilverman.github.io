@@ -59,7 +59,7 @@ However, it could be that several mutations have to occur in concert before we c
 
 Running the evolutionary program once, we see convergence in about $\approx 800$ rounds of mutation:
 
-![](/img/2020-12-12-hat-hostage-graph.png){:width="250px" class="image-centered"}
+![](/img/2020-12-12-hat-hostage-graph.png){:width="400px" class="image-centered"}
 
 At the outset, almost every mutation we attempt has a beneficial impact as it explores strategies that spread the correct predictions out of the rows that have "too many" correct predictions, where "just right" is $405/243 = 5/3$ successful predictions per row.
 
@@ -113,7 +113,6 @@ C_1 & C_2 & C_3 & \hat{S}_4 & \hat{S}_5 \\ \hline
 \end{array}
 $$
  
- 
 
 ### Restricted evolution
 
@@ -121,5 +120,47 @@ The more restrictive we make the evolutionary strategy, the longer it takes to f
 
 Running in this restricted mode, we can see the minimal number of **necessary** mutations which hovers at just under $30.$
 
+```python
+import random
+import copy
+import matplotlib.pyplot as plt
+import pandas as pd
+
+cases = [[a,b,c,d,e] for a in range(3) 
+                     for b in range(3) 
+                     for c in range(3) 
+                     for d in range(3) 
+                     for e in range(3)]
+
+predUp = {tuple(case[3:]) : [0, 0, 0] for case in cases}
+predLow = {tuple(case[0:3]) : [0, 0] for case in cases}
+
+def testRows(predUp, predLow):
+    successes = 0
+    for case in cases:
+        predictions = predUp[tuple(case[3:])] + predLow[tuple(case[0:3])]
+        if any(case[i] == predictions[i] for i in range(5)):
+            successes += 1
+    return successes
+
+current_best_score = 0
+joint_record = []
+
+while current_best_score < 243:
+
+    # Mutate the current strategy
+    (upper_key_to_mutate, lower_key_to_mutate) = (random.choice(list(predUp.keys())), random.choice(list(predLow.keys())))
+    (tmp_predUp, tmp_predLow) = (copy.deepcopy(predUp), copy.deepcopy(predLow))
+    (tmp_predUp[upper_key_to_mutate], tmp_predLow[lower_key_to_mutate]) = (random.choices([0,1,2], k=3), random.choices([0,1,2], k=2))
+    
+    # Count the number of successful predictions of mutated strategy
+    test_score = testRows(tmp_predUp, tmp_predLow)
+    
+    # Accept the mutatations if they don't hurt
+    if test_score >= current_best_score:
+        current_best_score = test_score
+        (predUp, predLow) = (tmp_predUp, tmp_predLow)
+        joint_record.append(current_best_score)
+```
 
 <br>
