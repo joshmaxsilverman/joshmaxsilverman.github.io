@@ -65,8 +65,10 @@ At the outset, almost every mutation we attempt has a beneficial impact as it ex
 
 After the initial rise, we see the importance of neutral mutations which the organism churns through for a long time as it wanders toward the tweaks that can bring the last few cases into the fold. 
 
+**Evolved strategy for players $1$ and $2.$**
+
 $$
-\begin{array}{|c|c|c|c|c|} \hline
+\begin{array}{|ccc|c|c|} \hline
 C_4 & C_5 & \hat{S}_1 & \hat{S}_2 & \hat{S}_3 \\ \hline
 0 & 0 & 2 & 0 & 2 \\
 0 & 1 & 2 & 0 & 0 \\
@@ -80,8 +82,10 @@ C_4 & C_5 & \hat{S}_1 & \hat{S}_2 & \hat{S}_3 \\ \hline
 \end{array}
 $$
  
+**Evolved strategy for players $3,$ $4,$ and $5.$**
+
 $$
-\begin{array}{|c|c|c|c|c|} \hline
+\begin{array}{|ccc|c|c|} \hline
 C_1 & C_2 & C_3 & \hat{S}_4 & \hat{S}_5 \\ \hline
 0 & 0 & 0 & 2 & 2 \\
 0 & 0 & 1 & 0 & 2 \\ 
