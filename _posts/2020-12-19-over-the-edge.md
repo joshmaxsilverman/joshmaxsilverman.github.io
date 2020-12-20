@@ -31,7 +31,7 @@ So, if the center of mass is anywhere from the outer rim of the glass to the rad
 
 Using the Pythagorean theorem, this radius is 
 
-$$r_text{unstable} = \sqrt{R^2 - r^2}.$$
+$$r_\text{unstable} = \sqrt{R^2 - r^2}.$$
 
 ### Will we fall in?
 
@@ -44,6 +44,6 @@ P_\text{stable} &= \dfrac{A_\text{stable}}{A_\text{total}} \\
 &= \left(\dfrac{r}{R}\right)^2
 \end{align}$$
 
-For the disc in question, this probability is $1/2^2 = 1/4.$
+For the disc in question, this probability is $\boxed{P_\text{stable} = 1/2^2 = 1/4}.$
 
 <br>
