@@ -31,15 +31,16 @@ So, if the center of mass is anywhere from the outer rim of the glass to the rad
 
 Using the Pythagorean theorem, this radius is 
 
-$$r^* = \sqrt{R^2 - r^2}.$$
+$$r_text{unstable} = \sqrt{R^2 - r^2}.$$
 
 ### Will we fall in?
 
-Assuming that we place the center of the disc at a random point inside the rim, the probability that the disc stays up is equal to the area of the annular region between $r^*$ and $R:$
+Assuming that we place the center of the disc at a random point inside the rim, the probability that the disc stays up is equal to the area of the annular region between $r_\text{unstable}$ and $R:$
 
 $$\begin{align}
 P_\text{stable} &= \dfrac{A_\text{stable}}{A_\text{total}} \\
-&= \dfrac{\pi R^2 - \pi {r^*}^2}{\pi R^2} \\
+&= \dfrac{A_\text{total} - A_\text{unstable}}{A_\text{total}} \\
+&= \dfrac{\pi R^2 - \pi {r_\text{unstable}}^2}{\pi R^2} \\
 &= \left(\dfrac{r}{R}\right)^2
 \end{align}$$
 
