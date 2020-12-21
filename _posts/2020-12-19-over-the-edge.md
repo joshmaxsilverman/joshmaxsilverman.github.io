@@ -5,11 +5,11 @@ title: Living on the Edge
 date: 2020/12/19
 ---
 
->**Question**: Trapped in your apartment under Stage $4$ lockdown, with the Riddler about to take a $2$-week hiatus, you sit at your kitchen table avoiding the solve so that you'll still have something to look forward to. Sadly, there's nothing but a half full glass of water and a cardboard circle, upon which is written the GPS coordinates of your last stash of buried 
+>**Question**: Trapped in his house under Stage $4$ lockdown, Zach sits at the kitchen table with a half full glass and a cardboard circle, upon which is written the password he uses to edit the Riddler. Suddenly, he hears someone talking about cranberry sauce in the other room. He just can't get enough of that cranberry sauce! When he gets up, he places the disc on the rim of the glass such that the disc's center is at a random location on the inside of the rim. What is the probability that the cardboard disc falls into the half full glass of water, dissolving the password and forcing the Riddler into a $2$-week hiatus, because that is the only explanation for why Zach would abandon us like this?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-not-flip-your-lid/))
 
 ## Solution
 
