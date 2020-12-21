@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Living on the Edge
 date: 2020/12/19
 ---
