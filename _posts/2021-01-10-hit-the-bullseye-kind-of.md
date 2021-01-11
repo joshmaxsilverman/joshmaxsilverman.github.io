@@ -9,7 +9,7 @@ date: 2021/01/10
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-cut-the-square-into-more-squares/))
 
 ## Solution
 
