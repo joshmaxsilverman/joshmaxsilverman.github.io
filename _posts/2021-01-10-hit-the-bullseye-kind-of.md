@@ -57,7 +57,7 @@ $$\boxed{\langle S\rangle = \left(1+p_1\right)\left(1+p_2\right)\cdots\left(1+p_
 
 Plugging in the probability of landing in the various rings, 
 
-$$p_j = \left(j^2 - (j-1)^2\right)/10^2 = \left(2j-1\right)/10^2,$$ 
+$$p_j = \dfrac{j^2 - (j-1)^2}{10^2} = \dfrac{2j-1}{10^2},$$ 
 
 [we get](https://www.wolframalpha.com/input/?i=product+%281+%2B+%282j-1%29%2F10%5E2%29+from+j+%3D+1+to+10) 
 
