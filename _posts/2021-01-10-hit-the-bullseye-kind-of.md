@@ -23,7 +23,7 @@ $P(\text{first $j$ circles in order})$ is straightforward: there are $j!$ orderi
 
 The second bit requires us to know $r_j.$ In expectation, the smallest of $n$ uniformly random numbers is just $1/(n+1).$ The reason, briefly, is that the expected positions of the smallest, second smallest, ..., up to the largest are equally spaced. The probability of the $\left(j+1\right)^\text{st}$ number being greater than this is just 
 
-$$P(r_{j+1} > r_j) = \left(1 - \frac{1}{j+1}\right) = \dfrac{j}{j+1}$$
+$$P(r_{j+1} > r_j) = \left(1 - \frac{1}{j+1}\right) = \dfrac{j}{j+1}.$$
 
 This gives
 
@@ -34,7 +34,7 @@ The number of points won through $j$ successful shots is $\left(j+1\right),$ so
 $$\begin{align}
 \langle S\rangle &= \sum_{j=1}^\infty \left(j+1\right) \dfrac{1}{j!}\dfrac{j}{j+1} \\
 &= \sum_{j=1}^\infty \frac{1}{\left(j-1\right)!} \\
-&= e
+&= e.
 \end{align}$$
 
 
