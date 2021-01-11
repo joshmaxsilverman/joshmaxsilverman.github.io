@@ -5,7 +5,7 @@ title: Hit the bullseye, kind of
 date: 2021/01/10
 ---
 
->Question
+>**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that inside the bullseye, the darts are equally likely to land at any point inside the outer ring of the dart board.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ $$P\left(j\,\text{shots}\right) = \dfrac{1}{j!}\dfrac{j}{j+1}.$$
 The number of points won through $j$ successful shots is $\left(j+1\right),$ so
 
 $$\begin{align}
-langle S\rangle &= \sum_{j=1}^\infty \left(j+1\right) \dfrac{1}{j!}\dfrac{j}{j+1} \\
+\langle S\rangle &= \sum_{j=1}^\infty \left(j+1\right) \dfrac{1}{j!}\dfrac{j}{j+1} \\
 &= \sum_{j=1}^\infty \frac{1}{\left(j-1\right)!} \\
 &= e
 \end{align}$$
