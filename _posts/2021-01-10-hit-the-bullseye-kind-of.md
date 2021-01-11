@@ -5,7 +5,7 @@ title: Hit the bullseye, kind of
 date: 2021/01/10
 ---
 
->**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that inside the bullseye, the darts are equally likely to land at any point inside the outer ring of the dart board. For additional credit, you can play the demented version of the game where the board is divided into $10$ annuli, and instead of trying to move closer, period, you try to get within tighter and tigher rings.
+>**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that all darts hit inside the bullseye and that the darts are equally likely to land at any point inside the outer ring of the dartboard. For additional credit, you can play the demented version of the game where the board is divided into $10$ annuli, and instead of trying to move closer, period, you try to get within tighter and tighter rings.
 
 <!--more-->
 
@@ -17,13 +17,13 @@ date: 2021/01/10
 
 We'll pretend we have an infinite set of infinite sequences of sampled circles, $\mathcal{C}_\infty.$ 
 
-Draw a sample with circles of radius $\\{r_1, r_2, \ldots\\}.$ The probability that it corresponds to $j$ successful shots is the probability that the first $j$ elements are ordered times the probability that the $\left(j+1\right)^\text{st}$ circle is out of order:
+Draw a sample with circles of radii $\\{r_1, r_2, \ldots\\}.$ The probability that it corresponds to $j$ successful shots is the probability that the first $j$ elements are ordered times the probability that the $\left(j+1\right)^\text{th}$ circle is out of order:
 
 $$P\left(j\,\text{shots}\right) = P(\text{first $j$ circles in order})\times P(r_{j+1} > r_j).$$
 
 $P(\text{first $j$ circles in order})$ is straightforward: there are $j!$ orderings of $j$ elements, only $1$ of which is in the right order. So this is just $1/j!.$
 
-The second bit requires us to know $r_j.$ In expectation, the smallest of $n$ uniformly random numbers is just $1/(n+1).$ The reason, briefly, is that the expected positions of the smallest, second smallest, ..., up to the largest are equally spaced. The probability of the $\left(j+1\right)^\text{st}$ number being greater than this is just 
+The second bit requires us to know $r_j.$ In expectation, the smallest of $n$ uniformly random numbers is just $1/(n+1).$ The reason, briefly, is that the expected positions of the smallest, second smallest, ..., up to the largest are equally spaced. The probability of the $\left(j+1\right)^\text{th}$ number being greater than this is just 
 
 $$P(r_{j+1} > r_j) = \left(1 - \frac{1}{j+1}\right) = \dfrac{j}{j+1}.$$
 
@@ -57,7 +57,7 @@ We can reinterpret this like so, the second term is the total probability of mak
 
 This reflects the magical connection between pdf and cdfs in calculating expected values:
 
-$$\langle S\rangle =\sum_j j\cdot p(s = j) = \sum_j p(s \geq j).$$
+$$\langle S\rangle =\sum_j j\cdot P(s = j) = \sum_j P(s \geq j).$$
 
 So, we just need to generate all possible probability stems for getting $1,$ $2,$ $\ldots,$ up to $10$ shots. That's just (as in the $3$-ring example)
 
