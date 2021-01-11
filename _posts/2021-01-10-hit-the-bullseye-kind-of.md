@@ -45,7 +45,7 @@ In the demented version of the game, you use a discrete dart board with $10$ rin
 
 $$\langle S_3\rangle = 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3.$$
 
-![](/img/2021-01-10-bullseye.jpg){:width="400px" class="image-centered"}
+![](/img/2021-01-10-bullseye.jpg){:width="500px" class="image-centered"}
 
 {:.caption}
 
