@@ -13,7 +13,7 @@ date: 2021/01/10
 
 ## Solution
 
-We'll pretend we have an infinite set of infinitely many sampled circles, $\mathcal{C}_\infty.$ 
+We'll pretend we have an infinite set of infinite sequences of sampled circles, $\mathcal{C}_\infty.$ 
 
 Draw a sample with circles of radius $\\{r_1, r_2, \ldots\\}.$ The probability that it corresponds to $j$ successful shots is the probability that the first $j$ elements are ordered times the probability that the $\left(j+1\right)^\text{st}$ circle is out of order:
 
