@@ -5,13 +5,15 @@ title: Hit the bullseye, kind of
 date: 2021/01/10
 ---
 
->**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that inside the bullseye, the darts are equally likely to land at any point inside the outer ring of the dart board.
+>**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that inside the bullseye, the darts are equally likely to land at any point inside the outer ring of the dart board. For additional credit, you can play the demented version of the game where the board is divided into $10$ annuli, and instead of trying to move closer, period, you try to get within tighter and tigher rings.
 
 <!--more-->
 
 ([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-cut-the-square-into-more-squares/))
 
 ## Solution
+
+### Standard credit
 
 We'll pretend we have an infinite set of infinite sequences of sampled circles, $\mathcal{C}_\infty.$ 
 
@@ -36,6 +38,25 @@ $$\begin{align}
 &= \sum_{j=1}^\infty \frac{1}{\left(j-1\right)!} \\
 &= e.
 \end{align}$$
+
+### Additional credit
+
+In the demented version of the game, you use a discrete dart board with $10$ rings of radius $\\{1, 2, \ldots, 10\\}.$ Calculating with $3$ rings, we can see that
+
+$$\langle S_3\rangle = 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3.$$
+
+We can reinterpret this like so, the second term is the total probability of making $1$ or more shots, the third term is the total probability of making $2$ or more shots, and the fourth is the total probability of making $3$ or more shots (in this case, there's no "or more", but for generalizing, think of it this way).
+
+This reflects the magical connection between pdf and cdfs in calculating expected values:
+
+$$\langle S\rangle =\sum_j j\cdot p(s = j) = \sum_j p(s \geq j).$$
+
+So, we just need to generate all possible stems of $1,$ $2,$ $3,$ up to $10$ shots. That's just
+
+$$\boxed{\langle S\rangle = \left(1+p_1\right)\left(1+p_2\right)\cdots\left(1+p_{10}\right)}.$$
+
+Plugging in the probability of landing in the various rings, $p_j = \left(j^2 - (j-1)^2\right)/10^2 = \left(2j-1\right)/10^2,$ [we get](https://www.wolframalpha.com/input/?i=product+%281+%2B+%282j-1%29%2F10%5E2%29+from+j+%3D+1+to+10) 
+$$\langle S\rangle = \dfrac{10234113997905495243}{4000000000000000000} \approx 2.558528$$
 
 
 <br>
