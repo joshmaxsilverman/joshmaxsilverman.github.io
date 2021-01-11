@@ -56,6 +56,7 @@ So, we just need to generate all possible stems of $1,$ $2,$ $3,$ up to $10$ sho
 $$\boxed{\langle S\rangle = \left(1+p_1\right)\left(1+p_2\right)\cdots\left(1+p_{10}\right)}.$$
 
 Plugging in the probability of landing in the various rings, $p_j = \left(j^2 - (j-1)^2\right)/10^2 = \left(2j-1\right)/10^2,$ [we get](https://www.wolframalpha.com/input/?i=product+%281+%2B+%282j-1%29%2F10%5E2%29+from+j+%3D+1+to+10) 
+
 $$\langle S\rangle = \dfrac{10234113997905495243}{4000000000000000000} \approx 2.558528$$
 
 
