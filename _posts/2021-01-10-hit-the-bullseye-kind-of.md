@@ -45,6 +45,12 @@ In the demented version of the game, you use a discrete dart board with $10$ rin
 
 $$\langle S_3\rangle = 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3.$$
 
+![](/img/2021-01-10-bullseye.jpg){width="400px" class="image-centered"}
+
+{:.caption}
+
+Low-stakes calculation of the $3$-ring case.
+
 We can reinterpret this like so, the second term is the total probability of making $1$ or more shots, the third term is the total probability of making $2$ or more shots, and the fourth is the total probability of making $3$ or more shots (in this case, there's no "or more", but for generalizing, think of it this way).
 
 This reflects the magical connection between pdf and cdfs in calculating expected values:
