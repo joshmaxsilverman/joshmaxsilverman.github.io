@@ -61,13 +61,15 @@ $$\langle S\rangle =\sum_j j\cdot P(s = j) = \sum_j P(s \geq j).$$
 
 So, we just need to generate all possible probability stems for getting $1,$ $2,$ $\ldots,$ up to $10$ shots. 
 
-Factoring the $3$-ring example, we get
-
-$$\langle S\rangle = \left(1 + p_1\right)\times\left(1 + p_2\right)\times\left(1 + p_3\right).$$
-
 So, the expectation for $10$ rings is just
 
 $$\boxed{\langle S\rangle = \left(1+p_1\right)\times\left(1+p_2\right)\times\cdots\times\left(1+p_{10}\right)}.$$
+
+To check, we can factor the $3$-ring example, which produces
+
+$$\langle S\rangle = \left(1 + p_1\right)\times\left(1 + p_2\right)\times\left(1 + p_3\right),$$
+
+in line with the $10$-ring result.
 
 Plugging in the probability of landing in the various rings, 
 
