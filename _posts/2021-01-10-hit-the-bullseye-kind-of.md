@@ -47,7 +47,7 @@ In the demented version of the game, we use a discrete dartboard with $10$ rings
 
 Calculating with $3$ rings, we get
 
-$$ \langle S_3\rangle &= 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3 $$
+$$ \langle S_3\rangle = 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3 $$
 
 {:.caption}
 
@@ -63,7 +63,7 @@ So, we just need to generate all possible probability stems for getting $1,$ $2,
 
 Factoring the $3$-ring example, we get
 
-$$\langle S\rangle\left(1 + p_1\right)\times\left(1 + p_2\right)\times\left(1 + p_3\right).$$
+$$\langle S\rangle = \left(1 + p_1\right)\times\left(1 + p_2\right)\times\left(1 + p_3\right).$$
 
 So, the expectation for $10$ rings is just
 
