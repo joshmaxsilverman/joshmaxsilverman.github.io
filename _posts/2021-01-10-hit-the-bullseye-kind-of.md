@@ -15,9 +15,9 @@ date: 2021/01/10
 
 ### Standard credit
 
-We'll pretend we have an infinite set of infinite sequences of sampled circles, $\mathcal{C}_\infty.$ 
+Let's pretend that we have an infinite set of infinite sequences of sampled circles, $\mathcal{C}_\infty.$ 
 
-Draw a sample with circles of radii $\\{r_1, r_2, \ldots\\}.$ The probability that it corresponds to $j$ successful shots is the probability that the first $j$ elements are ordered times the probability that the $\left(j+1\right)^\text{th}$ circle is out of order:
+Draw a sample with circles of radii $\\{r_1, r_2, \ldots\\}.$ The probability that it corresponds to a run of $j$ successful shots is the probability that its first $j$ circles are ordered times the probability that the $\left(j+1\right)^\text{th}$ circle is out of order:
 
 $$P\left(j\,\text{shots}\right) = P(\text{first $j$ circles in order})\times P(r_{j+1} > r_j).$$
 
@@ -41,27 +41,33 @@ $$\begin{align}
 
 ### Additional credit
 
-In the demented version of the game, you use a discrete dart board with $10$ rings of radius $\\{1, 2, \ldots, 10\\}.$ 
+In the demented version of the game, we use a discrete dartboard with $10$ rings of radius $\\{1, 2, \ldots, 10\\}.$ 
 
 ![](/img/2021-01-10-bullseye.jpg){:width="500px" class="image-centered"}
 
-Calculating with $3$ rings, we can see that
+Calculating with $3$ rings, we get
 
-$$\langle S_3\rangle = 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3.$$
+$$ \langle S_3\rangle &= 1 + \left(p_1+p_2 + p_3\right) + \left(p_1p_2 + p_2p_3 + p_1p_3\right) + p_1p_2p_3 $$
 
 {:.caption}
 
 Low-stakes calculation of the $3$-ring case.
 
-We can reinterpret this like so, the second term is the total probability of making $1$ or more shots, the third term is the total probability of making $2$ or more shots, and the fourth is the total probability of making $3$ or more shots (in this case, there's no "or more", but for generalizing, think of it this way).
+We can reinterpret this like so — the second term is the total probability of making $1$ or more shots, the third term is the total probability of making $2$ or more shots, and the fourth is the total probability of making $3$ or more shots (in this case, there's no "or more", but for generalizing, think of it this way).
 
 This reflects the magical connection between pdf and cdfs in calculating expected values:
 
 $$\langle S\rangle =\sum_j j\cdot P(s = j) = \sum_j P(s \geq j).$$
 
-So, we just need to generate all possible probability stems for getting $1,$ $2,$ $\ldots,$ up to $10$ shots. That's just (as in the $3$-ring example)
+So, we just need to generate all possible probability stems for getting $1,$ $2,$ $\ldots,$ up to $10$ shots. 
 
-$$\boxed{\langle S\rangle = \left(1+p_1\right)\left(1+p_2\right)\cdots\left(1+p_{10}\right)}.$$
+Factoring the $3$-ring example, we get
+
+$$\langle S\rangle\left(1 + p_1\right)\times\left(1 + p_2\right)\times\left(1 + p_3\right).$$
+
+So, the expectation for $10$ rings is just
+
+$$\boxed{\langle S\rangle = \left(1+p_1\right)\times\left(1+p_2\right)\times\cdots\times\left(1+p_{10}\right)}.$$
 
 Plugging in the probability of landing in the various rings, 
 
