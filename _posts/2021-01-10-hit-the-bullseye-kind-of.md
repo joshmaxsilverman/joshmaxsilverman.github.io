@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Hit the bullseye, kind of
+title: Hit the Bullseye, Kind Of
 date: 2021/01/10
 ---
 
