@@ -23,12 +23,12 @@ If person $\text{A}$ is to win overall, $\Delta T_1$ has to be less than or equa
 
 There are several ways to manifest the result above through calculation but none of the them yielded to generalization. An approximate attempt yielded good results for low $N$ but broke down as $N$ grew, notably resisting the stable plateauing that persists near $30\%$ for a wide range of $N.$
 
-A simulation suggests an approximately linear decrease on log-log axes, and is decently approximated by $P = x^{-1/3}$ over a wide range:
+A simulation suggests an approximately linear decrease on log-log axes, and is decently approximated by $P \approx x^{-1/3}$ over a wide range:
 
 ![](/img/FE48C7B9-2B85-4CF5-AD7E-BE6190F97836.png){:width="400 px" class="image-centered"}
 
 {:.caption}
-**Fig:** plot of $\log P(\tex{first round winner wins})$ vs $\log N.$
+**Fig:** plot of $\log P(\text{first round winner wins})$ vs $\log N.$
 
 ```python
 def round(N):
