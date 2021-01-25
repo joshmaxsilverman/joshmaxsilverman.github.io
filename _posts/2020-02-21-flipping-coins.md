@@ -23,7 +23,7 @@ One plausible strategy to bias positive outcomes is to use **Coin B** until a tr
 
 We can use the difference in step size to do just this. If we use **Coin A** when our score is positive, then games with score $+1$ will either move to the neutral score of $0$ or move deeper into positive territory to $+2.$ If we use **Coin B** when our score is negative, then games with score $-1$ will either move deeper into negative territory to $-3$ or be injected directly to positive territory at $+1,$ skipping over the neutral position. 
 
-![Possible state transitions in the game. Away from the $\text{score} = 0$ state, the transition edges are identical.](/img/2020-02-21-diagram.jpg){: .center-image}
+![Possible state transitions in the game. Away from the $\text{score} = 0$ state, the transition edges are identical.](/img/2020-02-21-diagram.jpg){:width="400px" class="image-centered"}
 
 This means that while scores of $+1$ have $0\%$ chance to become negative on the next turn, scores of $-1$ have a $50\%$ chance to become positive on the next turn. 
 
