@@ -9,7 +9,7 @@ date: 2021/01/24
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-skillfully-ski-the-slopes/))
 
 ## Solution
 
