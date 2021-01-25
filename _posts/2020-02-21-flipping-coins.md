@@ -96,7 +96,7 @@ which produces $P_0 = \frac{1}{2}P_1,$ $P_1 = \frac{2}{3}P_2,$ and $P_1 = \frac{
 
 $$f_\text{win} \approx \frac{\gamma}{\gamma + 1} = \dfrac{3}{4}.$$
 
-![The step-ladder joining each half of the probability distribution near the origin. Outside the latter they're identical in shape but flipped across $\text{score}=0$ and scaled by $\gamma$.](/img/2020-02-21-graph.jpg)
+![The step-ladder joining each half of the probability distribution near the origin. Outside the latter they're identical in shape but flipped across $\text{score}=0$ and scaled by $\gamma$.](/img/2020-02-21-graph.jpg){:width="400px" class="image-centered"}
 
 In general, all the probabilities between $P_0$ and $P_N$ will be the average of their neighboring probabilities, ensuring the appearance of the $N$-step staircase between the symmetric positive/negative distributions.
 
