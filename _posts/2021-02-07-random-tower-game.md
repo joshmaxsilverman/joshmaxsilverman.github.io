@@ -56,6 +56,8 @@ will be injected at node $x$ and $2m$ will be extracted at node $y.$
 
 so $T(x \rightarrow y) = \text{twice number of edges}\times R_{xy}.$
 
-At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that $T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$
+At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that 
+
+$$T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$$
 
 <br>
