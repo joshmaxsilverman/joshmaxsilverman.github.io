@@ -46,7 +46,7 @@ to find $T(x \rightarrow y).$ We can do this by superposition, e.g.
 - then switch node $y$ to zero voltage and collect from there, then reverse all voltages (so we're injecting at $y$)
 - overlay the two grids
 
-But how much current should we inject? We can rearrange the Harmonic mean connecting neighboring voltages to get
+But how much current should we inject? We can rearrange the harmonic relation connecting neighboring voltages to get
 
 $$\begin{align}
 d(j) &= d(j)v(j) - \sum_n v(n) \\
@@ -71,14 +71,14 @@ In the first three steps below, we reduce the upper third of the game board diag
 
 ![](/img/2021-02-07-random-towers.png){:width="400px" class="image-centered"}
 
-The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path:
+The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path. The pattern is already pretty clear from the three series elements:
 
 $$\begin{align}
 \frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n &= \frac{r}{3} \dfrac{1 - \left(\frac{5}{3}\right)^n}{1-\frac{5}{3}} \\
 &= \frac{r}{2}\left[\left(\frac{5}{3}\right)^n - 1\right].
 \end{align}$$
 
-As we noted at the top, there are $27$ game states, $24$ of which have degree $3$ and $3$ of which have degree $2,$ so in general, twice the number of edges in the Sierpinski circuit is $\left(3^n - 3\right)\times 3 + 3\times 2.$
+As we noted at the top, there are $27$ game states, $24$ of which have degree $3$ and $3$ of which have degree $2,$ and in general, twice the number of edges in the Sierpinski circuit is $\left(3^n - 3\right)\times 3 + 3\times 2.$
 
 Putting this altogether, the expected time to travel from a stack on peg $1$ to a stack on one of the other pegs is 
 
