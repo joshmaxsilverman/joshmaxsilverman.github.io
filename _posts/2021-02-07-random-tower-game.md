@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Random Towers
 date: 2021/02/07
 ---
@@ -13,18 +13,18 @@ date: 2021/02/07
 
 ## Solution
 
-the tower of hanoi has 27 valid game states (123 3 ways, (13, 2) 6 ways, (12, 3) 6 ways, (23, 1) 6 ways, (1, 2, 3) 6 ways). each state can only reach 3 other states unless it's a solved state in which case it has just 2 neighbors. writing them all out, we get:
+Liberated from the burden of strategy, we are free to be our true selves and write down the state space for the arrangements of the tower, of which there are $27$ valid game states: ($\left(123,-,-\right)$ three ways, $\left((13, 2, -\right)$ six ways, $\left(12, 3, -\right)$ six ways, $\left(23, 1, -\right)$ six ways, and $\left(1, 2, 3\right)$ six ways). Each state can only reach $3$ other states unless it's a solved state in which case it has just $2$ neighbors. writing them all out, we get the interesting topology of a Sierpinski gasket:
 
 <img>
 
-the symmetry in the graph  that it can be massively simplified like a resistor network. at first i looked for ways to join similar edges, reducing the topology to a line, and then mapping onto gambler's ruin, like i did in the <thanksgiving puzzle>. but i couldn't get that to go. 
+The symmetry in the graph suggests that it can be massively simplified, reminiscent of [many a resistor puzzle](http://yaroslavvb.com/papers/zemanian-infinite.pdf). At first I looked for ways to join similar edges, reducing the topology to a line, in hopes to map onto gambler's ruin, like I did in the [thanksgiving puzzle](https://joshmaxsilverman.github.io/2020-11-22-pass-cranberry-sauce/), but I couldn't get that to go. 
   
-i then looked for a recursion, after all the graph has three identical subgraphs (ignoring the peg states). in fact, the time to the end states does have a nice relationship with its neighbors, though it isn't recursive. 
+I then looked for a recursion, after all the graph has three identical subgraphs (ignoring the peg states). In fact, the expected time to arrive at an endstate from a node does have a nice relationship with the expected time to arrive at an endstate from one of its neighbors, though it isn't recursive. 
 
-writing down the time it takes to get from node x to node y, we get  T(x -> y), is 1/d(x) * sum_n (1 + T(n -> y)), summed over all the neighbors n of x.
-this is a harmonic function (nearest neighbors average), just like the voltage in a resistor circuit
+Writing down the time it takes to get from node $x$ to node $y,$ we get  $T(x \rightarrow y)$, is $\frac{1}{d(x)} \sum_n \left(1 + T(n \rightarrow y)\right),$ summed over all the neighbors $n$ of $x.$
+This is a harmonic function (nearest neighbors average), just like the voltage in a resistor circuit.
 
-this suggests there's a mapping from T(x, y) onto an equivalent resistor network wherein T amounts to a reduction through the symmetries of series and parallel combinations.
+This suggests there's a mapping from $T(x, y)$ onto an equivalent resistor circuit wherein $T$ amounts to a reduction through the symmetries of series and parallel combinations of edges.
 
 at a node x in a circuit, the current from neighbor n is equal to (vn - vx)/rxn or (vn - vx) with unit resistors, and the total current flowing out of a node is sum_n (vn - vx) which has to be zero. so vx * d(x) = sum_n vn -> vx = 1/d(x) sum_n vn. inspecting, we can substract the voltage at node y from both sides to get
 vx - vy = 1 + 1/d(x) sum_n (vn - vy).
