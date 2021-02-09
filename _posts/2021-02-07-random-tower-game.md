@@ -64,6 +64,12 @@ At the end, we just have to find the resistance between the top and bottom corne
 
 $$T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$$
 
+In the first three steps below, we reduce the upper third of the game board diagram to a three-way junction. The next step pieces three of those together (to form the full $3$ peg + $3$ disk board) and the last step reduces that to its own three way junction. 
+
 ![](/img/2021-02-07-random-towers.png){:width="400px" class="image-centered"}
+
+The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path:
+
+$$\frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n = \frac{r}{3} \dfrac{1}{1-\frac{5}{3}}.$$
 
 <br>
