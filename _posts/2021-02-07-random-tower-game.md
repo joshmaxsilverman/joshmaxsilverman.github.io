@@ -21,7 +21,11 @@ The symmetry in the graph suggests that it can be massively simplified, reminisc
   
 I then looked for a recursion, after all the graph has three identical subgraphs (ignoring the peg states). In fact, the expected time to arrive at an endstate from a node does have a nice relationship with the expected time to arrive at an endstate from one of its neighbors, though it isn't recursive. 
 
-Writing down the time it takes to get from node $x$ to node $y,$ we get  $T(x \rightarrow y)$, is $\frac{1}{d(x)} \sum_n \left(1 + T(n \rightarrow y)\right),$ summed over all the neighbors $n$ of $x.$
+Writing down the time it takes to get from node $x$ to node $y,$ we get 
+
+$$T(x \rightarrow y) = \frac{1}{d(x)} \sum_n \left(1 + T(n \rightarrow y)\right),$$
+
+where the sum is over all the neighbors $n$ of $x.$
 This is a harmonic function (nearest neighbors average), just like the voltage in a resistor circuit.
 
 This suggests there's a mapping from $T(x, y)$ onto an equivalent resistor circuit wherein $T$ amounts to a reduction through the symmetries of series and parallel combinations of edges.
