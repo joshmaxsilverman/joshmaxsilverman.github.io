@@ -50,11 +50,11 @@ But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emergi
 
 If we inject $d(j)$ to every node $j,$ then in the overlaid circuits 
 
-$$\sum_j d(j) = \text{twice number of edges}$$ 
+$$\sum_j d(j) = \text{number of edges}$$ 
 
-will be injected at node $x$ and $2m$ will be extracted at node $y.$
+will be injected at node $x$ and $\text{number of edges}$ will be extracted at node $y.$
 
-so $T(x \rightarrow y) = \text{twice number of edges}\times R_{xy}.$
+so $T(x \rightarrow y) = \text{number of edges}\times R_{xy}.$
 
 At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that 
 
