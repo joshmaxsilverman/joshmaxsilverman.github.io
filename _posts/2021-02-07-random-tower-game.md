@@ -41,7 +41,10 @@ we can do this by superposition, e.g.
 
 But how much current should we inject? We can rearrange the Harmonic mean connecting neighboring voltages to get
 
-$$d(j) = d(j)v(j) - \sum_n v(n) = \sum_n \left(v(j) - v(n)\right))$$
+$$\begin{align}
+d(j) &= d(j)v(j) - \sum_n v(n) \\
+&= \sum_n \left(v(j) - v(n)\right))
+\end{align}$$
 
 But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emerging from the node $j$ when the set of voltages is maintained. So, $d(j) = i_\text{inject at $j$}.$
 
