@@ -26,25 +26,33 @@ This is a harmonic function (nearest neighbors average), just like the voltage i
 
 This suggests there's a mapping from $T(x, y)$ onto an equivalent resistor circuit wherein $T$ amounts to a reduction through the symmetries of series and parallel combinations of edges.
 
-at a node x in a circuit, the current from neighbor n is equal to (vn - vx)/rxn or (vn - vx) with unit resistors, and the total current flowing out of a node is sum_n (vn - vx) which has to be zero. so vx * d(x) = sum_n vn -> vx = 1/d(x) sum_n vn. inspecting, we can substract the voltage at node y from both sides to get
-vx - vy = 1 + 1/d(x) sum_n (vn - vy).
+At a node $x$ in a circuit, the current from neighbor $n$ is equal to $(v(n) - v(x))/r_{xn}$ or $(v(n) - v(x))$ with unit resistors, and the total current flowing out of a node is $\sum_n (v(n) - v(x))$ which has to be zero. So $v(x) \times d(x) = \sum_n v(n)$ leads to $v(x) = \frac{1}{d(x)} \sum_n v(n).$ Inspecting, we can substract the voltage at node $y$ from both sides to get
 
-T(x -> y) - (vx - vy) is harmonic and both are zero when x is y (vx and vx have the same voltage, T(x -> x) take no time), so, they are the same function.
+$$v(x) - v(y) = 1 + \frac{1}{d(x)} \sum_n (v(n) - v(y)).$$
 
-if we can find a situation where we know the current from node x to node y, then we can use ohm's law (vx - vy) = I R_{xy} to find T(x -> Y)
+$T(x \rightarrow y) - (v(x) - v(y))$ is also harmonic and zero when $x$ is $y$ ($v(x)$ and $v(x)$ have the same voltage, $T(x \rightarrow x)$ takes no time), so, they are the same function.
+
+If we can find a situation where we know the current from node $x$ to node $y,$ then we can use Ohm's law $(v(x) - v(y)) = I R_{xy}$ to find $T(x \rightarrow Y)$
 we can do this by superposition, e.g.
-- first inject an amount of current to the graph when node x is held at zero voltage, all nodes will have some voltage relative to x
-- then switch node y to zero voltage and collect from there, then reverse all voltages (so we're injecting at y)
+
+- first inject an amount of current to the graph when node $x$ is held to zero voltage, all nodes will have some voltage relative to $x$
+- then switch node $y$ to zero voltage and collect from there, then reverse all voltages (so we're injecting at $y$)
 - overlay the two grids
-how much current should we inject?
 
-we can rearrange
-d(j) = d(j)vj - sum_n vn = sum_n (vj - vn) = i_{inject at j}
+But how much current should we inject? We can rearrange the Harmonic mean connecting neighboring voltages to get
 
-so inject d(j) to every node j, which means that in the overlaid circuits sum_j d(j) = 2m will be injected at node x and 2m will be extracted at node y.
+$$d(j) = d(j)v(j) - \sum_n v(n) = \sum_n \left(v(j) - v(n)\right))$$
 
-so T(x -> y) = 2m R_{xy}
+But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emerging from the node $j$ when the set of voltages is maintained. So, $d(j) = i_\text{inject at $j$}.$
 
-so, we just have to find the resistance between the top and bottom corner of the game. and since we can go to either corner, T(pole 1 -> pole2 or 3) = 1/2 * T(pole 1 -> pole 2) = 1/2 * T(pole 1 -> pole 3).
+If we inject $d(j)$ to every node $j,$ then in the overlaid circuits 
+
+$$\sum_j d(j) = \text{twice number of edges}$$ 
+
+will be injected at node $x$ and $2m$ will be extracted at node $y.$
+
+so $T(x \rightarrow y) = \text{twice number of edges}\times R_{xy}.$
+
+At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that $T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$
 
 <br>
