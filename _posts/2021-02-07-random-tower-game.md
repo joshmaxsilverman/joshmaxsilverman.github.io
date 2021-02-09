@@ -70,6 +70,6 @@ In the first three steps below, we reduce the upper third of the game board diag
 
 The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path:
 
-$$\frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n = \frac{r}{3} \dfrac{1}{1-\frac{5}{3}}.$$
+$$\frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n = \frac{r}{3} \dfrac{1 - \left(\frac{5}{3}\right)^n}{1-\frac{5}{3}} = \frac{r}{2}\left(\frac{5}{3}\right)^n - 1.$$
 
 <br>
