@@ -54,7 +54,7 @@ But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emergi
 
 If we inject $d(j)$ to every node $j,$ then in the overlaid circuits 
 
-$$\sum_j d(j) = \text{number of edges}$$ 
+$$\sum_j d(j) = \text{twice number of edges}$$ 
 
 will be injected at node $x$ and $\text{twice number of edges}$ will be extracted at node $y,$ sp
 
