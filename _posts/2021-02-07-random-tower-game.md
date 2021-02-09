@@ -15,7 +15,7 @@ date: 2021/02/07
 
 Liberated from the burden of strategy, we are free to be our true selves and write down the state space for the arrangements of the tower, of which there are $27$ valid game states: ($\left(123,-,-\right)$ three ways, $\left(13, 2, -\right)$ six ways, $\left(12, 3, -\right)$ six ways, $\left(23, 1, -\right)$ six ways, and $\left(1, 2, 3\right)$ six ways). Each state can only reach $3$ other states unless it's a solved state in which case it has just $2$ neighbors. writing them all out, we get the interesting topology of a Sierpinski gasket:
 
-<img>
+![](/img/2021-02-08-game-board.png){:width="400px" class="image-centered"}
 
 The symmetry in the graph suggests that it can be massively simplified, reminiscent of [many a resistor puzzle](http://yaroslavvb.com/papers/zemanian-infinite.pdf). At first I looked for ways to join similar edges, reducing the topology to a line, in hopes to map onto gambler's ruin, like I did in the [thanksgiving puzzle](https://joshmaxsilverman.github.io/2020-11-22-pass-cranberry-sauce/), but I couldn't get that to go. 
   
@@ -63,5 +63,7 @@ so $T(x \rightarrow y) = \text{number of edges}\times R_{xy}.$
 At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that 
 
 $$T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$$
+
+![](/img/2021-02-08-random-towers.png){:width="400px" class="image-centered"}
 
 <br>
