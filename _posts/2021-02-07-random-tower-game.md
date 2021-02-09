@@ -64,6 +64,6 @@ At the end, we just have to find the resistance between the top and bottom corne
 
 $$T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 2}) = 1/2 \times T(\text{pole 1} \rightarrow \text{pole 3}).$$
 
-![](/img/2021-02-08-random-towers.png){:width="400px" class="image-centered"}
+![](/img/2021-02-08-random-tower.png){:width="400px" class="image-centered"}
 
 <br>
