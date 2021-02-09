@@ -36,8 +36,11 @@ $$v(x) - v(y) = 1 + \frac{1}{d(x)} \sum_n (v(n) - v(y)).$$
 
 $T(x \rightarrow y) - (v(x) - v(y))$ is also harmonic and zero when $x$ is $y$ ($v(x)$ and $v(x)$ have the same voltage, $T(x \rightarrow x)$ takes no time), so, they are the same function.
 
-If we can find a situation where we know the current from node $x$ to node $y,$ then we can use Ohm's law $(v(x) - v(y)) = I R_{xy}$ to find $T(x \rightarrow y)$
-we can do this by superposition, e.g.
+If we can find a situation where we know the current from node $x$ to node $y,$ then we can use Ohm's law 
+
+$$(v(x) - v(y)) = I R_{xy}$$ 
+
+to find $T(x \rightarrow y).$ We can do this by superposition, e.g.
 
 - first inject an amount of current to the graph when node $x$ is held to zero voltage, all nodes will have some voltage relative to $x$
 - then switch node $y$ to zero voltage and collect from there, then reverse all voltages (so we're injecting at $y$)
