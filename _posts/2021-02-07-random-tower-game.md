@@ -5,7 +5,7 @@ title: Random Towers
 date: 2021/02/07
 ---
 
->**Question**: it's now one year into quarantine and you're well and truly out of ideas for fun on a Saturday night. To avoid falling asleep, you set up three pegs with three rings, each wide than the next, stacked widest to narrowest on the first peg. You want to move this stack to one of the other pegs, moving one disk at a time, such that you never put a wider disk on top of a thinner disk. You know this is hard, but you have nothing but time. Suppose that instead of analyzing the situation, you simply move the disks at random, choosing uniformyl from among the available valid moves at each stage in the process. How long should you expect to be at this exciting new amusement?
+>**Question**: it's now one year into quarantine and you're well and truly out of ideas for fun on a Saturday night. To avoid falling asleep, you set up three pegs with three rings, each wider than the next, stacked widest to narrowest on the first peg. You want to move this stack to either of the other two pegs, moving one disk at a time, such that you never put a wider disk on top of a narrower disk. You know this is hard, but you have nothing but time. Suppose that instead of analyzing the situation, you simply move the disks at random, choosing uniformly from among the available valid moves at each step. How long should you expect to be at this exciting new amusement?
 
 <!--more-->
 
