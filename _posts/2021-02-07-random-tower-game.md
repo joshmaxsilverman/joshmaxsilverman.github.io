@@ -38,7 +38,7 @@ $T(x \rightarrow y) - (v(x) - v(y))$ is also harmonic and zero when $x$ is $y$ (
 
 If we can find a situation where we know the current from node $x$ to node $y,$ then we can use Ohm's law 
 
-$$(v(x) - v(y)) = I R_{xy}$$ 
+$$v(x) - v(y) = I R_{xy}$$ 
 
 to find $T(x \rightarrow y).$ We can do this by superposition, e.g.
 
