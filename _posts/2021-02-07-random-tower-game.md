@@ -56,9 +56,9 @@ If we inject $d(j)$ to every node $j,$ then in the overlaid circuits
 
 $$\sum_j d(j) = \text{number of edges}$$ 
 
-will be injected at node $x$ and $\text{number of edges}$ will be extracted at node $y.$
+will be injected at node $x$ and $\text{number of edges}$ will be extracted at node $y,$ sp
 
-so $T(x \rightarrow y) = \text{number of edges}\times R_{xy}.$
+$$\boxed{T(x \rightarrow y) = \text{number of edges}\times R_{xy}}.$$
 
 At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that 
 
@@ -70,6 +70,15 @@ In the first three steps below, we reduce the upper third of the game board diag
 
 The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path:
 
-$$\frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n = \frac{r}{3} \dfrac{1 - \left(\frac{5}{3}\right)^n}{1-\frac{5}{3}} = \frac{r}{2}\left(\frac{5}{3}\right)^n - 1.$$
+$$\begin{align}
+\frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n &= \frac{r}{3} \dfrac{1 - \left(\frac{5}{3}\right)^n}{1-\frac{5}{3}} \\
+&= \frac{r}{2}\left[\left(\frac{5}{3}\right)^n - 1\right].
+\end{align}$$
+
+As we noted at the top, there are $27$ game states, $24$ of which have degree $3$ and $3$ of which have degree $2,$ so in general, the number of edges in the Sierpinski circuit is half of $\left(3^n - 3\right)\times 3 + 3\times 2.$
+
+Putting this altogether, the expected time to travel from a stack on peg $1$ to a stack on one of the other pegs is 
+
+$$\frac{1}{2}\times T(1\rightarrow 3) = \frac{1}{2}\times\frac{1}{2}\left[\left(\frac{5}{3}\right)^n - 1\right]\times\frac{\left(3^n - 3\right)\times 3 + 3\times 2}{2}$$
 
 <br>
