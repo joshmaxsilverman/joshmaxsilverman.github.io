@@ -57,11 +57,11 @@ But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emergi
 
 If we inject $d(j)$ to every node $j,$ then in the overlaid circuits 
 
-$$\sum_j d(j) = \text{twice number of edges}$$ 
+$$2T(x\rightarrow y) = \sum_j d(j) = \text{twice number of edges}$$ 
 
 will be injected at node $x$ and $\text{twice number of edges}$ will be extracted at node $y,$ sp
 
-$$\boxed{T(x \rightarrow y) = \text{twice number of edges}\times R_{xy}}.$$
+$$\boxed{T(x \rightarrow y) = \text{number of edges}\times R_{xy}}.$$
 
 At the end, we just have to find the resistance between the top and bottom corner of the state space. And, since we can go to either corner, this means that 
 
@@ -69,9 +69,9 @@ $$T(\text{pole 1} \rightarrow \text{pole 2 or 3}) = 1/2 \times T(\text{pole 1} \
 
 In the first three steps below, we reduce the upper third of the game board diagram to a three-way junction. The next step pieces three of those together (to form the full three peg + three disk board) and the last step reduces that to its own three way junction. 
 
-![](/img/2021-02-07-random-towers.png){:width="400px" class="image-centered"}
+![](/img/2021-02-07-random-towers.png){:width="500px" class="image-centered"}
 
-The resistance between pegs $1$ and $3$ $R_{13}$ is then the series sum of resistance along the path. The pattern is already pretty clear from the three series elements:
+The resistance between pegs $1$ and $3,$ $R_{13},$ is then the series sum of resistance along the path. The pattern is already pretty clear from the three series elements:
 
 $$\begin{align}
 R_{13} &= \frac{r}{3}\sum\limits_0^{n-1} \left(\frac{5}{3}\right)^n \\
