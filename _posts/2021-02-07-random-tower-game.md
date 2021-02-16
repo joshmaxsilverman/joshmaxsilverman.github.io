@@ -44,9 +44,9 @@ $$v(x) - v(y) = I_{xy} R_{xy}$$
 
 to find $T(x \rightarrow y).$ We can do this by superposition, e.g.
 
-- first inject an amount of current to the graph when node $x$ is held to zero voltage, all nodes $y$ will realize some voltage $v(y)$ relative to $x$
-- next, set up the same scenario at $y$, i.e., hold node $y$ to zero voltage and collect current from it, then reverse all currents (so that we're collecting at node $y$)
-- overlay the two grids so that current flows only from node $x$ to node $y.$
+- first inject some amount of current into the graph while node $x$ is held to zero voltage, all nodes $z$ will realize some voltage $v(z)$ relative to $x$
+- next, set up the same scenario at $y$, i.e., hold node $y$ to zero voltage and collect current from it, then reverse all currents (so that we're injecting at node $y$)
+- overlay the two grids so that current flows only from node $x$ to node $y.$ All the other current flows cancel.
 
 But how much current should we inject? Rearranging the harmonic relation connecting neighboring voltages, we get
 
@@ -57,7 +57,7 @@ d(j) &= d(j)v(j) - \sum_n v(n) \\
 
 But the sum of $(v(j) - v(n))$ over all neighbors $n$ is just the current emerging from the node $j$ when the set of voltages is maintained. So, $d(j) = i_\text{inject at $j$}.$
 
-If we inject $d(j)$ to every node $j,$ then in the overlaid circuits 
+So, if we inject $d(j)$ to every node $j$ then, in the overlaid circuits,
 
 $$2T(x\rightarrow y) = \sum_j d(j) = \text{twice number of edges}$$ 
 
