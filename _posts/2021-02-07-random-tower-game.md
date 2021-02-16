@@ -34,13 +34,13 @@ At a node $x$ in a circuit, the current from a neighbor $n$ is equal to $(v(n) -
 
 $$v(x) - v(y) = 1 + \frac{1}{d(x)} \sum_n (v(n) - v(y)).$$
 
-$T(x \rightarrow y) - (v(x) - v(y))$ is also harmonic and zero when $x$ is $y$ ($v(x)$ and $v(x)$ have the same voltage, $T(x \rightarrow x)$ takes no time), so, they are the same function.
+$f(x,y) = T(x \rightarrow y) - (v(x) - v(y))$ is also harmonic and zero when $x$ is $y$ ($v(x)$ and $v(x)$ have the same voltage, $T(x \rightarrow x)$ takes no time), so, $f(x,y)$ is uniformly zero, and $T(x\rightarrow y)$ and $(v(x) - v(y))$ are the same function.
 
 This suggests there's a mapping from $T(x, y)$ onto an equivalent resistor circuit wherein $T(x\rightarrow y)$ amounts to a reduction through the symmetries of series and parallel combinations of edges.
 
 If we can find a situation where we know the current from node $x$ to node $y,$ then we can use Ohm's law 
 
-$$v(x) - v(y) = I R_{xy}$$ 
+$$v(x) - v(y) = I_{xy} R_{xy}$$ 
 
 to find $T(x \rightarrow y).$ We can do this by superposition, e.g.
 
