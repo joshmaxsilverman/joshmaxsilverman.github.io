@@ -88,7 +88,7 @@ As we noted at the top, there are $27$ game states, $24$ of which have degree $3
 
 Putting this altogether, the expected time to travel from a stack on peg $1$ to a stack on one of the other pegs is 
 
-$$\overbrace{\frac{1}{2}\times T(1\rightarrow 3)}^{v(x)-v(y)} = \overbrace{\frac{1}{2}\times\frac{1}{2}\left[\left(\frac{5}{3}\right)^n - 1\right]}^{I_{xy}}\overbrace{\times\left(\left(3^n - 3\right)\times 3 + 3\times 2\right)}^{R_{xy}}$$
+$$\overbrace{\frac{1}{2}\times T(1\rightarrow 3)}^{v(x)-v(y)} = \overbrace{\frac{1}{2}\times\frac{1}{2}\left[\left(\frac{5}{3}\right)^n - 1\right]}^{R_{xy}}\overbrace{\times\left(\left(3^n - 3\right)\times 3 + 3\times 2\right)}^{I_{xy}}$$
 
 which is $32/3\approx 10.7$ for two disks, $637/9\approx 70.8$ for three disks, $10880/27\approx 403.0$ for four disks, and $174361/81\approx 2152.6$ for five disks.
 
