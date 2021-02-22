@@ -33,7 +33,7 @@ The center of mass of a collection of identical blocks is the average position o
 
 By extension, the center of mass of the Block $3$-through-Block $6$ system relative to the edge of Block $2$ is (after gathering terms) 
 
-$${\left(4\Delta b_3 + 3\Delta b_4 + 2\Delta b_5 + \Delta b_6\right)/4}.$$ 
+$$c(3,6) = \dfrac{4\Delta b_3 + 3\Delta b_4 + 2\Delta b_5 + \Delta b_6}{4}.$$ 
 
 This is a core sum, so we capture it in the function `running_mean()` in the code. 
 
