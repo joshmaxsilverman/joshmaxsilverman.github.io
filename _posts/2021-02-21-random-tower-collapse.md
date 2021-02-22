@@ -27,7 +27,7 @@ $$(\Delta b_2 + \Delta b_3)/2 > 1/2.$$
 
 This is the area under the line $\Delta b_3 = 1 - \Delta b_2,$ which is 
 
-$$\frac12\times\text{base}\times\text{height} = \frac12\times\frac12\times\frac12 = 1/8.$$
+$$\frac12\times\text{base}\times\text{height} = \frac12\times\frac12\times\frac12 = \frac18.$$
 
 The center of mass of a collection of identical blocks is the average position of their centers of mass. Since the offsets $\Delta b_i$ measure the gap between the center of masses of consecutive blocks, the position of a block relative to another block is equal to the sum of the offsets for all the blocks between them. i.e. the distance between Block $2$ and Block $6$ is ${\left(\Delta b_3 + \Delta b_4 + \Delta b_5 + \Delta b_6\right)}.$
 
