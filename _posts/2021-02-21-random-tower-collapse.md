@@ -5,7 +5,7 @@ title:
 date: 2021/02/21
 ---
 
->**Question**: Stuck at home for the $55^\text{th}$ week running, you have an idea to play reverse Jenga, stacking blocks one at a time to see how high you can get them before some blocks fall down. To make it a surprise, you place each new blocks center randomly at some place between the edges of the block underneath. About how many blocks do you expect to place before seeing a unit of blocks tumble down?
+>**Question**: relaxing at home for the $55^\text{th}$ week running, you have an idea to play reverse Jenga, stacking blocks one at a time to see how high you can get them before some blocks fall down. To make it a surprise, you place each new blocks center randomly at some place between the edges of the block underneath. About how many blocks do you expect to place before seeing a unit of blocks tumble down?
 
 <!--more-->
 
