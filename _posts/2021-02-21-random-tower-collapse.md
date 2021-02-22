@@ -21,7 +21,9 @@ With each new block that's added, there is the potential for a center of mass to
 
 The first block can't tip over, and the second block can't tip unless it has something on top of it. Therefore, the smallest number of blocks we expect to accumulate before a collapse is $3$.
 
-Because each block can be at most $\Delta b=1/2$ from the middle of the one underneath it, both Block $2$ and Block $3$ need to be placed in the same "direction" relative to the middle of the first block.Ffor them to tip, it has to be true that $(\Delta \b_2 + \Delta b_3)/2 > 1/2.$ This is the area under the line $\Delta b_3 = 1 - \Delta b_2,$ which is just $$\text{base}\times\text{height}/2 = 1/2\times 1/2\times 1/2 = 1/8.$$
+Because each block can be at most $\Delta b=1/2$ from the middle of the one underneath it, both Block $2$ and Block $3$ need to be placed in the same "direction" relative to the middle of the first block. For them to tip, it has to be true that $$(\Delta \b_2 + \Delta b_3)/2 > 1/2.$$ 
+
+This is the area under the line $\Delta b_3 = 1 - \Delta b_2,$ which is just $$\text{base}\times\text{height}/2 = 1/2\times 1/2\times 1/2 = 1/8.$$
 
 The center of mass of a collection of identical blocks is the average position of their centers of mass. Since the offsets $\Delta b_i$ measure the gap between the center of masses of consecutive blocks, the position of a block relative to another block is equal to the sum of the offsets for all the blocks between them. i.e. the distance between Block $2$ and Block $6$ is ${\left(\Delta b_3 + \Delta b_4 + \Delta b_5 + \Delta b_6\right)}.$ 
 
