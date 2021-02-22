@@ -31,7 +31,15 @@ By extension, the center of mass of the Block $3$-through-Block $6$ system relat
 
 This is a core sum, so we capture it in the function `running_mean()` in the code. 
 
-With that in place, the big picture is to go through the tower, adding one block at a time, checking whether each "system's" center of mass overhangs the edge of the block it sits upon. Running this code for $\SI{e7}{}$ rounds gets an estimate of $\langle B\rangle = 7.09XXX$ blocks before a topple occurs. 
+With that in place, the big picture is to go through the tower, adding one block at a time, checking whether each "system's" center of mass overhangs the edge of the block it sits upon. Running this code for $\SI{e7}{}$ rounds gets an estimate of $\langle B\rangle \approx 7.1106446$ blocks before a topple occurs. 
+
+![](3B4BE5C5-9B66-4567-989D-825DBA2DE929.jpeg){:width="500px" class="image-centered"}
+
+{:.caption}
+
+Empirical distribution of tower heights upon first topple.
+
+As expected, topples of $3$-block towers account for $1/8^\text{th}$ of all cases.
 
 ```python
 def running_mean(lst):
