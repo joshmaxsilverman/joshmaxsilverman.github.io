@@ -77,7 +77,7 @@ so Hare should start $3$ minutes and $40$ seconds after Tortoise.
 
 To figure out when the race finishes, we apply the same logic from above, but now looking for when Tortoise is at $100\%$ the length of the road. This means we want the first $\lfloor t\rfloor$ for which $H(\lfloor t\rfloor) > 10.$ We can solve this numerically to find $\lfloor t\rfloor = 12367\,\text{min}.$ 
 
-So, the final road stretch will occur at $t = 12366\,\text{min}$ and we can solve the linear equation for the crossing at $t_\text{finish} = 12366 + 123670 - H(12366) (1 + 12366) \approx 12366.468116653079\,\text{min}.$
+So, the final road stretch will occur at $t = 12366\,\text{min}$ and we can solve the linear equation for the crossing at $t_\text{finish} = 12366 + 123670 - H(12366) (1 + 12366) \approx 12366.468116653079\,\text{min}. $
 
 We can plug the $3$ minutes $40$ second delay time into the expressions for Tortoise and Hare's distance, and plot their position over time. Indeed they overlap with the finish line at exactly the same time.
 
