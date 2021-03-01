@@ -92,7 +92,7 @@ The code easily extends to higher numbers of staircases, and we find:
 
 $$
 \begin{array}{|c|c|}\hline
-  N & \Omega(N,N-1,\ldots) \\ \hline
+  N & \Omega \\ \hline
   1 & 1 \\ \hline
   2 & 2 \\ \hline
   3 & 16 \\ \hline
