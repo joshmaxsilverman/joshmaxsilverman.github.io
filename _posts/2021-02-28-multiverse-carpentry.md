@@ -101,6 +101,15 @@ $$
 \end{align}
 $$
 
+$$
+\Omega(a,b,c,\ldots) = \begin{cases}
+1 & \left(a+b+c+\ldots\right) = 1 \\
+0 & \min(a,b,c,\ldots) < 0 \\
+0 & (b \geq a)\,\mathbf{OR}\, (c \geq b)\, \mathbf{OR}\, \ldots \\
+\Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots & \text{otherwise}
+\end{cases}
+$$
+
 Coding this up (using memoization), 
 
 ```mathematica
