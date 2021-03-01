@@ -9,7 +9,7 @@ date: 2021/02/28
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/how-many-ways-can-you-build-a-staircase/))
 
 ## Solution
 
