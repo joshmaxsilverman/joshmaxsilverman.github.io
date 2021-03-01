@@ -113,9 +113,9 @@ $$
 \end{array}
 $$
 
-Searching the first few terms on the OEIS, this is a known series for the number of ways to build out a triangular Young tableaux. A Young tableaux is a grid shape where numbers are filled out such that they increase long the rows and up the columns which, if we numbered our blocks according to when they were placed, is the case with our staircases as well. So, this makes sense.
+Searching the first few terms on the OEIS, this is a [known series](https://oeis.org/A005118) for the number of ways to build out a triangular Young tableaux. A Young tableaux is a grid shape where numbers are filled out such that they increase long the rows and up the columns which, if we numbered our blocks according to when they were placed, is the case with our staircases as well. So, this makes sense.
 
-There's some very beautiful combinatorics that shows the number of ways to build a Young tableaux for a grid of any shape is equal to the factorial of the number of grid cells, divided by the product of the number of lesser values that each cell sees in its row and column. In our staircase, this means $(2n+1)$ for the first "A" placed, $(2n-1)$ for the second "A" placed, $(2n-3)$ for the third "A", and so on down to $1$ for the last "A" placed. Similarly, starting from the left, the "B" blocks see $(2n-1),$ $(2n-3),$ $\ldots$, $1$ lesser values.
+Some [very beautiful combinatorics](https://www2.math.upenn.edu/~wilf/website/Probabilistic%20proof.pdf) shows the number of ways to build a Young tableaux for a grid of any shape is equal to the factorial of the number of grid cells, divided by the product of the number of lesser values that each cell sees in its row and column. In our staircase, this means $(2n+1)$ for the first "A" placed, $(2n-1)$ for the second "A" placed, $(2n-3)$ for the third "A", and so on down to $1$ for the last "A" placed. Similarly, starting from the left, the "B" blocks see $(2n-1),$ $(2n-3),$ $\ldots$, $1$ lesser values.
 
 All told, these "lesser values seen leftward and upward" yield $N$ powers of $1$, $(n-1)$ powers of $3,$ $(n-2)$ powers of $5,$ and so on, until the $n^\text{th}$ odd number which has a single power. 
 
@@ -125,6 +125,6 @@ $$ \Omega = \dfrac{10!}{1^4\times 3^3\times 5^2\times 7} = 768 $$
 
 as expected. In general, the number of ways to build the $n$-level staircase is
 
-$$ \boxed{\Omega = \dfrac{\binom{n+1}{2}!}{\prod_i (2i-1)^{n-i}}} $$
+$$ \boxed{\Omega = \dfrac{\binom{n+1}{2}!}{\prod_i (2i-1)^{n-i}}}. $$
 
 <br>
