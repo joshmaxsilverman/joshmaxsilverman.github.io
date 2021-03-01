@@ -15,7 +15,7 @@ date: 2021/02/28
 
 I got started by building some staircases. 
 
-For the two level staircase, there's no choice for the first block, we **have** to start with an "A" block, since every other block needs a foundation on which to be placed. Once the first "A" block is placed, we have a choice for what to do second, we can either place the "B" block on top of the first "A" block, or we can place the second "A" block and then place the "B" block last. This makes for a total of $2$ ways to build the $N = 2$ level staircase.
+For the two level staircase, there's no choice for the first block, we **have** to start with an "A" block, since every other block needs a foundation on which to be placed. Once the first "A" block is placed, we have a choice for what to do second, we can either place the "B" block on top of the first "A" block, or we can place the second "A" block and then place the "B" block last. This makes for a total of $2$ ways to build the $n = 2$ level staircase.
 
 Moving to the three level staircase, we again need to kick things off with an "A" block. From there we can either place a "B" block (on top of the first "A" block) or we can place another "A" block, extending the first level. In the situation where we placed a "B" block second, we now have the option to place a "C" block, or to place another "A" block. 
 
@@ -66,7 +66,7 @@ $$
 \end{align} 
 $$
 
-By Observation $4,$ we get $\Omega(0,2,1) = \Omega(2,1,0).$ Also by Observation $4,$ these problems are equivalent to the original $2$ stair case, so $\Omega(2,1,0) = \Omega(0,2,1) = 2.$ Both terms share $\Omega(1,1,1)$ which we carry on calculating. 
+By Observation $4,$ we get $\Omega(0,2,1) = \Omega(2,1,0).$ Also by Observation $4,$ these problems are equivalent to the original $2$-level staircase, so $\Omega(2,1,0) = \Omega(0,2,1) = 2.$ Both terms share $\Omega(1,1,1)$ which we carry on calculating. 
 
 Since the agruments are equal, $\Omega(1,1,1)$ gives three choices for placement:
 
@@ -109,14 +109,14 @@ Searching the first few terms on the OEIS, this is a known series for the number
 
 There's some very beautiful combinatorics that shows the number of ways to build a Young tableaux for a grid of any shape is equal to the factorial of the number of grid cells, divided by the product of the number of lesser values that each cell sees in its row and column. In our staircase, this means $(2n+1)$ for the first "A" placed, $(2n-1)$ for the second "A" placed, $(2n-3)$ for the third "A", and so on down to $1$ for the last "A" placed. Similarly, starting from the left, the "B" blocks see $(2n-1),$ $(2n-3),$ $\ldots$, $1$ lesser values.
 
-All told, these "lesser values seen leftward and upward" yield $N$ powers of $1$, $(N-1)$ powers of $3,$ $(N-2)$ powers of $5,$ and so on, until the $N^\text{th}$ odd number which has a single power. 
+All told, these "lesser values seen leftward and upward" yield $N$ powers of $1$, $(n-1)$ powers of $3,$ $(n-2)$ powers of $5,$ and so on, until the $n^\text{th}$ odd number which has a single power. 
 
-We can check this for the $N=4$ staircase, where the prediction is
+We can check this for the $n=4$ staircase, where the prediction is
 
 $$ \Omega = \dfrac{10!}{1^4\times 3^3\times 5^2\times 7} = 768 $$
 
-as expected. In general, the number of ways to build the $N$ level staircase is
+as expected. In general, the number of ways to build the $n$-level staircase is
 
-$$ \boxed{\Omega = \dfrac{\binom{N+1}{2}!}{\prod_i (2i-1)^(n-i)}} $$
+$$ \boxed{\Omega = \dfrac{\binom{n+1}{2}!}{\prod_i (2i-1)^{n-i}}} $$
 
 <br>
