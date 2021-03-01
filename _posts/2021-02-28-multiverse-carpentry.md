@@ -37,7 +37,7 @@ You can carry on like this, but it gets out of control fast. At this point I not
 
 On account of the Observation $3$, I started using a notation in hopes to find a recursion: $\Omega(a,b,c)$ is the number of ways that $a$ remaining "A" blocks, $b$ remaining  "B" blocks, and $c$ remaining "C" blocks can be placed in the staircase.
 
-![](/img/2021-02-28-multiverse-carpenters-observation-4.JPG){:width="400 px" class="image-centered"}
+![](/img/2021-02-28-multiverse-carpenters-observation-4.JPG){:width="300 px" class="image-centered"}
 
 {:.caption}
 
