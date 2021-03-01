@@ -51,8 +51,38 @@ According to Observation $5$, $\Omega(1,0)$ and $\Omega(0,1)$ are both equal to 
 
 **Three stairs**
 
-Now let's do the three stair case, moving a little more quickly this time. We start with $\Omega(3,2,1)$
+Now let's do the three stair case, moving a little more quickly this time. We start with $\Omega(3,2,1).$ To start, we're forced to place an "A," so 
 
+$$ \Omega(3,2,1) = \Omega(2,2,1). $$
+
+Now, we can place an "A" or a "B," so we form two branches:
+
+$$ \Omega(2,2,1) = \Omega(1,2,1) + \Omega(2,1,1). $$
+
+By Observations $1$ and $3,$ we get
+
+$$ 
+\begin{align}
+\Omega(1,2,1) &= \Omega(0,2,1) + \Omega(1,1,1) \\
+\Omega(2,1,1) &= \Omega(2,1,0) + \Omega(1,1,1)
+\end{align} 
+$$
+
+By Observation $4,$ we get $\Omega(0,2,1) = \Omega(2,1,0).$ Also by Observation $4,$ these problems are equivalent to the original $2$ stair case, so $\Omega(2,1,0) = \Omega(0,2,1) = 2.$ Both terms share $\Omega(1,1,1)$ which we carry on calculating. $\Omega(1,1,1)$ gives three choices for placement:
+
+$$ \Omega(1,1,1) = \Omega(1,1,0) + \Omega(1,0,1) + \Omega(0,1,1). $$
+
+Again, each of these has been calculated previously as all are equal to $\Omega(1,1) = 2$ from the two stair problem. 
+
+Propagating back up the chain, this shows that $\Omega(1,1,1) = 6,$ $\Omega(2,1,1) = 8,$ $\Omega(1,2,1) = 8,$ and $\Omega(3,2,1) = \Omega(2,2,1) = 16.$
+
+### Translating
+
+We can translate this from the list of observations into a formal list of rules. For an arbitrary number of stairs, we have
+
+$$ \Omega(a,b,c,\ldots) = \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots $$
+
+$$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } \min(a,b,c,d,\ldots) < 0. $$
 
 
 <br>
