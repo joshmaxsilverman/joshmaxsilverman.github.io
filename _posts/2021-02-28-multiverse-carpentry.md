@@ -118,7 +118,7 @@ F[a_, b_, c_, d_] := F[a, b, c, d] = (
    )
 ```
 
-we get $\boxed{\Omega(4,3,2,1) = 768}.$ 
+we get $\boxed{\Omega(4,3,2,1) = 768},$ all of which can be [seen here](https://pastebin.com/gLSF9YTL) courtesy of Goh Pi Han.
 
 This code doesn't extend nicely to bigger staircases, which we can take care of with:
 
