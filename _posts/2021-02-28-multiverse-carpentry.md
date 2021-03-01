@@ -17,6 +17,8 @@ I got started by building some staircases.
 
 For the two level staircase, there's no choice for the first block, we **have** to start with an "A" block, since every other block needs a foundation on which to be placed. Once the first "A" block is placed, we have a choice for what to do second, we can either place the "B" block on top of the first "A" block, or we can place the second "A" block and then place the "B" block last. This makes for a total of $2$ ways to build the $n = 2$ level staircase.
 
+![](/img/2021-02-28-multiverse-carpenters-observation-2.JPG){:width="400 px" class="image-centered"}
+
 Moving to the three level staircase, we again need to kick things off with an "A" block. From there we can either place a "B" block (on top of the first "A" block) or we can place another "A" block, extending the first level. In the situation where we placed a "B" block second, we now have the option to place a "C" block, or to place another "A" block. 
 
 ### Some observations
@@ -30,6 +32,12 @@ You can carry on like this, but it gets out of control fast. At this point I not
 5. if we have $1$ block left, then there's only one way to place it.
 
 On account of the Observation $3$, I started using a notation in hopes to find a recursion: $\Omega(a,b,c)$ is the number of ways that $a$ remaining "A" blocks, $b$ remaining  "B" blocks, and $c$ remaining "C" blocks can be placed in the staircase.
+
+![](/img/2021-02-28-multiverse-carpenters-observation-4.JPG){:width="400 px" class="image-centered"}
+
+{:.caption}
+
+Schematic for the partial recursion of Observation $2.$
 
 ### Using the notation
 
