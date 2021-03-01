@@ -5,7 +5,7 @@ title: Multiverse Carpentry
 date: 2021/02/28
 ---
 
->**Question**: a regular staircase is built from blocks and the blocks in each level are different colors. The staircase can be built in whatever order that's physically possible. However, whenever you make a choice, the Universal wave function splits so that each staircase actually exists in its own branch of the multiverse. In addition, the surface the stairs are built on is slightly sloped (in all verses), so any placed block slides forward until it hits the wall. How many universes will spawn to accomodate the possibilities for the $4$-level staircase? An $n$-level staircase?
+>**Question**: a regular staircase is built from blocks and the blocks in each level are different colors. The staircase can be built in whatever order that's physically possible. However, whenever you make a choice, the Universal wave function splits so that each staircase actually exists in its own branch of the multiverse. In addition, the surface the stairs are built on is slightly sloped (in all verses), so any placed block slides forward until it hits the wall. How many universes will spawn to accommodate the possibilities for the $4$-level staircase? An $n$-level staircase?
 
 <!--more-->
 
@@ -94,9 +94,10 @@ We can translate from the list of observations into a formal rules. For an arbit
 
 $$ 
 \begin{align}
-\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots \\
+\Omega(a,b,c,\ldots) &= 1 \text{ if } \left(a+b+c+\ldots\right) = 1 \\
 \Omega(a,b,c,\ldots) &= 0 \text{ if } \min(a,b,c,\ldots) < 0 \\
-\Omega(a,b,c,\ldots) &= 0 \text{ if } (a > b + 1)\,\mathbf{OR}\, (b > c + 1)\, \mathbf{OR}\, \ldots
+\Omega(a,b,c,\ldots) &= 0 \text{ if } (a > b + 1)\,\mathbf{OR}\, (b > c + 1)\, \mathbf{OR}\, \ldots \\
+\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots
 \end{align}
 $$
 
@@ -117,18 +118,18 @@ $$
 \end{array}
 $$
 
-Searching the first few terms on the OEIS, this is a [known series](https://oeis.org/A005118) for the number of ways to build out a triangular Young tableaux. A Young tableaux is a grid shape where numbers are filled out such that they increase long the rows and up the columns which, if we numbered our blocks according to when they were placed, is the case with our staircases as well. So, this makes sense.
+Searching the first few terms on the OEIS, this is a [known series](https://oeis.org/A005118) for the number of ways to build out a triangular Young tableau. A Young tableau is a grid shape where numbers are filled out such that they increase along the rows and up the columns which, if we numbered our blocks according to when they were placed, is the case with our staircases as well. So, this makes sense.
 
-Some [very beautiful combinatorics](https://www2.math.upenn.edu/~wilf/website/Probabilistic%20proof.pdf) shows the number of ways to build a Young tableaux for a grid of any shape is equal to the factorial of the number of grid cells, divided by the product of the number of lesser values that each cell sees in its row and column. In our staircase, this means $(2n+1)$ for the first "A" placed, $(2n-1)$ for the second "A" placed, $(2n-3)$ for the third "A", and so on down to $1$ for the last "A" placed. Similarly, starting from the left, the "B" blocks see $(2n-1),$ $(2n-3),$ $\ldots$, $1$ lesser values.
+Some [very beautiful combinatorics](https://www2.math.upenn.edu/~wilf/website/Probabilistic%20proof.pdf) shows the number of ways to build a Young tableau for a grid of any shape is equal to the factorial of the number of grid cells, divided by the product of the number of lesser values that each cell sees in its row and column. In our staircase, this means $(2n+1)$ for the first "A" placed, $(2n-1)$ for the second "A" placed, $(2n-3)$ for the third "A", and so on down to $1$ for the last "A" placed. Similarly, starting from the left, the "B" blocks see $(2n-1),$ $(2n-3),$ $\ldots$, $1$ lesser values.
 
-All told, these "lesser values seen leftward and upward" yield $N$ powers of $1$, $(n-1)$ powers of $3,$ $(n-2)$ powers of $5,$ and so on, until the $n^\text{th}$ odd number which has a single power. 
+All told, these "lesser values seen leftward and upward" yield $n$ powers of $1$, $(n-1)$ powers of $3,$ $(n-2)$ powers of $5,$ and so on, until the $n^\text{th}$ odd number which has a single power. 
 
 We can check this for the $n=4$ staircase, where the prediction is
 
-$$ \Omega = \dfrac{10!}{1^4\times 3^3\times 5^2\times 7} = 768 $$
+$$ \Omega = \dfrac{\left(1+2+3+4\right)!}{1^4\times 3^3\times 5^2\times 7} = 768 $$
 
-as expected. In general, the number of ways to build the $n$-level staircase is
+as expected. In general, the number of ways to build the $n$-level staircase is (abusing notation)
 
-$$ \boxed{\Omega = \dfrac{\binom{n+1}{2}!}{\prod_i (2i-1)^{n-i}}}. $$
+$$ \boxed{\Omega = \dfrac{\left(1+2+\ldots+n\right)!}{\prod_{i=0}^{n-1} (2i-1)^{n-i}}}. $$
 
 <br>
