@@ -31,7 +31,7 @@ You can carry on like this, but it gets out of control fast. At this point I not
 4. if we have filled out column, say by placing "A-B-C" in a stack, then the remaining $2$ "A" blocks and $1$ "B" block present the same problem as if we had the $2$-stair problem. 
 5. if we have $1$ block left, then there's only one way to place it.
 
-On account of the Observation $3$, I started using a notation in hopes to find a recursion: $\Omega(a,b,c)$ is the number of ways that $a$ remaining "A" blocks, $b$remaining  "B" blocks, and $c$ remaining "C" blocks can be placed in the staircase.
+On account of the Observation $3$, I started using a notation in hopes to find a recursion: $\Omega(a,b,c)$ is the number of ways that $a$ remaining "A" blocks, $b$ remaining  "B" blocks, and $c$ remaining "C" blocks can be placed in the staircase.
 
 ### Using the notation
 
