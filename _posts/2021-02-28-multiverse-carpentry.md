@@ -92,15 +92,6 @@ Propagating back up the chain, this shows that $\Omega(1,1,1) = 6,$ $\Omega(2,1,
 
 We can translate from the list of observations into a formal rules. For an arbitrary number of stairs, we have
 
-$$ 
-\begin{align}
-\Omega(a,b,c,\ldots) &= 1 &\text{ if } \left(a+b+c+\ldots\right) = 1 \\
-\Omega(a,b,c,\ldots) &= 0 &\text{ if } \min(a,b,c,\ldots) < 0 \\
-\Omega(a,b,c,\ldots) &= 0 &\text{ if } (b \geq a)\,\mathbf{OR}\, (c \geq b)\, \mathbf{OR}\, \ldots \\
-\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots &\text{otherwise}
-\end{align}
-$$
-
 $$
 \Omega(a,b,c,\ldots) = \small\begin{cases}
 1 & \left(a+b+c+\ldots\right) = 1 \\
