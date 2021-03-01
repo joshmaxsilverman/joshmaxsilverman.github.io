@@ -84,7 +84,7 @@ $$ \Omega(a,b,c,\ldots) = \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Ome
 
 $$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } \min(a,b,c,d,\ldots) < 0. $$
 
-$$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } a > b + 1 \mathbf{OR} b > c + 1 \mathbf{OR} \ldots $$
+$$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } a > b + 1 \mathbf{ OR } b > c + 1 \mathbf{ OR } \ldots $$
 
 
 <br>
