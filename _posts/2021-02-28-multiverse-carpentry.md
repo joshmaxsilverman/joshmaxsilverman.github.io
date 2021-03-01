@@ -13,8 +13,6 @@ date: 2021/02/28
 
 ## Solution
 
-### Getting started
-
 I got started by building some staircases. 
 
 For the two level staircase, there's no choice for the first block, we **have** to start with an "A" block, since every other block needs a foundation on which to be placed. Once the first "A" block is placed, we have a choice for what to do second, we can either place the "B" block on top of the first "A" block, or we can place the second "A" block and then place the "B" block last. This makes for a total of $2$ ways to build the $N = 2$ level staircase.
@@ -86,7 +84,7 @@ $$ \Omega(a,b,c,\ldots) = \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Ome
 
 $$ \Omega(a,b,c,\ldots) = 0 \text{ if } \min(a,b,c,\ldots) < 0. $$
 
-$$ \Omega(a,b,c,\ldots) = 0 \text{ if } a > b + 1 \mathbf{ OR } b > c + 1 \mathbf{ OR } \ldots $$
+$$ \Omega(a,b,c,\ldots) = 0 \text{ if } (a > b + 1)\,\mathbf{OR}\, (b > c + 1)\, \mathbf{OR}\, \ldots $$
 
 Coding this up (using memoization), we get $\boxed{\Omega(4,3,2,1) = 768}.$
 
@@ -99,9 +97,9 @@ $$
   2 & 2 \\ \hline
   3 & 16 \\ \hline
   4 & 768 \\ \hline
-  5 & \num{292864} \\ \hline
-  6 & \num{1100742656} \\ \hline
-  7 & \num{48608795688960} \\ \hline
+  5 & 292,864 \\ \hline
+  6 & 1,100,742,656 \\ \hline
+  7 & 48,608,795,688,960 \\ \hline
 \end{array}
 $$
 
