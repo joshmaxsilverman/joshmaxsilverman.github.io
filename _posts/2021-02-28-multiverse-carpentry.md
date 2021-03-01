@@ -94,10 +94,10 @@ We can translate from the list of observations into a formal rules. For an arbit
 
 $$ 
 \begin{align}
-\Omega(a,b,c,\ldots) &= 1 \text{ if } \left(a+b+c+\ldots\right) = 1 \\
-\Omega(a,b,c,\ldots) &= 0 \text{ if } \min(a,b,c,\ldots) < 0 \\
-\Omega(a,b,c,\ldots) &= 0 \text{ if } (b \geq a)\,\mathbf{OR}\, (c \geq b)\, \mathbf{OR}\, \ldots \\
-\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots
+\Omega(a,b,c,\ldots) &= 1 &\text{ if } \left(a+b+c+\ldots\right) = 1 \\
+\Omega(a,b,c,\ldots) &= 0 &\text{ if } \min(a,b,c,\ldots) < 0 \\
+\Omega(a,b,c,\ldots) &= 0 &\text{ if } (b \geq a)\,\mathbf{OR}\, (c \geq b)\, \mathbf{OR}\, \ldots \\
+\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots &\text{otherwise}
 \end{align}
 $$
 
@@ -117,11 +117,11 @@ F[a_, b_, c_, d_] := F[a, b, c, d] = (
    If[a + b + c + d == 1, Return[1]];
    Return[
     F[a - 1, b, c, d] If[a > 0, 1, 0]
-     + F[a, b - 1, c, d] If[TrueQ[b >= a], 1, 0] If[b > 0,
+     + F[a, b - 1, c, d] If[b >= a, 1, 0] If[b > 0,
         1, 0]
-     + F[a, b, c - 1, d] If[TrueQ[c >= b], 1, 0] If[c > 0,
+     + F[a, b, c - 1, d] If[c >= b, 1, 0] If[c > 0,
         1, 0]
-     + F[a, b, c, d - 1] If[TrueQ[d >= c], 1, 0] If[d > 0,
+     + F[a, b, c, d - 1] If[d >= c, 1, 0] If[d > 0,
         1, 0]
     ]
    )
