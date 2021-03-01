@@ -5,7 +5,7 @@ title: Multiverse Carpentry
 date: 2021/02/28
 ---
 
->**Question**: a regular staircase is built from blocks and the blocks in each level are different colors. The staircase can be built in whatever order that's physically possible. In addition, the surface the stairs are built on is slightly sloped, so that any placed block slides forward until it hits the wall. How many possible ways are there to build a $4$-level staircase? An $n$-level staircase?
+>**Question**: a regular staircase is built from blocks and the blocks in each level are different colors. The staircase can be built in whatever order that's physically possible. However, whenever you make a choice, the Universal wave function splits so that each staircase actually exists in its own branch of the multiverse. In addition, the surface the stairs are built on is slightly sloped (in all verses), so any placed block slides forward until it hits the wall. How many possible branched universes will spawn to accomodate the $4$-level staircase? An $n$-level staircase?
 
 <!--more-->
 
