@@ -84,9 +84,27 @@ We can translate from the list of observations into a formal rules. For an arbit
 
 $$ \Omega(a,b,c,\ldots) = \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots $$
 
-$$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } \min(a,b,c,d,\ldots) < 0. $$
+$$ \Omega(a,b,c,\ldots) = 0 \text{ if } \min(a,b,c,\ldots) < 0. $$
 
-$$ \Omega(a,b,c,d,\ldots) = 0 \text{ if } a > b + 1 \mathbf{ OR } b > c + 1 \mathbf{ OR } \ldots $$
+$$ \Omega(a,b,c,\ldots) = 0 \text{ if } a > b + 1 \mathbf{ OR } b > c + 1 \mathbf{ OR } \ldots $$
 
+Coding this up (using memoization), we get $\boxed{\Omega(4,3,2,1) = 768}.$
+
+The code easily extends to higher numbers of staircases, and we find:
+
+$$
+\begin{array}{|c|c|}\hline
+  N & \Omega(N,N-1,\ldots) \\ \hline
+  1 & 1 \\ \hline
+  2 & 2 \\ \hline
+  3 & 16 \\ \hline
+  4 & 768 \\ \hline
+  5 & \num{292864} \\ \hline
+  6 & \num{1100742656} \\ \hline
+  7 & \num{48608795688960} \\ \hline
+\end{array}
+$$
+
+Searching the first few terms on the OEIS, this is a known series for the number of ways to fill out a triangular Young tableaux.
 
 <br>
