@@ -101,9 +101,45 @@ $$
 \end{align}
 $$
 
-Coding this up (using memoization), we get $\boxed{\Omega(4,3,2,1) = 768}.$
+Coding this up (using memoization), 
 
-The code easily extends to higher numbers of staircases, and we find:
+```mathematica
+F[a_, b_, c_, d_] := F[a, b, c, d] = (
+   If[a + b + c + d == 1, Return[1]];
+   Return[
+    F[a - 1, b, c, d] If[a > 0, 1, 0]
+     + F[a, b - 1, c, d] If[TrueQ[b >= a], 1, 0] If[b > 0,
+        1, 0]
+     + F[a, b, c - 1, d] If[TrueQ[c >= b], 1, 0] If[c > 0,
+        1, 0]
+     + F[a, b, c, d - 1] If[TrueQ[d >= c], 1, 0] If[d > 0,
+        1, 0]
+    ]
+   )
+```
+
+we get $\boxed{\Omega(4,3,2,1) = 768}.$ 
+
+This code doesn't extend nicely to bigger staircases, which we can take care of with:
+
+```mathematica
+oneAtI[i_, L_] := Table[If[n == i, 1, 0], {n, 1, L}];
+
+f[toPlace_] := f[toPlace] = (
+   levels = Length[toPlace];
+   If[Total[lst] == 1, Return[1]];
+   fsum =
+    Sum[
+     f[toPlace - oneAtI[i, levels]]
+      If[i > 1, If[toPlace[[i]] >= toPlace[[i - 1]], 1, 0], 1]
+      If[toPlace[[i]] > 0, 1, 0]
+     , {i, 1, levels}
+     ];
+   Return[fsum]
+   )
+```
+
+Exploring some bigger staircases, we find:
 
 $$
 \begin{array}{|c|c|}\hline
