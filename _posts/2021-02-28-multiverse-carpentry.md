@@ -108,12 +108,9 @@ F[a_, b_, c_, d_] := F[a, b, c, d] = (
    If[a + b + c + d == 1, Return[1]];
    Return[
     F[a - 1, b, c, d] If[a > 0, 1, 0]
-     + F[a, b - 1, c, d] If[b >= a, 1, 0] If[b > 0,
-        1, 0]
-     + F[a, b, c - 1, d] If[c >= b, 1, 0] If[c > 0,
-        1, 0]
-     + F[a, b, c, d - 1] If[d >= c, 1, 0] If[d > 0,
-        1, 0]
+     + F[a, b - 1, c, d] If[b >= a, 1, 0] If[b > 0, 1, 0]
+     + F[a, b, c - 1, d] If[c >= b, 1, 0] If[c > 0, 1, 0]
+     + F[a, b, c, d - 1] If[d >= c, 1, 0] If[d > 0, 1, 0]
     ]
    )
 ```
