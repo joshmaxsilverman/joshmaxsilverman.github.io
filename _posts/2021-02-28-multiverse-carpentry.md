@@ -82,7 +82,7 @@ We can translate from the list of observations into a formal rules. For an arbit
 
 $$ 
 \begin{align}
-\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots $$ \\
+\Omega(a,b,c,\ldots) &= \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots \\
 \Omega(a,b,c,\ldots) &= 0 \text{ if } \min(a,b,c,\ldots) < 0 \\
 \Omega(a,b,c,\ldots) &= 0 \text{ if } (a > b + 1)\,\mathbf{OR}\, (b > c + 1)\, \mathbf{OR}\, \ldots
 \end{align}
@@ -117,6 +117,6 @@ $$ \Omega = \dfrac{10!}{1^4\times 3^3\times 5^2\times 7} = 768 $$
 
 as expected. In general, the number of ways to build the $N$ level staircase is
 
-$$ \boxed{\Omega = \dfrac{\binom{N+1, 2}!}{\prod_i (2i-1)^(n-i)}} $$
+$$ \boxed{\Omega = \dfrac{\binom{N+1}{2}!}{\prod_i (2i-1)^(n-i)}} $$
 
 <br>
