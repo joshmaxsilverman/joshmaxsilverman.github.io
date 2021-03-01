@@ -68,7 +68,9 @@ $$
 \end{align} 
 $$
 
-By Observation $4,$ we get $\Omega(0,2,1) = \Omega(2,1,0).$ Also by Observation $4,$ these problems are equivalent to the original $2$ stair case, so $\Omega(2,1,0) = \Omega(0,2,1) = 2.$ Both terms share $\Omega(1,1,1)$ which we carry on calculating. $\Omega(1,1,1)$ gives three choices for placement:
+By Observation $4,$ we get $\Omega(0,2,1) = \Omega(2,1,0).$ Also by Observation $4,$ these problems are equivalent to the original $2$ stair case, so $\Omega(2,1,0) = \Omega(0,2,1) = 2.$ Both terms share $\Omega(1,1,1)$ which we carry on calculating. 
+
+Since the agruments are equal, $\Omega(1,1,1)$ gives three choices for placement:
 
 $$ \Omega(1,1,1) = \Omega(1,1,0) + \Omega(1,0,1) + \Omega(0,1,1). $$
 
@@ -78,7 +80,7 @@ Propagating back up the chain, this shows that $\Omega(1,1,1) = 6,$ $\Omega(2,1,
 
 ### Translating
 
-We can translate this from the list of observations into a formal list of rules. For an arbitrary number of stairs, we have
+We can translate from the list of observations into a formal rules. For an arbitrary number of stairs, we have
 
 $$ \Omega(a,b,c,\ldots) = \Omega(a-1,b,c,\ldots) + \Omega(a,b-1,c,\ldots) + \Omega(a,b,c-1,\ldots) + \ldots $$
 
