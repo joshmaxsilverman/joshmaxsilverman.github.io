@@ -102,7 +102,7 @@ $$
 $$
 
 $$
-\Omega(a,b,c,\ldots) = \begin{cases}
+\Omega(a,b,c,\ldots) = \small\begin{cases}
 1 & \left(a+b+c+\ldots\right) = 1 \\
 0 & \min(a,b,c,\ldots) < 0 \\
 0 & (b \geq a)\,\mathbf{OR}\, (c \geq b)\, \mathbf{OR}\, \ldots \\
