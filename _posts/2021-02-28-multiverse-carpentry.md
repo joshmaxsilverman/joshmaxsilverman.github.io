@@ -19,6 +19,10 @@ For the two level staircase, there's no choice for the first block, we **have** 
 
 ![](/img/2021-02-28-multiverse-carpenters-observation-2.JPG){:width="400 px" class="image-centered"}
 
+{:.caption}
+
+Schematic for Observation $2.$
+
 Moving to the three level staircase, we again need to kick things off with an "A" block. From there we can either place a "B" block (on top of the first "A" block) or we can place another "A" block, extending the first level. In the situation where we placed a "B" block second, we now have the option to place a "C" block, or to place another "A" block. 
 
 ### Some observations
