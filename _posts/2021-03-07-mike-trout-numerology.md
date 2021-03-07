@@ -35,7 +35,9 @@ $$ \frac{(N-1/2)N}{250} \leq h \lt \frac{(N+1/2)N}{250} $$
 
 This is the condition on $h$ that must be satisfied for the numerological miracle to occur. However, $h$ also has to be an integer, which means that the left and right hand sides of the inequality have to be on opposite sides of an integer. The gap between these two sides is $N/250,$ which is greater than $1$ so long as $N$ is greater than $250.$ 
 
-So, we have to march backward from $N=250$ and find the first place where the two sides do not span an integer.
+The phenomena can fail to obtain when $N \lt 250$, so long as the two sides span an integer. So, we just have to march backward from $N=250$ and find the first place where the two sides do not span an integer.
+
+We can see that the first (and greatest) failure occurs at $\boxed{N = 239}.$
 
 $$
 \begin{array}{|c|c|}\hline
