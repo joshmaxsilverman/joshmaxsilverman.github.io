@@ -15,6 +15,6 @@ date: 2021/03/07
 
 Batting average is the probability that a batter gets a hit in any given at bat, i.e.
 
-$$ \text{B.A.} = \dfrac\text{hits}\text{at bats} $$
+$$ \text{B.A.} = \dfrac{\text{hits}}{\text{at bats}} $$
 
 <br>
