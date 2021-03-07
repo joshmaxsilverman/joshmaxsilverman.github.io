@@ -27,6 +27,6 @@ $$ \text{round}(1000\times\dfrac{h}{4N}) = N $$
 
 If a number rounds to $N,$ it means that it's either up to $1/2$ less than it or up to just less than $1/2$ greater than it:
 
-$$ N - 1/2 \lt \dfrac{h}{4N} \l N + 1/2 $$
+$$ N - 1/2 \leq \dfrac{h}{4N} \lt N + 1/2 $$
 
 <br>
