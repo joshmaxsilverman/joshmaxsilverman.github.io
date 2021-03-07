@@ -27,11 +27,11 @@ $$ \text{round}(1000\times\dfrac{h}{4N}) = N $$
 
 If a number rounds to $N,$ it means that it's either up to $1/2$ less than it or up to just less than $1/2$ greater than it:
 
-$$ N - 1/2 \leq 1000\dfrac{h}{4N} \lt N + 1/2 $$
+$$ N - \frac12 \leq 1000\dfrac{h}{4N} \lt N + \frac12 $$
 
 Multiplying through to isolate $h,$ this becomes
 
-$$ \frac{(N-1/2)N}{250} \leq h \lt \frac{(N+1/2)N}{250} $$
+$$ \frac{(N-\frac12)N}{250} \leq h \lt \frac{(N+\frac12)N}{250} $$
 
 
 
