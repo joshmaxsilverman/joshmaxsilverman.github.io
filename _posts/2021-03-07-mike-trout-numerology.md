@@ -9,7 +9,7 @@ date: 2021/03/07
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-bat-299-in-299-games/))
 
 ## Solution
 
