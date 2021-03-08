@@ -1,11 +1,11 @@
 ---
 layout: post
-published: false
+published: true
 title: Mike Trout Numerology
 date: 2021/03/07
 ---
 
->Question
+>**Question**: in one of the great numerological miracles of our time, baseball players are obtaining batting averages with the same first three significant digits as the number of games in the stretch that the batting statistics are taken over. Is this an effect of rare planetary alignment? Suppose that a baseball player gets $4$ at bats in every of the $N$ games they play. What is the greatest value of $N$ for which it is impossible for the digits of their batting average (rounded to the nearest thousandth) to equal the number of games they've played in.
 
 <!--more-->
 
