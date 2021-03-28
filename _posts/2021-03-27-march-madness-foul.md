@@ -1,7 +1,7 @@
 ---
 layout: post
-published: A Permutation Most Foul
-title: 
+published: false
+title: "A Permutation Most Foul"
 date: 2021/03/27
 ---
 
