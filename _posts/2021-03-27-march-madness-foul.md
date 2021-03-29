@@ -29,6 +29,8 @@ $$\begin{align}
      &= a + ab + abc
 \end{align}$$
 
+### Permuting
+
 Permuting the players, we have $6$ potentially distinct expectation values:
 
 $$\begin{align}
@@ -42,7 +44,6 @@ $$\begin{align}
 
 All the expectations share the term $abc,$ which we can drop, which just leaves the terms of the form $x(1+y).$
 
-
 $$\begin{align}
   \langle S^\prime(a,b,c)\rangle &= a(1+b) \\
   \langle S^\prime(a,c,b)\rangle &= a(1+c) \\
@@ -51,6 +52,8 @@ $$\begin{align}
   \langle S^\prime(c,b,a)\rangle &= c(1+b) \\
   \langle S^\prime(c,a,b)\rangle &= c(1+a)
 \end{align}$$
+
+### Finding equal permutations
 
 The permutations are symmetric with respect to the variables, so we can start building the set of equal expressions with any of the $6.$ Let's start with the first.
 
@@ -62,7 +65,7 @@ The permutations are symmetric with respect to the variables, so we can start bu
 
 So, there can be at most $2$ of the expectations that are equal.
 
-## Is this a good idea?
+### Is this a good idea?
 
 Suppose we pursued this expectation. We'd have free choice of $a$ and $b,$ and we'd be forced to take
 
@@ -80,7 +83,7 @@ But if $a < b$ then the second term is negative and $c < a$ so that
 
 $$ c < a < b. $$
 
-However, to maximize the expectation $\langle S(a,b,c)\rangle,$ the probabilities need to be in decreasing order, which means that either of these equal shooting profiles is suboptimal.
+However, to maximize the expectation $\langle S(a,b,c)\rangle,$ the probabilities need to be in decreasing order, which means that the equal shooting profiles are suboptimal.
 
 
 <br>
