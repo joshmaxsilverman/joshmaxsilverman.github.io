@@ -85,5 +85,10 @@ $$ c < a < b. $$
 
 However, to maximize the expectation $\langle S(a,b,c)\rangle,$ the probabilities need to be in decreasing order, which means that the equal shooting profiles are suboptimal.
 
+### What should we do?
+
+If the first, second, and third best foul shooting percentages on the team are $p_1,$ $p_2,$ and $p_3,$ then they should go first, second, and third and the expected number of points is
+
+$$\langle S\rangle_\text{optimal} = p_1 + p_1p_2 + p_1p_2p_3. $$
 
 <br>
