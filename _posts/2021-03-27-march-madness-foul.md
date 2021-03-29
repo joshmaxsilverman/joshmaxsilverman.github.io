@@ -37,12 +37,12 @@ All the expectations share the term abc, which we can drop, which just leaves th
 
 
 $$\begin{align}
-  \langle S(a,b,c)\rangle &= a(1+b) \\
-  \langle S(a,c,b)\rangle &= a(1+c) \\
-  \langle S(b,a,c)\rangle &= b(1+a) \\
-  \langle S(b,c,a)\rangle &= b(1+c) \\
-  \langle S(c,b,a)\rangle &= c(1+b) \\
-  \langle S(c,a,b)\rangle &= c(1+a)
+  \langle S^\prime(a,b,c)\rangle &= a(1+b) \\
+  \langle S^\prime(a,c,b)\rangle &= a(1+c) \\
+  \langle S^\prime(b,a,c)\rangle &= b(1+a) \\
+  \langle S^\prime(b,c,a)\rangle &= b(1+c) \\
+  \langle S^\prime(c,b,a)\rangle &= c(1+b) \\
+  \langle S^\prime(c,a,b)\rangle &= c(1+a)
 \end{align}$$
 
 <br>
