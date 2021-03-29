@@ -25,14 +25,24 @@ $$\begin{align}
 Permuting the players, we have $6$ potentially distinct expectation values:
 
 $$\begin{align}
-  \langle S(a,b,c)\rangle &= a + ab + abc = a(1+b) + abc \\
-  \langle S(a,c,b)\rangle &= a + ac + abc = a(1+c) + abc \\
-  \langle S(b,a,c)\rangle &= b + ab + abc = b(1+a) + abc \\
-  \langle S(b,c,a)\rangle &= b + bc + abc = b(1+c) + abc \\
-  \langle S(c,b,a)\rangle &= c + cb + abc = c(1+b) + abc \\
-  \langle S(c,a,b)\rangle &= c + ca + abc = c(1+a) + abc
+  \langle S(a,b,c)\rangle &= a + ab + abc  \\
+  \langle S(a,c,b)\rangle &= a + ac + abc  \\
+  \langle S(b,a,c)\rangle &= b + ab + abc  \\
+  \langle S(b,c,a)\rangle &= b + bc + abc  \\
+  \langle S(c,b,a)\rangle &= c + cb + abc  \\
+  \langle S(c,a,b)\rangle &= c + ca + abc 
 \end{align}$$
 
 All the expectations share the term abc, which we can drop, which just leaves the terms of the form $x(1+y).$
+
+
+$$\begin{align}
+  \langle S(a,b,c)\rangle &= a(1+b) \\
+  \langle S(a,c,b)\rangle &= a(1+c) \\
+  \langle S(b,a,c)\rangle &= b(1+a) \\
+  \langle S(b,c,a)\rangle &= b(1+c) \\
+  \langle S(c,b,a)\rangle &= c(1+b) \\
+  \langle S(c,a,b)\rangle &= c(1+a)
+\end{align}$$
 
 <br>
