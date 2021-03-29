@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: A Permutation Most Foul
+published: true
+title: "A Permutation Most Foul"
 date: 2021/03/27
 ---
 
@@ -22,6 +22,17 @@ $$\begin{align}
      &= a + ab + abc
 \end{align}$$
 
+Permuting the players, we have $6$ potentially distinct expectation values:
 
+$$\begin{align}
+  \langle S(a,b,c)\rangle &= a + ab + abc = a(1+b) + abc \\
+  \langle S(a,c,b)\rangle &= a + ac + abc = a(1+c) + abc \\
+  \langle S(b,a,c)\rangle &= b + ab + abc = b(1+a) + abc \\
+  \langle S(b,c,a)\rangle &= b + bc + abc = b(1+c) + abc \\
+  \langle S(c,b,a)\rangle &= c + cb + abc = c(1+b) + abc \\
+  \langle S(c,a,b)\rangle &= c + ca + abc = c(1+a) + abc
+\end{align}$$
+
+All the expectations share the term abc, which we can drop, which just leaves the terms of the form $x(1+y).$
 
 <br>
