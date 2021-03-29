@@ -87,7 +87,7 @@ However, to maximize the expectation $\langle S(a,b,c)\rangle,$ the probabilitie
 
 ### What should we do?
 
-If the first, second, and third best foul shooting percentages on the team are $p_1,$ $p_2,$ and $p_3,$ then they should go first, second, and third and the expected number of points is
+If the first, second, and third best foul shooting percentages on the team are $p_1,$ $p_2,$ and $p_3,$ then those players should go first, second, and third and the expected number of points will be
 
 $$\langle S\rangle_\text{optimal} = p_1 + p_1p_2 + p_1p_2p_3. $$
 
