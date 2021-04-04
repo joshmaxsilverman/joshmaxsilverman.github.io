@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Beating the Sphinx
 date: 2021/04/03
 ---
 
@@ -38,7 +38,9 @@ $$ 2(1-x) = 1 + x$$
 which leads to $x = 4/3.$
 
 
-
+- layers -> exponent = $\lfloor\frac{N-1}{Q-1}\rfloor.$
+- extend to $Q - 1 > 2$ -> recursive subtrees
+- system of equations for profit 
 
 
 <br>
