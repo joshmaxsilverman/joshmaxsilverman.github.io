@@ -90,9 +90,7 @@ which gets
 
 $$ b_1 = \frac{1}{2^4 - 1}. $$
 
-Since all outcomes are equal, the maximum guaranteed profit for the worst case for $N = Q = 5$ is
-
-$$ 1 + \frac{1}{2^4 - 1}. $$
+Since all outcomes are equal, this is the maximum guaranteed profit of the worst case for $N = Q = 5.$
 
 ### Pick a Sphinx, any Sphinx
 
