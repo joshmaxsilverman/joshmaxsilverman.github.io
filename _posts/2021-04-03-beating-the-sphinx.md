@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Beating the Sphinx
 date: 2021/04/03
 ---
@@ -53,7 +53,7 @@ When $Q > 3,$ we don't get a chance at a sure bet until we've seen $(Q-1)$ of th
 
 Intuitively, we should bet less on our first guess, and progressively more as we get closer to the sure bet, as in the $Q = 3$ case. 
 
-It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. 
+It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. Let's try the $Q=5$ case, which takes $Q-2 = 3$ guesses before we reach a sure bet.
 
 - If we wager $b_1$ on the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
 - Likewise, if we wager $b_2$ on the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
@@ -89,16 +89,17 @@ which gets
 
 $$ b_1 = \frac{1}{2^4 - 1}. $$
 
-Since all outcomes are equal, the maximum guaranteed profit for the worst case for $Q = 4$ is
+Since all outcomes are equal, the maximum guaranteed profit for the worst case for $N = Q = 5$ is
 
-$$ \frac{1}{2^4 - 1}. $$
+$$ 1 + \frac{1}{2^4 - 1}. $$
 
 ### Pick a Sphinx, any Sphinx
 
+Now, as before, $N$ can be greater than $Q,$ and if $2(N-1) > Q-1,$ then the worst-case branch will be able to repeat. In general, the worst-case branch will be able to repeat $\lfloor\frac{N-1}{Q-1}\rfloor$ times.
 
+As we can see from the $Q=5$ case, the guaranteed minimum profit after the first $(Q-1)$ questions is $b_1 = 1/(2^{Q-1} - 1).$ And, after $\lfloor\frac{N-1}{Q-1}\rfloor$ questions, the profit is
 
-- extend to $Q - 1 > 2$ -> recursive subtrees
-- system of equations for profit 
+$$ (1 + b_1)^{$\lfloor\frac{N-1}{Q-1}\rfloor$} - 1 = (1 + \frac{1}{2^{Q-1}-1})^{$\lfloor\frac{N-1}{Q-1}\rfloor$} - 1 $$
 
 
 <br>
