@@ -80,8 +80,8 @@ or
 
 $$\begin{align}
 1+b_1 &= 2\left(1-b_1-b_2-b_3\right) \\
-&= 2\left(1 - b_1\left(1 + 2 + 2^2\right)\right)
-&= 2\left(1 - b_1\left(2^3-1\right)\right)
+&= 2\left(1 - b_1\left(1 + 2 + 2^2\right)\right) \\
+&= 2\left(1 - b_1\left(2^3-1\right)\right) \\
 &= 2 - 2b_1(2^3 - 1)
 \end{align}
 $$
