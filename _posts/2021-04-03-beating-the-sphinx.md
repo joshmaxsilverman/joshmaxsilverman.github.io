@@ -70,6 +70,19 @@ $$\begin{align}
 1-b_1-b_2+b_3 &= 2(1-b_1-b_2-b_3)
 \end{align}$$
 
+The first relationship gets $b_2 = 2\times b_1,$ while the second gets $b_3 = 2\times b_2 = 2^2\times b_1.$ 
+
+We can rewrite the third relationship as 
+
+$$(1-b_1-b_2-b_3) + 2b_3 = 2(1-b_1-b_2-b_3)$$
+
+or 
+
+$$\begin{align}
+b_3 &= \frac12 \left(1-b_1-b_2-b_3\right) \\
+&= \frac{1 - b_1\left(1 + 2 + 2^2\right)}{2} \\
+&= \frac{1 - b_1(2^3 - 1)}{2}
+$$
 
 
 - extend to $Q - 1 > 2$ -> recursive subtrees
