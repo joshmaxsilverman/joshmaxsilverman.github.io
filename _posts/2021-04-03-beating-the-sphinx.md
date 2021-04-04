@@ -66,23 +66,35 @@ Putting it all together, all four outcomes need to be equal to maximize the wors
 
 $$\begin{align}
 1+b_1 &= 1-b_1+b_2 \\
-1-b_1+b_2 &= 1-b_2-b_2+b_3 \\
-1-b_1-b_2+b_3 &= 2(1-b_1-b_2-b_3)
+&= 1-b_2-b_2+b_3 \\
+&= 2(1-b_1-b_2-b_3)
 \end{align}$$
 
 The first relationship gets $b_2 = 2\times b_1,$ while the second gets $b_3 = 2\times b_2 = 2^2\times b_1.$ 
 
 We can rewrite the third relationship as 
 
-$$(1-b_1-b_2-b_3) + 2b_3 = 2(1-b_1-b_2-b_3)$$
+$$ 1 + b_1 = 2(1-b_1-b_2-b_3)$$
 
 or 
 
 $$\begin{align}
-b_3 &= \frac12 \left(1-b_1-b_2-b_3\right) \\
-&= \frac{1 - b_1\left(1 + 2 + 2^2\right)}{2} \\
-&= \frac{1 - b_1(2^3 - 1)}{2}
+1+b_1 &= 2\left(1-b_1-b_2-b_3\right) \\
+&= 2\left(1 - b_1\left(1 + 2 + 2^2\right)\right)
+&= 2\left(1 - b_1\left(2^3-1\right)\right)
+&= 2 - 2b_1(2^3 - 1)
 $$
+
+which gets 
+
+$$ b_1 = \frac{1}{2^4 - 1}. $$
+
+Since all outcomes are equal, the maximum guaranteed profit for the worst case for $Q = 4$ is
+
+$$ \frac{1}{2^4 - 1}. $$
+
+### Pick a Sphinx, any Sphinx
+
 
 
 - extend to $Q - 1 > 2$ -> recursive subtrees
