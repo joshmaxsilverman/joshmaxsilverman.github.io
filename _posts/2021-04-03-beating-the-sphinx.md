@@ -33,13 +33,46 @@ $$ 2(1-x) = 1 + x$$
 
 which leads to $x = 4/3.$
 
-### Nice to see you again
+The animating idea is this: we could wait to wager until we have a sure bet, which would make maximize our best case. But this brings our winnings in the other cases to zero. By betting early, and balancing our wagers, we can raise our floor at the expense of our ceiling.
 
-The key to this strategy is that a question has already been asked. Once that's happened, in either branch, we can increased our stake to $4/3$ in at most $2$ more questions. Extending the game to $N$ questions, we can find the worst case, which is when he repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. Once this has happened, we can start our strategy over again which will require another $Q-1 = 2$ questions. So, best guaranteed worst outcome is just 
+### Ask me again, Bob
+
+The requirement to employ this strategy is that a question has already been asked. Once that's happened, then, in either branch, we can increase our stake to $4/3$ in at most $2$ more questions. 
+
+Extending the game to $N$ questions, we can find the worst case, which is when we repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. 
+
+Once this has happened, we can start our strategy over again which will require another $Q-1 = 2$ questions, and increase our stake by another factor of $4/3.$ If we have $N$ question, then we can repeat this $\lfloor(N-1)/(Q-1)\rfloor$ times in the worst branch.
+
+So, best guaranteed worst outcome is just 
 
 $$ W_\text{best worst} = \left(\dfrac43\right)^{\lfloor\frac{N-1}{2}\rfloor}. $$
 
-- layers -> exponent = $\lfloor\frac{N-1}{Q-1}\rfloor.$
+### Nice to see you again
+
+When $Q > 3,$ we don't get a chance at a sure bet until we've seen $(Q-1)$ of the same answers in a row. We still have information about the outcome once a single answer has come down, but it's less than it was for $Q = 3.$ 
+
+Intuitively, we should bet less on our first guess, and progressively more as we get closer to the sure bet, as in the $Q = 3$ case. 
+
+It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. 
+
+If we wager $b_1$ on the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
+
+Likewise, if we wager $b_2$ on the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
+
+Finally, if we wager $b_3$ on the third question, we either get lucky and have $(1-b_1 - b_2 + b_3)$ going into a restart, or get it wrong and go into the sure bet question with $(1-b_1-b_2-b_3)$ to wager. If we do get to the last case, then our stake after the sure bet will be $2(1-b_1-b_2-b_3).$
+
+As before, if the worst case outcome is less than the second worst case, it means that $b_3$ was too aggressive. Likewise, if the second to worst outcome is less than the third to worst case, it means that $b_2$ was too aggressive. And if the third to worst outcome is less than the best outcome, it means that $b_1$ was too aggressive. 
+
+Putting it all together, all four outcomes need to be equal to maximize the worst outcome:
+
+$$\begin{align}
+1+b_1 &= 1-b_1+b_2 \\
+1-b_1+b_2 &= 1-b_2-b_2+b_3 \\
+1-b_1-b_2+b_3 &= 2(1-b_1-b_2-b_3)
+\end{align}$$
+
+
+
 - extend to $Q - 1 > 2$ -> recursive subtrees
 - system of equations for profit 
 
