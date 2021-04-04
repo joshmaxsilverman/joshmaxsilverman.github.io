@@ -37,7 +37,7 @@ which leads to $x = 4/3.$
 
 The key to this strategy is that a question has already been asked. Once that's happened, in either branch, we can increased our stake to $4/3$ in at most $2$ more questions. Extending the game to $N$ questions, we can find the worst case, which is when he repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. Once this has happened, we can start our strategy over again which will require another $Q-1 = 2$ questions. So, best guaranteed worst outcome is just 
 
-$$ W_\text{best worst} = \left(\dfrac43\right)^{\lfloor \dfrac{N-1}{2}\rfloor}. $$
+$$ W_\text{best worst} = \left(\dfrac43\right)^{{\Bigg\lfloor} \dfrac{N-1}{2}{\bigg\rfloor}}. $$
 
 - layers -> exponent = $\lfloor\frac{N-1}{Q-1}\rfloor.$
 - extend to $Q - 1 > 2$ -> recursive subtrees
