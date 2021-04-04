@@ -55,11 +55,10 @@ Intuitively, we should bet less on our first guess, and progressively more as we
 
 It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. 
 
-If we wager $b_1$ on the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
-
-Likewise, if we wager $b_2$ on the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
-
-Finally, if we wager $b_3$ on the third question, we either get lucky and have $(1-b_1 - b_2 + b_3)$ going into a restart, or get it wrong and go into the sure bet question with $(1-b_1-b_2-b_3)$ to wager. If we do get to the last case, then our stake after the sure bet will be $2(1-b_1-b_2-b_3).$
+- If we wager $b_1$ on the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
+- Likewise, if we wager $b_2$ on the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
+- Finally, if we wager $b_3$ on the third question, we either get lucky and have $(1-b_1 - b_2 + b_3)$ going into a restart, or get it wrong and go into the sure bet question with $(1-b_1-b_2-b_3)$ to wager. 
+- If we do get to the last case, then our stake after the sure bet will be $2(1-b_1-b_2-b_3).$
 
 As before, if the worst case outcome is less than the second worst case, it means that $b_3$ was too aggressive. Likewise, if the second to worst outcome is less than the third to worst case, it means that $b_2$ was too aggressive. And if the third to worst outcome is less than the best outcome, it means that $b_1$ was too aggressive. 
 
