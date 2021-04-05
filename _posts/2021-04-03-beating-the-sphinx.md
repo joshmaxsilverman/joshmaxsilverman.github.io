@@ -46,11 +46,11 @@ The animating idea is this: we could wait to wager until we have a sure bet, whi
 
 The requirement to employ this strategy is that a question has already been asked. Once that's happened, then, in either branch, we can increase our stake to $4/3$ in at most $2$ more questions. 
 
-<!---
 ![](/img/2021-04-04-sphinx-payouts-base-case.png){:width="500px" class="image-centered"}
+
 {:.caption}
+
 Full tree for the $N=4, Q=3$ case. Each of the nodes at the bottom of the tree give rise to more sub-trees as $N$ gets bigger. The worst case is obtained by pasting the right most path onto the the $\mathbf{T}$ node of the left-most branch.
---->
 
 Extending the game to $N$ questions, we can find the worst case, which is when we repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. 
 
