@@ -62,14 +62,14 @@ $$ W_\text{best worst} = \left(\dfrac43\right)^{\lfloor\frac{N-1}{2}\rfloor}. $$
 
 When $Q > 3,$ we don't get a chance at a sure bet until we've seen $(Q-1)$ of the same answers in a row. We still have information about the outcome once a single answer has come down, but it's less than it was for $Q = 3.$ 
 
-Intuitively, we should bet less on our first guess, and progressively more as we get closer to the sure bet, as in the $Q = 3$ case. 
+Intuitively, we should wager less on our first guess, and progressively more as we get closer to the sure bet, as in the $Q = 3$ case. 
 
-It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. Let's try the $Q=5$ case, which takes $(Q-2) = 3$ guesses before we reach a sure bet.
+It will take a tree of at least $N = Q$ questions to get to the sure bet, so we can draw a tree of $(Q + 1)$ questions to see the structure here. Let's try the $Q=5$ case, which takes $(Q-2) = 3$ guesses before we reach a sure bet. Again, assume that the answer to the first question is $\mathbf{T}.$
 
-- If we wager $b_1$ on the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
-- Likewise, if we wager $b_2$ on the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
-- Finally, if we wager $b_3$ on the third question, we either get lucky and have $(1-b_1 - b_2 + b_3)$ going into a restart, or get it wrong and go into the sure bet question with $(1-b_1-b_2-b_3)$ to wager. 
-- If we do get to the last case, then our stake after the sure bet will be $2(1-b_1-b_2-b_3).$
+- If we wager $b_1$ on $\mathbf{F}$ for the first question, we either get lucky and have $(1+b_1)$ or get it wrong and go into the second question with $(1-b_1).$ If we do get lucky, then the process starts over and we can start the strategy again.
+- Likewise, if we wager $b_2$ on $\mathbf{F}$ for the second question, we either get lucky and have $(1-b_1 + b_2),$ after which we can restart, or we get it wrong and go into the third question with $(1-b_1-b_2).$
+- Finally, if we wager $b_3$ on $\mathbf{F}$ for the third question, we either get lucky and have $(1-b_1 - b_2 + b_3)$ going into a restart, or get it wrong and go into the sure bet question with $(1-b_1-b_2-b_3)$ to wager. 
+- If we do get to the last case, then we have a sure bet on $\mathbf{F}$ and our stake becomes $2(1-b_1-b_2-b_3)$ (we wager everything we have left).
 
 As before, if the worst-case outcome is less than the second-to-worst-case outcome, it means that $b_3$ was too aggressive. Likewise, if the second-to-worst-case outcome is less than the third-to-worst-case, it means that $b_2$ was too aggressive. And if the third-to-worst-case-outcome is less than the best-case outcome, it means that $b_1$ was too aggressive. 
 
@@ -109,7 +109,11 @@ Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ beco
 
 After $N$ questions, the profit is
 
-$$ (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 = \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 $$
+$$\begin{align}
+W_\text{best worst}(N,Q) &= (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 \\
+&= \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 
+\end{align}$$
 
+This lines up with expectations: as $Q$ grows, the questions get closer to a random coin flip and we can extract less profit per question. Also, when $Q=2,$ the questions flip-flop deterministically, and can double our money every question after the first.
 
 <br>
