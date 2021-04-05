@@ -105,7 +105,7 @@ Since all outcomes are equal, this is the maximum guaranteed profit of the worst
 
 Now, as before, $N$ can be greater than $Q,$ and if $(N-1)/(Q-1) > 2,$ then the worst-case branch will have a chance to repeat. In general, the worst-case branch will be able to repeat $\lfloor\frac{N-1}{Q-1}\rfloor$ times.
 
-Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-1} - 1),$ and the guaranteed minimum profit after the first $(Q-1)$ questions becomes $b_1 = 1/(2^{Q-1} - 1).$
+Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-2} - 1),$ and the guaranteed minimum profit after the first $(Q-1)$ questions becomes $b_1 = 1/(2^{Q-1} - 1).$
 
 After $N$ questions, the profit is
 
