@@ -35,9 +35,13 @@ which leads to $x = 4/3.$
 
 The animating idea is this: we could wait to wager until we have a sure bet, which would make maximize our best case. But this brings our winnings in the other cases to zero. By betting early, and balancing our wagers, we can raise our floor at the expense of our ceiling.
 
+![](/img/2021-04-04-basic-payoff.png){:width="400px" class="image-centered}
+
 ### Ask me again, Bob
 
 The requirement to employ this strategy is that a question has already been asked. Once that's happened, then, in either branch, we can increase our stake to $4/3$ in at most $2$ more questions. 
+
+![](/img/2021-04-04-sphinx-payouts-base-case.png){:width="400px" class="image-centered"}
 
 Extending the game to $N$ questions, we can find the worst case, which is when we repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. 
 
@@ -61,6 +65,8 @@ It will take a tree of at least $N = Q$ questions to get to the sure bet, so we 
 - If we do get to the last case, then our stake after the sure bet will be $2(1-b_1-b_2-b_3).$
 
 As before, if the worst case outcome is less than the second worst case, it means that $b_3$ was too aggressive. Likewise, if the second to worst outcome is less than the third to worst case, it means that $b_2$ was too aggressive. And if the third to worst outcome is less than the best outcome, it means that $b_1$ was too aggressive. 
+
+![](/img/2021-04-04-sphinx-recursion.png){:width="400px" class="image-centered"}
 
 Putting it all together, all four outcomes need to be equal to maximize the worst outcome:
 
