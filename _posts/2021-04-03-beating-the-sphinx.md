@@ -1,15 +1,15 @@
 ---
 layout: post
-published: true
+published: false
 title: Beating the Sphinx
-date: 2017/04/03
+date: 2021/04/03
 ---
 
 >**Question**: an oracular Sphinx gives you a starting capital of a dollar and the opportunity to wager any portion of your stake on a series of $4$ coin flips. The coin flips are completely random, except for the fact that the Sphinx guarantees there aren't any runs of $3$ like outcomes in a row (no $\mathbf{H}\rightarrow\mathbf{H}\rightarrow\mathbf{H}$ or $\mathbf{T}\rightarrow\mathbf{T}\rightarrow\mathbf{T}$).  If you set your wagers right, what is your maximum guaranteed profit for the worst-case outcome? If the Sphinx now offers you $N$ wagers, and guarantees that no $Q$ flips in a row will have the same outcome, what is your maximum guaranteed profit?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-outthink-the-sphinx/))
 
 ## Solution
 
