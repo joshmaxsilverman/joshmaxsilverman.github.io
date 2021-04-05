@@ -107,7 +107,7 @@ Now, as before, $N$ can be greater than $Q,$ and if $(N-1)/(Q-1) > 2,$ then the 
 
 As we can see from the $Q=5$ case, the guaranteed minimum profit after the first $(Q-1)$ questions is $b_1 = 1/(2^{Q-1} - 1).$ And, after $N$ questions, the profit is
 
-$$ (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 = (1 + \frac{1}{2^{Q-1}-1})^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 $$
+$$ (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 = \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 $$
 
 
 <br>
