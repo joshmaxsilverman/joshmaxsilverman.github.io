@@ -34,7 +34,7 @@ We are trying to maximize the guaranteed worst outcome. If either of these outco
 
 $$ 2(1-x) = 1 + x$$
 
-which leads to $x = 4/3,$ or a profit of $$0.33$
+which leads to $x = 4/3,$ a profit of $1/3$
 
 The animating idea is this: we could wait to wager until we have a sure bet, which would make maximize our best case. But this brings our winnings in the other cases to zero. By using our information early early, and balancing our wagers, we can raise our floor at the expense of our ceiling.
 
@@ -52,7 +52,7 @@ Full tree for the $N=4, Q=3$ case. Each of the nodes at the bottom of the tree g
 
 Extending the game to $N$ questions, we can find the worst case, which is when we repeatedly miss the first wager, and then make up for it with the sure bet on the second wager. 
 
-Once this has happened, we can start our strategy over again which will require another $(Q-1) = 2$ questions, and increase our stake by another factor of $4/3.$ If we have $N$ questions, then we can repeat this $\lfloor(N-1)/(Q-1)\rfloor$ times in the worst branch.
+Once this has happened, we can start our strategy over again which will require another $(Q-1) = 2$ questions, and will increase our stake by another factor of $4/3.$ If we have $N$ questions, then we can repeat this $\lfloor(N-1)/(Q-1)\rfloor$ times in the worst branch.
 
 So, the best worst-case outcome is just 
 
@@ -105,7 +105,7 @@ Since all outcomes are equal, this is the maximum guaranteed profit of the worst
 
 Now, as before, $N$ can be greater than $Q,$ and if $(N-1)/(Q-1) > 2,$ then the worst-case branch will have a chance to repeat. In general, the worst-case branch will be able to repeat $\lfloor\frac{N-1}{Q-1}\rfloor$ times.
 
-Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-2} - 1),$ and the guaranteed minimum profit after the first $(Q-1)$ questions becomes $b_1 = 1/(2^{Q-1} - 1).$
+Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-2} - 1),$ and the guaranteed minimum fold-increase after the first $(Q-1)$ questions becomes $1 + b_1 = 1 + 1/(2^{Q-1} - 1).$
 
 After $N$ questions, the profit is
 
