@@ -88,7 +88,7 @@ The first relationship gets $b_2 = 2\times b_1,$ while the second gets $b_3 = 2\
 The third relationshp gets
 
 $$\begin{align}
-1+b_1 &= 2\left(1-b_1-b_2-b_3\right) \\
+1+b_1 &= 2\left(1-(b_1+b_2+b_3)\right) \\
 &= 2\left(1 - b_1\left(1 + 2 + 2^2\right)\right) \\
 &= 2\left(1 - b_1\left(2^3-1\right)\right) \\
 &= 2 - 2b_1(2^3 - 1)
@@ -105,7 +105,9 @@ Since all outcomes are equal, this is the maximum guaranteed profit of the worst
 
 Now, as before, $N$ can be greater than $Q,$ and if $(N-1)/(Q-1) > 2,$ then the worst-case branch will have a chance to repeat. In general, the worst-case branch will be able to repeat $\lfloor\frac{N-1}{Q-1}\rfloor$ times.
 
-As we can see from the $Q=5$ case, the guaranteed minimum profit after the first $(Q-1)$ questions is $b_1 = 1/(2^{Q-1} - 1).$ And, after $N$ questions, the profit is
+Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-1} - 1),$ and the guaranteed minimum profit after the first $(Q-1)$ questions becomes $b_1 = 1/(2^{Q-1} - 1).$
+
+After $N$ questions, the profit is
 
 $$ (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 = \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 $$
 
