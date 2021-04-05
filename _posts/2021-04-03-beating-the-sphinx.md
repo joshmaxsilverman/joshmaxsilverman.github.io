@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Beating the Sphinx
 date: 2021/04/03
 ---
