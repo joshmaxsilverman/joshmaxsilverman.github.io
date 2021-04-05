@@ -107,11 +107,11 @@ Now, as before, $N$ can be greater than $Q,$ and if $(N-1)/(Q-1) > 2,$ then the 
 
 Generalizing the last calculation, the sum $(b_1 + b_2 + \ldots + b_{Q-2})$ becomes $(2^{Q-2} - 1),$ and the guaranteed minimum fold-increase after the first $(Q-1)$ questions becomes $1 + b_1 = 1 + 1/(2^{Q-1} - 1).$
 
-After $N$ questions, the profit is
+After $N$ questions, our winnings are
 
 $$\begin{align}
-W_\text{best worst}(N,Q) &= (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 \\
-&= \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} - 1 
+W_\text{best worst}(N,Q) &= (1 + b_1)^{\lfloor\frac{N-1}{Q-1}\rfloor} \\
+&= \left(1 + \frac{1}{2^{Q-1}-1}\right)^{\lfloor\frac{N-1}{Q-1}\rfloor} 
 \end{align}$$
 
 This lines up with expectations: as $Q$ grows, the questions get closer to a random coin flip and we can extract less profit per question. Also, when $Q=2,$ the questions flip-flop deterministically, and can double our money every question after the first.
