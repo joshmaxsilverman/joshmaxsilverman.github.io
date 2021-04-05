@@ -34,7 +34,7 @@ We are trying to maximize the guaranteed worst outcome. If either of these outco
 
 $$ 2(1-x) = 1 + x$$
 
-which leads to $x = 4/3,$ or a profit of $\$0.33$
+which leads to $x = 4/3,$ or a profit of $$0.33$
 
 The animating idea is this: we could wait to wager until we have a sure bet, which would make maximize our best case. But this brings our winnings in the other cases to zero. By using our information early early, and balancing our wagers, we can raise our floor at the expense of our ceiling.
 
