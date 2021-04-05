@@ -11,7 +11,7 @@ date: 2021/04/03
 
 ([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-outthink-the-sphinx/))
 
-*Edit: there is likely an issue with the value for $x.$ Will revisit later.* 
+**Edit**: there is likely an issue with the value for $x.$ Will revisit later.
 
 ## Solution
 
