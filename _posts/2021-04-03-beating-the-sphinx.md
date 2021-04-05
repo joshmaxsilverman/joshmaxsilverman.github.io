@@ -66,7 +66,7 @@ It will take a tree of at least $N = Q$ questions to get to the sure bet, so we 
 
 As before, if the worst case outcome is less than the second worst case, it means that $b_3$ was too aggressive. Likewise, if the second to worst outcome is less than the third to worst case, it means that $b_2$ was too aggressive. And if the third to worst outcome is less than the best outcome, it means that $b_1$ was too aggressive. 
 
-![](/img/2021-04-04-sphinx-recursion.png){:width="700px" class="image-centered"}
+![](/img/2021-04-04-sphinx-recursion.png){:width="800px" class="image-centered"}
 
 Putting it all together, all four outcomes need to be equal to maximize the worst outcome:
 
