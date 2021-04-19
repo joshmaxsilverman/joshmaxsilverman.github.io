@@ -44,7 +44,7 @@ To get started, take a book and stand it up perpendicular to the ground. This is
 
 ![](/img/2021-04-18-book-dA.png){:width="650 px" class="image-centered"}
 
-Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. (**Note**: because my book is $\sim 3$ feet away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular.)
+Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. (**Note**: because my book is $\sim 3$ feet away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular. If this isn't clear, imagine an array of lights on the wall behind the book, what will be the shape of the missing light?)
 
 ![](/img/2021-04-18-ramadan-moon-dA-cos-theta.png){:width="650 px" class="image-centered"}
 
