@@ -14,13 +14,15 @@ date: 2021/04/18
 
 ## Solution
 
-The reason we don't see the Moon during the day because it's on the other side of the Earth. The Moon takes $\sim 30$ days to orbit Earth, so we are effectively sampling it once a day throughout its orbit. 
+### Some moonlight basics
 
-The reason we see the Moon at night is that it's illuminated by the Sun. Since the Moon's orbital plane isn't the the plane of Earth's orbit around the Sun, sunlight fully illuminates one side of the Moon.
+- The reason we don't see the Moon during the day because it's on the other side of the Earth. The Moon takes $\sim 30$ days to orbit Earth, so we are effectively sampling it once a day throughout its orbit. 
 
-The reason that Moon's shape seems to change throughout the month is that its illuminated half changes the angle it makes with Earth. When Moon, Earth, and Sun we perfectly lined up (in that order), we see a full Moon. 
+- The reason we see the Moon at night is that it's illuminated by the Sun. Since the Moon's orbital plane isn't the the plane of Earth's orbit around the Sun, sunlight fully illuminates one side of the Moon.
 
-Finally, since the Moon's orbit takes a fixed amount of time, the angle that the Moon-Sun line makes with Earth varies uniformly throughout the month.
+- The reason that Moon's shape seems to change throughout the month is that its illuminated half changes the angle it makes with Earth. When Moon, Earth, and Sun we perfectly lined up (in that order), we see a full Moon. 
+
+- Finally, since the Moon's orbit takes a fixed amount of time, the angle that the Moon-Sun line makes with Earth varies uniformly throughout the month.
 
 ### Patchwork Moon
 
@@ -70,7 +72,7 @@ It is a good sign that when $\phi_\text{min} = -\pi/2,$ this expression gives $\
 
 ### Moon vs Moon
 
-The problem asks us to compare the situations at $1/6$ and $1/2$ illumination. To make the analysis simpler, let's divide the area of the illuminated region by $pi r^2$ to get the function $f(\phi_\text{min}) = \dfrac{1 - \sin \phi_\text{min}}{2}.$ Obviously, $f(0) = 1/2,$ but for what $\phi_\text{min}$ does $f$ equal $1/6$?
+The problem asks us to compare the situations at $1/6$ and $1/2$ illumination. To make the analysis simpler, let's divide the area of the illuminated region by $\pi r^2$ to get the function $f(\phi_\text{min}) = \dfrac{1 - \sin \phi_\text{min}}{2}.$ Obviously, $f(0) = 1/2,$ but for what $\phi_\text{min}$ does $f$ equal $1/6$?
 
 $$\begin{align}
 \dfrac{1 - \sin \phi_\text{min}}{2} &= 1/6 \\
