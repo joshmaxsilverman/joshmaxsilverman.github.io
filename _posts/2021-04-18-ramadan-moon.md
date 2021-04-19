@@ -50,7 +50,7 @@ Now, tilt the book backward so that it makes some angle $\theta$ with the ground
 
 Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the book's profile. Its original width goes from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
 
-The definition of $\theta$ in the Moon system and for the book are different and, when we account for the change, $\sin\theta$ becomes $\cos\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta\,d\phi\,d\theta.$
+The definition of $\theta$ in the Moon system and for the book are different and, when we account for the change, $\sin\theta$ becomes $\cos\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = d\phi\,d\theta\,r^2\cos^2\phi\cos\theta.$
 
 ![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="650 px" class="image-centered"}
 
@@ -61,7 +61,7 @@ Now, the illuminated region spans from $\theta = -\pi/2$ to $\theta = +\pi/2$ an
 $$
 \begin{align}
 \text{Illuminated area} &= \int\,dA\,\cos\phi\cos\theta \\
-&= r^2\int_\text{illuminated}\cos\phi\cos^2\theta\,d\phi\,d\theta \\
+&= r^2\int_\text{illuminated}d\phi\,d\theta\,\cos\phi\cos^2\theta \\
 &= r^2\int\limits_{\phi_\text{min}}^{\pi/2} d\phi \cos\phi \int\limits_{-\pi/2}^{+\pi/2}\,d\theta\cos^2\theta \\
 &= r^2 \times (1 - \sin\phi_\text{min}) \times \dfrac{\pi}{2} \\
 &= \pi r^2\dfrac{1 - \sin \phi_\text{min}}{2}
