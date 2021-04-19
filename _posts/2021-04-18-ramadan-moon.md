@@ -40,7 +40,7 @@ First of all, the patch is located at some angle $\phi$ away from the direct lin
 
 Now, we don't see the patches straight on from where we are Earth. Instead, we see them tilted by the angles $\theta$ and $\phi.$ As we'll see below, this affects the projected $2\text{D}$ area we see from Earth in a simple way.
 
-To get started, take a book and stand it up perpendicular to the ground. This is the area $dA:$
+To get some intuition, take a book and stand it up perpendicular to the ground. This is the area $dA:$
 
 ![](/img/2021-04-18-book-dA.png){:width="650 px" class="image-centered"}
 
