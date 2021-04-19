@@ -5,7 +5,7 @@ title: Crescent Observatory
 date: 2021/04/18
 ---
 
->**Question**: 
+>**Question**: you're watching the Moon from your room, alone, like every night. Seeking a higher purpose, you decide to track the projected area of the illuminated portion of the Moon throughout the month. If your data is accurate, how much faster will the illuminated Moon's area be growing at half Moon as compared to a crescent Moon of $1/6^\text{th}$ area?
 
 <!--more-->
 
@@ -80,7 +80,7 @@ $$\begin{align}
 
 and $\phi_\text{min} = \arcsin \frac23.$
 
-Now, the relative rate of increase of the illuminated area is just $f^\prime = \frac12 \cos\theta$ (because of our definition for $\phi,$ our $d\phi$ is negative, which flips the sign). So, the relative rate of increase is just
+Now, the relative rate of increase of the illuminated area is just $f^\prime = \frac12 \cos\theta$ (because of our definition for $\phi,$ our $d\phi$ decreases as the area increases, which flips the sign). So, the relative rate of increase is
 
 $$ \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34} $$
 
