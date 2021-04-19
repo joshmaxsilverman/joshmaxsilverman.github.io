@@ -82,9 +82,11 @@ $$\begin{align}
 
 and $\phi_\text{min} = \arcsin \frac23.$
 
-Now, the relative rate of increase of the illuminated area is just $f^\prime(\phi_\text{min}) = \frac12 \cos\phi_\text{min}$ (because of our definition for $\phi,$ it decreases as the area increases, which flips the sign). So, the relative rate of increase is
+Now, the relative rate of increase of the illuminated area is just $f^\prime(\phi_\text{min}) = \frac12 \cos\phi_\text{min}$ (because of our definition for $\phi,$ it decreases as the area increases, which flips the sign). 
 
-$$ \dfrac{f^\prime(0)}{f^\prime(\arcsin 2/3)} = \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34} $$
+So, the relative rate of increase is
+
+$$ \dfrac{f^\prime(0)}{f^\prime(\arcsin 2/3)} = \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34}. $$
 
 
 
