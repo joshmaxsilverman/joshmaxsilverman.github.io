@@ -38,7 +38,7 @@ First of all, the patch is located at some angle $\phi$ away from the direct lin
 
 ### Tilting at patches
 
-Now, we don't see the patches straight on from where we are Earth. Instead, we see them tilted by the angles $\theta$ and $\phi.$ As we'll see below, this affects the projected $2\text{D}$ area we see from Earth in a simple way.
+Now, we don't see the patches straight on from where we are on Earth. Instead, we see them tilted by the angles $\theta$ and $\phi.$ As we'll see below, this affects the projected $2\text{D}$ area we see from Earth in a simple way.
 
 To get some intuition, take a book and stand it up perpendicular to the ground. This is the area $dA:$
 
@@ -50,7 +50,7 @@ Now, tilt the book backward so that it makes some angle $\theta$ with the ground
 
 Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the book's profile. Its original width goes from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
 
-The definition of $\theta$ in the Moon system and for the book are different and, when we account for the change, $\sin\theta$ becomes $\cos\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
+The definition of $\theta$ in the Moon system and for the book are different and, when we account for the change, $\sin\theta$ becomes $\cos\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta\,d\phi\,d\theta.$
 
 ![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="650 px" class="image-centered"}
 
