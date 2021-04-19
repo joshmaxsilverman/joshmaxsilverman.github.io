@@ -44,13 +44,13 @@ To get some intuition, take a book and stand it up perpendicular to the ground. 
 
 ![](/img/2021-04-18-book-dA.png){:width="650 px" class="image-centered"}
 
-Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. (**Note**: because my book is $\sim 3$ feet away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular. If this isn't clear, imagine an array of lights on the wall behind the book, what will be the shape of the missing light?)
+Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. (**Note**: because my book is $\sim 3$ feet away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular)
 
 ![](/img/2021-04-18-ramadan-moon-dA-cos-theta.png){:width="650 px" class="image-centered"}
 
-Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the books profile. Its original width will go from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
+Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the book's profile. Its original width goes from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
 
-Now, the definition of $\theta$ in the Moon system and for our book are different, and when we account for the change, $\sin\theta$ becomes $\sin\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
+The definition of $\theta$ in the Moon system and for the book are different and, when we account for the change, $\sin\theta$ becomes $\cos\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
 
 ![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="650 px" class="image-centered"}
 
