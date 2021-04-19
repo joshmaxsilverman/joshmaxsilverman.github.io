@@ -40,17 +40,17 @@ Now, we don't see the patches straight on from where we are Earth. Instead, we s
 
 To get started, take a book and stand it up perpendicular to the ground. This is the area $dA:$
 
-![](/img/2021-04-18-book-dA.png){:width="450 px" class="image-centered"}
+![](/img/2021-04-18-book-dA.png){:width="650 px" class="image-centered"}
 
-Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. Because my book is $\sim \SI{3}{feet}$ away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular.
+Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. Because my book is $\sim 3$ feet away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular.
 
-![](/img/2021-04-18-ramadan-moon-dA-cos-theta.png){:width="450 px" class="image-centered"}
+![](/img/2021-04-18-ramadan-moon-dA-cos-theta.png){:width="650 px" class="image-centered"}
 
 Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the books profile. Its original width will go from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
 
 Now, the definition of $\theta$ in the Moon system and for our book are different, and when we account for the change, $\sin\theta$ becomes $\sin\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
 
-![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="450 px" class="image-centered"}
+![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="650 px" class="image-centered"}
 
 ### Sewing the patches
 
