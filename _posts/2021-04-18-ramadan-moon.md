@@ -20,7 +20,7 @@ date: 2021/04/18
 
 - The reason we see the Moon at night is that it's illuminated by the Sun. Since the Moon's orbital plane isn't the the plane of Earth's orbit around the Sun, sunlight fully illuminates one side of the Moon.
 
-- The reason that Moon's shape seems to change throughout the month is that its illuminated half changes the angle it makes with Earth. When Moon, Earth, and Sun we perfectly lined up (in that order), we see a full Moon. 
+- The reason that Moon's shape seems to change throughout the month is that its illuminated half changes the angle it makes with Earth. When Moon, Earth, and Sun we perfectly lined up (in that order), we see a full Moon. Similarly, when the Moon is in front of Earth, we see a nearly black (New) Moon. 
 
 - Finally, since the Moon's orbit takes a fixed amount of time, the angle that the Moon-Sun line makes with Earth varies uniformly throughout the month.
 
