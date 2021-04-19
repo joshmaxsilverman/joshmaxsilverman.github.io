@@ -63,7 +63,7 @@ $$
 \text{Illuminated area} &= \int \cos\phi\cos\theta\,dA \\
 &= r^2\int_\text{illuminated}\cos\phi\cos^2\theta\,d\phi\,d\theta \\
 &= r^2\int\limits_{\phi_\text{min}}^{\pi/2} d\phi \cos\phi \int\limits_{-\pi/2}^{+\pi/2}\,d\theta\cos^2\theta \\
-&= r^2 \times (1 - \sin\phi_\text{min}) \times \dfrac{\pi}{2}
+&= r^2 \times (1 - \sin\phi_\text{min}) \times \dfrac{\pi}{2} \\
 &= \pi r^2\dfrac{1 - \sin \phi_\text{min}}{2}
 \end{align}
 $$
@@ -84,7 +84,7 @@ and $\phi_\text{min} = \arcsin \frac23.$
 
 Now, the relative rate of increase of the illuminated area is just $f^\prime(\phi_\text{min}) = \frac12 \cos\phi_\text{min}$ (because of our definition for $\phi,$ it decreases as the area increases, which flips the sign). So, the relative rate of increase is
 
-$$ \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34} $$
+$$ \dfrac{f^\prime(0)}{f^\prime(\arcsin 2/3)} = \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34} $$
 
 
 
