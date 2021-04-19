@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Crescent Observatory
 date: 2021/04/18
 ---
@@ -10,6 +10,7 @@ date: 2021/04/18
 <!--more-->
 
 ([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-crack-the-case-of-the-crescent-moon/))
+
 
 ## Solution
 
@@ -27,19 +28,29 @@ If we want to measure the illuminated area of the Moon, we can divide the Moon u
 
 First, let's worry about the surface area of the patch, i.e., the area it would present to us if we looked at it flat. 
 
-We can introduce some coordinates to measure along the surface. First of all, the patch is located at some angle $\phi$ away from the direct line of sight from Earth to the center of the Moon. Additionally, it is located at another angle $\theta$ above the equator established by the line of sight from Earth. The patch itself has some angular extent $d\phi$ and $d\theta.$ Even thought the Moon is curved, since these angles are small, the patch is effectively a rectangle, and its area is just $r\,d\theta$ by $r\cos\theta\,d\phi,$ or $dA = r^2\cos\theta\,d\theta\,d\phi.$ 
+We can introduce some coordinates to measure along the surface. 
+
+![](/img/2021-04-18-ramadan-moon-diagram.png){:width="450 px" class="image-centered"}
+
+First of all, the patch is located at some angle $\phi$ away from the direct line of sight from Earth to the center of the Moon. Additionally, it is located at another angle $\theta$ above the equator established by the line of sight from Earth. The patch itself has some angular extent $d\phi$ and $d\theta.$ Even though the Moon is curved, since these angles are small, the patch is effectively a rectangle, and its area is just $r\,d\theta$ by $r\cos\theta\,d\phi,$ or $dA = r^2\cos\theta\,d\theta\,d\phi.$ 
 
 ### Tilting at patches
 
 Now, we don't see the patches straight on from where we are Earth. Instead, we see them tilted by the angles $\theta$ and $\phi.$ As we'll see below, this affects the projected $2\text{D}$ area we see from Earth in a simple way.
 
-To get started, take a book and stand it up perpendicular to the ground. This is the area $dA.$
+To get started, take a book and stand it up perpendicular to the ground. This is the area $dA:$
+
+![](/img/2021-04-18-book-dA.png){:width="450 px" class="image-centered"}
 
 Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. Because my book is $\sim \SI{3}{feet}$ away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular.
+
+![](/img/2021-04-18-ramadan-moon-dA-cos-theta.png){:width="450 px" class="image-centered"}
 
 Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the books profile. Its original width will go from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
 
 Now, the definition of $\theta$ in the Moon system and for our book are different, and when we account for the change, $\sin\theta$ becomes $\sin\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
+
+![](/img/2021-04-21-ramadan-moon-dA-cos-theta-cos-phi.png){:width="450 px" class="image-centered"}
 
 ### Sewing the patches
 
