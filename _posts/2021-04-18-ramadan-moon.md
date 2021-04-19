@@ -60,7 +60,7 @@ Now, the illuminated region spans from $\theta = -\pi/2$ to $\theta = +\pi/2$ an
 
 $$
 \begin{align}
-\text{Illuminated area} &= \int \cos\phi\cos\theta\,dA \\
+\text{Illuminated area} &= \int\,dA\,\cos\phi\cos\theta \\
 &= r^2\int_\text{illuminated}\cos\phi\cos^2\theta\,d\phi\,d\theta \\
 &= r^2\int\limits_{\phi_\text{min}}^{\pi/2} d\phi \cos\phi \int\limits_{-\pi/2}^{+\pi/2}\,d\theta\cos^2\theta \\
 &= r^2 \times (1 - \sin\phi_\text{min}) \times \dfrac{\pi}{2} \\
