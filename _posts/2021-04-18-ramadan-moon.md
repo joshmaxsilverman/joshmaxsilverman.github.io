@@ -35,6 +35,44 @@ Now, we don't see the patches straight on from where we are Earth. Instead, we s
 
 To get started, take a book and stand it up perpendicular to the ground. This is the area $dA.$
 
-Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\cos\theta$ times its original height.
+Now, tilt the book backward so that it makes some angle $\theta$ with the ground. This will preserve the width of the book while shortening the height to $\sin\theta$ times its original height. Because my book is $\sim \SI{3}{feet}$ away instead of hundreds of thousands of miles, perspective gives the illusion of a trapezoid, but the patch remains rectangular.
+
+Now, rotate the book an angle $\phi$ from its current orientation, which will further slim the books profile. Its original width will go from $w$ to $w\cos\phi,$ bringing the area of the path from $dA$ to $dA\sin\theta\cos\phi.$ 
+
+Now, the definition of $\theta$ in the Moon system and for our book are different, and when we account for the change, $\sin\theta$ becomes $\sin\theta,$ bringing the new patch area to $dA^\prime = dA\cos\theta\cos\phi = r^2\cos^2\phi\cos\theta.$
+
+### Sewing the patches
+
+Now, the illuminated region spans from $\theta = -\pi/2$ to $\theta = +\pi/2$ and from whatever angle $\phi_\text{min}$ to $\phi=+\pi/2,$ with $\phi_\text{min}$ depending on the phase the Moon is in. To get the illuminated projected area, we just need to add up the area of all the little patches to the right of the yellow line:
+
+$$
+\begin{align}
+\text{Illuminated area} &= \int \cos\phi\cos\theta\,dA \\
+&= r^2\int_\text{illuminated}\cos\phi\cos^2\theta\,d\phi\,d\theta \\
+&= r^2\int\limits_{\phi_\text{min}}^{\pi/2} d\phi \cos\phi \int\limits_{-\pi/2}^{+\pi/2}\,d\theta\cos^2\theta \\
+&= r^2 \times (1 - \sin\phi_\text{min}) \times \dfrac{\pi}{2}
+&= \pi r^2\dfrac{1 - \sin \phi_\text{min}}{2}
+\end{align}
+$$
+
+It is a good sign that when $\phi_\text{min} = -\pi/2,$ this expression gives $\pi r^2,$ the area of a circle, the flat projection of the Moon.
+
+### Moon vs Moon
+
+The problem asks us to compare the situations at $1/6$ and $1/2$ illumination. To make the analysis simpler, let's divide the area of the illuminated region by $pi r^2$ to get the function $f(\phi_\text{min}) = \dfrac{1 - \sin \phi_\text{min}}{2}.$ Obviously, $f(0) = 1/2,$ but for what $\phi_\text{min}$ does $f$ equal $1/6$?
+
+$$\begin{align}
+\dfrac{1 - \sin \phi_\text{min}}{2} &= 1/6 \\
+1 - \sin \phi_\text{min} &= 1/3 \\
+2/3 &= \sin \phi_\text{min}
+\end{align}$$
+
+and $\phi_\text{min} = \arcsin \frac23.$
+
+Now, the relative rate of increase of the illuminated area is just $f^\prime = \frac12 \cos\theta$ (because of our definition for $\phi,$ our $d\phi$ is negative, which flips the sign). So, the relative rate of increase is just
+
+$$ \boxed{\dfrac{\cos 0}{\cos\arcsin\frac23} = \dfrac{3}{\sqrt{5}} \approx 1.34} $$
+
+
 
 <br>
