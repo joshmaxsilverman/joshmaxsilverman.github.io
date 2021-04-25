@@ -27,9 +27,9 @@ $$ P(\text{comeback}) = \sum_{A_1, A_2} P(A_1, n_1) \times P(A_2, n_2) $$
 
 ### Respect your limits
 
-The greatest number of votes the election night loser can get, yet still go on to win is one less than half the votes counted on election night, ($\frac12 n_1 - 1$). Similarly, the least number of votes that a comeback candidate can get on election night is $1$ more than half the total number of votes minus all the mail-in votes ($1 + \frac12 (n_1 + n_2) - n_2.$
+The greatest number of votes the election night loser can get, yet still go on to win is one less than half the votes counted on election night, ($\frac12 n_1 - 1$). Similarly, the least number of votes that a comeback candidate can get on election night is $1$ more than half the total number of votes minus all the mail-in votes ($1 + \frac12 (n_1 + n_2) - n_2).$
 
-Given $A_1$ votes on election night, the fewest votes the comeback candidate can get in the mail-ins is $A_1$ fewer than one more than half the total votes, $1 + \frac12 (n_1 + n_2) - A_1.$ The greatest number of votes they can get is just all of the available mail-in votes, $n_2.$
+Given $A_1$ votes on election night, the fewest votes the comeback candidate can get in the mail-ins is $A_1$ fewer than one more than half the total votes, $(1 + \frac12 (n_1 + n_2) - A_1).$ The greatest number of votes they can get is just all of the available mail-in votes, $n_2.$
 
 ### Add 'em up
 
