@@ -37,4 +37,6 @@ Putting this together, we have an answer for a finite voting population
 
 $$ P(\text{comeback}) = \sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2}\,\sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} P(A_1, n_1)\times P(A_2 n_2) $$
 
+If, say, our population has $1000$ people, then $n_1 = 800,$ $n_2 = 200,$ and $P(\text{comeback}) = $
+
 <br>
