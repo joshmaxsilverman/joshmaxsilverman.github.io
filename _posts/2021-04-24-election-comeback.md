@@ -35,6 +35,6 @@ Given $A_1$ votes on election night, the fewest votes the comeback candidate can
 
 Putting this together, we have an answer for a finite voting population
 
-$$ P(\text{comeback}) = \sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2}\sum_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} P(A_1, n_1)\times P(A_2 n_2) $$
+$$ P(\text{comeback}) = \sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2}\,\sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} P(A_1, n_1)\times P(A_2 n_2) $$
 
 <br>
