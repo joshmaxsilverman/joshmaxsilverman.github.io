@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Election Comeback
 date: 2021/04/24
 ---
@@ -17,6 +17,24 @@ The trick we're interested in is for the loser on election night to go on to be 
 
 $$ P(\text{less than half on election night, but majority overall}) $$
 
-The greatest number of votes the election night loser can get, yet still go on to win is one less than half the votes counted on election night ($\frac12 n_1 - 1$). Similarly, the the greatest number of votes that can get is $1$ less than half the total number of votes ($\frac12 (n_1 + n_2) - 1.$
+Each person's vote is independent, so the probability that candidate $A$ gets $A_i$ votes total out of a bundle of $n_i$ votes is
+
+$$ P(A_i, n_i) = \binom{n_i}{A_i} p^{A_i} (1-p)^{n_i - A_i}. $$
+
+The overall probability of a comeback is the sum over all possible vote totals $A_1$ and $A_2$ that satisfy the conditions we laid out above:
+
+$$ P(\text{comeback}) = \sum_{A_1, A_2} P(A_1, n_1) \times P(A_2, n_2) $$
+
+### Respect your limits
+
+The greatest number of votes the election night loser can get, yet still go on to win is one less than half the votes counted on election night, ($\frac12 n_1 - 1$). Similarly, the least number of votes that a comeback candidate can get on election night is $1$ more than half the total number of votes minus all the mail-in votes ($1 + \frac12 (n_1 + n_2) - n_2.$
+
+Given $A_1$ votes on election night, the fewest votes the comeback candidate can get in the mail-ins is $A_1$ fewer than one more than half the total votes, $1 + \frac12 (n_1 + n_2) - A_1.$ The greatest number of votes they can get is just all of the available mail-in votes, $n_2.$
+
+### Add 'em up
+
+Putting this together, we have an answer for a finite voting population
+
+$$ P(\text{comeback}) = \sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2}\sum_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} P(A_1, n_1)\times P(A_2 n_2) $$
 
 <br>
