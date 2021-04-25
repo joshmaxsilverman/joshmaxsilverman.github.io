@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Election Comeback
 date: 2021/04/24
 ---
