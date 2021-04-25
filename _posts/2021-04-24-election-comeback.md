@@ -35,7 +35,7 @@ Given $A_1$ votes on election night, the fewest votes the comeback candidate can
 
 Putting this together, we have an answer for a finite voting population
 
-$$ P(\text{comeback}) = \sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2}\,\sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} P(A_1, n_1)\times P(A_2 n_2) $$
+$$ P(\text{comeback}) = \sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1}\,\sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2} P(A_1, n_1)\times P(A_2 n_2) $$
 
 If, say, our population had $100$ people, then $n_1 = 80,$ $n_2 = 20,$ and 
 
@@ -48,10 +48,12 @@ However, our population has many, many people, so this simply will not do.
 
 ### Open the gates
 
-For small populations, we can feel the discrete nature of the vote's binomial distribution, with substantial jumps at vote totals around the mean. However, when the population gets big, the binomial distribution smooths out and closely resembles a Gaussian of the same mean and variance. So, we get
+For small populations, we can feel the discrete nature of the vote's binomial distribution, with substantial jumps at vote totals around the mean. But, when the population gets big, the binomial distribution smooths out and closely resembles a Gaussian of the same mean and variance. We get
 
-$$ \binom{n}{A}p^A(1-p)^(n-A) \rightarrow \frac{1}{\sqrt{2\pi n p(1-p)} e^{-(A-np)^2/2np(1-p)} $$
+$$ P(A, n) = \binom{n}{A}p^A(1-p)^(n-A) \rightarrow \frac{1}{\sqrt{2\pi n p(1-p)} e^{-(A-np)^2/2np(1-p)} $$
 
+Turning the sums into integrals, we get
 
+$$ \int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2 P(A_1,n_1)\times P(A_2,n_2) $$
 
 <br>
