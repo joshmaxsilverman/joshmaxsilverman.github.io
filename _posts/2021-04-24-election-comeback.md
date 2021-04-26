@@ -102,4 +102,6 @@ So, the overall result becomes
 
 $P(\text{comeback}) = \left(\frac12 - \frac{1}{2\pi}\arctan\sqrt{\frac{f}{1-f}}\right)\times\delta_{p,1/2}.
 
+The plot thickens...
+
 <br>
