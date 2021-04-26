@@ -80,13 +80,18 @@ The inner integral produces the complementary error function and the outer integ
 
 Putting this together, $P(\text{comeback})$ becomes 
 
-$$ \frac12 - \frac{1}{2\pi}\arccot\sqrt{\frac{n_2}{n_1}} $$
+$$ \frac12 - \frac{1}{2\pi}\arctan\sqrt{\frac{n_1}{n_2}} $$
 
 or, letting $n_1 = fN$ and $n_2 = (1-f)N,$
 
-$$ P(\text{comeback}) = \frac12 - \frac{1}{2\pi}\arccot\sqrt{\frac{1}{f} - 1} $$
+$$ P(\text{comeback}) = \frac12 - \frac{1}{2\pi}\arctan\sqrt{\frac{f}{1-f}} $$
 
 which, for $f =  8/10$ comes out to $\approx 0.147584$
 
+### Real elections
+
+In a real election, $p \neq \frac12,$ so what should we expect then? If we work through the change of variables without setting $p$ to $\frac12,$ we arrive at more interesting integration limits:
+
+$$ \int\limits_{n_1(\frac12 -p)-\frac12 n_2}^{n_1(\frac12-p)}dA_1^\prime\,\int\limits_{(n_1+n_2)(\frac12-p)-A_1^\prime}^{n_2(1-p)}dA_2^\prime\,\text{integrand} $$
 
 <br>
