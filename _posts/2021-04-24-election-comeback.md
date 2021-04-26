@@ -55,7 +55,7 @@ $$ P(A, n) = \binom{n}{A}p^A(1-p)^{n-A} \rightarrow \frac{1}{\sqrt{2\pi n p(1-p)
 Turning the sums into integrals, it becomes
 
 $$
-P(\text{comeback}) &= \int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2)
+P(\text{comeback}) = \int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2)
 $$
 
 For now, we can set $p$ to $\frac12$ 
@@ -63,5 +63,7 @@ For now, we can set $p$ to $\frac12$
 $$
 \frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2(A_1-\frac12n_1)^2/n_1} e^{-2(A_2-\frac12n_2)^2/n_2}
 $$
+
+The exponentials suggest the new variables $A_1^\prime = A_1 - \frac12 n_1$ and $A_2^\prime = A_2 - \frac12 n_2$
 
 <br>
