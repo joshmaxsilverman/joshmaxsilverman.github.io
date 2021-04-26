@@ -35,7 +35,7 @@ Given $A_1$ votes on election night, the fewest votes the comeback candidate can
 
 Putting this together, we have an answer for a finite voting population
 
-$$ P(\text{comeback}) = \sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1}\,\sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2} P(A_1, n_1)\times P(A_2 n_2) $$
+$$ P(\text{comeback}) = 2\sum_{A_1 = 1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1}\,\sum_{A_2 = 1 + \frac12(n_1+n_2) - A_1}^{n_2} P(A_1, n_1)\times P(A_2 n_2) $$
 
 If, say, our population had $100$ people, then $n_1 = 80,$ $n_2 = 20,$ and 
 
@@ -55,27 +55,38 @@ $$ P(A, n) = \binom{n}{A}p^A(1-p)^{n-A} \rightarrow \frac{1}{\sqrt{2\pi n p(1-p)
 Turning the sums into integrals, it becomes (the $1$s go to zero)
 
 $$
-P(\text{comeback}) = \int\limits_{\frac12(n_1 - n_2)}^{\frac12 n_1} dA_1 \int\limits_{\frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2)
+P(\text{comeback}) = 2\int\limits_{\frac12(n_1 - n_2)}^{\frac12 n_1} dA_1 \int\limits_{\frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2)
 $$
 
 For now, we can set $p$ to $\frac12$ 
 
 $$
-\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{\frac12(n_1 - n_2)}^{\frac12 n_1} dA_1 \int\limits_{\frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2(A_1-\frac12n_1)^2/n_1} e^{-2(A_2-\frac12n_2)^2/n_2}
+\frac{4}{\pi\sqrt{n_1 n_2}}\int\limits_{\frac12(n_1 - n_2)}^{\frac12 n_1} dA_1 \int\limits_{\frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2(A_1-\frac12n_1)^2/n_1} e^{-2(A_2-\frac12n_2)^2/n_2}
 $$
 
 The exponentials suggest the new variables $A_1^\prime = A_1 - \frac12 n_1$ and $A_2^\prime = A_2 - \frac12 n_2.$ Applying these transformations to the limits
 
 $$
-\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{-\frac12n_2}^{0} dA_1^\prime\, e^{-2{A_1^\prime}^2/n_1} \int\limits_{-A_1^\prime}^{\frac12n_2} dA_2^\prime\, e^{-2{A_2^\prime}^2/n_2}
+\frac{4}{\pi\sqrt{n_1 n_2}}\int\limits_{-\frac12n_2}^{0} dA_1^\prime\, e^{-2{A_1^\prime}^2/n_1} \int\limits_{-A_1^\prime}^{\frac12n_2} dA_2^\prime\, e^{-2{A_2^\prime}^2/n_2}.
 $$
 
 Because the exponential dies quickly away from the mean, we can replace the $\frac12 n_2$s in the limits by $\infty,$ and 
 
 $$
-\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{-\infty}^{0} dA_1^\prime\, e^{-2{A_1^\prime}^2/n_1} \int\limits_{-A_1^\prime}^{\infty} dA_2^\prime\, e^{-2{A_2^\prime}^2/n_2}
+\frac{4}{\pi\sqrt{n_1 n_2}}\int\limits_{-\infty}^{0} dA_1^\prime\, e^{-2{A_1^\prime}^2/n_1} \int\limits_{-A_1^\prime}^{\infty} dA_2^\prime\, e^{-2{A_2^\prime}^2/n_2}.
 $$
 
+The inner integral produces the complementary error function and the outer integral can be found in the ["compendium of indefinite and definite integrals of products of the Error function with elementary or transcendental functions."](https://nvlpubs.nist.gov/nistpubs/jres/73b/jresv73bn1p1_a1b.pdf)
+
+Putting this together, $P(\text{comeback})$ becomes 
+
+$$ \frac12 - \frac{1}{2\pi}\arccot\sqrt{\frac{n_2}{n_1}} $$
+
+or, letting $n_1 = fN$ and $n_2 = (1-f)N,$
+
+$$ P(\text{comeback}) = \frac12 - \frac{1}{2\pi}\arccot\sqrt{\frac{1}{f} - 1} $$
+
+which, for $f =  8/10$ comes out to $\approx 0.147584$
 
 
 <br>
