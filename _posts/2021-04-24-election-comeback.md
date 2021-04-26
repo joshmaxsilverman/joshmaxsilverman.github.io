@@ -64,6 +64,11 @@ $$
 \frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{1 + \frac12(n_1 - n_2)}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2(A_1-\frac12n_1)^2/n_1} e^{-2(A_2-\frac12n_2)^2/n_2}
 $$
 
-The exponentials suggest the new variables $A_1^\prime = A_1 - \frac12 n_1$ and $A_2^\prime = A_2 - \frac12 n_2$
+The exponentials suggest the new variables $A_1^\prime = A_1 - \frac12 n_1$ and $A_2^\prime = A_2 - \frac12 n_2.$ Applying these transformations to the limits
+
+$$
+\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{1 + \frac12(n_1 - n_2)}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2{A_1^\prime}^2/n_1} e^{-2{A_2^\prime}^2/n_2}
+$$
+
 
 <br>
