@@ -54,11 +54,14 @@ $$ P(A, n) = \binom{n}{A}p^A(1-p)^{n-A} \rightarrow \frac{1}{\sqrt{2\pi n p(1-p)
 
 Turning the sums into integrals, it becomes
 
-$$ \begin{align}
-P(\text{comeback}) &= \int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2) \\
-&= \frac{1}{\sqrt{4\pi^2 n_1 n_2 p^2(1-p)^2}}\int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-(A_1-n_1p)^2/2n_1p(1-p)} e^{-(A_2-n_2p)^2/2n_2p(1-p)}
-\end{align} $$
+$$
+P(\text{comeback}) &= \int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, P(A_1,n_1)\times P(A_2,n_2)
+$$
 
 For now, we can set $p$ to $\frac12$ 
+
+$$
+\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{1 + \frac12(n_1 + n_2) - n_2}^{\frac12 n_1 - 1} dA_1 \int\limits_{1 + \frac12(n_1+n_2) - A_1}^{n_2} dA_2\, e^{-2(A_1-\frac12n_1)^2/n_1} e^{-2(A_2-\frac12n_2)^2/n_2}
+$$
 
 <br>
