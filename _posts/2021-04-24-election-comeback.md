@@ -70,5 +70,12 @@ $$
 \frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{-\frac12n_2}^{0} dA_1 \int\limits_{-A_1^\prime}^{\frac12n_2} dA_2\, e^{-2{A_1^\prime}^2/n_1} e^{-2{A_2^\prime}^2/n_2}
 $$
 
+Because the exponential dies quickly away from the mean, we can replace the $\frac12 n_2$s in the limits by $\infty,$ and 
+
+$$
+\frac{2}{\pi\sqrt{n_1 n_2}}\int\limits_{-\infty}^{0} dA_1 \int\limits_{-A_1^\prime}^{\infty} dA_2\, e^{-2{A_1^\prime}^2/n_1} e^{-2{A_2^\prime}^2/n_2}
+$$
+
+
 
 <br>
