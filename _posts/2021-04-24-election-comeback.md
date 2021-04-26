@@ -92,6 +92,14 @@ which, for $f =  8/10$ comes out to $\approx 0.147584$
 
 In a real election, $p \neq \frac12,$ so what should we expect then? If we work through the change of variables without setting $p$ to $\frac12,$ we arrive at more interesting integration limits:
 
-$$ \int\limits_{n_1(\frac12 -p)-\frac12 n_2}^{n_1(\frac12-p)}dA_1^\prime\,\int\limits_{(n_1+n_2)(\frac12-p)-A_1^\prime}^{n_2(1-p)}dA_2^\prime\,\text{integrand} $$
+$$ \int\limits_{n_1(\frac12 -p)-\frac12 n_2}^{n_1(\frac12-p)}dA_1^\prime\,\int\limits_{(n_1+n_2)(\frac12-p)-A_1^\prime}^{n_2(1-p)}dA_2^\prime\,\text{(the integrand)}. $$
+
+If $p > \frac12$ then both the lower and upper limit on the outer integral go to $-\infty$ and $P(\text{comeback})$ goes to zero. Likewise, if $p < \frac12$ then both the lower and upper limit on the outer integral go to $+\infty,$ again bringing $P(\text{comeback})$ to zero.
+
+In effect, this comeback phenomena can only happen when $p$ is precisely equal to $\frac12.$ Literally any other value will drive $P(\text{comeback})$ to zero.
+
+So, the overall result becomes
+
+$P(\text{comeback}) = \left(\frac12 - \frac{1}{2\pi}\arctan\sqrt{\frac{f}{1-f}}\right)\times\delta_{p,1/2}.
 
 <br>
