@@ -88,6 +88,8 @@ $$ P(\text{comeback}) = \frac12 - \frac{1}{2\pi}\arctan\sqrt{\frac{f}{1-f}} $$
 
 which, for $f =  8/10$ comes out to $\approx 0.147584$
 
+![](/img/2021-04-24-plot-full.PNG){:width="400px" class="image-centered"}
+
 ### Real elections
 
 In a real election, $p \neq \frac12,$ so what should we expect then? If we work through the change of variables without setting $p$ to $\frac12,$ we arrive at more interesting integration limits:
@@ -97,6 +99,16 @@ $$ \int\limits_{n_1(\frac12 -p)-\frac12 n_2}^{n_1(\frac12-p)}dA_1^\prime\,\int\l
 If $p > \frac12$ then both the lower and upper limit on the outer integral go to $-\infty$ and $P(\text{comeback})$ goes to zero when we take the limit of large $n_1, n_2.$ Likewise, if $p < \frac12$ then both the lower and upper limit on the outer integral go to $+\infty,$ again bringing $P(\text{comeback})$ to zero.
 
 In effect, this comeback phenomena can only happen when $p$ is precisely equal to $\frac12.$ Literally any other value will drive $P(\text{comeback})$ to zero.
+
+This prediction is confirmed by simulating the system with increasing population size. 
+
+When $p=\frac12$ exactly, $P(\text{comeback})$ approaches the prediction asymptotically:
+
+![](/img/2021-04-24-plot-500.JPG){:width="400px" class="image-centered"}
+
+But when $p$ is off by just $1$ part in $1000,$ $P(\text{comeback})$ crashes to zero as the system size eclipses $N=10^5.$ 
+
+![](/img/2021-04-24-plot-501.JPG){:width="400px" class="image-centered"}
 
 So, the overall result becomes
 
