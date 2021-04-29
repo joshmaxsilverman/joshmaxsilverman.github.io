@@ -104,11 +104,11 @@ This prediction is confirmed by simulating the system with increasing population
 
 When $p=\frac12$ exactly, $P(\text{comeback})$ approaches the prediction asymptotically:
 
-![](/img/2021-04-24-plot-500.JPG){:width="400px" class="image-centered"}
+![](/img/2021-04-24-comeback-500.JPG){:width="400px" class="image-centered"}
 
 But when $p$ is off by just $1$ part in $1000,$ $P(\text{comeback})$ crashes to zero as the system size eclipses $N=10^5.$ 
 
-![](/img/2021-04-24-plot-501.JPG){:width="400px" class="image-centered"}
+![](/img/2021-04-24-comeback-501.JPG){:width="400px" class="image-centered"}
 
 So, the overall result becomes
 
