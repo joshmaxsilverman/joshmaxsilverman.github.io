@@ -70,8 +70,8 @@ $$
 
 We can build on this logic to find the best decision when we have $2$ throws left.
 
-We found that with $S2$ total accumulated points, and $T=1$ turn remaining, the expected value of our position is $\frac{4}{10},$ or, in other words, $V(2,1) = \frac{4}{10}.$ 
+We found that with $S = 2$ total accumulated points, and $T = 1$ turn remaining, the expected value of our position is $\frac{4}{10}.$ In other words, $V(2,1) = \frac{4}{10}.$ 
 
-In g
+In general, we want to know the expected value of our position when we have $s$ accumulated points, and $t$ turns remaining, $V(s,t).$
 
 <br>
