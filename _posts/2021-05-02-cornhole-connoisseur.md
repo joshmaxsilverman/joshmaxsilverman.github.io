@@ -5,7 +5,7 @@ title: Cornhole Connoisseur
 date: 2020/05/02
 ---
 
->**Question**: 
+>**Question**: it's the end of a close game of cornhole, and your team is $3$ points away from the win. By house rules, you have to hit the $3$ points exactly, or you lose. On your team are three athletes. The first is **The Aggressor** who has a $40%$ chance to get the cornhole, a $30%$ chance to hit the board and a $30%$ chance to miss entirely. The second is **The Conservative** who has a $10%$ chance to get the cornhole, a whopping $80%$ chance to hit the board, and a $10%$ chance to miss entirely. Finally, there's **The Waste** who's blind drunk at every game and will always miss the board. Given your roster and the free choice to use any of them in any situation, and you play optimally, what is the chance that you win the game?
 
 <!--more-->
 
@@ -98,7 +98,7 @@ Calculating in the same way, we get $\langle V(0,2)\rangle_\text{cons} = 0.14$ a
 
 $$
 \begin{align}
-\langle V(0,2)\rangle &= \max_a\sum_{\delta s}P_a(\Delta s)V(0+\Delta s,1) \\
+\langle V(0,2)\rangle &= \max_a\sum_{\Delta s}P_a(\Delta s)V(0+\Delta s,1) \\
 &= \max_a\langle V(0+\Delta s, 1)\rangle_a \\
 &= \langle V(0,2)\rangle_\text{agg} \\
 &= 0.52
@@ -122,14 +122,14 @@ Translating this into Python, we have
 ```python
 from functools import lru_cache
 
-Pthrower = {
+Pthrow = {
           'aggressive'   : {3 : 0.4, 1 : 0.3, 0 : 0.3}
         , 'conservative' : {3 : 0.1, 1 : 0.8, 0 : 0.1}
         , 'wasted'       : {3 : 0.0, 1 : 0.0, 0 : 1.0}
     }
     
-def EV(S, T, thrower):
-    return sum(prob * V(S + k, T - 1) for k, prob in Pthrower[thrower].items())
+def EV(S, T, throw):
+    return sum(prob * V(S + k, T - 1) for k, prob in Pthrow[throw].items())
     
 @lru_cache(maxsize=10000)
 def V(S, T):
@@ -138,7 +138,7 @@ def V(S, T):
     elif T == 0 and S != 3:
         return 0
     else:
-        return max(EV(S, T, thrower) for thrower in Pthrower.keys())
+        return max(EV(S, T, throw) for throw in Pthrow.keys())
 ```
 
 which gets $V(0,4) = 0.8548$
