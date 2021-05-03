@@ -115,4 +115,32 @@ $$
 V(s,t) = \max_a\langle V(s+\Delta s, t-1)\rangle_a \\
 $$
 
+### Computing
+
+Translating this into Python, we have 
+
+```python
+from functools import lru_cache
+
+Pthrower = {
+          'aggressive'   : {3 : 0.4, 1 : 0.3, 0 : 0.3}
+        , 'conservative' : {3 : 0.1, 1 : 0.8, 0 : 0.1}
+        , 'wasted'       : {3 : 0.0, 1 : 0.0, 0 : 1.0}
+    }
+    
+def EV(S, T, thrower):
+    return sum(prob * V(S + k, T - 1) for k, prob in Pthrower[thrower].items())
+    
+@lru_cache(maxsize=10000)
+def V(S, T):
+    if (S, T) == (3, 0):
+        return 1
+    elif T == 0 and S != 3:
+        return 0
+    else:
+        return max(EV(S, T, thrower) for thrower in Pthrower.keys())
+```
+
+which gets $V(0,4) = 0.8548$
+
 <br>
