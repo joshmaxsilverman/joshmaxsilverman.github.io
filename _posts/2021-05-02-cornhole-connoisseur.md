@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Cornhole Connoisseur
 date: 2021/05/02
 ---
@@ -13,7 +13,7 @@ date: 2021/05/02
 
 ## Solution
 
-In the cornhole game, we have complete freedom to choose between our **aggressive** thrower, our **conservative** thrower, and our **wasted** thrower. With $4$ throws left, the optimal sequence of moves is a little opaque. 
+In the cornhole game, we have complete freedom to choose between our **aggressive** thrower, our **conservative** thrower, and our **wasted** thrower. If we make three additional points by game's end, then the game has value $V = 1,$ but if we score any other amount of additional points, then the game has value $V = 0.$ With $4$ throws left, the optimal sequence of moves is a little opaque. 
 
 However, it's easier to see the right move when we have $1$ throw left. 
 
