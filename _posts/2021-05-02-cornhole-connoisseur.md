@@ -21,14 +21,6 @@ However, it's easier to see the right move when we have $1$ throw left.
 
 Of course, it depends on how many points we have. 
 
-If we've $0$ points, then we should do whatever makes the probability of hitting the hole the highest, since it will get us the full $3$ points we're after. In this case, the clear move is to send the **aggressive** thrower to the line.
-
-If we have $2$ points then the best move is whatever makes the probability of hitting the board the highest, so the best move is to send the **conservative** thrower to the line.
-
-If we have $3$ points then we can only spoil our win by scoring another point, so we should send the wasted thrower to the line.
-
-If we have $1$ point then there is absolutely no chance to win the game, so the best move doesn't matter, we can only lose no matter what we do, and we will.
-
 $$
 \begin{array}{|c|c|c|c|} \hline
 \text{thrower} & p(3) & p(1) & p(0) \\ \hline
@@ -37,6 +29,16 @@ $$
 \text{wasted} & 0.0 & 0.0 & 1.0 \\ \hline
 \end{array}
 $$
+
+If we have $0$ points, then we should do whatever makes the probability of hitting the hole the highest, since it will get us the full $3$ points we're after. In this case, the clear move is to send the **aggressive** thrower to the line since 
+
+$$p_\text{agg}(3) = \max\{p_\text{agg}(3), p_\text{cons}(3), p_\text{wasted}(3)\}.$$
+
+Likewise, if we have
+
+- $2$ points then the best move is whatever makes the probability of hitting the board the highest, so the best move is to send the **conservative** thrower to the line.
+- $3$ points then we can only spoil our win by scoring another point, so we should send the **wasted** thrower to the line.
+- $1$ point then there is absolutely no chance to win the game, so the best move doesn't matter, we can only lose no matter what we do, and we will.
 
 ### The choice
 
@@ -48,7 +50,7 @@ Likewise, the expected value in the second case is $p_\text{cons}(1) \times 1 = 
 
 ### What have we done
 
-The logic here is that we looked at all of the options before us, found their value, and then chose the option with the highest value. 
+The logic here is that we looked at all of the options before us, found how much value we expect them to provide, and then chose the option with the highest value. 
 
 If we ever find ourselves in those scenarios again, i.e. one turn remaining with $0$ points accumulated, one turn remaining with $1$ point accumulated, one turn remaining with $2$ points accumulated, or one turn remaining with $3$ points accumulated, the optimal choices will be as we just found them. So, if we find ourself in those positions again, we should make those same decisions. 
 
