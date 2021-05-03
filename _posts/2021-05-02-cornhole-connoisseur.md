@@ -31,7 +31,7 @@ If we have $1$ point then there is absolutely no chance to win the game, so the 
 
 ### The choice
 
-In the first case, we have probability $p_\text{agg}(3) = \frac{4}{10}$ of reaching a score of $3$ with no moves left, so the expected value of taking the aggressive shot is $p_\text{agg}(3)times 1 = \frac{4}{10}.$ Had we taken the **conservative** shot, the expected value of the shot would be $\frac{1}{10},$ and zero had we taken the **wasted** shot.
+In the first case, we have probability $p_\text{agg}(3) = \frac{4}{10}$ of reaching a score of $3$ with no moves left, so the expected value of taking the aggressive shot is $p_\text{agg}(3)\times 1 = \frac{4}{10}.$ Had we taken the **conservative** shot, the expected value of the shot would be $\frac{1}{10},$ and zero had we taken the **wasted** shot.
 
 Likewise, the expected value of the second case is $p_\text{cons}(1) \times 1 = \frac{8}{10},$ while the third case is $p_\text{waste}(0) \times 1 = 1.$ As we said before, there is no chance to win in the fourth scenario so its expected value is just zero.
 
