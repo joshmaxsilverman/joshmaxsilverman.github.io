@@ -74,7 +74,15 @@ We can build on this logic to find the best decision when we have $2$ throws lef
 
 Whatever happens on our second to last throw, we can't finish the game (unless we get to $s \geq 4$). Instead, we'll arrive at one of the positions we just calculated: $V(0,1),\, V(1,1),\, V(2,1),\,$ or $V(3,1).$ 
 
-So, we should choose the move maximizes the expected value of our next position. After all, this is the best move we have available to us with $2$ moves left, and we already know the best moves available to us with $1$ move left. 
+So, we should choose the move that maximizes the expected value of our next position. After all, this is the best move we have available to us with $2$ moves left, and we can calculate it since already know the best moves available to us with $1$ move left. 
+
+Suppose, for example, we're calculating $V(0,2).$ 
+
+If we use the aggressive coin, then we can move into the state $V(3,1)$ with probability $p_\text{agg}(3),$ the state $V(1,1)$ with probability $p_\text{agg}(1),$ or the state $V(0,1)$ with probability $p_\text{agg}(0).$ In all, using the aggressive coin in this situation has an expected value of 
+
+$$
+p_\text{agg}(3)\timesV(3,1) + p_\text{agg}(1)\times V(1,1) + p_\text{agg}(0)\times V(0,1) = frac{4}{10}\times 1 + \frac{3}{10}\times 0 + \frac{3}{10}\times 0.4 = 0.52
+$$
 
 In general, we want to know the expected value of our position when we have $s$ accumulated points, and $t$ turns remaining, $V(s,t).$
 
