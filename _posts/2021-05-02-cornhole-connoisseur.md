@@ -54,11 +54,11 @@ If we ever find ourselves in those scenarios again, i.e. one turn remaining with
 
 $$
 \begin{array}{|c|c|c|} \hline
-\text{Scenario} & \text{Value} & \text{Decision} \\ \hline
-S=0, T=1 & 0.4 & \textbf{aggressive} \\ \hline
-S=1, T=1 & 0.0 & \text{doesn't matter} \\ \hline
-S=2, T=1 & 0.8 & \textbf{conservative} \\ \hline
-S=3, T=1 & 1.0 & \textbf{wasted} \\ \hline
+\text{Scenario} & \text{Decision} & \text{Value} \\ \hline
+S=0, T=1 & \textbf{aggressive} & 0.4 \\ \hline
+S=1, T=1 & \text{doesn't matter} & 0.0 \\ \hline
+S=2, T=1 & \textbf{conservative} & 0.8 \\ \hline
+S=3, T=1 & \textbf{wasted} & 1.0 \\ \hline
 \end{array}
 $$
 
