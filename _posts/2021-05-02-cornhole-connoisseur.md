@@ -78,7 +78,13 @@ So, we should choose the move that maximizes the expected value of our next posi
 
 Suppose, for example, we're calculating $V(0,2).$ 
 
-If we use the aggressive coin, then we can move into the state $V(3,1)$ with probability $p_\text{agg}(3),$ the state $V(1,1)$ with probability $p_\text{agg}(1),$ or the state $V(0,1)$ with probability $p_\text{agg}(0).$ In all, using the aggressive coin in this situation has an expected value of 
+If we use the aggressive coin, then we can move into 
+
+- the state $V(3,1)$ with probability $p_\text{agg}(3),$ 
+- the state $V(1,1)$ with probability $p_\text{agg}(1),$ or 
+- the state $V(0,1)$ with probability $p_\text{agg}(0).$ 
+- 
+- In all, using the aggressive coin in this situation has an expected value of 
 
 $$
 p_\text{agg}(3)\times V(3,1) + p_\text{agg}(1)\times V(1,1) + p_\text{agg}(0)\times V(0,1) = \frac{4}{10}\times 1 + \frac{3}{10}\times 0 + \frac{3}{10}\times 0.4 = 0.52
