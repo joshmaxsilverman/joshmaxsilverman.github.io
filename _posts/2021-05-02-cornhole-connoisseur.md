@@ -44,12 +44,12 @@ The logic here is that we looked at all of the options before us, found their va
 If we ever find ourselves in those scenarios again, i.e. one turn remaining with $0$ points accumulated, one turn remaining with $1$ point accumulated, one turn remaining with $2$ points accumulated, or one turn remaining with $3$ points accumulated, the optimal choices will be as we just found them. So, if we find ourself in those positions again, we should make those same decisions. 
 
 $$
-\begin{array}{c|c|c}
-\text{Scenario} & \text{Value} & \text{Decision} \\
-S=0, T=1 & 0.4 & \textbf{aggressive} \\
-S=1, T=1 & 0.0 & \text{doesn't matter} \\
-S=2, T=1 & 0.8 & \textbf{conservative} \\
-S=3, T=1 & 1.0 & \textbf{wasted}
+\begin{array}{|c|c|c|} \hline
+\text{Scenario} & \text{Value} & \text{Decision} \\ \hline
+S=0, T=1 & 0.4 & \textbf{aggressive} \\ \hline
+S=1, T=1 & 0.0 & \text{doesn't matter} \\ \hline
+S=2, T=1 & 0.8 & \textbf{conservative} \\ \hline
+S=3, T=1 & 1.0 & \textbf{wasted} \\ \hline
 \end{array}
 $$
 
