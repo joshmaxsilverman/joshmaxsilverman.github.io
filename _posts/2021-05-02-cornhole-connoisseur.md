@@ -23,7 +23,7 @@ Of course, it depends on how many points we have.
 
 $$
 \begin{array}{|c|c|c|c|} \hline
-\text{thrower} & p(3) & p(1) & p(0) \\ \hline
+\textbf{thrower} & p(3) & p(1) & p(0) \\ \hline
 \text{aggressive} & 0.4 & 0.3 & 0.3 \\ \hline
 \text{conservative} & 0.1 & 0.8 & 0.1 \\ \hline
 \text{wasted} & 0.0 & 0.0 & 1.0 \\ \hline
@@ -58,12 +58,20 @@ If we ever find ourselves in those scenarios again, i.e. one turn remaining with
 
 $$
 \begin{array}{|c|c|c|} \hline
-\text{Scenario} & \text{Decision} & \text{Value} \\ \hline
+\textbf{Scenario} & \textbf{Decision} & \textbf{Value} \\ \hline
 S=0, T=1 & \text{aggressive} & 0.4 \\ \hline
 S=1, T=1 & \text{N/A} & 0.0 \\ \hline
 S=2, T=1 & \text{conservative} & 0.8 \\ \hline
 S=3, T=1 & \text{wasted} & 1.0 \\ \hline
 \end{array}
 $$
+
+### Another choice
+
+We can build on this logic to find the best decision when we have $2$ throws left.
+
+We found that with $S2$ total accumulated points, and $T=1$ turn remaining, the expected value of our position is $\frac{4}{10},$ or, in other words, $V(2,1) = \frac{4}{10}.$ 
+
+In g
 
 <br>
