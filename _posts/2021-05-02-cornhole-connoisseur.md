@@ -32,27 +32,29 @@ $$
 
 If we have $0$ points, then we should do whatever makes the probability of hitting the hole the highest, since it will get us the full $3$ points we're after. In this case, the clear move is to send the **aggressive** thrower to the line since 
 
-$$p_\text{agg}(3) = \max\{p_\text{agg}(3), p_\text{cons}(3), p_\text{wasted}(3)\}.$$
+$$
+p_\text{agg}(3) = \max\{p_\text{agg}(3),\, p_\text{cons}(3),\, p_\text{wasted}(3)\}
+$$
 
 Likewise, if we have
 
-- $2$ points then the best move is whatever makes the probability of hitting the board the highest, so the best move is to send the **conservative** thrower to the line.
-- $3$ points then we can only spoil our win by scoring another point, so we should send the **wasted** thrower to the line.
+- $2$ points then the best move is whatever makes the probability of hitting the board the highest, so we send the **conservative** thrower to the line.
+- $3$ points then we can only spoil our win by scoring another point, so we send the **wasted** thrower to the line.
 - $1$ point then there is absolutely no chance to win the game, so the best move doesn't matter, we can only lose no matter what we do, and we will.
 
 ### The choice
 
-In the first case, we have probability $p_\text{agg}(3) = \frac{4}{10}$ of reaching a score of $3$ with no moves left, so the expected value of taking the aggressive shot is $p_\text{agg}(3)\times 1 = \frac{4}{10}.$ 
+In the first case, the best choice we can make has probability $p_\text{agg}(3) = \frac{4}{10}$ of ending the game with $3$ more points, so the expected value of taking the aggressive shot is $p_\text{agg}(3)\times 1 = \frac{4}{10}.$ 
 
-Had we taken the **conservative** shot, the expected value of the shot would be $\frac{1}{10},$ and zero had we taken the **wasted** shot.
+Had we taken the **conservative** shot, the expected value of the shot would be $\frac{1}{10},$ and $0$ had we taken the **wasted** shot.
 
-Likewise, the expected value in the second case is $p_\text{cons}(1) \times 1 = \frac{8}{10},$ and the third case is $p_\text{waste}(0) \times 1 = 1.$ As we said before, there is no chance to win in the fourth scenario so its expected value is just zero.
+Likewise, the best choice in the second case has an expected value of $p_\text{cons}(1) \times 1 = \frac{8}{10},$ and the best move in the third case yields $p_\text{waste}(0) \times 1 = 1.$ As we said before, there is no chance to win in the fourth scenario so its expected value is just zero.
 
 ### What have we done
 
 The logic here is that we looked at all of the options before us, found how much value we expect them to provide, and then chose the option with the highest value. 
 
-If we ever find ourselves in those scenarios again, i.e. one turn remaining with $0$ points accumulated, one turn remaining with $1$ point accumulated, one turn remaining with $2$ points accumulated, or one turn remaining with $3$ points accumulated, the optimal choices will be as we just found them. So, if we find ourself in those positions again, we should make those same decisions. 
+If we ever find ourselves in those scenarios again, i.e. one turn remaining with $0, 1, 2$ or $3$ points accumulated, the optimal choices will be as we just found them. So, if we find ourself in those positions again, we should make those same decisions. 
 
 $$
 \begin{array}{|c|c|c|} \hline
