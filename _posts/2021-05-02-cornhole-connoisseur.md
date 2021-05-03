@@ -87,7 +87,11 @@ If we use the aggressive coin, then we can move into
 - In all, using the aggressive coin in this situation has an expected value of 
 
 $$
-p_\text{agg}(3)\times V(3,1) + p_\text{agg}(1)\times V(1,1) + p_\text{agg}(0)\times V(0,1) = \frac{4}{10}\times 1 + \frac{3}{10}\times 0 + \frac{3}{10}\times 0.4 = 0.52
+\begin{align}
+\langle V(0,2)\rangle_\text{agg} &= p_\text{agg}(3)\times V(3,1) + p_\text{agg}(1)\times V(1,1) + p_\text{agg}(0)\times V(0,1) \\
+&= \frac{4}{10}\times 1 + \frac{3}{10}\times 0 + \frac{3}{10}\times 0.4 \\
+&= 0.52
+\end{align}
 $$
 
 In general, we want to know the expected value of our position when we have $s$ accumulated points, and $t$ turns remaining, $V(s,t).$
