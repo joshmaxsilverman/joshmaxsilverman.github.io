@@ -9,7 +9,7 @@ date: 2020/05/02
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-systematically-solve-a-friday-crossword/))
 
 ## Solution
 
