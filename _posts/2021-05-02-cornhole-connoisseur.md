@@ -30,7 +30,7 @@ If we have $3$ points then we can only spoil our win by scoring another point, s
 If we have $1$ point then there is absolutely no chance to win the game, so the best move doesn't matter, we can only lose no matter what we do, and we will.
 
 $$
-\begin{align}
+\begin{align}{|c|c|c|c|} \hline
 \text{thrower} & p(3) & p(1) & p(0) \\ \hline
 \text{aggressive} & 0.4 & 0.3 & 0.3 \\ \hline
 \text{conservative} & 0.1 & 0.8 & 0.1 \\ \hline
