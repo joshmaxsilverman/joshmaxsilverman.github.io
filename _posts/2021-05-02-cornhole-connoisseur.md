@@ -94,6 +94,15 @@ $$
 \end{align}
 $$
 
+Calculating in the same way, we get $\langle V(0,2)\rangle_\text{agg} = 0.14$ and $\langle V(0,2)\rangle_\text{wasted} = 0.0.$ So, the expected value of the position $V(0,2)$ is
+
+$$
+\begin{align}
+\langle V(0,2)\rangle &= \max_a\langle V(s+\Delta s, t-1)\rangle_\text{a} \\
+&= \max_a\sum_{\delta s}P_\text{a}(\Delta s)V(s+\Delta s,t-1)
+\end{align}
+$$
+
 In general, we want to know the expected value of our position when we have $s$ accumulated points, and $t$ turns remaining, $V(s,t).$
 
 <br>
