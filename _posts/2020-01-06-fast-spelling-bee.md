@@ -31,7 +31,7 @@ On first glance, these numbers are daunting. A naive search would need to genera
 
 The big idea here is to only ever make linear passes over the word list, and avoid looping the list of possible pangrams entirely. The logic of the two major passes is
 
-1. accumulate the possible pangrams and populate a data structure, `pangram_scores`, that can receive score increments for given $\left(\text{center letter},\text{pangram}\right)$, then
+1. accumulate the possible pangrams and populate a data structure, `pangram_scores`, that can receive score increments for given $\left(\text{pangram},\text{center letter}\right),$ then
 2. loop over the word list and accumulate their scores to the relevant pangrams in `pangram_scores`
 
 ### The words
@@ -49,7 +49,7 @@ words = [word.decode('utf-8').rstrip() for word in words]
 word_to_pangram = defaultdict(set)
 ```
 
-Next, we filter the word list for those that are valid ($4$ letters or longer, and don't contain an $\text{S}$) and accumulate them in `valid_words`. `pangrams` is a list of the relevant pangrams found by filtering the word list for all words with exactly $7$ distinct letters. The `subsets` function takes a set of characters and returns all of its possible (ordered) subsets.
+Next, we filter the word list for those that are valid ($4$ letters or longer, and don't contain an $\text{S}$) and accumulate them in `valid_words`. `pangrams` is a list of the relevant pangrams found by filtering the word list for all words with exactly $7$ distinct letters. The `word_score()` function takes a word and outputs its score. The `subsets()` function takes a set of characters and returns all of its possible (ordered) subsets.
 
 ```python
 valid_words = [word for word in words 
@@ -59,6 +59,9 @@ valid_words = [word for word in words
 
 pangrams = [''.join(sorted(set(_))) for _ in valid_words if len(set(_)) == 7]
 
+def word_score(word):
+    return (1 if len(word) == 4 else len(word)) + (7 if len(set(word)) == 7 else 0)
+
 def subsets(s):
     for size in range(len(s) + 1):
         yield from combinations(s, size)
@@ -66,11 +69,13 @@ def subsets(s):
 
 ### Speed-enabling data structure
 
-This is the key to the speed of this approach. Instead of testing which pangrams a word is a subset of, we can directly map from the letters in a word to all the relevant pangrams.
+This is the key to the speed of this approach. Instead of testing which pangrams a word is a subset of, we can directly map from the ordered set of letters that a word contains to all pangrams it would be a valid word for. We can think of each of these ordered sets as a **pangram stem**.
 
-Suppose the pangram we're dealing with is $\text{BLOMING}.$ Any word formed from a subset of the letters in 
+In other words, it is a mapping from pangram stems to pangrams though, in effect, it is a mapping from words to pangrams.
 
-This code creates a dictionary from all ordered stems of pangrams to their corresponding pangrams. For example, for the pangram `ABCDEF` this would associate the keys `'A'`, `'AB'`, `'ABC'`, `'ABCD'`, `'ABCDE'`, and `'ABCDEF'` to `"ABCDEF"`. 
+Suppose the pangram we're dealing with is $\text{BLOMING}.$ Any word formed from a subset of the its letters would be valid, such as $\text{BOOM},$ $\text{LOOM},$ $\text{BOMBING},$ or $\text{BLOOMING}.$ The letter sets for these words is, respectively, $\{\text{B},\text{O},\text{M}\}$, $\{\text{L},\text{O},\text{M}\},$ $\{\text{B},\text{I},\text{G},\text{M},\text{N}\},$ and $\{\text{B},\text{I},\text{G},\text{L},\text{M},\text{N}\}.$ 
+
+This code creates a dictionary from all pangram stems to their corresponding pangrams. 
 
 ```python
 for pangram in pangrams:
@@ -79,18 +84,17 @@ for pangram in pangrams:
         word_to_pangram[key].add(pangram)
 ```
 
-This initializes the two-tier dictionary to keep track of `middle letter/pangram` pairs.
+Next, we need a dicitonary that can track the total score for each pangram. 
+
+So far, we have ignored something we'll have to mind — whether the pangram's center letter is in a candidate word or not. This code initializes a two-tier dictionary to keep track of $\left(\text{pangram},\text{center letter}\right)$ pairs.
 
 ```python
 pangram_scores = defaultdict(lambda: defaultdict(int))
-
-def word_score(word):
-    return (1 if len(word) == 4 else len(word)) + (7 if len(set(word)) == 7 else 0)
 ```
 
 ### Accumulate the scores
 
-This code goes through the list of words, and adds the word score to every relevant pangram. The pangram score dictionary is keyed by a tuple of `(middle_letter, pangram)` so I loop over the word to distribute the scores to all relevant `(middle_letter, pangram)` destinations.
+This code goes through the list of words, and adds the word score to the total score for each of its relevant pangrams. The pangram score dictionary is indexed by the pangram string as well as each central letter. One loop over the word list accumulates the scores to all relevant $\left(\text{pangram},\text{center letter}\right)$ destinations.
 
 ```python
 for word in valid_words:
@@ -102,7 +106,7 @@ for word in valid_words:
 
 ### Find the max
 
-This code loops over the two level dictionary to find the max.
+After this, we simply have to find the maximum score in the dictionary and its associated $\text{pangram}$ and $\text{central letter}.$ This code loops over the two level dictionary to find the max.
 
 ```python
 tmp_max = 0
