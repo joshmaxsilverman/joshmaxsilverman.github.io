@@ -5,7 +5,7 @@ title: Fast Spelling Bee
 date: 2020/01/06
 ---
 
->**Question:** The NYTimes has a new word game called Spelling Bee. The idea of the game is, on a board like the one below, to make words as using **only** the letters on the board under the constraint that the central letter must be used. Words are worth their length in letters (with a minimum length of $4$), but words that use all $7$ letters — known as **pangrams** — are awarded $7$ bonus points. The valid word list is Peter Norvig's which contains some 172820 distinct words. The object is to find the game board with the highest possible maximum score.
+>**Question:** The NYTimes has a new word game called Spelling Bee. The idea of the game is, on a board like the one below, to make words using **only** the letters on the board under the constraint that the central letter must be used. Words are worth their length in letters (with a minimum length of $4$), but words that use all $7$ letters — known as **pangrams** — are awarded $7$ bonus points. The valid word list is Peter Norvig's which contains some 172820 distinct words. The object is to find the game board with the highest possible maximum score.
 >
 >![](/img/2020-01-06-honeycomb.png){: width="450px" class="image-centered"}
 
@@ -24,15 +24,19 @@ $$\begin{array}{|c|c|} \hline
 \text{pangrams} & 7\binom{26}{7} = 4604600 \\ \hline
 \end{array}$$
 
-On first glance, these numbers are daunting. A naive search would need to generate some $\approx 5\times10^6$ games, and compare them against $\approx 1.5\times10^5$ words, a hefty $\approx 10^{12}$ comparisons. Simply looping over a list that long (without any string operations) would take about $10\ \text{hours}$ in a Colab notebook. Hopefully there is some structure we can exploit.
+On first glance, these numbers are daunting. A naive search would need to generate some $\approx 4.6\times10^6$ pangrams, and compare them against the dictionary of $\approx 1.5\times10^5$ words — a hefty $\approx 10^{12}$ comparisons. Simply looping over a list that long (without any string operations) would take hours in a Colab notebook. Hopefully there is some structure we can exploit.
 
 
 ### Plan
 
 The big idea here is to only ever make linear passes over the word list, and avoid looping the list of possible pangrams entirely. The logic of the two major passes is
 
-1. accumulate the possible pangrams and populate a data structure that can receive score increments for given `middle letter/pangram` pairs as we loop over the word list a second time.
-2. loop over the words and distribute their scores to the relevant destination in `pangram_scores`
+1. accumulate the possible pangrams and populate a data structure, `pangram_scores`, that can receive score increments for given $\left(\text{center letter},\text{pangram}\right)$, then
+2. loop over the word list and accumulate their scores to the relevant pangrams in `pangram_scores`
+
+### The words
+
+First, we grab the words and accumulate them in the list `words`.
 
 ```python
 from collections import defaultdict
@@ -45,7 +49,7 @@ words = [word.decode('utf-8').rstrip() for word in words]
 word_to_pangram = defaultdict(set)
 ```
 
-`valid_words` filters the word list for those that are valid, and `pangrams` is a list of the relevant pangrams found by filtering the word list for all words with exactly 7 distinct letters. The `subsets` function takes a set an returns all of its possible (ordered) subsets.
+Next, we filter the word list for those that are valid ($4$ letters or longer, and don't contain an $\text{S}$) and accumulate them in `valid_words`. `pangrams` is a list of the relevant pangrams found by filtering the word list for all words with exactly $7$ distinct letters. The `subsets` function takes a set of characters and returns all of its possible (ordered) subsets.
 
 ```python
 valid_words = [word for word in words 
@@ -62,9 +66,11 @@ def subsets(s):
 
 ### Speed-enabling data structure
 
-This code creates a dictionary from all ordered stems of pangrams to their corresponding pangrams. For example, for the pangram `ABCDEF` this would associate the keys `'A'`, `'AB'`, `'ABC'`, `'ABCD'`, `'ABCDE'`, and `'ABCDEF'` to `"ABCDEF"`. 
-
 This is the key to the speed of this approach. Instead of testing which pangrams a word is a subset of, we can directly map from the letters in a word to all the relevant pangrams.
+
+Suppose the pangram we're dealing with is $\text{BLOMING}.$ Any word formed from a subset of the letters in 
+
+This code creates a dictionary from all ordered stems of pangrams to their corresponding pangrams. For example, for the pangram `ABCDEF` this would associate the keys `'A'`, `'AB'`, `'ABC'`, `'ABCD'`, `'ABCDE'`, and `'ABCDEF'` to `"ABCDEF"`. 
 
 ```python
 for pangram in pangrams:
