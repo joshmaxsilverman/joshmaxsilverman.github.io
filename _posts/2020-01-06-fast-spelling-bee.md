@@ -73,7 +73,7 @@ This is the key to the speed of this approach. Instead of testing which pangrams
 
 In other words, it is a mapping from pangram stems to pangrams though, in effect, it is a mapping from words to pangrams.
 
-Suppose the pangram we're dealing with is $\text{BLOMING}.$ Any word formed from a subset of the its letters would be valid, such as $\text{BOOM},$ $\text{LOOM},$ $\text{BOMBING},$ or $\text{BLOOMING}.$ The letter sets for these words is, respectively, $\\{\text{B},\text{O},\text{M}\\}$, $\{\text{L},\text{O},\text{M}\},$ $\{\text{B},\text{I},\text{G},\text{M},\text{N}\},$ and $\{\text{B},\text{I},\text{G},\text{L},\text{M},\text{N}\}.$ 
+Suppose the pangram we're dealing with is $\text{BLOMING}.$ Any word formed from a subset of the its letters would be valid, such as $\text{BOOM},$ $\text{LOOM},$ $\text{BOMBING},$ or $\text{BLOOMING}.$ The letter sets for these words is, respectively, $\\{\text{B},\text{O},\text{M}\\}$, $\\{\text{L},\text{O},\text{M}\\},$ $\\{\text{B},\text{I},\text{G},\text{M},\text{N}\\},$ and $\\{\text{B},\text{I},\text{G},\text{L},\text{M},\text{N}\\}.$ 
 
 This code creates a dictionary from all pangram stems to their corresponding pangrams. 
 
