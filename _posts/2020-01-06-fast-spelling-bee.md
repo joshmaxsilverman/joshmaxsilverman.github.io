@@ -41,10 +41,12 @@ First, we grab the words and accumulate them in the list `words`.
 ```python
 from collections import defaultdict
 from itertools import combinations
-import urllib
+import time
+import requests
+from functools import lru_cache
 
-words = urllib.request.urlopen('https://norvig.com/ngrams/enable1.txt')
-words = [word.decode('utf-8').rstrip() for word in words]
+words = requests.get("https://norvig.com/ngrams/enable1.txt")
+words = words.text.strip().split('\n')
 
 word_to_pangram = defaultdict(set)
 ```
@@ -52,19 +54,21 @@ word_to_pangram = defaultdict(set)
 Next, we filter the word list for those that are valid ($4$ letters or longer, and don't contain an $\text{S}$) and accumulate them in `valid_words`. `pangrams` is a list of the relevant pangrams found by filtering the word list for all words with exactly $7$ distinct letters. The `word_score()` function takes a word and outputs its score. The `subsets()` function takes a set of characters and returns all of its possible (ordered) subsets.
 
 ```python
-valid_words = [word for word in words 
-               if len(word) >= 4 
-               and 's' not in word 
+valid_words = [word for word in words
+               if len(word) >= 4
+               and 's' not in word
                and len(set(word)) < 8]
 
-pangrams = [''.join(sorted(set(_))) for _ in valid_words if len(set(_)) == 7]
+pangrams = ["".join(sorted(set(_))) for _ in valid_words if len(set(_)) == 7]
 
-def word_score(word):
-    return (1 if len(word) == 4 else len(word)) + (7 if len(set(word)) == 7 else 0)
-
+@lru_cache(maxsize=10000)
 def subsets(s):
     for size in range(len(s) + 1):
-        yield from combinations(s, size)
+        yield from combinations(list(s), size)
+        
+@lru_cache(maxsize=10000)
+def word_score(word):
+    return (1 if len(word) == 4 else len(word)) + (7 if len(set(word)) == 7 else 0)
 ```
 
 ### Speed-enabling data structure
@@ -79,29 +83,29 @@ This code creates a dictionary from all pangram stems to their corresponding pan
 
 ```python
 for pangram in pangrams:
-    keys = [''.join(tup) for tup in list(subsets(sorted(set(pangram))))]
+    keys = [''.join(lst) for lst in subsets(pangram)]
     for key in keys:
         word_to_pangram[key].add(pangram)
 ```
 
 Next, we need a dicitonary that can track the total score for each pangram. 
 
-So far, we have ignored something we'll have to mind — whether the pangram's center letter is in a candidate word or not. This code initializes a two-tier dictionary to keep track of $\left(\text{pangram},\text{center letter}\right)$ pairs.
+So far, we have ignored something we'll have to mind — whether the pangram's center letter is in a candidate word or not. This code initializes a dictionary to keep track of $\left(\text{pangram},\text{center letter}\right)$ pairs.
 
 ```python
-pangram_scores = defaultdict(lambda: defaultdict(int))
+pangram_scores = defaultdict(lambda: 0)
 ```
 
 ### Accumulate the scores
 
-This code goes through the list of words, and adds the word score to the total score for each of its relevant pangrams. The pangram score dictionary is indexed by the pangram string as well as each central letter. One loop over the word list accumulates the scores to all relevant $\left(\text{pangram},\text{center letter}\right)$ destinations.
+This code goes through the list of words, and adds the word score to the total score for each of its relevant pangrams. The pangram score dictionary is indexed by a tuple of the pangram string and the given central letter. One loop over the word list accumulates the scores to all relevant $\left(\text{pangram},\text{center letter}\right)$ destinations.
 
 ```python
 for word in valid_words:
-    word_key = ''.join(sorted(set(word)))
+    word_key = "".join(sorted(set(word)))
     for pangram in word_to_pangram[word_key]:
         for letter in word_key:
-            pangram_scores[pangram][letter] += word_score(word)
+            pangram_scores[(pangram, letter)] += word_score(word)
 ```
 
 ### Find the max
@@ -109,18 +113,10 @@ for word in valid_words:
 After this, we simply have to find the maximum score in the dictionary and its associated $\text{pangram}$ and $\text{central letter}.$ This code loops over the two level dictionary to find the max.
 
 ```python
-tmp_max = 0
-tmp_pangram = (1,1)
-for key1 in pangram_scores:
-    for key2 in pangram_scores[key1]:
-        if pangram_scores[key1][key2] > tmp_max:
-            tmp_max = pangram_scores[key1][key2]
-            tmp_pangram = (key1, key2)
-
-print(tmp_max, tmp_pangram)
+max_key = max(pangram_scores, key=pangram_scores.get)
 ```
 
-
+On computing, this finds (in $\approx\text{2 s}$) that the highest scoring game board is the pangram stem $\text{AEGINRT}$ with central letter $\text{R}$ which has total score $3898.$
 
 
 
