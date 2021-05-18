@@ -55,6 +55,7 @@ In the second round, our goal should be to position ourselves to start the final
 As before, the same strategy applies. Whoever says $20$ will win, so the table starts off in the same fashion. However, the player behind the winner will also survive the second round. Therefore, anyone with $\text{Start}$ in the range $12 \rightarrow 15$ is incentivized to start the next player in a winning position (i.e. a position between $16$ and $19$). Whoever has $\text{Start}$ as $11$ is doomed to lose the round. This pattern repeats, so that $2$ is the next losing position. 
 
 $$
+\text{Round Two} \\
 \begin{array}{|c|c|c|}\hline
 \text{Start} & \text{Say} & \text{Outcome} \\ \hline
 16 \rightarrow 19 & 20 & \text{Win} \\
@@ -87,6 +88,7 @@ Someone with $\text{Start}$ between $11$ and $14$ can't win the round, and they 
 Following this logic back to the beginning, a $\text{Start}$ of $10$ will have no choice but to lose the round, and a $\text{Start}$ of $9$ will say $10$ to ensure their own survivalby winning the round (but losing the game). However, anyone within striking distance of forcing a $\text{Start}$ of $9$ will do it. From there, the dynamics of the end of the game repeat.
 
 $$
+\text{Round One} \\
 \begin{array}{|c|c|c|}\hline
 \text{Start} & \text{Say} & \text{Outcome} \\ \hline
 19 & 20 & \text{Win round} \\
