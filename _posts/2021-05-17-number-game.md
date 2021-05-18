@@ -32,7 +32,7 @@ By extension, if our $\text{Start}$ is $15$ then we are guaranteed to lose the g
 After this, the same dynamic repeats. If we can force our opponent to start with $15,$ then they are guaranteed to lose. The same goes with $10$ and $5.$ So, whenever we have a choice in the matter, we should say the next reachable multiple of $5$ which forces the other player to start there. Putting the strategy to a table, we've got:
 
 $$
-\text{Round Three}
+\text{Round Three} \\
 \begin{array}{|c|c|c|}\hline
 \text{Start} & \text{Say} & \text{Outcome} \\ \hline
 16 \rightarrow 19 & 20 & \text{Win} \\
