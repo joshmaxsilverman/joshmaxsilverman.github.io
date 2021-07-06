@@ -22,7 +22,7 @@ date: 2021/07/05
 ## Solution
 
 $$
-\begin{array}{c|c|c|c} \hline
+\begin{array}{|c|c|c|c|} \hline
 \text{Best bet} & \text{Player 1} & \text{Player}\, x & \text{Player}\, y \\ \hline
 1 & x & y(1-x) & (1-x)(1-y) \\ \hline
 x & \dfrac{x}{1-(1-x)^2(1-y)} & \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
