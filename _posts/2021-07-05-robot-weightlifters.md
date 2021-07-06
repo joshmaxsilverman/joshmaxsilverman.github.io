@@ -38,7 +38,9 @@ The same is true for player $y$'s chances. Multiplying player $1$'s odds by $(1-
 
 $$ \mathbf{p_x} = f(x,y) \langle\dfrac{x}{1-x}, x, y(1-x)\rangle. $$
 
-Because $\sum_i p_x(i) = 1,$ if $f(x,y) > 1,$ then player $1$'s odds will be better betting on $1,$ and if $f(x,y) < 1,$ then player $1$'s odds will be better betting on $x,$ in either case to the detriment of players $x$ and $y.$ So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$
+$\sum_i p_x(i) = 1,$ so if $f(x,y) > 1,$ then player $1$'s odds will be better betting on $1,$ and if $f(x,y) < 1,$ then player $1$'s odds will be better betting on $x.$ In either case, this is to the detriment of players $x$ and $y.$ 
+
+So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$
 
 Setting $f(x,y) = 1$ gets us
 
