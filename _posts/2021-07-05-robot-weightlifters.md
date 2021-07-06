@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Robot Weightlifters
 date: 2021/07/05
 ---
