@@ -29,6 +29,7 @@ $$
 1 & x & y(1-x) & (1-x)(1-y) \\ \hline
 x & \dfrac{x}{1-(1-x)^2(1-y)} & \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
 y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
+\end{array}
 $$
 
 <br>
