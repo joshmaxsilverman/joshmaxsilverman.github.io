@@ -30,17 +30,17 @@ y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1
 \end{array}
 $$
 
-There's a symmetry between the $1$-lead and $x$-lead situations. The chance for player $x$ to win in the $x$-lead situation is the same as the $1$-lead situation, multiplied by the factor
+There's a symmetry between the $1$-lead and $x$-lead situations. The chance for Player $x$ to win in the $x$-lead situation is the same as the $1$-lead situation, multiplied by the factor
 
 $$ f(x,y) = \dfrac{1-x}{1-(1-x)^2(1-y)}. $$
 
-The same is true for player $y$'s chances. Multiplying player $1$'s odds by $(1-x)/(1-x)$ the chances in the $x$-lead scenario become
+The same is true for Player $y$'s chances. Multiplying Player 1's odds by $(1-x)/(1-x)$ the chances in the $x$-lead scenario become
 
 $$ \mathbf{P_x} = f(x,y) \left(\begin{array}{c}x/(1-x) \\ x \\ y(1-x)\end{array}\right). $$
 
-$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then player $1$'s odds will be better betting on $1,$ and if $f(x,y) < 1,$ then player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of players $x$ and $y.$ 
+$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of Players $x$ and $y.$ 
 
-So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$
+So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
 
 Setting $f(x,y) = 1$ gets us
 
