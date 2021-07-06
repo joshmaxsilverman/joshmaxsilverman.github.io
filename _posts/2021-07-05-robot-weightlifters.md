@@ -38,9 +38,9 @@ The same is true for Player $y$'s chances. Multiplying Player 1's odds by $(1-x)
 
 $$ \mathbf{P_x} = f(x,y) \left(\begin{array}{c}x/(1-x) \\ x \\ y(1-x)\end{array}\right). $$
 
-$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of Players $x$ and $y.$ 
+$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ 
 
-So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
+In either case, this choice is to the detriment of Players $x$ and $y.$ So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
 
 Setting $f(x,y) = 1$ gets us
 
