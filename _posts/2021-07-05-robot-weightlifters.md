@@ -23,7 +23,7 @@ date: 2021/07/05
 
 $$
 \begin{array}{|c|c|c|c|} \hline
-\text{Best bet} & \text{Player 1} & \text{Player}\, x & \text{Player}\, y \\ \hline
+\text{Player 1 est bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
 1 & (1-x)(1-y) & x & y(1-x) \\ \hline
 x & \dfrac{x}{1-(1-x)^2(1-y)} & \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
 y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
