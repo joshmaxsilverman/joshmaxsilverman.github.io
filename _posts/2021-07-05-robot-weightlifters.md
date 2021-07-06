@@ -11,9 +11,9 @@ The Robot Weightlifting World Championship’s final round is about to begin! Th
 
 Assume the following:
 
-1) all the robots have the same probability p(w) of successfully lifting a given weight w;
-2) $p(w)$ is exactly known by all competitors, continuous, strictly decreasing as the w increases, $p(0) = 1,$ and $p(w) \rightarrow 0$ as $w \rightarrow \infty$; and
-3) all competitors want to maximize their chance of winning the RWWC.
+1. all the robots have the same probability $p(w)$ of successfully lifting a given weight $w$;
+2. $p(w)$ is exactly known by all competitors, continuous, strictly decreasing as the w increases, $p(0) = 1,$ and $p(w) \rightarrow 0$ as $w \rightarrow \infty$; and
+3. all competitors want to maximize their chance of winning the RWWC.
 
 If $w$ is the amount of weight the 3rd seed should request, find $p(w).$ Give your answer to an accuracy of six decimal places.
 
