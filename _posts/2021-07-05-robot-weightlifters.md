@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Weightlifters
 date: 2021/07/05
 ---
@@ -36,7 +36,7 @@ $$ f(x,y) = \dfrac{1-x}{1-(1-x)^2(1-y)}. $$
 
 The same is true for player $y$'s chances. Multiplying player $1$'s odds by $(1-x)/(1-x)$ the chances in the $x$-lead scenario become
 
-$$ \mathbf{p_x} = f(x,y) \langle\dfrac{x}{1-x}, x, y(1-x)\rangle. $$
+$$ \mathbf{p_x} = f(x,y) \left\begin{array}{c}\dfrac{x}{1-x} \\ x \\ y(1-x)\end{array}\right). $$
 
 $\sum_i p_x(i) = 1,$ so if $f(x,y) > 1,$ then player $1$'s odds will be better betting on $1,$ and if $f(x,y) < 1,$ then player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of players $x$ and $y.$ 
 
