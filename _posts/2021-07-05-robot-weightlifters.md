@@ -31,7 +31,9 @@ y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1
 $$
 
 There's a symmetry between the $1$-lead and $x$-lead situations. The chance for player $x$ to win in the $x$-lead situation is the same as the $1$-lead situation, multiplied by the factor
+
 $$ f(x,y) = \dfrac{1-x}{1-(1-x)^2(1-y)}. $$
+
 The same is true for player $y$'s chances. Multiplying player $1$'s odds by $(1-x)(1-x)$ the chances in the $x$-lead scenario become
 
 $$ \mathbf{p_x} = f(x,y) \langle\dfrac{x}{1-x}, x, y(1-x)\rangle. $$
