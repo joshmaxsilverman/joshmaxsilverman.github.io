@@ -52,7 +52,7 @@ $$ \boxed{y = 1 - \frac{x}{(1-x)^2}}. $$
 
 In any situation, Player 1's will be attracted to bet $x,$ $y,$ or $1.$
 
-Suppose the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1.$ Then Player 1 will bet $x.$ 
+If the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1,$ then Player 1 will bet $x.$ 
 
 In this scenario, the player betting $y$ can increase their odds until the chance to win by undercutting $y$ is equal to the chance to win at $x.$ 
 
