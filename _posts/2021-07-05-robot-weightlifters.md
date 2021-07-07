@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Weightlifters
 date: 2021/07/05
 ---
@@ -20,6 +20,8 @@ date: 2021/07/05
 ([Jane Street](https://www.janestreet.com/puzzles/robot-weightlifting-index/))
 
 ## Solution
+
+### $1$ or $x$, it's all the same
 
 $$
 \begin{array}{|c|c|c|c|} \hline
@@ -44,7 +46,21 @@ In either case, this choice is to the detriment of Players $x$ and $y.$ So, $x$ 
 
 Setting $f(x,y) = 1$ gets us
 
-$$ y = 1 - \frac{x}{(1-x)^2}. $$
+$$ \boxed{y = 1 - \frac{x}{(1-x)^2}}. $$
+
+### $x$ and $y$ in balance
+
+In any situation, Player 1's will be attracted to bet $x,$ $y,$ or $1.$
+
+Suppose the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1.$ Then Player 1 will bet $x.$ 
+
+In this scenario, the player betting $y$ can increase their odds until the chance to win by undercutting $y$ is equal to the chance to win at $x.$ 
+
+After this point, Player 1 would be incentivized to switch to y, replacing the (1-x) in y's numerator with the smaller (1-y). So, y's best chance under x-leading comes when the chance for Player 1 to win at y is just a bit less than the chance to win at x. 
+
+The same is true in reverse.
+
+So, we need Player 1's chances picking x or y to be equal:
 
 
 
