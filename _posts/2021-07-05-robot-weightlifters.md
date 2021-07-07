@@ -21,16 +21,17 @@ date: 2021/07/05
 
 ## Solution
 
-### $1$ or $x$, it's all the same
-
 $$
 \begin{array}{|c|c|c|c|} \hline
-\text{Player 1 best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
+\text{Player 1's best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
 1 & (1-x)(1-y) & x & y(1-x) \\ \hline
 x & \dfrac{x}{1-(1-x)^2(1-y)} & \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
 y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
 \end{array}
 $$
+
+
+### $1$ or $x$, it's all the same
 
 There's a symmetry between the $1$-lead and $x$-lead situations. The chance for Player $x$ to win in the $x$-lead situation is the same as the $1$-lead situation, multiplied by the factor
 
@@ -40,9 +41,9 @@ The same is true for Player $y$'s chances. Multiplying Player 1's odds by $(1-x)
 
 $$ \mathbf{P_x} = f(x,y) \left(\begin{array}{c}x/(1-x) \\ x \\ y(1-x)\end{array}\right). $$
 
-$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ 
+$\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of Players $x$ and $y.$ 
 
-In either case, this choice is to the detriment of Players $x$ and $y.$ So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
+So, $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
 
 Setting $f(x,y) = 1$ gets us
 
@@ -50,17 +51,17 @@ $$ \boxed{y = 1 - \frac{x}{(1-x)^2}}. $$
 
 ### $x$ and $y$ in balance
 
-In any situation, Player 1's will be attracted to bet $x,$ $y,$ or $1.$
+In any situation, Player 1 will be attracted to bet $x,$ $y,$ or $1.$
 
 If the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1,$ then Player 1 will bet $x.$ 
 
-In this scenario, the player betting $y$ can increase their odds until the chance to win by undercutting $y$ is equal to the chance to win at $x.$ 
+When undercutting $x$ is the most attractive option, Player $y$ can increase their odds up until the chance to win by undercutting $y$ becomes equal to the chance to win by undercutting $x.$ This will happen before Player $y$'s chance to win in the $x$-lead situation is equal to Player 1's.
 
-After this point, Player 1 would be incentivized to switch to y, replacing the (1-x) in y's numerator with the smaller (1-y). So, y's best chance under x-leading comes when the chance for Player 1 to win at y is just a bit less than the chance to win at x. 
+After this point, Player 1 would be incentivized to switch to $y,$ replacing the $(1-x)$ in $y$'s numerator with the smaller $(1-y).$ So, $y$'s best chance under $x$-leading comes when the chance for Player 1 to win at $y$ is just a bit less than the chance to win at $x.$ 
 
 The same is true in reverse.
 
-So, we need Player 1's chances picking x or y to be equal:
+So, we need Player 1's chances when picking $x$ or $y$ to be equal:
 
 
 
