@@ -22,7 +22,7 @@ date: 2021/07/05
 ## Solution
 
 $$
-\begin{array}{|c|c|c|c|} \hline
+\begin{array}{|c|l|l|l|} \hline
 \text{Player 1's best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
 1 & P_1(1) = (1-x)(1-y) & P_1(x) = x & P_1(y) = y(1-x) \\ \hline
 x & P_x(1) = \dfrac{x}{1-(1-x)^2(1-y)} & P_x(x) = \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & P_x(y) = \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
