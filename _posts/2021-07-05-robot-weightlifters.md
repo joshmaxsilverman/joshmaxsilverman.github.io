@@ -24,7 +24,7 @@ date: 2021/07/05
 $$
 \begin{array}{|c|c|c|c|} \hline
 \text{Player 1's best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
-1 & (1-x)(1-y) & x & y(1-x) \\ \hline
+1 & P_1(1) = (1-x)(1-y) & P_1(x) = x & P_1(y) = y(1-x) \\ \hline
 x & \dfrac{x}{1-(1-x)^2(1-y)} & \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
 y & \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & \dfrac{x}{1-(1-x)(1-y)^2} & \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
 \end{array}
