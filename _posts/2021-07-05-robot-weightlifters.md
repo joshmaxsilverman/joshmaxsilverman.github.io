@@ -59,7 +59,7 @@ In any situation, Player 1 will be attracted to bet $x,$ $y,$ or $1.$
 
 <!-- If the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1,$ then Player 1 will bet $x.$  -->
 
-When undercutting Player $x$ is the most attractive option to Player 1, Player $y$ can increase their odds up until the chance to win by undercutting Player $y$ becomes equal to the chance to win by undercutting Player $x.$ This will happen before Player $y$'s chance to win in the $x$-lead situation is equal to Player 1's.
+When undercutting Player $x$ ($P_x(1)$) is the most attractive option to Player 1, Player $y$ can increase their odds $P_x(y)$ by increasing $y$ up until the chance to win by undercutting Player $y$ $P_y(1)$ becomes equal to the chance to win by undercutting Player $x$ $P_x(1).$ This will happen before $P_x(y) = P_x(1).$
 
 After this point, Player 1 would be incentivized to switch to $y,$ replacing the $(1-x)$ in $y$'s numerator with the smaller $(1-y).$ So, $y$'s best chance under $x$-leading comes when the chance for Player 1 to win at $y$ is just a bit less than the chance to win at $x.$ 
 
