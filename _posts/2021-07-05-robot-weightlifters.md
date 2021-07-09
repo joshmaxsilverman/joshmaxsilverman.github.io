@@ -59,15 +59,25 @@ In any situation, Player 1 will be attracted to bet $x,$ $y,$ or $1.$
 
 <!-- If the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1,$ then Player 1 will bet $x.$  -->
 
-When undercutting Player $x$, $P_x(1),$ is the most attractive option to Player 1, Player $y$ can increase their odds, $P_x(y),$ by increasing $y$ up until the chance to win by undercutting Player $y$ becomes equal to the chance to win by undercutting Player $x,$ i.e. when $P_y(1) = P_x(1).$ This will happen before $P_x(1) = P_x(y).$
+When undercutting Player $x$, $P_x(1),$ is the most attractive option to Player 1, Player $y$ can increase their odds, $P_x(y),$ by increasing $y.$ They can do this up until the chance to win by undercutting Player $y$ becomes equal to the chance to win by undercutting Player $x,$ i.e. when $P_y(1) = P_x(1).$ 
 
-After this point, Player 1 would be incentivized to switch to $y,$ replacing the $(1-x)$ in $y$'s numerator with the smaller $(1-y).$ So, $y$'s best chance under $x$-leading comes when the chance for Player 1 to win at $y$ is just a bit less than the chance to win at $x.$ 
+After this point, Player 1 would be incentivized to switch their bet to $y,$ which moves Player $y$ from $P_x(y)$ to $P_y(y).$ This replaces the $(1-x)$ in Player $y$'s numerator with the smaller factor $(1-y).$ 
 
-The same is true in reverse.
+This crossover happens before $P_x(y) > P_x(1).$ 
 
-So, we need Player 1's chances when picking $x$ or $y$ to be equal:
+So, $y$'s best chance in the $x$-leading scenario comes when the chance for Player 1 to win at $y$ is just a tad less than the chance to win at $x.$ 
 
+The same is true for Player $x$ in the $y$-lead scenario.
 
+So, Players $x$ and $y$ are incentivized to increase their bets up until the point where they make themself the more attractiveone  to undercut, i.e. they will set $P_x(1) = P_y(1).$
+
+This gives us a second condition:
+
+$$
+\boxed{
+\dfrac{x}{1-(1-x)^2(1-y)} = \dfrac{y(1-x)}{1-(1-x)(1-y)^2}
+}
+$$
 
 
 <br>
