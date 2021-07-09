@@ -39,7 +39,7 @@ $$ f(x,y) = \dfrac{1-x}{1-(1-x)^2(1-y)}. $$
 
 The same is true for Player $y$'s chances. Multiplying Player 1's odds by $(1-x)/(1-x)$ the chances in the $x$-lead scenario become
 
-$$ \mathbf{P_x} = f(x,y) \langle \dfrac{x}{1-x} , x , y(1-x)\rangle. $$
+$$ \mathbf{P_x} = f(x,y) \left\langle \dfrac{x}{1-x} , x , y(1-x)\right\rangle. $$
 
 If $f(x,y) > 1,$ then Players $x$ and $y$ will have their chances raised compared to the $1$-lead scenario. Since $\sum_i P_x(i) = 1,$ this means that Player 1's chances would be lessened. Likewise, if $f(x,y) < 1,$ Player 1's chances will be smaller than in the $1$-lead scenario. 
 
