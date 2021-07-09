@@ -63,13 +63,11 @@ When undercutting Player $x$, $P_x(1),$ is the most attractive option to Player 
 
 After this point, Player 1 would be incentivized to switch their bet to $y,$ which moves Player $y$ from $P_x(y)$ to $P_y(y).$ This replaces the $(1-x)$ in Player $y$'s numerator with the smaller factor $(1-y).$ 
 
-This crossover happens before $P_x(y) > P_x(1).$ 
-
-So, $y$'s best chance in the $x$-leading scenario comes when the chance for Player 1 to win at $y$ is just a tad less than the chance to win at $x.$ 
+This crossover happens before $P_x(y) > P_x(1),$ so Player $y$'s best chance in the $x$-leading scenario comes when the chance for Player 1 to win by undercutting $y$ is just a tad less than their chance to win by undercutting $x.$ 
 
 The same is true for Player $x$ in the $y$-lead scenario.
 
-So, Players $x$ and $y$ are incentivized to increase their bets up until the point where they make themself the more attractiveone  to undercut, i.e. they will set $P_x(1) = P_y(1).$
+So, Players $x$ and $y$ are incentivized to increase their bets up until the point where they make themself the more attractive one to undercut, i.e. they will set $P_x(1) = P_y(1).$
 
 This gives us a second condition:
 
