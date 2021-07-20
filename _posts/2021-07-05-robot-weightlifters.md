@@ -53,7 +53,9 @@ For small $x$ and $y,$ $P_1^1(x,y)$ is the best choice. In this regime, Player X
 
 Player X will follow this strategy up until the boundary $P_1^1(x,y) = P_X^1(x,y).$ What then?
 
-Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
+Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ 
+
+In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
 
 At the boundary, $(1 - P_1^1(x,y)) = (1 - P_X^1(x,y))$ which means that 
 
