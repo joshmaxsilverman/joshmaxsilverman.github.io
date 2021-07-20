@@ -66,7 +66,17 @@ or, $f(x,y) = 1.$
 
 $f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border, $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
 
-In $x$-lead, Player Y will set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. Along the border, 
+In $x$-lead, Player Y will set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
+
+Across the border, 
+
+$$ P_Y^Y(x,y) = \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} = y(1-y)\times g(x,y).$$ 
+
+At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4.$ 
+
+The $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382,$ so Player Y will never veer into the $y$-lead regime. 
+
+But along the border, $P_Y^1(x,y) = P_X^1(x,y),$ so
 
 $$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
@@ -75,14 +85,6 @@ Since $1-x > 1-y,$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this
 $$ P_X^X(x,y) = \dfrac{x-1}{2x-3} $$
 
 which decreases monotonically. So, Player X will never move beyond the $P_1^1(x,y) = P_X^1(x,y)$ border.
-
-Likewise, Player Y will go as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. Across the border, 
-
-$$ P_Y^Y(x,y) = \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} = y(1-y)\times g(x,y).$$ 
-
-At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4.$ 
-
-The $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382,$ so Player Y will never veer into the $y$-lead regime. 
 
 This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
 
