@@ -21,61 +21,56 @@ date: 2021/07/05
 
 ## Solution
 
+When the first seed's time comes, they find a game set by the bets of $x$ and $y.$ They can bet in three materially different ways: frontrun $x,$ frontrun $y,$ or bet behind $y.$
+
+Player 1's chances in these situations are
+
+$$ \frac{z}{1-(1-x)(1-y)(1-z)}, $$
+$$ \frac{z(1-x)}{1-(1-x)(1-y)(1-z)},$$
+
+and
+
+$$ z(1-x)(1-y). $$
+
+These are monotonically increasing in $z,$ so Player 1 only has to consider $x,$ $y,$ and $1.$ When this is done, the chances for each player in the three scenarios are
+
 $$
 \begin{array}{|c|l|l|l|} \hline
 \text{Player 1's best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
-1 & P_1(1) = (1-x)(1-y) & P_1(x) = x & P_1(y) = y(1-x) \\ \hline
-x & P_x(1) = \dfrac{x}{1-(1-x)^2(1-y)} & P_x(x) = \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & P_x(y) = \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
-y & P_y(1) = \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & P_y(x) = \dfrac{x}{1-(1-x)(1-y)^2} & P_y(y) = \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
+1 & P_1^1 = (1-x)(1-y) & P_1^X = x & P_1^Y = y(1-x) \\ \hline
+x & P_X^1 = \dfrac{x}{1-(1-x)^2(1-y)} & P_X^X = \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & P_X^Y = \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
+y & P_Y^1 = \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & P_Y^X = \dfrac{x}{1-(1-x)(1-y)^2} & P_Y^Y = \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
 \end{array}
 $$
 
 
-### $1$ or $x$, it's all the same
+Player 1 will pick whichever of their three options is greatest, given the values of $x$ and $y:$
 
-There's a symmetry between the $1$-lead and $x$-lead situations. The chance for Player $x$ to win in the $x$-lead situation is the same as the $1$-lead situation, multiplied by the factor
+$$ \text{Player 1's bet} = \max\left{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\right}. $$
 
-$$ f(x,y) = \dfrac{1-x}{1-(1-x)^2(1-y)}. $$
+For small $x$ and $y,$ $P_1^1(x,y)$ is the best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
 
-The same is true for Player $y$'s chances. Multiplying Player 1's odds by $(1-x)/(1-x)$ the chances in the $x$-lead scenario become
+Player X will follow this strategy up until the boundary $P_1^1(x,y) = P_X^1(x,y).$ What then?
 
-$$ \mathbf{P_x} = f(x,y) \left\langle \dfrac{x}{1-x}, x, y(1-x)\right\rangle. $$
+Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
 
-If $f(x,y) > 1,$ then Players $x$ and $y$ will have their chances raised compared to the $1$-lead scenario. Since $\sum_i P_x(i) = 1,$ this means that Player 1's chances would be smaller than in the $1$-lead scenario. Likewise, if $f(x,y) < 1,$ then Player 1's chances will be bigger than in the $1$-lead scenario. 
+At the boundary, $1 - P_1^1(x,y) = 1 - P_X^1(x,y)$ which means that $P_1^X(x,y) + P_1^Y(x,y) = P_X^X(x,y) + P_X^Y(x,y) = f(x,y)\left( P_1^X(x,y) + P_1^Y(x,y)\right),$ or $f(x,y) = 1.$ 
 
-Either way, Player 1 can make a choice to enrich themselves at the expense of Players $x$ and $y.$
+$f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border, $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
 
-<!-- $\sum_i P_x(i) = 1,$ so if $f(x,y) > 1,$ then Player 1's odds will be better betting on $1,$ and if $f(x,y) < 1,$ then Player $1$'s odds will be better betting on $x.$ In either case, this choice is to the detriment of Players $x$ and $y.$  -->
+In $x$-lead, Player Y will set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. Along the border, 
 
-So, Players $x$ and $y$ are incentivized to set $f(x,y)$ to $1.$ This means that each player's odds are the same whether Player 1 bets $x$ or $1.$
+$$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
-Setting $f(x,y) = 1$ gets us
+Since $1-x > 1-y,$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this in to $P_X^X(x,y),$ we get 
 
-$$ \boxed{y = 1 - \frac{x}{(1-x)^2}}. $$
+$$ \dfrac{x-1}{2x-3} $$
 
-### $x$ and $y$ in balance
+which decreases monotonically. So, Player X will never move beyond the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
-In any situation, Player 1 will be attracted to bet $x,$ $y,$ or $1.$
+Likewise, Player Y will go as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. Across the border, $P_Y^Y(x,y) = y(1-y)(1-x)/(1-(1-x)(1-y)^2) = y(1-y)\times g(x,y).$ At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4.$ 
 
-<!-- If the chance to win by undercutting $x$ is bigger than the chance to win at $y$ or $1,$ then Player 1 will bet $x.$  -->
+The $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382,$ so Player Y will never veer into the $y$-lead regime. 
 
-When undercutting Player $x$, $P_x(1),$ is the most attractive option to Player 1, Player $y$ can increase their odds, $P_x(y),$ by increasing $y.$ They can do this up until the chance to win by undercutting Player $y$ becomes equal to the chance to win by undercutting Player $x,$ i.e. when $P_y(1) = P_x(1).$ 
+This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
 
-After this point, Player 1 would be incentivized to switch their bet to $y,$ which moves Player $y$ from $P_x(y)$ to $P_y(y).$ This replaces the $(1-x)$ in Player $y$'s numerator with the smaller factor $(1-y).$ 
-
-This crossover happens before $P_x(y) > P_x(1),$ so Player $y$'s best chance in the $x$-leading scenario comes when the chance for Player 1 to win by undercutting $y$ is just a tad less than their chance to win by undercutting $x.$ 
-
-The same is true for Player $x$ in the $y$-lead scenario.
-
-So, Players $x$ and $y$ are incentivized to increase their bets up until the point where they make themself the more attractive one to undercut, i.e. they will set $P_x(1) = P_y(1).$
-
-This gives us a second condition:
-
-$$
-\boxed{
-\dfrac{x}{1-(1-x)^2(1-y)} = \dfrac{y(1-x)}{1-(1-x)(1-y)^2}
-}
-$$
-
-
-<br>
