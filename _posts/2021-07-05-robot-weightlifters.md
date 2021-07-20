@@ -91,7 +91,7 @@ $$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
 Since $(1-x) > (1-y),$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this in to $P_X^X(x,y),$ we get 
 
-$$ P_X^X(x,y) \leq \dfrac{x-1}{2x-3} $$
+$$ P_X^X(x,y) \leq \dfrac{1-x}{3-2x} $$
 
 which decreases monotonically. So, Player X will never want to open themselves up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
