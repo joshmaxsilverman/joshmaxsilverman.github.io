@@ -57,7 +57,7 @@ Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the 
 
 In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
 
-At the boundary, $(1 - P_1^1(x,y)) = (1 - P_X^1(x,y))$ which means that 
+Along the boundary, $(1 - P_1^1(x,y)) = (1 - P_X^1(x,y))$ which means that 
 
 $$\begin{align}
 P_1^X(x,y) + P_1^Y(x,y) &= P_X^X(x,y) + P_X^Y(x,y) \\
