@@ -21,9 +21,13 @@ date: 2021/07/05
 
 ## Solution
 
-When the first seed's time comes, they find a game set by the bets of $x$ and $y.$ They can bet in three materially different ways: frontrun $x,$ frontrun $y,$ or bet behind $y.$
+When the first seed's time comes, they find a betting landscape set by the bets of $x$ and $y.$ They have three materially different choices: frontrun $x,$ frontrun $y,$ or bet behind $y.$
 
-Player 1's chances in these situations are
+### Player 1, X and Y's chances to win
+
+As an illustrative example, suppose that Player 1 decides to frontrun Player Y, so that $x < z < y.$ For Player 1 to win a round in this case, they need their lift to succeed (probability $x$) and Player X's lift to fail (probability $1-x$), since a successful heavier lift would beat them. Similarly, Player Y needs their lift to succeed (probability $y$), and the other two to fail (probability $(1-x)(1-z).$ However, these three outcomes aren't exhaustive... it is possible for noone to win the round, in which case the game starts over. So, we have to normalize by the chance that **something** happens, $1-(1-x)(1-y)(1-z).$
+
+By this logic, Player 1's chances in the three situations are ($z$ is Player 1's lift probability)
 
 $$ \frac{z}{1-(1-x)(1-y)(1-z)}, $$
 
@@ -47,6 +51,10 @@ $$
 Player 1 will pick whichever of their three options is greatest, given the values of $x$ and $y:$
 
 $$ \text{Player 1's bet} = \max\{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\}. $$
+
+### The betting landscape
+
+TODO
 
 ### Player X's incentives 
 
