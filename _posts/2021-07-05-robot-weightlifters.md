@@ -95,7 +95,11 @@ $$ P_X^X(x,y) \leq \dfrac{1-x}{3-2x} $$
 
 which decreases monotonically. So, Player X will never want to open themselves up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
-Putting it all together, Player X will make $x$ as high as possible without allowing Player Y to move the game into $x$-lead territory, and Player Y will make $y$ as high as possible without bringing the game into $y$-lead territory. $x$-lead territory lies across the $P_1^1(x,y) = P_X^1(x,y)$ border and $y$-lead territory lies across the $P_1^1(x,y) = P_Y^1(x,y)$ border.
+Putting it all together:
+
+- Player X will make $x$ as high as possible without allowing Player Y to move the game into $x$-lead territory, and 
+- Player Y will make $y$ as high as possible without bringing the game into $y$-lead territory. 
+- $x$-lead territory lies across the $P_1^1(x,y) = P_X^1(x,y)$ border and $y$-lead territory lies across the $P_1^1(x,y) = P_Y^1(x,y)$ border.
 
 This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
 
