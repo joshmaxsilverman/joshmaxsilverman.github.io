@@ -37,56 +37,65 @@ These are monotonically increasing in $z,$ so Player 1 only has to consider $x,$
 
 $$
 \begin{array}{|c|l|l|l|} \hline
-\text{Player 1's best bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
+\text{Player 1's bet} & \text{Player 1 odds} & \text{Player}\, x\,\text{odds} & \text{Player}\, y\,\text{odds} \\ \hline
 1 & P_1^1 = (1-x)(1-y) & P_1^X = x & P_1^Y = y(1-x) \\ \hline
 x & P_X^1 = \dfrac{x}{1-(1-x)^2(1-y)} & P_X^X = \dfrac{x(1-x)}{1-(1-x)^2(1-y)} & P_X^Y = \dfrac{y(1-x)^2}{1-(1-x)^2(1-y)} \\ \hline
 y & P_Y^1 = \dfrac{y(1-x)}{1-(1-x)(1-y)^2} & P_Y^X = \dfrac{x}{1-(1-x)(1-y)^2} & P_Y^Y = \dfrac{y(1-x)(1-y)}{1-(1-x)(1-y)^2} \\ \hline
 \end{array}
 $$
 
-
 Player 1 will pick whichever of their three options is greatest, given the values of $x$ and $y:$
 
 $$ \text{Player 1's bet} = \max\{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\}. $$
 
-For small $x$ and $y,$ $P_1^1(x,y)$ is the best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
+### Player X's incentives 
 
-Player X will follow this strategy up until the boundary $P_1^1(x,y) = P_X^1(x,y).$ What then?
+For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
+
+Player X can follow this strategy up until they hit the border $P_1^1(x,y) = P_X^1(x,y),$ beyond which Player 1 will switch from betting $1$ to frontrunning Player X. What then?
 
 Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ 
 
 In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
 
-Along the boundary, $(1 - P_1^1(x,y)) = (1 - P_X^1(x,y))$ which means that 
+Along this border, $P_1^1(x,y) = P_X^1(x,y).$ Because $\sum_i P_1^i = \sum_i P_X^i = 1,$ this means that 
 
 $$\begin{align}
 P_1^X(x,y) + P_1^Y(x,y) &= P_X^X(x,y) + P_X^Y(x,y) \\
-&= f(x,y)\left( P_1^X(x,y) + P_1^Y(x,y)\right),
+&= f(x,y)\times \left( P_1^X(x,y) + P_1^Y(x,y)\right),
 \end{align}$$ 
 
-or, $f(x,y) = 1.$
+or, $f(x,y) = 1.$ 
 
-$f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border, $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
+$f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border (small $x$ and $y$), $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
 
-In $x$-lead, Player Y will set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
+### Player Y's incentives at the $P_1^1(x,y) = P_Y^1(x,y)$ border
 
-Across the border, 
+In $x$-lead, Player Y is incentivized to set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
+
+On the other side of this border, 
 
 $$ P_Y^Y(x,y) = \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} = y(1-y)\times g(x,y).$$ 
 
-At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4.$ 
+At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4$ for all points across the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
 
-The $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382,$ so Player Y will never veer into the $y$-lead regime. 
+However, the $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382 \gt \frac14,$ so Player Y will never veer into the $y$-lead regime. 
 
-But along the border, $P_Y^1(x,y) = P_X^1(x,y),$ so
+### Player X's prospects at the $P_Y^1(x,y) = P_X^1(x,y)$ border
+
+Player X can continue to increase their chances by crossing the $P_Y^1(x,y) = P_X^1(x,y)$ border. But, if they do, Player Y benefits by making $y$ as big as possible, without going into the $y$-lead regime. This means that any foray into $x$-lead territory will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
+
+How does Player X fare there? By definition, $P_Y^1(x,y) = P_X^1(x,y),$ along the border, so
 
 $$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
-Since $1-x > 1-y,$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this in to $P_X^X(x,y),$ we get 
+Since $(1-x) > (1-y),$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this in to $P_X^X(x,y),$ we get 
 
-$$ P_X^X(x,y) = \dfrac{x-1}{2x-3} $$
+$$ P_X^X(x,y) \leq \dfrac{x-1}{2x-3} $$
 
-which decreases monotonically. So, Player X will never move beyond the $P_1^1(x,y) = P_X^1(x,y)$ border.
+which decreases monotonically. So, Player X will never want to open themselves up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
+
+Putting it all together, Player X will make $x$ as high as possible without allowing Player Y to move the game into $x$-lead territory, and Player Y will make $y$ as high as possible without bringing the game into $y$-lead territory. $x$-lead territory lies across the $P_1^1(x,y) = P_X^1(x,y)$ border and $y$-lead territory lies across the $P_1^1(x,y) = P_Y^1(x,y)$ border.
 
 This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
 
