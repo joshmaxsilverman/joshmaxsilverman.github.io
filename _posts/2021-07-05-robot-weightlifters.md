@@ -46,7 +46,7 @@ $$
 
 Player 1 will pick whichever of their three options is greatest, given the values of $x$ and $y:$
 
-$$ \text{Player 1's bet} = \max\left{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\right}. $$
+$$ \text{Player 1's bet} = \max\{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\}. $$
 
 For small $x$ and $y,$ $P_1^1(x,y)$ is the best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
 
@@ -73,4 +73,8 @@ Likewise, Player Y will go as high as possible without crossing the $P_1^1(x,y) 
 The $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382,$ so Player Y will never veer into the $y$-lead regime. 
 
 This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
+
+## Strategy recap
+
+To recap, Player X sets $x$ as high as they can, knowing that it never benefits them to go into the $x$-lead regime. 
 
