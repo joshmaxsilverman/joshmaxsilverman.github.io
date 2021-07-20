@@ -55,7 +55,14 @@ Player X will follow this strategy up until the boundary $P_1^1(x,y) = P_X^1(x,y
 
 Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ In other words, $P_1^X(x,y) = f(x,y)\times P_X^X(x,y).$ Likewise, $P_1^Y(x,y) = f(x,y)\times P_X^Y(x,y).$ 
 
-At the boundary, $1 - P_1^1(x,y) = 1 - P_X^1(x,y)$ which means that $P_1^X(x,y) + P_1^Y(x,y) = P_X^X(x,y) + P_X^Y(x,y) = f(x,y)\left( P_1^X(x,y) + P_1^Y(x,y)\right),$ or $f(x,y) = 1.$ 
+At the boundary, $(1 - P_1^1(x,y)) = (1 - P_X^1(x,y))$ which means that 
+
+$$\begin{align}
+P_1^X(x,y) + P_1^Y(x,y) &= P_X^X(x,y) + P_X^Y(x,y) \\
+&= f(x,y)\left( P_1^X(x,y) + P_1^Y(x,y)\right),
+\end{align}$$ 
+
+or, $f(x,y) = 1.$
 
 $f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border, $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
 
