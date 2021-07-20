@@ -26,6 +26,7 @@ When the first seed's time comes, they find a game set by the bets of $x$ and $y
 Player 1's chances in these situations are
 
 $$ \frac{z}{1-(1-x)(1-y)(1-z)}, $$
+
 $$ \frac{z(1-x)}{1-(1-x)(1-y)(1-z)},$$
 
 and
