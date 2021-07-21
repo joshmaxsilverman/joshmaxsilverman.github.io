@@ -97,9 +97,10 @@ How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is
 
 $$ \frac{\partial P_X^X(x,y)}{\partial x} < 0 $$
 
-which gets us 
+which gets
 
 $$ (1-2x)(1-(1-x)^2(1-y)) + 2x(1-x)(1-x)(1-y) < 0 $$
+
 or 
 
 $$ y \gt \dfrac{x^2}{(1-x)^2}. $$
