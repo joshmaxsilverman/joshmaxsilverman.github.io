@@ -116,7 +116,7 @@ The border ends at $x = \frac12,$ so $x/(1-x) < 1$ for all relevant values of $x
 $$
 \begin{align}
 y &\gt \frac{x}{1-x} \\
-  &\gt x^2/(1-x)^2.
+  &\gt \left(\dfrac{x}{1-x}\right)^2.
 \end{align}
 $$
 
