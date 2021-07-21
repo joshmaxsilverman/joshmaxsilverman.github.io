@@ -111,7 +111,14 @@ $$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
 Since $(1-x) > (1-y),$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ 
 
-The border ends at $x = \frac12,$ so $x/(1-x) < 1$ for all relevant value of x, and so $y > x/(1-x) > x^2/(1-x)^2.$
+The border ends at $x = \frac12,$ so $x/(1-x) < 1$ for all relevant values of $x,$ and so 
+
+$$
+\begin{align}
+y &\gt \frac{x}{1-x} \\
+  &\gt x^2/(1-x)^2.
+\end{align}
+$$
 
 So, $P_X^X(x,y)$ decreases monotonically along the border and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
