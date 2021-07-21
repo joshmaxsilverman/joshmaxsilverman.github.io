@@ -87,7 +87,7 @@ $$ P_Y^Y(x,y) = \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} = y(1-y)\times g(x,y).$$
 
 At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4$ for all points across the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
 
-However, the $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{5})/2 \approx 0.382 \gt \frac14,$ so Player Y will never veer into the $y$-lead regime. 
+However, the $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $\frac12(3-\sqrt{5}) \approx 0.382 \gt \frac14,$ so Player Y will never veer into the $y$-lead regime. 
 
 ### Player X's prospects at the $P_Y^1(x,y) = P_X^1(x,y)$ border
 
