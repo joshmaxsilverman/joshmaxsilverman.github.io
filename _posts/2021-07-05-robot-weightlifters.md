@@ -99,10 +99,6 @@ $$ \frac{\partial P_X^X(x,y)}{\partial x} < 0 $$
 
 which gets
 
-$$ (1-2x)(1-(1-x)^2(1-y)) + 2x(1-x)(1-x)(1-y) < 0 $$
-
-or 
-
 $$ y \gt \dfrac{x^2}{(1-x)^2}. $$
 
 Now, by definition, $P_Y^1(x,y) = P_X^1(x,y)$ along the border, so
