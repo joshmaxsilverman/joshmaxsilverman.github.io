@@ -35,7 +35,7 @@ $$ \frac{z(1-x)}{1-(1-x)(1-y)(1-z)},$$
 
 and
 
-$$ z(1-x)(1-y). $$
+$$ \frac{z(1-x)(1-y)}{1-(1-x)(1-y)(1-z)}. $$
 
 These are monotonically increasing in $z,$ so Player 1 only has to consider $x,$ $y,$ and $1.$ When this is done, the chances for each player in the three scenarios are
 
