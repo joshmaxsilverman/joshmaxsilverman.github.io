@@ -91,17 +91,28 @@ However, the $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $(3-\sqrt{
 
 ### Player X's prospects at the $P_Y^1(x,y) = P_X^1(x,y)$ border
 
-Player X can continue to increase their chances by crossing the $P_Y^1(x,y) = P_X^1(x,y)$ border. But, if they do, Player Y benefits by making $y$ as big as possible, without going into the $y$-lead regime. This means that any foray into $x$-lead territory will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
+If Player X crosses the $P_Y^1(x,y) = P_X^1(x,y)$ border, Player Y benefits by making $y$ as big as possible, without going into the $y$-lead regime. This means that any foray into $x$-lead territory will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
 
-How does Player X fare there? By definition, $P_Y^1(x,y) = P_X^1(x,y),$ along the border, so
+How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero:
+
+$$ \frac{\partial P_X^X(x,y)}{\partial x} < 0 $$
+
+which gets us 
+
+$$ (1-2x)(1-(1-x)^2(1-y)) + 2x(1-x)(1-x)(1-y) < 0 $$
+or 
+
+$$ y \gt \dfrac{x^2}{(1-x)^2}. $$
+
+Now, by definition, $P_Y^1(x,y) = P_X^1(x,y)$ along the border, so
 
 $$ \dfrac{y(1-x)}{1-(1-x)(1-y)^2} = \dfrac{x}{1-(1-x)^2(1-y)}. $$
 
-Since $(1-x) > (1-y),$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ Plugging this in to $P_X^X(x,y),$ we get 
+Since $(1-x) > (1-y),$ this means that $y(1-x) > x,$ or $y > x/(1-x).$ 
 
-$$ P_X^X(x,y) \leq \dfrac{1-x}{3-2x} $$
+The border ends at $x = \frac12,$ so $x/(1-x) < 1$ for all relevant value of x, and so $y > x/(1-x) > x^2/(1-x)^2.$
 
-which decreases monotonically. So, Player X will never want to open themselves up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
+So, $P_X^X(x,y)$ decreases monotonically along the border and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
 Putting it all together:
 
