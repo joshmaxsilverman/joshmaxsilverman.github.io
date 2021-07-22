@@ -129,7 +129,7 @@ y &\gt \frac{x}{1-x} \\
 \end{align}
 $$
 
-This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
+This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border (this is the reason we only need to consider $x \leq y$).
 
 So far, this means that Player X's best chance is at the triple point. Likewise, Player Y's chance is at least ${P_1^Y(x_\text{triple},y_\text{triple}) = y_\text{triple}\left(1-x_\text{triple}\right)}.$
 
