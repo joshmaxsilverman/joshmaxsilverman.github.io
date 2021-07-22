@@ -76,11 +76,11 @@ Player 1 will continue to bet $1$ up until the point where $P_X^1(x,y) = P_1^1(x
 
 Similarly, if $y$ becomes big enough so that $P_Y^1(x,y) = P_1^1(x,y)$, Player 1 will switch their bet to just under $y.$ This curves bends up and to the right since for higher values of $x,$ $y$ will have to be bigger to outcompete $x$ as the more attractive undercutting opportunity. This border intersects the $y$-axis at $y^* = \frac12\left(3-\sqrt{5}\right)$ (obtained by solving ${P_Y^1(0,y) = P_1^1(0,y)}$).
 
-![](/img/2021-07-21-JS-1-Y-border.png){width="400px" class="image-centered"}
+![](/img/2021-07-21-JS-1-Y-border.png){:width="400px" class="image-centered"}
 
 If $x$ and $y$ are both large, then it's no longer attractive for Player 1 to bet $1$ and they will always undercut Player X or Player Y. The border between the regimes is given by the curve $P_X^1(x,y) = P_Y^1(x,y).$ This border hits the boundary of the probability square (${y=1}$) when ${x^*=\frac12.}$
 
-![](/img/2021-07-21-JS-X-Y-border.png){width="400px" class="image-centered"}
+![](/img/2021-07-21-JS-X-Y-border.png){:width="400px" class="image-centered"}
 
 
 ### Player X's incentives 
