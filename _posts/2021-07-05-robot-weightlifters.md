@@ -54,7 +54,7 @@ $$ \text{Player 1's bet} = \max\{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\}. $$
 
 ### The betting landscape
 
-The betting landscape is defined by the $\max$ function above — which defines an optimal bet for Player 1 for every possible pair $(x,y)$. 
+The betting landscape is defined by the $\max$ function above, which defines an optimal bet for Player 1 for every possible pair $(x,y)$. 
 
 For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice: Players X and Y are unlikely to succeed in their lifts, so Player 1 can lift zero weight and usually win. 
 
