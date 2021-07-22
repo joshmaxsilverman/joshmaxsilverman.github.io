@@ -110,7 +110,7 @@ But in this case, Player Y benefits by bringing the game (at least) into the $x$
 
 ![](/img/2021-07-21-JS-X-Y-border-game.png){:width="400px" class="image-centered"}
 
-How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero: ${\frac{\partial}{\partial x} P_X^X(x,y) < 0 }$ which gets
+How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero: ${\partial_x P_X^X(x,y) < 0 }$ which gets
 
 $$ y \gt \dfrac{x^2}{(1-x)^2}. $$
 
