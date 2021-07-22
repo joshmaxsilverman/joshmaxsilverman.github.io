@@ -21,8 +21,6 @@ date: 2021/07/05
 
 ## Solution
 
-2021-07-21-JS-X-Y-border-game.png
-
 When the first seed's time comes, they find a betting landscape set by the bets of $x$ and $y.$ They have three materially different choices: frontrun $x,$ frontrun $y,$ or bet behind $y.$
 
 ### Player 1, X and Y's chances to win
@@ -107,7 +105,9 @@ $f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of 
 
 In the $1$-lead, Players X and Y are incentivized to set $x$ and $y$ as high as possible. Naively, Player X can achieve this by setting $x$ to where the $P_1^1(x,y)=P_X^1(x,y)$ border crosses $y=x.$ 
 
-But in this case, Player Y benefits by bringing the game into the $x$-lead, and making $y$ as large as possible there. This means that any foray past the triple point will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
+But in this case, Player Y benefits by bringing the game (at least) into the $x$-lead, and making $y$ as large as possible there. This means that any foray past the triple point will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
+
+![](/img/2021-07-21-JS-X-Y-border-game.png){:width="400px" class="image-centered"}
 
 How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero: ${\frac{\partial}{\partial x} P_X^X(x,y) < 0 }$ which gets
 
