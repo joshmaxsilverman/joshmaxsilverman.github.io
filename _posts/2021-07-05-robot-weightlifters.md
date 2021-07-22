@@ -148,9 +148,9 @@ $$
 
 Since $(1-x) > (1-y),$
 
-$$ \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} < \frac{1-x}{1-(1-x)^2(1-y)}. $$
+$$ \frac{(1-x)}{1-(1-x)(1-y)^2} < \frac{1-x}{1-(1-x)^2(1-y)}. $$
 
-However, at the triple point
+At the triple point
 
 $$
 \begin{align}
