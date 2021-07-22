@@ -75,7 +75,7 @@ For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice: Players X and Y a
 
 In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
 
-![](/img/2021-07-21-JS-1-lead-increases.png){:width="400 px" class="centered"}
+![](/img/2021-07-21-JS-1-lead-increases.png){:width="400px" class="image-centered"}
 
 ### Player X's incentives 
 
