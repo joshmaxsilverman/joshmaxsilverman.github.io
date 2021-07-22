@@ -131,7 +131,7 @@ $$
 
 This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
-So far, this means that Player X's best chance is at the triple point. As the triple point is above the $y^*$ intercept, Player Y's chance is at least $\approx 0.382.$
+So far, this means that Player X's best chance is at the triple point. As the triple point is above the $y^*$ intercept, Player Y's chance is at least ${P_1^Y(x_\text{triple},y_\text{triple}) = y_\text{triple}\left(1-x_\text{triple}\right)}.$
 
 ### North of the border
 
@@ -163,7 +163,7 @@ so $g(x,y) < f(x,y) = 1.$
 
 $g(x,y)$ decreases monotonically in $x$ and $y,$ so $g(x,y) < 1$ for all points up and to the right of the triple point, which means that $P_Y^Y(x,y) = y(1-y)g(x,y) \lt \frac14$ for those points too. 
 
-Since $P_1^Y(x_\text{triple}, y_\text{triple}) > y_\text{triple}(1-x_\text{triple}) \approx 0.311 > \frac14$ at the triple point, Player Y doesn't stand to gain anything by moving above it.
+Since $P_1^Y(x_\text{triple}, y_\text{triple}) = y_\text{triple}(1-x_\text{triple}) \approx 0.311 > \frac14$ at the triple point, Player Y doesn't stand to gain anything by moving above it.
 
 ![](/img/2021-07-21-JS-g-zone.png){:width="400px" class="image-centered"}
 
