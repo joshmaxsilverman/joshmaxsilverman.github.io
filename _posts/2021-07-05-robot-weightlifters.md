@@ -78,6 +78,7 @@ As there are three zones, with borders between each pair, there is one point whe
 
 ![](/img/2021-07-21-JS-zone-boundaries.png){:width="400px" class="image-centered"}
 
+The triple point can be found by solving the intersection of any two of these borders, and we get $x_\text{triple} \approx 0.2868\ldots$ and $y_\text{triple} \approx 0.4360\ldots$
 
 <!-- ### Player X's incentives 
 
@@ -131,6 +132,8 @@ $$
 This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
 So far, this means that Player X's best chance is at the triple point. As the triple point is above the $y^*$ intercept, Player Y's chance is at least $\approx 0.382.$
+
+### North of the border
 
 What happens if Player Y crosses the $P_1^1(x,y) = P_Y^1(x,y)$ border?
 
