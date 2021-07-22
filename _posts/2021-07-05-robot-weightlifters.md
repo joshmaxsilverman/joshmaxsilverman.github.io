@@ -131,7 +131,7 @@ $$
 
 This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
 
-So far, this means that Player X's best chance is at the triple point. As the triple point is above the $y^*$ intercept, Player Y's chance is at least ${P_1^Y(x_\text{triple},y_\text{triple}) = y_\text{triple}\left(1-x_\text{triple}\right)}.$
+So far, this means that Player X's best chance is at the triple point. Likewise, Player Y's chance is at least ${P_1^Y(x_\text{triple},y_\text{triple}) = y_\text{triple}\left(1-x_\text{triple}\right)}.$
 
 ### North of the border
 
