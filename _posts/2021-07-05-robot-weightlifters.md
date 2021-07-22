@@ -21,13 +21,7 @@ date: 2021/07/05
 
 ## Solution
 
-
-2021-07-21-JS-g-zone.png
-
 2021-07-21-JS-X-Y-border-game.png
-
-2021-07-21-JS-zone-boundaries.png
-
 
 When the first seed's time comes, they find a betting landscape set by the bets of $x$ and $y.$ They have three materially different choices: frontrun $x,$ frontrun $y,$ or bet behind $y.$
 
@@ -74,20 +68,24 @@ Player 1 will continue to bet $1$ up until the point where $P_X^1(x,y) = P_1^1(x
 
 ![](/img/2021-07-21-JS-1-X-border.png){:width="400px" class="image-centered"}
 
-Similarly, if $y$ becomes big enough so that $P_Y^1(x,y) = P_1^1(x,y)$, Player 1 will switch their bet to just under $y.$ This curves bends up and to the right since for higher values of $x,$ $y$ will have to be bigger to outcompete $x$ as the more attractive undercutting opportunity. This border intersects the $y$-axis at $y^* = \frac12\left(3-\sqrt{5}\right)$ (obtained by solving ${P_Y^1(0,y) = P_1^1(0,y)}$).
+Similarly, if $y$ becomes big enough so that $P_Y^1(x,y) = P_1^1(x,y)$, Player 1 will switch their bet to just under $y.$ This curve bends up and to the right since for higher values of $x,$ $y$ will have to be bigger to outcompete $x$ as the more attractive undercutting opportunity. This border intersects the $y$-axis at $y^* = \frac12\left(3-\sqrt{5}\right)$ (obtained by solving ${P_Y^1(0,y) = P_1^1(0,y)}$).
 
 ![](/img/2021-07-21-JS-1-Y-border.png){:width="400px" class="image-centered"}
 
-If $x$ and $y$ are both large, then it's no longer attractive for Player 1 to bet $1$ and they will always undercut Player X or Player Y. The border between the regimes is given by the curve $P_X^1(x,y) = P_Y^1(x,y).$ This border hits the boundary of the probability square (${y=1}$) when ${x^*=\frac12.}$
+If $x$ and $y$ are both large, then it's no longer attractive for Player 1 to bet $1$ and they will always undercut Player X or Player Y. The border between the regimes is given by the curve $P_X^1(x,y) = P_Y^1(x,y),$ which curves up and to the right since as $x$ grows, $y$ will have to be more and more of a sure bet to outcompete the comparitively sure bet in $x.$ This curve hits the boundary of the square (${y=1}$) when ${x^*=\frac12.}$
 
 ![](/img/2021-07-21-JS-X-Y-border.png){:width="400px" class="image-centered"}
 
+As there are three zones, with borders between each pair, there is one point where the three strategies are equally attractive to Player 1, and the betting landscape looks like:
 
-### Player X's incentives 
+![](/img/2021-07-21-JS-zone-boundaries.png){:width="400px" class="image-centered"}
 
-For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
 
-Player X can follow this strategy up until they hit the border $P_1^1(x,y) = P_X^1(x,y),$ beyond which Player 1 will switch from betting $1$ to frontrunning Player X. What then?
+<!-- ### Player X's incentives 
+
+For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice. In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible.
+
+Player X can increase their chance up until they hit the border $P_1^1(x,y) = P_X^1(x,y),$ beyond which Player 1 will switch from betting $1$ to frontrunning Player X. And what then?
 
 Inspecting the probabilities, Player X's chance in the $x$-lead is equal to the chance in the $1$-lead multiplied by $f(x,y) = (1-x)/(1-(1-x)^2(1-y)).$ 
 
@@ -102,29 +100,16 @@ P_1^X(x,y) + P_1^Y(x,y) &= P_X^X(x,y) + P_X^Y(x,y) \\
 
 or, $f(x,y) = 1.$ 
 
-$f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border (small $x$ and $y$), $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$ 
+$f(x,y)$ is monotonically decreasing in $x$ and $y,$ so on the $1$-lead side of the border (small $x$ and $y$), $f(x,y) > 1$ and on the other side, $f(x,y) < 1.$  -->
 
-### Player Y's incentives at the $P_1^1(x,y) = P_Y^1(x,y)$ border
+### Incentives for Players X and Y in the $1$-lead
+<!-- at the $P_1^1(x,y) = P_Y^1(x,y)$ border -->
 
-In $x$-lead, Player Y is incentivized to set $y$ as high as possible without crossing the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
+In the $1$-lead, Players X and Y are incentivized to set $x$ and $y$ as high as possible. Naively, Player X can achieve this by setting $x$ to where the $P_1^1(x,y)=P_X^1(x,y)$ border crosses $y=x.$ 
 
-On the other side of this border, 
+But in this case, Player Y benefits by bringing the game into the $x$-lead, and making $y$ as large as possible there. This means that any foray past the triple point will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
 
-$$ P_Y^Y(x,y) = \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} = y(1-y)\times g(x,y).$$ 
-
-At the point where the border intercepts the $y$-axis, $g(x,y) = 1$ and it decreases monotonically in $x$ and $y$ from there. This means that $P_Y^1(x,y) \leq 1/4$ for all points across the $P_1^1(x,y) = P_Y^1(x,y)$ border. 
-
-However, the $y$-intercept of the $P_1^1(x,y) = P_Y^1(x,y)$ border is $\frac12(3-\sqrt{5}) \approx 0.382 \gt \frac14,$ so Player Y will never veer into the $y$-lead regime. 
-
-### Player X's prospects at the $P_Y^1(x,y) = P_X^1(x,y)$ border
-
-If Player X crosses the $P_Y^1(x,y) = P_X^1(x,y)$ border, Player Y benefits by making $y$ as big as possible, without going into the $y$-lead regime. This means that any foray into $x$-lead territory will bring the game up to the $P_Y^1(x,y) = P_X^1(x,y)$ border. 
-
-How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero:
-
-$$ \frac{\partial P_X^X(x,y)}{\partial x} < 0 $$
-
-which gets
+How does Player X fare there? We can solve for when the slope of $P_X^X(x,y)$ is less than zero: ${\frac{\partial}{\partial x} P_X^X(x,y) < 0 }$ which gets
 
 $$ y \gt \dfrac{x^2}{(1-x)^2}. $$
 
@@ -143,7 +128,41 @@ y &\gt \frac{x}{1-x} \\
 \end{align}
 $$
 
-So, $P_X^X(x,y)$ decreases monotonically along the border and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
+This means that $P_X^X(x,y)$ decreases monotonically as we move along the border away from the triple point, and Player X does not benefit in bringing the game up to the $P_1^1(x,y) = P_X^1(x,y)$ border.
+
+So far, this means that Player X's best chance is at the triple point. As the triple point is above the $y^*$ intercept, Player Y's chance is at least $\approx 0.382.$
+
+What happens if Player Y crosses the $P_1^1(x,y) = P_Y^1(x,y)$ border?
+
+On the other side of the border, Player 1 will undercut them and their chances become
+
+$$
+\begin{align}
+P_Y^Y(x,y) &= \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} \\
+&= y(1-y)\times g(x,y).
+\end{align}
+$$ 
+
+Since $(1-x) > (1-y),$
+
+$$ \frac{y(1-y)(1-x)}{1-(1-x)(1-y)^2} < \frac{1-x}{1-(1-x)^2(1-y)}. $$
+
+However, at the triple point
+
+$$
+\begin{align}
+f(x,y) &= \frac{1-x}{1-(1-x)^2(1-y)} \\
+&= 1,
+\end{align}
+$$
+
+so $g(x,y) < f(x,y) = 1.$ 
+
+$g(x,y)$ decreases monotonically in $x$ and $y,$ so $g(x,y) < 1$ for all points up and to the right of the triple point, which means that $P_Y^Y(x,y) = y(1-y)g(x,y) \lt \frac14$ for those points too. 
+
+Since $y > \frac12\left(3-\sqrt{5}\right) > \frac14$ at the triple point, Player Y doesn't stand to gain anything by moving above the triple point.
+
+![](/img/2021-07-21-JS-g-zone.png){:width="400px" class="image-centered"}
 
 Putting it all together:
 
@@ -153,7 +172,8 @@ Putting it all together:
 
 This means that the point where the $P_1^1(x,y) = P_Y^1(x,y)$ and $P_1^1(x,y) = P_X^1(x,y)$ borders intersect is optimal for Players X and Y.
 
-## Strategy recap
+<!-- ## Strategy recap
 
 To recap, Player X sets $x$ as high as they can, knowing that it never benefits them to go into the $x$-lead regime. 
 
+ -->
