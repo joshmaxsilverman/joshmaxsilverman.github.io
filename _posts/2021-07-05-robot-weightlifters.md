@@ -163,9 +163,9 @@ so $g(x,y) < f(x,y) = 1.$
 
 $g(x,y)$ decreases monotonically in $x$ and $y,$ so $g(x,y) < 1$ for all points up and to the right of the triple point, which means that $P_Y^Y(x,y) = y(1-y)g(x,y) \lt \frac14$ for those points too. 
 
-Since $P_1^Y(x_\text{triple}, y_\text{triple}) = y_\text{triple}(1-x_\text{triple}) \approx 0.311 > \frac14$ at the triple point, Player Y doesn't stand to gain anything by moving above it.
-
 ![](/img/2021-07-21-JS-g-zone.png){:width="400px" class="image-centered"}
+
+Since $P_1^Y(x_\text{triple}, y_\text{triple}) = y_\text{triple}(1-x_\text{triple}) \approx 0.311 > \frac14$ at the triple point, Player Y doesn't stand to gain anything by moving above it.
 
 Putting it all together:
 
