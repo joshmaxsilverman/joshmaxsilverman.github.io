@@ -21,6 +21,21 @@ date: 2021/07/05
 
 ## Solution
 
+
+
+2021-07-21-JS-1-X-border.png
+
+2021-07-21-JS-1-Y-border.png
+
+2021-07-21-JS-g-zone.png
+
+2021-07-21-JS-X-Y-border.png
+
+2021-07-21-JS-X-Y-border-game.png
+
+2021-07-21-JS-zone-boundaries.png
+
+
 When the first seed's time comes, they find a betting landscape set by the bets of $x$ and $y.$ They have three materially different choices: frontrun $x,$ frontrun $y,$ or bet behind $y.$
 
 ### Player 1, X and Y's chances to win
@@ -54,7 +69,13 @@ $$ \text{Player 1's bet} = \max\{P_X^1(x,y), P_Y^1(x,y), P_1^1(x,y)\}. $$
 
 ### The betting landscape
 
-TODO
+The betting landscape is defined by the $\max$ function above — which defines an optimal bet for Player 1 for every possible pair $(x,y)$. 
+
+For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice: Players X and Y are unlikely to succeed in their lifts, so Player 1 can lift zero weight and usually win. 
+
+In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
+
+![](/img/2021-07-21-JS-1-lead-increases.png){:width="400 px" class="centered"}
 
 ### Player X's incentives 
 
