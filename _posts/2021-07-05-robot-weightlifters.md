@@ -22,9 +22,6 @@ date: 2021/07/05
 ## Solution
 
 
-
-2021-07-21-JS-1-X-border.png
-
 2021-07-21-JS-1-Y-border.png
 
 2021-07-21-JS-g-zone.png
@@ -76,6 +73,12 @@ For small $x$ and $y,$ $P_1^1(x,y)$ is Player 1's best choice: Players X and Y a
 In this regime, Player X and Player Y's chances are simply $x$ and $y(1-x)$ and both can increase their chances by setting their lift probability as high as possible. 
 
 ![](/img/2021-07-21-JS-1-lead-increases.png){:width="400px" class="image-centered"}
+
+Player 1 will continue to bet $1$ up until the point where $P_X^1(x,y) = P_1^1(x,y).$ Past that border, it becomes advantageous for them to undercut Player X by betting just under $x.$
+
+This curve bends up and to the left, since for larger values of $y,$ it is less likely for Players X and Y to both fail in their lifts.
+
+![](/img/2021-07-21-JS-1-X-border.png){:width="400px" class="image-centered"}
 
 ### Player X's incentives 
 
