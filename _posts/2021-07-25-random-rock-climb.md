@@ -124,7 +124,7 @@ def round(gap):
     return len(points)
  ```
 
-Running this for $g$ from $5\%$ up to $100\%,$ we get
+Running this for $g$ from $1/20$ up to $1,$ we get
 
 <!-- <<h> curve> -->
   
