@@ -138,7 +138,7 @@ def round(gap):
     return len(points)
  ```
 
-Running this for $g$ from $1/20$ up to $1,$ we get
+Running this for $g \leq 0.5,$ we get
 
 ![](/img/2021-07-25-H-G-2d.PNG){:width="400 px" class="image-centered"}
   
