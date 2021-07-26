@@ -75,7 +75,7 @@ The essential logic is contained inside the function `is_there_a_path(points, ga
   
 Each round, the set of points that are within $g$ of a current frontier point become the new frontier points, and the unexplored points become all the points that have yet to be frontier points. 
   
-At the start of each round, we check whether there is a frontier point that's within $g$ of the $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
+At the start of each round, we check whether there is a frontier point that's within $g$ of $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
   
 If we get to a point where there are no further frontier points, and no climbable path has been found, then it definitively returns `False`.
   
