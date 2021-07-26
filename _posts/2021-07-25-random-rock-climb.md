@@ -36,7 +36,7 @@ Here we fixed one problem, but caused another. Each of the $P(h_i)$ terms contai
 Finally, we have
 
 $$\begin{align} 
-P(\text{gap}) = &(P(h_0) + P(h_1) + P(h_2))
+P(\text{gap}) = &+(P(h_0) + P(h_1) + P(h_2))
 \\ &- (P(h_0 + h_1) + P(h_1 + h_2) + P(h_2 + h_0)) 
 \\ &+ P(h_0 + h_1 + h_2).
 \end{align}$$
