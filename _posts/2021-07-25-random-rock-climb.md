@@ -78,6 +78,8 @@ As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which 
 The essential logic is contained inside the function is_there_a_path(points, gap). The holds are divided into two groups, **frontier points** and **unexplored points**. To start, the frontier points are all the points within $g$ of $y = 0,$ and the unexplored points are the rest of the points. 
   
 Each round, the set of points that are within $g$ of a current frontier point become the new frontier points, and the unexplored points become all the points that have yet to be frontier points. 
+
+![](/img/2021-07-25-frontier-sweep.png){:width="500 px" class="image-centered"}
   
 At the start of each round, we check whether there is a frontier point that's within $g$ of $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
   
