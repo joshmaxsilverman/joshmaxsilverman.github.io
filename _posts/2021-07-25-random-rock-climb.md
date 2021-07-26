@@ -36,14 +36,14 @@ Here we fixed one problem, but caused another. Each of the $P(h_i)$ terms contai
 Finally, we have
 
 $$\begin{align} 
-P(\text{gap}) = &+\left[P(h_0) + P(h_1) + P(h_2)\right]
+P_\text{gap} = &+\left[P(h_0) + P(h_1) + P(h_2)\right]
 \\ &- \left[P(h_0 + h_1) + P(h_1 + h_2) + P(h_2 + h_0)\right]
 \\ &+ P(h_0 + h_1 + h_2).
 \end{align}$$
 
 The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed in a window of size $g$), the double gap probabilities $P(h_i + h_j)$ are $(1-2g)^2$ (two holds were not placed in a window of size $2g$), and the triple gap probability $P(h_0 + h_1 + h_2)$ is $(1-3g)^2,$ so
 
-$$ P(\text{gap}) = \binom{3}{1}(1-g)^2 - \binom{3}{2} (1-2g)^2 + \binom{3}{3}(1-3g)^2. $$
+$$ P_\text{gap} = \binom{3}{1}(1-g)^2 - \binom{3}{2} (1-2g)^2 + \binom{3}{3}(1-3g)^2. $$
 
 In general, there can be as many as $\lfloor g^{-1}\rfloor$ gaps, and the probability of a gap with $h$ holds is
 
@@ -51,15 +51,15 @@ $$ P_\text{gap}(h, g) = \sum_{x=1}^{\lfloor g^{-1}\rfloor} (-1)^{x+1} \binom{h}{
 
 Likewise, the probability that the wall is climbable after $h$ holds is 
 
-$$ P(\text{climb}\rvert h, g) = 1 - P(\text{gap}\rvert h, g). $$
+$$ P_\text{climb}(h, g) = 1 - P_\text{gap}(h, g). $$
 
 The probability that the wall becomes climbable after placing the $h^\text{th}$ hold is then 
 
-$$ P(\text{climb}\rvert h, g) - P(\text{climb}\rvert h-1, g) $$
+$$ P_\text{climb}(h, g) - P_\text{climb}(h-1, g) $$
 
 And the expected number of holds that need to be placed to make the wall climbable is 
 
-$$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P(\text{climb}\rvert h, g) - P(\text{climb}\rvert h-1, g)\right] $$
+$$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P_\text{climb}(h, g) - P_\text{climb}(h-1, g)\right] $$
 
 
 
