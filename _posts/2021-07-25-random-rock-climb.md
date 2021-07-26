@@ -134,15 +134,15 @@ Running this for $g$ from $1/20$ up to $1,$ we get
   
 The black line is the trial function $1.4/g^2.$ The inverse square of the gap length captures the shape of the curve remarkably well, which is clear from the plot below:
   
-![](/img/2021-07-25-rescale-2d.PNG){:width="400 px" class="image-centered"}
+![](/img/2021-07-25-H-G-sqrt-2d.PNG){:width="400 px" class="image-centered"}
   
 Another way to look at the expected number of placed holds is as a number density: $\rho_N = \langle h\rangle \approx \text{const.}/g^2.$ 
 
 As a single placed hold takes up the area $A_h \pi g^2,$ the total area swept out by the holds is $\rho = \rho_N A_h \approx \text{const.}$ In other words, we expect the wall to be climbable as soon as the total (redundant) area accessible to the holds is above an invariant threshold.
   
 Plotting $\rho,$ we find an approximately constant curve
-  
-![](/img/2021-07-25-H-G-sqrt-2d.PNG){:width="400 px" class="image-centered"}
+
+![](/img/2021-07-25-rescale-2d.PNG){:width="400 px" class="image-centered"}
   
 which shows that $\text{const.} \approx 1.07522.$ 
                                                               
