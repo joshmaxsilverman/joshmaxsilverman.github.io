@@ -19,11 +19,11 @@ If there's a climbable path from the bottom to the top, it means that there is n
 
 Likewise, if there is no climbable path, it means that one or more holds are followed by a gap bigger than $g.$ 
 
-For simplicity, I'm going to consider the bottom of the climb to be an obligatory hold, $h_0.$
+For bookkeeping purposes, I'm going to consider the bottom of the climb as an obligatory hold, $h_0.$
 
-Suppose there are two placed holds, $h_1$ and $h_2.$ 
+### Intuition with small $h$
 
-It could be that there is a gap after $h_0$ or after $h_1$ or after $h_2:$ 
+Suppose there are two placed holds, $h_1$ and $h_2.$ As long as $1/g > 3,$ it could be that there is a gap after $h_0$ or after $h_1$ or after $h_2:$ 
 
 $$ P(h_0) + P(h_1) + P(h_2). $$
 
@@ -41,13 +41,25 @@ P(\text{gap}) = &+\left[P(h_0) + P(h_1) + P(h_2)\right]
 \\ &+ P(h_0 + h_1 + h_2).
 \end{align}$$
 
-The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed in a window of size $g$), the double gap probabilities $P(h_i + h_j)$ are $(1-2g)^2$ (two holds were not placed in a window of size $2g$), and the triple gap probability $P(h_0 + h_1 + h_2)$ is $(1-3g)^2$ (two holds were not placed in a window of size $3g$), so
+The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed in a window of size $g$), the double gap probabilities $P(h_i + h_j)$ are $(1-2g)^2$ (two holds were not placed in a window of size $2g$), and the triple gap probability $P(h_0 + h_1 + h_2)$ is $(1-3g)^2,$ so
 
 $$ P(\text{gap}) = \binom{3}{1}(1-g)^2 - \binom{3}{2} (1-2g)^2 + \binom{3}{3}(1-3g)^2. $$
 
 In general, there can be as many as $\lfloor\ell / g\rfloor$ gaps, and the probability of a gap with $h$ holds is
 
-$$P(\text{gap}, h) = \sum_{x=1}^{\lfloor\ell / g\rfloor} \binom{h}{x}(1-xg)^{h-1}. $$
+$$ P(\text{gap} \rvert h, g) = \sum_{x=1}^{\lfloor\ell / g\rfloor} (-1)^{x+1} \binom{h}{x}(1-xg)^{h-1}. $$
+
+Likewise, the probability that the wall is climbable after $h$ holds is 
+
+$$ P(\text{climb}\rvert h, g) = 1 - P(\text{gap}\rvert h, g). $$
+
+The probability that the wall becomes climbable after placing the $h^\text{th}$ hold is then 
+
+$$ P(\text{climb}\rvert h, g) - P(\text{climb}\rvert h-1, g) $$
+
+And the expected number of holds that need to be placed to make the wall climbable is 
+
+$$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P(\text{climb}\rvert h, g) - P(\text{climb}\rvert h-1, g)\right] $$
 
 
 
