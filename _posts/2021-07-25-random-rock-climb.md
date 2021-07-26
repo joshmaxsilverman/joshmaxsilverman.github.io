@@ -69,7 +69,7 @@ Turning to the computer, we need an algorithm that can efficiently check whether
 
 <!-- <YES or NO> -->
   
-<!-- As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively. -->
+As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively.
   
 The essential logic is contained inside the function is_there_a_path(points, gap). The holds are divided into two groups, **frontier points** and **unexplored points**. To start, the frontier points are all the points within $g$ of $y = 0,$ and the unexplored points are the rest of the points. 
   
