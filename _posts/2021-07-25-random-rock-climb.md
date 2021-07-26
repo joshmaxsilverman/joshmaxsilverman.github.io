@@ -132,9 +132,9 @@ The orange line is the curve $1/g^2,$ which captures the chape of the curve rema
   
 <!-- <replotted curve> -->
   
-Another way to look at the expected number of placed holds is as a number density: $\rho = \langle h\rangle \approx \text{const.}/g^2.$ A single placed hold takes up an area $A_h \pi g^2,$ so that the total area taken up is $\rho A_h \approx \text{const.}$ 
+Another way to look at the expected number of placed holds is as a number density: $\rho_N = \langle h\rangle \approx \text{const.}/g^2.$ A single placed hold takes up an area $A_h \pi g^2,$ so that the total area taken up is $\rho = \rho_N A_h \approx \text{const.}$ 
   
-Plotting $\rho A_h,$ we find
+Plotting $\rho,$ we find
   
 <!-- <plot> -->
   
