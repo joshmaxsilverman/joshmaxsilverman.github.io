@@ -87,7 +87,7 @@ The essential logic is contained inside the function is_there_a_path(points, gap
   
 Each round, the set of points that are within $g$ of a current frontier point become the new frontier points, and the unexplored points become all the points that have yet to be frontier points. 
 
-![](/img/2021-07-25-frontier-sweep.png){:width="700 px" class="image-centered"}
+![](/img/2021-07-25-frontier-sweep.png){:width="850 px" class="image-centered"}
   
 At the start of each round, we check whether there is a frontier point that's within $g$ of $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
   
