@@ -36,12 +36,12 @@ Here we fixed one problem, but caused another. Each of the $P(h_i)$ terms contai
 Finally, we have
 
 $$\begin{align} 
-P(\text{gap}) = &+(P(h_0) + P(h_1) + P(h_2))
-\\ &- (P(h_0 + h_1) + P(h_1 + h_2) + P(h_2 + h_0)) 
+P(\text{gap}) = &+\left[P(h_0) + P(h_1) + P(h_2)\right]
+\\ &- \left[P(h_0 + h_1) + P(h_1 + h_2) + P(h_2 + h_0)\right]
 \\ &+ P(h_0 + h_1 + h_2).
 \end{align}$$
 
-The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed in a window of size $g$), the double gap probabilities are $(1-2g)^2$ (two holds were not placed in a window of size $2g$), and the triple gap probabilities are given by $(1-3g)^2$ (two holds were not placed in a window of size $3g$), so
+The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed in a window of size $g$), the double gap probabilities $P(h_i + h_j)$ are $(1-2g)^2$ (two holds were not placed in a window of size $2g$), and the triple gap probability $P(h_0 + h_1 + h_2)$ is $(1-3g)^2$ (two holds were not placed in a window of size $3g$), so
 
 $$ P(\text{gap}) = \binom{3}{1}(1-g)^2 - \binom{3}{2} (1-2g)^2 + \binom{3}{3}(1-3g)^2. $$
 
