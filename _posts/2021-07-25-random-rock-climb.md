@@ -61,7 +61,7 @@ And the expected number of holds that need to be placed to make the wall climbab
 
 $$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P_\text{climb}(h, g) - P_\text{climb}(h-1, g)\right] $$
 
-Plotting the prediction (gold) alongside an $N=1000$ round simulation, it's pretty good.
+Plotting the prediction (gold) alongside an $N=1000$ round simulation (blue points), it's pretty good.
 
 ![](/img/2021-07-25-h-g-plot.PNG){:width="400 px" class="image-centered"}
 
