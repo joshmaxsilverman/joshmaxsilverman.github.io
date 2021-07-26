@@ -5,13 +5,23 @@ title: Random Rock Climb
 date: 2021/07/25
 ---
 
->Question
+>**Question**:
+
+Today marks the beginning of the Summer Olympics! One of the brand-new events this year is sport climbing, in which competitors try their hands (and feet) at lead climbing, speed climbing and bouldering.
+
+Suppose the event’s organizers accidentally forgot to place all the climbing holds on and had to do it last-minute for their 10-meter wall (the regulation height for the purposes of this riddle). Climbers won’t have any trouble moving horizontally along the wall. However, climbers can’t move between holds that are more than 1 meter apart vertically.
+
+In a rush, the organizers place climbing holds randomly until there are no vertical gaps between climbing holds (including the bottom and top of the wall). Once they are done placing the holds, how many will there be on average (not including the bottom and top of the wall)?
+
+Extra credit: Now suppose climbers find it just as difficult to move horizontally as vertically, meaning they can’t move between any two holds that are more than 1 meter apart in any direction. Suppose also that the climbing wall is a 10-by-10 meter square. If the organizers again place the holds randomly, how many have to be placed on average until it’s possible to climb the wall?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-hop-across-the-chessboard/))
 
 ## Solution
+
+First, some housekeeping. Neither problem changes if we rescale all lengths by so that the climbing wall is a unit square. This brings the gap from $\text{1 m} to the unitless $g^\prime = g/\h = 1/10.$ Both problems are simpler to think about keeping it inside the unit square. With that out of the way, let's begin.
 
 ### The $1\text{D}$ climb
 
@@ -21,7 +31,7 @@ Likewise, if there is no climbable path, it means that one or more holds are fol
 
 For bookkeeping purposes, I'm going to consider the bottom of the climb as an obligatory hold, $h_0.$
 
-### Intuition with small $h$
+### Intuition with small number of holds 
 
 Suppose there are two placed holds, $h_1$ and $h_2.$ As long as $1/g > 3,$ it could be that there is a gap after $h_0$ or after $h_1$ or after $h_2:$ 
 
@@ -49,11 +59,11 @@ In general, there can be as many as $\lfloor g^{-1}\rfloor$ gaps, and the probab
 
 $$ P_\text{gap}(h, g) = \sum_{x=1}^{\lfloor g^{-1}\rfloor} (-1)^{x+1} \binom{h}{x}(1-xg)^{h-1}. $$
 
-Likewise, the probability that the wall is climbable after $h$ holds is 
+Likewise, the probability that the wall is climbable after $h$ or more holds is 
 
 $$ P_\text{climb}(h, g) = 1 - P_\text{gap}(h, g). $$
 
-The probability that the wall becomes climbable after placing the $h^\text{th}$ hold is then 
+The probability that the wall first becomes climbable after placing the $h^\text{th}$ hold is 
 
 $$ P_\text{climb}(h, g) - P_\text{climb}(h-1, g) $$
 
@@ -70,8 +80,6 @@ Plotting the prediction (gold) alongside an $N=1000$ round simulation (blue poin
 When the climbing wall goes $2\text{D},$ my hopes for an analytical approach goes $0\text{D}.$ 
 
 Turning to the computer, we need an algorithm that can efficiently check whether a set of $h$ holds contains a climbable path. 
-
-<!-- <YES or NO> -->
   
 As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively.
   
@@ -79,7 +87,7 @@ The essential logic is contained inside the function is_there_a_path(points, gap
   
 Each round, the set of points that are within $g$ of a current frontier point become the new frontier points, and the unexplored points become all the points that have yet to be frontier points. 
 
-![](/img/2021-07-25-frontier-sweep.png){:width="500 px" class="image-centered"}
+![](/img/2021-07-25-frontier-sweep.png){:width="700 px" class="image-centered"}
   
 At the start of each round, we check whether there is a frontier point that's within $g$ of $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
   
