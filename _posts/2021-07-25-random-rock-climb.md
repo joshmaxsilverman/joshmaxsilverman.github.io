@@ -71,6 +71,74 @@ Turning to the computer, we need an algorithm that can efficiently check whether
   
 As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively.
   
+The essential logic is contained inside the function `is_there_a_path(points, gap)`. The holds are divided into two groups, *frontier points* and *unexplored_points*. To start, the frontier points are all the points within $g$ of $y = 0,$ and the unexplored points are the rest of the points. 
+  
+Each round, the set of points that are within $g$ of a current frontier point become the new frontier points, and the unexplored points become all the points that have yet to be frontier points. 
+  
+At the start of each round, we check whether there is a frontier point that's within $g$ of the $y = 1.$ If so, then the algorithm returns `True`, otherwise, it keeps going. 
+  
+If we get to a point where there are no further frontier points, and no climbable path has been found, then it definitively returns `False`.
+  
+  
+```python
+import random
 
+def distance(pt1, pt2):
+    return ((pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2) ** 0.5
 
+def is_there_a_path(points, gap):
+    
+    frontier_points = {pt for pt in points if pt[1] < gap}
+    unexplored_points = points - frontier_points
+    
+    if len(frontier_points) == 0:
+        return False
+    
+    while len(frontier_points) > 0:
+        if any(pt[1] > (1 - gap) for pt in frontier_points):
+            return True
+        
+        temp_frontier_points = set()
+
+        for frontier_pt in frontier_points:
+            for unexplored_pt in unexplored_points:
+                if distance(frontier_pt, unexplored_pt) < gap:
+                    temp_frontier_points.add(unexplored_pt)
+        
+        frontier_points = temp_frontier_points
+        unexplored_points = unexplored_points - frontier_points
+        
+    return False
+```
+
+We measure $\langle h\rangle$ using a while loop that adds random holds to the wall one by one, checking whether a climbable path exists after each point is added. 
+                                                              
+```python
+def round(gap):
+    
+    points = {(random.random(), random.random())}
+    
+    while not is_there_a_path(points, gap):
+        points.add((random.random(), random.random()))
+    
+    return len(points)
+ ```
+
+Running this for $g$ from $5\%$ up to $100\%,$ we get
+
+<<h> curve>
+  
+The orange line is the curve $1/g^2,$ which captures the chape of the curve remarkably well, confirmed by the plot below
+  
+<replotted curve>
+  
+Another way to look at the expected number of placed holds is as a number density: $\rho = \langle h\rangle \approx \text{const.}/g^2.$ A single placed hold takes up an area $A_h \pi g^2,$ so that the total area taken up is $\rho A_h \approx \text{const.}$ 
+  
+Plotting $\rho A_h,$ we find
+  
+<plot>
+  
+which shows that $\text{const.} \approx .$
+                                                              
+                                                              
 <br>
