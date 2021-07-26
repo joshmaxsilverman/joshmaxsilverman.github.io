@@ -67,7 +67,7 @@ When the climbing wall goes $2\text{D},$ my hopes for an analytical approach goe
 
 Turning to the computer, we need an algorithm that can efficiently check whether a set of $h$ holds contains a climbable path. 
 
-<YES or NO>
+<!-- <YES or NO> -->
   
 <!-- As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively. -->
   
@@ -126,17 +126,17 @@ def round(gap):
 
 Running this for $g$ from $5\%$ up to $100\%,$ we get
 
-<<h> curve>
+<!-- <<h> curve> -->
   
 The orange line is the curve $1/g^2,$ which captures the chape of the curve remarkably well, confirmed by the plot below
   
-<replotted curve>
+<!-- <replotted curve> -->
   
 Another way to look at the expected number of placed holds is as a number density: $\rho = \langle h\rangle \approx \text{const.}/g^2.$ A single placed hold takes up an area $A_h \pi g^2,$ so that the total area taken up is $\rho A_h \approx \text{const.}$ 
   
 Plotting $\rho A_h,$ we find
   
-<plot>
+<!-- <plot> -->
   
 which shows that $\text{const.} \approx .$
                                                               
