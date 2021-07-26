@@ -13,7 +13,7 @@ date: 2021/07/25
 
 ## Solution
 
-### Standard credit ($1\text{D}$)
+### The $1\text{D}$ climb
 
 If there's a climbable path from the bottom to the top, it means that there is no gap bigger than $g$ between consecutive holds.
 
@@ -61,6 +61,16 @@ And the expected number of holds that need to be placed to make the wall climbab
 
 $$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P_\text{climb}(h, g) - P_\text{climb}(h-1, g)\right] $$
 
+### The $2\text{D}$ climb
+
+When the climbing wall goes $2\text{D},$ my hopes for an analytical approach goes $0\text{D}.$ 
+
+Turning to the computer, we need an algorithm that can efficiently check whether a set of $h$ holds contains a climbable path. 
+
+<YES or NO>
+  
+As a reminder, we need a path of holds from $y = 0$ to $y = 1,$ no two of which are more than $g$ away from each other. Also, the first and last holds need to be within $g$ of $y = 0$ and $y = 1,$ respectively.
+  
 
 
 <br>
