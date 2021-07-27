@@ -21,7 +21,7 @@ date: 2021/07/25
 
 ## Solution
 
-First, some housekeeping. Neither problem changes if we rescale all lengths by so that the climbing wall is a unit square. This brings the gap from $\text{1 m}$ to the unitless $g^\prime = g/\h = 1/10.$ Both problems are simpler to think about keeping it inside the unit square. With that out of the way, let's begin.
+First, some housekeeping. Neither problem changes if we rescale all lengths by so that the climbing wall is a unit square. This brings the gap from $\text{1 m}$ to the unitless $g^\prime = g/h = 1/10.$ Both problems are simpler to think about keeping it inside the unit square. With that out of the way, let's begin.
 
 ### The $1\text{D}$ climb
 
