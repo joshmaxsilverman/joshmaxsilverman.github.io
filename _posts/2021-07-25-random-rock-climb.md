@@ -71,7 +71,9 @@ And the expected number of holds that need to be placed to make the wall climbab
 
 $$ \langle h \rangle = \sum_{h=0}^\infty (h-1) \times\left[P_\text{climb}(h, g) - P_\text{climb}(h-1, g)\right] $$
 
-Plotting the prediction (gold) alongside an $N=1000$ round simulation (blue points), it's pretty good. For the case of the $1/10$ gap, we expect an average of precisely $43.0468...$ holds to be placed before the wall is climbable.
+Plotting the prediction (gold) alongside an $N=1000$ round simulation (blue points), it's pretty good. 
+
+For the case of the $1/10$ gap, we expect an average of precisely $43.0468...$ holds to be placed before the wall is climbable.
 
 ![](/img/2021-07-25-h-g-plot.PNG){:width="400 px" class="image-centered"}
 
