@@ -55,7 +55,7 @@ The single gap probabilities $P(h_i)$ are $(1 - g)^2$ (two holds were not placed
 
 $$ P_\text{gap} = \binom{3}{1}(1-g)^2 - \binom{3}{2} (1-2g)^2 + \binom{3}{3}(1-3g)^2. $$
 
-In general, there can be as many as $\lfloor g^{-1}\rfloor$ gaps, and the probability of a gap with $h$ holds is
+In general, there can be as many as $\lfloor g^{-1}\rfloor$ gaps (i.e. a minimal gap after the floor and every placed hold), and the probability of a gap with $h$ holds is
 
 $$ P_\text{gap}(h, g) = \sum_{x=1}^{\lfloor g^{-1}\rfloor} (-1)^{x+1} \binom{h}{x}(1-xg)^{h-1}. $$
 
