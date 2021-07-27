@@ -154,7 +154,7 @@ Plotting $\rho,$ we find an approximately constant curve
 
 ![](/img/2021-07-25-rescale-2d.PNG){:width="400 px" class="image-centered"}
   
-which shows that $\text{const.} \approx 1.07522.$ 
+which shows that $\text{const.} \approx 1.08.$ 
 
 For the case of $1/10$ gaps, we expect approximately $143$ holds to be placed before the wall is climbable.
                                                               
