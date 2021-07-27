@@ -148,7 +148,7 @@ The black line is the trial function $1.4/g^2.$ The inverse square of the gap le
   
 Another way to look at the expected number of placed holds is as a number density: $\rho_N = \langle h\rangle \approx \text{const.}/g^2.$ 
 
-As a single placed hold takes up the area $A_h \pi g^2,$ the total area swept out by the holds is $\rho = \rho_N A_h \approx \text{const.}$ In other words, we expect the wall to be climbable as soon as the total (redundant) area accessible to the holds is above an invariant threshold.
+As a single placed hold takes up the area $A_h = \pi g^2,$ the total area swept out by the holds is $\rho = \rho_N A_h \approx \text{const.}$ In other words, we expect the wall to be climbable as soon as the total (redundant) area accessible to the holds is above an invariant threshold.
   
 Plotting $\rho,$ we find an approximately constant curve
 
