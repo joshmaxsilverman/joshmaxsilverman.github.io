@@ -1,9 +1,19 @@
+---
+layout: post
+published: true
+title: Things Have Chained
+date: 2021/07/31
+---
 
+>Question
 
+<!--more-->
 
+([FiveThirtyEight](URL))
 
+## Solution
 
-the chain is made of a bunch of links of lengths 1, f, f^2, ...
+the chain is made of a bunch of links of lengths $1, f, f^2, \ldots$
 
 we can write down the position of each endpoint in terms of the last. take a chain with two links, with endpoints $\mathbf{p}_0,$ $\mathbf{p}_1,$ and $\mathbf{p}_2.$ 
 
@@ -112,3 +122,5 @@ or
 $$ r(\phi) = \frac{\cos\theta}{\cos\phi - f} $$
 
 which is a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting. 
+
+<br>
