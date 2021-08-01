@@ -51,7 +51,7 @@ $$
 
 We can put this in a more compact form that makes the behavior clearer.
 
-if we act on $\mathbf{p}_n$ with $f\mathbf{R}_\phi$ and subtract it from $\mathbf{p}_n,$ we get:
+If we act on $\mathbf{p}_n$ with $f\mathbf{R}_\phi$ and subtract it from $\mathbf{p}_n,$ we get:
 
 $$
 \mathbf{p}_n = \overbrace{\frac{f\mathbf{R}_\phi}{1 - f\mathbf{R}_\phi}}^\text{$n$-independent}\times\overbrace{\left(1-\left(f\mathbf{R}_\phi\right)^n\right)}^\text{$n$-dependent}\cdot\mathbf{1}
