@@ -75,11 +75,11 @@ $$
 
 and we can plot the chain:
 
-<plot of chain>
+[[plot of chain]]
 
 focusing on one of the early endpoints, we see nice twiddly-dees and doo-dahs, as predicted:
 
-<plot of early endpoint>
+[[plot of early endpoint]]
 
 in the limit $n\rightarrow \infty,$ $\mathbf{p}_n$ becomes 
 
