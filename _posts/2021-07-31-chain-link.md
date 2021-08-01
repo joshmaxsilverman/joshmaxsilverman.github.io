@@ -112,14 +112,14 @@ while
 $$
 \begin{align}
 \cos\theta &= \frac{x}{r} \\
-&= \frac{\cos\phi - f}}{\sqrt{1 + f^2 - 2f\cos\phi}} \\
+&= \frac{\cos\phi - f}{\sqrt{1 + f^2 - 2f\cos\phi}} \\
 &= \left(\cos\phi - f\right)r
 \end{align}
 $$
 
 or
 
-$$ r(\phi) = \frac{\cos\theta}{\cos\phi - f} $$
+$$ r(\theta) = \frac{\cos\theta}{\cos\phi - f} $$
 
 which is a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting. 
 
