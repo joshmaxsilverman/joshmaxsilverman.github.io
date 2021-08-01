@@ -26,7 +26,7 @@ $$
 finding $\mathbf{p}_2$ is almost the same, we start at $\mathbf{p}_1,$ lay down a link of length $f$ and rotate it $2\phi$ degrees:  
 
 $$
-\mathbf{p}_2 = \mathbf{p}_1 + \mathbf{R}^2(\phi)\cdot \mathbf{1}.
+\mathbf{p}_2 = \mathbf{p}_1 + \mathbf{R}^2(\phi)\cdot \left(f\mathbf{1}\right).
 $$
 
 recursing, $\mathbf{p}_2$ is just
