@@ -17,23 +17,23 @@ date: 2021/07/31
 
 ## Solution
 
-the chain is made of a bunch of links of lengths $1, f, f^2, \ldots $
+The chain is made of a bunch of links of lengths $1, f, f^2, \ldots $
 
-we can write down the position of each endpoint in terms of the last. take a chain with two links, with endpoints $\mathbf{p}_0,$ $\mathbf{p}_1,$ and $\mathbf{p}_2.$ 
+We can write down the position of each endpoint in terms of the last. take a chain with two links, with endpoints $\mathbf{p}_0,$ $\mathbf{p}_1,$ and $\mathbf{p}_2.$ 
 
-to find $\mathbf{p}_1,$ we start at $\mathbf{p}_0,$ lay down a link of length $1$ and rotate it $\phi$ degrees: 
+To find $\mathbf{p}_1,$ we start at $\mathbf{p}_0,$ lay down a link of length $1$ and rotate it $\phi$ degrees: 
 
 $$
 \mathbf{p}_1 = \mathbf{p}_0 + \mathbf{R}(\phi)\cdot \mathbf{1}.
 $$
 
-finding $\mathbf{p}_2$ is almost the same, we start at $\mathbf{p}_1,$ lay down a link of length $f$ and rotate it $2\phi$ degrees:  
+Finding $\mathbf{p}_2$ is almost the same, we start at $\mathbf{p}_1,$ lay down a link of length $f$ and rotate it by $2\phi$ degrees:  
 
 $$
 \mathbf{p}_2 = \mathbf{p}_1 + \mathbf{R}^2(\phi)\cdot \left(f\mathbf{1}\right).
 $$
 
-recursing, $\mathbf{p}_2$ is just
+Recursing, $\mathbf{p}_2$ is just
 
 $$
 \begin{align}
@@ -43,13 +43,13 @@ $$
 \end{align}
 $$
 
-this pattern carries on, and the $n^\text{th}$ link is
+This pattern carries on, and the $n^\text{th}$ link is
 
 $$
 \mathbf{p}_n =  \frac{1}{f}\left[f\mathbf{R}(\phi) + \left(f\mathbf{R}(\phi)\right)^2 + \ldots + \left(f\mathbf{R}(\phi)\right)^n\right]\cdot \mathbf{1}.
 $$
 
-we can put this in a more compact form that makes the behavior clearer.
+We can put this in a more compact form that makes the behavior clearer.
 
 if we act on $\mathbf{p}_n$ with $f\mathbf{R}(\phi)$ and subtract it from $\mathbf{p}_n,$ we get:
 
