@@ -24,7 +24,7 @@ We can write down the position of each endpoint in terms of the last. take a cha
 To find $\mathbf{p}_1,$ we start at $\mathbf{p}_0,$ lay down a link of length $1$ and rotate it $\phi$ degrees: 
 
 $$
-\mathbf{p}_1 = \mathbf{p}_0 + \mathbf{R}(\phi)\cdot \mathbf{1}.
+\mathbf{p}_1 = \mathbf{p}_0 + \mathbf{R}_\phi\cdot \mathbf{1}.
 $$
 
 Finding $\mathbf{p}_2$ is almost the same, we start at $\mathbf{p}_1,$ lay down a link of length $f$ and rotate it by $2\phi$ degrees:  
