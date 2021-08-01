@@ -33,9 +33,9 @@ recursing, $\mathbf{p}_2$ is just
 
 $$
 \begin{align}
-\mathbf{p}_2 &= \mathbf{p}_0 + \mathbf{R}(\phi)\dot\mathbf{1} + f\mathbf{R}^2(\phi)\dot\mathbf{1} \\
-&= \mathbf{R}(\phi)\dot\mathbf{1} + f\mathbf{R}^2(\phi)\dot\mathbf{1} \\
-&= \frac{1}{f}\left(f\mathbf{R}(\phi)\dot\mathbf{1} + f^2\mathbf{R}^2(\phi)\dot\mathbf{1}\right)
+\mathbf{p}_2 &= \mathbf{p}_0 + \mathbf{R}(\phi)\cdot\mathbf{1} + f\mathbf{R}^2(\phi)\cdot\mathbf{1} \\
+&= \mathbf{R}(\phi)\cdot\mathbf{1} + f\mathbf{R}^2(\phi)\cdot\mathbf{1} \\
+&= \frac{1}{f}\left(f\mathbf{R}(\phi)\cdot\mathbf{1} + f^2\mathbf{R}^2(\phi)\cdot\mathbf{1}\right)
 \end{align}
 $$
 
