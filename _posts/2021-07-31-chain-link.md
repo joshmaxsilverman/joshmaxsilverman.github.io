@@ -20,13 +20,13 @@ we can write down the position of each endpoint in terms of the last. take a cha
 to find $\mathbf{p}_1,$ we start at $\mathbf{p}_0,$ lay down a link of length $1$ and rotate it $\phi$ degrees: 
 
 $$
-$\mathbf{p}_1$ = $\mathbf{p}_0$ + \mathbf{R}(\phi)\cdot \mathbf{1}.
+\mathbf{p}_1 = \mathbf{p}_0 + \mathbf{R}(\phi)\cdot \mathbf{1}.
 $$
 
 finding $\mathbf{p}_2$ is almost the same, we start at $\mathbf{p}_1,$ lay down a link of length $f$ and rotate it $2\phi$ degrees:  
 
 $$
-$\mathbf{p}_2$ = $\mathbf{p}_1$ + \mathbf{R}^2(\phi)\cdot \mathbf{1}.
+\mathbf{p}_2 = \mathbf{p}_1 + \mathbf{R}^2(\phi)\cdot \mathbf{1}.
 $$
 
 recursing, $\mathbf{p}_2$ is just
