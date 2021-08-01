@@ -35,14 +35,14 @@ $$
 \begin{align}
 \mathbf{p}_2 &= \mathbf{p}_0 + \mathbf{R}(\phi)\cdot\mathbf{1} + f\mathbf{R}^2(\phi)\cdot\mathbf{1} \\
 &= \mathbf{R}(\phi)\cdot\mathbf{1} + f\mathbf{R}^2(\phi)\cdot\mathbf{1} \\
-&= \frac{1}{f}\left(f\mathbf{R}(\phi) + f^2\mathbf{R}^2(\phi)\right)\cdot\mathbf{1}
+&= \frac{1}{f}\left[f\mathbf{R}(\phi) + f^2\mathbf{R}^2(\phi)\right]\cdot\mathbf{1}
 \end{align}
 $$
 
 this pattern carries on, and the $n^\text{th}$ link is
 
 $$
-\mathbf{p}_n =  \frac{1}{f}\left(f\mathbf{R}(\phi) + \left(f\mathbf{R}(\phi)\right)^2 + \ldots + \left(f\mathbf{R}(\phi)\right)^n\right)\cdot \mathbf{1}.
+\mathbf{p}_n =  \frac{1}{f}\left[f\mathbf{R}(\phi) + \left(f\mathbf{R}(\phi)\right)^2 + \ldots + \left(f\mathbf{R}(\phi)\right)^n\right]\cdot \mathbf{1}.
 $$
 
 we can put this in a more compact form that makes the behavior clearer.
