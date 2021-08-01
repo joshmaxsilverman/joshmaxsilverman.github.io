@@ -125,6 +125,6 @@ or
 
 $$ r(\theta) = \frac{\cos\theta}{\cos\phi - f} $$
 
-which is manifestly a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting. 
+<!-- which is manifestly a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting.  -->
 
 <br>
