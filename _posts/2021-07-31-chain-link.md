@@ -55,49 +55,51 @@ $$
 \mathbf{p}_n = \overbrace{\frac{f\mathbf{R}_\phi}{1 - f\mathbf{R}_\phi}}^\text{$n$-independent}\times\overbrace{\left(1-\left(f\mathbf{R}_\phi\right)^n\right)}^\text{$n$-dependent}\cdot\mathbf{1}
 $$
 
-the first term describes the prevailing twist of the chain, and the second term is an adjustment that accounts for the relative movement of individual links. 
+The first term describes the prevailing twist of the chain and generates smooth global motion, and the second term is an adjustment that accounts for the relative movement of individual links and produces interesting **twiddly-dees** and **doo-dahs** for early endpoints in the chain.
 
-another way of looking at it is that the first term generates smooth global motion whereas we expect the second term to provide interesting **twiddly-dees** and **doo-dahs** for smaller values of $n.$
+For large values of $n,$ the second term oscillates around a central point, which is where the end of the chain lives. Since $f < 1,$ this orbit closes and, for large $n,$ the motion is provided by the first term alone.
 
-for large values of $n,$ the second term oscillates around a central point, which is where the end of the chain lives. since $f < 1,$ this orbit closes and for large $n,$ the motion is provided by the first term alone.
+### Concrete
 
-up to here we haven't picked a representation for the rotation $\mathbf{R}_\phi$ and arrow $\mathbf{1},$ but we can use complex numbers to do it.
+Up to here we haven't picked a representation for the rotation $\mathbf{R}\_\phi$ and the arrow $\mathbf{1}.$ Since the chain breaks down to rotations of the unit arrow, we're going to use complex numbers.
 
-in this picture $\mathbf{R}_\phi = e^{i\phi}$ and $\mathbf{1} = e^{i0} = 1 + 0i.$
+In this picture, $\mathbf{R}\_\phi = e^{i\phi}$ and $\mathbf{1} = e^{i0} = 1 + 0i.$
 
-with this we get
+With this, we get
 
 $$
-\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left(1-fe^{in\phi}\right)
+\mathbf{p}\_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left(1-fe^{in\phi}\right)
 $$
 
 and we can plot the chain:
 
 [[plot of chain]]
 
-focusing on one of the early endpoints, we see nice **twiddly-dees** and **doo-dahs**, as predicted:
+Focusing on one of the early endpoints, we see nice **twiddly-dees** and **doo-dahs**, as predicted:
 
 [[plot of early endpoint]]
 
-in the limit $n\rightarrow \infty,$ $\mathbf{p}_n$ becomes 
+### The ink at the end of the chain
+
+In the limit $n\rightarrow \infty,$ $\mathbf{p}\_n$ becomes 
 
 $$
-\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}
+\mathbf{p}\_n = \frac{e^{i\phi}}{1-fe^{i\phi}}
 $$
 
-bringing everything to the surface, we have
+Bringing everything to the surface, we have
 
 $$
 \begin{align}
-\mathbf{p}_n &= \frac{e^{i\phi}}{1-fe^{i\phi}}\frac{1-fe^{-i\phi}}{1-fe^{-i\phi}} \\
+\mathbf{p}\_n &= \frac{e^{i\phi}}{1-fe^{i\phi}}\frac{1-fe^{-i\phi}}{1-fe^{-i\phi}} \\
 &= \frac{e^{i\phi} - f}{1 + f^2 - f(e^{i\phi} + e^{-i\phi})} \\
 &= \frac{(\cos\phi - f) + i\sin\phi}{1 + f^2 - 2f\cos\phi}
 \end{align}
 $$
 
-if we squint, this looks like a circle, but let's put it in polar form.
+If we squint, this looks like a circle, but let's do some digging and put it in polar form.
 
-we need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
+We need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
 
 $r$ is just
 
@@ -123,6 +125,6 @@ or
 
 $$ r(\theta) = \frac{\cos\theta}{\cos\phi - f} $$
 
-which is a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting. 
+which is manifestly a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting. 
 
 <br>
