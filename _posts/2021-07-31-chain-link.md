@@ -49,7 +49,7 @@ $$
 \mathbf{p}_n =  \frac{1}{f}\left[f\mathbf{R}_\phi + \left(f\mathbf{R}_\phi\right)^2 + \ldots + \left(f\mathbf{R}_\phi\right)^n\right]\cdot\mathbf{1}.
 $$
 
-We can put this in a more compact form that makes the behavior clearer. If we act on $\mathbf{p}_n$ with $f\mathbf{R}_\phi$ 
+We can put this in a more compact form that makes the behavior clearer. If we act on $\mathbf{p}\_n$ with $f\mathbf{R}_\phi$ 
 <!-- and subtract it from $\mathbf{p}_n,$ we get: -->
 
 $$
