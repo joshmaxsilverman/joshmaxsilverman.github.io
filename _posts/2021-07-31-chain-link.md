@@ -5,7 +5,7 @@ title: Things Have Chained
 date: 2021/07/31
 ---
 
->Question
+>**Question**: what 
 
 <!--more-->
 
@@ -13,7 +13,7 @@ date: 2021/07/31
 
 ## Solution
 
-the chain is made of a bunch of links of lengths $1, f, f^2, \ldots$
+the chain is made of a bunch of links of lengths $1, f, f^2, \ldots $
 
 we can write down the position of each endpoint in terms of the last. take a chain with two links, with endpoints $\mathbf{p}_0,$ $\mathbf{p}_1,$ and $\mathbf{p}_2.$ 
 
