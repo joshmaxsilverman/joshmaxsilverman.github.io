@@ -68,7 +68,7 @@ In this picture, $\mathbf{R}\_\phi = e^{i\phi}$ and $\mathbf{1} = e^{i0} = 1 + 0
 With this, we get
 
 $$
-\mathbf{p}\_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left(1-fe^{in\phi}\right)
+\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left(1-fe^{in\phi}\right)
 $$
 
 and we can plot the chain:
@@ -84,14 +84,14 @@ Focusing on one of the early endpoints, we see nice **twiddly-dees** and **doo-d
 In the limit $n\rightarrow \infty,$ $\mathbf{p}\_n$ becomes 
 
 $$
-\mathbf{p}\_n = \frac{e^{i\phi}}{1-fe^{i\phi}}
+\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}
 $$
 
 Bringing everything to the surface, we have
 
 $$
 \begin{align}
-\mathbf{p}\_n &= \frac{e^{i\phi}}{1-fe^{i\phi}}\frac{1-fe^{-i\phi}}{1-fe^{-i\phi}} \\
+\mathbf{p}_n &= \frac{e^{i\phi}}{1-fe^{i\phi}}\frac{1-fe^{-i\phi}}{1-fe^{-i\phi}} \\
 &= \frac{e^{i\phi} - f}{1 + f^2 - f(e^{i\phi} + e^{-i\phi})} \\
 &= \frac{(\cos\phi - f) + i\sin\phi}{1 + f^2 - 2f\cos\phi}
 \end{align}
