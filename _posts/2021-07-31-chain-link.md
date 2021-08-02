@@ -101,6 +101,10 @@ which is a circle of radius $(1-f^2)^{-1}$ centered on the point $f(1-f^2)^{-1} 
 
 ![](/img/2021-07-31-circle-path.PNG){:width="400 px" class="image-centered"}
 
+{:.caption}
+
+The path of $\mathbf{p}\_\infty$ for $f = 0.5$ and $\phi = 40\,^\circ.$
+
 <!-- We need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
 
 $r$ is just
