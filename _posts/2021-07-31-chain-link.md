@@ -68,7 +68,7 @@ In this picture, $\mathbf{R}\_\phi = e^{i\phi}$ and $\mathbf{1} = e^{i0} = 1 + 0
 With this, we get
 
 $$
-\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left(1-fe^{in\phi}\right)
+\mathbf{p}_n = \frac{e^{i\phi}}{1-fe^{i\phi}}\left[1-\left(fe^{i\phi}\right)^n\right]
 $$
 
 and we can plot the chain:
