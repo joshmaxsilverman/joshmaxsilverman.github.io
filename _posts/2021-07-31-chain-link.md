@@ -73,7 +73,7 @@ $$
 
 and we can plot the chain:
 
-![](/img/2021-07-31-spiral-curve.gif.GIF){:width="400 px" class="image-centered"}
+![](/img/2021-07-31-spiral-loop.GIF){:width="400 px" class="image-centered"}
 
 Focusing on one of the early endpoints, we see nice **twiddly-dees** and **doo-dahs**, as predicted:
 
@@ -97,7 +97,7 @@ $$
 \end{align}
 $$
 
-which is a circle of radius $(1-f^2)^{-1}$ centered on the point $f(1-f^2)^{-1} + 0i,$ as the distance formula confirms.
+which is a circle of radius $(1-f^2)^{-1}$ centered on the point $f(1-f^2)^{-1} + 0i,$ as the distance formula confirms. 
 
 ![](/img/2021-07-31-circle-path.PNG){:width="400 px" class="image-centered"}
 
