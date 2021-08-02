@@ -97,7 +97,7 @@ $$
 \end{align}
 $$
 
-which is a circle of radius $(1-f^2)^{-1}$ centered on the point $f(1-f^2)^{-1} + 0i,$ as the distance formula confirms. 
+which is a circle of radius $(1-f^2)^{-1}$ centered on the point $f(1-f^2)^{-1} + 0i,$ as, e.g., the distance formula confirms. 
 
 ![](/img/2021-07-31-circle-path.PNG){:width="400 px" class="image-centered"}
 
