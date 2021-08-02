@@ -99,7 +99,7 @@ $$
 
 If we squint, this looks like a circle, but let's do some digging and put it in polar form.
 
-We need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
+<!-- We need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
 
 $r$ is just
 
@@ -124,7 +124,7 @@ $$
 or
 
 $$ r(\theta) = \frac{\cos\theta}{\cos\phi - f} $$
-
+ -->
 <!-- which is manifestly a circle of radius $\frac12\left(\cos\phi - f\right)^{-1}$ centered at $\frac12\left(\cos\phi - f\right)^{-1},$ without squinting.  -->
 
 <br>
