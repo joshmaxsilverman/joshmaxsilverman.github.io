@@ -73,11 +73,11 @@ $$
 
 and we can plot the chain:
 
-[[plot of chain]]
+![](/img/2021-07-31-spiral.GIF){:width="400 px" class="image-centered"}
 
 Focusing on one of the early endpoints, we see nice **twiddly-dees** and **doo-dahs**, as predicted:
 
-[[plot of early endpoint]]
+![](/img/2021-07-31-twirly-dees.PNG){:width="400 px" class="image-centered"}
 
 ### The ink at the end of the chain
 
@@ -98,6 +98,8 @@ $$
 $$
 
 If we squint, this looks like a circle, but let's do some digging and put it in polar form.
+
+![](/img/2021-07-31-circle-path.PNG){:width="400 px" class="image-centered"}
 
 <!-- We need the magnitude $r$ and the angle this makes $\theta.$ it's important to keep in mind that the $\phi$ we've been talking about so far is the angle between links, and not any sort of polar angle.
 
