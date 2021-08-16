@@ -62,6 +62,10 @@ Evidently, we need the values of $\langle S_1\rangle$ through $\langle S_{n-1}\r
 We can build up the calculations in order, first treating all the one die cases, then all two die cases, then all three die cases, and so on.
 
 ```python
+import random
+import itertools
+from fractions import Fraction
+
 expected_scores = [0]
 
 def SN(n):
