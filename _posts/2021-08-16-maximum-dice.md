@@ -53,7 +53,7 @@ If $\langle S_n \rangle$ is the expected value of rolling $n$ die, then the expe
 
 What should we do?: whichever has the highest value. 
 
-The value of $\langle S_5\rangle$ is the average value of this maximation over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
+The value of $\langle S_5\rangle$ is the average value of this maximization over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
 
 ### Organizing the calculation
 
