@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Maximum Dice
 date: 2021/08/16
 ---
