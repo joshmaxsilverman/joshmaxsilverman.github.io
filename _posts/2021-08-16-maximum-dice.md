@@ -19,7 +19,7 @@ date: 2021/08/16
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/are-you-clever-enough/))
 
 ## Solution
 
