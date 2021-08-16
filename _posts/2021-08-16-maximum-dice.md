@@ -37,7 +37,7 @@ On the other hand, if we rolled two die and got $\\{4,4\\},$ it would make sense
 
 ## The best strategy
 
-To make the best decisions, all we need to do is make the best decisions. 
+To make the best decisions, we simply need to make the best decisions. 
 
 If we roll five die and get $d_1 \geq d_2 \geq d_3 \geq d_4 \geq d_5,$ then we could
 
