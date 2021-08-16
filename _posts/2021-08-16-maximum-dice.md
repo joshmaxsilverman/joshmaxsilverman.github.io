@@ -48,7 +48,7 @@ If $\langle S_n \rangle$ is the expected value of rolling $n$ die, then the expe
 - $d_1 + \langle S_4 \rangle$
 - $d_1 + d_2 + \langle S_3 \rangle$
 - $d_1 + d_2 + d_3 + \langle S_2 \rangle$
-- $d_1 + d_2 + d_3 + d_4 \langle S_1 \rangle$
+- $d_1 + d_2 + d_3 + d_4 + \langle S_1 \rangle$
 - $d_1 + d_2 + d_3 + d_4 + d_5$
 
 What should we do?: whichever has the highest value. 
