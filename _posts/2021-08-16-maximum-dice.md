@@ -51,7 +51,7 @@ If $\langle S_n \rangle$ is the expected value of rolling $n$ die, then the expe
 - $d_1 + d_2 + d_3 + d_4 + \langle S_1 \rangle$
 - $d_1 + d_2 + d_3 + d_4 + d_5$
 
-What should we do?: whichever has the highest value. 
+Which choice should we make? Whichever has the highest value. 
 
 The value of $\langle S_5\rangle$ is the average value of this maximization over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
 
