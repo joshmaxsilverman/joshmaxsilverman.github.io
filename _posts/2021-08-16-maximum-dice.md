@@ -59,6 +59,12 @@ Which choice should we make? Whichever has the highest value.
 
 The value of $\langle S_5\rangle$ is the average value of this maximization over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
 
+In general
+
+$$
+\langle S_n \rangle = \langle \max\{u=1}^n \sum\limits_{j=1}^u d_j + \langle S_{n-u}\rangle} \rangle_{d_1,\ldots,d_n}
+$$
+
 ## Organizing the calculation
 
 Evidently, we need the values of $\langle S_1\rangle$ through $\langle S_{n-1}\rangle$ before we can calculate $\langle S_n\rangle.$
