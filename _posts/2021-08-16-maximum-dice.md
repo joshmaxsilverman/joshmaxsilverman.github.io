@@ -29,7 +29,7 @@ It helps to think about what we'd do with many or few die.
 
 **Many**: if, somehow, we rolled one hundred die and only got one $6,$ it would be overwhelmingly likely that on the next roll, we get a bunch of $6$s, so it would make sense to re-roll all but the $6.$
 
-**Few**: on the other hand, if we rolled two die and got $\left{4,4\right},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
+**Few**: on the other hand, if we rolled two die and got ${4,4},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
 
 ### The best strategy
 
