@@ -6,16 +6,16 @@ date: 2021/08/16
 ---
 
 >**Question**:
-
-You have four standard dice, and your goal is simple: Maximize the sum of your rolls. So you roll all four dice at once, hoping to achieve a high score.
-
-But wait, there’s more! If you’re not happy with your roll, you can choose to reroll zero, one, two or three of the dice. In other words, you must “freeze” one or more dice and set them aside, never to be rerolled.
-
-You repeat this process with the remaining dice — you roll them all and then freeze at least one. You repeat this process until all the dice are frozen.
-
-If you play strategically, what score can you expect to achieve on average?
-
-**Extra credit**: Instead of four dice, what if you start with five dice? What if you start with six dice? What if you start with $N$ dice?
+>
+>You have four standard dice, and your goal is simple: Maximize the sum of your rolls. So you roll all four dice at once, hoping to achieve a high score.
+>
+>But wait, there’s more! If you’re not happy with your roll, you can choose to reroll zero, one, two or three of the dice. In other words, you must “freeze” one or more dice and set them aside, never to be rerolled.
+>
+>You repeat this process with the remaining dice — you roll them all and then freeze at least one. You repeat this process until all the dice are frozen.
+>
+>If you play strategically, what score can you expect to achieve on average?
+>
+>**Extra credit**: Instead of four dice, what if you start with five dice? What if you start with six dice? What if you start with $N$ dice?
 
 <!--more-->
 
