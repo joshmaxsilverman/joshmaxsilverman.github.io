@@ -29,7 +29,7 @@ It helps to think about what we'd do with many or few die.
 
 **Many**: if, somehow, we rolled one hundred die and only got one $6,$ it would be overwhelmingly likely that on the next roll, we get a bunch of $6$s, so it would make sense to re-roll all but the $6.$
 
-**Few**: on the other hand, if we rolled two die and got $\{4,4\},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
+**Few**: on the other hand, if we rolled two die and got $\\{4,4\\},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
 
 ### The best strategy
 
@@ -38,9 +38,9 @@ To make the best decisions, all we need to do is make the best decisions.
 If we roll five die and get $d_1 \geq d_2 \geq d_3 \geq d_4 \geq d_5,$ then we could
 
 - Choice 1: keep $d_1$ and re-roll four die
-- Choice 2: keep $\left{d_1, d_2\right}$ and re-roll three die
-- Choice 3: keep $\left{d_1, d_2, d_3\right}$ and re-roll two die
-- Choice 4: keep $\left{d_1, d_2, d_3, d_4\right}$ and re-roll one die
+- Choice 2: keep $\\{d_1, d_2\\}$ and re-roll three die
+- Choice 3: keep $\\{d_1, d_2, d_3\\}$ and re-roll two die
+- Choice 4: keep $\\{d_1, d_2, d_3, d_4\\}$ and re-roll one die
 - Choice 5: keep all five die and the game is over.
 
 If $\langle S_n \rangle$ is the expected value of rolling $n$ die, then the expected value of each of these choices are
@@ -53,7 +53,7 @@ If $\langle S_n \rangle$ is the expected value of rolling $n$ die, then the expe
 
 What should we do?: whichever has the highest value. 
 
-The value of $\langle S_5\rangle$ is the average value of this maximation over all possible sets $\left{d_!, d_2, d_3, d_4. d_5\right}.$
+The value of $\langle S_5\rangle$ is the average value of this maximation over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
 
 ### Organizing the calculation
 
@@ -79,16 +79,17 @@ for num_die in range(1, 9 + 1):
 Running the code, we get the following expected scores under the optimal strategy:
 
 $$
-\begin{array}{c|c|c}\hline
-\langle S_1\rangle & \frac{7}{2} & \approx3.5 \\
-\langle S_2\rangle & \frac{593}{72} & \approx 8.236 \\
-\langle S_3\rangle & \frac{13049}{972} & \approx 13.425 \\
-\langle S_4\rangle & \frac{989065}{52488} & \approx 18.844 \\
-\langle S_5\rangle & \frac{1108166095}{45349632} & \approx 24.436 \\
-\langle S_6\rangle & \frac{332273594663}{11019960576} & \approx 30.152 \\
-\langle S_7\rangle & \frac{4621176159903031}{128536820158464} & \approx 35.952 \\
-\langle S_8\rangle & \frac{9026399212157210195951}{215892499727278669824} & \approx 41.810 \\ 
-\langle S_9\rangle & \frac{51897773343582111932203623017}{1087849490465798670885322752} & \approx 47.707
+\begin{array}{c|c}\hline
+\text{Case} & \text{Optimal score} \\
+\langle S_1\rangle & \frac{7}{2} \approx3.5 \\
+\langle S_2\rangle & \frac{593}{72} \approx 8.236 \\
+\langle S_3\rangle & \frac{13049}{972} \approx 13.425 \\
+\langle S_4\rangle & \frac{989065}{52488} \approx 18.844 \\
+\langle S_5\rangle & \frac{1108166095}{45349632} \approx 24.436 \\
+\langle S_6\rangle & \frac{332273594663}{11019960576} \approx 30.152 \\
+\langle S_7\rangle & \frac{4621176159903031}{128536820158464} \approx 35.952 \\
+\langle S_8\rangle & \frac{9026399212157210195951}{215892499727278669824} \approx 41.810 \\ 
+\langle S_9\rangle & \frac{51897773343582111932203623017}{1087849490465798670885322752} \approx 47.707
 \end{array}
 $$
 
