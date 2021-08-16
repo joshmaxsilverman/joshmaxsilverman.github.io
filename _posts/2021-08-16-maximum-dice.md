@@ -62,7 +62,7 @@ The value of $\langle S_5\rangle$ is the average value of this maximization over
 In general
 
 $$
-\langle S_n \rangle = \langle \max_{u=1}^n\left( \langle S_{n-u}\rangle + \sum\limits_{j=1}^u d_j \right)\rangle_{d_1,\ldots,d_n}
+\langle S_n \rangle = \bigg\langle \max_{u=1}^n\left( \langle S_{n-u}\rangle + \sum\limits_{j=1}^u d_j \right)\bigg\rangle_{d_1,\ldots,d_n}
 $$
 
 ## Organizing the calculation
