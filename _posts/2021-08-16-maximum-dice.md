@@ -27,11 +27,15 @@ It's clear that if we get a good result early, like an extra $6,$ then we should
 
 It helps to think about what we'd do with many or few die. 
 
-**Many**: if, somehow, we rolled one hundred die and only got one $6,$ it would be overwhelmingly likely that on the next roll, we get a bunch of $6$s, so it would make sense to re-roll all but the $6.$
+### Many
 
-**Few**: on the other hand, if we rolled two die and got $\\{4,4\\},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
+If, somehow, we rolled one hundred die and only got one $6,$ it would be overwhelmingly likely that on the next roll, we get a bunch of $6$s, so it would make sense to re-roll all but the $6.$
 
-### The best strategy
+### Few
+
+On the other hand, if we rolled two die and got $\\{4,4\\},$ it would make sense to freeze both $4$s since the expected value of a re-roll is just $\frac72.$ 
+
+## The best strategy
 
 To make the best decisions, all we need to do is make the best decisions. 
 
@@ -55,7 +59,7 @@ Which choice should we make? Whichever has the highest value.
 
 The value of $\langle S_5\rangle$ is the average value of this maximization over all possible sets $\\{d_1, d_2, d_3, d_4. d_5\\}.$
 
-### Organizing the calculation
+## Organizing the calculation
 
 Evidently, we need the values of $\langle S_1\rangle$ through $\langle S_{n-1}\rangle$ before we can calculate $\langle S_n\rangle.$
 
