@@ -93,8 +93,8 @@ for num_die in range(1, 9 + 1):
 Running the code, we get the following expected scores under the optimal strategy:
 
 $$
-\begin{array}{c|c}\hline
-\text{Case} & \text{Optimal score} \\
+\begin{array}{c|c}
+\text{Case} & \text{Optimal score} \\ \hline
 \langle S_1\rangle & \frac{7}{2} \approx3.5 \\
 \langle S_2\rangle & \frac{593}{72} \approx 8.236 \\
 \langle S_3\rangle & \frac{13049}{972} \approx 13.425 \\
