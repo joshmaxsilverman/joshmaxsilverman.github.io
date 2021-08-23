@@ -89,7 +89,7 @@ This produces the following distribution for the dice sum probabilities:
 
 {:.caption}
 
-The yellow bars show the minimal variance distribution, and the yellobluew curve shows the distribution for regulation die.
+The yellow bars show the minimal variance distribution, and the blue curve shows the distribution for regulation die.
 
 As expected, the distribution is symmetric about $7.$
 
