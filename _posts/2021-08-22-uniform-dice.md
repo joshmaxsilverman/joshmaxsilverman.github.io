@@ -65,13 +65,13 @@ Z =
    , {j, 1, 6}
    ] /. {p6 -> p1, p5 -> p2, p4 -> p3}
 
-coeffSymb = CoefficientList[Z, z][[3 ;; -1]]
+coefficients = CoefficientList[Z, z][[3 ;; -1]]
 
 mean = 1/11
 variance =
- 1/11 Sum[(coeffSymb[[i]] - mean)^2, {i, 1, Length@coeffSymb}]
+ 1/11 Sum[(coefficients[[i]] - mean)^2, {i, 1, Length@coefficients}]
 
-sol = NMinimize[
+solution = NMinimize[
   {variance,
    { 0 <= p4 <= 1/2
    , 0 <= p5 <= 1/2
