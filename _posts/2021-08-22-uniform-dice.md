@@ -92,8 +92,8 @@ As expected, the distribution is symmetric about $7.$
 For posterity, the approximate numerical values are
 
 $$
-\begin{array}{c|c}
-\text{Dice sum} & \text{probability} \\ \hline
+\begin{array}{c|l}
+\text{Dice sum} & \text{Probability} \\ \hline
 2	& 0.0594787 \\
 3	& 0.0670576 \\
 4	& 0.0767681 \\
