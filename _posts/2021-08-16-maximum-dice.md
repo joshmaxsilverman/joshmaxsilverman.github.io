@@ -5,9 +5,7 @@ title: Maximum Dice
 date: 2021/08/16
 ---
 
->**Question**:
->
->You have four standard dice, and your goal is simple: Maximize the sum of your rolls. So you roll all four dice at once, hoping to achieve a high score.
+>**Question**: You have four standard dice, and your goal is simple: Maximize the sum of your rolls. So you roll all four dice at once, hoping to achieve a high score.
 >
 >But wait, there’s more! If you’re not happy with your roll, you can choose to reroll zero, one, two or three of the dice. In other words, you must “freeze” one or more dice and set them aside, never to be rerolled.
 >
