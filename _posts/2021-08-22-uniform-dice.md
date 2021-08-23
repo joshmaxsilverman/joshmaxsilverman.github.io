@@ -29,13 +29,13 @@ $$
 \sigma^2(p) = \frac{1}{11} \sum_s \left(\sum_{i+j = s} p_i p_i - \langle p\rangle\right)^2
 $$
 
-They start out simple -- consider the $\left(1,1\right) outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways ($P(\text{dice sum}\ = 6) = 2p_1p_5 + 2p_2p_4 + p_3^2$), we have a mess on our hands.
+They start out simple — consider the $\left(1,1\right)$ outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways ($P(\text{dice sum}\ = 6) = 2p_1p_5 + 2p_2p_4 + p_3^2$), we have a mess on our hands.
 
 ### Slim it down
 
 Adding it up, this generates a big polynomial that we have to minimize. 
 
-On its face this has six variables ($\{p_i\}\limits_{i=1}^6$) but, happily, a moment's thought can reduce it to three. The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively. This means we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
+On its face this has six variables ($\{p_i\}_{i=1}^6$) but, happily, a moment's thought can reduce it to three. The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively. This means we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
 
 Putting it all together, we have the code below
 
@@ -76,7 +76,7 @@ and produces the following distribution for the dice sum probabilities
 For posterity, the approximate numerical values are
 
 $$
-\begin{array}{c|c}\hline
+\begin{array}{c|c}
 \text{Dice sum} & \text{probability} \hline
 2	& 0.0594787 \\
 3	& 0.0670576 \\
