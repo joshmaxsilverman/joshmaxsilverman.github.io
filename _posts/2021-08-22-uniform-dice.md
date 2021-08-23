@@ -39,7 +39,11 @@ $$
 \sigma^2(p) = \frac{1}{11} \sum_s \left(\sum_{\{i+j = s\}} p_i p_i - \langle p\rangle\right)^2
 $$
 
-They start out simple — consider the $\left(1,1\right)$ outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways ($P(\text{dice sum}\ = 6) = 2p_1p_5 + 2p_2p_4 + p_3^2$), we have a mess on our hands.
+They start out simple — consider the $\left(1,1\right)$ outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways 
+
+$$P(\text{dice sum}\ = 6) = 2p_1p_5 + 2p_2p_4 + p_3^2, $$ 
+
+we have a mess on our hands.
 
 ### Slim it down
 
@@ -81,7 +85,7 @@ which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$
 
 and produces the following distribution for the dice sum probabilities
 
-![](/img/2021-08-22-uniform-dice-distribution.JPG){:width=450px" class="image-centered"}
+![](/img/2021-08-22-uniform-dice-distribution.JPG){:width="450px" class="image-centered"}
 
 For posterity, the approximate numerical values are
 
@@ -93,10 +97,10 @@ $$
 4	& 0.0767681 \\
 5	& 0.0904881 \\
 6	& 0.113753 \\
-7	& 0.184909 \\ 
+7	& 0.184909 \\
 8	& 0.113753 \\
 9	& 0.0904881 \\
-10	& 0.0767681 \\ 
+10	& 0.0767681 \\
 11	& 0.0670576 \\
 12	& 0.0594787
 \end{array}
