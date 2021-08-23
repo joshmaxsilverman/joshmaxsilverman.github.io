@@ -49,7 +49,9 @@ we have a mess on our hands.
 
 Adding it up, this generates a big polynomial that we have to minimize. 
 
-On its face this has six variables ($\\{p_i\\}_{i=1}^6$) but, happily, a moment's thought can reduce it to three. The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively. This means we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
+On its face this has six variables ($\\{p_i\\}_{i=1}^6$) but, happily, a moment's thought can reduce it to three. 
+
+The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively, so we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
 
 Putting it all together, we have the code below
 
@@ -81,11 +83,11 @@ sol = NMinimize[
  ]
 ```
 
-which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$ which is realized by assigning $p_1=p_4\approx 0.118638,$ $p_2=p_5\approx 0.137479,$ and $p_3=p_6=0.243883.$
-
-and produces the following distribution for the dice sum probabilities
+which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$ which is realized by assigning $p_1=p_4\approx 0.118638,$ $p_2=p_5\approx 0.137479,$ and $p_3=p_6=0.243883,$ and produces the following distribution for the dice sum probabilities:
 
 ![](/img/2021-08-22-uniform-dice-distribution.JPG){:width="450px" class="image-centered"}
+
+As expected, the distribution is symmetric about $7.$
 
 For posterity, the approximate numerical values are
 
