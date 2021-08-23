@@ -85,7 +85,7 @@ solution = NMinimize[
 
 which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$ which is realized by assigning $p_1=p_4\approx 0.118638,$ $p_2=p_5\approx 0.137479,$ and $p_3=p_6=0.243883,$ and produces the following distribution for the dice sum probabilities:
 
-![](/img/2021-08-22-uniform-dice-distribution.JPG){:width="450px" class="image-centered"}
+![](/img/2021-08-22-uniform-dice-distribution-overlay.JPG){:width="450px" class="image-centered"}
 
 As expected, the distribution is symmetric about $7.$
 
