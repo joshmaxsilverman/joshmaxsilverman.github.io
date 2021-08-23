@@ -5,9 +5,7 @@ title: Uniform Dice
 date: 2021/08/22
 ---
 
->**Question**:
->
->When you roll a pair of fair dice, the most likely outcome is $7$ (which occurs $1/6^\text{th}$ of the time) and the least likely outcomes are 2 and 12 (which each occur $1/36^\text{th}$ of the time).
+>**Question**: When you roll a pair of fair dice, the most likely outcome is $7$ (which occurs $1/6^\text{th}$ of the time) and the least likely outcomes are 2 and 12 (which each occur $1/36^\text{th}$ of the time).
 >
 >Annoyed by the variance of these probabilities, I set out to create a pair of “uniform dice.” These dice still have sides that are uniquely numbered from $1$ to $6,$ and they are identical to each other. However, they are weighted so that their sum is more uniformly distributed between $2$ and $12$ than that of fair dice.
 >
