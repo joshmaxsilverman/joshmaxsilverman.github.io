@@ -69,5 +69,27 @@ sol = NMinimize[
 
 which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$ which is realized by assigning $p_1=p_4\approx 0.118638,$ $p_2=p_5\approx 0.137479,$ and $p_3=p_6=0.243883.$
 
+and produces the following distribution for the dice sum probabilities
+
+ddd
+
+For posterity, the approximate numerical values are
+
+$$
+\begin{array}{c|c}\hline
+\text{Dice sum} & \text{probability} \hline
+2	& 0.0594787 \\
+3	& 0.0670576 \\
+4	& 0.0767681 \\
+5	& 0.0904881 \\
+6	& 0.113753 \\
+7	& 0.184909 \\ 
+8	& 0.113753 \\
+9	& 0.0904881 \\
+10	& 0.0767681 \\ 
+11	& 0.0670576 \\
+12	& 0.0594787
+\end{array}
+$$
 
 <br>
