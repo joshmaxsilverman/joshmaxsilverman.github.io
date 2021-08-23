@@ -89,7 +89,7 @@ which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$
 
 As expected, the distribution is symmetric about $7.$
 
-For posterity, the approximate numerical values are
+For posterity, the approximate numerical values are:
 
 $$
 \begin{array}{c|l}
