@@ -39,7 +39,7 @@ $$
 
 They start out simple — consider the $\left(1,1\right)$ outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways 
 
-$$P(\text{dice sum}\ = 6) = p_1p_5 + p_2p_4 + p_3^2 + p_4p_2 + p_5p_1, $$ 
+$$P(\text{dice sum} = 6) = p_1p_5 + p_2p_4 + p_3^2 + p_4p_2 + p_5p_1, $$ 
 
 we have a mess on our hands.
 
