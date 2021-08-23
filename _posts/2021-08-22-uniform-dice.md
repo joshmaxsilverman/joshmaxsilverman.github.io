@@ -45,7 +45,7 @@ They start out simple — consider the $\left(1,1\right)$ outcome, which has pro
 
 Adding it up, this generates a big polynomial that we have to minimize. 
 
-On its face this has six variables ($\{p_i\}_{i=1}^6$) but, happily, a moment's thought can reduce it to three. The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively. This means we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
+On its face this has six variables ($\\{p_i\\}_{i=1}^6$) but, happily, a moment's thought can reduce it to three. The variables describing sides $1, 2,$ and $3$ are symmetric with the variables describing sides $4, 5,$ and $6,$ respectively. This means we can replace $p_4\rightarrow p_1, p_5\rightarrow p_2,$ and $p_6\rightarrow p_3.$ 
 
 Putting it all together, we have the code below
 
