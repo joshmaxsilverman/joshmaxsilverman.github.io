@@ -71,7 +71,7 @@ which shows that the minimum variance is $\sigma^2_\text{min}\approx 0.00121758$
 
 and produces the following distribution for the dice sum probabilities
 
-ddd
+![](/img/2021-08-22-uniform-dice-distribution.JPG){:width=450px" class="image-centered"}
 
 For posterity, the approximate numerical values are
 
