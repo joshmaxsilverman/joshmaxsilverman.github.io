@@ -36,7 +36,7 @@ The first part is a little spicy.
 We are looking at the sum 
 
 $$
-\sigma^2(p) = \frac{1}{11} \sum_s \left(\sum_{i+j = s} p_i p_i - \langle p\rangle\right)^2
+\sigma^2(p) = \frac{1}{11} \sum_s \left(\sum_{\{i+j = s\}} p_i p_i - \langle p\rangle\right)^2
 $$
 
 They start out simple — consider the $\left(1,1\right)$ outcome, which has probability $p_1^2.$ But by the $6$, which can come out one of five ways ($P(\text{dice sum}\ = 6) = 2p_1p_5 + 2p_2p_4 + p_3^2$), we have a mess on our hands.
