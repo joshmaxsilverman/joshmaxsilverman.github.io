@@ -57,13 +57,29 @@ $$
 P_\text{win}(x) = \frac12 + x + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
 $$
 
-From the diagram below, $x_1$ can take on any value from $x$ to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ Since $P(x_0\rightarrow x_1$)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
-
-$$
-P_\text{win}(x) = \frac12 + x + \int\limits_x^{\frac12} dx_1 \int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2).
-$$
-
+From the diagram below, $x_1$ can take on any value from $x$ to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ 
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
+
+Since $P(x_0\rightarrow x_1$)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
+
+$$
+P_\text{win}(x) = \frac12 + x + \int\limits_x^{\frac12} dx_1 \left[\int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2)\right].
+$$
+
+This is an integral equation for $P_\text{win}(x),$ but we can solve it without resorting to, e.g., kernel methods.
+
+Taking the derivative with respect to $x,$ we get
+
+$$
+\frac{\partial P_\text{win}(x)}{\partial x} = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
+$$
+
+Taking another, we get
+
+$$
+\frac{\partial^2 P_\text{win}(x)}{\partial x^2} = -P_\text{win}(x)
+$$
+
 
 <br>
