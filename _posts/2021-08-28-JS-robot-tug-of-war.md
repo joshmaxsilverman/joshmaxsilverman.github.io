@@ -33,19 +33,19 @@ If it's Player 1's turn, they can win the game in one of two ways:
 For the second way to happen, Player 1's first move will have to go somewhere to the right that's less then $\frac12,$ then Player 2 will have to move somewhere to the left that's more than $-\frac12,$ and then go on to win. 
 
 $$
-P_\text{win}(x) = P(\text{win immediately}) + P(\text{win eventually}).
+P_\text{win}(x) = P(\text{win immediately})(x) + P(\text{win eventually})(x).
 $$
 
 If they win immediately, Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
 
 $$
-P(\text{win immediately}) = \frac12 + x.
+P(\text{win immediately})(x) = \frac12 + x.
 $$
 
 If they win eventually, Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
-P(\text{win eventually}) = P(x_0\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P(\text{win from somewhere else})
+P(\text{win eventually})(x) = P(x\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P(\text{win from somewhere else})(x)
 $$
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
