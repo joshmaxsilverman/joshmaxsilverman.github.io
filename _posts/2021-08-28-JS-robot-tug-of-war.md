@@ -17,7 +17,20 @@ date: 2021/08/28
 
 ## Solution
 
+First, let's get acquainted with the setup. 
+
+Each robot pulls the middle of the rope toward their side a random distance between $0$ and $1.$ If the first (second) player gets it past $\frac12$ ($-\frac12$), then they win. 
+
+This means that each player has the potential to end the game in one turn (since $\frac12 - -\frac12 = 1$). 
+
 ![](/img/2021-08-28-tug-of-war-diagram.png){:width="450 px" class="image-centered"}
+
+If it's Player 1's turn, they can win the game in one of two ways:
+
+- they can immediately move the game past $+\frac12,$ or
+- they can move somewhere less than $\frac12,$ and then go on to win.
+
+For the second way to happen, Player 1 will have to 
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
