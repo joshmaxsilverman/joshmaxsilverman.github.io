@@ -54,7 +54,13 @@ $$
 We nearly have an equation for $P_\text{win}(x),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
 
 $$
-P_\text{win}(x) = \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2)
+P_\text{win}(x) = \frac12 + x + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
+$$
+
+From the diagram below, $x_1$ can take on any value from $x$ to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ Since $P(x_0\rightarrow x_1$)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
+
+$$
+P_\text{win}(x) = \frac12 + x + \int\limits_x^{\frac12} dx_1 \int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2).
 $$
 
 
