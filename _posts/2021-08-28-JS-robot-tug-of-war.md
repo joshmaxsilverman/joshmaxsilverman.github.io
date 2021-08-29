@@ -36,10 +36,16 @@ $$
 P_\text{win}(x) = P(\text{win immediately}) + P(\text{win eventually}).
 $$
 
-To win immediately, Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
+If they win immediately, Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
 
 $$
 P(\text{win immediately}) = \frac12 + x.
+$$
+
+If they win eventually, Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
+
+$$
+P(\text{win eventually}) = P(x_0\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P(\text{win from somewhere else})
 $$
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
