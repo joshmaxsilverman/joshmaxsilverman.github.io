@@ -45,8 +45,18 @@ $$
 If they win eventually, Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
-P(\text{win eventually})(x) = P(x\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P(\text{win from somewhere else})(x)
+\begin{align}
+P(\text{win eventually})(x) &= P(x\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else}) \\
+&= P(x\rightarrow\text{somewhere})\cdot P(\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else})
+\end{align}
 $$
+
+We nearly have an equation for $P_\text{win}(x),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
+
+$$
+P_\text{win}(x) = \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2)
+$$
+
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
