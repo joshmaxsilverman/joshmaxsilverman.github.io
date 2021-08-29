@@ -23,14 +23,24 @@ First, let's get acquainted with the setup.
 
 Each robot pulls the middle of the rope toward their side a random distance between $0$ and $1.$ If the first player gets it past $\frac12,$ then they win (and likewise for Player 2). 
 
-This means that each player has the potential to end the game in one turn (since $\frac12 - -\frac12 = 1$). 
+<!-- This means that each player has the potential to end the game in one turn (since $\frac12 - \left(-\frac12\right) = 1$).  -->
 
 If it's Player 1's turn, they can win the game in one of two ways:
 
-- they can immediately move the game past $+\frac12,$ or
-- they can move somewhere less than $\frac12,$ and then go on to win.
+1. they can immediately move the game past $+\frac12,$ or
+2. they can move somewhere less than $\frac12,$ and then go on to win.
 
-For the second way to happen, Player 1 will have to 
+For the second way to happen, Player 1's first move will have to go somewhere to the right that's less then $\frac12,$ then Player 2 will have to move somewhere to the left that's more than $-\frac12,$ and then go on to win. 
+
+$$
+P_\text{win}(x) = P(\text{win immediately}) + P(\text{win eventually}).
+$$
+
+To win immediately, Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
+
+$$
+P(\text{win immediately}) = \frac12 + x.
+$$
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
