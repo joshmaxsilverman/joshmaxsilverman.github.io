@@ -58,7 +58,7 @@ or
 $$
 \begin{align}
 -L &= 2L\frac{V_L}{V_C} - 2L\frac{V_C}{V_L} \\
-1 &= \frac{2\left(V_C^2 - V_L^2\right)}{V_LV_C}
+1 &= 2\frac{V_C^2 - V_L^2}{V_LV_C}
 \end{align}
 $$
 
