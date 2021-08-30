@@ -129,7 +129,7 @@ The fair starting point for Player 1 is whatever value of $x$ makes $P_\text{win
 
 $$
 \begin{align}
-x &= \pi/4 + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\right)\right] \\
+x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\right)\right] \\
 &\approx -0.28500012
 \end{align}
 $$
