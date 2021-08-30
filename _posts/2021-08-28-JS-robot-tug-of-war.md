@@ -122,7 +122,15 @@ where $\phi = \cos^{-1}\frac{A}{\sqrt{A^2 + B^2}}.$
 For $A$ and $B$ above, this yields $\phi = \frac{\pi}{4}$ and so
 
 $$
-P_\text{win}(x) = \dfrac{\sqrt{2}\cos\left(x - \pi/4\right)}{\sin\frac12 + \cos\frac12}.
+P_\text{win}(x) = \dfrac{\cos\left(x - \frac{\pi}{4}\right)}{\cos\left(\frac12 - \frac{\pi}{4}\right)}.
+$$
+
+The fair starting point for Player 1 is whatever value of $x$ makes $P_\text{win}(x) = \frac12$ so
+
+$$
+\begin{align}
+x &= \pi/4 + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\right)\right] \\
+&\approx -0.285
 $$
 
 <br>
