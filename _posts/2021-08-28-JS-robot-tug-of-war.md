@@ -73,7 +73,7 @@ $$
 
 This is an integral equation for $P_\text{win}(x),$ but we can solve it without resorting to, e.g., kernel methods.
 
-### Finding $P_\text{win}(x)
+### Finding $P_\text{win}(x)$
 
 Taking the derivative with respect to $x,$ we get
 
