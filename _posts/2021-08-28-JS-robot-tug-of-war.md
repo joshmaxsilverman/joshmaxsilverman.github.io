@@ -21,28 +21,30 @@ First, let's get acquainted with the setup.
 
 ![](/img/2021-08-28-tug-of-war-diagram.png){:width="450 px" class="image-centered"}
 
-Each robot pulls the middle of the rope toward their side a random distance between $0$ and $1.$ If the first player gets it past $\frac12,$ then they win (and likewise for Player 2). 
+Each robot pulls the middle of the rope toward their side a random distance between $0$ and $1.$ If Player 1 gets it past $\frac12,$ then they win (and likewise for Player 2). 
 
 <!-- This means that each player has the potential to end the game in one turn (since $\frac12 - \left(-\frac12\right) = 1$).  -->
+
+### Intuition
 
 If it's Player 1's turn, they can win the game in one of two ways:
 
 1. they can immediately move the game past $+\frac12,$ or
-2. they can move somewhere less than $\frac12,$ and then go on to win.
+2. they can move somewhere less than $\frac12,$ and then go on to win, eventually.
 
-For the second way to happen, Player 1's first move will have to go somewhere to the right that's less then $\frac12,$ then Player 2 will have to move somewhere to the left that's more than $-\frac12,$ and then go on to win. 
+In other words,
 
 $$
 P_\text{win}(x) = P(\text{win immediately})(x) + P(\text{win eventually})(x).
 $$
 
-If they win immediately, Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
+If they win immediately, then Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
 
 $$
 P(\text{win immediately})(x) = \frac12 + x.
 $$
 
-If they win eventually, Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
+If they win eventually, then Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
 \begin{align}
@@ -51,13 +53,15 @@ P(\text{win eventually})(x) &= P(x\rightarrow\text{somewhere}\rightarrow\text{so
 \end{align}
 $$
 
+### Path integral
+
 We nearly have an equation for $P_\text{win}(x),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
 
 $$
 P_\text{win}(x) = \frac12 + x + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
 $$
 
-From the diagram below, $x_1$ can take on any value from $x$ to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ 
+From the diagram below, $x_1$ can take on any value from $x$ up to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ 
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
@@ -69,16 +73,18 @@ $$
 
 This is an integral equation for $P_\text{win}(x),$ but we can solve it without resorting to, e.g., kernel methods.
 
+### Finding $P_\text{win}(x)
+
 Taking the derivative with respect to $x,$ we get
 
 $$
-\frac{\partial}{\partial x}P_\text{win}(x) = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
+\partial_x P_\text{win}(x) = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
 $$
 
 Taking another, we get
 
 $$
-\frac{\partial^2 }{\partial x^2} P_\text{win}(x) = - P_\text{win}(x).
+\partial_x^2 P_\text{win}(x) = - P_\text{win}(x).
 $$
 
 So, the general form for $P_\text{win}(x)$ is, incredibly, the sum of sinusoids
@@ -87,7 +93,11 @@ $$
 P_\text{win}(x) = A\sin x + B\cos x.
 $$
 
-When the game starts at $x=\frac12,$ the chance that Player 1 wins is $1.$ This means that $A\sin\frac12 + B\cos\frac12 = 1.$
+When the game starts at $x=\frac12,$ the chance that Player 1 wins is $1,$ so 
+
+$$
+A\sin\frac12 + B\cos\frac12 = 1.
+$$
 
 We also have the first derivative of the integral equation, that has to be satisfied:
 
@@ -106,7 +116,9 @@ $$
 P_\text{win}(x) = \dfrac{\sin x + \cos x}{\sin\frac12 + \cos\frac12}.
 $$
 
-This can be written more tidily as a single $\cos$ term. Using the complex representation
+### Fair beginnings
+
+As written, this is hard to invert, but we can write it more tidily as a single $\cos$ term. Using the complex representation, we get
 
 $$
 \begin{align}
@@ -128,10 +140,12 @@ $$
 The fair starting point for Player 1 is whatever value of $x$ makes $P_\text{win}(x) = \frac12$ so
 
 $$
+\boxed{
 \begin{align}
 x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\right)\right] \\
 &\approx -0.28500012
 \end{align}
+}
 $$
 
 <br>
