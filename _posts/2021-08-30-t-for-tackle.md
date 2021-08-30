@@ -62,7 +62,7 @@ $$
 \end{align}
 $$
 
-which we can solve this to find $V_C$ in terms of $T,$ $L,$ and $V_L$:
+which we can solve to find $V_C$ in terms of $V_L$:
 
 $$
 \begin{align}
