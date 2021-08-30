@@ -30,7 +30,7 @@ Over the course of the chase, this gap shrinks by $L,$ so
 $$
 \begin{align}
 -L &= \int\limits_0^T dt \left(V_L\sin\theta(t) - V_C\right) \\
-&= V_L\left(\int\limits_0^T dt\, \sin\theta(t)\right) - V_C\cdot T.
+&= V_L\left(\int\limits_0^T dt\, \sin\theta(t)\right) - V_C T.
 \end{align}
 $$
 
@@ -66,7 +66,7 @@ which we can solve to find $V_C$ in terms of $V_L$:
 
 $$
 \begin{align}
-V_C &= \dfrac{1+\sqrt{17}}{4}V_L \\
+V_C &= \dfrac{1+\sqrt{17}}{4}\times V_L \\
 &approx 1.280776\times V_L \\
 &\approx 19.21164\,\text{mph}
 \end{align}
