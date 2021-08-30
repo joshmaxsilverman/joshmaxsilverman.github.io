@@ -95,6 +95,7 @@ $$
 \begin{align}
 A\cos x - B\sin x &= 1 - \left[-A\cos x + B\sin x +A\cos\frac12 + B\sin\frac12\right] \\
 &= 1 + A\cos x - B\sin x - A\cos\frac12 - B\sin\frac12
+\end{align}
 $$
 
 or $1 = A\cos\frac12 + B\sin\frac12.$
