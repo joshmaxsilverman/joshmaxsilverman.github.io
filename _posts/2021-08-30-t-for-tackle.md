@@ -67,7 +67,8 @@ which we can solve to find $V_C$ in terms of $V_L$:
 $$
 \begin{align}
 V_C &= \dfrac{1+\sqrt{17}}{4}V_L \\
-&= 1.280776 V_L
+&approx 1.280776\times V_L \\
+&\approx 19.21164\,\text{mph}
 \end{align}
 $$
 
