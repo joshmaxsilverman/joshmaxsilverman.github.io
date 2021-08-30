@@ -110,7 +110,7 @@ This can be written more tidily as a single $\cos$ term. Using the complex repre
 
 $$
 \begin{align}
-A\sin x + B\cos x &= \Re\left(Ae^{ix} + Be^{i(x - \pi/2}\right) \\ 
+A\sin x + B\cos x &= \Re\left(Ae^{ix} + Be^{i(x - \frac{\pi}{2})}\right) \\ 
 &= \Re\left(e^{ix}\left[A - iB\right]\right) \\
 &= \Re(e^{ix}\sqrt{A^2 + B^2}e^{i\phi}) \\
 &= \sqrt{A^2 + B^2}\cos{(x-\phi)}
@@ -131,6 +131,7 @@ $$
 \begin{align}
 x &= \pi/4 + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\right)\right] \\
 &\approx -0.285
+\end{align}
 $$
 
 <br>
