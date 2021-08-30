@@ -21,25 +21,25 @@ First, we can work in the reference frame of the chaser to find the speed of the
 
 ![](/img/2021-08-30-chase-diagram.png){:width="450 px" class="image-centered"}
 
-The chaser moves directly at the leader so their motion only works to close the gap. But the leader moves away from the chaser, so long as their trajectories are not parallel. If the chaser makes an angle $\theta$ with the $x$-axis, then the leader's velocity in the frame of the chaser is $V_L \langle \cos(\theta-\frac{\pi}{2}), \sin(\theta-\frac{\pi}{2}\rangle = V_L\langle \sin\theta, \cos\theta\rangle.$ 
+The chaser moves directly at the leader so their motion only works to close the gap. But the leader moves away from the chaser, so long as their trajectories are not parallel. If the chaser makes an angle $\theta$ with the $x$-axis, then the leader's velocity in the frame of the chaser is $V_L \langle \cos(\theta(t)-\frac{\pi}{2}), \sin(\theta(t)-\frac{\pi}{2})\rangle = V_L\langle \sin\theta(t), \cos\theta(t)\rangle.$ 
 
-So, the chaser closes the gap with speed $V_\text{rel} = V_L\sin\theta - V_C.$
+So, the chaser closes the gap with speed $V_\text{rel} = V_L\sin\theta(t) - V_C.$
 
 Over the course of the chase, this gap shrinks by $L,$ so
 
 $$
 \begin{align}
--L &= \int\limits_0^T dt \left(V_L\sin\theta - V_C\right) \\
-&= V_L\left(\int\limits_0^T dt\, \sin\theta\right) - V_C\cdot T.
+-L &= \int\limits_0^T dt \left(V_L\sin\theta(t) - V_C\right) \\
+&= V_L\left(\int\limits_0^T dt\, \sin\theta(t)\right) - V_C\cdot T.
 \end{align}
 $$
 
 In principle, this integral requires us to know the behavior of $\theta(t).$ In practice, the same integral pops up in a simpler problem: the total distance that the chaser moves upfield, $2L.$ 
 
-In the coordinate system of the field, their velocity is $V_C\langle \cos\theta, \sin\theta\rangle,$ so their total displacement upfield is just
+In the coordinate system of the field, their velocity is $V_C\langle \cos\theta(t), \sin\theta(t)\rangle,$ so their total displacement upfield is just
 
 $$
-2L = V_C\left(\int\limits_0^T dt\, \sin\theta\right).
+2L = V_C\left(\int\limits_0^T dt\, \sin\theta(t)\right).
 $$
 
 Since we're looking for the minimal value of $V_C$ that allows them to catch up before the goal line, $T = 2L/V_L,$ the time when the leader gets to the endzone.
