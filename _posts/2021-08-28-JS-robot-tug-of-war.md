@@ -72,14 +72,37 @@ This is an integral equation for $P_\text{win}(x),$ but we can solve it without 
 Taking the derivative with respect to $x,$ we get
 
 $$
-\frac{\partial P_\text{win}(x)}{\partial x} = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
+\frac{\partial}{\partial x}P_\text{win}(x) = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
 $$
 
 Taking another, we get
 
 $$
-\frac{\partial^2 P_\text{win}(x)}{\partial x^2} = -P_\text{win}(x)
+\frac{\partial^2 }{\partial x^2} P_\text{win}(x) = - P_\text{win}(x).
 $$
 
+So, the general form for $P_\text{win}(x)$ is, incredibly, the sum of sinusoids
+
+$$
+P_\text{win}(x) = A\sin x + B\cos x.
+$$
+
+When the game starts at $x=\frac12,$ the chance that Player 1 wins is $1.$ This means that $A\sin\frac12 + B\cos\frac12 = 1.$
+
+We also have the first derivative of the integral equation, that has to be satisfied:
+
+$$
+\begin{align}
+A\cos x - B\sin x &= 1 - \left[-A\cos x + B\sin x +A\cos\frac12 + B\sin\frac12\right] \\
+&= 1 + A\cos x - B\sin x - A\cos\frac12 - B\sin\frac12
+$$
+
+or $1 = A\cos\frac12 + B\sin\frac12.$
+
+Putting these together, we have $A = B = \left(\sin\frac12 + \cos\frac12\right)^{-1},$ and
+
+$$
+P_\text{win}(x) = \dfrac{\sin x + \cos x}{\sin\frac12 + \cos\frac12}.
+$$
 
 <br>
