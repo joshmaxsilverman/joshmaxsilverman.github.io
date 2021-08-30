@@ -21,7 +21,7 @@ First, we can work in the reference frame of the chaser to find the speed of the
 
 ![](/img/2021-08-30-chase-diagram.png){:width="450 px" class="image-centered"}
 
-The chaser moves directly at the leader so their motion only works to close the gap. But the leader moves away from the chaser, so long as their trajectories are not parallel. If the chaser makes an angle $\theta$ with the $x$-axis, then the leader's velocity in the frame of the chaser is $V_L \langle \cos(\frac{\pi}{2} - \theta(t)), \sin(\frac{\pi}{2} - \theta(t))\rangle = V_L\langle \sin\theta(t), \cos\theta(t)\rangle.$ 
+The chaser moves directly at the leader so their motion only works to close the gap. But the leader moves away from the chaser, so long as their trajectories are not parallel. If the chaser makes an angle $\theta$ with the $x$-axis, then the leader's velocity in the frame of the chaser is $V_L \langle \cos(\frac{\pi}{2} - \theta(t)),\ \sin(\frac{\pi}{2} - \theta(t))\rangle = V_L\langle \sin\theta(t),\ \cos\theta(t)\rangle.$ 
 
 So, the chaser closes the gap with speed $V_\text{rel} = V_L\sin\theta(t) - V_C.$
 
@@ -36,7 +36,7 @@ $$
 
 In principle, this integral requires us to know the behavior of $\theta(t).$ In practice, the same integral pops up in a simpler problem: the total distance that the chaser moves upfield, $2L.$ 
 
-In the coordinate system of the field, their velocity is $V_C\langle \cos\theta(t), \sin\theta(t)\rangle,$ so their total displacement upfield is just
+In the coordinate system of the field, their velocity is $V_C\langle \cos\theta(t),\ \sin\theta(t)\rangle,$ so their total displacement upfield is just
 
 $$
 2L = V_C\left(\int\limits_0^T dt\, \sin\theta(t)\right).
