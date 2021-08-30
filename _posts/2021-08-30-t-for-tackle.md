@@ -68,6 +68,7 @@ $$
 \begin{align}
 V_C &= \dfrac{1+\sqrt{17}}{4}V_L \\
 &= 1.280776 V_L
+\end{align}
 $$
 
 <br>
