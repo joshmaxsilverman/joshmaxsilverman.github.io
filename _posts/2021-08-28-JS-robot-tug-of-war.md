@@ -93,7 +93,7 @@ We also have the first derivative of the integral equation, that has to be satis
 
 $$
 \begin{align}
-A\cos x - B\sin x &= 1 - \left[-A\cos x + B\sin x +A\cos\frac12 + B\sin\frac12\right] \\
+A\cos x - B\sin x &= 1 - \left(-A\cos x + B\sin x +A\cos\frac12 + B\sin\frac12\right) \\
 &= 1 + A\cos x - B\sin x - A\cos\frac12 - B\sin\frac12
 \end{align}
 $$
