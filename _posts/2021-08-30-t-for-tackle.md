@@ -5,7 +5,11 @@ title: $t$ for tackle
 date: 2021/08/30
 ---
 
->Question
+>**Question**: Hames Jarrison has just intercepted a pass at one end zone of a football field, and begins running — at a constant speed of $15$ miles per hour — to the other end zone, $100$ yards away.
+>
+>At the moment he catches the ball, you are on the very same goal line, but on the other end of the field, $50$ yards away from Jarrison. Caught up in the moment, you decide you will always run directly toward Jarrison’s current position, rather than plan ahead to meet him downfield along a more strategic course.
+>
+>Assuming you run at a constant speed (i.e., don’t worry about any transient acceleration), how fast must you be in order to catch Jarrison before he scores a touchdown?
 
 <!--more-->
 
