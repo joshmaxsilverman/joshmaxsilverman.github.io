@@ -124,7 +124,7 @@ $$
 \begin{align}
 A\sin x + B\cos x &= \Re\left(Ae^{ix} + Be^{i(x - \frac{\pi}{2})}\right) \\ 
 &= \Re\left(e^{ix}\left[A - iB\right]\right) \\
-&= \Re(e^{ix}\sqrt{A^2 + B^2}e^{i\phi}) \\
+&= \Re(e^{ix}\sqrt{A^2 + B^2}e^{-i\phi}) \\
 &= \sqrt{A^2 + B^2}\cos{(x-\phi)}
 \end{align}
 $$
