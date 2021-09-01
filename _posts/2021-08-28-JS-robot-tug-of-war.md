@@ -38,13 +38,13 @@ $$
 P_\text{win}(x_0) = P(\text{win immediately})(x_0) + P(\text{win eventually})(x_0).
 $$
 
-If they win immediately, then Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x_0),$ so
+If Player 1 wins immediately, then they have to move beyond $\frac12,$ which has probability $1 - (\frac12 - x_0).$ So,
 
 $$
 P(\text{win immediately})(x_0) = \frac12 + x_0.
 $$
 
-If they win eventually, then Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
+If, instead, Player 1 wins eventually, then have to move somewhere to the left of $\frac12,$ then Player 2 has to move somewhere to the right of $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
 \begin{align}
@@ -55,7 +55,7 @@ $$
 
 ### Path integral
 
-We nearly have an equation for $P_\text{win}(x_0),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
+We nearly have an equation for $P_\text{win}(x_0),$ we just have to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
 
 $$
 P_\text{win}(x_0) = \frac12 + x_0 + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
@@ -148,7 +148,7 @@ x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\ri
 }
 $$
 
-Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74\%$ of the time. Interestingly, they maintain a $\approx 29\%$ win rate if we start the game all the way at Player 2's goal line.
+Plotting the win probability we can see that Player 1 wins $\approx 74\%$ of the time if the game starts at the origin. Interestingly, they maintain a $\approx 29\%$ win rate even when we start the game all the way at Player 2's goal line.
 
 ![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class="image-centered"}
 
