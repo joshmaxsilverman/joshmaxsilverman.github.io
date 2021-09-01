@@ -95,7 +95,7 @@ Plugging in $\lambda =$ 1 post per day and $t=$ 3 days we get an expectation of 
 Slight changes in the spawn rate $\lambda$ produce massive increases in the weekend spam haul:
 
 $$
-\begin{array}{c|c}
+\begin{array}{c|c} 
 \lambda & \langle\textbf{spam}(\text{3 days})\rangle\\ \hline
 1 & 19 \\
 2 & 402 \\
