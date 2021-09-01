@@ -35,65 +35,65 @@ If it's Player 1's turn, they can win the game in one of two ways:
 In other words,
 
 $$
-P_\text{win}(x) = P(\text{win immediately})(x) + P(\text{win eventually})(x).
+P_\text{win}(x_0) = P(\text{win immediately})(x_0) + P(\text{win eventually})(x_0).
 $$
 
-If they win immediately, then Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x),$ so
+If they win immediately, then Player 1 has to move beyond $\frac12$ which has probability $1 - (\frac12 - x_0),$ so
 
 $$
-P(\text{win immediately})(x) = \frac12 + x.
+P(\text{win immediately})(x_0) = \frac12 + x_0.
 $$
 
 If they win eventually, then Player 1 has to move somewhere less then $\frac12,$ then Player 2 has to move somewhere greater than $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
 \begin{align}
-P(\text{win eventually})(x) &= P(x\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else}) \\
-&= P(x\rightarrow\text{somewhere})\cdot P(\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else})
+P(\text{win eventually})(x_0) &= P(x_0\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else}) \\
+&= P(x_0\rightarrow\text{somewhere})\cdot P(\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else})
 \end{align}
 $$
 
 ### Path integral
 
-We nearly have an equation for $P_\text{win}(x),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
+We nearly have an equation for $P_\text{win}(x_0),$ we just need to sum over all the possibilities for $\text{"somewhere"}$ ($x_1$) and $\text{"somewhere else"}$ ($x_2$).
 
 $$
-P_\text{win}(x) = \frac12 + x + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
+P_\text{win}(x_0) = \frac12 + x_0 + \int dx_1 P(x\rightarrow x_1) \int dx_2 P(x_1\rightarrow x_2)P_\text{win}(x_2).
 $$
 
-From the diagram below, $x_1$ can take on any value from $x$ up to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ 
+From the diagram below, $x_1$ can take on any value from $x_0$ up to $\frac12$ without ending the game. Likewise, $x_2$ can take any value from $x_1$ down to $-\frac12.$ 
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
 Since $P(x_0\rightarrow x_1)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
 
 $$
-P_\text{win}(x) = \frac12 + x + \int\limits_x^{\frac12} dx_1 \left[\int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2)\right].
+P_\text{win}(x_0) = \frac12 + x_0 + \int\limits_{x_0}^{\frac12} dx_1 \left[\int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2)\right].
 $$
 
-This is an integral equation for $P_\text{win}(x),$ but we can solve it without resorting to, e.g., kernel methods.
+This is an integral equation for $P_\text{win}(x_0),$ but we can solve it without resorting to, e.g., kernel methods.
 
 ### Finding $P_\text{win}(x)$
 
-Taking the derivative with respect to $x,$ we get
+Taking the derivative with respect to $x_0,$ we get
 
 $$
-\partial_x P_\text{win}(x) = 1 - \int\limits_{-\frac12}^{x} dx_2 P_\text{win}(x_2).
+\partial_{x_0} P_\text{win}(x_0) = 1 - \int\limits_{-\frac12}^{x_0} dx_2 P_\text{win}(x_2).
 $$
 
 Taking another, we get
 
 $$
-\partial_x^2 P_\text{win}(x) = - P_\text{win}(x).
+\partial_{x_0}^2 P_\text{win}(x_0) = - P_\text{win}(x_0).
 $$
 
-So, the general form for $P_\text{win}(x)$ is, incredibly, the sum of sinusoids
+So, the general form for $P_\text{win}(x_0)$ is, incredibly, the sum of sinusoids
 
 $$
-P_\text{win}(x) = A\sin x + B\cos x.
+P_\text{win}(x_0) = A\sin x_0 + B\cos x_0.
 $$
 
-When the game starts at $x=\frac12,$ the chance that Player 1 wins is $1,$ so 
+When the game starts at $x_0=\frac12,$ the chance that Player 1 wins is $1,$ so 
 
 $$
 A\sin\frac12 + B\cos\frac12 = 1.
@@ -103,8 +103,8 @@ We also have the first derivative of the integral equation, that has to be satis
 
 $$
 \begin{align}
-A\cos x - B\sin x &= 1 - \left(-A\cos x + B\sin x +A\cos\frac12 + B\sin\frac12\right) \\
-&= 1 + A\cos x - B\sin x - A\cos\frac12 - B\sin\frac12
+A\cos x_0 - B\sin x_0 &= 1 - \left(-A\cos x_0 + B\sin x_0 +A\cos\frac12 + B\sin\frac12\right) \\
+&= 1 + A\cos x_0 - B\sin x_0 - A\cos\frac12 - B\sin\frac12
 \end{align}
 $$
 
@@ -113,7 +113,7 @@ or $1 = A\cos\frac12 + B\sin\frac12.$
 Putting these together, we have $A = B = \left(\sin\frac12 + \cos\frac12\right)^{-1},$ and
 
 $$
-P_\text{win}(x) = \dfrac{\sin x + \cos x}{\sin\frac12 + \cos\frac12}.
+P_\text{win}(x_0) = \dfrac{\sin x_0 + \cos x_0}{\sin\frac12 + \cos\frac12}.
 $$
 
 ### Fair beginnings
@@ -134,10 +134,10 @@ where $\phi = \cos^{-1}\frac{A}{\sqrt{A^2 + B^2}}.$
 When $A=B,$ this gives $\phi = \frac{\pi}{4}$ so
 
 $$
-P_\text{win}(x) = \dfrac{\cos\left(x - \frac{\pi}{4}\right)}{\cos\left(\frac12 - \frac{\pi}{4}\right)}.
+P_\text{win}(x_0) = \dfrac{\cos\left(x_0 - \frac{\pi}{4}\right)}{\cos\left(\frac12 - \frac{\pi}{4}\right)}.
 $$
 
-The fair starting point for Player 1 is whatever $x$ makes $P_\text{win}(x) = \frac12$ so
+The fair starting point for Player 1 is whatever $x_0$ makes $P_\text{win}(x) = \frac12$ so
 
 $$
 \boxed{
@@ -150,6 +150,6 @@ $$
 
 Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74\%$ of the time. Interestingly, they maintain a $\approx 29\%$ win rate if we start the game all the way at Player 2's goal line.
 
-![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class=image-centered"}
+![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class="image-centered"}
 
 <br>
