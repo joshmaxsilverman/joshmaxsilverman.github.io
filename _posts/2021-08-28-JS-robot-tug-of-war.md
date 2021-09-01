@@ -148,7 +148,7 @@ x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\ri
 }
 $$
 
-Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74\%" of the time. Interestingly, they maintain a $\approx 29\%" win rate if we start the game all the way at Player 2's goal line.
+Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74\%$ of the time. Interestingly, they maintain a $\approx 29\%$ win rate if we start the game all the way at Player 2's goal line.
 
 ![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class=image-centered"}
 
