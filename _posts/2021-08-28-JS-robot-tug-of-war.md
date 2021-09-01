@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Tug of War
 date: 2021/08/28
 ---
