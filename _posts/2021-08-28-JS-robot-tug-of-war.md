@@ -65,7 +65,7 @@ From the diagram below, $x_1$ can take on any value from $x$ up to $\frac12$ wit
 
 ![](/img/2021-08-28-tug-of-war-integration-bounds.png){:width="450 px" class="image-centered"}
 
-Since $P(x_0\rightarrow x_1$)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
+Since $P(x_0\rightarrow x_1)$ and $P(x_1\rightarrow x_2)$ are uniform probabilities on the unit interval, we get:
 
 $$
 P_\text{win}(x) = \frac12 + x + \int\limits_x^{\frac12} dx_1 \left[\int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2)\right].
@@ -148,7 +148,7 @@ x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\ri
 }
 $$
 
-Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74%" of the time. Interestingly, they maintain a $\approx 29%" win rate if we start the game all the way at Player 2's goal line.
+Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74\%" of the time. Interestingly, they maintain a $\approx 29\%" win rate if we start the game all the way at Player 2's goal line.
 
 ![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class=image-centered"}
 
