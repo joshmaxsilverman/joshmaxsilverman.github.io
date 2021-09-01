@@ -131,13 +131,13 @@ $$
 
 where $\phi = \cos^{-1}\frac{A}{\sqrt{A^2 + B^2}}.$
 
-For $A$ and $B$ above, this yields $\phi = \frac{\pi}{4}$ and so
+When $A=B,$ this gives $\phi = \frac{\pi}{4}$ so
 
 $$
 P_\text{win}(x) = \dfrac{\cos\left(x - \frac{\pi}{4}\right)}{\cos\left(\frac12 - \frac{\pi}{4}\right)}.
 $$
 
-The fair starting point for Player 1 is whatever value of $x$ makes $P_\text{win}(x) = \frac12$ so
+The fair starting point for Player 1 is whatever $x$ makes $P_\text{win}(x) = \frac12$ so
 
 $$
 \boxed{
@@ -147,5 +147,9 @@ x &= \frac{\pi}{4} + \cos^{-1}\left[\frac12 \cos\left(\frac12 - \frac{\pi}{4}\ri
 \end{align}
 }
 $$
+
+Plotting the win probability we can see that, starting at the origin, Player 1 wins $\approx 74%" of the time. Interestingly, they maintain a $\approx 29%" win rate if we start the game all the way at Player 2's goal line.
+
+![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class=image-centered"}
 
 <br>
