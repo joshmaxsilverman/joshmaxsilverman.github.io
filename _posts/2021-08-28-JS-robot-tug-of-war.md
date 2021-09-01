@@ -13,7 +13,7 @@ date: 2021/09/01
 
 <!--more-->
 
-([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
+([Jane Street](https://www.janestreet.com/puzzles/robot-tug-of-war-index/))
 
 ## Solution
 
