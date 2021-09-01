@@ -17,7 +17,7 @@ date: 2021/09/01
 
 ## Solution
 
-First, let's get acquainted with the setup. 
+First, let's get acquainted with the setup:
 
 ![](/img/2021-08-28-tug-of-war-diagram.png){:width="450 px" class="image-centered"}
 
