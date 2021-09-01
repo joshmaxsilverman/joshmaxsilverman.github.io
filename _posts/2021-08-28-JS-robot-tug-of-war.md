@@ -150,6 +150,6 @@ $$
 
 Plotting the win probability we can see that Player 1 wins $\approx 74\%$ of the time if the game starts at the origin. Interestingly, they maintain a $\approx 29\%$ win rate even when we start the game all the way at Player 2's goal line.
 
-![](/img/2021-08-28-js-tug-of-war.png){:width="400 px" class="image-centered"}
+![](/img/2021-08-28-js-tug-of-war.png){:width="450 px" class="image-centered"}
 
 <br>
