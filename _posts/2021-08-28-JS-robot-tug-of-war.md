@@ -137,7 +137,7 @@ $$
 P_\text{win}(x_0) = \dfrac{\cos\left(x_0 - \frac{\pi}{4}\right)}{\cos\left(\frac12 - \frac{\pi}{4}\right)}.
 $$
 
-The fair starting point for Player 1 is whatever $x_0$ makes $P_\text{win}(x) = \frac12$ so
+The fair starting point for Player 1 is whatever $x$ makes $P_\text{win}(x) = \frac12$ so
 
 $$
 \boxed{
