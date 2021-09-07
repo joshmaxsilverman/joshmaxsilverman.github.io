@@ -37,7 +37,7 @@ Each cell can either lyse with probability $\left(1-\gamma\right)$ or reproduce 
 Symmetrically, the probability that the first cell has a finite lineage is equal to the probability that it dies plus the probability that it reproduces but both of its children have finite lineages:
 
 $$
-P(\text{mortal}) = P(\text{lyses}) + P(\text{doesn't lyse but both offspring lineages die off}),
+P(\text{die off}) = P(\text{lyse}) + P(\text{doesn't lyse but both offspring lineages die off}),
 $$
 
 which is
