@@ -71,7 +71,7 @@ $$
 P_\text{win}(x_0) = \frac12 + x_0 + \int\limits_{x_0}^{\frac12} dx_1 \left[\int\limits_{-\frac12}^{x_1} dx_2 P_\text{win}(x_2)\right].
 $$
 
-This is an integral equation for $P_\text{win}(x_0),$ but we can solve it without resorting to, e.g., kernel methods.
+This is an integral equation for $P_\text{win}(x_0),$ but we can solve it without resorting to transforms.
 
 ### Finding $P_\text{win}(x)$
 
