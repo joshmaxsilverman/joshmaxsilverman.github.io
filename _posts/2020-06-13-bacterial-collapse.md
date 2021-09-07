@@ -29,16 +29,22 @@ What if we want to go beyond the prayer of survival — how big does $\gamma$ ne
 
 However, each cell has the same prospects. So the probability that the first cell leads to an everlasting colony is equal to the probability that either of its children leads to an everlasting colony. 
 
-Symmetrically, the probability that the first cell has a finite lineage is equal to the probability that it dies plus the probability that it reproduces but both of its children have finite lineages.
-
 ![](/img/2020-06-14-bacteria-collapse-diagram.jpg){:height="700px" class="image-centered"}
 
 {:.caption}
 Each cell can either lyse with probability $\left(1-\gamma\right)$ or reproduce with probability $\gamma$.
 
-Writing down the second of these, we get $P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$
+Symmetrically, the probability that the first cell has a finite lineage is equal to the probability that it dies plus the probability that it reproduces but both of its children have finite lineages:
 
-This can be solved with the quadratic formula but if we divide by $P_\text{die}$: 
+$$
+P(\text{dies off}) = P(\text{lyse}) + P(\text{doesn't lyse})\times P(\text{both offspring lineages die off}),
+$$
+
+which becomes:
+
+$$P_\text{die} = (1-\gamma) + \gamma P_\text{die}^2.$$
+
+This can be solved with the quadratic formula but, if we divide by $P_\text{die}$: 
 
 $$1 = \frac{(1-\gamma)}{P_\text{die}} + \gamma P_\text{die}$$
 
