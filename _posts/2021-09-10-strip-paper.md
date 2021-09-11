@@ -16,7 +16,7 @@ date: 2018/04/21
 whenever myra cuts a strip from an $m \times n$ sheet of paper, she converts it to an $m \times (n-1)$ or $(m-1) \times n$ sheet of paper, with equal probability. so, the expected number of cuts in the $m \times n$ paper is 1 plus the average number of cuts remaining:
 
 $$
-c_{m,n} = 1 + \frac12 c_{m,n-1} + \frac12 c_{m-1,n}.
+\langle c_{m,n}\rangle = 1 + \frac12 \langle c_{m,n-1}\rangle + \frac12 \langle c_{m-1,n}\rangle.
 $$
 
 since the strips short side equal to $1,$ this has base values of $c_{m,1} = c_{1,m} = 0.$
@@ -24,14 +24,14 @@ since the strips short side equal to $1,$ this has base values of $c_{m,1} = c_{
 If we multiply this through by $x^m y^n$ and sum it over all values of $m$ and $n,$ we get the function 
 
 $$
-C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n c_{m,n}.
+C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n \langle c_{m,n}\rangle.
 $$
 
 By design, the coefficient of the, e.g., $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. Carrying out this sum for both sides:
 
 $$
 \begin{align}
-C(x,y) &= \sum\limits_{m=2}^{\infty}\sum\limits_{n=2}^{\infty} \left[x^my^n + x^my^n c_{m,n-1} + x^my^n c_{m-1,n}\right] \\
+C(x,y) &= \sum\limits_{m=2}^{\infty}\sum\limits_{n=2}^{\infty} \left[x^my^n + x^my^n \langle c_{m,n-1}\rangle + x^my^n \langle c_{m-1,n}\rangle\right] \\
 &= \frac{x^2y^2}{\left(1-x\right)\left(1-y\right)} + \frac12 xC(x,y) + \frac12 yC(x,y),
 \end{align}
 $$
