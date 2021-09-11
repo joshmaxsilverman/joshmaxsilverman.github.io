@@ -42,15 +42,15 @@ writing out the first few terms in each piece, we get
 
 $$
 \begin{align}
-G(x,y) = x^2y^2\left(1+x+y+xy+&x^2y+xy^2+\ldots\right)\times\\
-&\left[1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right]
+G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\\
+&\left(1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right)
 \end{align}
 $$
 
 the first series contains one copy of every term $x^my^n,$ so, it is able to promote every term in the second series from $x^0y^0$ up to $x^{m-2}y^{n-2}.$ the coefficients of the terms in the second series are the binomial coefficients divided by a power of $2,$ so the $x^my^n$ coefficient of $G(x,y)$ is simply
 
 $$
-\boxed{\langle C(m,n)\rangle = \sum\limits_{m,n=2}^{M-2,N-2}\frac{1}{2^{m+n}}\binom{n+m}{m}}
+\boxed{\langle C(m,n)\rangle = \sum\limits_{m=2}^{M-2}\sum\limits_{n=2}^{N-2}\frac{1}{2^{m+n}}\binom{n+m,m}}
 $$
 
 plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
