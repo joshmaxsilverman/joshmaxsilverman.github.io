@@ -61,7 +61,7 @@ The coefficients of the terms in the second series are the binomial coefficients
 
 $$
 \boxed{
-\langle c_{m,n}\rangle = \sum\limits_{m^\prime=0}^{m-2}\sum\limits_{n^\prime=0}^{n-2}\dfrac{\binom{n^\prime+m^\prime}{m^\prime}}{2^{m^\prime+n^\prime}}
+\langle c_{m,n}\rangle = \sum\limits_{m^\prime=0}^{m-2}\sum\limits_{n^\prime=0}^{n-2}\dfrac{\dbinom{n^\prime+m^\prime}{m^\prime}}{2^{m^\prime+n^\prime}}
 }
 $$
 
