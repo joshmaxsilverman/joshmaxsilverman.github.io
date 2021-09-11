@@ -60,7 +60,7 @@ The first series contains one copy of every term $x^my^n,$ so, it is able to pro
 The coefficients of the terms in the second series are the binomial coefficients divided by a power of $2,$ so the $x^my^n$ coefficient of $C(x,y)$ is simply
 
 $$
-\boxed{\langle c_{m,n}\rangle = \sum\limits_{m^\prime=0}^{m-2}\sum\limits_{n^\prime=0}^{n-2}\dfrac{\binom{n^\prime+m^\prime}{m^\prime}}}{2^{m^\prime+n^\prime}}
+\boxed{\langle c_{m,n}\rangle = \sum\limits_{m^\prime=0}^{m-2}\sum\limits_{n^\prime=0}^{n-2}\dfrac{\binom{n^\prime+m^\prime}{m^\prime}}{2^{m^\prime+n^\prime}}
 $$
 
 plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
