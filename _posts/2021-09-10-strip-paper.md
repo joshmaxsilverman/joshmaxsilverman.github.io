@@ -53,6 +53,8 @@ $$
 \boxed{\langle C(m,n)\rangle = \sum\limits_{m,n=2}^{M-2,N-2}\frac{1}{2^{m+n}}\binom{n+m,m}}
 $$
 
+plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
 
+$$\langle C(9,11)\rangle = \frac{234137}{16384} $$
 
 <br>
