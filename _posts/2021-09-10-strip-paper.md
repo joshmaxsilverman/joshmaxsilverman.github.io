@@ -13,13 +13,13 @@ date: 2018/04/21
 
 ## Solution
 
-whenever myra cuts a strip from an m by n sheet of paper, she converts it to an m by (n-1) or (m-1) by n sheet of paper, with equal probability. so, the expected number of cuts in the m by n paper is 1 plus the average number of cuts remaining:
+whenever myra cuts a strip from an $m \times n$ sheet of paper, she converts it to an $m \times (n-1)$ or $(m-1) \times n$ sheet of paper, with equal probability. so, the expected number of cuts in the $m \times n$ paper is 1 plus the average number of cuts remaining:
 
 $$
-c(m,n) = 1 + \frac12 c(m,n-1) + \frac12 c(m-1,n).
+c_{m,n} = 1 + \frac12 c_{m,n-1} + \frac12 c_{m-1,n}.
 $$
 
-since the strips short side equal to $1,$ this has base values of $c(m,1) = c(1,m) = 0.$
+since the strips short side equal to $1,$ this has base values of $c_{m,1} = c_{1,m} = 0.$
 
 If we multiply this through by $x^m y^n$ and sum it over all values of $m$ and $n,$ we get the function 
 
@@ -48,7 +48,7 @@ Writing out the first few terms in each piece, we get
 
 $$
 \begin{align}
-G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\\
+C(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\\
 &\left[1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right]
 \end{align}
 $$
@@ -60,11 +60,11 @@ The first series contains one copy of every term $x^my^n,$ so, it is able to pro
 The coefficients of the terms in the second series are the binomial coefficients divided by a power of $2,$ so the $x^my^n$ coefficient of $C(x,y)$ is simply
 
 $$
-\boxed{\langle C(m,n)\rangle = \sum\limits_{m=0}^{M-2}\sum\limits_{n=0}^{N-2}\frac{1}{2^{m+n}}\binom{n+m}{m}}
+\boxed{\langle c_{m,n}\rangle = \sum\limits_{m=0}^{M-2}\sum\limits_{n=0}^{N-2}\frac{1}{2^{m+n}}\binom{n+m}{m}}
 $$
 
 plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
 
-$$\langle C(9,11)\rangle = \frac{234137}{16384} $$
+$$\langle c_{9,11}\rangle = \frac{234137}{16384} $$
 
 <br>
