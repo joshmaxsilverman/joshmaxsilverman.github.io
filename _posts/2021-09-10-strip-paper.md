@@ -21,7 +21,7 @@ $$
 
 since the strips short side equal to $1,$ this has base values of $c(m,1) = c(1,m) = 0.$
 
-If we multiply this through by $x^m y^n$ and sum it over all values of m and n, we get the function $C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n c(m,n).$ By design, the coefficient of the, e.g., $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. Carrying out this sum for both sides:
+If we multiply this through by $x^m y^n$ and sum it over all values of $m$ and $n,$ we get the function $C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n c(m,n).$ By design, the coefficient of the, e.g., $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. Carrying out this sum for both sides:
 
 $$
 \begin{align}
@@ -47,7 +47,7 @@ G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\\
 \end{align}
 $$
 
-What at the contributions to the $x^my^n$ term?
+What are the contributions to the $x^my^n$ term?
 
 The first series contains one copy of every term $x^my^n,$ so, it is able to promote every term in the second series, from $x^0y^0$ up to $x^{m-2}y^{n-2},$ into a $x^my^n$ term. 
 
