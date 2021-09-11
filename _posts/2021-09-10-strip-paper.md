@@ -24,14 +24,14 @@ since the strips short side equal to $1,$ this has base values of $c(m,1) = c(1,
 If we multiply this through by $x^m y^n$ and sum it over all values of $m$ and $n,$ we get the function 
 
 $$
-C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n c(m,n).
+C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n c_{m,n}.
 $$
 
 By design, the coefficient of the, e.g., $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. Carrying out this sum for both sides:
 
 $$
 \begin{align}
-C(x,y) &= \sum\limits_{m=2}^{\infty}\sum\limits_{n=2}^{\infty} \left[x^my^n + x^my^n c(m,n-1) + x^my^n c(m-1,n)\right] \\
+C(x,y) &= \sum\limits_{m=2}^{\infty}\sum\limits_{n=2}^{\infty} \left[x^my^n + x^my^n c_{m,n-1} + x^my^n c_{m-1,n}\right] \\
 &= \frac{x^2y^2}{\left(1-x\right)\left(1-y\right)} + \frac12 xC(x,y) + \frac12 yC(x,y),
 \end{align}
 $$
