@@ -21,7 +21,7 @@ $$
 
 since the strips short side equal to $1,$ this has base values of $\text{cuts}(m,1) = \text{cuts}(1,m) = 0.$
 
-If we multiply this through by x^m y^n and sum it over all values of m and n, we get the function $G(x,y) = \sum\limits{m,n=1}^{\infty} x^my^n\text{cuts}(m,n).$ by design, the coefficient of, e.g., the $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. carrying out this sum for both sides:
+If we multiply this through by x^m y^n and sum it over all values of m and n, we get the function $G(x,y) = \sum\limits_{m,n=1}^{\infty} x^my^n\text{cuts}(m,n).$ by design, the coefficient of, e.g., the $x^my^n$ term in this series is equal to expect number of cuts for the $m\times n$ piece of paper. carrying out this sum for both sides:
 
 $$
 \begin{align}
@@ -33,13 +33,16 @@ $$
 or 
 
 $$
-\boxed{G(x,y) = \dfrac{\frac12\sum\limits{m,n=1}^{\infty} x^my^n}{1-\dfrac{x+y}{2}}
+\boxed{G(x,y) = \dfrac{\frac12\sum\limits_{m,n=1}^{\infty} x^my^n}{1-\dfrac{x+y}{2}}}
 $$
 
 writing out the first few terms in each piece, we get
 
 $$
-G(x,y) = \left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\left(1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right)
+\begin{align}
+G(x,y) = \left(1+x+y+xy+&x^2y+xy^2+\ldots\right)\\
+&\left(1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right)
+\end{align}
 $$
 
 <br>
