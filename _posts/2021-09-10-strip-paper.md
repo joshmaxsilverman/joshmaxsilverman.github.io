@@ -25,8 +25,8 @@ If we multiply this through by x^m y^n and sum it over all values of m and n, we
 
 $$
 \begin{align}
-G(x,y) &= \sum\limits{m,n=1}^{\infty} x^my^n + \frac12\sum\limits{m,n=1}^{\infty} x^my^n\text{cuts}(m,n-1) + \frac12\sum\limits{m,n=1}^{\infty} x^my^n\text{cuts}(m-1,n) \\
-&= \frac12\sum\limits{m,n=1}^{\infty} x^my^n xG(x,y) + yG(x,y),
+G(x,y) &= \sum\limits_{m,n=1}^{\infty} x^my^n + \frac12\sum\limits_{m,n=1}^{\infty} x^my^n\text{cuts}(m,n-1) + \frac12\sum\limits_{m,n=1}^{\infty} x^my^n\text{cuts}(m-1,n) \\
+&= \sum\limits_{m,n=1}^{\infty} x^my^n + \frac12xG(x,y) + \frac12yG(x,y),
 \end{align}
 $$
 
