@@ -42,8 +42,8 @@ Writing out the first few terms in each piece, we get
 
 $$
 \begin{align}
-G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\times\\
-&\left(1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right)
+G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\\
+&\left[1 + \frac{x+y}{2} + \left(\frac{x+y}{2}\right)^2 + \left(\frac{x+y}{2}\right)^3 + \ldots\right]
 \end{align}
 $$
 
