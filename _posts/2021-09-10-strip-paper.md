@@ -26,7 +26,7 @@ If we multiply this through by $x^m y^n$ and sum it over all values of m and n, 
 $$
 \begin{align}
 C(x,y) &= \sum\limits_{m=2}^{\infty}\sum\limits_{n=2}^{\infty} \left[x^my^n + x^my^n c(m,n-1) + x^my^n c(m-1,n)\right] \\
-&= \frac{x^2y^2}{\left(1-x\right)\left(1-y\right)} + \frac12xG(x,y) + \frac12yG(x,y),
+&= \frac{x^2y^2}{\left(1-x\right)\left(1-y\right)} + \frac12 xC(x,y) + \frac12 yC(x,y),
 \end{align}
 $$
 
