@@ -47,7 +47,11 @@ G(x,y) = x^2y^2&\left(1+x+y+xy+x^2y+xy^2+\ldots\right)\cdot\\
 \end{align}
 $$
 
-The first series contains one copy of every term $x^my^n,$ so, it is able to promote every term in the second series, from $x^0y^0$ up to $x^{m-2}y^{n-2},$ into a $x^my^n$ term. The coefficients of the terms in the second series are the binomial coefficients divided by a power of $2,$ so the $x^my^n$ coefficient of $C(x,y)$ is simply
+What at the contributions to the $x^my^n$ term?
+
+The first series contains one copy of every term $x^my^n,$ so, it is able to promote every term in the second series, from $x^0y^0$ up to $x^{m-2}y^{n-2},$ into a $x^my^n$ term. 
+
+The coefficients of the terms in the second series are the binomial coefficients divided by a power of $2,$ so the $x^my^n$ coefficient of $C(x,y)$ is simply
 
 $$
 \boxed{\langle C(m,n)\rangle = \sum\limits_{m=0}^{M-2}\sum\limits_{n=0}^{N-2}\frac{1}{2^{m+n}}\binom{n+m}{m}}
