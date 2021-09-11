@@ -26,14 +26,14 @@ If we multiply this through by x^m y^n and sum it over all values of m and n, we
 $$
 \begin{align}
 G(x,y) &= \sum\limits_{m,n=2}^{\infty} \left[x^my^n + x^my^n\text{cuts}(m,n-1) + x^my^n\text{cuts}(m-1,n)\right] \\
-&= \frac{1}{\left(1-x\right)\left(1-y\right)} + \frac12xG(x,y) + \frac12yG(x,y),
+&= \frac{x^2y^2}{\left(1-x\right)\left(1-y\right)} + \frac12xG(x,y) + \frac12yG(x,y),
 \end{align}
 $$
 
 or 
 
 $$
-G(x,y) = \dfrac{1}{\left(1-x\right)\left(1-y\right)} \cdot \dfrac{1}{1-\dfrac{x+y}{2}}
+G(x,y) = \dfrac{x^2y^2}{\left(1-x\right)\left(1-y\right)} \cdot \dfrac{1}{1-\dfrac{x+y}{2}}
 $$
 
 to find the expected number of cuts for an $m\times n$ sheet of paper, we need the coefficient of the $x^my^n$ term.
