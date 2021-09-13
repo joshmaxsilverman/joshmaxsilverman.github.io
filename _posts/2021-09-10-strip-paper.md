@@ -89,6 +89,6 @@ If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ g
 
 ![](/img/2021-09-12-threshold-paper.JPG){:width="400 px" class="image-centered"}
 
-
+In the limit as $N\rightarrow \infty,$ $\langle c_{M,N}\rangle$ becomes simply $2(M-1).$
 
 <br>
