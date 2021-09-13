@@ -87,7 +87,7 @@ With the analytic form in hand, we can explore the behavior in two cases. First,
 
 If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ grows approximately linearly until the paper is square, after which the expected number of cuts is harshly thresholded:
 
-![](/img/2021-09-12-square-paper.JPG){:width="400 px" class="image-centered"}
+![](/img/2021-09-12-threshold-paper.JPG){:width="400 px" class="image-centered"}
 
 
 
