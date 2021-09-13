@@ -5,23 +5,35 @@ title: Strip Paper
 date: 2018/04/21
 ---
 
->Question
+>**Question**:
+
+One morning, Phil was playing with his daughter, who loves to cut paper with her safety scissors. She especially likes cutting paper into “strips,” which are rectangular pieces of paper whose shorter sides are at most 1 inch long.
+
+Whenever Phil gives her a piece of standard printer paper (8.5 inches by 11 inches), she picks one of the four sides at random and then cuts a 1-inch wide strip parallel to that side. Next, she discards the strip and repeats the process, picking another side at random and cutting the strip. Eventually, she is left with nothing but strips.
+
+On average, how many cuts will she make before she is left only with strips?
+
+Extra credit: Instead of 8.5 by 11-inch paper, what if the paper measures $m$ by $n$ inches? (And for a special case of this, what if the paper is square?)
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-get-the-paper-cut/))
 
 ## Solution
 
-whenever myra cuts a strip from an $m \times n$ sheet of paper, she converts it to an $m \times (n-1)$ or $(m-1) \times n$ sheet of paper, with equal probability. so, the expected number of cuts in the $m \times n$ paper is 1 plus the average number of cuts remaining:
+Whenever the daughter cuts a strip from an $m \times n$ sheet of paper, she converts it to an $m \times (n-1)$ or $(m-1) \times n$ sheet of paper, with equal probability. so, the expected number of cuts in the $m \times n$ paper is 1 plus the average number of cuts remaining:
 
 $$
 \langle c_{m,n}\rangle = 1 + \frac12 \langle c_{m,n-1}\rangle + \frac12 \langle c_{m-1,n}\rangle.
 $$
 
-since the strips short side equal to $1,$ this has base values of $c_{m,1} = c_{1,m} = 0.$
+Because the strip's short side is equal to $1,$ this has base values of $c_{m,1} = c_{1,m} = 0.$ 
 
-If we multiply this through by $x^m y^n$ and sum it over all values of $m$ and $n,$ we get the function 
+### Generating coefficients
+
+At this point we could get the expected length by recursion, but it isn't too hard to get analytically.
+
+If we multiply through by $x^m y^n$ and sum over all values of $m$ and $n,$ we get the generating function 
 
 $$
 C(x,y) = \sum\limits_{m=2}^{\infty} \sum\limits_{n=2}^{\infty} x^my^n \langle c_{m,n}\rangle.
@@ -62,10 +74,10 @@ The coefficients of the terms in the second series are the binomial coefficients
 $$
 \boxed{
 \langle c_{m,n}\rangle = \sum\limits_{m^\prime=0}^{m-2}\sum\limits_{n^\prime=0}^{n-2}\dfrac{\binom{n^\prime+m^\prime}{m^\prime}}{2^{m^\prime+n^\prime}}
-}
+}.
 $$
 
-plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
+Plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
 
 $$\langle c_{9,11}\rangle = \frac{234137}{16384} \approx 14.29059 $$
 
