@@ -5,15 +5,13 @@ title: Strip Paper
 date: 2018/04/21
 ---
 
->**Question**:
-
-One morning, Phil was playing with his daughter, who loves to cut paper with her safety scissors. She especially likes cutting paper into “strips,” which are rectangular pieces of paper whose shorter sides are at most 1 inch long.
-
-Whenever Phil gives her a piece of standard printer paper (8.5 inches by 11 inches), she picks one of the four sides at random and then cuts a 1-inch wide strip parallel to that side. Next, she discards the strip and repeats the process, picking another side at random and cutting the strip. Eventually, she is left with nothing but strips.
-
-On average, how many cuts will she make before she is left only with strips?
-
-Extra credit: Instead of 8.5 by 11-inch paper, what if the paper measures $m$ by $n$ inches? (And for a special case of this, what if the paper is square?)
+>**Question**: One morning, Phil was playing with his daughter, who loves to cut paper with her safety scissors. She especially likes cutting paper into “strips,” which are rectangular pieces of paper whose shorter sides are at most 1 inch long.
+>
+>Whenever Phil gives her a piece of standard printer paper (8.5 inches by 11 inches), she picks one of the four sides at random and then cuts a 1-inch wide strip parallel to that side. Next, she discards the strip and repeats the process, picking another side at random and cutting the strip. Eventually, she is left with nothing but strips.
+>
+>On average, how many cuts will she make before she is left only with strips?
+>
+>Extra credit: Instead of 8.5 by 11-inch paper, what if the paper measures $m$ by $n$ inches? (And for a special case of this, what if the paper is square?)
 
 <!--more-->
 
