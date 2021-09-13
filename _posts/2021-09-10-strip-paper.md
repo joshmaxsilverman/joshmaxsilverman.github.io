@@ -81,6 +81,14 @@ Plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper
 
 $$\langle c_{9,11}\rangle = \frac{234137}{16384} \approx 14.29059 $$
 
+With the analytic form in hand, we can explore the behavior in two cases. First, $M=N$ in square sheets of paper, and $\langle C_{M,M}\rangle$ is approximately linear from $M=2$ on:
+
+![](/img/2021-09-12-square-paper.JPG){:width="400 px" class="image-centered"}
+
+If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ grows approximately linearly until the paper is square, after which the expected number of cuts is harshly thresholded:
+
+![](/img/2021-09-12-square-paper.JPG){:width="400 px" class="image-centered"}
+
 
 
 <br>
