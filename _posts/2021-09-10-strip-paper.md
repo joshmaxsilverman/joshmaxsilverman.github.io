@@ -67,6 +67,8 @@ $$
 
 plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper, we get
 
-$$\langle c_{9,11}\rangle = \frac{234137}{16384} $$
+$$\langle c_{9,11}\rangle = \frac{234137}{16384} \approx 14.29059 $$
+
+
 
 <br>
