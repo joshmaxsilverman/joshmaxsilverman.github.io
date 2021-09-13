@@ -81,7 +81,7 @@ Plugging in the values for the $8.5\text{ in}\times 11\text{ in}$ piece of paper
 
 $$\langle c_{9,11}\rangle = \frac{234137}{16384} \approx 14.29059 $$
 
-With the analytic form in hand, we can explore the behavior in two cases. First, $M=N$ in square sheets of paper, and $\langle C_{M,M}\rangle$ is approximately linear from $M=2$ on:
+With the analytic form in hand, we can explore the behavior in two cases. First, $m=n$ in square sheets of paper, and $\langle C_{m,m}\rangle$ is approximately linear from $m=2$ on:
 
 ![](/img/2021-09-12-square-paper.JPG){:width="400 px" class="image-centered"}
 
@@ -89,6 +89,6 @@ If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ g
 
 ![](/img/2021-09-12-threshold-paper.JPG){:width="400 px" class="image-centered"}
 
-In the limit as $N\rightarrow \infty,$ $\langle c_{M,N}\rangle$ becomes simply $2(M-1).$
+In the limit as $n\rightarrow \infty,$ $\langle c_{m,n}\rangle$ becomes simply $2(m-1).$
 
 <br>
