@@ -89,6 +89,6 @@ If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ g
 
 ![](/img/2021-09-12-threshold-paper.JPG){:width="400 px" class="image-centered"}
 
-In the limit as $n\rightarrow \infty,$ $\langle c_{m,n}\rangle$ becomes simply $2(m-1).$
+As $n$ grows large, we get $\lim\limits_{n\rightarrow\infty} \langle c_{m,n}\rangle = 2(m-1).$
 
 <br>
