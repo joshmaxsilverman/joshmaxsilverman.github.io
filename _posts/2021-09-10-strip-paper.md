@@ -87,6 +87,6 @@ If on the other hand, we have a rectangular sheet of paper, $\langle c\rangle$ g
 
 ![](/img/2021-09-12-threshold-paper.JPG){:width="400 px" class="image-centered"}
 
-As $n$ grows large, we get $\lim\limits_{n\rightarrow\infty} \langle c_{m,n}\rangle = 2(m-1).$
+As $n$ grows large, the sum over $n$ becomes $2,$ regardless of $m,$ while the sum over $M$ gets us a factor of $M-1$ and, so, we get $\lim\limits_{n\rightarrow\infty} \langle c_{m,n}\rangle = 2(m-1).$
 
 <br>
