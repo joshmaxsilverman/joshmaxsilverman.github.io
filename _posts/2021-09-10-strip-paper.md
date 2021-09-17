@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Strip Paper
-date: 2018/04/21
+date: 2021/09/10
 ---
 
 >**Question**: One morning, Phil was playing with his daughter, who loves to cut paper with her safety scissors. She especially likes cutting paper into “strips,” which are rectangular pieces of paper whose shorter sides are at most 1 inch long.
