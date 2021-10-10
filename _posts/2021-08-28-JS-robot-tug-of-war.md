@@ -48,7 +48,7 @@ If Player 1 wins eventually, then they have to move the game somewhere to the le
 
 $$
 \begin{align}
-P(\text{win eventually})(x_0) &= P(x_0\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else}) \\
+P(\text{win eventually at}\, x_0) &= P(x_0\rightarrow\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else}) \\
 &= P(x_0\rightarrow\text{somewhere})\cdot P(\text{somewhere}\rightarrow\text{somewhere else})\cdot P_\text{win}(\text{somewhere else})
 \end{align}
 $$
