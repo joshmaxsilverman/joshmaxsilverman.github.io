@@ -41,7 +41,7 @@ $$
 If Player 1 wins immediately, then they have to move beyond $\frac12,$ which has probability $1 - (\frac12 - x_0).$ So,
 
 $$
-P(\text{win immediately})(x_0) = \frac12 + x_0.
+P(\text{win immediately at}\, x_0) = \frac12 + x_0.
 $$
 
 If Player 1 wins eventually, then they have to move the game somewhere to the left of $\frac12,$ then Player 2 has to move it somewhere to the right of $-\frac12,$ and then Player 1 has to win from there. 
