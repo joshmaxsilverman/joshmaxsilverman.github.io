@@ -35,7 +35,7 @@ If it's Player 1's turn, they have two ways to win the game:
 In other words,
 
 $$
-P_\text{win}(x_0) = P(\text{win immediately at}\, x_{0}) + P(\text{win eventually at}\, x_{0}).
+P_\text{win}({x_0}) = P(\text{win immediately at}\, {x_{0}}) + P(\text{win eventually at}\, {x_{0}}).
 $$
 
 If Player 1 wins immediately, then they have to move beyond $\frac12,$ which has probability $1 - (\frac12 - x_0).$ So,
