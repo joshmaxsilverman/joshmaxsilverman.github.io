@@ -21,16 +21,16 @@ First, let's get acquainted with the setup:
 
 ![](/img/2021-08-28-tug-of-war-diagram.png){:width="450 px" class="image-centered"}
 
-Each robot pulls the middle of the rope toward their side a random distance between $0$ and $1.$ If Player 1 gets it past $\frac12,$ then they win (and likewise for Player 2). 
+Both robots pull the middle of the rope toward their side a random distance between $0$ and $1.$ If Player 1 gets it past $\frac12,$ then they win (and likewise for Player 2). 
 
 <!-- This means that each player has the potential to end the game in one turn (since $\frac12 - \left(-\frac12\right) = 1$).  -->
 
 ### Intuition
 
-If it's Player 1's turn, they can win the game in one of two ways:
+If it's Player 1's turn, they have two ways to win the game:
 
 1. they can immediately move the game past $+\frac12,$ or
-2. they can move somewhere less than $\frac12,$ and then go on to win, eventually.
+2. they can move it somewhere less than $\frac12,$ and then go on to win
 
 In other words,
 
@@ -44,7 +44,7 @@ $$
 P(\text{win immediately})(x_0) = \frac12 + x_0.
 $$
 
-If, instead, Player 1 wins eventually, then have to move somewhere to the left of $\frac12,$ then Player 2 has to move somewhere to the right of $-\frac12,$ and then Player 1 has to win from there. 
+If Player 1 wins eventually, then they have to move the game somewhere to the left of $\frac12,$ then Player 2 has to move it somewhere to the right of $-\frac12,$ and then Player 1 has to win from there. 
 
 $$
 \begin{align}
