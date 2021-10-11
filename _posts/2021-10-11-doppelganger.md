@@ -38,14 +38,6 @@ Since the doppelganger and the original make the same angle with the lamppost, a
 
 If they go any higher, then they would need to move faster than $2\text{ ft/s}$ simply to keep up with the horizontal position of the line. 
 
-### Can they get up there?
-
-Of course they can. 
-
-If the doppelganger simply maintained their radial position along the line, they would reach $y = 100(1 + \sqrt{2})\text{ ft} \approx 241\text{ ft}.$ 
-
-Going from $200\text{ ft}$ to $300\text{ ft}$ by the time the line of sight goes vertical requires an average vertical speed of $1\text{ ft/s},$ and the same goes for their horizontal motion. This means that their obligatory average speed is $\approx\sqrt{2}\text{ ft/s},$ something less than their actual speed of $2\text{m/s}.$
-
 So, they'll be at $y = 300\text{ ft}$ when the line of sight crosses the vertical, at which point they'll have $100\text{ s}$ left. 
 
 This means that they'll end up $200 \text{ ft}$ to the left of the origin, or a total of $\sqrt{(200\text{ ft})^2 + (300\text{ ft})^2} = 100\sqrt{13}\text{ ft} \approx 360.6\text{ ft}$ away from the original.
