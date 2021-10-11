@@ -42,7 +42,7 @@ If they go any higher, then they would need to move faster than $2\text{ ft/s}$ 
 
 Of course they can. 
 
-If the doppelganger simply maintained their radial position along the line, they would reach $y = (100 + \sqrt{2}100)\text{ ft} \approx 241\text{ ft}.$ 
+If the doppelganger simply maintained their radial position along the line, they would reach $y = 100(1 + \sqrt{2})\text{ ft} \approx 241\text{ ft}.$ 
 
 Going from $200\text{ ft}$ to $300\text{ ft}$ by the time the line of sight goes vertical requires an average vertical speed of $1\text{ ft/s},$ and the same goes for their horizontal motion. This means that their obligatory average speed is $\approx\sqrt{2}\text{ ft/s},$ something less than their actual speed of $2\text{m/s}.$
 
