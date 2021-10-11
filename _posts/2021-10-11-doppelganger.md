@@ -1,8 +1,8 @@
 ---
 layout: post
-published: false
-title: 
-date: 2018/04/21
+published: true
+title: Doppelganger Standoff
+date: 2021/10/11
 ---
 
 >**Question**: You are walking along a perfectly straight road one day. One hundred feet in front of you, and then another 100 feet to the left of the road, there is a lamppost (see the diagram below). You can’t be sure, but you briefly spot a doppelgänger on the other side of the lamppost, the same distance away. You look again, but now all you see is the lamppost. Perhaps your eyes were playing tricks on you.
