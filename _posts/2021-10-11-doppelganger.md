@@ -6,13 +6,13 @@ date: 2021/10/11
 ---
 
 >**Question**: You are walking along a perfectly straight road one day. One hundred feet in front of you, and then another 100 feet to the left of the road, there is a lamppost (see the diagram below). You can’t be sure, but you briefly spot a doppelgänger on the other side of the lamppost, the same distance away. You look again, but now all you see is the lamppost. Perhaps your eyes were playing tricks on you.
-
-You are 100 feet south and 100 feet west of a lamppost. You will be walking 200 feet due east. Meanwhile, there is a doppelgänger who is twice as fast as you, currently 100 feet east and 100 feet north of the same lamppost.
-Or perhaps your doppelgänger is now obscured by the lamppost. You start walking along the road, getting closer to the lamppost, but your doppelganger remains hidden. Feeling outmaneuvered, you suspect that your doppelgänger moves precisely twice as fast as you at all times. However, unlike you, they are not constrained to a straight road, and can move more freely in two dimensions.
-
-You walk a total of 200 feet (always forward, never backward), so that the lamppost is now 100 feet back and 100 feet left of the road. Still no sign of the speedy doppelgänger, who is assuredly still obscured by the lamppost.
-
-At this point, you contemplate chasing down the doppelgänger more directly. But before doing so, you wonder: What is the farthest the doppelgänger could be from the lamppost? (Again, assume they move precisely twice as fast as you at all times, that they started symmetrically opposite from you and that they were obscured by the lamppost at all times.)
+>
+>You are 100 feet south and 100 feet west of a lamppost. You will be walking 200 feet due east. Meanwhile, there is a doppelgänger who is twice as fast as you, currently 100 feet east and 100 feet north of the same lamppost.
+>Or perhaps your doppelgänger is now obscured by the lamppost. You start walking along the road, getting closer to the lamppost, but your doppelganger remains hidden. Feeling outmaneuvered, you suspect that your doppelgänger moves precisely twice as fast as you at all times. However, unlike you, they are not constrained to a straight road, and can move more freely in two dimensions.
+>
+>You walk a total of 200 feet (always forward, never backward), so that the lamppost is now 100 feet back and 100 feet left of the road. Still no sign of the speedy doppelgänger, who is assuredly still obscured by the lamppost.
+>
+>At this point, you contemplate chasing down the doppelgänger more directly. But before doing so, you wonder: What is the farthest the doppelgänger could be from the lamppost? (Again, assume they move precisely twice as fast as you at all times, that they started symmetrically opposite from you and that they were obscured by the lamppost at all times.)
 
 <!--more-->
 
