@@ -50,7 +50,7 @@ So, they'll be at $y = 300\text{ ft}$ when the line of sight crosses the vertica
 
 This means that they'll end up $200 \text{ ft}$ to the left of the origin, or a total of $\sqrt{(200\text{ ft})^2 + (300\text{ ft})^2} = 100\sqrt{13}\text{ ft} \approx 360.6\text{ ft}$ away from the original.
 
-![](/img/2021-10-11-doppelganger-path.png){:width="400 px" class="image-centered"}
+![](/img/2021-10-11-doppelganger-path.png){:width="550 px" class="image-centered"}
 
 <!-- Once we're there, we might be in a tricky spot. How fast do we need to move to stay on the line? To start, the vertical line at 300 ft is moving at $2 \text{ft/s}$ when it passes vertical. But how fast does the intercept at $y = 300\text{ ft}$ move in general?  -->
 
