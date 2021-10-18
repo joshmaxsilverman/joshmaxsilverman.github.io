@@ -91,4 +91,6 @@ def S(correct_guesses, series, n, m):
 
 we calculate for the case at hand $\left(n=7, m=2\right),$ there's a $93.75\%$ chance to win. 
 
+![](/img/2021-10-17-baseball-riddler.JPG){:width="500px" class="image-centered"}
+
 <br>
