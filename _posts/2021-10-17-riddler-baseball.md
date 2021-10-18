@@ -36,7 +36,7 @@ After each game, we have the opportunity to play our best, so long as we're not 
 
 Hopeless positions are exactly those that we have no chance to win from. Concretely, any position where A or B have won more than half the games but we still have less than 2 correct guesses logged. 
 
-If we use $S(c,\text{game})$ to represent the probability that a player wins from the position where they have $c$ correct guesses logged, and the current win-loss record is $\text{game}$ (for example, one value this could take would be $\text{AAAB},$ the series where A wins the first three games and loses the third) then these hopeless positions are described by:
+If we use $S(c,\text{game})$ to represent the probability that a player wins from the position where they have $c$ correct guesses logged, and the current win-loss record is $\text{game}$ (for example, one value this could take would be $\tt{AAAB},$ the series where A wins the first three games and loses the third) then these hopeless positions are described by:
 
 $$
 S(\text{less than 2 correct guesses}, \text{4 games won by a team}) = 0.
@@ -49,13 +49,13 @@ If we're not in a hopeless position, then we have a choice to bet on A or B in t
 If we currently have $c$ correct guesses, and we bet on A, we could guess right or wrong, so our expected value is 
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : B})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : A})\rangle}^\text{we bet on A and are right}
+\frac12 \overbrace{\langle S(c, \text{game : \tt{B}})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \tt{A}})\rangle}^\text{we bet on A and are right}
 $$
 
 On the other hand, we could bet B, which is worth
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : A})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : B})\rangle}^\text{we bet on A and area right}
+\frac12 \overbrace{\langle S(c, \text{game : \tt{A}})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \tt{B}})\rangle}^\text{we bet on A and area right}
 $$
 
 We choose the best of these two options.
@@ -65,8 +65,8 @@ We choose the best of these two options.
 So, the expectation that we make at least two successful predictions follows the recursion relation:
 
 $$\begin{align}
-\langle S(c,\text{game})\rangle = \max \{ &\frac12 \langle S(c, \text{game : A})\rangle + \frac12 \langle S(c + 1, \text{game : B})\rangle, \\
-&\frac12 \langle S(c, \text{game : B})\rangle + \frac12 \langle S(c + 1, \text{game : A})\rangle
+\langle S(c,\text{game})\rangle = \max \{ &\frac12 \langle S(c, \text{game : \tt{A}})\rangle + \frac12 \langle S(c + 1, \text{game : \tt{B}})\rangle, \\
+&\frac12 \langle S(c, \text{game : \tt{B}})\rangle + \frac12 \langle S(c + 1, \text{game : \tt{A}})\rangle
 \}
 \end{align}$$
 
