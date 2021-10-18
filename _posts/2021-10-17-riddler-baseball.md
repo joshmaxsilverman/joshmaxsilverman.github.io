@@ -22,11 +22,11 @@ date: 2021/10/17
 
 In the standard credit problem, there are $4$ solutions that perform optimally. 
 
-One such solution is to always bet on player A in the first 4 games, then player A in the last 3 games, $\tt{AAAABBB}.$ This only fails to produce 2 correct predictions in the case where player B sweeps the series, or player B wins in 5 games by winning the first three games, then losing, then winning the fifth. 
+One such solution is to bet on player A in the first four games, then player B in the last three games, $\tt{AAAABBB}.$ This only fails to produce $2$ correct predictions in the case where player B sweeps the series, or if player A wins in seven games while winning the last three games $\left({\tt BBBAAAA, BBABAAA, \ldots}\right)$.
 
 So, the chance to win with it is 
 
-$$1 - \frac{8}{128} - \frac{4}{128} = 90.625\%.$$
+$$1 - \frac{1}{2^4} - \binom{4}{1}\times\frac{1}{2^7} = 90.625\%.$$
 
 ### The main event
 
@@ -49,13 +49,13 @@ If we're not in a hopeless position, then we have a choice to bet on A or B in t
 If we currently have $c$ correct guesses, and we bet on A, we could guess right or wrong, so our expected value is 
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : }\tt{B})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : }\tt{A})\rangle}^\text{we bet on A and are right}
+\frac12 \overbrace{\langle S(c, \text{game : }{\tt B})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : }{\tt A})\rangle}^\text{we bet on A and are right}
 $$
 
 On the other hand, we could bet B, which is worth
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : }\tt{A})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : }\tt{B})\rangle}^\text{we bet on A and area right}
+\frac12 \overbrace{\langle S(c, \text{game : }{\tt A})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : }{\tt B})\rangle}^\text{we bet on B and are right}
 $$
 
 We choose the best of these two options.
@@ -65,9 +65,8 @@ We choose the best of these two options.
 So, the expectation that we make at least two successful predictions follows the recursion relation:
 
 $$\begin{align}
-\langle S(c,\text{game})\rangle = \max \{ &\frac12 \langle S(c, \text{game : }{\tt{A}})\rangle + \frac12 \langle S(c + 1, \text{game : }{\tt{B}})\rangle, \\
-&\frac12 \langle S(c, \text{game : }{\tt{B}})\rangle + \frac12 \langle S(c + 1, \text{game : }{\tt{A}})\rangle
-\}
+\langle S(c,\text{game})\rangle = \frac12\max \{ &\langle S(c, \text{game : }{\tt A})\rangle + \langle S(c + 1, \text{game : }{\tt B})\rangle, \\
+&\langle S(c, \text{game : }{\tt B})\rangle + \langle S(c + 1, \text{game : }{\tt A})\rangle\}
 \end{align}$$
 
 Coding this up in Python:
