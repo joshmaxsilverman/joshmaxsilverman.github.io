@@ -6,12 +6,23 @@ date: 2021/10/18
 ---
 
 >**Question:** 
+>Over in the National League Championship Series, the Washington Rationals and the St. Louis Ordinals (known as the “Ords” for short) are also evenly matched. Again, both teams are equally likely to win each game of the best-of-seven series.
+>
+>You enter a competition in which you must predict the winner of each of the seven games before the series begins. If any or all of the fifth, sixth or seventh game are not played, you are not credited with predicting a winner.
+>
+>You win the competition if you predict at least two games correctly. If you optimize your strategy for picking winners, what is the probability you will win the competition?
+>
+>Extra credit: You enter a second competition in which you must pick the winner of the first game and then of each next game, knowing who won in all the previous games. Again, if you optimize your strategy, now what is the probability you will predict at least two games correctly?
 
 <!--more-->
 
 ([FiveThirtyEight](URL))
 
 ## Solution
+
+In the standard credit problem, there are a number of solutions that perform optimally. One such solution is to always bet on player B which will only fail to produce 2 correct predictions in the $\left(1 + 4\right)$ cases where player A wins the series in 5 or fewer games. 
+
+### The main event
 
 The best thing to do is whatever we expect the best thing to do is.
 
