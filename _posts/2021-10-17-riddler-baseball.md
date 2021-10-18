@@ -49,13 +49,13 @@ If we're not in a hopeless position, then we have a choice to bet on A or B in t
 If we currently have $c$ correct guesses, and we bet on A, we could guess right or wrong, so our expected value is 
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : \tt{B}})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \tt{A}})\rangle}^\text{we bet on A and are right}
+\frac12 \overbrace{\langle S(c, \text{game : \texttt{B}})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \texttt{A}})\rangle}^\text{we bet on A and are right}
 $$
 
 On the other hand, we could bet B, which is worth
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : \tt{A}})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \tt{B}})\rangle}^\text{we bet on A and area right}
+\frac12 \overbrace{\langle S(c, \text{game : \texttt{A}})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : \texttt{B}})\rangle}^\text{we bet on A and area right}
 $$
 
 We choose the best of these two options.
