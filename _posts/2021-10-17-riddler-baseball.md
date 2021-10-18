@@ -65,8 +65,8 @@ We choose the best of these two options.
 So, the expectation that we make at least two successful predictions follows the recursion relation:
 
 $$\begin{align}
-\langle S(c,\text{game})\rangle = \max \{ &\frac12 \langle S(c, \text{game : }\tt{A})\rangle + \frac12 \langle S(c + 1, \text{game : }\tt{B})\rangle, \\
-&\frac12 \langle S(c, \text{game : }\tt{B})\rangle + \frac12 \langle S(c + 1, \text{game : }\tt{A})\rangle
+\langle S(c,\text{game})\rangle = \max \{ &\frac12 \langle S(c, \text{game : }{\tt{A}})\rangle + \frac12 \langle S(c + 1, \text{game : }{\tt{B}})\rangle, \\
+&\frac12 \langle S(c, \text{game : }{\tt{B}})\rangle + \frac12 \langle S(c + 1, \text{game : }{\tt{A}})\rangle
 \}
 \end{align}$$
 
