@@ -74,7 +74,7 @@ def S(correct_guesses, series, n, m):
         S(correct_guesses, series + 'A', n, m) 
         + S(correct_guesses + 1, series + 'A', n, m)
       , S(correct_guesses, series + 'B', n, m) 
-      + S(correct_guesses + 1, series + 'B', n, m)
+        + S(correct_guesses + 1, series + 'B', n, m)
       )
 ```
 
