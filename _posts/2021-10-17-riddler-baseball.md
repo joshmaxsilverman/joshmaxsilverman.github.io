@@ -22,7 +22,11 @@ date: 2021/10/18
 
 In the standard credit problem, there are $4$ solutions that perform optimally. 
 
-One such solution is to always bet on player A in the first 4 games, then player A in the last 3 games. This only fails to produce 2 correct predictions in the case where player B sweeps the series, or player B wins in 5 games by winning the first three games, then losing, then winning the fifth. So, the chance to win with it is $1 - \frac{8}{128} - \frac{4}{128} = 90.625\%.$
+One such solution is to always bet on player A in the first 4 games, then player A in the last 3 games, $\tt{AAAABBB}.$ This only fails to produce 2 correct predictions in the case where player B sweeps the series, or player B wins in 5 games by winning the first three games, then losing, then winning the fifth. 
+
+So, the chance to win with it is 
+
+$$1 - \frac{8}{128} - \frac{4}{128} = 90.625\%.$$
 
 ### The main event
 
