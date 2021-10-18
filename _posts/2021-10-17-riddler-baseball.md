@@ -20,11 +20,11 @@ date: 2021/10/18
 
 ## Solution
 
-In the standard credit problem, there are a number of solutions that perform optimally. One such solution is to always bet on player B .
+<!-- In the standard credit problem, there are a number of solutions that perform optimally. One such solution is to always bet on player B . -->
 
 <!-- which will only fail to produce 2 correct predictions in the $\left(1 + 4\right)$ cases where player A wins the series in 4 or 5 games.  -->
 
-### The main event
+<!-- ### The main event -->
 
 The best thing to do is whatever we expect the best thing to do is.
 
