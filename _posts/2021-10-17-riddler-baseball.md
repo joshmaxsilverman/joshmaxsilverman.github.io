@@ -78,6 +78,6 @@ def S(correct_guesses, series, n, m):
       )
 ```
 
-Calculating for the case at hand, there's a $93.75%$ chance to win. 
+Calculating for the case at hand, there's a $93.75\%$ chance to win. 
 
 <br>
