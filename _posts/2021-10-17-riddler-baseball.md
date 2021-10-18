@@ -69,27 +69,33 @@ $$\begin{align}
 Coding this up in Python:
 
 ```python
-def contains_four(series, n):
+def contains_four(series, N):
   count = max(series.count('A'), series.count('B'))
-  if count == 1/2 + n/2:
+  if count == 1/2 + N/2:
     return True
   else:
     return False
 
-def S(correct_guesses, series, n, m):
-  if correct_guesses < m and contains_four(series, n):
+def S(correct_guesses, series, N, m):
+  if correct_guesses < m and contains_four(series, N):
     return 0
   if correct_guesses == m:
     return 1
   return 0.5 * max(
-        S(correct_guesses, series + 'A', n, m) 
-        + S(correct_guesses + 1, series + 'A', n, m)
-      , S(correct_guesses, series + 'B', n, m) 
-        + S(correct_guesses + 1, series + 'B', n, m)
+        S(correct_guesses, series + 'A', N, m) 
+        + S(correct_guesses + 1, series + 'A', N, m)
+      , S(correct_guesses, series + 'B', N, m) 
+        + S(correct_guesses + 1, series + 'B', N, m)
       )
 ```
 
-we calculate for the case at hand $\left(n=7, m=2\right),$ there's a $93.75\%$ chance to win. 
+we calculate for the case at hand $\left(N=7, m=2\right),$ there's a $93.75\%$ chance to win. 
+
+As $N$ increases, the optimal success rate grows as
+
+$$
+\langle S(N)\rangle_\text{optimal} = 1 - \dfrac{N+1}{2^{2N}}
+$$
 
 ![](/img/2021-10-17-baseball-riddler.JPG){:width="500px" class="image-centered"}
 
