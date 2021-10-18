@@ -69,6 +69,13 @@ $$\begin{align}
 Coding this up in Python:
 
 ```python
+def contains_four(series, n):
+  count = max(series.count('A'), series.count('B'))
+  if count == 1/2 + n/2:
+    return True
+  else:
+    return False
+
 def S(correct_guesses, series, n, m):
   if correct_guesses < m and contains_four(series, n):
     return 0
