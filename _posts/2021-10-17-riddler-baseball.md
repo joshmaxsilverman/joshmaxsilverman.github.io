@@ -30,7 +30,9 @@ After each game, we have the opportunity to play our best, so long as we're not 
 
 ### Hopeless positions
 
-Hopeless positions are exactly those that we have no chance to win from. Concretely, any position where A or B have won more than half the games but we still have less than 2 correct guesses logged. If we use $S(c,\text{game})$ to represent the probability that a player wins from position $\left(c,\text{game}\right),$ then these hopeless positions are covered by:
+Hopeless positions are exactly those that we have no chance to win from. Concretely, any position where A or B have won more than half the games but we still have less than 2 correct guesses logged. 
+
+If we use $S(c,\text{game})$ to represent the probability that a player wins from the position where they have $c$ correct guesses logged, and the current win-loss record is $\text{game}$ (for example, one value this could take would be $\text{AAAB},$ the series where A wins the first three games and loses the third) then these hopeless positions are described by:
 
 $$
 S(\text{less than 2 correct guesses}, \text{4 games won by a team}) = 0.
