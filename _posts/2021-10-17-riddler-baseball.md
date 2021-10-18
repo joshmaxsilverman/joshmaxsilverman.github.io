@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Free Pete Rose
 date: 2021/10/18
 ---
@@ -30,21 +30,24 @@ If we're not in a hopeless position, then we have a choice to bet on A or B in t
 If we currently have $c$ correct guesses, and we bet on A, we could guess right or wrong, so our expected value is 
 
 $$
-\frac12 \overbrace{S(c, \text{game : B})}^\text{we bet wrong} + \frac12 \overbrace{S(c + 1, \text{game : A})}^\text{we bet right}
+\frac12 \overbrace{\langle S(c, \text{game : B})\rangle}^\text{we bet wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : A})\rangle}^\text{we bet right}
 $$
 
 On the other hand, we could bet B, which is worth
 
 $$
-\frac12 \overbrace{S(c, \text{game : A})}^\text{we bet wrong} + \frac12 \overbrace{S(c + 1, \text{game : B})}^\text{we bet right}
+\frac12 \overbrace{\langle S(c, \text{game : A})\rangle}^\text{we bet wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : B})\rangle}^\text{we bet right}
 $$
 
-We should choose the best of these two options, in other words
+We should choose the best of these two options.
+
+So, the expectation that we make at least two successful predictions follows the recursion relation:
 
 $$
-S(c,\text{game}) = \max \{ \frac12 S(c, \text{game : A}) + \frac12 S(c + 1, \text{game : B}), \frac12 S(c, \text{game : B}) + \frac12 S(c + 1, \text{game : A})
+\langle S(c,\text{game})\rangle = \max \{ \frac12 \langle S(c, \text{game : A})\rangle + \frac12 \langle S(c + 1, \text{game : B})\rangle, \frac12 \langle S(c, \text{game : B})\rangle + \frac12 \langle S(c + 1, \text{game : A})\rangle
 \}
 $$
+
 
 
 <br>
