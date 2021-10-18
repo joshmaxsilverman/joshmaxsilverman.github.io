@@ -26,13 +26,11 @@ date: 2021/10/18
 
 <!-- ### The main event -->
 
-The best thing to do is whatever we expect the best thing to do is.
-
-After each game, we have the opportunity to play our best, so long as we're not in a hopeless position.
+After each game, we have the opportunity to play our best, so long as we're not in a **hopeless position**.
 
 ### Hopeless positions
 
-Hopeless positions are exactly those that we have no chance to win from. In other words, if we're in a position where A or B have won more than half the games but we still have less than 2 correct guesses logged.
+Hopeless positions are exactly those that we have no chance to win from. Concretely, any position where A or B have won more than half the games but we still have less than 2 correct guesses logged. If we use $S(c,\text{game})$ to represent the probability that a player wins from position $\left(c,\text{game}\right),$ then these hopeless positions are covered by:
 
 $$
 S(\text{less than 2 correct guesses}, \text{4 games won by a team}) = 0.
@@ -40,21 +38,21 @@ $$
 
 ### Doing our best
 
-If we're not in a hopeless position, then we have a choice to bet on A or B in the next game.
+If we're not in a hopeless position, then we have a choice to bet on A or B in the next game. In this case, the best thing to do is whatever we _expect_ the best thing to do is.
 
 If we currently have $c$ correct guesses, and we bet on A, we could guess right or wrong, so our expected value is 
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : B})\rangle}^\text{we bet wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : A})\rangle}^\text{we bet right}
+\frac12 \overbrace{\langle S(c, \text{game : B})\rangle}^\text{we bet on A and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : A})\rangle}^\text{we bet on A and are right}
 $$
 
 On the other hand, we could bet B, which is worth
 
 $$
-\frac12 \overbrace{\langle S(c, \text{game : A})\rangle}^\text{we bet wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : B})\rangle}^\text{we bet right}
+\frac12 \overbrace{\langle S(c, \text{game : A})\rangle}^\text{we bet on B and are wrong} + \frac12 \overbrace{\langle S(c + 1, \text{game : B})\rangle}^\text{we bet on A and area right}
 $$
 
-We should choose the best of these two options.
+We choose the best of these two options.
 
 ### Recursion
 
@@ -65,6 +63,8 @@ $$\begin{align}
 &\frac12 \langle S(c, \text{game : B})\rangle + \frac12 \langle S(c + 1, \text{game : A})\rangle
 \}
 \end{align}$$
+
+Coding this up in Python:
 
 ```python
 def S(correct_guesses, series, n, m):
@@ -80,6 +80,6 @@ def S(correct_guesses, series, n, m):
       )
 ```
 
-Calculating for the case at hand, there's a $93.75\%$ chance to win. 
+we calculate for the case at hand $\left(n=7, m=2\right),$ there's a $93.75\%$ chance to win. 
 
 <br>
