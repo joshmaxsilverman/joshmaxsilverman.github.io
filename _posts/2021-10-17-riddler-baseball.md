@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Free Pete Rose
-date: 2021/10/18
+date: 2021/10/17
 ---
 
 >**Question:** 
