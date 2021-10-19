@@ -97,7 +97,7 @@ we calculate for the case at hand $\left(N=7, m=2\right),$ there's a $93.75\%$ c
 As $N$ increases, the optimal success rate grows as
 
 $$
-\langle S(N)\rangle_\text{optimal} = 1 - \dfrac{N+1}{2^{2N}}
+\langle S(N)\rangle_\text{optimal} = 1 - \dfrac{N+1}{2^{N}}
 $$
 
 ![](/img/2021-10-17-baseball-riddler.JPG){:width="500px" class="image-centered"}
