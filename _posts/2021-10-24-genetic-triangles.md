@@ -64,7 +64,7 @@ and setting up the ray for the bounce and intersecting it with side 3 gets $L(s_
 
 Making the replacements, we get
 
-$$
+$$\displaystyle
 \begin{align}
 P(\mathbf{c} \in \triangle s_1s_2s_3) &= \int\limits_{0}^{\frac12}ds_1\int\limits_{\frac{1-2s_1}{1-3s_1}}^{\frac12} ds_2 1 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{\frac{1 - 2s_2}{2 - 3s_2}}^1 1 \\
 &= \frac23 \log 2
