@@ -77,7 +77,7 @@ $$
 \begin{align}
 P(\mathbf{c} \in \triangle s_1s_2s_3) &= \displaystyle 2\left[\int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac{1-2s_1}{2-3s_1}}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac12}^1 ds_2~\int\limits_{\frac{1 - 2s_2}{1 - 3s_2}}^1\right] \\
 &= \frac23 \log 2 \\
-&\approx 46.21\%
+&\approx 0.4621\ldots
 \end{align}
 $$
 
