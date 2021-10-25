@@ -47,15 +47,15 @@ all that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
 the ray from $s_1$ through the center is 
 
 $$
-\mathbf{s}_1 + \left(\mathbf{c} - \mathbf{s}_1\right)t
+\left(s_1, 0\right) + \left(\mathbf{c} - \left(s_1, 0\right)\right)t
 $$
 
 while side two is
 
 $$
-\left(\frac12, \frac{\sqrt{3}}{2}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]u
+\left(\frac12, \frac{\sqrt{3}}{2}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]s_2.
 $$
 
-
+solving for $s_2,$ 
 
 <br>
