@@ -20,7 +20,7 @@ To fix an order, we'll pick $s_1,$ then $s_2,$ and then $s_3$ (counterclockwise)
 
 If we pick $s_1 \in \left(0,\frac12\right),$ then it will be on the same side of the middle as point $s_3.$ Otherwise, it will be on the same side as $s_2.$ These two cases are symmetric, so we can just do it once and double our result. 
 
-![](/img/2021-10-24-rotational-equivalence.png){:width="500px" class="image-centered"}
+![](/img/2021-10-24-rotational-equivalence.png){:width="500 px" class="image-centered"}
 
 If the triangle were isosceles or scalene, we'd need to handle this case separately (but similarly).
 
@@ -30,14 +30,14 @@ Starting from point $s_1,$ we shoot at side 2, hitting at point $s_2,$ and from 
 
 The shot can hit side 2 anywhere from the bottom right corner of the triangle up to the intersection of side 2 with the ray from $s_1$ through the center, which serves as an upper bound, $U(s_1).$
 
-![](/img/2021-10-24-upper-bound.png){:width="500px" class="image-centered"}
+![](/img/2021-10-24-upper-bound.png){:width="500 px" class="image-centered"}
 
 ### The bounce
 
 If $s_2  > \frac12,$ then the bounce has a lower bound, $L(s_2),$ which we find by intersecting the ray from $s_2$ through the center with side 3. but if $s_2 < \frac12$ then the bounce can hit side 3 anywhere in $\left(0,1\right).$ 
 
 
-![](/img/2021-10-24-lower-bound.png){width="500px" class="image-centered"}
+![](/img/2021-10-24-lower-bound.png){width="500 px" class="image-centered"}
 
 ### Add 'em up
 
