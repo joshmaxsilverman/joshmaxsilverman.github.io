@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Genetic Triangles
 date: 2021/10/24
 ---
@@ -37,7 +37,7 @@ so, we have to scatter the shot from $s_1$ to all permissible points on side 2, 
 putting it all together, the total weight of the permissible triples is 
 
 $$
-\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 1 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1
+\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 1 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1 1
 $$
 
 all that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
@@ -56,7 +56,20 @@ $$
 \left(\frac12, \frac{\sqrt{3}}{2}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]s_2.
 $$
 
-solving for $s_2$ gets $(1-2s_1)/(1-3s_1).$
+solving for $s_2$ gets $U(s_1) = (1-2s_1)/(1-3s_1).$
+
+and setting up the ray for the bounce and intersecting it with side 3 gets $L(s_2) = (1 - 2s_2)/(2 - 3s_2).$
+
+### The sum total
+
+Making the replacements, we get
+
+$$
+\begin{align}
+P(\mathbf{c) \elem \triangles_1s_2s_3) &= \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac{1-2s_1}{1-3s_1}}^{\frac12} ds_2 1 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{\frac{1 - 2s_2}{2 - 3s_2}}^1 1 \\
+&= \frac23 \log2
+\end{align}
+$$
 
 
 
