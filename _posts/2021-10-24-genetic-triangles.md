@@ -56,7 +56,7 @@ All that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
 The ray from $s_1$ through the center is 
 
 $$
-\left(s_1, 0\right) + \left(\mathbf{c} - \left(s_1, 0\right)\right)t,
+\left(s_1, 0\right) + \left[\mathbf{c} - \left(s_1, 0\right)\right]t,
 $$
 
 while side two is
