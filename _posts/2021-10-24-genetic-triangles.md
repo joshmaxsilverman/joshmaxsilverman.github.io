@@ -10,7 +10,7 @@ date: 2021/10/24
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/who-betrayed-dunes-duke-leto/))
 
 ## Solution
 
@@ -46,7 +46,7 @@ So, we have to scatter the shot from $s_1$ to all permissible points on side 2, 
 Putting it all together, the total weight of the permissible triples is 
 
 $$
-\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1.
+2\left(\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1\right).
 $$
 
 All that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
@@ -75,7 +75,7 @@ Making the replacements, and evaluating the integral we get
 
 $$
 \begin{align}
-P(\mathbf{c} \in \triangle s_1s_2s_3) &= \displaystyle 2\left[\int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac{1-2s_1}{2-3s_1}}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac12}^1 ds_2~\int\limits_{\frac{1 - 2s_2}{1 - 3s_2}}^1\right] \\
+P(\mathbf{c} \in \triangle s_1s_2s_3) &= \displaystyle 2\left(\int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac{1-2s_1}{2-3s_1}}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1~\int\limits_{\frac12}^1 ds_2~\int\limits_{\frac{1 - 2s_2}{1 - 3s_2}}^1\right) \\
 &= \frac23 \log 2 \\
 &\approx 0.4621\ldots
 \end{align}
