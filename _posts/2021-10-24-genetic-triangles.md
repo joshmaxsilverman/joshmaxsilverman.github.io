@@ -53,7 +53,7 @@ $$
 while side two is
 
 $$
-\frac12\left(1, \sqrt{3}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]s_2.
+\frac12\left(1, \sqrt{3}\right) + \left[\left(1,0\right) - \frac12\left(1, \sqrt{3}\right)\right]s_2.
 $$
 
 solving for $s_2$ gets $U(s_1) = (1-2s_1)/(1-3s_1).$
