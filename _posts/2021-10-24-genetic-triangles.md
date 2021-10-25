@@ -42,7 +42,7 @@ $$
 
 all that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
 
-### $U(s_1)$
+### $U(s_1)$ and $L(s_2)$
 
 the ray from $s_1$ through the center is 
 
@@ -56,6 +56,8 @@ $$
 \left(\frac12, \frac{\sqrt{3}}{2}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]s_2.
 $$
 
-solving for $s_2,$ 
+solving for $s_2$ gets $(1-2s_1)/(1-3s_1).$
+
+
 
 <br>
