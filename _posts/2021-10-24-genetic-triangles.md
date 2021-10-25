@@ -14,7 +14,7 @@ date: 2021/10/24
 
 ## Solution
 
-we need to tally up the weight of all triplets of points $\\{s_1, s_2, s_3\\},$ (each $s_i$ drawn from side $i$ of the equilateral triangle) that contain the center point $\left(\frac12,\frac{\sqrt{3}}{6}\right).$
+we need to tally up the weight of all triplets of points $\\{s_1, s_2, s_3\\},$ (each $s_i$ drawn from side $i$ of the equilateral triangle) that contain the center point $\mathbf{c} = \left(\frac12,\frac{\sqrt{3}}{6}\right).$
 
 to pick an order, we'll do $s_1,$ then $s_2,$ and then $s_3$ (counterclockwise). 
 
