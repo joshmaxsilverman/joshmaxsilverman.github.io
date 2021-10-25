@@ -41,7 +41,7 @@ If $s_2  > \frac12,$ then the bounce has a lower bound, $L(s_2),$ which we find 
 
 ### Add 'em up
 
-So, we have to scatter the shot from $s_1$ to all permissible points on side 2, and then on to all permissible points in $s_3.$ Again, if $s_2 < \frac12,$ then the bounce can scatter anywhere on side 3. At the end, we sum over all values of $s_1.$ 
+So, we have to scatter the shot from $s_1$ to all permissible points on side 2, and then on to all permissible points in side 3. Again, if $s_2 < \frac12,$ then the bounce can scatter anywhere on side 3. At the end, we sum over all values of $s_1.$ 
 
 Putting it all together, the total weight of the permissible triples is 
 
