@@ -26,4 +26,36 @@ starting from point $s_1,$ we shoot at side 2, hitting at point $s_2,$ and from 
 
 the shot can hit side 2 anywhere from the bottom right corner of the triangle up to the intersection of side two with the ray from $s_1$ through the center, which serves as an upper bound, $U(s_1).$
 
+### The bounce
+
+if $s_2  > \frac12,$ then the bounce has a lower bound, $L(s_2),$ which we find by intersecting the ray from $s_2$ through the center with side 3. but if $s_2 < \frac12$ then the bounce can hit side 3 anywhere in $\left(0,1\right).$ 
+
+### Add 'em up
+
+so, we have to scatter the shot from $s_1$ to all permissible points on side 2, and then on to all permissible points in $s_3.$ again, if $s_2 < \frac12,$ then the bounce can scatter anywhere on side 3. at the end, we sum over all values of $s_1.$ 
+
+putting it all together, the total weight of the permissible triples is 
+
+$$
+\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 1 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1
+$$
+
+all that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
+
+### $U(s_1)$
+
+the ray from $s_1$ through the center is 
+
+$$
+\mathbf{s}_1 + \left(\mathbf{c} - \mathbf{s}_1\right)t
+$$
+
+while side two is
+
+$$
+\left(\frac12, \frac{\sqrt{3}}{2}\right) + \left[\left(1,0\right) - \left(\frac12, \frac{\sqrt{3}}{2}\right)\right]u
+$$
+
+
+
 <br>
