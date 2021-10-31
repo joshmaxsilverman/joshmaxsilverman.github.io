@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Squid Game
 date: 2021/10/30
 ---
