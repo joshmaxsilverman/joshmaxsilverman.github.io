@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Races
 date: 2021/10/31
 ---
@@ -13,11 +13,35 @@ date: 2021/10/31
 
 ## Solution
 
-the discrete strategy is all-or-nothing, so any departure from it will lose a race with discrete competition. the only hope for a dissenter to win is to put fuel on a race that nobody else bets in. any non-zero amount will do, so the dissenter puts a non-zero amount on every race.
+While the discrete strategy reigns as the Nash equilibrium, there are $3N$ racers and $N$ distinct winners of the $N$ races, so the chance for any given player to win is $p=\frac13.$
 
-the chance that some lane is empty is 
+### Disturbing the equilibrium
 
-P(lane 1 \setunion lane 2 \setunion lane 3 \setunion lane 4)
+The discrete strategy is all-or-nothing, so any departure from it will lose a race with discrete competition. 
+
+The only hope for a dissenter to win is to put fuel on a race that nobody else does. Any non-zero amount will do in an empty race, so the dissenter puts a non-zero amount on every race.
+
+### Chance to win
+
+As the number of races grows, it should get easier for the system to fluctuate into a state where one race goes empty among the $3N-1$ Nash equilibrists. The question is, when do the dissenter's prospects overcome the equilibrists?
+
+Working in three lanes, the dissenter wins if lanes $1,$ $2,$ or $3$ are open. However, the chance for lane $1$ to be open includes the case where lane $2$ is also open. To avoid doublecounting, we need to find the chance that one or more lanes are open.
+
+The chance that at least one lane is empty is 
+
+$$
+P(\text{lane 1} \setunion \text{lane 2} \setunion \ldots \setunion \text{lane }N),
+$$
+
+which isn't so useful. But we can break it up iteratively.
+
+If we had just two events, then the chance that one or the other happens is 
+
+$$
+P(A\setunion B) = P(A) + P(B) - P(A\setjoin B).
+$$
+
+We need to enumerate uniquely 
 
 P(1v2v3v4) 
 = P(1v2v3) + P(4) - P(1v2v3^4)
