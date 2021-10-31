@@ -21,7 +21,7 @@ to get a clear conceptual picture, it's better to think about the case where con
 
 how many will die? contestants can die whenever a tile is reached for the first time. 
 
-since there are $t$ tiles, and each has $p=1/2$ to kill, we expect $\langle d\rangle = \frac12\times t$ deaths, and $\left(c-\frac12 t\right)$ survivors.
+since there are $t$ tiles, and each has $p=\frac12$ to kill, we expect $\langle d\rangle = \frac12 t$ deaths, and $\left(c-\frac12 t\right)$ survivors.
 
 if we naively apply this to the standard case, where $t > c$, then we expect $\langle s\rangle = c - \frac12 t = 7$ survivors.
 
@@ -31,7 +31,7 @@ but, in the standard case, things are, in principle, a little more complicated.
 
 when $c > t,$ we are guaranteed at least $(c - t)$ survivors. with this floor in place, outcomes are symmetric: 
 
-a. each outcome has probability $1/2^t$, and 
+a. each outcome has probability $2^{-t}$, and 
 b. each outcome with $(c - t + j)$ survivors is mirror to an outcome with $(c - j)$ survivors. 
 
 For example, the case where all $t$ tiles result in a death ($c- t + 0$ survivors) is symmetric with the case where there no tiles result in a death ($c-0$ survivors).
