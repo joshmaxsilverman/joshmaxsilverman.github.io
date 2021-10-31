@@ -47,7 +47,7 @@ when $d$ people die, it means that $d$ of $t$ tiles broke. we can distribute $d$
 $$
 \begin{align}
 \langle s \rangle &= \frac{1}{2^t}\sum\limits_{d=0}^c \left(c - d\right)\binom{t}{d} \\
-&= \frac{458,757}{2^18} \\
+&= \frac{458,757}{2^{18}} \\
 &= 7.0000762939453125
 \end{align}
 $$
@@ -64,7 +64,7 @@ $$
 
 we can solve this with generating functions, or by implementing it. doing that (and recognizing the base case $P(0,0) = 1$) gets the same result as the sum.
 
-a third way (another recursion, based on runs of death-free tile hopping) allows us to extend to the case where $p\neq\frac12$ (as does the above sum). both are ![coded up here](https://colab.research.google.com/drive/1emNV-9L6_hC4Vs5ZDQtet6GqbmsT9Jmi#scrollTo=9lxqhre9biUz).
+a third way (another recursion, based on runs of death-free tile hopping) allows us to extend to the case where $p\neq\frac12$ (as does the above sum). both are [coded up here](https://colab.research.google.com/drive/1emNV-9L6_hC4Vs5ZDQtet6GqbmsT9Jmi#scrollTo=9lxqhre9biUz).
 
 
 <br>
