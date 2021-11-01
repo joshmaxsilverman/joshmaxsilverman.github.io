@@ -41,14 +41,18 @@ $$
 P(A\cup B) = P(A) + P(B) - P(A\cap B).
 $$
 
-We can use this to reduce each union in turn (taking $A = L_1\cup L_2\cup L_3$ and $B=L_4$ to begin)
+We can use this to reduce each union in turn (taking $A = 1\cup 2\cup 3$ and $B=4$ to begin)
 
-P(1v2v3v4) 
-= P(1v2v3) + P(4) - P(1v2v3^4)
-= P(1v2v3) + P(4) - P((1^4)v(2^4)v(3^4))
-= P(1v2) + P(3) - P(1v2^3) + P(4) - (P((1^4)v(2^4)) + P(3^4) - P((1^4^3)v(2^3^4)))
-= P(1) + P(2) - P(1^2) + P(3) - P((1^3)v(2^3)) + P(4) - (P(1^4) + P(2^4) - P(1^2^4)) - P(3^4) - (P(1^4^3) + P(2^3^4) - P(1^2^3^4))
-= P(1) + P(2) + P(3) + P(4) - (P(1^4) + P(2^4) + P(3^4) + P(1^3) + P(2^3) + P(1^2)) + P(1^2^4) + P(2^3^4) + P(1^3^4) + P(1^2^3) - P(1^2^3^4)
+$$
+\begin{align}
+P(1\cup2\cup3\cup4) 
+&= P(1\cup 2\cup 3) + P(4) - P(1\cup 2\cup 3\cap 4) \\
+&= P(1\cup 2\cup 3) + P(4) - P((1\cap 4)\cup(2\cap 4)\cup(3\cap 4)) \\
+&= P(1\cup 2) + P(3) - P(1\cup 2\cap 3) + P(4) - (P((1\cap 4)\cup (2\cap 4)) + P(3\cap 4) - P((1\cap 4\cap 3)\cup(2\cap3\cap 4))) \\
+&= P(1) + P(2) - P(1^2) + P(3) - P((1^3)v(2^3)) + P(4) - (P(1^4) + P(2^4) - P(1^2^4)) - P(3^4) - (P(1^4^3) + P(2^3^4) - P(1^2^3^4)) \\
+&= P(1) + P(2) + P(3) + P(4) - (P(1^4) + P(2^4) + P(3^4) + P(1^3) + P(2^3) + P(1^2)) + P(1^2^4) + P(2^3^4) + P(1^3^4) + P(1^2^3) - P(1^2^3^4)
+\end{align}
+$$
 
 In other words, we sum the probabilities for all single lanes to be empty, then subtract the probability that any two lanes are empty, then add the probability that any three lanes are empty, and so on, up until the chance that (n-1) lanes are empty.  
 
