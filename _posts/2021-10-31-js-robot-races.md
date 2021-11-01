@@ -75,7 +75,7 @@ Putting it all together, this becomes
 
 $$
 \begin{align}
-P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\right) - P\left(\bigcap\limits_{i=0}^{3N}i\right) \\
+P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\right) \\
 &= \sum\limits_{j=1}^{N-1}\binom{N}{j}\left(\frac{N-j}{N}\right)^{3N-j}(-1)^{j+1} 
 \end{align}
 $$
