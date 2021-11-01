@@ -49,7 +49,7 @@ P(1\cup 2\cup 3\cup 4) &= P(1\cup 2\cup 3) + P(4) - P(1\cup 2\cup 3\cap 4) \\
 &= P(1\cup 2\cup 3) + P(4) - P((1\cap 4)\cup(2\cap 4)\cup(3\cap 4)) \\
 &= P(1\cup 2) + P(3) - P(1\cup 2\cap 3) + P(4) - (P((1\cap 4)\cup (2\cap 4)) + P(3\cap 4) \\
 &- P((1\cap 4\cap 3)\cup(2\cap 3\cap 4))) \\
-&= P(1) + P(2) - P(1^2) + P(3) - P((1^3)v(2^3)) + P(4) - (P(1^4) + P(2^4) - P(1^2^4)) - P(3^4) - (P(1^4^3) + P(2^3^4) - P(1^2^3^4)) 
+&= P(1) + P(2) - P(1\cap 2) + P(3) - P((1\cap 3)\cup(2\cap3)) + P(4) - (P(1\cap4) + P(2\cap 4) - P(1\cap2\cap4)) - P(3\cap4) - (P(1\cap4\cap3) + P(2\cap3\cap4) - P(1\cap2\cap3\cap4)) 
 \end{align}
 $$
 
