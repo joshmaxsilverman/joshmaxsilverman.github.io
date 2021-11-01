@@ -59,8 +59,8 @@ This is
 
 $$
 \begin{align}
-P(\text{a lane empty}) &= P(\bigcup\limits_{i=0}^{N}i) - P(\bigcap\limits_{i=0}^{3N}i) \\
-&= \sum\limits_{i=0}^{N-1}\binom{N}{i}(\frac{n-j}{n})^{3n-j}(-1)^{j+1}$
+P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\right - P\left(\bigcap\limits_{i=0}^{3N}i\right) \\
+&= \sum\limits_{i=0}^{N-1}\binom{N}{i}\left(\frac{n-j}{n}\right)^{3n-j}(-1)^{j+1}$
 \end{align}
 $$
  
