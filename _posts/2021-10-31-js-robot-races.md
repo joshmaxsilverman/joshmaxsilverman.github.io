@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Robot Races
 date: 2021/10/31
 ---
@@ -54,7 +54,7 @@ In other words, we sum the probabilities for all single lanes to be empty, then 
 
 This is 
 
-$P(a lane empty) = \sum\limits_{i=0}{N-1}\binom{N}{i}(\frac{n-j}{n})^{3n-j}(-1)^{j+1}$
+$P(a lane empty) = \sum\limits_{i=0}^{N-1}\binom{N}{i}(\frac{n-j}{n})^{3n-j}(-1)^{j+1}$
  
  
 <br>
