@@ -65,6 +65,12 @@ In other words, we sum the chance for all single lanes to be empty, then subtrac
 
 The probability that all of the equilibrists avoid $j$ particular races is 
 
+$$
+\left(\frac{N-j}{N}\right)^{3n-1}.
+$$
+
+and there are $\binom{N}{j}$ ways to pick $j$ races to avoid.
+
 Putting it all together, this becomes 
 
 $$
@@ -74,6 +80,6 @@ P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\right) - P\left(\bigc
 \end{align}
 $$
 
-which first overtakes $p=\frac13$ when there are $8$ races.
+which first overtakes the equilibrist's chance $p=\frac13$ when there are $8$ races.
  
 <br>
