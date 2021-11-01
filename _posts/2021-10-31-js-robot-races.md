@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Races
 date: 2021/10/31
 ---
@@ -41,7 +41,7 @@ $$
 P(A\cup B) = P(A) + P(B) - P(A\cap B).
 $$
 
-We need to enumerate uniquely 
+We can use this to reduce each union in turn (taking $A = L_1\cup L_2\cup L_3$ and $B=L_4$ to begin)
 
 P(1v2v3v4) 
 = P(1v2v3) + P(4) - P(1v2v3^4)
