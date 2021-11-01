@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Robot Races
 date: 2021/10/31
 ---
@@ -48,7 +48,8 @@ $$
 P(1\cup 2\cup 3) &= P(1\cup 2) + P(3) - P((1\cup 2)\cap 3) \\
 &= P(1) + P(2) - P(1\cap 2) + P(3) - P((1\cap3)\cup(2\cap3)) \\
 &= P(1) + P(2) + P(3) - P(1\cap2) - \left[P(1\cap3) + P(2\cap3) - P(1\cap2\cap3)\right] \\
-&= P(1) + P(2) + P(3) = P(1\cap2) - P(1\cap3) -P(2\cap3) + P(1\cap2\cap3)
+&= P(1) + P(2) + P(3) -  P(1\cap2) - P(1\cap3) -P(2\cap3) + P(1\cap2\cap3) \\
+&= \binom{3}{1}P(\text{one lane open}) - \binom{3}{2}P(\text{two lanes open}) + P(\text{three lanes open})
 \end{align}
 $$
 
@@ -57,6 +58,6 @@ In other words, we sum the probabilities for all single lanes to be empty, then 
 This is 
 
 $P(a lane empty) = \sum\limits_{i=0}^{N-1}\binom{N}{i}(\frac{n-j}{n})^{3n-j}(-1)^{j+1}$
- j
+ 
  
 <br>
