@@ -41,15 +41,14 @@ $$
 P(A\cup B) = P(A) + P(B) - P(A\cap B).
 $$
 
-We can use this to reduce each union in turn (taking $A = \left(1\cup 2\cup 3\right)$ and $B=4$ to begin)
+We can use this to reduce each union in turn (taking $A = \left(1\cup 2\right)$ and $B=3$ to begin)
 
 $$
 \begin{align}
-P(1\cup 2\cup 3\cup 4) &= P(1\cup 2\cup 3) + P(4) - P(1\cup 2\cup 3\cap 4) \\
-&= P(1\cup 2\cup 3) + P(4) - P((1\cap 4)\cup(2\cap 4)\cup(3\cap 4)) \\
-&= P(1\cup 2) + P(3) - P(1\cup 2\cap 3) + P(4) - (P((1\cap 4)\cup (2\cap 4)) + P(3\cap 4) \\
-&- P((1\cap 4\cap 3)\cup(2\cap 3\cap 4))) \\
-&= P(1) + P(2) - P(1\cap 2) + P(3) - P((1\cap 3)\cup(2\cap3)) + P(4) - (P(1\cap4) + P(2\cap 4) - P(1\cap2\cap4)) - P(3\cap4) - (P(1\cap4\cap3) + P(2\cap3\cap4) - P(1\cap2\cap3\cap4)) 
+P(1\cup 2\cup 3) &= P(1\cup 2) + P(3) - P((1\cup 2)\cap 3) \\
+&= P(1) + P(2) - P(1\cap 2) + P(3) - P((1\cap3)\cup(2\cap3)) \\
+&= P(1) + P(2) + P(3) - P(1\cap2) - \left[P(1\cap3) + P(2\cap3) - P(1\cap2\cap3)\right] \\
+&= P(1) + P(2) + P(3) = P(1\cap2) - P(1\cap3) -P(2\cap3) + P(1\cap2\cap3)
 \end{align}
 $$
 
