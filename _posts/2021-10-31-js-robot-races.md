@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Races
 date: 2021/10/31
 ---
