@@ -1,15 +1,21 @@
 ---
 layout: post
-published: false
+published: true
 title: Squid Game
 date: 2021/10/30
 ---
 
->**Question**:
+>**Question**: Congratulations, you’ve made it to the fifth round of The Squiddler — a competition that takes place on a remote island. In this round, you are one of the 16 remaining competitors who must cross a bridge made up of 18 pairs of separated glass squares. 
+>
+>To cross the bridge, you must jump from one pair of squares to the next. However, you must choose one of the two squares in a pair to land on. Within each pair, one square is made of tempered glass, while the other is made of normal glass. If you jump onto tempered glass, all is well, and you can continue on to the next pair of squares. But if you jump onto normal glass, it will break, and you will be eliminated from the competition.
+>
+>You and your competitors have no knowledge of which square within each pair is made of tempered glass. The only way to figure it out is to take a leap of faith and jump onto a square. Once a pair is revealed — either when someone lands on a tempered square or a normal square — all remaining competitors take notice and will choose the tempered glass when they arrive at that pair.
+>
+>On average, how many of the 16 competitors will survive and make it to the next round of the competition?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-survive-squid-game-riddler/))
 
 ## Solution
 
