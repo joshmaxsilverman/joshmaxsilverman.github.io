@@ -47,7 +47,8 @@ $$
 \begin{align}
 P(1\cup 2\cup 3\cup 4) &= P(1\cup 2\cup 3) + P(4) - P(1\cup 2\cup 3\cap 4) \\
 &= P(1\cup 2\cup 3) + P(4) - P((1\cap 4)\cup(2\cap 4)\cup(3\cap 4)) \\
-&= P(1\cup 2) + P(3) - P(1\cup 2\cap 3) + P(4) - (P((1\cap 4)\cup (2\cap 4)) + P(3\cap 4) - P((1\cap 4\cap 3)\cup(2\cap 3\cap 4)))
+&= P(1\cup 2) + P(3) - P(1\cup 2\cap 3) + P(4) - (P((1\cap 4)\cup (2\cap 4)) + P(3\cap 4) \\
+&- P((1\cap 4\cap 3)\cup(2\cap 3\cap 4)))
 \end{align}
 $$
 
