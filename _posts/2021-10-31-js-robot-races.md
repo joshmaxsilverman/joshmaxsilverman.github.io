@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot Races
 date: 2021/10/31
 ---
@@ -30,15 +30,15 @@ Working in three lanes, the dissenter wins if lanes $1,$ $2,$ or $3$ are open. H
 The chance that at least one lane is empty is 
 
 $$
-P(\text{lane 1} \setunion \text{lane 2} \setunion \ldots \setunion \text{lane }N),
+P(\text{lane 1} \cup \text{lane 2} \cup \ldots \cup \text{lane }N),
 $$
 
 which isn't so useful. But we can break it up iteratively.
 
-If we had just two events, then the chance that one or the other happens is 
+If we had just two events, then the chance that one or the other happens is the sum of their individual probabilities less the probability that they both happen
 
 $$
-P(A\setunion B) = P(A) + P(B) - P(A\setjoin B).
+P(A\cup B) = P(A) + P(B) - P(A\cap B).
 $$
 
 We need to enumerate uniquely 
