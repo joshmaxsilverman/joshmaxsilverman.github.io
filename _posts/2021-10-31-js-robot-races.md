@@ -59,6 +59,6 @@ In other words, we sum the probabilities for all single lanes to be empty, then 
 This is 
 
 $P(a lane empty) = \sum\limits_{i=0}^{N-1}\binom{N}{i}(\frac{n-j}{n})^{3n-j}(-1)^{j+1}$
- 
+ j
  
 <br>
