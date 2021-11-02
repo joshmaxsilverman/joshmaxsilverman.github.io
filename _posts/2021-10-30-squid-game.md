@@ -53,7 +53,7 @@ When $d$ people die, it means that $d$ of $t$ tiles broke. We can distribute $d$
 $$
 \begin{align}
 \langle s \rangle &= \frac{1}{2^t}\sum\limits_{d=0}^c \left(c - d\right)\binom{t}{d} \\
-&= \frac{458,757}{2^{18}} \\
+&= \frac{1,835,028}{2^{18}} \\
 &= 7.0000762939453125
 \end{align}
 $$
