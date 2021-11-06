@@ -42,7 +42,7 @@ use-site-title: true
       </div>
       {% endif %}
       <div class="post-entry">
-	{% if false %}
+	{% if not false %}
 	  {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
 	  {% assign excerpt_word_count = post.excerpt | number_of_words %}
 	{% endif %}
