@@ -2,12 +2,13 @@
 layout: post
 published: true
 title: Genetic Triangles
-subtitle: will a random baby triangle cover the center of its equilateral parent?
+subtitle: Will a random baby triangle cover the center of its equilateral parent?
+date: 2021/10/24
+---
+
 <!-- will a random triangle made from a parent triangle contain the center of the parent triangle? -->
 <!-- does the triangle fall far from the triangle? -->
 <!-- image: /img/2021-10-24-rotational-equivalence.png -->
-date: 2021/10/24
----
 
 >**Question**: one point is selected at random from each side of an equilateral triangle. What is the probability that the resulting triangle contains the center of the original?
 
