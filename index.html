@@ -61,8 +61,7 @@ use-site-title: true
       <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
       {% endfor %}
       {% else %}
-        {{ post.tags  }}
-<!-- 	    | join: ", " -->
+        {{ post.tags | join: " "  }}
       {% endif %}
     </div>
     {% endif %}
