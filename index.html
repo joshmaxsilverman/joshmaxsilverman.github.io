@@ -41,7 +41,7 @@ use-site-title: true
         </a>
       </div>
       {% endif %}
-	{% if post.subtitle is None %}
+	{% if not post.subtitle %}
 	<div class="post-entry">
 
 	  {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
@@ -50,9 +50,9 @@ use-site-title: true
 
         {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Solution]</a>
-      </div>
-{% endif %}
-{% endif %}
+	{% endif %}
+	</div>
+        {% endif %}
     </div>
 
     {% if post.tags.size > 0 %}
