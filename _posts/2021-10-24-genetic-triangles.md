@@ -3,6 +3,7 @@ layout: post
 published: true
 title: Genetic Triangles
 subtitle: does the triangle fall far from the triangle?
+image: /img/2021-10-24-rotational-equivalence.png
 date: 2021/10/24
 ---
 
