@@ -4,7 +4,6 @@ published: true
 title: Squid Game
 subtitle: How many will die crossing this entropic bridge?
 tags: probability, counting, recursion
-<!-- a horde crosses an unreliable bridge, at each step the group learns which step to take, if the person in front guesses wrong they die. how many will die? -->
 date: 2021/10/30
 ---
 
