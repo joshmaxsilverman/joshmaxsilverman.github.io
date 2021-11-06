@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: Genetic Triangles
+subtitle: does the triangle fall far from the triangle?
 date: 2021/10/24
 ---
 
