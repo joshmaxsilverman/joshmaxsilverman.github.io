@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Squid Game
 subtitle: How many will die crossing this entropic bridge?
-tags: probability, counting, recursion
+tags: probability counting recursion
 date: 2021/10/30
 ---
 
