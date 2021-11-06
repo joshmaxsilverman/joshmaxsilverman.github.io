@@ -2,8 +2,10 @@
 layout: post
 published: true
 title: Genetic Triangles
-subtitle: does the triangle fall far from the triangle?
-image: /img/2021-10-24-rotational-equivalence.png
+subtitle: will a random baby triangle cover the center of its equilateral parent?
+<!-- will a random triangle made from a parent triangle contain the center of the parent triangle? -->
+<!-- does the triangle fall far from the triangle? -->
+<!-- image: /img/2021-10-24-rotational-equivalence.png -->
 date: 2021/10/24
 ---
 
