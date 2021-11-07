@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: Free Pete Rose
+tags: "probability recursion"
 date: 2021/10/17
 ---
 
