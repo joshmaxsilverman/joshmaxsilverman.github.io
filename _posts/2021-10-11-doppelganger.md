@@ -2,7 +2,8 @@
 layout: post
 published: true
 title: Doppelganger Standoff
-tags: Chase
+subtitle: You're being stalked by a replica who's twice as fast and a genius at occluding themselves behind light poles. Where could they be?
+tags: "geometry scaling"
 date: 2021/10/11
 ---
 
