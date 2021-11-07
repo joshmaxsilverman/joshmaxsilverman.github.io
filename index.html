@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jamshrivelson
+title: Jamshriverlson
 subtitle: Puzzle Solutions
 use-site-title: true
 ---
@@ -41,7 +41,7 @@ use-site-title: true
         </a>
       </div>
       {% endif %}
-	    	{% if not true %}
+	    	{% if true %}
       <div class="post-entry">
 
 	  {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
@@ -79,7 +79,7 @@ use-site-title: true
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
   </li>
   {% endif %}
-  {% if paginator.next_page %} 
+  {% if paginator.next_page %}
   <li class="next">
     <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
   </li>
