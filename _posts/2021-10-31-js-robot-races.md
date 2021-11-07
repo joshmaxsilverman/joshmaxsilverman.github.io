@@ -3,6 +3,7 @@ layout: post
 published: true
 title: Robot Races
 subtitle: How can you break from the crystalline grip of Nash equilibrists?
+tags: "game-theory probability inclusion-exclusion"
 date: 2021/10/31
 ---
 
