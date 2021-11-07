@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: Free Pete Rose
+subtitle: Guess what happens in two world series games to win it all.
 tags: "probability recursion"
 date: 2021/10/17
 ---
@@ -17,7 +18,7 @@ date: 2021/10/17
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-hit-these-riddles-out-of-the-park/))
 
 ## Solution
 
