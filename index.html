@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jamshriverlson
+title: Jamshrivelson
 subtitle: Puzzle Solutions
 use-site-title: true
 ---
@@ -41,18 +41,16 @@ use-site-title: true
         </a>
       </div>
       {% endif %}
-	{% if not post.subtitle %}
-	<div class="post-entry">
-
+      <div class="post-entry">
+	{% if true %}
 	  {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
 	  {% assign excerpt_word_count = post.excerpt | number_of_words %}
-
+	{% endif %}
 
         {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Solution]</a>
-	{% endif %}
-	</div>
         {% endif %}
+      </div>
     </div>
 
     {% if post.tags.size > 0 %}
@@ -63,7 +61,7 @@ use-site-title: true
       <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
       {% endfor %}
       {% else %}
-        {{ post.tags | join: " "  }}
+        {{ post.tags | join: ", " }}
       {% endif %}
     </div>
     {% endif %}
