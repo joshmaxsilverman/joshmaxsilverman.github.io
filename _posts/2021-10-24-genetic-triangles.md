@@ -52,7 +52,7 @@ So, we have to scatter the shot from $s_1$ to all permissible points on side 2, 
 Putting it all together, the total weight of the permissible triples is 
 
 $$
-2\left(\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1\right).
+2\left(\int\limits_{0}^{\frac12}ds_1 \int\limits_{U(s_1)}^{\frac12} ds_2 + \int\limits_{0}^{\frac12}ds_1 \int\limits_{\frac12}^1 ds_2 \int\limits_{L(s_2)}^1 ds_3\right).
 $$
 
 All that's left is to compute the bounds $U(s_1)$ and $L(s_2).$
