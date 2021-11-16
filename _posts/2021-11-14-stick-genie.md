@@ -35,11 +35,12 @@ $$\langle \text{payoff}_1\rangle = \frac14.$$
 
 Suppose we could outdo this, by betting something less than $a = \frac12$ on the first turn, boosting our return, and keeping the option to bet something more on the second turn, for less return, if the first bet doesn't turn out.
 
-This means we'll pick another cutpoint, $b,$ and bring a stick of length $(b-a)$ and value $(1-b)$ to the genie for a second try. So, with two attempts, our expected payoff is
+This means we'll pick another cutpoint, $b,$ and bring a stick of length $(b-a)$ and payoff $(1-b)$ to the genie for a second try. So, with two attempts, our expected payoff is
 
 $$
 \begin{align}
-\langle\text{payoff}_2\rangle &= a(1-a) + P(a < \ell < b-a)(1-b) \\
+\langle\text{payoff}_2\rangle &= P(\text{win first})(1-a) + P(\text{lose first, win second})(1-b)\\
+&=a(1-a) + P(a < \ell < b-a)(1-b) \\
 &= a(1-a) + (b-2a)(1-b)
 \end{align}
 $$
