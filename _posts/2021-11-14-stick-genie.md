@@ -3,6 +3,7 @@ layout: post
 published: true
 title: Stick it to the Genie
 subtitle: How much can you bilk the genie for?
+tags: probability algebra invariance
 date: 2021/11/14
 ---
 
