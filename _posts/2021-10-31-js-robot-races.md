@@ -19,7 +19,7 @@ date: 2021/10/31
 
 <!--more-->
 
-([FiveThirtyEight](https://www.janestreet.com/puzzles/current-puzzle/))
+([Jane Street](https://www.janestreet.com/puzzles/robot-swimming-trials-index/))
 
 ## Solution
 
