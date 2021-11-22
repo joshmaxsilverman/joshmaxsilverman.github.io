@@ -60,7 +60,6 @@ for round in range(100000):
 
   temp_strategies = copy.deepcopy(strategies)
   temp_strategies[strategy_to_mutate][case_to_mutate] = random.choice(colors)
-  # temp_strategies[strategy_to_mutate][case_to_mutate] = random.choice(list(set(colors).difference({tmp_strategies[strategy_to_mutate][case_to_mutate]})))
   temp_score = score_current_strategies(temp_strategies)
 
   if temp_score >= current_score:
