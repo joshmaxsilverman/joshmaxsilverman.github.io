@@ -2,6 +2,8 @@
 layout: post
 published: true
 title: Hat Hostage Strategies II
+subtitle: Can the ghost of Darwin get you out of this bind?
+tags: logic evolution 
 date: 2021/11/22
 ---
 
