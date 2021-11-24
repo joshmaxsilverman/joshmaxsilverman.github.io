@@ -44,7 +44,7 @@ it's always possible that the gnomes pick a bad region of strategy space to star
 $$
 \begin{array}
 \text{View} & \text{Player 1} & \text{Player 2} & \text{Player 3} & \text{Player 4} \\
-(r, r) & y & y & r & g \\
+\tt (r, r) & y & y & r & g \\
 (r, g) & y & g & g & r \\
 (r, y) & r & r & r & y \\
 (g, r) & r & g & g & g \\
