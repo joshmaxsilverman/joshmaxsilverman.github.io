@@ -13,6 +13,17 @@ date: 2021/11/22
 
 ## Solution
 
+before looking for solutions, we can lay down some basic facts.
+
+each gnome will guess correctly in exactly $h^{n-1} = 27$ of the $h^n = 81$ potential cases, regardless of how they design their policy.
+
+this is because each player makes the same guess for each pair of hat colors they can see, which has no correlation with the hat on their head.
+
+an immediate corollary is that, in all, the players will make $h^{n-1} \times n = 108$ correct guesses. so, at least in number, there are more than enough correct guesses to distribute $1$ to each of the possible cases. if there are more hat colors than people, then full survival is impossible.
+
+the control we can exert is how the correct responses are distributed. 
+
+
 
 
 ```python
