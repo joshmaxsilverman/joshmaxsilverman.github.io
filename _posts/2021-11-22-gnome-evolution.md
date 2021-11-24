@@ -15,31 +15,43 @@ date: 2021/11/22
 
 ## Solution
 
-before looking for solutions, we can lay down some basic facts.
+Before looking for solutions, we can lay down some basic facts.
 
-each gnome will guess correctly in exactly $h^{n-1} = 27$ of the $h^n = 81$ potential cases, regardless of how they design their policy.
+### The facts
 
-this is because each player makes the same guess for each pair of hat colors they can see, which have no correlation with the hat on their head.
+Each gnome will guess correctly in exactly $h^{n-1} = 27$ of the $h^n = 81$ potential cases, regardless of how they design their policy.
 
-an immediate corollary is that, in all, the players will make $h^{n-1} \times n = 108$ correct guesses. so, at least in number, there are more than enough correct guesses to distribute $1$ to each of the $h^n = 81$ possible cases. if there are more hat colors than people, then full survival is impossible.
+This is because each player makes the same guess for each pair of hat colors they can see, which have no correlation with the hat on their head.
 
-the control we can exert is how the correct responses are distributed. 
+An immediate corollary is that, in all, the players will make $h^{n-1} \times n = 108$ correct guesses. So, at least in number, there are more than enough correct guesses to distribute $1$ to each of the $h^n = 81$ possible cases. If there are more hat colors than people, then full survival is impossible.
 
-a simple example helps illustrate this:
+The control we can exert is how the correct responses are distributed. 
 
->two players with two hat colors. it is either the case that the two players have the same hat color, or they have different hat colors. so, if Player A always guesses the same as their partner's hat and Player B always guesses the opposite of their partner's hat, then at least one of them will be right in every round that's played. 
+### Strategies
 
-we are trying to find a similar sort of structure here.
+A simple example helps illustrate this:
 
-without any structure (i.e. the gnomes use random strategies) they will survive in, on average, $65$ of the $81$ cases. the first gnome makes $27$ correct guesses which is a third of cases. so the second player will make, on average, $18$ of their correct guesses in cases where the first player is wrong. together, $18$ and $27$ make $45$ which is $5/9^\text{th}$s of all cases, so the third player will make correct guesses in $12$ cases where the first two players are wrong. finally, fourth player will be correct in $8$ novel cases. all together, $27+18+12+8 = 65.$
+>**Two players with two hat colors** — it is either the case that the two players have the same hat color, or they have different hat colors. So, if Player A always guesses the same as their partner's hat and Player B always guesses the opposite of their partner's hat, then at least one of them will be right in every round that's played. 
 
-similarly, the gnomes will survive in no fewer than $45$ of the $81$ cases.
+We are trying to find a similar sort of structure here.
 
-finding a nice breakdown did not yield to analysis, so i turned to biology. essentially, the gnomes pick a random strategy (a map from the $3\times3 = 9$ hat pairs they can see to a prediction for their own hat) and the gnomes figure out how many cases they would currently survive in. they then pick a random gnome among them to mutate a random row in their map. if this does not lower the number of cases they survive in, then they accept the change, otherwise they reject it. then the process starts again.
+### No strategy
 
-this has the potential to be a quick discovery process because there is no connection between one gnome being correct and another being wrong. progress is progress is progress.
+Without any structure (i.e. the gnomes use random strategies) they will survive in, on average, $65$ of the $81$ cases. The first gnome makes $27$ correct guesses which is a third of cases. So the second player will make, on average, $18$ of their correct guesses in cases where the first player is wrong.Ttogether, $18$ and $27$ make $45$ which is $5/9^\text{th}$s of all cases, so the third player will make correct guesses in $12$ cases where the first two players are wrong. Finally, fourth player will be correct in $8$ novel cases. all together, $27+18+12+8 = 65.$
 
-it's always possible that the gnomes pick a bad region of strategy space to start in, so if they go $5000$ mutations without hitting $81$ they all repick a random strategy and start over.
+Similarly, the gnomes will survive in no fewer than $45$ of the $81$ cases.
+
+Finding a nice breakdown did not yield to analysis, so we turned to biology. Essentially, the gnomes pick a random strategy (a map from the $3\times3 = 9$ hat pairs they can see to a prediction for their own hat) and then figure out how many cases they would currently survive in. They then pick a random gnome among them to mutate a random row in their map. If this change doesn't lower the number of cases they survive in, then they accept the change, otherwise they reject it. Then the process starts again.
+
+This has the potential to be a very quick discovery process because there is no connection between one gnome being correct and another being wrong. Progress is progress is progress.
+
+It's always possible that the gnomes pick a slow region of strategy space to start in, so if they go $5000$ mutations without hitting $81$ they all repick a random strategy and start over.
+
+In a few thousand mutations, the gnomes find a suitable strategy and achieve $100\%$ survival, as desired.
+
+![](/img/2021-11-22-gnome-survival.JPG)
+
+The strategy (one of many) they found is 
 
 $$
 \begin{array} \\
@@ -56,7 +68,7 @@ $$
 \end{array}
 $$
 
-![](/img/sss.jpg)
+The full evolutionary algorithm in Python:
 
 ```python
 import random
