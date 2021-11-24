@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Hat Hostage Strategies II
 date: 2021/11/22
 ---
@@ -39,7 +39,22 @@ this has the potential to be a quick discovery process because there is no conne
 
 it's always possible that the gnomes pick a bad region of strategy space to start in, so if they go $5000$ mutations without hitting $81$ they all repick a random strategy and start over.
 
+$$
+\begin{array}
+\text{View} & \text{Player 1} & \text{Player 2} & \text{Player 3} & \text{Player 4} \\
+(r, r) & y & y & r & g \\
+(r, g) & y & g & g & r \\
+(r, y) & r & r & r & y \\
+(g, r) & r & g & g & g \\
+(g, g) & y & r & y & g \\
+(g, y) & g & r & r & r \\
+(y, r) & g & y & y & r \\
+(y, g) & r & y & y & y \\
+(y, y) & g & g & g & y 
+\end{array}
+$$
 
+![](/img/sss.jpg)
 
 ```python
 import random
