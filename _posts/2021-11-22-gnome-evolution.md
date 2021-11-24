@@ -49,7 +49,7 @@ It's always possible that the gnomes pick a slow region of strategy space to sta
 
 In a few thousand mutations, the gnomes find a suitable strategy and achieve $100\%$ survival, as desired.
 
-![](/img/2021-11-22-gnome-survival.JPG)
+![](/img/2021-11-22-gnome-survival.JPG){:width="500 px" class="image-centered"}
 
 The strategy (one of many) they found is 
 
