@@ -42,8 +42,8 @@ this has the potential to be a quick discovery process because there is no conne
 it's always possible that the gnomes pick a bad region of strategy space to start in, so if they go $5000$ mutations without hitting $81$ they all repick a random strategy and start over.
 
 $$
-\begin{array}
-\\text{View} & \text{Player 1} & \text{Player 2} & \text{Player 3} & \text{Player 4} \\
+\begin{array} \\
+\text{View} & \text{Player 1} & \text{Player 2} & \text{Player 3} & \text{Player 4} \\
 \tt (r, r) & \tt y & \tt y & \tt r & \tt g \\
 \tt (r, g) & \tt y & \tt g & \tt g & \tt r \\
 \tt (r, y) & \tt r & \tt r & \tt r & \tt y \\
