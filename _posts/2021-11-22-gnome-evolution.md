@@ -23,6 +23,8 @@ an immediate corollary is that, in all, the players will make $h^{n-1} \times n 
 
 the control we can exert is how the correct responses are distributed. 
 
+a simple example helps illustrate this, two players with two hat colors. it is either the case that the two players have the same hat color, or they have different hat colors. so, if player A always guesses the same as their opponent's hat and player B always guesses the opposite of their oponent's hat, at least one of them will be right in every round that's played. 
+
 
 
 
