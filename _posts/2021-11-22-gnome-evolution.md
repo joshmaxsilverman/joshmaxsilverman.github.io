@@ -106,7 +106,11 @@ scores = []
 for round in range(100000):
   # if 5000 rounds have elapsed, reset the search
   if round % 5000 == 4999:
-    strategies = [{_ : random.choice(colors) for _ in itertools.product(colors, repeat=2)} for _ in range(4)]
+    strategies = [
+        {_ : random.choice(colors) 
+        for _ in itertools.product(colors, repeat=2)} 
+        for _ in range(4)
+    ]
 
   current_score = score_current_strategies(strategies)
 
