@@ -92,10 +92,10 @@ cases = list(itertools.product(colors, repeat = 4))
 player_views = list(itertools.product(colors, repeat = 2))
 
 def evaluate_round(case, strategies):
-  P1_pred = strategies[0][(current_case[1], case[3])] == case[0]
-  P2_pred = strategies[1][(current_case[0], case[2])] == case[1]
-  P3_pred = strategies[2][(current_case[1], case[3])] == case[2]
-  P4_pred = strategies[3][(current_case[0], case[2])] == case[3]
+  P1_pred = strategies[0][(case[1], case[3])] == case[0]
+  P2_pred = strategies[1][(case[0], case[2])] == case[1]
+  P3_pred = strategies[2][(case[1], case[3])] == case[2]
+  P4_pred = strategies[3][(case[0], case[2])] == case[3]
 
   return (1 if any([P1_pred, P2_pred, P3_pred, P4_pred]) else 0)
 
