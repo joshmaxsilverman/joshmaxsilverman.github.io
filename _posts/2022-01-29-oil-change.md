@@ -31,7 +31,12 @@ Each month, a new quart is injected, so $O_0(t) = \dfrac{1}{12}.$
 
 As time goes by, 1 month olds emerge, then 2 months old, and so on until, finally, we see 11 month olds. Because all molecules age from the freshly injected molecules, once $m$ months have gone by, the fraction of $m$-month olds becomes a constant:
 
-$$ O_m = \dfrac{11^m}{12^m}O_0 = \dfrac{11^m}{12^{m+1}} $$
+$$ 
+\begin{align}
+O_m &= \dfrac{11^m}{12^m}O_0 \\
+&= \dfrac{11^m}{12^{m+1}} 
+\end{align}
+$$
 
 After $m = 12$ months, we have an all ages event, and the population becomes fixed (no more $t$ dependence), and we can solve
 
