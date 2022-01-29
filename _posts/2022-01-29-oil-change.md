@@ -21,23 +21,23 @@ At the end of each month, each molecule has a birthday and a quart is drained fr
 
 From moment $t$ to $(t+1),$ the fractional composition of the tank changes like
 
-$$O_m(t+1) = (1 - \frac{1}{12})O_{m-1}(t)$$ 
+$$O_m(t+1) = \left(1 - \frac{1}{12}\right)O_{m-1}(t)$$ 
 
 for all ages from $m=1$ to $11$ months, and the old molecules accumulate like 
 
 $$ O_\text{old}(t+1) = \left(1-\frac{1}{12}\right)\left(O_{11}(t) + O_\text{old}(t)\right). $$
 
-After the first step, $O_0(t) = \frac{1}{12}.$
+Each month, a new quart is injected, so $O_0(t) = \dfrac{1}{12}.$
 
 As time goes by, 1 month olds emerge, then 2 months old, and so on until, finally, we see 11 month olds. Because all molecules age from the freshly injected molecules, once $m$ months have gone by, the fraction of $m$-month olds becomes a constant:
 
-$$ O_m = \frac{11^m}{12^m}O_0 = \frac{11^m}{12^{m+1}} $$
+$$ O_m = \dfrac{11^m}{12^m}O_0 = \dfrac{11^m}{12^{m+1}} $$
 
 After $m = 12$ months, we have an all ages event, and the population becomes fixed (no more $t$ dependence), and we can solve
 
-$$ O_\text{old} = \frac{11}{12}\left(O_{11} + O_\text{old}\right) $$
+$$ O_\text{old} = \dfrac{11}{12}\left(O_{11} + O_\text{old}\right) $$
 
-to find $O_\text{old} = \frac{11^{12}}{12^{12}} \approx 0.35199562801.$
+to find $O_\text{old} = 11^{12}/12^{12} \approx 0.35199562801.$
 
 
 
