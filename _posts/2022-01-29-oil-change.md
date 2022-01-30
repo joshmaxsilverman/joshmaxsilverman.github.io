@@ -21,8 +21,6 @@ date: 2022/01/29
 
 Oil molecules age by one month, every month — anything 11 months old or younger is still "good", while everything 12 months and up is "old". 
 
-<!-- We can use thirteen variables $\{O_0, \ldots, O_{11}, O_\text{old}$ to track the composition of the tank, one for each viable month and a bucket for all the bad stuff.  -->
-
 ### Population dynamics
 
 At the end of each month, each molecule has a birthday and a quart is drained from the tank, which affects all molecules equally.
@@ -55,31 +53,5 @@ $$ O_\text{old} = \dfrac{11}{12}\left(O_{11} + O_\text{old}\right) $$
 to find $O_\text{old} = 11^{12}/12^{12} \approx 0.35199562801.$
 
 ![](/img/2022-01-29-oil-change.gif){:width="400px" class="image-centered"}
-
-
-
-<!-- $$
-O_0 \overbrace{\longrightarrow}^{(1-\frac{1}{12})} O_1 \overbrace{\longrightarrow}^{(1-\frac{1}{12})} O_2 \overbrace{\longrightarrow}^{(1-\frac{1}{12})} \ldots 
-$$
-
-Putting this together, we get 
-
-$$
-\begin{align}
-O_1(t+1) &= \left(1-\frac{1}{12}\right) O_0(t) \\
-O_2(t+1) &= \left(1-\frac{1}{12}\right) O_1(t) \\
-&\vdots \\
-O_{11}(t+1) &= \left(1-\frac{1}{12}\right) O_{10}(t) \\
-O_\text{old}(t+1) &= \left(1-\frac{1}{12}\right) (O_{11}(t) + O_\text{old}(t)
-$$ -->
-
-
-
-
-
-
-
-
-
 
 <br>
