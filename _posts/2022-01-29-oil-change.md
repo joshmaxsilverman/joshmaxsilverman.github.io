@@ -3,7 +3,7 @@ layout: post
 published: True
 title: Calendrical Oil Change
 subtitle: How fresh is the oil in your jalopy if you only change a quart per month?
-tags: probability equilibrium 
+tags: probability steady-state 
 date: 2022/01/29
 ---
 
