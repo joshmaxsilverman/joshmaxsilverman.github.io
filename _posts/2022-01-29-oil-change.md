@@ -54,7 +54,7 @@ $$ O_\text{old} = \dfrac{11}{12}\left(O_{11} + O_\text{old}\right) $$
 
 to find $O_\text{old} = 11^{12}/12^{12} \approx 0.35199562801.$
 
-![](/img/2022-01-29-oil-chnge.gif){:width="400px" class="image-centered"}
+![](/img/2022-01-29-oil-change.gif){:width="400px" class="image-centered"}
 
 
 
