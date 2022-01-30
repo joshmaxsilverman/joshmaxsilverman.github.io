@@ -1,6 +1,6 @@
 ---
 layout: post
-published: False
+published: True
 title: Calendrical Oil Change
 subtitle: How fresh is the oil in your jalopy if you only change a quart per month?
 date: 2022/01/29
@@ -18,13 +18,15 @@ date: 2022/01/29
 
 ## Solution
 
-Oil molecules age by one month, every month — anything 11 months old or younger is still "good", while everything 12 months and up is "bad". 
+Oil molecules age by one month, every month — anything 11 months old or younger is still "good", while everything 12 months and up is "old". 
 
 <!-- We can use thirteen variables $\{O_0, \ldots, O_{11}, O_\text{old}$ to track the composition of the tank, one for each viable month and a bucket for all the bad stuff.  -->
 
+### Population dynamics
+
 At the end of each month, each molecule has a birthday and a quart is drained from the tank, which affects all molecules equally.
 
-From moment $t$ to $(t+1),$ the fractional composition of the tank changes like
+From time $t$ to $(t+1),$ the fractional composition of the tank changes like
 
 $$O_m(t+1) = \left(1 - \frac{1}{12}\right)O_{m-1}(t)$$ 
 
@@ -34,7 +36,9 @@ $$ O_\text{old}(t+1) = \left(1-\frac{1}{12}\right)\left(O_{11}(t) + O_\text{old}
 
 Each month, a new quart is injected, so $O_0(t) = \dfrac{1}{12}.$
 
-As time goes by, 1 month olds emerge, then 2 months old, and so on until, finally, we see 11 month olds. Because all molecules age from the freshly injected molecules, once $m$ months have gone by, the fraction of $m$-month olds becomes a constant:
+### Old and here to stay
+
+As time goes by, $1$ month olds emerge, then $2$ month olds, and so on until, finally, we see $11$ month olds. Because all molecules age from the freshly injected molecules, once $m$ months have gone by, the fraction of $m$-month olds becomes a constant:
 
 $$ 
 \begin{align}
