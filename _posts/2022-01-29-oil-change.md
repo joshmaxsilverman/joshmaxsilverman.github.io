@@ -7,6 +7,8 @@ tags: probability steady-state
 date: 2022/01/29
 ---
 
+Hello
+
 >**Question:** You want to change the transmission fluid in your old van, which holds 12 quarts of fluid. At the moment, all 12 quarts are “old.” But changing all 12 quarts at once carries a risk of transmission failure.
 >
 >Instead, you decide to replace the fluid a little bit at a time. Each month, you remove one quart of old fluid, add one quart of fresh fluid and then drive the van to thoroughly mix up the fluid. (I have no idea if this is mechanically sound, but I’ll take Travis’s word on this!) Unfortunately, after precisely one year of use, what was once fresh transmission fluid officially turns “old.”
