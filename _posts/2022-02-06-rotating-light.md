@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: Rotating Light
 date: 2022/02/06
 ---
@@ -27,26 +27,56 @@ When the beam passes through a polarized filter, the component that's perpendicu
 
 So, at each filter, we need to rotate the polarization state into the basis of the filter and then extinguish the "horizontal" component in that basis. 
 
-If the first filter makes an angle $\Delta\theta_1$ with the vertical, then
+If the first filter makes an angle $\theta_1$ with the vertical, then the state becomes
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \left(\begin{array}\ \cos\Delta\theta_1 & \sin\Delta\theta_1 \\ -\sin\Delta\theta_1 & \cos\Delta\theta_1\end{array}\right)\lvert\gamma\rangle,
+\lvert\gamma^\prime\rangle &= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\lvert\gamma\rangle,
 \end{align}
 $$
 
 or, resolving to components, 
 
-$$ \lvert\gamma\rangle = \lvert\uparrow\rangle \longrightarrow \sin\Delta\theta_1\lvert\rightarrow^\prime\rangle + \cos\Delta\theta_1\lvert\uparrow^\prime\rangle. $$
+$$ \lvert\gamma\rangle \longrightarrow \sin\theta_1\lvert\rightarrow^\prime\rangle + \cos\theta_1\lvert\uparrow^\prime\rangle. $$
 
 The physical probability of a photon in the beam being in either polarization state is the **magnitude** of the component in that direction. 
 
-So, the probability of a photon passing the first filter is just $ \lvert\langle\uparrow^\prime\rvert\gamma^\prime\rangle\rvert^2 = \cos^2\Delta\theta_1.$
+So, the probability of a photon passing the first filter is just $ \lvert\langle\uparrow^\prime\rvert\gamma^\prime\rangle\rvert^2 = \cos^2\theta_1.$
+
+However, there is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall transmission probability from the first filter is 
+
+$$ P(\text{transmit}) = f\cos^2\theta_1 $$
+
+### A filter train
 
 After a series of $n$ filters, the state of the beam will be
 
-$$ \lvert\gamma\rangle_\text{final} = \product_{i=1}^n \cos\Delta\theta_i \lvert\uparrow^n\rangle. $$
+$$ \lvert\gamma\rangle_\text{final} = f^n \prod_{i=1}^n \cos^2\theta_i \lvert\uparrow^n\rangle. $$
 
-After the last filter, we want all of the light to be horizontally polarized, so $\lvert\uparrow^n\rangle$ is just the horizontal polarization state $\lvert\rightarrow\rangle.$
+After the last filter, we want all of the light to be horizontally polarized. This means $\lvert\uparrow^n\rangle$ is just the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
+
+$$ \sum_i \theta_i = \frac{\pi}{2}. $$
+
+### Best angles
+
+Keeping $n$ fixed, we can think about the angular piece. We want the product of $\cos^2\theta_i$s to be as big as possible.
+
+To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to $x.$ 
+
+Because $\cos$ always slopes downward, any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ small would be outweighed by the larger decrease from increasing $\theta_2.$ 
+
+The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
+
+### Maximize transmission
+
+After all that, we know that maximal transmission through $n$ filters is achieved by making all the rotations equal, and so
+
+$$ P(\text{transmission}\rvert $n$\ \text{filters} = f^n \cos^{2n}\frac{\pi}{2n} $$.
+
+Setting the derivative equal to zero, we get
+
+
+
+
 
 <br>
