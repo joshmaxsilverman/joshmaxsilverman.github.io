@@ -23,7 +23,9 @@ $$ \lvert\gamma\rangle = \alpha\lvert\rightarrow\rangle + \beta\lvert\uparrow\ra
 
 When the photon passes through a polarized filter, the component that's perpendicular to the polarizer is extinguished.  
 
-So, at each filter, we need to rotate the photon into the basis of the filter and then extinguish the "horizontal" component in that basis. E.g. the state of the photon becomes
+So, at each filter, we need to rotate the photon into the basis of the filter and then extinguish the "horizontal" component in that basis. 
+
+Putting this into transformations, the state of the photon becomes
 
 $$
 \begin{align}
@@ -32,7 +34,7 @@ $$
 \end{align}
 $$
 
-In other words, 
+Or, resolving to components, 
 
 $$ \lvert\gamma\rangle = \alpha\lvert\rightarrow\rangle + \beta\lvert\uparrow\rangle \longrightarrow \betacos\Delta\theta_i \lvert\gamma\rangle. $$
 
