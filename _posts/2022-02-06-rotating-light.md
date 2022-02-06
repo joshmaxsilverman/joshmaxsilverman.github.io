@@ -31,7 +31,7 @@ If the first filter makes an angle $\Delta\theta_1$ with the vertical, then
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \left(\begin{array}\\cos\Delta\theta_1 & \sin\Delta\theta_1 \\ -\sin\Delta\theta_1 & \cos\Delta\theta_1\end{array}\right)\lvert\gamma\rangle,
+\lvert\gamma^\prime\rangle &= \left(\begin{array}\ \cos\Delta\theta_1 & \sin\Delta\theta_1 \\ -\sin\Delta\theta_1 & \cos\Delta\theta_1\end{array}\right)\lvert\gamma\rangle,
 \end{align}
 $$
 
