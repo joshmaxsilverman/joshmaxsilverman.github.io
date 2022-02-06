@@ -19,6 +19,6 @@ The magic of the problem is this: one horizontal polarizer would block all the l
 
 The polarization state of a photon is a vector we can look at from any perspective we like. To start, we can think of it in a basis of up and down, e.g. $\ket{\gamma} = \alpha\ket{\uparrow} + \beta\ket{\downarrow}.$ 
 
-When the photon passes through a polarizer, the component that's perpendicular to the polarizer is extinguished. 
+When the photon passes through a polarizer, the component that's perpendicular to the polarizer is extinguished.  
 
 <br>
