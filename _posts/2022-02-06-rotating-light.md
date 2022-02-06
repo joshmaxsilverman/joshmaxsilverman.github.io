@@ -19,8 +19,12 @@ The magic of the problem is this: one horizontal polarizer would block all the l
 
 The polarization state of a photon is a vector we can look at from any perspective we like. To start, we can think of it in a basis of up and down, e.g. 
 
-$\lvert\gamma\rangle = \lvert\uparrow\rangle + \lvert\downarrow\rangle.$ 
+$$ \lvert\gamma\rangle = \alpha\lvert\uparrow\rangle + \beta\lvert\downarrow\rangle. $$ 
 
-When the photon passes through a polarizer, the component that's perpendicular to the polarizer is extinguished.  
+When the photon passes through a polarized filter, the component that's perpendicular to the polarizer is extinguished.  
+
+So, at each filter, we need to rotate the photon into the basis of the filter and then extinguish the "horizontal" component in that basis. E.g. the state of the photon becomes
+
+$$ \ket{\gamma^\prime} = \left(\begin{array}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta\end{array}\right) \cdot \left(\begin{array}0 & 0 \\ 0 & 1\end{array}\right)\ket{\gamma} $$
 
 <br>
