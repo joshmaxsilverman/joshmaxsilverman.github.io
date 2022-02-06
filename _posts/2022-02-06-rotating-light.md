@@ -27,7 +27,7 @@ So, at each filter, we need to rotate the photon into the basis of the filter an
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \left(\begin{array}\cos\Delta\theta_i & \sin\Delta\theta_i \\ -\sin\Delta\theta_i & \cos\Delta\theta_i\end{array}\right) \cdot \left(\begin{array} 0 & 0 \\ 0 & 1\end{array}\right)\lvert\gamma\rangle \\
+\lvert\gamma^\prime\rangle &= \left(\begin{array}\\cos\Delta\theta_i & \sin\Delta\theta_i \\ -\sin\Delta\theta_i & \cos\Delta\theta_i\end{array}\right) \cdot \left(\begin{array}\ 0 & 0 \\ 0 & 1\end{array}\right)\lvert\gamma\rangle \\
 &= \left(\begin{array} 0 & 0 \\ 0 & \cos\Delta\theta_i\end{array}\right)\lvert\gamma\rangle
 \end{align}
 $$
