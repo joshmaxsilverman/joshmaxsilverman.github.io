@@ -5,7 +5,7 @@ title: Rotating Light
 date: 2022/02/06
 ---
 
->**Question:**jjj
+>**Question:** jjj
 
 <!--more-->
 
