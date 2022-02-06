@@ -17,9 +17,9 @@ The magic of the problem is this: one horizontal polarizer would block all the l
 
 ### One polarizer
 
-The polarization state of a photon is a vector we can look at from any perspective we like. For example, we can think of an arbitrary photon in the basis of vertical and horizontal polarization, e.g. 
+The polarization state of a photon is a vector we can look at from any perspective we like. For example, we can think of an arbitrary photon in the basis of horizontal and vertical polarization, e.g. 
 
-$$ \lvert\gamma\rangle = \alpha\lvert\uparrow\rangle + \beta\lvert\downarrow\rangle. $$ 
+$$ \lvert\gamma\rangle = \alpha\lvert\rightarrow\rangle + \beta\lvert\uparrow\rangle. $$ 
 
 When the photon passes through a polarized filter, the component that's perpendicular to the polarizer is extinguished.  
 
