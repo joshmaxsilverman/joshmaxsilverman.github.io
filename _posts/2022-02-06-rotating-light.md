@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Rotating Light
-date: 2022/02/06
+date: 2022-02-06
 ---
 
 >**Question:**
