@@ -25,6 +25,6 @@ When the photon passes through a polarized filter, the component that's perpendi
 
 So, at each filter, we need to rotate the photon into the basis of the filter and then extinguish the "horizontal" component in that basis. E.g. the state of the photon becomes
 
-$$ \ket{\gamma^\prime} = \left(\begin{array}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta\end{array}\right) \cdot \left(\begin{array}0 & 0 \\ 0 & 1\end{array}\right)\ket{\gamma} $$
+$$ \lvert\gamma^\prime\rangle = \left(\begin{array}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta\end{array}\right) \cdot \left(\begin{array} 0 & 0 \\ 0 & 1\end{array}\right)\lvert\gamma\rangle $$
 
 <br>
