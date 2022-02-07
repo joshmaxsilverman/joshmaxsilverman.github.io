@@ -5,11 +5,20 @@ title: Rotating Light
 date: 2022/02/06
 ---
 
->**Question:** jjj
+>**Question:** I have a light source that’s polarized in the vertical direction, but I want it to be polarized in the horizontal direction. To make that happen I need … polarizers! When light passes through a polarizer, only the light whose polarization aligns with the polarizer passes through. When they aren’t perfectly aligned, only the component of the light that’s in the direction of the polarizer passes through.
+>
+>Unfortunately, that means I can’t turn vertically polarized light into horizontally polarized light with a single polarizer. But I can do it with two polarizers, as shown below.
+>
+>A vector is vertical. Its component along a 45 degree angle is shown. That second vector's component along another 45 degree angle is also shown. The final vector has half the length of the original.
+If the first polarizer is positioned at an acute angle with respect to the light, and then the second polarizer is positioned at a complementary angle with respect to the first polarizer, some light will be horizontally polarized in the end.
+>
+>Now, I have tons of polarizers, and each one also reflects 1 percent of any light that hits it — no matter its polarization or orientation — while polarizing the remaining 99 percent of the light.
+>
+>I’m interested in horizontally polarizing as much of the incoming light as possible. How many polarizers should I use?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/a-riddle-that-will-make-you-scream/))
 
 ## Solution
 
