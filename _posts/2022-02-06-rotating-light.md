@@ -27,7 +27,7 @@ When the beam passes through a polarized filter, the component that's perpendicu
 
 So, at each filter, we need to rotate the polarization state into the basis of the filter and then extinguish the "horizontal" component in that basis. 
 
-If the first filter makes an angle $\theta_1$ with the vertical, then the state becomes
+If the first filter makes an angle $\theta_1$ with the vertical then, in the new basis, the state becomes
 
 $$
 \begin{align}
@@ -35,7 +35,7 @@ $$
 \end{align}
 $$
 
-or, resolving to components, 
+or, resolving to components in the new basis, 
 
 $$ \lvert\gamma\rangle \longrightarrow \sin\theta_1\lvert\rightarrow^\prime\rangle + \cos\theta_1\lvert\uparrow^\prime\rangle. $$
 
@@ -53,7 +53,7 @@ After a series of $n$ filters, the state of the beam will be
 
 $$ P(\text{transmission}) = f^n \prod_{i=1}^n \cos^2\theta_i. $$
 
-After the last filter, we want all of the light to be horizontally polarized. This means $\lvert\uparrow^n\rangle$ is just the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
+After the last filter, we want all of the light to be horizontally polarized. This means that the final polarization $\lvert\uparrow^n\rangle$ is the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
 
 $$ \sum_i \theta_i = \frac{\pi}{2}. $$
 
@@ -63,7 +63,7 @@ Keeping $n$ fixed, we can think about the angular piece on its own. We want the 
 
 To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to some value $x.$ 
 
-Because $\cos\theta$ always slopes downward on $\left[0,\frac{pi}{2}\right],$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
+Because $\cos\theta$ always slopes downward on $\left[0,\frac{\pi}{2}\right],$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
 
 The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should make them equal. All all $n$ angles, this argument extends, and it turns out we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
 
