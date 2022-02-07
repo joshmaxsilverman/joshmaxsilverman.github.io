@@ -78,7 +78,4 @@ Plotting this probability, we we see that it maxes out at $n=16$ where $P(\text{
 ![](/img/2022-02-06-rotating-light.JPG){:width="450 px" class="image-centered"}
 
 
-
-
-
 <br>
