@@ -59,13 +59,13 @@ $$ \sum_i \theta_i = \frac{\pi}{2}. $$
 
 ### Best angles
 
-Keeping $n$ fixed, we can think about the angular piece. We want the product of $\cos^2\theta_i$s to be as big as possible.
+Keeping $n$ fixed, we can think about the angular piece on its own. We want the product of the $\cos^2\theta_i$s to be as big as possible.
 
-To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to $x.$ 
+To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to some value $x.$ 
 
-Because $\cos$ always slopes downward, any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ small would be outweighed by the larger decrease from increasing $\theta_2.$ 
+Because $\cos\theta$ always slopes downward on $\left[0,\frac{pi}{2}\right],$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
 
-The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
+The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should make them equal. All all $n$ angles, this argument extends, and it turns out we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
 
 ### Maximize transmission
 
@@ -73,7 +73,7 @@ After all that, we know that maximal transmission through $n$ filters is achieve
 
 $$ P(\text{transmission}\rvert $n$\ \text{filters} = f^n \cos^{2n}\frac{\pi}{2n} $$.
 
-Plotting the probability, we we see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
+Plotting this probability, we we see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
 
 ![](/img/2022-02-06-rotating-light.jpg){:width="450 px" class="image-centered"}
 
