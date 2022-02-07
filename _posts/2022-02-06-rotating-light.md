@@ -28,7 +28,7 @@ The magic of the problem is this: one horizontal polarizer would block all the l
 
 ### One polarizer
 
-The polarization of a beam photon is a vector we can look at from any perspective we like. 
+The polarization of a photon is a vector we can look at from any perspective we like. 
 
 For example, in the basis of horizontal and vertical polarization, the incoming vertically polarized beam looks like
 
