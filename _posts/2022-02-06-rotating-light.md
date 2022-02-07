@@ -82,7 +82,7 @@ The upshot is that we want to keep $\theta_1$ as small as possible without makin
 
 After all that, we know that maximal transmission through $n$ filters is achieved by making all the rotations equal, and so
 
-$$ P(\text{transmission}\rvert n\ \text{filters} = f^n \cos^{2n}\frac{\pi}{2n} $$.
+$$ P(\text{transmission}\rvert n\ \text{filters}) = f^n \cos^{2n}\frac{\pi}{2n} $$.
 
 Plotting this probability, we can see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
 
