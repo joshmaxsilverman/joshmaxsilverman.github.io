@@ -74,7 +74,7 @@ Keeping $n$ fixed, we can think about the angular piece on its own. We want the 
 
 To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to some value $x.$ 
 
-Because $\cos\theta$ always slopes downward on $\left[0,\frac{\pi}{2}\right],$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
+Because $\cos\theta$ always slopes downward on $\left[0,\frac{\pi}{2}\right),$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
 
 The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should make them equal. All all $n$ angles, this argument extends, and it turns out we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
 
