@@ -56,11 +56,11 @@ So, the probability of a photon passing the first filter is just the square of t
 
 However, there is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall probability of transmission through the first filter is 
 
-$$ P(\text{transmit}) = f\cos^2\theta_1 $$
+$$ P(\text{transmit}) = f\cos^2\theta_1. $$
 
 ### A filter train
 
-After a series of $n$ filters, the state of the beam will be
+After a series of $n$ filters, the strength of the beam will be
 
 $$ P(\text{transmission}) = f^n \prod_{i=1}^n \cos^2\theta_i. $$
 
