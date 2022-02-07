@@ -51,7 +51,7 @@ $$ P(\text{transmit}) = f\cos^2\theta_1 $$
 
 After a series of $n$ filters, the state of the beam will be
 
-$$ \lvert\gamma\rangle_\text{final} = f^n \prod_{i=1}^n \cos^2\theta_i \lvert\uparrow^n\rangle. $$
+$$ P(\text{transmission}) = f^n \prod_{i=1}^n \cos^2\theta_i. $$
 
 After the last filter, we want all of the light to be horizontally polarized. This means $\lvert\uparrow^n\rangle$ is just the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
 
@@ -73,9 +73,9 @@ After all that, we know that maximal transmission through $n$ filters is achieve
 
 $$ P(\text{transmission}\rvert $n$\ \text{filters} = f^n \cos^{2n}\frac{\pi}{2n} $$.
 
-Plotting the probability, we we see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^16 \left(\cos\frac{\pi}{32}\right)^32 \approx 0.72959455363.$
+Plotting the probability, we we see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
 
-![](/img/2022-02-06-rotating-light.png){:width="450 px" class="image-centered"}
+![](/img/2022-02-06-rotating-light.jpg){:width="450 px" class="image-centered"}
 
 
 
