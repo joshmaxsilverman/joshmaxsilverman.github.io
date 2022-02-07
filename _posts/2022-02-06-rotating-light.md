@@ -41,9 +41,9 @@ $$ \lvert\gamma\rangle \longrightarrow \sin\theta_1\lvert\rightarrow^\prime\rang
 
 The physical probability of a photon in the beam being in either polarization state is the **magnitude** of the component in that direction. 
 
-So, the probability of a photon passing the first filter is just $ \lvert\langle\uparrow^\prime\rvert\gamma^\prime\rangle\rvert^2 = \cos^2\theta_1.$
+So, the probability of a photon passing the first filter is just the square of the veritcal component, $ \lvert\langle\uparrow^\prime\rvert\gamma^\prime\rangle\rvert^2 = \cos^2\theta_1.$
 
-However, there is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall transmission probability from the first filter is 
+However, there is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall probability of transmission through the first filter is 
 
 $$ P(\text{transmit}) = f\cos^2\theta_1 $$
 
