@@ -28,9 +28,7 @@ The magic of the problem is this: one horizontal polarizer would block all the l
 
 ### One polarizer
 
-The polarization of a photon is a vector we can look at from any perspective we like. 
-
-For example, in the basis of horizontal and vertical polarization, the incoming vertically polarized beam looks like
+The polarization of a photon is a vector we can look at from any perspective we like. For example, in the basis of horizontal and vertical polarization, the incoming vertically polarized beam looks like
 
 $$ \lvert\gamma\rangle = 0\lvert\rightarrow\rangle + 1\lvert\uparrow\rangle. $$ 
 
@@ -38,17 +36,18 @@ When the beam passes through a polarized filter, the component that's perpendicu
 
 So, at each filter, we need to rotate the polarization state into the basis of the filter and then extinguish the "horizontal" component in that basis. 
 
-If the first filter makes an angle $\theta_1$ with the vertical then, in the new basis, the state becomes
+If the first filter makes an angle $\theta_1$ with the vertical then, putting this to transformations, the state becomes
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\lvert\gamma\rangle,
+\lvert\gamma^\prime\rangle &= \mathbf{R}(\theta_1)\mathbf{P}_\parallel \\
+&= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\left(\begin{array}\ 0 & 0 \\ 0 & 1\end{array}\right)\lvert\gamma\rangle,
 \end{align}
 $$
 
 or, resolving to components in the new basis, 
 
-$$ \lvert\gamma\rangle \longrightarrow \sin\theta_1\lvert\rightarrow^\prime\rangle + \cos\theta_1\lvert\uparrow^\prime\rangle. $$
+$$ \lvert\gamma\rangle \longrightarrow \cos\theta_1\lvert\uparrow^\prime\rangle. $$
 
 The physical probability of a photon in the beam being in either polarization state is the **magnitude** of the component in that direction. 
 
