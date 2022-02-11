@@ -32,16 +32,14 @@ The polarization of a photon is a vector we can look at from any perspective we 
 
 $$ \lvert\gamma\rangle = 0\lvert\rightarrow\rangle + 1\lvert\uparrow\rangle. $$ 
 
-When the beam passes through a polarized filter, the component that's perpendicular to the polarizer is extinguished.  
-
 So, at each filter, we need to rotate the polarization state into the basis of the filter and then extinguish the "horizontal" component in that basis. 
 
 If the first filter makes an angle $\theta_1$ with the vertical then, putting this to transformations, the state becomes
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \mathbf{R}(\theta_1)\mathbf{P}_\parallel \\
-&= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\left(\begin{array}\ 0 & 0 \\ 0 & 1\end{array}\right)\lvert\gamma\rangle,
+\lvert\gamma^\prime\rangle &= \mathbf{R}(\theta_1)\mathbf{P}_\parallel \lvert\gamma\rangle \\
+&= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\lvert\gamma\rangle,
 \end{align}
 $$
 
@@ -49,21 +47,21 @@ or, resolving to components in the new basis,
 
 $$ \lvert\gamma\rangle \longrightarrow \cos\theta_1\lvert\uparrow^\prime\rangle. $$
 
-The physical probability of a photon in the beam being in either polarization state is the **magnitude** of the component in that direction. 
+The physical probability of a photon in the beam interacting with the filter in either polarization state is the **magnitude** of the component in that direction. If the photon is interacts in the perpendicular state, then it's extinguished from the beam.
 
 So, the probability of a photon passing the first filter is just the square of the veritcal component, $ \lvert\langle\uparrow^\prime\rvert\gamma^\prime\rangle\rvert^2 = \cos^2\theta_1.$
 
-However, there is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall probability of transmission through the first filter is 
+There is also a probability $f = 0.99$ for the photon to be physically reflected off the filter (and lost from the beam). This means that the overall probability of transmission through the first filter is 
 
 $$ P(\text{transmit}) = f\cos^2\theta_1. $$
 
 ### A filter train
 
-After a series of $n$ filters, the strength of the beam will be
+After a series of $n$ filters, the fraction of photons remaining in the beam will be
 
 $$ P(\text{transmission}) = f^n \prod_{i=1}^n \cos^2\theta_i. $$
 
-After the last filter, we want all of the light to be horizontally polarized. This means that the final polarization $\lvert\uparrow^n\rangle$ is the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
+After the last filter, we need all of the light to be horizontally polarized. This means that the final polarization $\lvert\uparrow^n\rangle$ is the horizontal polarization state $\lvert\rightarrow\rangle,$ and we have
 
 $$ \sum_i \theta_i = \frac{\pi}{2}. $$
 
@@ -73,9 +71,9 @@ Keeping $n$ fixed, we can think about the angular piece on its own. We want the 
 
 To get the intuition, think of two angles $\theta_1$ and $\theta_2$ that have to add up to some value $x.$ 
 
-Because $\cos\theta$ always slopes downward on $\left[0,\frac{\pi}{2}\right),$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease from increasing $\theta_2.$ 
+Because $\cos\theta$ always slopes downward on $\left[0,\frac{\pi}{2}\right),$ any decrease in $\cos\theta_1$ that we might avoid by keeping $\theta_1$ smaller than $\theta_2$ will be outweighed by the larger decrease that comes from increasing $\theta_2.$ 
 
-The upshot is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we should make them equal. For $n$ angles, this argument extends, and we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
+The upshot of this is that we want to keep $\theta_1$ as small as possible without making $\theta_2$ bigger than it needs to be. In other words, we need to set them equal. For $n$ angles, this argument extends, and we should divide the overall rotation of $\pi/2$ into $n$ equal rotations of $\pi/(2n).$
 
 ### Maximize transmission
 
@@ -83,7 +81,7 @@ After all that, we know that maximal transmission through $n$ filters is achieve
 
 $$ P(\text{transmission}) = f^n \cos^{2n}\frac{\pi}{2n}. $$
 
-Plotting this probability, we can see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
+All that's left is to find the optimal number of filters, $n.$ Plotting this probability, we can see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
 
 ![](/img/2022-02-06-rotating-light.JPG){:width="450 px" class="image-centered"}
 
