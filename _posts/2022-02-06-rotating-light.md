@@ -38,7 +38,7 @@ If the first filter makes an angle $\theta_1$ with the vertical then, putting th
 
 $$
 \begin{align}
-\lvert\gamma^\prime\rangle &= \mathbf{R}(\theta_1)\mathbf{P}_\parallel \lvert\gamma\rangle \\
+\lvert\gamma^\prime\rangle &= \mathbf{R}(\theta_1) \lvert\gamma\rangle \\
 &= \left(\begin{array}\ \cos\theta_1 & \sin\theta_1 \\ -\sin\theta_1 & \cos\theta_1\end{array}\right)\lvert\gamma\rangle,
 \end{align}
 $$
@@ -81,7 +81,9 @@ After all that, we know that maximal transmission through $n$ filters is achieve
 
 $$ P(\text{transmission}) = f^n \cos^{2n}\frac{\pi}{2n}. $$
 
-All that's left is to find the optimal number of filters, $n.$ Plotting this probability, we can see that it maxes out at $n=16$ where $P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$
+All that's left is to find the optimal number of filters, $n.$ Plotting this probability, we can see that it maxes out at $n=16$ where 
+
+$$P(\text{transmission}) = 0.99^{16} \left(\cos\frac{\pi}{32}\right)^{32} \approx 0.72959455363.$$
 
 ![](/img/2022-02-06-rotating-light.JPG){:width="450 px" class="image-centered"}
 
