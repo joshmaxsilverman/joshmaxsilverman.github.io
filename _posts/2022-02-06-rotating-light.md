@@ -2,7 +2,7 @@
 layout: post
 published: True
 title: Rotating Light
-keywords: superposition quantum concave
+tags: superposition physics concave
 subtitle: How much light can you spin with a series of filters?
 date: 2022/02/06
 ---
