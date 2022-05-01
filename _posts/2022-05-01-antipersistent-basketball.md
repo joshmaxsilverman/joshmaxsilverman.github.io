@@ -25,9 +25,9 @@ first, let's figure out which side has the natural advantage — is it the team 
 
 once either team gets a two basket lead, the game is symmetric. but when the game is close, things get interesting.
 
-after one possession, the nicks can be ahead if they score a basket at even odds, followed by the noughts missing their basket at less than even odds. the noughts can be up after one possession if the nicks miss at even odds, followed by the noughts scoring at even odds. advantage noughts: $\frac12r_{-} < \frac12\times\frac12$
+after one possession, the nicks can be ahead if they score a basket at even odds, followed by the noughts missing their basket at less than even odds. the noughts can be up after one possession if the nicks miss at even odds, followed by the noughts scoring at even odds. advantage noughts: $\text{unlikely}\times\text{even odds} < \text{even odds}\times\text{even odds}.$ $\frac12r_{-} < \frac12\times\frac12$
 
-this advantage is compounded on the next possession. the if the nicks are up 2, the game returns to a tie if the nicks miss at better than even odds, and then the noughts make at better than even odds (since they're underdogs). on the other hand, the noughts lose their lead if the nicks make at better than even odds, followed by the noughts missing at even odds. advantage noughts: $r_{+}\times r_{+} > \frac12 r_{+}.$
+this advantage is compounded on the next possession. the if the nicks are up 2, the game returns to a tie if the nicks miss at better than even odds, and then the noughts make at better than even odds (since they're underdogs). on the other hand, the noughts lose their lead if the nicks make at better than even odds, followed by the noughts missing at even odds. advantage noughts: $\text{likely}\times\text{likely} > \text{even odds}\times\text{likely}.$ $r_{+}\times r_{+} > \frac12 r_{+}.$
 
 all in all, we should expect the team that goes second to win a great fraction of games.
 
