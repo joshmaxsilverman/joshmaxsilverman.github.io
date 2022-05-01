@@ -65,4 +65,18 @@ $$
 
 this symmetry is broken near the origin, which is what gives the problem its structure.
 
+from a tie, we can move to $g = 2$ if the Firsts make their shot, follower by a miss from the advantaged Seconds. because the game is tied when the Firsts shoot, the probability of a make is $\frac12.$ the probability of the Second's miss is $(1-r_+) = r_-.$ so, the overall probability is $\frac12 r_-.$
+
+the game can move back from $g = 2$ to a tie if the disadvantaged Firsts miss followed by a make by the advantaged Seconds. so, the probability is $r_+^2.$
+
+following the same sort of reasoning, the rates to and from $g=-2$ are $\frac12\times\frac12$ and $\frac r_+\times\frac12,$ respectively.
+
+so, in the wings the game looks like:
+
+[drawing of the wings]
+
+and near the origin, the structure of the game is:
+
+[drawing near the origin]
+
 <br>
