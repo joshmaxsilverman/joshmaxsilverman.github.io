@@ -79,4 +79,18 @@ and near the origin, the structure of the game is:
 
 [drawing near the origin]
 
+### The big picture
+
+we can build intuition about the dynamics by inspecting the diagrams. 
+
+because score gaps incentivize the underdog and relax the leader, the game feels pressure to stay near the origin. this tells us that the distribution will have thin tails and, also, that the distribution will eventually become constant in time. 
+
+comparing either side, the wings have identical structure. so, up to an overall constant, we expect the distributions to be the same: $S_- = \text{const.} \times S_+.$
+
+as we move away from the origin the game looks the same, whatever the score — each step sees the same transition rate imbalance, $r_-^2/r_+^2 < 1,$ so we expect the probability to decay like some decreasing function $f(r_-^2/r_+^2).$
+
+
+
+
+
 <br>
