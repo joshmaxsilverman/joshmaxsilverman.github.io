@@ -121,15 +121,26 @@ $$
   \boxed{P(g) = \frac{r_-^2}{r_+^2} P(g-2)}
 $$
 
-which is what we speculated above.
+which is what we intuited above.
 
-this immediately lets us find $S_-.$ since $S_- = P(-2) + P(-4) + \ldots,$
+this immediately gets us $S_-.$ since $S_- = P(-2) + P(-4) + \ldots,$
 
 $$
+  \boxed{
   \begin{align}
   S_- &= P(-2) + P(-4) + P(-6) + \ldots \\ 
-      &= 
+      &= P(-2) + \frac{r_-^2}{r_+^2} P(-2) + \left(\frac{r_-^2}{r_+^2}\right)^2 P(-2) + \ldots \\
+      &= \dfrac{P(-2)}{1-\dfrac{r_-^2}{r_+^2}}
   \end{align}
+  }
 $$
+
+Similarly, 
+
+$$
+  \boxed{S_+ = \dfrac{P(2)}{1-\dfrac{r_-^2}{r_+^2}}.}
+$$
+
+
 
 <br>
