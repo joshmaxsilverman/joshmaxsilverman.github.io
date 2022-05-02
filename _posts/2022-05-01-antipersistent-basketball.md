@@ -1,24 +1,26 @@
 ---
 layout: post
-published: false
+published: true
 title: Antipersistent Basketball
-date: 2018/04/21
+tags: coarse-graining scaling symmetry
+date: 2022/05/01
 ---
 
 >Question
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/who-wins-a-very-boring-basketball-game/))
 
 ## Solution
 
-- intuition for the winner
+<!-- - intuition for the winner
 - the moves // reducing to volleys // master equation
 - big picture // tail intuition // assumptions // symmetries (P2 <> P-2, P2 <> P4)
 - solving the center // symmetry
   - plot theory <> experiment
-
+ -->
+ 
 ### Who is going to win?
 
 first, let's figure out which side has the natural advantage — is it the team that goes first or the one that goes second? 
