@@ -22,6 +22,12 @@ date: 2022/05/01
   - plot theory <> experiment
  -->
  
+2022-05-01-Splus-plot.JPG
+2022-05-01-lattice-wing.jpg
+2022-05-01-lattice-origin.jpg
+2022-05-01-pdf-0-15.JPG
+2022-05-01-lattice-blank.jpg
+ 
 ### Who is going to win?
 
 first, let's figure out which side has the natural advantage — is it the team that goes first or the one that goes second? 
