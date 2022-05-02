@@ -115,13 +115,13 @@ $$
 we can factor this using a shift operator $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+1)$) it becomes
 
 $$
-  0 = \left(\mathbb{E}_g-1\right)\left(r_-^2P(g) - r_+^2P(g-1)\right)
+  0 = \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right]
 $$
 
 or
 
 $$
-  \boxed{P(g) = \frac{r_-^2}{r_+^2} P(g-2)}
+  \boxed{P(g) = \left(\frac{r_-}{r_+}\right)^2 P(g-2)}
 $$
 
 which is what we intuited above.
@@ -140,7 +140,7 @@ $$
 similarly, 
 
 $$
-  \boxed{S_+ = \dfrac{P(2)}{1-\dfrac{r_-^2}{r_+^2}}.}
+  \boxed{S_+ = \dfrac{P(2)}{1-r_-^2/r_+^2}.}
 $$
 
 now we can analyze $P(-2).$ following the diagram, the change in $P(-2)$ from one moment to the next is
