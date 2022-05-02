@@ -97,7 +97,7 @@ with these insights on the table, we can analyze the equations for concrete resu
 if the probability of a score gap of $g$ after round $(t-1)$ is $P_{t-1}(g),$ its change after another round is
 
 $$
-  \Delta P(g) = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
+  \Delta = P(g+2)_{t-1}r_-^2 + P(g-2)_{t-1}r_+^2 - (r_+^2 + r_-^2)P_{t-1}(g)
 $$
 
 we argued above that the games become constant in time. applying the equilibrium condition gets:
@@ -112,10 +112,10 @@ $$
   0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
 $$
 
-factoring, using a shift operator $\mathbb{E}_g,$ it becomes
+we can factor this using a shift operator $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+1)$) it becomes
 
 $$
-  0 = \left(\mathbb{E}_g-1\right)\left(r_-^2P(g) - r_+^2P(g-2)\right)
+  0 = \left(\mathbb{E}_g-1\right)\left(r_-^2P(g) - r_+^2P(g-1)\right)
 $$
 
 or
@@ -131,8 +131,7 @@ this immediately gets us $S_-.$ since $S_- = P(-2) + P(-4) + \ldots,$
 $$
   \boxed{
   \begin{align}
-  S_- &= P(-2) + P(-4) + P(-6) + \ldots \\ 
-      &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
+  S_- &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
       &= \dfrac{P(-2)}{1-r_-^2/r_+^2}
   \end{align}
   }
@@ -148,7 +147,7 @@ now we can analyze $P(-2).$ following the diagram, the change in $P(-2)$ from on
 
 $$
   \begin{align}
-  \Delta P(-2) &= \frac14 P(0) + r_+^2 P(-4) - \left(\frac12 r_+ + r_-^2\right)P(-2) \\
+  \Delta &= \frac14 P(0) + r_+^2 P(-4) - \left(\frac12 r_+ + r_-^2\right)P(-2) \\
   &= 0
   \end{align}
 $$
