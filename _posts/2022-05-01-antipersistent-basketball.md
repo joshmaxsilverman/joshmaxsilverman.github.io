@@ -23,10 +23,7 @@ date: 2022/05/01
  -->
  
 2022-05-01-Splus-plot.JPG
-2022-05-01-lattice-wing.jpg
-2022-05-01-lattice-origin.jpg
 2022-05-01-pdf-0-15.JPG
-2022-05-01-lattice-blank.jpg
  
 ### Who is going to win?
 
@@ -46,7 +43,7 @@ the game alternates turns between the Firsts and the Seconds. on first read, it 
 
 this gives us a board like:
 
-[drawing of a board with no rates]
+![](/img/2022-05-01-lattice-blank.jpg){:width="450 px" class="image-centered"}
 
 the probability of a tie is equal to $P(\text{tie}).$ the first player wins if the game ends anywhere to the right of the origin, so the probability that the first player wins is equal to 
 
@@ -82,11 +79,13 @@ following the same sort of reasoning, the rates to and from $g=-2$ are $\frac12\
 
 so, in the wings the game looks like:
 
-[drawing of the wings]
+![](/img/2022-05-01-lattice-wing.jpg){:width="450 px" class="image-centered"}
+
 
 and near the origin, the structure of the game is:
 
-[drawing near the origin]
+![](/img/2022-05-01-lattice-origin.jpg){:width="450 px" class="image-centered"}
+
 
 ### The big picture
 
