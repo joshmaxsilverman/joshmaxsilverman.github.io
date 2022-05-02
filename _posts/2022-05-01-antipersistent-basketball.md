@@ -141,6 +141,13 @@ $$
   \boxed{S_+ = \dfrac{P(2)}{1-\dfrac{r_-^2}{r_+^2}}.}
 $$
 
+now we can analyze $P(-2).$ following the diagram, the change in $P(-2)$ from one moment to the next is
 
+$$
+  \begin{align}
+  \Delta P(-2) &= \frac14 P(0) + r_+^2 P(-4) - \left(\frac12 r_+ + r_-^2\right)P(-2) \\
+  &= 0
+  \end{align}
+$$
 
 <br>
