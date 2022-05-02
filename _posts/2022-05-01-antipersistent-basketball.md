@@ -176,7 +176,7 @@ $$
   \begin{align}
     1 &= P_0 + S_- + S_+ \\
       &= P_0 + \dfrac{P(-2)}{1 - \left(r_-/r_+\right)^2} + \dfrac{P(2)}{1 - \left(r_-/r_+\right)^2} \\
-      &= P_0\left(1 + \dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + \dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2}\right)P(0) \\
+      &= P_0\left(1 + \dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + \dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2}\right) \\
       &= P_0\left(1 + \frac12 \dfrac{r_+ + r_-}{r_+^2 - r_-^2}\right) \\
       &= P_0\left(1 + \frac12 \dfrac{1}{r_+ - r_-}\right)
   \end{align}
@@ -197,12 +197,12 @@ $$
     S_- &= P(-2)\frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac{P(0)}{2r_+} \frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac12 P(0)\frac{r_+}{r_+ - r_-} \\
-        &= \frac{4x}{1+4x}\frac12 \frac{\frac12 + x}{2x} \\
+        &= \frac12\frac{4x}{1+4x}\frac{\frac12 + x}{2x} \\
         &= \frac{1 + 2x}{2 + 8x}.
   \end{align}
 $$
 
-the same calculation for $S_+$ gets $(1-2x)/(2 + 8x).$
+the same calculation for $S_+$ gets $\frac{1-2x}{2 + 8x}.$
 
 this result makes sense — when $x=0,$ there is no built in advantage to going first, and the game has even odds. likewise, when $x=\frac12,$ every point scored by the Firsts is matched by the Seconds, so the Firsts can never have a lead, they can only tie.
 
