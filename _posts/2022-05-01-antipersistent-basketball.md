@@ -170,13 +170,13 @@ $$
   \boxed{P(2) = \dfrac{r_-}{2r_+^2} P(0)}.
 $$
 
-now, we can solve for $P(0).$ 
+now we can solve for $P(0):$ 
 
 $$
   \begin{align}
     1 &= P_0 + S_- + S_+ \\
       &= P_0 + \dfrac{P(-2)}{1 - \left(r_-/r_+\right)^2} + \dfrac{P(2)}{1 - \left(r_-/r_+\right)^2} \\
-      &= P_0 + P(0)\dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + P(0)\dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2} \\
+      &= P_0\left(1 + \dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + \dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2}\right)P(0) \\
       &= P_0\left(1 + \frac12 \dfrac{r_+ + r_-}{r_+^2 - r_-^2}\right) \\
       &= P_0\left(1 + \frac12 \dfrac{1}{r_+ - r_-}\right)
   \end{align}
