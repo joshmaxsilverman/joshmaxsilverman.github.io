@@ -97,12 +97,32 @@ $$
   \Delta P(g) = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-we argued above that the games become constant in time. applying the equilibrium condition, we get:
+we argued above that the games become constant in time. applying the equilibrium condition gets:
 
 $$
   0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-at the end of the chain ($g=-100$), there is no left hand neighbor since no game can develop a $101$ point gap in $100$ rounds. this means that the terms $r_-^2P(g)$ and $P(g-2)r_+^2$ become zero, and 
+this two-step recursion is really a one step recursion in disguise. we can see that from the slight rearrangement:
+
+$$ 
+  0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
+$$
+
+factoring, using the shift operator $\mathbb{E]_g,$ it becomes
+
+$$
+  0 = \left(\mathbb{E}_g-1\right)\left(r_-^2P(g) - r_+^2P(g-2)\right)
+$$
+
+or
+
+$$
+  \boxed{P(g) = \frac{r_-^2}{r_+^2} P(g-2)}
+$$
+
+which is what we speculated above.
+
+This immediately lets us find $S_-,$
 
 <br>
