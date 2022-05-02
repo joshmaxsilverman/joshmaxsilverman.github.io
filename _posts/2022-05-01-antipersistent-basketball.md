@@ -7,7 +7,13 @@ tags: coarse-graining scaling symmetry
 date: 2022/05/01
 ---
 
->Question
+>**Question:** The New York Nicks are facing off against the Brooklyn Naughts. Throughout the entire game, the two teams alternate possession, starting with the Nicks, until both teams have had exactly 100 possessions. For simplicity, assume that each team scores either 0 points or 2 points with each possession. (So don’t worry about 3-pointers, fouls, etc.)
+>
+>Whenever the game is tied, the team that currently has possession has a 50 percent chance of scoring 2 points. When the game is not tied, the team that is in the lead takes it easy and the team that is behind is more motivated to score. In this case, assume that the team that is behind has a 50+x percent chance of scoring, while the team that is ahead has a 50−x percent chance of scoring. Here, x is a positive number that is greater than 0 and less than 50.
+>
+>In preparation for the game, the official scorekeeper (who knows the value of x) crunched the numbers and realized the game has a 50 percent chance of being tied at the end of regulation.
+>
+>In the event that the game is not tied at the end of regulation, what is the probability that each team wins?
 
 <!--more-->
 
