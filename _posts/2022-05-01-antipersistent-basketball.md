@@ -204,4 +204,8 @@ the same calculation for $S_+$ gets $(1-2x)/(2 + 8x).$
 
 this result makes sense — when $x=0,$ there is no built in advantage to going first, and the game has even odds. likewise, when $x=\frac12,$ every point scored by the Firsts is matched by the Seconds, so the Firsts can never have a lead, they can only tie.
 
+comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3$ for $x = 1/2.$ 
+
+so, given that the game wasn't a tie, there's a $75%$ chance the Seconds won the game. 
+
 <br>
