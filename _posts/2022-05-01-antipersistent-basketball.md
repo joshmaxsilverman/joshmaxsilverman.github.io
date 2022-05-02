@@ -135,7 +135,7 @@ $$
   }
 $$
 
-Similarly, 
+similarly, 
 
 $$
   \boxed{S_+ = \dfrac{P(2)}{1-\dfrac{r_-^2}{r_+^2}}.}
@@ -149,5 +149,59 @@ $$
   &= 0
   \end{align}
 $$
+
+using the one-step recursion, this becomes
+
+$$ 
+  \boxed{P(-2) = \dfrac{P(0)}{2r_+}}
+$$
+
+the same analysis for $P(2)$ gets
+
+$$
+  P(2)\left[1 - r_-^2 -2r_-r_+\right] = \frac12 r_- P(0)
+$$
+
+here we can use the fact that $r_- + r_+ = 1$ to get $r_-^2 + r_+^2 + 2r_-r_+ = 1,$ so that the above becomes 
+
+$$
+  \boxed{P(2) = \dfrac{r_-}{2r_+^2} P(0)}.
+$$
+
+now, we can solve for $P(0).$ 
+
+$$
+  \begin{align}
+    1 &= P_0 + S_- + S_+ \\
+      &= P_0 + \dfrac{P(-2)}{1 - \left(r_-/r_+\right)^2} + \dfrac{P(2)}{1 - \left(r_-/r_+\right)^2} \\
+      &= P_0 + P(0)\dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + P(0)\dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2} \\
+      &= P_0\left(1 + \frac12 \dfrac{r_+ + r_-}{r_+^2 - r_-^2} \\
+      &= P_0\left(1 + \frac12 \dfrac{1}{r_+ - r_-}
+  \end{align}
+$$
+
+or
+
+$$
+  \boxed{P_0 = \dfrac{4x}{1+4x}}
+$$
+
+we're told that $P_0 = \frac12,$ so we must have $4x = 1,$ or $x = \frac14.$
+
+using the relationship between $P(-2)$ and $P(0),$ we get
+
+$$
+  \begin{align}
+    S_- &= P(-2)\frac{r_+^2}{r_+^2 - r_-^2} \\
+        &= \frac{P(0)}{2r_+} \frac{r_+^2}{r_+^2 - r_-^2} \\
+        &= \frac12 P(0)\frac{r_+}{r_+ - r_-} \\
+        &= \dfrac{4x}{1+4x}\frac12 \frac{\frac12 + x}{2x} \\
+        &= \dfrac{1 + 2x}{2 + 8x}.
+  \end{align}
+$$
+
+the same calculation for $S_+$ gets $(1-2x)/(2 + 8x).$
+
+this result makes sense — when $x=0,$ there is no built in advantage to going first, and the game has even odds. likewise, when $x=\frac12,$ every point scored by the Firsts is matched by the Seconds, so the Firsts can never have a lead, they can only tie.
 
 <br>
