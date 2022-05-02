@@ -22,102 +22,107 @@ date: 2022/05/01
   - plot theory <> experiment
  -->
  
-2022-05-01-Splus-plot.JPG
-2022-05-01-pdf-0-15.JPG
- 
 ### Who is going to win?
 
-first, let's figure out which side has the natural advantage — is it the team that goes first or the one that goes second? 
+First, let's figure out which side has the natural advantage — is it the team that goes first or the one that goes second? 
 
-once either team gets a two basket lead, the game is symmetric. but when the game is close, things get interesting.
+Once either team gets a two basket lead, the game's structure is symmetric on either side. But when the game is close, things get interesting.
 
-after one possession, the nicks can be ahead if they score a basket at even odds, followed by the noughts missing their basket at less than even odds. the noughts can be up after one possession if the nicks miss at even odds, followed by the noughts scoring at even odds. advantage noughts: $\text{unlikely}\times\text{even odds} < \text{even odds}\times\text{even odds}.$ $\frac12r_{-} < \frac12\times\frac12$
+After one possession, the Nicks can be ahead if they score a basket (even odds), followed by the Noughts missing their basket (less than even odds). The Noughts can be ahead after one possession if the Nicks miss (even odds), followed by the Noughts scoring (even odds). So, after one possession, the advantage is to the Noughts: 
 
-this advantage is compounded on the next possession. if the nicks are up 2, the game can return to a tie if the nicks miss (better than even odds, since they're ahead), and then the noughts make (better than even odds, since they're underdogs). on the other hand, the noughts lose their lead if the nicks (better than even odds), followed by the noughts missing (even odds). advantage noughts: $\text{likely}\times\text{likely} > \text{even odds}\times\text{likely}.$ $r_{+}\times r_{+} > \frac12 r_{+}.$
+$$
+  \text{unlikely}\times\text{even odds} < \text{even odds}\times\text{even odds}.
+$$
 
-all in all, the team that goes second will win a greater fraction of games.
+This advantage compounds on the next possession. If the Nicks are up by a basket, the game can return to a tie if the Nicks miss (better than even odds, since they're ahead), and then the Noughts make (better than even odds, since they're underdogs). On the other hand, the Noughts can lose their one basket lead if the Nicks make (better than even odds), followed by the Noughts missing (even odds). Once again, the advantage is to the Noughts: 
+
+$$
+  \text{likely}\times\text{likely} > \text{even odds}\times\text{likely}.
+$$
+
+All in all, the team that goes second will win a greater fraction of th game s.
 
 ### The setup
 
-the game alternates turns between the Firsts and the Seconds. on first read, it may seem like we need to model things that way. but it's simpler to zoom out and think about pairs of turns, or "rounds". this way, at the end of each round, the game can move one step to the left, stay put, or move one step to the right. 
+The game alternates turns between the Nicks and the Noughts. On first read, it may seem like we need to model things that way. But it's simpler to zoom out and think about pairs of turns, or "rounds". Modeled this way, in each round, the game can move one step to the left, stay put, or move one step to the right. 
 
-this gives us a board like:
+This gives us a board like:
 
-![](/img/2022-05-01-lattice-blank.jpg){:width="450 px" class="image-centered"}
+![](/img/2022-05-01-lattice-blank.jpg){:width="650 px" class="image-centered"}
 
-the probability of a tie is equal to $P(\text{tie}).$ the first player wins if the game ends anywhere to the right of the origin, so the probability that the first player wins is equal to 
-
-$$
-  S_+ = \sum_{n=i}^{100} P(n)
-$$
-
-in the same way, the probability that the second player wins is 
+The probability of a tie is equal to $P(\text{tie}).$ The first player wins if the game ends anywhere to the right of the origin, so the probability that the first player wins is equal to 
 
 $$
-  S_- = \sum_{n=-1}^{-100} P(n)
+  S_+ = \sum_{n=1}^{100} P(n)
 $$
 
-away from the origin, the transition rates are simple. for the game to move away from the origin in a turn, the person with disadvantage has to make their shot followed by a miss from the person with advantage. this has probability 
+In the same way, the probability that the second player ends up winning is 
+
+$$
+  S_- = \sum_{n=-100}^{-1} P(n)
+$$
+
+Away from the origin, the transition rates are simple. For the game to move away from the origin in a turn, the team with disadvantage has to make its shot followed by a miss from the team with advantage. This has probability 
 
 $$ 
   r_-(1-r_+) = r_-^2.
 $$
 
-similarly, for the game to move back toward tied, the person with disadvantage needs to miss their shot, followed by a make from the person with advantage. this has probability
+Similarly, for the game to move back toward being tied, the team with disadvantage needs to miss its shot, followed by a make from the team with advantage. This has probability
 
 $$
   r_+(1-r_-) = r_+^2.
 $$
 
-this symmetry is broken near the origin, which is what gives the problem its structure.
+This symmetry is broken near the origin, which is what gives the problem its structure.
 
-from a tie, we can move to $g = 2$ if the Firsts make their shot, follower by a miss from the advantaged Seconds. because the game is tied when the Firsts shoot, the probability of a make is $\frac12.$ the probability of the Second's miss is $(1-r_+) = r_-.$ so, the overall probability is $\frac12 r_-.$
+Starting from a tie, the game can move to $g = 2$ if the Nicks make their shot, followed by a miss from the advantaged Noughts. Because the game is tied when the Nicks shoot, the probability of a make is $\frac12.$ The probability of the Nought's miss is $(1-r_+) = r_-.$ So, the overall probability is $\frac12 r_-.$
 
-the game can move back from $g = 2$ to a tie if the disadvantaged Firsts miss followed by a make by the advantaged Seconds. so, the probability is $r_+^2.$
+The game can move back from $g = 2$ to a tie if the disadvantaged Nicks miss followed by a make by the advantaged Noughts. So, the probability is $r_+^2.$
 
-following the same sort of reasoning, the rates to and from $g=-2$ are $\frac12\times\frac12$ and $r_+\times\frac12,$ respectively.
+Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\times\frac12$ and $r_+\times\frac12,$ respectively.
 
-so, in the wings the game looks like:
+So, in the wings, the game looks like
 
-![](/img/2022-05-01-lattice-wing.jpg){:width="450 px" class="image-centered"}
+![](/img/2022-05-01-lattice-wing.jpg){:width="650 px" class="image-centered"}
 
 
-and near the origin, the structure of the game is:
+and near the origin, the game looks like
 
-![](/img/2022-05-01-lattice-origin.jpg){:width="450 px" class="image-centered"}
+![](/img/2022-05-01-lattice-origin.jpg){:width="650 px" class="image-centered"}
 
 
 ### The big picture
 
-we can build intuition about the dynamics by inspecting the diagrams. 
+We can build intuition about the dynamics by inspecting the diagrams. 
 
-- because score gaps incentivize the underdog and relax the leader, the game feels pressure to stay near the origin. this tells us that the distribution will have thin tails and, also, that the distribution will quickly **become constant in time**. 
+- Because score gaps incentivize the underdog and relax the leader, the game feels pressure to stay near the origin. This tells us that the distribution will have thin tails and, also, that the distribution will quickly **become constant in time**. 
 
-- comparing either side, the wings have identical structure so, up to an overall constant, we expect the distributions to be symmetric, e.g. $P(-2) = \gamma P(2),$ $P(-4) = \gamma P(4),$ and as a result, $S_- = \gamma \times S_+.$
+- Comparing either side, the wings have identical structure. So, up to an overall constant, we expect the distributions to be symmetric, e.g. $P(-2) = \gamma P(2),$ $P(-4) = \gamma P(4).$ As a result, $S_- = \gamma \times S_+.$
 
-- as we move away from the origin the game looks the same, whatever the score — each step sees the same transition rate imbalance, $r_-^2/r_+^2 < 1,$ so we expect the probability to decay like some decreasing function $f(r_-^2/r_+^2).$
+- As we move away from the origin, the game looks the same, whatever the score, and each step sees the same transition rate imbalance, $r_-^2/r_+^2 < 1.$ We expect the probability to decay like some decreasing function $f(r_-^2/r_+^2).$
 
-with these insights on the table, we can analyze the equations for concrete results, starting with the wings.
+With these insights on the table, we can analyze the equations for concrete results, starting in the wings.
 
-if the probability of a score gap of $g$ after round $(t-1)$ is $P_{t-1}(g),$ its change after another round is
+If the probability of a score gap of $g$ after round $(t-1)$ is $P_{t-1}(g),$ its change after another round is
 
 $$
-  \Delta = P(g+2)_{t-1}r_-^2 + P(g-2)_{t-1}r_+^2 - (r_+^2 + r_-^2)P_{t-1}(g)
+  \Delta = r_-^2P_{t-1}(g+2) + r_+^2P_{t-1}(g-2) - (r_+^2 + r_-^2)P_{t-1}(g)
 $$
 
-we argued above that the games become constant in time. applying the equilibrium condition gets:
+We argued above that the games become constant in time. Applying the equilibrium condition, we get
 
 $$
   0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-this two-step recursion is really a one step recursion in disguise. we can see that from the slight rearrangement:
+This is a two-step recursion but it's really a one step recursion in disguise. We can see this from a slight rearrangement:
 
 $$ 
   0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
 $$
 
-we can factor this using a shift operator $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+1)$) it becomes
+We can factor this using a shift operator $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+2)$). After that, it becomes
 
 $$
   0 = \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right]
@@ -129,20 +134,29 @@ $$
   \boxed{P(g) = \left(\frac{r_-}{r_+}\right)^2 P(g-2)}
 $$
 
-which is what we intuited above.
+for $g<0,$ and
 
-this immediately gets us $S_-.$ since $S_- = P(-2) + P(-4) + \ldots,$
+$$
+  \boxed{P(g) = \left(\frac{r_-}{r_+}\right)^2 P(g+2)}
+$$
+
+for $g > 0,$ which is what we intuited above.
+
+This immediately gets us $S_-.$
+
+<!-- since $S_- = P(-2) + P(-4) + \ldots,$ -->
 
 $$
   \boxed{
   \begin{align}
-  S_- &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
+  S_- &= P(-2) + P(-4) + \ldots \\
+      &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
       &= \dfrac{P(-2)}{1-r_-^2/r_+^2}
   \end{align}
   }
 $$
 
-similarly, 
+Similarly, 
 
 $$
   \boxed{S_+ = \dfrac{P(2)}{1-r_-^2/r_+^2}.}
@@ -202,12 +216,19 @@ $$
     S_- &= P(-2)\frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac{P(0)}{2r_+} \frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac12 P(0)\frac{r_+}{r_+ - r_-} \\
-        &= \frac12\frac{4x}{1+4x}\frac{\frac12 + x}{2x} \\
-        &= \frac{1 + 2x}{2 + 8x}.
+        &= \frac12\frac{4x}{1+4x}\frac{\frac12 + x}{2x}
   \end{align}
 $$
 
+or
+
+$$
+  \boxed{S_- = \frac{1+2x}{2+8x}}
+$$
+
 the same calculation for $S_+$ gets $\frac{1-2x}{2 + 8x}.$
+
+![](/img/2022-05-01-Splus-plot.JPG){:width="500 px" class="image-centered"}
 
 this result makes sense: when $x=0,$ there is no built in advantage to going first, and the game has even odds. likewise, when $x=\frac12,$ every point gap opened up by the Firsts is immediately closed by the Seconds, who are guaranteed to score when they're down. this means that the Firsts can never hold a lead, they can only tie.
 
@@ -215,7 +236,7 @@ comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3
 
 so, given that the game wasn't a tie, there's a $75\%$ chance the Seconds won the game. 
 
-from these ingredients, we can get the steady state distribution of score gaps $P(g),$
+from these ingredients, we can get the whole steady state distribution of score gaps $P(g),$
 
 $$
   P(g) = 
@@ -225,5 +246,7 @@ $$
     \frac{4x}{1+4x}\frac{1}{1+2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
   \end{cases}
 $$
+
+![](/img/2022-05-01-pdf-0-15.JPG){:width="500 px" class="image-centered"}
 
 <br>
