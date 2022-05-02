@@ -37,16 +37,16 @@ Once either team gets a two basket lead, the game's structure is symmetric on ei
 After one possession, the Nicks can be ahead if they score a basket (even odds), followed by the Noughts missing their basket (less than even odds). The Noughts can be ahead after one possession if the Nicks miss (even odds), followed by the Noughts scoring (even odds). So, after one possession, the advantage is to the Noughts: 
 
 $$
-  \text{unlikely}\times\text{even odds} < \text{even odds}\times\text{even odds}.
+  \overbrace{\text{unlikely}\times\text{even odds}}^\text{Nicks lead} < \overbrace{\text{even odds}\times\text{even odds}}^\text{Noughts lead}.
 $$
 
 This advantage compounds on the next possession. If the Nicks are up by a basket, the game can return to a tie if the Nicks miss (better than even odds, since they're ahead), and then the Noughts make (better than even odds, since they're underdogs). On the other hand, the Noughts can lose their one basket lead if the Nicks make (better than even odds), followed by the Noughts missing (even odds). Once again, the advantage is to the Noughts: 
 
 $$
-  \overbrace{\text{likely}\times\text{likely}}^\text{Noughts lead} > \overbrace{\text{even odds}\times\text{likely}}^\text{Nicks lead}.
+  \overbrace{\text{likely}\times\text{likely}}^\text{Nicks blow lead} > \overbrace{\text{even odds}\times\text{likely}}^\text{Noughts blow lead}.
 $$
 
-All in all, the team that goes second will win a greater fraction of th game s.
+All in all, the team that goes second will win a greater fraction of the games.
 
 ### The setup
 
