@@ -108,21 +108,19 @@ We can build intuition about the dynamics by inspecting the diagrams.
 
 - As we move away from the origin, the game looks the same, whatever the score, and each step sees the same transition rate imbalance, $r_-^2/r_+^2 < 1.$ We expect the probability to decay like some decreasing function $f(r_-^2/r_+^2).$
 
-With these insights on the table, we can analyze the equations for concrete results, starting in the wings.
-
-If the probability of a score gap of $g$ after round $(t-1)$ is $P_{t-1}(g),$ its change after another round is
+With these insights on the table, we can analyze the equations for concrete results, starting in the wings. Given the probability $P_{t-1}(g)$ of a score gap $g$ after $t-1$ rounds, its change in the next round is equal to
 
 $$
   \Delta = r_-^2P_{t-1}(g+2) + r_+^2P_{t-1}(g-2) - (r_+^2 + r_-^2)P_{t-1}(g)
 $$
 
-We argued above that the games become constant in time. Applying the equilibrium condition, we get
+We argued above that the games become constant in time — applying the equilibrium condition, this becomes
 
 $$
   0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-This is a two-step recursion but it's really a one step recursion in disguise. We can see this from a slight rearrangement:
+This equation is a two-step recursion, but it's really a one step recursion in disguise. We can see this from a slight rearrangement:
 
 $$ 
   0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
