@@ -208,4 +208,15 @@ comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3
 
 so, given that the game wasn't a tie, there's a $75%$ chance the Seconds won the game. 
 
+from these ingredients, we can get the steady state distribution of score gaps $P(g),$
+
+$$
+  P(g) = 
+  \begin{cases}
+    \frac{4x}{1+4x}\frac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
+    \frac{4x}{1+4x} & g = 0 \\
+    \frac{4x}{1+4x}\frac{1}{1+2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
+  \end{cases}
+$$
+
 <br>
