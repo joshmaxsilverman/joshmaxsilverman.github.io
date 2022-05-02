@@ -9,9 +9,9 @@ date: 2022/05/01
 
 >**Question:** The New York Nicks are facing off against the Brooklyn Naughts. Throughout the entire game, the two teams alternate possession, starting with the Nicks, until both teams have had exactly 100 possessions. For simplicity, assume that each team scores either 0 points or 2 points with each possession. (So don’t worry about 3-pointers, fouls, etc.)
 >
->Whenever the game is tied, the team that currently has possession has a 50 percent chance of scoring 2 points. When the game is not tied, the team that is in the lead takes it easy and the team that is behind is more motivated to score. In this case, assume that the team that is behind has a 50+x percent chance of scoring, while the team that is ahead has a 50−x percent chance of scoring. Here, x is a positive number that is greater than 0 and less than 50.
+>Whenever the game is tied, the team that currently has possession has a 50 percent chance of scoring 2 points. When the game is not tied, the team that is in the lead takes it easy and the team that is behind is more motivated to score. In this case, assume that the team that is behind has a $50+x$ percent chance of scoring, while the team that is ahead has a $50−x$ percent chance of scoring. Here, $x$ is a positive number that is greater than 0 and less than 50.
 >
->In preparation for the game, the official scorekeeper (who knows the value of x) crunched the numbers and realized the game has a 50 percent chance of being tied at the end of regulation.
+>In preparation for the game, the official scorekeeper (who knows the value of $x$) crunched the numbers and realized the game has a 50 percent chance of being tied at the end of regulation.
 >
 >In the event that the game is not tied at the end of regulation, what is the probability that each team wins?
 
@@ -43,7 +43,7 @@ $$
 This advantage compounds on the next possession. If the Nicks are up by a basket, the game can return to a tie if the Nicks miss (better than even odds, since they're ahead), and then the Noughts make (better than even odds, since they're underdogs). On the other hand, the Noughts can lose their one basket lead if the Nicks make (better than even odds), followed by the Noughts missing (even odds). Once again, the advantage is to the Noughts: 
 
 $$
-  \text{likely}\times\text{likely} > \text{even odds}\times\text{likely}.
+  \overbrace{\text{likely}\times\text{likely}}^\text{Noughts lead} > \overbrace{\text{even odds}\times\text{likely}}^\text{Nicks lead}.
 $$
 
 All in all, the team that goes second will win a greater fraction of th game s.
