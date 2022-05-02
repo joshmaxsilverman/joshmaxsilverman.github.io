@@ -168,34 +168,33 @@ $$
   \boxed{S_+ = \dfrac{P(2)}{1-r_-^2/r_+^2}.}
 $$
 
-now we can analyze $P(-2).$ following the diagram, the change in $P(-2)$ from one moment to the next is
+Now we can analyze $P(-2).$ Following the diagram, the change in $P(-2)$ from one moment to the next is
 
 $$
   \begin{align}
-  \Delta &= \frac{1}{2^2} P(0) + r_+^2 P(-4) - \left(\frac12 r_+ + r_-^2\right)P(-2) \\
-  &= 0
+  0 &= \frac{1}{2^2} P(0) + r_+^2 P(-4) - \left(\frac12 r_+ + r_-^2\right)P(-2)
   \end{align}
 $$
 
-using the one-step recursion, this becomes
+Using the one-step recursion, this becomes
 
 $$ 
   \boxed{P(-2) = \dfrac{P(0)}{2r_+}}
 $$
 
-the same analysis for $P(2)$ gets
+The same analysis for $P(2)$ gets
 
 $$
   P(2)\left[1 - r_-^2 -2r_-r_+\right] = \frac12 r_- P(0)
 $$
 
-here we can use the fact that $r_- + r_+ = 1$ to get $r_-^2 + r_+^2 + 2r_-r_+ = 1,$ so that the above becomes 
+Here we can use the fact that $r_- + r_+ = 1$ to get $r_-^2 + r_+^2 + 2r_-r_+ = 1,$ so that the above simplifies to 
 
 $$
   \boxed{P(2) = \dfrac{r_-}{2r_+^2} P(0)}.
 $$
 
-now we can solve for $P(0):$ 
+Now we can solve for $P(0):$ 
 
 $$
   \begin{align}
@@ -213,9 +212,9 @@ $$
   \boxed{P_0 = \dfrac{4x}{1+4x}}
 $$
 
-we're told that $P_0 = \frac12,$ so $x$ must be $\frac14.$
+Since we're told that $P_0 = \frac12,$ $x$ must be $\frac14.$
 
-using the relationship between $P(-2)$ and $P(0),$ we get
+Using the relationship between $P(-2)$ and $P(0),$ we get
 
 $$
   \begin{align}
@@ -232,24 +231,30 @@ $$
   \boxed{S_- = \frac{1+2x}{2+8x}}
 $$
 
-the same calculation for $S_+$ gets $\frac{1-2x}{2 + 8x}.$
+The same calculation for $S_+$ gets 
+
+$$
+  S_+ = \frac{1-2x}{2 + 8x}.$
+$$
 
 ![](/img/2022-05-01-Splus-plot.JPG){:width="500 px" class="image-centered"}
 
-this result makes sense: when $x=0,$ there is no built in advantage to going first, and the game has even odds. likewise, when $x=\frac12,$ every point gap opened up by the Firsts is immediately closed by the Seconds, who are guaranteed to score when they're down. this means that the Firsts can never hold a lead, they can only tie.
+This result makes sense:
+  - When $x=0,$ there is no built in advantage to going first, and the game has even odds. 
+  - Likewise, when $x=\frac12,$ every point gap opened up by the Nicks is immediately closed by the Noughts, who are guaranteed to score when they're down. This means that the Nicks can never hold a lead, they can only tie.
 
-comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3$ for $x = 1/2.$ 
+Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3$ for $x = 1/2.$ 
 
-so, given that the game wasn't a tie, there's a $75\%$ chance the Seconds won the game. 
+So, given that the game wasn't a tie, there's a $75\%$ chance the Seconds won the game. 
 
-from these ingredients, we can get the whole steady state distribution of score gaps $P(g),$
+From these ingredients, we can get the whole steady state distribution of score gaps $P(g),$
 
 $$
   P(g) = 
   \begin{cases}
     \frac{4x}{1+4x}\frac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
     \frac{4x}{1+4x} & g = 0 \\
-    \frac{4x}{1+4x}\frac{1}{1+2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
+    \frac{4x}{1+4x}\frac{\frac12 - x}{2(\frac12+x)^2}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
   \end{cases}
 $$
 
