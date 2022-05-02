@@ -123,6 +123,13 @@ $$
 
 which is what we speculated above.
 
-This immediately lets us find $S_-,$
+this immediately lets us find $S_-.$ since $S_- = P(-2) + P(-4) + \ldots,$
+
+$$
+  \begin{align}
+  S_- &= P(-2) + P(-4) + P(-6) + \ldots \\ 
+      &= 
+  \end{align}
+$$
 
 <br>
