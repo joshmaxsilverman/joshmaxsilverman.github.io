@@ -188,7 +188,7 @@ $$
   \boxed{P_0 = \dfrac{4x}{1+4x}}
 $$
 
-we're told that $P_0 = \frac12,$ so we must have $4x = 1,$ or $x = \frac14.$
+we're told that $P_0 = \frac12,$ so $x$ must be $\frac14.$
 
 using the relationship between $P(-2)$ and $P(0),$ we get
 
@@ -197,8 +197,8 @@ $$
     S_- &= P(-2)\frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac{P(0)}{2r_+} \frac{r_+^2}{r_+^2 - r_-^2} \\
         &= \frac12 P(0)\frac{r_+}{r_+ - r_-} \\
-        &= \dfrac{4x}{1+4x}\frac12 \frac{\frac12 + x}{2x} \\
-        &= \dfrac{1 + 2x}{2 + 8x}.
+        &= \frac{4x}{1+4x}\frac12 \frac{\frac12 + x}{2x} \\
+        &= \frac{1 + 2x}{2 + 8x}.
   \end{align}
 $$
 
