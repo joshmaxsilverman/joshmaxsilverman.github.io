@@ -168,6 +168,8 @@ $$
   \boxed{S_+ = \dfrac{P(2)}{1-r_-^2/r_+^2}.}
 $$
 
+### Solving the system
+
 Now we can analyze $P(-2).$ Following the diagram, the change in $P(-2)$ from one moment to the next is
 
 $$
@@ -234,14 +236,16 @@ $$
 The same calculation for $S_+$ gets 
 
 $$
-  S_+ = \frac{1-2x}{2 + 8x}.$
+  \boxed{S_+ = \frac{1-2x}{2 + 8x}}.
 $$
 
-![](/img/2022-05-01-Splus-plot.JPG){:width="500 px" class="image-centered"}
+Plotting this against $x,$ we see
+
+![](/img/2022-05-01-Splus-plot.JPG){:width="350 px" class="image-centered"}
 
 This result makes sense:
   - When $x=0,$ there is no built in advantage to going first, and the game has even odds. 
-  - Likewise, when $x=\frac12,$ every point gap opened up by the Nicks is immediately closed by the Noughts, who are guaranteed to score when they're down. This means that the Nicks can never hold a lead, they can only tie.
+  - Likewise, when $x=\frac12,$ every point gap opened up by the Nicks is immediately closed by the Noughts, who are guaranteed to score when they're down. This means that the Nicks can never hold a lead, they can only tie, so $S_+$ goes to $0.$
 
 Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3$ for $x = 1/2.$ 
 
@@ -258,6 +262,11 @@ $$
   \end{cases}
 $$
 
-![](/img/2022-05-01-pdf-0-15.JPG){:width="500 px" class="image-centered"}
+Plotting the result (for a less-compressed value of $x = 0.15$) we see that it has all the essential features we anticipated.
+- it's concentrated around the middle,
+- it's thin-tailed,
+- it is symmetric about $g=0$ up to a constant scaling factor:
+
+![](/img/2022-05-01-pdf-0-15.JPG){:width="300 px" class="image-centered"}
 
 <br>
