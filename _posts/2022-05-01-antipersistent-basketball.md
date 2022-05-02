@@ -155,7 +155,7 @@ This immediately gets us $S_-.$
 $$
   \boxed{
   \begin{align}
-  S_- &= P(-2) + P(-4) + \ldots \\
+  S_- &= P(-2) + P(-4) + P(-6) + \ldots \\
       &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
       &= \dfrac{P(-2)}{1-r_-^2/r_+^2}
   \end{align}
