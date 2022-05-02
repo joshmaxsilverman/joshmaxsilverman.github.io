@@ -88,7 +88,7 @@ The game can move back from $g = 2$ to a tie if the disadvantaged Nicks miss fol
 
 Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\times\frac12$ and $r_+\times\frac12,$ respectively.
 
-So, in the wings, the game looks like
+So, in the wings, the game looks like 
 
 ![](/img/2022-05-01-lattice-wing.jpg){:width="650 px" class="image-centered"}
 
