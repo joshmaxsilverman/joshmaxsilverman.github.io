@@ -239,7 +239,7 @@ $$
 
 Plotting this against $x,$ we see
 
-![](/img/2022-05-01-Splus-plot.JPG){:width="350 px" class="image-centered"}
+![](/img/2022-05-01-Splus-plot.JPG){:width="450 px" class="image-centered"}
 
 This result makes sense:
   - When $x=0,$ there is no built in advantage to going first, and the game has even odds. 
@@ -265,6 +265,6 @@ Plotting the result (for a less-compressed value of $x = 0.15$) we see that it h
 - it's thin-tailed,
 - it is symmetric about $g=0$ up to a constant scaling factor:
 
-![](/img/2022-05-01-pdf-0-15.JPG){:width="300 px" class="image-centered"}
+![](/img/2022-05-01-pdf-0-15.JPG){:width="450 px" class="image-centered"}
 
 <br>
