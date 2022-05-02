@@ -97,10 +97,12 @@ $$
   \Delta P(g) = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-but we argued that the game would become constant in time. making the equilibrium assumptions means that $\Delta P(g) = 0,$ or
+we argued above that the games become constant in time. applying the equilibrium condition, we get:
 
 $$
   0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
+
+at the end of the chain ($g=-100$), there is no left hand neighbor since no game can develop a $101$ point gap in $100$ rounds. this means that the terms $r_-^2P(g)$ and $P(g-2)r_+^2$ become zero, and 
 
 <br>
