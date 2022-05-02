@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: Antipersistent Basketball
+subtitle: Who will win if noone cares until they're losing?
 tags: coarse-graining scaling symmetry
 date: 2022/05/01
 ---
