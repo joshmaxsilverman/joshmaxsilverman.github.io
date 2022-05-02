@@ -72,7 +72,7 @@ from a tie, we can move to $g = 2$ if the Firsts make their shot, follower by a 
 
 the game can move back from $g = 2$ to a tie if the disadvantaged Firsts miss followed by a make by the advantaged Seconds. so, the probability is $r_+^2.$
 
-following the same sort of reasoning, the rates to and from $g=-2$ are $\frac12\times\frac12$ and $\frac r_+\times\frac12,$ respectively.
+following the same sort of reasoning, the rates to and from $g=-2$ are $\frac12\times\frac12$ and $r_+\times\frac12,$ respectively.
 
 so, in the wings the game looks like:
 
@@ -112,7 +112,7 @@ $$
   0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
 $$
 
-factoring, using the shift operator $\mathbb{E]_g,$ it becomes
+factoring, using a shift operator $\mathbb{E}_g,$ it becomes
 
 $$
   0 = \left(\mathbb{E}_g-1\right)\left(r_-^2P(g) - r_+^2P(g-2)\right)
@@ -132,8 +132,8 @@ $$
   \boxed{
   \begin{align}
   S_- &= P(-2) + P(-4) + P(-6) + \ldots \\ 
-      &= P(-2) + \frac{r_-^2}{r_+^2} P(-2) + \left(\frac{r_-^2}{r_+^2}\right)^2 P(-2) + \ldots \\
-      &= \dfrac{P(-2)}{1-\dfrac{r_-^2}{r_+^2}}
+      &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
+      &= \dfrac{P(-2)}{1-r_-^2/r_+^2}
   \end{align}
   }
 $$
