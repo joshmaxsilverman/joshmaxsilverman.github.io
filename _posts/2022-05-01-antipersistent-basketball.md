@@ -200,15 +200,13 @@ $$
   \end{align}
 $$
 
-or
+or, restoring the values of $r_-$ and $r_+,$
 
 $$
-  \boxed{P_0 = \dfrac{4x}{1+4x}}
+  \boxed{P_0 = \dfrac{4x}{1+4x}}.
 $$
 
-Since we're told that $P_0 = \frac12,$ $x$ must be $\frac14.$
-
-Using the relationship between $P(-2)$ and $P(0),$ we get
+Since we're told that $P_0 = \frac12,$ $x$ must be $\frac14.$ Using the relationship between $P(-2)$ and $P(0),$ we get
 
 $$
   \begin{align}
