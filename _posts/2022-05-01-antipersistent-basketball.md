@@ -245,7 +245,7 @@ This result makes sense:
   - When $x=0,$ there is no built in advantage to going first, and the game has even odds. 
   - Likewise, when $x=\frac12,$ every point gap opened up by the Nicks is immediately closed by the Noughts, who are guaranteed to score when they're down. This means that the Nicks can never hold a lead, they can only tie, so $S_+$ goes to $0.$
 
-Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = (1+2x)/(1-2x),$ which is $3$ for $x = 1/2.$ 
+Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = (1+2x)/(1-2x),$ which is $3$ for $x = \frac14.$ 
 
 So, given that the game wasn't a tie, there's a $75\%$ chance the Noughts won the game. 
 
@@ -254,9 +254,9 @@ From these ingredients, we can get the whole steady state distribution of score 
 $$
   P(g) = 
   \begin{cases}
-    \dfrac{4x}{1+4x}\frac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
+    \dfrac{4x}{1+4x}\dfrac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
     \dfrac{4x}{1+4x} & g = 0 \\
-    \dfrac{4x}{1+4x}\frac{\frac12 - x}{2(\frac12+x)^2}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
+    \dfrac{4x}{1+4x}\dfrac{\frac12 - x}{2(\frac12+x)^2}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
   \end{cases}
 $$
 
