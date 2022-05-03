@@ -86,7 +86,7 @@ Starting from a tie, the game can move to $g = 2$ if the Nicks make their shot, 
 
 The game can move back from $g = 2$ to a tie if the disadvantaged Nicks miss followed by a make by the advantaged Noughts. So, the probability is $r_+^2.$
 
-Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\cdot\frac12$ and $r_+\cdot\frac12,$ respectively.
+Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\frac12$ and $r_+\frac12,$ respectively.
 
 So, in the wings, the game looks like 
 
