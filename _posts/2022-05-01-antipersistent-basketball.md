@@ -134,8 +134,8 @@ This shows that
 $$
   \boxed{
   P(g) = \begin{cases}
-  \left(\frac{r_-}{r_+}\right)^2 P(g-2) & g < 0 \\
-  \left(\frac{r_-}{r_+}\right)^2 P(g+2) & g > 0 
+  \left(\dfrac{r_-}{r_+}\right)^2 P(g-2) & g < 0 \\
+  \left(\dfrac{r_-}{r_+}\right)^2 P(g+2) & g > 0 
   \end{cases}
   }
 $$
