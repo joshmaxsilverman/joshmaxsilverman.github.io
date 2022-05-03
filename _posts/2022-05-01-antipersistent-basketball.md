@@ -124,8 +124,8 @@ This equation is a two-step recursion, but it's really a one step recursion in d
 
 $$ 
   \begin{align}
-  & r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right] = 0 \\
-  & \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right]
+  0 &= r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right] \\
+  &= \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right].
   \end{align}
 $$
 
@@ -134,8 +134,8 @@ This shows that
 $$
   \boxed{
   P(g) = \begin{cases}
-  \left(\frac{r_-}{r_+}\right)^2 P(g-2)} & g < 0 \\
-  \left(\frac{r_-}{r_+}\right)^2 P(g+2)} & g > 0 
+  \left(\frac{r_-}{r_+}\right)^2 P(g-2) & g < 0 \\
+  \left(\frac{r_-}{r_+}\right)^2 P(g+2) & g > 0 
   \end{cases}
   }
 $$
