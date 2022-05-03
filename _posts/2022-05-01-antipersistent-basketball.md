@@ -218,10 +218,10 @@ Using the relationship between $P(-2)$ and $P(0),$ we get
 
 $$
   \begin{align}
-    S_- &= P(-2)\frac{r_+^2}{r_+^2 - r_-^2} \\
-        &= \frac{P(0)}{2r_+} \frac{r_+^2}{r_+^2 - r_-^2} \\
-        &= \frac12 P(0)\frac{r_+}{r_+ - r_-} \\
-        &= \frac12\frac{4x}{1+4x}\frac{\frac12 + x}{2x}
+    S_- &= P(-2)\dfrac{r_+^2}{r_+^2 - r_-^2} \\
+        &= \frac{P(0)}{2r_+} \dfrac{r_+^2}{r_+^2 - r_-^2} \\
+        &= \frac12 P(0)\dfrac{r_+}{r_+ - r_-} \\
+        &= \frac12\dfrac{4x}{1+4x}\dfrac{\frac12 + x}{2x}
   \end{align}
 $$
 
@@ -234,7 +234,7 @@ $$
 The same calculation for $S_+$ gets 
 
 $$
-  \boxed{S_+ = \frac{1-2x}{2 + 8x}}.
+  \boxed{S_+ = \dfrac{1-2x}{2 + 8x}}.
 $$
 
 Plotting this against $x,$ we see
@@ -245,25 +245,25 @@ This result makes sense:
   - When $x=0,$ there is no built in advantage to going first, and the game has even odds. 
   - Likewise, when $x=\frac12,$ every point gap opened up by the Nicks is immediately closed by the Noughts, who are guaranteed to score when they're down. This means that the Nicks can never hold a lead, they can only tie, so $S_+$ goes to $0.$
 
-Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = \frac{1+2x}{1-2x},$ which is $3$ for $x = 1/2.$ 
+Comparing $S_-$ and $S_+$ we see that $S_-/S_+ = (1+2x)/(1-2x),$ which is $3$ for $x = 1/2.$ 
 
-So, given that the game wasn't a tie, there's a $75\%$ chance the Seconds won the game. 
+So, given that the game wasn't a tie, there's a $75\%$ chance the Noughts won the game. 
 
 From these ingredients, we can get the whole steady state distribution of score gaps $P(g),$
 
 $$
   P(g) = 
   \begin{cases}
-    \frac{4x}{1+4x}\frac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
-    \frac{4x}{1+4x} & g = 0 \\
-    \frac{4x}{1+4x}\frac{\frac12 - x}{2(\frac12+x)^2}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
+    \dfrac{4x}{1+4x}\frac{1}{1 + 2x}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{-2(g+1)} & g < 0 \\
+    \dfrac{4x}{1+4x} & g = 0 \\
+    \dfrac{4x}{1+4x}\frac{\frac12 - x}{2(\frac12+x)^2}\left(\dfrac{\frac12 - x}{\frac12 + x}\right)^{2(g-1)} & g > 0
   \end{cases}
 $$
 
 Plotting the result (for a less-compressed value of $x = 0.15$) we see that it has all the essential features we anticipated.
 - it's concentrated around the middle,
 - it's thin-tailed,
-- it is symmetric about $g=0$ up to a constant scaling factor:
+- it's symmetric about $g=0$ up to a constant scaling factor:
 
 ![](/img/2022-05-01-pdf-0-15.JPG){:width="450 px" class="image-centered"}
 
