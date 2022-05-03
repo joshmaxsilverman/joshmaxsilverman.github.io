@@ -86,7 +86,7 @@ Starting from a tie, the game can move to $g = 2$ if the Nicks make their shot, 
 
 The game can move back from $g = 2$ to a tie if the disadvantaged Nicks miss followed by a make by the advantaged Noughts. So, the probability is $r_+^2.$
 
-Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\times\frac12$ and $r_+\times\frac12,$ respectively.
+Following the same sort of reasoning, the rates to and from $g=-2$  are $\frac12\cdot\frac12$ and $r_+\cdot\frac12,$ respectively.
 
 So, in the wings, the game looks like 
 
@@ -120,33 +120,25 @@ $$
   0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
 $$
 
-This equation is a two-step recursion, but it's really a one step recursion in disguise. We can see this from a slight rearrangement:
+This equation is a two-step recursion, but it's really a one step recursion in disguise. We can see this from a slight rearrangement, and factoring using a shift $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+2)$):
 
 $$ 
-  0 = r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right]
+  \begin{align}
+  & r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right] = 0 \\
+  & \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right] \\
 $$
 
-We can factor this using a shift operator $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+2)$). After that, it becomes
+This shows that
 
 $$
-  0 = \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right]
+  \boxed{
+  P(g) = \begin{cases}
+  \left(\frac{r_-}{r_+}\right)^2 P(g-2)} & g < 0 \\
+  \left(\frac{r_-}{r_+}\right)^2 P(g+2)} & g > 0 
+  }
 $$
 
-or
-
-$$
-  \boxed{P(g) = \left(\frac{r_-}{r_+}\right)^2 P(g-2)}
-$$
-
-for $g<0,$ and
-
-$$
-  \boxed{P(g) = \left(\frac{r_-}{r_+}\right)^2 P(g+2)}
-$$
-
-for $g > 0,$ which is what we intuited above.
-
-This immediately gets us $S_-.$
+which is what we intuited above. This immediately gets us $S_-:$
 
 <!-- since $S_- = P(-2) + P(-4) + \ldots,$ -->
 
