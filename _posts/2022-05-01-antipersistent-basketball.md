@@ -125,7 +125,7 @@ This equation is a two-step recursion, but it's really a one step recursion in d
 $$ 
   \begin{align}
   0 &= r_-^2\left[P(g+2) - P(g)\right] - r_+^2\left[P(g) - P(g-2)\right] \\
-  &= \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-1)\right].
+  &= \left(\mathbb{E}_g-1\right)\left[r_-^2P(g) - r_+^2P(g-2)\right].
   \end{align}
 $$
 
