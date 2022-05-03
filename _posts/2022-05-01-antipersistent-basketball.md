@@ -104,7 +104,7 @@ We can build intuition about the dynamics by inspecting the diagrams.
 
 - Because score gaps incentivize the underdog and relax the leader, the game feels pressure to stay near the origin. This tells us that the distribution will have thin tails and, also, that the distribution will quickly **become constant in time**. 
 
-- Comparing either side, the wings have identical structure. So, up to an overall constant, we expect the distributions to be symmetric, e.g. $P(-2) = \gamma P(2),$ $P(-4) = \gamma P(4).$ As a result, $S_- = \gamma \times S_+.$
+- Comparing either side, the wings have identical structure. So, up to an overall constant, we expect the distributions to be symmetric, e.g. $P(-2) = \gamma P(2),$ $P(-4) = \gamma P(4).$ As a result, $S_- = \gamma S_+.$
 
 - As we move away from the origin, the game looks the same, whatever the score, and each step sees the same transition rate imbalance, $r_-^2/r_+^2 < 1.$ We expect the probability to decay like some decreasing function $f(r_-^2/r_+^2).$
 
