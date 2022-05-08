@@ -54,7 +54,7 @@ $$
 so 
 
 $$
-  \langle B_k\rangle = 1 + \dfrac12 + \dfrac13 + \ldots + \dfrac1k,
+  \langle B_k\rangle = 1 + \tfrac12 + \tfrac13 + \ldots + \tfrac1k,
 $$ 
 
 the $k^\text{th}$ harmonic number.
