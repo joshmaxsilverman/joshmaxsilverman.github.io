@@ -39,7 +39,13 @@ $$
   \end{align}
 $$
 
-so, the average number of presses on the way to the lobby from floor $k$ is just $1 + \frac12 + \frac13 + \ldots + \frac1k,$ the harmonic series.
+so, the average number of presses on the way to the lobby from floor $k$ is just 
+
+$$
+  1 + \frac12 + \frac13 + \ldots + \frac1k,
+$$ 
+
+the harmonic series.
 
 for the $9$ story building in question, this is $\frac{7129}{2520} \approx 
 2.829$ button presses.
