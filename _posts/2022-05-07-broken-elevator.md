@@ -21,7 +21,7 @@ To avoid finicky bookkeeping, we're going to count the lobby as floor zero, inst
 
 When the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
 
-So, they have uniform probability $\dfrac1k$ to arrive at any of the floors, which can be the lobby in one press or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
+So, they have uniform probability $\frac1k$ to arrive at any of the floors, which can be the lobby in one press or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
 
 So 
 
