@@ -17,36 +17,36 @@ date: 2022/05/07
 
 ## Solution
 
-to avoid finicky bookkeeping, we're going to count the lobby as floor zero, instead of floor $1$. also, it's equivalent to think in terms of how many times the passenger will press the button, and that's what we'll do.
+To avoid finicky bookkeeping, we're going to count the lobby as floor zero, instead of floor $1$. Also, it's equivalent to think in terms of how many times the passenger will press the button, and that's what we'll do.
 
-when the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
+When the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
 
-so, they have uniform probability $1/k$ to arrive at any of the floors, which can be the lobby in one press, or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
+So, they have uniform probability $\dfrac1k$ to arrive at any of the floors, which can be the lobby in one press or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
 
-so 
+So 
 
 $$
-  \langle B_k\rangle = \dfrac1k + \dfrac1k\sum_{j=1}^{k-1}\left(1 + \langle B_j\rangle\right)
+  \langle B_k\rangle = \dfrac1k + \dfrac1k\sum_{j=1}^{k-1}\left(1 + \langle B_j\rangle\right).
 $$
 
-but the second term is just $\langle B_{k-1}\rangle:$
+But the second term is just $\langle B_{k-1}\rangle:$
 
 $$
 \begin{align}
   \langle B_k\rangle &= \dfrac1k + \dfrac1k[\langle B_{k-1}\rangle + \overbrace{1 + \sum_{j=1}^{k-2}\left(1 + \langle B_j\rangle\right)}^{\left(k-1\right)\langle B_{k-1}\rangle}] \\
   &= \dfrac1k + \dfrac1k\left[\langle B_{k-1}\rangle + \left(k-1\right)\langle B_{k-1}\rangle\right] \\
-  &= \dfrac1k + \langle B_{k-1}\rangle
+  &= \dfrac1k + \langle B_{k-1}\rangle,
 \end{align}
 $$
 
-so, the average number of presses on the way to the lobby from floor $k$ is just 
+so the average number of presses on the way to the lobby from floor $k$ is just 
 
 $$
   \langle B_k\rangle = 1 + \frac12 + \frac13 + \ldots + \frac1k,
 $$ 
 
-or the $k^\text{th}$ harmonic number.
+the $k^\text{th}$ harmonic number.
 
-for the $9$ story building in question, this is $\frac{7129}{2520} \approx 
+For the $9$ story building in question, this is $\frac{7129}{2520} \approx 
 2.829$ button presses.
 <br>
