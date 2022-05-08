@@ -17,9 +17,20 @@ date: 2022/05/07
 
 ## Solution
 
-To avoid finicky bookkeeping, we're going to count the lobby as floor zero, instead of floor $1$. Also, it's equivalent to think in terms of how many times the passenger will press the button, and that's what we'll do.
+To avoid finicky bookkeeping, we can count the lobby as floor zero, instead of floor $1$. Also, it's equivalent to think in terms of how many times the passenger will press the button, and that's what we'll do.
 
-When the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
+When the passenger presses the button from floor $(k+1),$ they can either go to floor $k,$ or go to floors $0$ through $(k-1),$ which is the same as starting from floor $k$ but with one less button press.
+
+This says that the expected number of button presses from floor $(k+1)$ is 
+
+$$
+  \begin{align}
+    \langle B_{k+1} \rangle &= \frac1k\left(\langle B_k\rangle + 1\right) + \frac{k-1}{k} \langle B_k \\
+    &= \frac1k + \langle B_k\rangle,
+  \end{align}
+$$
+
+<!-- When the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
 
 So, they have uniform probability $\frac1k$ to arrive at any of the floors, which can be the lobby in one press or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
 
@@ -36,10 +47,11 @@ $$
   \langle B_k\rangle &= \dfrac1k + \dfrac1k[\langle B_{k-1}\rangle + \overbrace{1 + \sum_{j=1}^{k-2}\left(1 + \langle B_j\rangle\right)}^{\left(k-1\right)\langle B_{k-1}\rangle}] \\
   &= \dfrac1k + \dfrac1k\left[\langle B_{k-1}\rangle + \left(k-1\right)\langle B_{k-1}\rangle\right] \\
   &= \dfrac1k + \langle B_{k-1}\rangle,
-\end{align}
 $$
+\end{align} -->
 
-so the average number of presses on the way to the lobby from floor $k$ is just 
+
+so 
 
 $$
   \langle B_k\rangle = 1 + \dfrac12 + \dfrac13 + \ldots + \dfrac1k,
