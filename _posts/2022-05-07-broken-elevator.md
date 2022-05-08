@@ -19,9 +19,9 @@ date: 2022/05/07
 
 To avoid finicky bookkeeping, we can count the lobby as floor zero, instead of floor $1$. Also, it's equivalent to think in terms of how many times the passenger will press the button, and that's what we'll do.
 
-When the passenger presses the button from floor $(k+1),$ they can either go to floor $k,$ or go to floors $0$ through $(k-1),$ which is the same as starting from floor $k$ but with one less button press.
+When the passenger presses the button from floor $(k+1),$ they can either go to floor $k,$ or go to floors $0$ through $(k-1),$ which is the same as starting from floor $k$ but without the extra button press.
 
-This says that the expected number of button presses from floor $(k+1)$ is 
+This means that the expected number of button presses from floor $(k+1)$ is 
 
 $$
   \begin{align}
