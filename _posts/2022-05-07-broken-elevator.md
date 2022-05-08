@@ -11,7 +11,7 @@ date: 2022/05/07
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-build-the-longest-ladder/))
 
 ## Solution
 
