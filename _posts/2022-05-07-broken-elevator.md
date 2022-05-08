@@ -23,13 +23,13 @@ When the passenger presses the button from floor $k,$ the elevator is equally li
 
 So, they have uniform probability $\frac1k$ to arrive at any of the floors, which can be the lobby in one press or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
 
-So 
+So the expected value of the number of button presses from floor $k$ is equal to
 
 $$
   \langle B_k\rangle = \dfrac1k + \dfrac1k\sum_{j=1}^{k-1}\left(1 + \langle B_j\rangle\right).
 $$
 
-But the second term is just $\langle B_{k-1}\rangle:$
+The second term is just $\langle B_{k-1}\rangle,$
 
 $$
 \begin{align}
