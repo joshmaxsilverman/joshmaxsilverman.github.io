@@ -13,6 +13,8 @@ date: 2022/05/07
 
 ## Solution
 
+to avoid finicky bookkeeping, we're going to count the lobby as floor zero, instead of floor $1$. 
+
 when the passenger presses the button from floor $k,$ the elevator is equally likely to end up at any floor under it. 
 
 so, they have uniform probability $1/k$ to arrive at any of the floors, which can be the lobby in one press, or else any of the $(k-1)$ floors above the lobby from which they will make an average of $\langle B_{k-1}\rangle$ more presses.
@@ -33,6 +35,6 @@ $$
   \end{align}
 $$
 
-so, the average number of presses on the way to the lobby from floor $k$ is just $1 + \frac12 + \frac13 + \ldots + \frac1k,$ which is $\frac{7129}{2520} \approx 
+so, the average number of presses on the way to the lobby from floor $k$ is just $1 + \frac12 + \frac13 + \ldots + \frac1k,$ which, for the $10$ story building in question, is $\frac{7129}{2520} \approx 
 2.829.$
 <br>
