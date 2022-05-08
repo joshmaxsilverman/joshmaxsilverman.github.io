@@ -1,6 +1,8 @@
 ---
 layout: post
 published: true
+subtitle: How many times will you press the broken button?
+tags: expectation structure dynamics
 title: Broken Elevator
 date: 2022/05/07
 ---
