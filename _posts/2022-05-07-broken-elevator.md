@@ -34,7 +34,7 @@ but the second term is just $\langle B_{k-1}\rangle:$
 $$
   \begin{align}
     \langle B_k\rangle &= \dfrac1k + \dfrac1k\left(\langle B_{k-1}\rangle + \overbrace^{(k-1)\langle B_{k-1}\rangle}{1 + \sum_{j=1}^{k-2}\left(1 + \langle B_j\rangle\right)} \\
-    &= \dfrac1k + \dfrac1k\left(\langle B_{k-1} + \left(k-1\right)\langle B_{k-1}\rangle\right) \\
+    &= \dfrac1k + \dfrac1k\left(\langle B_{k-1}\rangle + \left(k-1\right)\langle B_{k-1}\rangle\right) \\
     &= \dfrac1k + \langle B_{k-1}\rangle
   \end{align}
 $$
