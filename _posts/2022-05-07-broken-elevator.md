@@ -25,7 +25,7 @@ This says that the expected number of button presses from floor $(k+1)$ is
 
 $$
   \begin{align}
-    \langle B_{k+1} \rangle &= \frac1k\left(\langle B_k\rangle + 1\right) + \left(1-\frac1k\right) \langle B_k\rangle \\
+    \langle B_{k+1} \rangle &= \frac1k\left(1 + \langle B_k\rangle\right) + \left(1-\frac1k\right) \langle B_k\rangle \\
     &= \frac1k + \langle B_k\rangle,
   \end{align}
 $$
