@@ -42,7 +42,7 @@ $$
 so the average number of presses on the way to the lobby from floor $k$ is just 
 
 $$
-  \langle B_k\rangle = 1 + \frac12 + \frac13 + \ldots + \frac1k,
+  \langle B_k\rangle = 1 + \dfrac12 + \dfrac13 + \ldots + \dfrac1k,
 $$ 
 
 the $k^\text{th}$ harmonic number.
