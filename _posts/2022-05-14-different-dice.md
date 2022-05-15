@@ -134,8 +134,7 @@ $$
    \end{align}
  $$
 
-which yields $P(\boldsymbol{aabc})= 29/60$ and $P(\boldsymbol{S/aaab}) = 9/20.$ So,
-
+which yields $P(\boldsymbol{aabc})= 29/60$ and
 $$
   \boxed{P(\boldsymbol{S/aaab}) = \dfrac{9}{20} = 45\%}.
 $$
