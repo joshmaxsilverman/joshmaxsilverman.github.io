@@ -67,10 +67,10 @@ To find the transition probabilities from the starting state, $T(\textbf{S}\righ
 For example, if the target state is $\boldsymbol{aabc}$ then it has $1$ unique member in $D,$ $2$ members of $U$ and the transition probability is
 
 $$
-  T(\textbf{S}\rightarrow \boldsymbol{aabc}) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
+  T(\textbf{S}\rightarrow \boldsymbol{aabc}) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}.
 $$
 
-carrying this through gets
+Carrying this through gets
 
 $$
   \begin{array}{c|c|c}
