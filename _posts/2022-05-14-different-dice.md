@@ -39,7 +39,7 @@ Also, $\boldsymbol{aaab}$ is actually the same state as the starting state $\bol
 
 With this insight, we can join $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
 
-![](/img/2022-05-14-different-dice-reduced.png){:width="250 px" class="image-centered"}
+![](/img/2022-05-14-different-dice-reduced.png){:width="150 px" class="image-centered"}
 
 ## Coarse grained dynamics
 
