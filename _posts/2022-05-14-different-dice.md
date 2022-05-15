@@ -70,7 +70,24 @@ $$
   \end{array} 
 $$
 
-ddd
+we also need the transition probabilities between the transient states, and from the transient states to $abcd$
 
+to go from $aabc$ to $aaab,$ the duplicates need to reroll as either both $b$ or both $c$ 
+
+$$
+  \begin{align}
+    P(aabc \rightarrow aaab) &= \binom{2}{1}\frac{1}{4^2} \\
+    &= \frac{2}{4^2}
+  \end{align}
+$$
+
+in the other direction, there are two possibilities: $2$ of the rerolls are duplicates of each other and the third is another number different from $b,$ or $1$ of the rerolls is a duplicate of $b$ and the other two are distinct numbers each different from $b.$ so we get
+
+$$
+  \begin{align}
+    P(aaab \rightarrow aabc) &= \left(\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right)\frac{1}{4^3} \\
+      &= \frac{36}{64}
+  \end{align}
+$$
 
 <br>
