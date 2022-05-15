@@ -46,16 +46,18 @@ $$
 
 unlike the starting state, they can return to themselves, directly or indirectly. 
 
-to find the transition probabilities from the starting state, $P(\textbf{start}\rightarrow x),$ we need to multiply
+## transition probabilities
 
-1. the number of ways to form the duplicated subgroup, $D$
-2. the number of ways to form the unique subgroup, $U$
+to find the transition probabilities from the starting state, $P(\textbf{start}\rightarrow x),$ we need
+
+1. the number of ways to pick numbers for the duplicate group, $D$
+2. the number of ways to pick numbers for the unique group, $U$
 3. the number of ways to order those numbers
 
-if the target state has $d$ elements of $D$ and $u$ elements of $U$ then the probability $P(\textbf{start}\rightarrow\textbf{target})$ is
+for example, if the target state has $1$ unique member in $D$ and $2$ elements of $U$ then the probability $P(\textbf{start}\rightarrow\textbf{target})$ is
 
 $$
-  P(\textbf{start}\rightarrow\textbf{target}) = \dbinom{4}{d}\dbinom{3}{u}\dfrac{4!}{u!d!}
+  P(\textbf{start}\rightarrow\textbf{target}) = \dbinom{4}{1}\dbinom{3}{2}\dfrac{4!}{2!}
 $$
 
 <br>
