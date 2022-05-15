@@ -33,6 +33,8 @@ really, there are just six relevant meta-states:
 
 reaching one of the last three states ends the game, while the first $aab$ and $aaab$ are transient. 
 
+![](/img/2022-05-14-different-dice-diagram.png){:width"300 px" class="image-centered"}
+
 ## Coarse grained dynamics
 
 a win can happen if the starting state goes directly to the win state $abcd,$ or it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to the win state $abcd.$ the probability of winning from the beginning
