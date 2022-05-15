@@ -58,73 +58,75 @@ Unlike the starting state, they can return to themselves, directly or indirectly
 
 ## Transition combinatorics
 
-To find the transition probabilities from the starting state, $T(\textbf{S}\rightarrow x),$ we need
+To find the transition probabilities from the starting state, $T(\textbf{S}\rightarrow \boldsymbol{x}),$ we need
 
 1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
 2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
-3. the number of ways to order those numbers, $O(U,D)$
+3. the number of ways to order those numbers.
 
-for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
+For example, if the target state is $\boldsymbol{aabc}$ then it has $1$ unique member in $D,$ $2$ members of $U$ and the transition probability is
 
 $$
-  T(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
+  T(\textbf{S}\rightarrow \boldsymbol{aabc}) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
 carrying this through gets
 
 $$
   \begin{array}{c|c|c}
-    P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{24}{256}\\ \hline
-    P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{144}{256} \\ \hline
-    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{48}{256}
+    T(\textbf{S}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{24}{256}\\ \hline
+    T(\textbf{S}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{144}{256} \\ \hline
+    T(\textbf{S}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{48}{256}.
   \end{array} 
 $$
 
-we also need the transition probabilities between the transient states, and from the transient states to $abcd$
+We also need the transition probabilities between the transient states, and from the transient states to $\boldsymbol{abcd}.$
 
-to go from $aabc$ to $aaab,$ the duplicates need to reroll as either both $b$ or both $c$ 
+To go from $\boldsymbol{aabc}$ to $\boldsymbol{aaab},$ the duplicates need to reroll as either both $\boldsymbol{b}$ or both $\boldsymbol{c}$ 
 
 $$
   \begin{align}
-    P(aabc \rightarrow aaab) &= \binom{2}{1}\frac{1}{4^2} \\
-    &= \frac{2}{4^2}
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{aaab}) &= \binom{2}{1}\frac{1}{4^2} \\
+    &= \frac{2}{4^2}.
   \end{align}
 $$
 
-in the other direction, there are two possibilities: $2$ of the rerolls are duplicates of each other and the third is another number different from $b,$ or $1$ of the rerolls is a duplicate of $b$ and the other two are distinct numbers each different from $b.$ so we get
+In the other direction, there are two possibilities: 
+- $2$ of the rerolls are duplicates of each other and the third is another number different from $\boldsymbol{b},$ or 
+- $1$ of the rerolls is a duplicate of $\boldsymbol{b}$ and the other two are distinct numbers each different from $\boldsymbol{b},$ so we get
 
 $$
   \begin{align}
-    P(aaab \rightarrow aabc) &= \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} \\
+    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aabc}) &= \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} \\
       &= \frac{36}{64}
   \end{align}
 $$
 
-carrying on like this, we get all the remaining transition probabilities:
+Carrying on like this, we can get the remaining transition probabilities:
 
 $$
   \begin{array}{c|c|c}
-    P(aabc\rightarrow aaab) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-    P(aaab\rightarrow aabc) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
-    P(aaab \rightarrow aaab) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline
-    P(aabc \rightarrow aabc) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
-    P(aabc \rightarrow abcd) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-    P(aaab \rightarrow abcd) & \frac{3!}{4^3} & \frac{6}{64}
+    T(\boldsymbol{aabc}\rightarrow \boldsymbol{aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
+    T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc}) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!1!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
+    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aaab}) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!1!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{aabc}) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
+    T(\boldsymbol{aaab} \rightarrow \boldsymbol{abcd}) & \frac{3!}{1!1!1!}\frac{1}{4^3} & \frac{6}{64}
   \end{array} 
 $$
 
 ## The probability to win, $P(\textbf{S})$
 
-with the transition probabilities in hand, the equations for $P(aabc)$ and $P(aaab)$ become 
+with the transition probabilities in hand, the equations for $P(\boldsymbol{aabc})$ and $P(\boldsymbol{aaab})$ become 
 
 $$
   \begin{align}
-    P(aabc) &= \frac18 P(aaab) + \frac58 P(aabc) + \frac18 \\
-    P(aaab) &= \frac{3}{16}P(aaab) + \frac{9}{16}P(aabc) + \frac{3}{32} \\
+    P(\boldsymbol{aabc}) &= \frac18 P(\boldsymbol{aaab}) + \frac58 P(\boldsymbol{aabc}) + \frac18 \\
+    P(\boldsymbol{aaab}) &= \frac{3}{16}P(\boldsymbol{aaab}) + \frac{9}{16}P(\boldsymbol{aabc}) + \frac{3}{32} \\
    \end{align}
  $$
 
-which yields $P(aabc)= 29/60$ and $P(aaab) = 9/20.$
+which yields $P(\boldsymbol{aabc})= 29/60$ and $P(\boldsymbol{aaab}) = 9/20.$
 
 Plugging these in to the original equation for $P(\textbf{S}),$ we get 
 
