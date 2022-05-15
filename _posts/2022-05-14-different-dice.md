@@ -79,9 +79,9 @@ Carrying this through gets
 
 $$
   \begin{array}{c|c|c}
-    T(\textbf{S/aaab}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{3}{32}\\ \hline
-    T(\textbf{S/aaab}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{9}{16} \\ \hline
-    T(\textbf{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}.
+    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{3}{32}\\ \hline
+    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{9}{16} \\ \hline
+    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}.
   \end{array} 
 $$
 
