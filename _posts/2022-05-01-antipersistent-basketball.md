@@ -117,7 +117,7 @@ $$
 We argued above that the games become constant in time — applying the equilibrium condition, this becomes
 
 $$
-  0 = P(g+2)r_-^2 + P(g-2)r_+^2 - (r_+^2 + r_-^2)P(g)
+  0 = r_-^2P(g+2) + r_+^2P(g-2) - (r_+^2 + r_-^2)P(g)
 $$
 
 This equation is a two-step recursion, but it's really a one step recursion in disguise. We can see this from a slight rearrangement, and factoring using a shift $\mathbb{E}_g,$ (that acts on functions of $g$ like $\mathbb{E}_g f(g) = f(g+2)$):
@@ -148,7 +148,7 @@ $$
   \boxed{
   \begin{align}
   S_- &= P(-2) + P(-4) + P(-6) + \ldots \\
-      &= P(-2)\left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] \\
+      &= \left[1 + \frac{r_-^2}{r_+^2} + \left(\frac{r_-^2}{r_+^2}\right)^2 + \ldots\right] P(-2) \\
       &= \dfrac{P(-2)}{1-r_-^2/r_+^2}
   \end{align}
   }
@@ -179,7 +179,7 @@ $$
 The same analysis for $P(2)$ gets
 
 $$
-  P(2)\left[1 - r_-^2 -2r_-r_+\right] = \frac12 r_- P(0)
+  \left[1 - r_-^2 -2r_-r_+\right]P(2) = \frac12 r_- P(0)
 $$
 
 Here we can use the fact that $r_- + r_+ = 1$ to get $r_-^2 + r_+^2 + 2r_-r_+ = 1,$ so that the above simplifies to 
@@ -194,9 +194,9 @@ $$
   \begin{align}
     1 &= P_0 + S_- + S_+ \\
       &= P_0 + \dfrac{P(-2)}{1 - \left(r_-/r_+\right)^2} + \dfrac{P(2)}{1 - \left(r_-/r_+\right)^2} \\
-      &= P_0\left(1 + \dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + \dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2}\right) \\
-      &= P_0\left(1 + \frac12 \dfrac{r_+ + r_-}{r_+^2 - r_-^2}\right) \\
-      &= P_0\left(1 + \frac12 \dfrac{1}{r_+ - r_-}\right)
+      &= \left(1 + \dfrac{1}{2r_+}\dfrac{r_+^2}{r_+^2 - r_-^2} + \dfrac{r_-}{2r_+^2}\dfrac{r_+^2}{r_+^2 - r_-^2}\right)P_0 \\
+      &= \left(1 + \frac12 \dfrac{r_+ + r_-}{r_+^2 - r_-^2}\right)P_0 \\
+      &= \left(1 + \frac12 \dfrac{1}{r_+ - r_-}\right)P_0
   \end{align}
 $$
 
