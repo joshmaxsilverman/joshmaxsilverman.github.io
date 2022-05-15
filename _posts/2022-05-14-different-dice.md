@@ -50,14 +50,14 @@ unlike the starting state, they can return to themselves, directly or indirectly
 
 to find the transition probabilities from the starting state, $P(\textbf{start}\rightarrow x),$ we need
 
-1. the number of ways to pick numbers for the duplicate group, $D$
-2. the number of ways to pick numbers for the unique group, $U$
-3. the number of ways to order those numbers
+1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
+2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
+3. the number of ways to order those numbers, $O(\{U,D}\)$
 
-for example, if the target state has $1$ unique member in $D$ and $2$ elements of $U$ then the probability $P(\textbf{start}\rightarrow\textbf{target})$ is
+for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{start}\rightarrow\textbf{target}) = \dbinom{4}{1}\dbinom{3}{2}\dfrac{4!}{2!}
+  P(\textbf{start}\rightarrow\textbf{target}) = \overbrace{\dbinom{4}{1}}^{\Omega(D)}\overbrace{\dbinom{3}{2}}^{\Omega(U)}\overbrace{\dfrac{4!}{2!}}^{O(\{U,D\}}}
 $$
 
 <br>
