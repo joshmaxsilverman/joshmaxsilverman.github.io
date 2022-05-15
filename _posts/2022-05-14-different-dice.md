@@ -94,7 +94,7 @@ carrying on like this, we get all the remaining transition probabilities:
 
 $$
   \begin{array}{c|c|c}
-    P(aabc\rightarrow aaab) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{4^2} \\ \hline
+    P(aabc\rightarrow aaab) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
     P(aaab\rightarrow aabc) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
     P(aaab \rightarrow aaab) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline
     P(aabc \rightarrow aabc) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
@@ -103,4 +103,22 @@ $$
   \end{array} 
 $$
 
+## The probability to win, $P(\textbf{S})$
+
+with the transition probabilities in hand, the equations for $P(aabc)$ and $P(aaab)$ become 
+
+$$
+  \begin{align}
+    P(aabc) &= \frac18 P(aaab) + \frac58 P(aabc) + \frac18 \\
+    P(aaab) &= \frac{3}{16}P(aaab) + \frac{9}{16}P(aabc) + \frac{3}{32} \\
+   \end{align}
+ $$
+
+which yields $P(aabc)= \frac{29}{60}$ and $P(aaab) = \frac{9}{20}.$
+
+Plugging these in to the original equation for $P(\textbf{S}),$ we get 
+
+$$
+  \boxed{P(\textbf{S]) = \dfrac{9}{20} = 45\%}.
+$$
 <br>
