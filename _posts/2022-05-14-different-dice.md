@@ -24,7 +24,7 @@ date: 2022/05/14
 On first glance, there seem to be many states to track. each die can be $1$ through $4,$ so there are $4^4 = 256$ nominal states. 
 
 Really, there are just a few relevant meta-states:
-- the beginning $\textbf{S}$
+- the beginning $\boldsymbol{S}$
 - two die are the same $\boldsymbol{aabc}$ 
 - three die are the same $\boldsymbol{aaab}$ 
 - all die are different $\boldsymbol{abcd}$ (the win state)
@@ -35,9 +35,9 @@ Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are
 
 ![](/img/2022-05-14-different-dice-graph.png){:width="300 px" class="image-centered"}
 
-Also, $\boldsymbol{aaab}$ is actually the same state as the starting state $\textbf{S}.$ When the three $a$ get flipped, they are random with respect to $b,$ and it is as if we flipped $b$ too.
+Also, $\boldsymbol{aaab}$ is actually the same state as the starting state $\boldsymbol{S}.$ When the three $a$ get flipped, they are random with respect to $b,$ and it is as if we flipped $b$ too.
 
-With this insight, we can join $\textbf{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
+With this insight, we can join $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
 
 ![](/img/2022-05-14-different-dice-reduced.png){:width="250 px" class="image-centered"}
 
@@ -48,23 +48,22 @@ The game can end in a win if it goes directly to $abcd,$ or it goes to to $aabc$
 Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning the starting state is
 
 $$
-  P(\textbf{S}) =  T(\textbf{S}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\textbf{S}\rightarrow \boldsymbol{aaab})(\boldsymbol{aaab}) + T(\textbf{S}\rightarrow \boldsymbol{abcd})
+  P(\boldsymbol{S/aaab}) =  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab})(\boldsymbol{S/aaab}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd})
 $$
 
-We also have equations for $P(aabc)$ and $P(aaab):$ 
+Likewise
 
 $$
     \begin{align}
-      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{aaab})P(\boldsymbol{aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}) \\
-      P(\boldsymbol{aaab}) &= T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aaab}\rightarrow \boldsymbol{aaab})P(\boldsymbol{aaab})+  T(\boldsymbol{aaab}\rightarrow \boldsymbol{abcd})
+      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}) \\
     \end{align}
 $$
 
-Unlike the starting state, they can return to themselves, directly or indirectly. 
+In addition to moving to other states, both $\boldsymbol{S/aaab}$ and $\boldsymbol{aabc}$ can loop on themselves.
 
 ## Transition combinatorics
 
-To find the transition probabilities from the starting state, $T(\textbf{S}\rightarrow \boldsymbol{x}),$ we need
+To find the transition probabilities from the starting state, $T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{x}),$ we need
 
 1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
 2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
@@ -73,71 +72,71 @@ To find the transition probabilities from the starting state, $T(\textbf{S}\righ
 For example, if the target state is $\boldsymbol{aabc}$ then it has $1$ unique member in $D,$ $2$ members of $U$ and the transition probability is
 
 $$
-  T(\textbf{S}\rightarrow \boldsymbol{aabc}) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}.
+  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc}) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}.
 $$
 
 Carrying this through gets
 
 $$
   \begin{array}{c|c|c}
-    T(\textbf{S}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{24}{256}\\ \hline
-    T(\textbf{S}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{144}{256} \\ \hline
-    T(\textbf{S}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{48}{256}.
+    T(\textbf{S/aaab}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{3}{32}\\ \hline
+    T(\textbf{S/aaab}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{9}{16} \\ \hline
+    T(\textbf{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}.
   \end{array} 
 $$
 
-We also need the transition probabilities between the transient states, and from the transient states to $\boldsymbol{abcd}.$
+We also need the transition probabilities between the transient state, and from the transient state to $\boldsymbol{abcd}.$
 
-To go from $\boldsymbol{aabc}$ to $\boldsymbol{aaab},$ the duplicates need to reroll as either both $\boldsymbol{b}$ or both $\boldsymbol{c}$ 
+To go from $\boldsymbol{aabc}$ to $\boldsymbol{S/aaab},$ the duplicates need to reroll as either both $\boldsymbol{b}$ or both $\boldsymbol{c}$ 
 
 $$
   \begin{align}
     T(\boldsymbol{aabc} \rightarrow \boldsymbol{aaab}) &= \binom{2}{1}\frac{1}{4^2} \\
-    &= \frac{2}{4^2}.
+    &= \frac{1}{8}.
   \end{align}
 $$
 
-In the other direction, there are two possibilities: 
+We can check our insight above by doing the same calculation in the other direction. There are two possibilities: 
 - $2$ of the rerolls are duplicates of each other and the third is another number different from $\boldsymbol{b},$ or 
 - $1$ of the rerolls is a duplicate of $\boldsymbol{b}$ and the other two are distinct numbers each different from $\boldsymbol{b},$ so we get
 
 $$
   \begin{align}
     T(\boldsymbol{aaab} \rightarrow \boldsymbol{aabc}) &= \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} \\
-      &= \frac{36}{64}
+      &= \frac{9}{16},
   \end{align}
 $$
+
+as expected.
 
 Carrying on like this, we can get the remaining transition probabilities:
 
 $$
   \begin{array}{c|c|c}
-    T(\boldsymbol{aabc}\rightarrow \boldsymbol{aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-    T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc}) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!1!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
-    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aaab}) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!1!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline
+    T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
+<!--     T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc}) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!1!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
+    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aaab}) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!1!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline -->
     T(\boldsymbol{aabc} \rightarrow \boldsymbol{aabc}) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
     T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-    T(\boldsymbol{aaab} \rightarrow \boldsymbol{abcd}) & \frac{3!}{1!1!1!}\frac{1}{4^3} & \frac{6}{64}
+<!--     T(\boldsymbol{aaab} \rightarrow \boldsymbol{abcd}) & \frac{3!}{1!1!1!}\frac{1}{4^3} & \frac{6}{64} -->
   \end{array} 
 $$
 
-## The probability to win, $P(\textbf{S})$
+## The probability to win, $P(\boldsymbol{S/aaab})$
 
 with the transition probabilities in hand, the equations for $P(\boldsymbol{aabc})$ and $P(\boldsymbol{aaab})$ become 
 
 $$
   \begin{align}
-    P(\boldsymbol{aabc}) &= \frac18 P(\boldsymbol{aaab}) + \frac58 P(\boldsymbol{aabc}) + \frac18 \\
-    P(\boldsymbol{aaab}) &= \frac{3}{16}P(\boldsymbol{aaab}) + \frac{9}{16}P(\boldsymbol{aabc}) + \frac{3}{32} \\
+    P(\boldsymbol{aabc}) &= \frac18 P(\boldsymbol{S/aaab}) + \frac58 P(\boldsymbol{aabc}) + \frac18 \\
+    P(\boldsymbol{S/aaab}) &= \frac{3}{16}P(\boldsymbol{S/aaab}) + \frac{9}{16}P(\boldsymbol{aabc}) + \frac{3}{32} \\
    \end{align}
  $$
 
-which yields $P(\boldsymbol{aabc})= 29/60$ and $P(\boldsymbol{aaab}) = 9/20.$
-
-Plugging these in to the original equation for $P(\textbf{S}),$ we get 
+which yields $P(\boldsymbol{aabc})= 29/60$ and $P(\boldsymbol{S/aaab}) = 9/20.$ So,
 
 $$
-  \boxed{P(\textbf{S}) = \dfrac{9}{20} = 45\%}.
+  \boxed{P(\boldsymbol{S/aaab}) = \dfrac{9}{20} = 45\%}.
 $$
 
 <br>
