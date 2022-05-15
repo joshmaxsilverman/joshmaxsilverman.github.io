@@ -16,7 +16,7 @@ date: 2022/05/14
 on first glance, there seem to be many states to track. each die can be $1-4,$ so there are $4^4 = 256$ nominal states. 
 
 really, there are just six relevant meta-states:
-- the beginning $\textbf{start}$
+- the beginning $\textbf{S}$
 - two die are the same $aabc$ 
 - three die are the same $aaab$ 
 - all die are different $abcd$ (the win state)
@@ -29,7 +29,7 @@ a win can happen if the starting state goes directly to the win state $abcd,$ or
 
 $$
   \boxed{
-    P_\text{win}(\textbf{start}) = P(\textbf{start}\rightarrow abcd) + P(\textbf{start}\rightarrow aabc)P_\text{win}(aabc) + P(\textbf{start}\rightarrow aaab)P_\text{win}(aaab)
+    P_\text{win}(\textbf{S}) = P(\textbf{S}\rightarrow abcd) + P(\textbf{S}\rightarrow aabc)P_\text{win}(aabc) + P(\textbf{S}\rightarrow aaab)P_\text{win}(aaab)
    }
 $$
 
