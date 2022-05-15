@@ -23,7 +23,7 @@ date: 2022/05/14
 
 On first glance, there seem to be many states to track. each die can be $1$ through $4,$ so there are $4^4 = 256$ nominal states. 
 
-Really, there are just six relevant meta-states:
+Really, there are just a few relevant meta-states:
 - the beginning $\textbf{S}$
 - two die are the same $\boldsymbol{aabc}$ 
 - three die are the same $\boldsymbol{aaab}$ 
@@ -34,6 +34,12 @@ Really, there are just six relevant meta-states:
 Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are transient. 
 
 ![](/img/2022-05-14-different-dice-graph.png){:width="300 px" class="image-centered"}
+
+Also, $\boldsymbol{aaab}$ is actually the same state as the starting state $\textbf{S}.$ When the three $a$ get flipped, they are random with respect to $b,$ and it is as if we flipped $b$ too.
+
+With this insight, we can join $\textbf{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
+
+![](/img/2022-05-14-different-dice-reduced.png){:width="250 px" class="image-centered"}
 
 ## Coarse grained dynamics
 
