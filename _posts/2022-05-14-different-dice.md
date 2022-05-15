@@ -23,7 +23,7 @@ really, there are just six relevant meta-states:
 - two pairs of die are the same $aabb$ (a lose state)
 - all four die are the same $aaaa$ (a lose state)
 
-reaching one of the last three states ends the game, while the first three are transient. 
+reaching one of the last three states ends the game, while the first $aab$ and $aaab$ are transient. 
 
 a win can happen if the starting state goes directly to the win state $abcd,$ or it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to the win state $abcd.$ the probability of winning from the beginning
 
