@@ -5,11 +5,19 @@ title: Different Dice
 date: 2022/05/14
 ---
 
->**Question**:
+>**Question**: You have four fair tetrahedral dice whose four sides are numbered 1 through 4.
+>
+>You play a game in which you roll them all and divide them into two groups: those whose values are unique, and those which are duplicates. For example, if you roll a 1, 2, 2 and 4, then the 1 and 4 will go into the “unique” group, while the 2s will go into the “duplicate” group.
+>
+>Next, you reroll all the dice in the duplicate pool and sort all the dice again. Continuing the previous example, that would mean you reroll the 2s. If the result happens to be 1 and 3, then the “unique” group will now consist of 3 and 4, while the “duplicate” group will have two 1s.
+>
+>You continue rerolling the duplicate pool and sorting all the dice until all the dice are members of the same group. If all four dice are in the “unique” group, you win. If all four are in the “duplicate” group, you lose.
+>
+>What is your probability of winning the game?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/its-elementary-my-dear-riddler/))
 
 ## Solution
 
@@ -116,7 +124,7 @@ $$
    \end{align}
  $$
 
-which yields $P(aabc)= \frac{29}{60}$ and $P(aaab) = \frac{9}{20}.$
+which yields $P(aabc)= 29/60$ and $P(aaab) = 9/20.$
 
 Plugging these in to the original equation for $P(\textbf{S}),$ we get 
 
