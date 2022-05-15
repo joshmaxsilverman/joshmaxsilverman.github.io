@@ -5,15 +5,13 @@ title: Different Dice
 date: 2022/05/14
 ---
 
->**Question**: You have four fair tetrahedral dice whose four sides are numbered 1 through 4.
+>**Question**: You have four fair four-sided dice whose sides are numbered 1 through 4.
 >
 >You play a game in which you roll them all and divide them into two groups: those whose values are unique, and those which are duplicates. For example, if you roll a 1, 2, 2 and 4, then the 1 and 4 will go into the “unique” group, while the 2s will go into the “duplicate” group.
 >
->Next, you reroll all the dice in the duplicate pool and sort all the dice again. Continuing the previous example, that would mean you reroll the 2s. If the result happens to be 1 and 3, then the “unique” group will now consist of 3 and 4, while the “duplicate” group will have two 1s.
+>Next, you reroll all the dice in the duplicate pool and sort all the dice again. You continue rerolling the duplicate pool and sorting all the dice until all the dice are members of the same group. If all four dice are in the “unique” group, you win. If all four are in the “duplicate” group, you lose.
 >
->You continue rerolling the duplicate pool and sorting all the dice until all the dice are members of the same group. If all four dice are in the “unique” group, you win. If all four are in the “duplicate” group, you lose.
->
->What is your probability of winning the game?
+>What is the probability you win the game?
 
 <!--more-->
 
@@ -21,46 +19,46 @@ date: 2022/05/14
 
 ## Solution
 
-on first glance, there seem to be many states to track. each die can be $1$ through $4,$ so there are $4^4 = 256$ nominal states. 
+On first glance, there seem to be many states to track. each die can be $1$ through $4,$ so there are $4^4 = 256$ nominal states. 
 
-really, there are just six relevant meta-states:
+Really, there are just six relevant meta-states:
 - the beginning $\textbf{S}$
-- two die are the same $aabc$ 
-- three die are the same $aaab$ 
-- all die are different $abcd$ (the win state)
-- two pairs of die are the same $aabb$ (a lose state)
-- all four die are the same $aaaa$ (a lose state)
+- two die are the same $\boldsymbol{aabc}$ 
+- three die are the same $\boldsymbol{aaab}$ 
+- all die are different $\boldsymbol{abcd}$ (the win state)
+- two pairs of die are the same $\boldsymbol{aabb}$ (a lose state)
+- all four die are the same $\boldsymbol{aaaa}$ (a lose state)
 
-reaching one of the last three states ends the game, while the first $aab$ and $aaab$ are transient. 
+Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are transient. 
 
 ![](/img/2022-05-14-different-dice-dynamics.png){:width="300 px" class="image-centered"}
 
 ## Coarse grained dynamics
 
-a win can happen if the starting state goes directly to the win state $abcd,$ or it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to the win state $abcd.$ the probability of winning from the beginning
+The game can end in a win if it goes directly to $abcd,$ or it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to $abcd.$ 
+
+Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning the starting state is
 
 $$
   \boxed{
-    P_\text{win}(\textbf{S}) = P(\textbf{S}\rightarrow abcd) + P(\textbf{S}\rightarrow aabc)P_\text{win}(aabc) + P(\textbf{S}\rightarrow aaab)P_\text{win}(aaab)
+    P(\textbf{S}) =  T(\textbf{S}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\textbf{S}\rightarrow \boldsymbol{aaab})(\boldsymbol{aaab}) + T(\textbf{S}\rightarrow \boldsymbol{abcd})
    }
 $$
 
-from there we also have equations for $P_\text{win}(aabc)$ and $P_\text{win}(aaab):$ 
+We also have equations for $P(aabc)$ and $P(aaab):$ 
 
 $$
-  \boxed{
     \begin{align}
-      P_\text{win}(aabc) &= P(aabc\rightarrow aaab)P_\text{win}(aaab) + P(aabc\rightarrow aabc)P_\text{win}(aabc) + P(aabc\rightarrow abcd) \\
-      P_\text{win}(aaab) &= P(aaab\rightarrow aabc)P_\text{win}(aabc) + P(aaab\rightarrow aaab)P_\text{win}(aaab)+  P(aaab\rightarrow abcd)
+      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{aaab})P(\boldsymbol{aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}) \\
+      P(\boldsymbol{aaab}) &= T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aaab}\rightarrow \boldsymbol{aaab})P(\boldsymbol{aaab})+  T(\boldsymbol{aaab}\rightarrow \boldsymbol{abcd})
     \end{align}
-  }
 $$
 
-unlike the starting state, they can return to themselves, directly or indirectly. 
+Unlike the starting state, they can return to themselves, directly or indirectly. 
 
 ## Transition combinatorics
 
-to find the transition probabilities from the starting state, $P(\textbf{S}\rightarrow x),$ we need
+To find the transition probabilities from the starting state, $T(\textbf{S}\rightarrow x),$ we need
 
 1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
 2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
@@ -69,7 +67,7 @@ to find the transition probabilities from the starting state, $P(\textbf{S}\righ
 for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{O(U,D)}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
+  T(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{\text{orders}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
 carrying this through gets
