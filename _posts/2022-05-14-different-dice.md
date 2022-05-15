@@ -98,7 +98,7 @@ $$
     P(aaab\rightarrow aabc) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
     P(aaab \rightarrow aaab) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline
     P(aabc \rightarrow aabc) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
-    P(aabc \rightarrow abcd) & \frac{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
+    P(aabc \rightarrow abcd) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
     P(aaab \rightarrow abcd) & \frac{3!}{4^3} & \frac{6}{64}
   \end{array} 
 $$
