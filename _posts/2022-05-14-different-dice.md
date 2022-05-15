@@ -63,10 +63,10 @@ $$
 carrying this through gets
 
 $$
-  \begin{array}{c|c} \hline
+  \begin{array}{|c|c|} \hline
     P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\dfrac{4!}{1!1!1!1!}\frac{1}{4^4} \\ \hline
     P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\dfrac{4!}{2!1!1!} \\ \hline
-    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\dfrac{4!}{3!1!}
+    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\dfrac{4!}{3!1!} \hline
   \end{array} 
 $$
 <br>
