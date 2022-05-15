@@ -113,14 +113,15 @@ Carrying on like this, we can get the remaining transition probabilities:
 
 $$
   \begin{array}{c|c|c}
-    T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-<!--     T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc}) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!1!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
-    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aaab}) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!1!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline -->
-    T(\boldsymbol{aabc} \rightarrow \boldsymbol{aabc}) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{10}{16} \\ \hline
-    T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{2}{16} \\ \hline
-<!--     T(\boldsymbol{aaab} \rightarrow \boldsymbol{abcd}) & \frac{3!}{1!1!1!}\frac{1}{4^3} & \frac{6}{64} -->
+    T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{1}{8} \\ \hline
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{aabc}) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{5}{8} \\ \hline
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{1}{8} \\ \hline
   \end{array} 
 $$
+
+
+<!--     T(\boldsymbol{aaab}\rightarrow \boldsymbol{aabc}) & \left[\binom{3}{1}\binom{2}{1}\frac{3!}{2!1!} + \binom{3}{2}\frac{3!}{1!1!1!}\right]\frac{1}{4^3} &  \frac{36}{64} \\ \hline
+    T(\boldsymbol{aaab} \rightarrow \boldsymbol{aaab}) & \left[\binom{3}{1} + \binom{3}{1}\frac{3!}{2!1!}\right]\frac{1}{4^3} & \frac{12}{64} \\ \hline --         T(\boldsymbol{aaab} \rightarrow \boldsymbol{abcd}) & \frac{3!}{1!1!1!}\frac{1}{4^3} & \frac{6}{64} -->
 
 ## The probability to win, $P(\boldsymbol{S/aaab})$
 
