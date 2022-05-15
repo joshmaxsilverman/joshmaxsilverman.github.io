@@ -57,13 +57,13 @@ to find the transition probabilities from the starting state, $P(\textbf{S}\righ
 for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{S}\rightarrow aabc) = \overbrace{\dbinom{4}{1}}^{\Omega(D)}\overbrace{\dbinom{3}{2}}^{\Omega(U)}\overbrace{\dfrac{4!}{2!1!1!}}^{O(\{U,D\}}\frac{1}{4^4} = \frac{144}{256}
+  P(\textbf{S}\rightarrow aabc) = \overset{\dbinom{4}{1}}^{\Omega(D)}\overset{\dbinom{3}{2}}^{\Omega(U)}\overset{\dfrac{4!}{2!1!1!}}^{O(\{U,D\}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
 carrying this through gets
 
 $$
-  \begin{array}{|c|c|}[c] \hline
+  \begin{array}{|c|c|} \hline
     P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} \\ \hline
     P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} \\ \hline
     P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} \\ \hline
