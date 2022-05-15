@@ -57,7 +57,7 @@ to find the transition probabilities from the starting state, $P(\textbf{S}\righ
 for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{S}\rightarrow aabc) = \overset{\dbinom{4}{1}}^{\Omega(D)}\overset{\dbinom{3}{2}}^{\Omega(U)}\overset{\dfrac{4!}{2!1!1!}}^{O(\{U,D\}}\frac{1}{4^4} = \frac{144}{256}
+  P(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{O(\{U,D\}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
 carrying this through gets
