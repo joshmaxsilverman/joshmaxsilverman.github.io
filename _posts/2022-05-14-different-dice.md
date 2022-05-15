@@ -40,9 +40,7 @@ The game can end in a win if it goes directly to $abcd,$ or it goes to to $aabc$
 Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning the starting state is
 
 $$
-  \boxed{
-    P(\textbf{S}) =  T(\textbf{S}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\textbf{S}\rightarrow \boldsymbol{aaab})(\boldsymbol{aaab}) + T(\textbf{S}\rightarrow \boldsymbol{abcd})
-   }
+  P(\textbf{S}) =  T(\textbf{S}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\textbf{S}\rightarrow \boldsymbol{aaab})(\boldsymbol{aaab}) + T(\textbf{S}\rightarrow \boldsymbol{abcd})
 $$
 
 We also have equations for $P(aabc)$ and $P(aaab):$ 
