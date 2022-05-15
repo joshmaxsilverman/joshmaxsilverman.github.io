@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Different Dice
-subtitle: Which way will this game absorb you?
+subtitle: Will these dice absorb you?
 tags: coarse-graining counting
 date: 2022/05/14
 ---
