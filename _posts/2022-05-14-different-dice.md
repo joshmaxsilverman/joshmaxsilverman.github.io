@@ -52,21 +52,21 @@ to find the transition probabilities from the starting state, $P(\textbf{S}\righ
 
 1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
 2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
-3. the number of ways to order those numbers, $O(\{U,D}\)$
+3. the number of ways to order those numbers, $O(U,D)$
 
 for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{O(\{U,D\}}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
+  P(\textbf{S}\rightarrow aabc) = \overset{\Omega(D)}{\dbinom{4}{1}}\overset{\Omega(U)}{\dbinom{3}{2}}\overset{O(U,D)}{\dfrac{4!}{2!1!1!}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
 carrying this through gets
 
 $$
-  \begin{array}{|c|c|} \hline
-    P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} \\ \hline
-    P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} \\ \hline
-    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} \\ \hline
+  \begin{array}{c|c|c}
+    P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{24}{256}\\ \hline
+    P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{144}{256} \\ \hline
+    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{48}{256} \\ \hline
   \end{array} 
 $$
 <br>
