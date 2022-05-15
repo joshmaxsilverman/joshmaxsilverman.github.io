@@ -119,6 +119,6 @@ which yields $P(aabc)= \frac{29}{60}$ and $P(aaab) = \frac{9}{20}.$
 Plugging these in to the original equation for $P(\textbf{S}),$ we get 
 
 $$
-  \boxed{P(\textbf{S]) = \dfrac{9}{20} = 45\%}.
+  \boxed{P(\textbf{S}) = \dfrac{9}{20} = 45%}.
 $$
 <br>
