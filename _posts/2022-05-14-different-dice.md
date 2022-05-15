@@ -125,7 +125,7 @@ $$
 
 ## The probability to win, $P(\boldsymbol{S/aaab})$
 
-with the transition probabilities in hand, the equations for $P(\boldsymbol{aabc})$ and $P(\boldsymbol{aaab})$ become 
+With the transition probabilities in hand, the equations for $P(\boldsymbol{aabc})$ and $P(\boldsymbol{aaab})$ become 
 
 $$
   \begin{align}
