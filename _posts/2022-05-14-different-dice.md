@@ -13,7 +13,7 @@ date: 2022/05/14
 
 ## Solution
 
-on first glance, there seem to be many states to track. each die can be $1-4,$ so there are $4^4 = 256$ nominal states. 
+on first glance, there seem to be many states to track. each die can be $1$ through $4,$ so there are $4^4 = 256$ nominal states. 
 
 really, there are just six relevant meta-states:
 - the beginning $\textbf{S}$
