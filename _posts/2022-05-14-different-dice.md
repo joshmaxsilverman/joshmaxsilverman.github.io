@@ -33,7 +33,7 @@ Really, there are just six relevant meta-states:
 
 Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are transient. 
 
-![](/img/2022-05-14-different-dice-dynamics.png){:width="300 px" class="image-centered"}
+![](/img/2022-05-14-different-dice-graph.png){:width="300 px" class="image-centered"}
 
 ## Coarse grained dynamics
 
