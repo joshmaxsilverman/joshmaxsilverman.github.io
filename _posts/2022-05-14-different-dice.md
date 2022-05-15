@@ -35,9 +35,9 @@ Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are
 
 ![](/img/2022-05-14-different-dice-graph.png){:width="300 px" class="image-centered"}
 
-Also, $\boldsymbol{aaab}$ is actually the same state as the starting state $\boldsymbol{S}.$ When the three $a$ get flipped, they are random with respect to $b,$ and it is as if we flipped $b$ too.
+Also, $\boldsymbol{aaab}$ is equivalent to the starting state $\boldsymbol{S}$ — when the three $a$ get flipped, they are random with respect to $b,$ and it is as if $b$ flipped too.
 
-With this insight, we can join $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
+With this insight, we can merge $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
 
 ![](/img/2022-05-14-different-dice-reduced.png){:width="150 px" class="image-centered"}
 
