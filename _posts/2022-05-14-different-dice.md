@@ -16,7 +16,7 @@ date: 2022/05/14
 on first glance, there seem to be many states to track. each die can be $1-4,$ so there are $4^4 = 256$ nominal states. 
 
 really, there are just six relevant meta-states:
-- the beginning $\emptyset$
+- the beginning $\textbf{start}$
 - two die are the same $aabc$ 
 - three die are the same $aaab$ 
 - all die are different $abcd$ (the win state)
@@ -29,7 +29,7 @@ a win can happen if the starting state goes directly to the win state $abcd,$ or
 
 $$
   \boxed{
-    P_\text{win}(\emptyset) = P(\emptyset\rightarrow abcd) + P(\emptyset\rightarrow aabc)P_\text{win}(aabc) + P(\emptyset\rightarrow aaab)P_\text{win}(aaab)
+    P_\text{win}(\textbf{start}) = P(\textbf{start}\rightarrow abcd) + P(\textbf{start}\rightarrow aabc)P_\text{win}(aabc) + P(\textbf{start}\rightarrow aaab)P_\text{win}(aaab)
    }
 $$
 
@@ -45,5 +45,17 @@ $$
 $$
 
 unlike the starting state, they can return to themselves, directly or indirectly. 
+
+to find the transition probabilities from the starting state, $P(\textbf{start}\rightarrow x),$ we need to multiply
+
+1. the number of ways to form the duplicated subgroup, $D$
+2. the number of ways to form the unique subgroup, $U$
+3. the number of ways to order those numbers
+
+if the target state has $d$ elements of $D$ and $u$ elements of $U$ then the probability $P(\textbf{start}\rightarrow\textbf{target})$ is
+
+$$
+  P(\textbf{start}\rightarrow\textbf{target}) = \dbinom{4}{d}\dbinom{3}{u}\dfrac{4!}{u!d!}
+$$
 
 <br>
