@@ -115,7 +115,7 @@ $$
   \begin{array}{c|c|c}
     T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab}) & \binom{2}{1}\frac{1}{4^2} & \frac{1}{8} \\ \hline
     T(\boldsymbol{aabc} \rightarrow \boldsymbol{aabc}) & \left[4^2 - 3\binom{2}{1}\right]\frac{1}{4^2} & \frac{5}{8} \\ \hline
-    T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{1}{8} \\ \hline
+    T(\boldsymbol{aabc} \rightarrow \boldsymbol{abcd}) & \binom{2}{1}\frac{1}{4^2} & \frac{1}{8}
   \end{array} 
 $$
 
