@@ -48,7 +48,7 @@ unlike the starting state, they can return to themselves, directly or indirectly
 
 ## transition probabilities
 
-to find the transition probabilities from the starting state, $P(\textbf{start}\rightarrow x),$ we need
+to find the transition probabilities from the starting state, $P(\textbf{S}\rightarrow x),$ we need
 
 1. the number of ways $\Omega(D)$ to pick numbers for the duplicate group $D$
 2. the number of ways $\Omega(U)$ to pick numbers for the unique group, $U$
@@ -57,7 +57,16 @@ to find the transition probabilities from the starting state, $P(\textbf{start}\
 for example, if the target state is $aabc$ then it has $1$ unique member in $D$ and $2$ elements of $U$ and the transition probability is
 
 $$
-  P(\textbf{S}\rightarrow aabc) = \overbracket{\dbinom{4}{1}}^{\Omega(D)}\overbracket{\dbinom{3}{2}}^{\Omega(U)}\overbracket{\dfrac{4!}{2!1!1!}}^{O(\{U,D\}} = 144
+  P(\textbf{S}\rightarrow aabc) = \overbracket{\dbinom{4}{1}}^{\Omega(D)}\overbracket{\dbinom{3}{2}}^{\Omega(U)}\overbracket{\dfrac{4!}{2!1!1!}}^{O(\{U,D\}}\frac{1}{4^4} = \frac{144}{256}
 $$
 
+carrying this through gets
+
+$$
+  \begin{array}{c|c} \hline
+    P(\textbf{S}\rightarrow abcd) & \binom{4}{4}\dfrac{4!}{1!1!1!1!}\frac{1}{4^4} \\ \hline
+    P(\textbf{S}\rightarrow aabc) & \binom{4}{1}\binom{3}{2}\dfrac{4!}{2!1!1!} \\ \hline
+    P(\textbf{S}\rightarrow aaab) & \binom{4}{1}\binom{3}{1}\dfrac{4!}{3!1!}
+  \end{array} 
+$$
 <br>
