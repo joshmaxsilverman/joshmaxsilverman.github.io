@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Different Dice
-subtitle: How many times will you roll before this game absorbs you?
+subtitle: Which way will this game absorb you?
 tags: coarse-graining counting
 date: 2022/05/14
 ---
