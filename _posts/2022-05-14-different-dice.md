@@ -131,4 +131,5 @@ Plugging these in to the original equation for $P(\textbf{S}),$ we get
 $$
   \boxed{P(\textbf{S}) = \dfrac{9}{20} = 45%}.
 $$
+
 <br>
