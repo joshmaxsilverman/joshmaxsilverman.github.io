@@ -48,7 +48,7 @@ The game ends in a win if it goes directly to $abcd,$ or if it bounces around be
 Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning from the starting state is
 
 $$
-  P(\boldsymbol{S/aaab}) =  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab})(\boldsymbol{S/aaab}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}).
+  P(\boldsymbol{S/aaab}) =  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}).
 $$
 
 Likewise,
