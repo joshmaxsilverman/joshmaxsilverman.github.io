@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Different Dice
-subtitle: Will these dice absorb you?
+subtitle: Get absorbed by these dice.
 tags: coarse-graining counting
 date: 2022/05/14
 ---
