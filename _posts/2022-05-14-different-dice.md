@@ -37,13 +37,13 @@ Reaching one of the last three states ends the game, while $aabc$ and $aaab$ are
 
 Also, $\boldsymbol{aaab}$ is equivalent to the starting state $\boldsymbol{S}.$ When the three $a$ get re-flipped, they are random with respect to $b,$ so it's as if $b$ gets flipped too.
 
-With this insight, we can merge $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced game:
+With this insight, we can merge $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and focus on the reduced three state game:
 
 ![](/img/2022-05-14-different-dice-reduced.png){:width="150 px" class="image-centered"}
 
 ## Coarse grained dynamics
 
-The game can end in a win if it goes directly to $abcd,$ or if it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to $abcd.$ 
+The game ends in a win if it goes directly to $abcd,$ or if it bounces around between $aabc$ and $aaab,$ and then goes to $abcd.$ 
 
 Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning from the starting state is
 
@@ -54,12 +54,8 @@ $$
 Likewise,
 
 $$
-    \begin{align}
-      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}). \\
-    \end{align}
+  P(\boldsymbol{aabc}) = T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}).
 $$
-
-In addition to moving to other states, both $\boldsymbol{S/aaab}$ and $\boldsymbol{aabc}$ loop on themselves.
 
 ## Transition combinatorics
 
@@ -81,13 +77,13 @@ $$
   \begin{array}{c|c|c}
     T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{3}{32}\\ \hline
     T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{9}{16} \\ \hline
-    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}
+    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{S/aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}
   \end{array} 
 $$
 
-We also need the transition probabilities between the transient state, and from the transient state to $\boldsymbol{abcd}.$
+We also need the transition probabilities from $\boldsymbol{aabc}.$
 
-To go from $\boldsymbol{aabc}$ to $\boldsymbol{S/aaab},$ the duplicates need to reroll as either both $\boldsymbol{b}$ or both $\boldsymbol{c}$ 
+To go from $\boldsymbol{aabc}$ to $\boldsymbol{S/aaab},$ the duplicates need to reroll as either both $\boldsymbol{b}$ or both $\boldsymbol{c},$ and we find: 
 
 $$
   \begin{align}
@@ -96,7 +92,7 @@ $$
   \end{align}
 $$
 
-We can check our insight above by doing the same calculation in the other direction. There are two possibilities: 
+We can check our insight from above by doing the same calculation for the reverse transition. There are two possibilities: 
 - $2$ of the rerolls are duplicates of each other and the third is another number different from $\boldsymbol{b},$ or 
 - $1$ of the rerolls is a duplicate of $\boldsymbol{b}$ and the other two are distinct numbers each different from $\boldsymbol{b},$ so we get
 
