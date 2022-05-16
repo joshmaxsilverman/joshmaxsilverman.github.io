@@ -43,23 +43,23 @@ With this insight, we can merge $\boldsymbol{S}$ and $\boldsymbol{aaab}$ and foc
 
 ## Coarse grained dynamics
 
-The game can end in a win if it goes directly to $abcd,$ or it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to $abcd.$ 
+The game can end in a win if it goes directly to $abcd,$ or if it goes to to $aabc$ or $aaab$, possibly bounces around between them, and then goes to $abcd.$ 
 
-Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning the starting state is
+Calling $P(x)$ the probability to win the game from state $x$ and $T(x\rightarrow y)$ the probability of transition from state $x$ to state $y$, the probability of winning from the starting state is
 
 $$
-  P(\boldsymbol{S/aaab}) =  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab})(\boldsymbol{S/aaab}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd})
+  P(\boldsymbol{S/aaab}) =  T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab})(\boldsymbol{S/aaab}) + T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}).
 $$
 
-Likewise
+Likewise,
 
 $$
     \begin{align}
-      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}) \\
+      P(\boldsymbol{aabc}) &= T(\boldsymbol{aabc}\rightarrow \boldsymbol{S/aaab})P(\boldsymbol{S/aaab}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{aabc})P(\boldsymbol{aabc}) + T(\boldsymbol{aabc}\rightarrow \boldsymbol{abcd}). \\
     \end{align}
 $$
 
-In addition to moving to other states, both $\boldsymbol{S/aaab}$ and $\boldsymbol{aabc}$ can loop on themselves.
+In addition to moving to other states, both $\boldsymbol{S/aaab}$ and $\boldsymbol{aabc}$ loop on themselves.
 
 ## Transition combinatorics
 
@@ -81,7 +81,7 @@ $$
   \begin{array}{c|c|c}
     T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{abcd}) & \binom{0}{0}\binom{4}{4}\frac{4!}{1!1!1!1!}\frac{1}{4^4} & \frac{3}{32}\\ \hline
     T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aabc}) & \binom{4}{1}\binom{3}{2}\frac{4!}{2!1!1!}\frac{1}{4^4} & \frac{9}{16} \\ \hline
-    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}.
+    T(\boldsymbol{S/aaab}\rightarrow \boldsymbol{aaab}) & \binom{4}{1}\binom{3}{1}\frac{4!}{3!1!}\frac{1}{4^4} & \frac{3}{16}
   \end{array} 
 $$
 
