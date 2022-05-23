@@ -19,11 +19,11 @@ if Sag A*'s spin axis points toward Earth at random, then the probability is equ
 
 # Approximate
 
-because $\SI{10}{\degree}$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
+because $10^\degree$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
 
 $$
   \begin{align}
-    P(\text{Sag A}^*\text{ alignment}}) &= \dfrac{\pi\theta^2}{4\pi} \\
+    P(\text{Sag A}^*\text{ alignment}) &= \dfrac{\pi\theta^2}{4\pi} \\
     &= \frac14 \frac{10}{180}\pi \\
     &\approx 0.0076
   \end{align}
