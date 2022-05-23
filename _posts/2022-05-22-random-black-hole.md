@@ -7,11 +7,13 @@ subtitle: Or here's lookin at us?
 date: 2022/05/22
 ---
 
->Question
+>**Question:** Data from the Event Horizon Telescope was recently used to generate a never-before-seen image of the black hole — Sagittarius A* — at the center of our galaxy. One of the most striking things about the image is how clearly we can make out the black hole’s shadow (as shown below). That’s because the plane of its accretion disk is nearly perpendicular to the vector between us and the black hole.
+>
+>Was this likely to occur, or was it just a cosmic coincidence? Let’s find out. Assuming the accretion disk was equally likely to be in any plane, what is the probability of it being within 10 degrees of perpendicular to us, thereby resulting in a spectacular image?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-spot-the-black-hole/))
 
 ## Solution
 
