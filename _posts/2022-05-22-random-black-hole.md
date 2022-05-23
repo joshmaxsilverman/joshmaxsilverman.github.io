@@ -43,7 +43,7 @@ $$
   \begin{align}
     \Delta \Omega &= 2\pi\int\limits_{0}^{\frac{10\pi}{180}}\sin\theta\, d\theta \\
     &= 2\pi\left(1 - \cos\theta\right)\rvert_{\theta = \frac{10 \pi}{180}} \\
-    &\approx 0.007596
+    &\approx 0.007596.
   \end{align}
 $$
 
