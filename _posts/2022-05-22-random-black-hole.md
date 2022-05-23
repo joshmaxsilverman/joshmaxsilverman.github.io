@@ -21,7 +21,7 @@ If Sag A*'s spin axis points toward Earth at random, then the probability is equ
 
 ![](/img/2022-05-23-random-black-hole.png){:width="400 px" class="image-centered"}
 
-# Approximate
+### Approximate
 
 Because $10^\circ$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
 
@@ -33,7 +33,7 @@ $$
   \end{align}
 $$
 
-# Exact
+### Exact
 
 For amusement, we can integrate the surface patch to find the exact solid angle:
 
