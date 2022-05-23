@@ -29,9 +29,11 @@ $$
   \begin{align}
     P(\text{Sag A}^*\text{ alignment}) &= \dfrac{\pi\theta^2}{4\pi} \\
     &= \frac14 \left(\frac{10}{180}\pi\right)^2 \\
-    &\approx 0.007615
+    &\approx 0.007615,
   \end{align}
 $$
+
+which should be a bit of an overestimate.
 
 ### Exact
 
@@ -45,7 +47,13 @@ $$
   \end{align}
 $$
 
-Indeed, if we expand this to second order and divide by $4\pi,$ it becomes $\frac12\left(1 - 1 + \frac12\theta^2\right) = \frac14\theta^2,$ which is exactly what we got with the circle approximation.
+Indeed, if we expand this to second order and divide by $4\pi,$ it becomes 
+
+$$
+  \frac12\left(1 - 1 + \frac12\theta^2\right) = \frac14\theta^2,
+$$ 
+
+which is exactly what we got with the circle approximation.
 
 
 
