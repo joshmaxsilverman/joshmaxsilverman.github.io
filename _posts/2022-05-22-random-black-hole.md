@@ -19,6 +19,8 @@ date: 2022/05/22
 
 If Sag A*'s spin axis points toward Earth at random, then the probability is equal to the fraction of solid angles consistent with the alignment.
 
+![](/img/2022-05-23-random-black-hole.png){:width="400 px" class="image-centered"}
+
 # Approximate
 
 Because $10^\circ$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
