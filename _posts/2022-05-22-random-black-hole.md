@@ -1,9 +1,9 @@
 ---
 layout: post
 published: true
-title: Here's lookin' at you, Sag A* 
+title: Sag A* alignment
 tags: probability geometry
-subtitle: Or here's lookin at us?
+subtitle: Here's lookin' at you kid.
 date: 2022/05/22
 ---
 
