@@ -21,7 +21,7 @@ If Sag A*'s spin axis points toward Earth at random, then the probability is equ
 
 # Approximate
 
-Because $10^\circ`$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
+Because $10^\circ$ is small patch of surface, curvature won't mess things up too much and we can approximate the surface patch as a circle of radius $s = \theta.$
 
 $$
   \begin{align}
@@ -38,7 +38,7 @@ For amusement, we can integrate the surface patch to find the exact solid angle:
 $$
   \begin{align}
     \Delta S &= 2\pi\int\limits_{0}^{\dfrac{10\pi}{180}}\sin\theta\, d\theta \\
-    &= 2\pi\left(1 - \cos\theta\right)\midd_{\theta = \dfrac{10 \pi}{180}} \\
+    &= 2\pi\left(1 - \cos\theta\right)\rvert{\theta = \dfrac{10 \pi}{180}} \\
     &\approx 0.007596
   \end{align}
 $$
