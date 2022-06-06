@@ -42,7 +42,7 @@ Going down the line, each traveler had even odds to point up or down, so the pro
 So, the chance of no intersections with a particular choice of $t_\text{up}$ and $t_\text{down}$ is
 
 $$
-  \frac{1}{2^{t_\text{up}+t_\text{down}}}\sum_{t_\text{up}} \binom{t_\text{up}+t_\text{down}}{t_\text{up}} \frac{1}{t_\text{up}!}\frac{1}{t_\text{down}!}
+  \frac{1}{2^{t_\text{up}+t_\text{down}}}\sum \binom{t_\text{up}+t_\text{down}}{t_\text{up}} \frac{1}{t_\text{up}!}\frac{1}{t_\text{down}!}
 $$
 
 Obviously, $t_\text{up}$ and $t_\text{down}$ add up to $n$: $t_\text{up} + t_\text{down} = n$ so, putting it all together, we get 
