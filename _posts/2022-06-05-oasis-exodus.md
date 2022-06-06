@@ -31,7 +31,7 @@ in the real problem, the choices aren't so restricted — each traveler could pi
 
 to start, assume the travelers pick their place on the line in some order.
 
-because every traveler starts on the line, noone from the top can possibly intersect with anyone on the bottom. so, we just need either side to be correctly sorted. if there are $T_\text{up}$ travelers on the top side, and $T_\text{down}$ on the down side, then the probability each side is sorted correctly is $1/(T_\text{up}!T_\text{down}!.$ 
+because every traveler starts on the line, noone from the top can possibly intersect with anyone on the bottom. so, we just need either side to be correctly sorted. if there are $T_\text{up}$ travelers on the top side, and $T_\text{down}$ on the down side, then the probability each side is sorted correctly is $1/(T_\text{up}!T_\text{down}!).$ 
 
 if we go down the line, each traveler had even odds to point up or down, so the probability of any particular set of choices is $1/2^n.$ also, we only care about the totals number of up and down pointers, not who they happen to be. coarse graining, there are $\binom{T_\text{up} + T_\text{down}}{T_\text{up}}$ equivalent ways to make a choice of $T_\text{up}$ up pointers and $T_\text{down}$ down pointers.
 
