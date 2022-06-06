@@ -58,4 +58,7 @@ so, the sum is just $\binom{2n}{n},$ and our overall probability is
 $$
   P(n) = \frac{1}{2^n n!}\binom{2n}{n}
 $$
+
+ddd
+
 <br>
