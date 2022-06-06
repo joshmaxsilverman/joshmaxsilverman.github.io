@@ -17,7 +17,7 @@ The basic idea is that two travelers won't intersect so long as the one on the r
 
 First, we can go quick and dirty to get an idea of how the solution should scale. 
 
-# approximate argument
+# Approximate argument
 
 As $n$ gets big, about half the travelers will be on the top or bottom. Dividing the angular real estate into equal sized chunks, the travelers on the top pick an angle from $1/(\frac12 n)$ of the available angels on the average. The same goes for the travelers on the bottom.
 
@@ -25,7 +25,7 @@ So, the probability of no intersection is approximately $P(n) \approx 1/(n/2)^n 
 
 This shows the approximate $n$ dependence, but has the wrong scaling factor. Happily, the exact probability falls to a simple counting argument.
 
-# counting argument
+# Counting argument
 
 Really, the angle choices aren't so restricted — each traveler could pick an angle from the same small region and as long as they're in clockwise order there won't be any intersections. 
 
