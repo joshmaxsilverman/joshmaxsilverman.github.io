@@ -67,7 +67,4 @@ $$
 
 Notably, up to scaling factors, this decays like $1/n^n.$
 
-
-ddd
-
 <br>
