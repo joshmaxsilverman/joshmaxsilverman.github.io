@@ -1,15 +1,19 @@
 ---
 layout: post
 published: false
-title: Oasis Exodus
+title: Introverts Exodus
+subtitle: Can you get some privacy on your last walk into the great beyond?
+tags: generating-functions counting exclusion
 date: 2022/06/05
 ---
 
->Question
+>**Question:** In the Great Riddlerian Desert, there is a single oasis that is straight and narrow. There are $n$ travelers who are trapped at the oasis, and one day, they agree that they will all leave. They independently pick a random location in the oasis from which to start and a random direction in which to travel. Once their supplies are packed, they all head out.
+>
+>What is the probability that none of their paths will intersect, in terms of $n$? (For the purposes of this puzzle, assume the oasis is a line segment, while the desert is an infinite Cartesian plane.)
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-escape-the-desert/))
 
 ## Solution
 
@@ -17,7 +21,7 @@ The basic idea is that two travelers won't intersect so long as the one on the r
 
 First, we can go quick and dirty to get an idea of how the solution should scale. 
 
-# Approximate argument
+### Approximate argument
 
 As $n$ gets big, about half the travelers will be on the top or bottom. Dividing the angular real estate into equal sized chunks, the travelers on the top pick an angle from $1/(\frac12 n)$ of the available angels on the average. The same goes for the travelers on the bottom.
 
@@ -25,7 +29,7 @@ So, the probability of no intersection is approximately $P(n) \approx 1/(n/2)^n 
 
 This shows the approximate $n$ dependence, but has the wrong scaling factor. Happily, the exact probability falls to a simple counting argument.
 
-# Counting argument
+### Counting argument
 
 Really, the angle choices aren't so restricted — each traveler could pick an angle from the same small region and as long as they're in clockwise order there won't be any intersections. 
 
