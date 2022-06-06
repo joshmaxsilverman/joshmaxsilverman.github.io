@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Introverts Exodus
 subtitle: Can you get some privacy on your last walk into the great beyond?
 tags: generating-functions counting exclusion
