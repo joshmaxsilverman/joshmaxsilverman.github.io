@@ -37,7 +37,7 @@ To start, assume that the travelers pick their place on the line in some order.
 
 Because every traveler starts from the oasis line, nobody from the up side can possibly intersect with anybody from the down side. So, we just need both sides to be correctly sorted. If there are $t_\text{up}$ travelers on the up side, and $t_\text{down}$ on the down side, then the probability that each side is correctly sorted is $1/(t_\text{up}!\cdot t_\text{down}!).$ 
 
-![](/img/2022-06-05-traveler-rays.png) {:width = "450 px", class = "image-centered"}
+![](/img/2022-06-05-traveler-rays.png){:width = "450 px" class = "image-centered"}
 
 Going down the line, each traveler had even odds to point up or down, so the probability of any particular set of choices is $1/2^{t_\text{up}+t_\text{bottom}}.$ Also, we only care about the total number of up and down pointed travelers, not who they happen to be. Coarse graining, there are $\binom{t_\text{up} + t_\text{down}}{t_\text{up}}$ equivalent ways to pick $t_\text{up}$ up pointers and $t_\text{down}$ down pointers.
 
