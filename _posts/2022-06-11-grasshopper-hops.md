@@ -23,6 +23,11 @@ to make this more concrete, we can think about infinitely many grasshoppers jump
 
 after a long time has gone by, the grasshoppers will come reach an equilibrium where the probability distribution isn't changing anymore. 
 
+now, take a video of the grasshoppers hopping for a long time. if we play this movie forward or backward, we wouldn't be able to tell the difference. this means that the probability of any transition is the same as the probability of the reverse transition $P(x\rightarrow y) = P(y\rightarrow x).$ 
 
+the probability of seeing the transition $x\rightarrow y$ is the probability of starting at $y$ times the probability of starting in $x$ and going to $y,$ i.e.
+
+$$
+  P(x\rightarrow y) = T(x \rightarrow 
 
 <br>
