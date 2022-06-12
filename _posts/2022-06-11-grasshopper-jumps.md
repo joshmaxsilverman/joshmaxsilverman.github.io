@@ -51,12 +51,13 @@ This means that $P(x) = P(y)$ for all such points and therefore $P(x) = \text{co
 
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
-Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$
-
-$P(y\rightarrow x\rvert x)$ is a uniform distribution over $\left(0,y + \frac15\right),$ so
+Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert x)$ is a uniform distribution over $(0,y + \frac15),$ so
 
 $$
-  P(y) = \text{const.} \frac{y + \frac15}{\frac25}.
+  \begin{align}
+    P(y) &= P(x) \frac{P(x\rightarrow y\rvert y)}{P(x\rightarrow y\rvert y)}\\
+    &= \text{const.} \frac{y + \frac15}{\frac25}.
+  \end{align}
 $$
 
 Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(1/5)/P(0) = 2}.$
