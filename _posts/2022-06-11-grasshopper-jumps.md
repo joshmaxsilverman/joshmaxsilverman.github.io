@@ -57,7 +57,7 @@ $$
   P(y) = \text{const.} \frac{y + \frac15}{\frac25}.
 $$
 
-Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(\frac15)/P(0) = 2}.$
+Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P\left(\frac15\right)/P(0) = 2}.$
 
 ### Grasshopper distribution
 
