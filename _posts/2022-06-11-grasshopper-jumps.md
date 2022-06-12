@@ -45,11 +45,15 @@ $$
 
 If we compare two points $x$ and $y$ that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution over a region of width $\frac25,$ as is $P(y\rightarrow x\rvert y).$ 
 
+![](/img/2022-06-11-grasshopper-free-jump.png){:width="500 px" class="image-centered"}
+
 So, $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
 This means that $P(x) = P(y)$ for all such points and therefore $P(x) = \text{const.}$ between $\frac15$ and $\frac45.$
 
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
+
+![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
 
 Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert x)$ is a uniform distribution over the region from $0$ to $y + \frac15,$ so
 
