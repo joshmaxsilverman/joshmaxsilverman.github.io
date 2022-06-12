@@ -51,22 +51,22 @@ This means that $P(x) = P(y)$ for all such points and therefore $P(x) = \text{co
 
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
-Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert x)$ is a uniform distribution over $(0,y + \frac15),$ so
+Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert x)$ is a uniform distribution over the region from $0$ to $y + \frac15,$ so
 
 $$
   \begin{align}
-    P(y) &= P(x) \frac{P(x\rightarrow y\rvert x)}{P(y\rightarrow x\rvert y)}\\
+    P(y) &= P(1/5) \frac{P(1/5\rightarrow y\rvert 1/5)}{P(y\rightarrow 1/5\rvert y)}\\
     &= \text{const.} \frac{y + \frac15}{\frac25}.
   \end{align}
 $$
 
-Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(1/5)/P(0) = 2}.$
+Immediately, we see that the greatest probability is any point in the central region, and the lowest probability is at either edge of the balance beam. Plugging in, we get $\boxed{P(1/5)/P(0) = 2}.$
 
 ### Grasshopper distribution
 
 We can continue on like this and peel off the probability distribution.
 
-Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
+Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{\frac25}$ for $y$ bigger than $\frac45.$
 
 This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
 
