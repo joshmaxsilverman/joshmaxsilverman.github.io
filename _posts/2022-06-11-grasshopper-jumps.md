@@ -61,9 +61,9 @@ This means that $P(x) = P(y)$ for all such pairs of points and so $P(x) = \text{
 
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
-![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
-
 **The wings**
+
+![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
 
 Now we can push into the wings by using $x=\frac15$ as a anchor point to investigate all points $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert y)$ is a uniform distribution over the region from $0$ to $y + \frac15,$ so
 
