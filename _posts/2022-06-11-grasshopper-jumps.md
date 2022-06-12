@@ -55,12 +55,12 @@ Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\r
 
 $$
   \begin{align}
-    P(y) &= P(\frac15) \frac{P(\frac15\rightarrow y\rvert \frac15)}{P(y\rightarrow \frac15\rvert y)}\\
+    P(y) &= P(\trac15) \frac{P(\frac15\rightarrow y\rvert \frac15)}{P(y\rightarrow \frac15\rvert y)}\\
     &= \text{const.} \frac{y + \frac15}{\frac25}.
   \end{align}
 $$
 
-Immediately, we see that the greatest probability is any point in the central region, and the lowest probability is at either edge of the balance beam. Plugging in, we get $\boxed{P(1/5)/P(0) = 2}.$
+Immediately, we see that the greatest probability is any point in the central region, and the lowest probability is at either edge of the balance beam. Plugging in, we get $\boxed{P(\tfrac15)/P(0) = 2}.$
 
 ### Grasshopper distribution
 
