@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Grasshopper jumps
-subtitle: Where will you find this mysterious creature?
+subtitle: Where will you find this beautiful and mysterious creature?
 tags: equilibrium detailed-balance rates
 date: 2022/06/11
 ---
@@ -74,7 +74,7 @@ Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{
 
 This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays flat until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
 
-![](/img/2022-06-11-grasshopper-distribution-sketch.png){:width="450 px" class="image-centered"}
+![](/img/2022-06-11-grasshopper-dist.png){:width="450 px" class="image-centered"}
 
 The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the trapezoids on the wings, we get
 
