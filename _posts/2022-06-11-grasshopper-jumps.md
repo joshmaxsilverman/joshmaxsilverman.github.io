@@ -55,7 +55,7 @@ Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$ $P(y\r
 
 $$
   \begin{align}
-    P(y) &= P(1/5) \frac{P(1/5\rightarrow y\rvert 1/5)}{P(y\rightarrow 1/5\rvert y)}\\
+    P(y) &= P(\frac15) \frac{P(\frac15\rightarrow y\rvert \frac15)}{P(y\rightarrow \frac15\rvert y)}\\
     &= \text{const.} \frac{y + \frac15}{\frac25}.
   \end{align}
 $$
