@@ -32,7 +32,7 @@ Next, take a video of the grasshoppers jumping in the equilibrium state. If we p
 The probability of observing the transition $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
-  P(a\rightarrow b) = P(a)\times P(a \rightarrow b\rvert a)
+  P(a\rightarrow b) = P(a) P(a \rightarrow b\rvert a)
 $$
 
 So, the time reverse equality becomes
