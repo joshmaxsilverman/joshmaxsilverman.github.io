@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Grasshopper jumps
 subtitle: Where will you find this mysterious creature?
 tags: equilibrium detailed-balance rates
