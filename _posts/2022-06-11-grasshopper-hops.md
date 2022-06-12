@@ -64,12 +64,12 @@ adding up the central rectangle and the trapezoids on the wings, we get
 $$
   \begin{align}
     \text{area} &= \text{const.}\cdot\frac35 + 2\frac{\text{const.} + \frac12\text{const.}}{2}\times\frac15 \\
-    &= \left(\frac35 + \frac32\frac15\right)\text{const.} \
+    &= \left(\frac35 + \frac32\frac15\right)\text{const.} \\
     &= \left(\frac{6}{10} + \frac{3}{10}\right)\text{const.}
   \end{align}
 $$
 
-which shows that $\text{const.} = \frac{10}{9}.$
+which shows that $\text{const.} = 10/9.$
 
 
 
