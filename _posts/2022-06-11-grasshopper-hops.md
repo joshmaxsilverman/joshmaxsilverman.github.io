@@ -39,7 +39,27 @@ $$
 
 with this in hand, we can peel off the probability distribution.
 
-if we compare two points that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution for $x-0.2\leq y \leq x + 0.2,$ and likewise for $P(y\rightarrow x\rvert y).$ this means that $P(x) = P(y),$ and so $P(x) = \text{const.}$ from $0.2 \leq x\leq 0.8.$
+if we compare two points that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution for $x-\frac15\leq y \leq x + \frac15,$ and likewise for $P(y\rightarrow x\rvert y).$ this means that $P(x) = P(y),$ and so $P(x) = \text{const.}$ from $\frac15 \leq x\leq \frac45.$
+
+starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$
+
+comparing $x=\frac15$ with a point $0\leq y < \frac15,$ the relation is $P(x)P(x\rightarrow y\rvert y) = P(y)P(y\rightarrow x\rvert x).$ 
+
+$P(y\rightarrow x\rvert x)$ is a uniform distribution from $0$ to $y + \frac15,$ so we get
+
+$$
+  P(y) = \text{const.} \frac{y + \frac15}{\frac25}
+$$
+
+symmetrically, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
+
+this gives us the shape of the probability distribution, it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
+
+now, the total area under $P(x)$ needs to be $1,$ which we can use to find $\text{const.}$
+
+
+
+
 
 
 
