@@ -19,59 +19,65 @@ date: 2022/06/11
 
 ## Solution
 
-to make this more concrete, we can think about infinitely many grasshoppers jumping around. we let them out at random positions on the beam and then let them hop around. the relative fraction of grasshoppers at position $x$ in this situation is equal to $p(x)$ in the single grasshopper problem. 
+To make this problem more concrete, we can think about infinitely many grasshoppers jumping around. Put them on the beam and then let them hop around. The relative fraction of grasshoppers at position $x$ in this situation is equal to $P(x)$ in the single grasshopper problem. 
 
-after a long time has gone by, the grasshoppers will reach an equilibrium state where the probability distribution isn't changing anymore. 
+### Grasshopper equilibrium
 
-now, take a video of the grasshoppers hopping in the equilibrium state for a long time. if we play this movie backward, we wouldn't be able to tell the difference, since the probability distribution is constant in time. this means that the probability of any transition is the same as the probability of the reverse transition: $P(x\rightarrow y) = P(y\rightarrow x).$ 
+After a long time has gone by, the grasshoppers will reach an equilibrium state where the probability distribution isn't changing anymore. 
 
-the probability of observing the transition $x\rightarrow y$ is the probability of being at $x$ times the probability of transitioning to $y$ given a start at $x$
+Next, take a video of the grasshoppers jumping in the equilibrium state. If we play this movie backward, we wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: $P(x\rightarrow y) = P(y\rightarrow x).$ 
+
+### Time-reversal equality
+
+The probability of observing the transition $x\rightarrow y$ is the probability of being at $x$ times the probability of transitioning to $y$ given a start at $x:$
 
 $$
   P(x\rightarrow y) = P(x)\cdot P(x \rightarrow y\rvert x)
 $$
 
-the time reverse equality means that
+So, the time reverse equality becomes
 
 $$
   P(x) P(x\rightarrow y\rvert x) = P(y) P(y\rightarrow x\rvert y).
 $$
 
-with this in hand, we can peel off the probability distribution.
+With this in hand, we can peel off the probability distribution.
 
-if we compare two points that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution for $x-\frac15\leq y \leq x + \frac15,$ and likewise for $P(y\rightarrow x\rvert y).$ this means that $P(x) = P(y),$ and so $P(x) = \text{const.}$ from $\frac15 \leq x\leq \frac45.$
+If we compare two points that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution for $x-\frac15\leq y \leq x + \frac15$ and likewise for $P(y\rightarrow x\rvert y).$ This means that $P(x) = P(y)$ for any such points and so $P(x) = \text{const.}$ for $\frac15 \leq x\leq \frac45.$
 
-starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$
+Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$
 
-comparing $x=\frac15$ with a point $0\leq y < \frac15,$ the relation is $P(x)P(x\rightarrow y\rvert y) = P(y)P(y\rightarrow x\rvert x).$ 
+Comparing $x=\frac15$ with a point $0\leq y < \frac15,$ the relation is $P(x)P(x\rightarrow y\rvert y) = P(y)P(y\rightarrow x\rvert x).$ 
 
 $P(y\rightarrow x\rvert x)$ is a uniform distribution from $0$ to $y + \frac15,$ so we get
 
 $$
-  P(y) = \text{const.} \frac{y + \frac15}{\frac25}
+  P(y) = \text{const.} \frac{y + \frac15}{\frac25}.
 $$
 
-immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(\frac15)/P(0) = 2}.$
+Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(\frac15)/P(0) = 2}.$
 
-symmetrically, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
+### Grasshopper distribution
 
-this gives us the shape of the probability distribution, it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
+Symmetrically, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
 
-now, the total area under $P(x)$ needs to be $1,$ which we can use to find $\text{const.}$
+This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
 
-adding up the central rectangle and the trapezoids on the wings, we get
+The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the trapezoids on the wings, we get
 
 $$
   \begin{align}
     \text{area} &= \text{const.}\cdot\frac35 + 2\frac{\text{const.} + \frac12\text{const.}}{2}\times\frac15 \\
     &= \left(\frac35 + \frac32\frac15\right)\text{const.} \\
-    &= \left(\frac{6}{10} + \frac{3}{10}\right)\text{const.}
+    &= \left(\frac{6}{10} + \frac{3}{10}\right)\text{const.},
   \end{align}
 $$
 
 which shows that $\text{const.} = 10/9.$
 
-indeed, an $N=10^8$ simulation yields the data in blue, plotted alongside the analytic prediction in gold:
+### Truth in numbers
+
+Indeed, an $N=10^8$ simulation yields the data in blue, plotted alongside the analytic prediction in gold:
 
 ![](/img/2022-06-11-grasshopper-jump.png){:width="450 px" class="image-centered"}
 
