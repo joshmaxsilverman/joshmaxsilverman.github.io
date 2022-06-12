@@ -69,8 +69,6 @@ This gives us the shape of the probability distribution: it starts at $\frac12\t
 
 ![](/img/2022-06-11-grasshopper-distribution-sketch.png){width="450 px" class="image-centered"}
 
-<>
-
 The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the trapezoids on the wings, we get
 
 $$
