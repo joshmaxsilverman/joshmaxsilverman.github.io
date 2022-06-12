@@ -71,6 +71,7 @@ $$
 
 which shows that $\text{const.} = 10/9.$
 
+indeed, an $N=10^8$ simulation in mathematica yields the data in blue, plotted alongside the analytic prediction in gold:
 
 
 
