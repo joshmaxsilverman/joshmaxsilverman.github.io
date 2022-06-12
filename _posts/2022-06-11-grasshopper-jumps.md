@@ -64,6 +64,10 @@ $$
   \end{align}
 $$
 
+This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays flat until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
+
+![](/img/2022-06-11-grasshopper-dist.png){:width="450 px" class="image-centered"}
+
 Immediately, we see that the greatest probability is any point in the central region, and the lowest probability is at either edge of the balance beam. Plugging in, we get $\boxed{P(\tfrac15)/P(0) = 2}.$
 
 ### Grasshopper distribution
@@ -71,10 +75,6 @@ Immediately, we see that the greatest probability is any point in the central re
 We can continue on like this and peel off the probability distribution.
 
 Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{\frac25}$ for $y$ bigger than $\frac45.$
-
-This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays flat until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
-
-![](/img/2022-06-11-grasshopper-dist.png){:width="450 px" class="image-centered"}
 
 The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the trapezoids on the wings, we get
 
