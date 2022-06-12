@@ -32,7 +32,7 @@ Next, take a video of the grasshoppers jumping in the equilibrium state. If we p
 The probability of observing the transition $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
-  P(a\rightarrow b) = P(a)\cdot P(a \rightarrow b\rvert a)
+  P(a\rightarrow b) = P(a)\times P(a \rightarrow b\rvert a)
 $$
 
 So, the time reverse equality becomes
@@ -57,13 +57,13 @@ $$
   P(y) = \text{const.} \frac{y + \frac15}{\frac25}.
 $$
 
-Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P\left(\frac15\right)/P(0) = 2}.$
+Immediately, we see that the greatest probability is anywhere in the central region, and the lowest probability is at either edge of the balance beam. plugging in, we get $\boxed{P(1/5)/P(0) = 2}.$
 
 ### Grasshopper distribution
 
 We can continue on like this and peel off the probability distribution.
 
-Working the other side, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
+Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
 
 This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
 
@@ -73,7 +73,7 @@ The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const
 
 $$
   \begin{align}
-    \text{area} &= \text{const.}\cdot\frac35 + 2\frac{\text{const.} + \frac12\text{const.}}{2}\times\frac15 \\
+    \text{area} &= \text{const.}\times\frac35 + 2\frac{\text{const.} + \frac12\text{const.}}{2}\times\frac15 \\
     &= \left(\frac35 + \frac32\frac15\right)\text{const.} \\
     &= \left(\frac{6}{10} + \frac{3}{10}\right)\text{const.},
   \end{align}
