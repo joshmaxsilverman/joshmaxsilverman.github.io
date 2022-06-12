@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: Grasshopper hops
+title: Grasshopper jumps
 subtitle: Where will you find this mysterious creature?
 tags: equilibrium detailed-balance rates
 date: 2022/06/11
@@ -71,10 +71,21 @@ $$
 
 which shows that $\text{const.} = 10/9.$
 
-indeed, an $N=10^8$ simulation in mathematica yields the data in blue, plotted alongside the analytic prediction in gold:
+indeed, an $N=10^8$ simulation yields the data in blue, plotted alongside the analytic prediction in gold:
 
+![](/img/2022-06-11-grasshopper-jump.png){:width="450 px" class="image-centered"}
 
+```mathematica
+transition[x_] := RandomReal[{Max[0, x - 0.2], Min[1, x + 0.2]}]
 
-
+round[] := (
+  point = 0.5;
+  Do[
+   point = transition[point]
+   , {i, 1, 1000}
+   ];
+  Return[point]
+  )
+```
 
 <br>
