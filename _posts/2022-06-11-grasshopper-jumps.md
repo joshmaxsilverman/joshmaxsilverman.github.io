@@ -25,11 +25,15 @@ To make this problem more concrete, we can think about many independent grasshop
 
 After a long time has gone by, the grasshoppers will reach the equilibrium state where their probability distribution isn't changing anymore. 
 
-Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie backward, you wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: $P(a\rightarrow b) = P(b\rightarrow a).$ 
+Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie backward, you wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: 
+
+$$
+  \boxed{P(a\rightarrow b) = P(b\rightarrow a)}.
+$$ 
 
 This is a tie that binds — between **any** two points on the beam, there is a **perfect balance** of forward and backward grasshopper transitions.
 
-We can break this down a bit — the probability of observing the transition $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
+We can break this down a bit — the probability of observing a grasshopper jump from $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
   P(a\rightarrow b) = P(a) P(a \rightarrow b\rvert a)
@@ -38,12 +42,12 @@ $$
 So, the time-reversal equality becomes
 
 $$
-  \boxed{P(a) P(a\rightarrow b\rvert a) = P(b) P(b\rightarrow a\rvert b)}.
+  P(a) P(a\rightarrow b\rvert a) = P(b) P(b\rightarrow a\rvert b).
 $$
 
 ### Wherefore art thou grasshoppers?
 
-The time-reversal equality, along with the grasshopper jumping behavior, will trace out the distribution over the entire balance beam.
+The time-reversal equality, along with the grasshoppers' jumping behavior, will trace out the distribution over the entire balance beam.
 
 If we compare two points $x$ and $y,$ both away from the edges, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution over a region of width $\frac15 + \frac15 = \frac25,$ as is $P(y\rightarrow x\rvert y).$ 
 
