@@ -65,8 +65,7 @@ $$
   \begin{align}
     \text{area} &= \const\cdot\frac35 + 2\frac{\text{const.} + \frac12\text{const.}}{2}\times\frac15 \\
     &= \left(\frac35 + \frac32\frac15\right)\text{const.} \
-    &= \left\frac{6}{10} + \frac{3}{10}\right)\text{const.}
-    \end{align}
+    &= \left(\frac{6}{10} + \frac{3}{10}\right)\text{const.}
   \end{align}
 $$
 
