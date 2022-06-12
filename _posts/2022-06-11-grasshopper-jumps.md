@@ -49,6 +49,8 @@ $$
 
 The time-reversal equality, along with the grasshoppers' jumping behavior, will trace out the distribution over the entire balance beam.
 
+**The center**
+
 If we compare two points $x$ and $y,$ both away from the edges, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution over a region of width $\frac15 + \frac15 = \frac25,$ as is $P(y\rightarrow x\rvert y).$ 
 
 ![](/img/2022-06-11-grasshopper-free-jump.png){:width="500 px" class="image-centered"}
@@ -60,6 +62,8 @@ This means that $P(x) = P(y)$ for all such pairs of points and so $P(x) = \text{
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
 ![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
+
+**The wings**
 
 Now we can push into the wings by using $x=\frac15$ as a anchor point to investigate all points $y$ between $0$ and $\frac15.$ $P(y\rightarrow x\rvert y)$ is a uniform distribution over the region from $0$ to $y + \frac15,$ so
 
