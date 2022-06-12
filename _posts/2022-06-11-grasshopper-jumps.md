@@ -47,7 +47,7 @@ $$
 
 ### Wherefore art thou grasshoppers?
 
-The time-reversal equality, along with the grasshoppers' jumping behavior, will trace out the distribution over the entire balance beam.
+We can use the time-reversal equality to trace out the distribution over the entire balance beam.
 
 **The center**
 
