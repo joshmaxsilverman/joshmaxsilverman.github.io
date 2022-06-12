@@ -25,31 +25,33 @@ To make this problem more concrete, we can think about infinitely many grasshopp
 
 After a long time has gone by, the grasshoppers will reach an equilibrium state where the probability distribution isn't changing anymore. 
 
-Next, take a video of the grasshoppers jumping in the equilibrium state. If we play this movie backward, we wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: $P(x\rightarrow y) = P(y\rightarrow x).$ 
+Next, take a video of the grasshoppers jumping in the equilibrium state. If we play this movie backward, we wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: $P(a\rightarrow b) = P(b\rightarrow a).$ 
 
 ### Time-reversal equality
 
-The probability of observing the transition $x\rightarrow y$ is the probability of being at $x$ times the probability of transitioning to $y$ given a start at $x:$
+The probability of observing the transition $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
-  P(x\rightarrow y) = P(x)\cdot P(x \rightarrow y\rvert x)
+  P(a\rightarrow b) = P(a)\cdot P(a \rightarrow b\rvert a)
 $$
 
 So, the time reverse equality becomes
 
 $$
-  P(x) P(x\rightarrow y\rvert x) = P(y) P(y\rightarrow x\rvert y).
+  P(a) P(a\rightarrow b\rvert a) = P(b) P(b\rightarrow a\rvert b).
 $$
 
-With this in hand, we can peel off the probability distribution.
+### Wherefore art thou grasshoppers?
 
-If we compare two points that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution for $x-\frac15\leq y \leq x + \frac15$ and likewise for $P(y\rightarrow x\rvert y).$ This means that $P(x) = P(y)$ for any such points and so $P(x) = \text{const.}$ for $\frac15 \leq x\leq \frac45.$
+If we compare two points $x$ and $y$ that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution $P(y) = 1/\left(\frac25\right)$ for $x-\frac15\leq y \leq x + \frac15$ and likewise for $P(y\rightarrow x\rvert y).$ 
 
-Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$
+This means that $P(x) = P(y)$ for any such points and so $P(x) = \text{const.}$ between $\frac15$ and $\frac45.$
 
-Comparing $x=\frac15$ with a point $0\leq y < \frac15,$ the relation is $P(x)P(x\rightarrow y\rvert y) = P(y)P(y\rightarrow x\rvert x).$ 
+<!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
-$P(y\rightarrow x\rvert x)$ is a uniform distribution from $0$ to $y + \frac15,$ so we get
+Now let's compare $x=\frac15$ with a point $y$ between $0$ and $\frac15.$
+
+$P(y\rightarrow x\rvert x)$ is a uniform distribution over $\left(0,y + \frac15\right),$ so
 
 $$
   P(y) = \text{const.} \frac{y + \frac15}{\frac25}.
@@ -59,9 +61,13 @@ Immediately, we see that the greatest probability is anywhere in the central reg
 
 ### Grasshopper distribution
 
-Symmetrically, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
+We can continue on like this and peel off the probability distribution.
+
+Working the other side, we get $P(y) = \text{const.} \frac{\frac15 + 1-y}{\frac25}$ for $0.8\leq y\leq 1.$
 
 This gives us the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays constant until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
+
+<>
 
 The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the trapezoids on the wings, we get
 
