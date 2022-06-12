@@ -43,7 +43,7 @@ $$
 
 ### Wherefore art thou grasshoppers?
 
-If we compare two points $x$ and $y$ that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x) = 1/(2/5)$ is a uniform probability distribution over a region of width $\frac25$ as is $P(y\rightarrow x\rvert y).$ 
+If we compare two points $x$ and $y$ that have the full freedom of jumping to the left or right, then $P(x\rightarrow y\rvert x)$ is a uniform probability distribution over a region of width $\frac25$ as is $P(y\rightarrow x\rvert y).$ 
 
 So, $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
