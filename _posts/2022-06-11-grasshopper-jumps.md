@@ -61,7 +61,7 @@ This means that $P(x) = P(y)$ for all such pairs of points and so $P(x) = \text{
 
 **The wings**
 
-Next, we can push into the wings by using $x=\frac15$ as a anchor point to investigate a point $y$ between $0$ and $\frac15.$ 
+Next, we can push into the wings by using $x=\frac15$ as an anchor point to investigate a point $y$ between $0$ and $\frac15.$ 
 ![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
 
 From $y,$ the grasshopper can jump a distance $y$ to the left, and $\tfrac15$ to the right, so $P(y\rightarrow x\rvert y)$ is a uniform distribution over a region of width $y + \frac15.$ Applying the time-reversal equality, we get
