@@ -25,7 +25,7 @@ To make this problem more concrete, we can think about many independent grasshop
 
 After a long time has gone by, the grasshoppers will reach the equilibrium state where their probability distribution isn't changing anymore. 
 
-Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie backward, you wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability of any transition is the same as the probability of the reverse transition: 
+Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie forward and backward, you wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability to observe any transition is the same as the probability to observe the reverse transition: 
 
 $$
   \boxed{P(a\rightarrow b) = P(b\rightarrow a)}.
@@ -33,7 +33,7 @@ $$
 
 This is a tie that binds — between **any** two points on the beam, there is a **perfect balance** of forward and backward grasshopper transitions.
 
-We can break this down a bit — the probability of observing a grasshopper jump from $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
+We can break this down a bit with the help of Reverend Bayes — the probability to observe a grasshopper jump from $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
   P(a\rightarrow b) = P(a) P(a \rightarrow b\rvert a)
@@ -50,21 +50,19 @@ $$
 We can use the time-reversal equality to trace out the distribution over the entire balance beam.
 
 **The center**
-If we compare two points $x$ and $y,$ both between $\tfrac15$ and $\tfrac45,$ then $P(x\rightarrow y\rvert x)$ and $P(y\rightarrow x\rvert y)$ are uniform probability distributions over regions of width $\frac15 + \frac15 = \frac25.$
+To start, compare two points $x$ and $y,$ both between $\tfrac15$ and $\tfrac45.$ Both can jump the full $\tfrac15$ to the left and $\tfrac15$ to the right, so $P(x\rightarrow y\rvert x)$ and $P(y\rightarrow x\rvert y)$ are uniform probability distributions over regions of width $\frac15 + \frac15 = \frac25,$ so $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
 ![](/img/2022-06-11-grasshopper-free-jump.png){:width="500 px" class="image-centered"}
-
-So, $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
 This means that $P(x) = P(y)$ for all such pairs of points and so $P(x) = \text{const.}$ in the region between $\frac15$ and $\frac45.$
 
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
 **The wings**
-Now we can push into the wings by using $x=\frac15$ as a anchor point to investigate a point $y$ between $0$ and $\frac15.$ 
+Next, we can push into the wings by using $x=\frac15$ as a anchor point to investigate a point $y$ between $0$ and $\frac15.$ 
 ![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
 
-$P(y\rightarrow x\rvert y)$ is a uniform distribution over the region from $0$ to $y + \frac15,$ so
+From $y,$ the grasshopper can jump a distance $y$ to the left, and $\tfrac15$ to the right, so $P(y\rightarrow x\rvert y)$ is a uniform distribution over a region of width $y + \frac15.$ Applying the time-reversal equality, we get
 
 $$
   \begin{align}
@@ -73,7 +71,7 @@ $$
   \end{align}
 $$
 
-With this, we have the shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays flat until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
+With this, we have the basic shape of the probability distribution: it starts at $\frac12\text{const.},$ then grows linearly to $\text{const.}$ at $x=\frac15,$ then stays flat until $x=\frac45,$ at which point it shrinks linearly back down to $\frac12\text{const.}$
 
 ![](/img/2022-06-11-grasshopper-dist.png){:width="450 px" class="image-centered"}
 
