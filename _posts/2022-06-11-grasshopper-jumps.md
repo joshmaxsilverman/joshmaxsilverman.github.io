@@ -81,7 +81,7 @@ Immediately, we see that the greatest probability is found at any point in the c
 
 We can continue on like this to peel off the rest of probability distribution.
 
-Working the other side, we get $P(y) = \text{const.}\times \frac{\frac15 + 1-y}{\frac25}$ for $y$ bigger than $\frac45.$
+Working the other side, we get $P(y) = \text{const.} \left(\frac15 + 1-y\right)/\left(\frac25\right)$ for $y$ bigger than $\frac45.$
 
 The total area under $P(x)$ has to be $1,$ which we can use to find $\text{const.}$ Adding up the central rectangle and the two trapezoids on the wings, we get
  
