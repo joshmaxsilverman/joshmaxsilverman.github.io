@@ -99,7 +99,7 @@ which shows that $\text{const.} = 10/9.$
 
 ### Truth in numbers
 
-Indeed, an $N=10^6$ simulation produces the data in blue, plotted alongside the analytic prediction in gold:
+Indeed, an $N=10^6$ simulation produces the data in blue, which is plotted alongside the analytic prediction in gold:
 
 ![](/img/2022-06-11-grasshopper-jump.png){:width="450 px" class="image-centered"}
 
