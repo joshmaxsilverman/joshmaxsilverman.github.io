@@ -51,7 +51,7 @@ We can use the time-reversal equality to trace out the distribution over the ent
 
 **The center**
 
-To start, compare two points $x$ and $y,$ both between $\tfrac15$ and $\tfrac45.$ Both can jump the full $\tfrac15$ to the left and $\tfrac15$ to the right, so $P(x\rightarrow y\rvert x)$ and $P(y\rightarrow x\rvert y)$ are uniform probability distributions over regions of width $\frac15 + \frac15 = \frac25,$ so $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
+To start, compare two points $x$ and $y,$ both between $\tfrac15$ and $\tfrac45.$ Both can jump the full $\tfrac15$ to the left and $\tfrac15$ to the right, so $P(x\rightarrow y\rvert x)$ and $P(y\rightarrow x\rvert y)$ are uniform probability distributions over regions of width $\frac15 + \frac15 = \frac25,$ and $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
 ![](/img/2022-06-11-grasshopper-free-jump.png){:width="500 px" class="image-centered"}
 
