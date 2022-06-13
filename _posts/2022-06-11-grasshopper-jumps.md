@@ -50,6 +50,7 @@ $$
 We can use the time-reversal equality to trace out the distribution over the entire balance beam.
 
 **The center**
+
 To start, compare two points $x$ and $y,$ both between $\tfrac15$ and $\tfrac45.$ Both can jump the full $\tfrac15$ to the left and $\tfrac15$ to the right, so $P(x\rightarrow y\rvert x)$ and $P(y\rightarrow x\rvert y)$ are uniform probability distributions over regions of width $\frac15 + \frac15 = \frac25,$ so $P(y\rightarrow x\rvert y) / P(x\rightarrow y\rvert x) = \frac25 \frac52 = 1.$
 
 ![](/img/2022-06-11-grasshopper-free-jump.png){:width="500 px" class="image-centered"}
@@ -59,6 +60,7 @@ This means that $P(x) = P(y)$ for all such pairs of points and so $P(x) = \text{
 <!-- Starting from the edges of this region, we can exploit the time-reversal equality again to get the rest of $P(x).$ -->
 
 **The wings**
+
 Next, we can push into the wings by using $x=\frac15$ as a anchor point to investigate a point $y$ between $0$ and $\frac15.$ 
 ![](/img/2022-06-11-grasshopper-edge-jump.png){:width="500 px" class="image-centered"}
 
