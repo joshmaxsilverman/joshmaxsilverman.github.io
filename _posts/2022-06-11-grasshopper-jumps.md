@@ -19,13 +19,13 @@ date: 2022/06/11
 
 ## Solution
 
-To make this problem more concrete, we can think about many independent grasshoppers jumping around. Put them on the beam and then let them hop around. The relative fraction of grasshoppers at position $x$ in this situation is equal to $P(x)$ in the single grasshopper problem. 
+To make this problem more concrete, we can think about many independent grasshoppers jumping around. Put them on the beam and then let them go. The relative fraction of grasshoppers at position $x$ in this situation is equal to $P(x)$ in the single grasshopper problem. 
 
 ### Lights, cameras, ... time-reversal equality
 
 After a long time has gone by, the grasshoppers will reach the equilibrium state where their probability distribution isn't changing anymore. 
 
-Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie forward and backward, you wouldn't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability to observe any transition is the same as the probability to observe the reverse transition: 
+Now, set up your camera and take a video of the grasshoppers jumping. If you play this movie forward and backward, you won't be able to tell the difference, since the equilibrium probability distribution is constant in time. This means that the probability to observe any transition is the same as the probability to observe the reverse transition: 
 
 $$
   \boxed{P(a\rightarrow b) = P(b\rightarrow a)}.
@@ -33,7 +33,7 @@ $$
 
 This is a tie that binds — between **any** two points on the beam, there is a **perfect balance** of forward and backward grasshopper transitions.
 
-We can break this down a bit with the help of Reverend Bayes — the probability to observe a grasshopper jump from $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
+We can break this down with the help of Reverend Bayes — the probability to observe a grasshopper jump from $a\rightarrow b$ is the probability of being at $a$ times the probability of transitioning to $b$ given a start at $a:$
 
 $$
   P(a\rightarrow b) = P(a) P(a \rightarrow b\rvert a)
