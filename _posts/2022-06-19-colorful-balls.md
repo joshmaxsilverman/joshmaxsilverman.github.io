@@ -48,10 +48,14 @@ $$
 
 Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $2S = 34$ total balls in the urn.
 
-![](/img/2022-06-19-colorful-balls.png){:width="400 px" class="image-centered"}
+![](/img/2022-06-19-colorful-balls-dist.png){:width="400 px" class="image-centered"}
 
 That's just great. 
 
-But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10%$ under its maximum value. So in the end, it's anyone's guess.
+But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10%$ under its maximum value. 
+
+![](/img/2022-06-19-colorful-balls-zoom.png){:width="400 px" class="image-centered"}
+
+So in the end, it's anyone's guess.
 
 <br>
