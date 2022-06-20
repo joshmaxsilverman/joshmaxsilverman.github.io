@@ -49,7 +49,7 @@ $$
     P(2S\rvert{\color{red}8},{\color{blue}{11}}) \sim P({\color{red}8},{\color{blue}{11}}\rvert 2S) = \tbinom{S}{8}\tbinom{S}{11}/\tbinom{2S}{19},
 $$
 
-and our best guess is $\max_\limits_{S} P(2S\rvert{\color{red}8},{\color{blue}{11}}).$
+and our best guess is $\text{arg max}_S P(2S\rvert{\color{red}8},{\color{blue}{11}}).$
 
 Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $2S = 34$ total balls in the urn.
 
