@@ -33,16 +33,19 @@ $$
 
 By design, this is uniform in $S$ and we can ignore it as well.
 
-This tells us that 
+This tells us that the likelihood of $2S$ total balls given the observation is proportional to the probability of the observation given that there are $2S$ total balls:
 
 $$
   P(2S\rvert{\color{red}8},{\color{blue}{11}}) \sim P({\color{red}8},{\color{blue}{11}}\rvert 2S)
 $$
 
-The right side can be gotten by counting: there are $\binom{S}{8}\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
+The right side can be gotten by counting. There are $\binom{S}{8}\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
 
 $$
-  P(2S\rvert{\color{red}8},{\color{blue}{11}}) \sim \dfrac{\dbinom{S}{8}\dbinom{S}{11}}{\dbinom{2S}{19}}
+  \begin{align}
+    P(2S\rvert{\color{red}8},{\color{blue}{11}}) &\sim P({\color{red}8},{\color{blue}{11}}\rvert 2S) \\
+    &= \dfrac{\dbinom{S}{8}\dbinom{S}{11}}{\dbinom{2S}{19}}.
+  \end{align}
 $$
 
 Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $2S = 34$ total balls in the urn.
