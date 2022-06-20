@@ -13,9 +13,9 @@ date: 2022/06/19
 
 ## Solution
 
-we want to look at the variation in the probability that there are $2S$ balls in the urn given that $8$ red balls, and $11$ blue balls were drawn.
+in this problem, we are urn detectives. we want to look at the probability that there are $2S$ balls in the urn given that $8$ red balls, and $11$ blue balls were drawn, and find the maximum.
 
-using bayes rule, we can write $P(2S\text{ and }\color{red}{8}\color{black}{,}\color{blue}{11})$ two different ways:
+using bayes' rule, we can write $P(2S\text{ and }\color{red}{8}\color{black}{,}\color{blue}{11})$ two different ways:
 
 $$
   P(2S\rvert\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}) = \frac{P(\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}\rvert 2S)}{P(\color{red}{8}\color{black}{,}\color{blue}{11}\color{black})}P(2S)
@@ -28,7 +28,7 @@ we don't have any evidence about the number of balls beyond the balls we've draw
 this tell us that 
 
 $$
-  P(2S\rvert\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}) = P(\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}\rvert 2S)
+  P(2S\rvert{\color{red}8},{\color{blue}11}) = P(\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}\rvert 2S)
 $$
 
 the right side can be gotten by counting: there are $\binom{S}{8}\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
