@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: How many balls do they have?
 date: 2022/06/19
 ---
