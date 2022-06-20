@@ -17,7 +17,7 @@ date: 2022/06/19
 
 In this problem, we are urn detectives. We want to look at the probability that there are $2S$ balls in the urn given that we drew $8$ red balls, and $11$ blue balls, and eyeball the maximum.
 
-Using Bayes' rule, we can write $P(2S\text{ and }{\color{red}8},{\color{blue}{11}})$ two different ways:
+Using Bayes' rule, we can write $P(2S\text{ and }{\color{red}8},{\color{blue}{11}})$ two different ways, and find:
 
 $$
   P(2S\rvert{\color{red}8},{\color{blue} 11}) = \frac{P({\color{red}8},{\color{blue} 11}\rvert 2S)}{P({\color{red}8},{\color{blue} 11})}P(2S).
