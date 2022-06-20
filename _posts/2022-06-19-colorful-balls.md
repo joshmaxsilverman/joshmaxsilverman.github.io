@@ -15,7 +15,7 @@ date: 2022/06/19
 
 we want to gauge the probability that there are $2S$ balls in the urn given that $8$ red balls, and $11$ blue balls were drawn.
 
-using bayes rule, we can write $P(2S\text{ and }\color{red}{8},\,\color{blue}{11})$ two different ways:
+using bayes rule, we can write $P(2S\text{ and }\color{red}{8}\color{black}{,}\color{blue}{11})$ two different ways:
 
 
 
