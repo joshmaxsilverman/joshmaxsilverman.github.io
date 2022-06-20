@@ -37,8 +37,8 @@ $$
   P(2S\rvert\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}) \sim \dfrac{\binom{S}{8}\binom{S}{11}}{\binom{2S}{19}}
 $$
 
-plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds ton $34$ total balls in the urn.
+plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $34$ total balls in the urn.
 
-great.
+that's just great.
 
 <br>
