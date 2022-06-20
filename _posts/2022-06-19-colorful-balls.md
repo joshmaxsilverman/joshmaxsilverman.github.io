@@ -7,7 +7,7 @@ tags: counting inference
 date: 2022/06/19
 ---
 
->**Question:** You have an urn with an equal number of red balls and white balls, but you have no information about what that number might be. You draw 19 balls at random, without replacement, and you get eight red balls and 11 white balls. What is your best guess for the original number of balls (red and white) in the urn?
+>**Question:** You have an urn with an equal number of red balls and blue balls, but you have no information about what that number might be. You draw 19 balls at random, without replacement, and you get eight red balls and 11 blue balls. What is your best guess for the original number of balls (red plus blue) in the urn?
 
 <!--more-->
 
@@ -25,13 +25,13 @@ $$
 
 The denominator is the same for all values of $S,$ so we can forget about it.
 
-We don't have any evidence about the number of balls beyond the balls we've drawn. So, to ensure we're unbiased, we use a uniform prior distribution with Dirac spikes at each possible value
+We don't have any evidence about the number of balls beyond the balls we've drawn. So, to ensure we're unbiased, we use a uniform prior distribution with Dirac spikes at each possible value (starting at $S=11$ since we drew $11$ blue balls)
 
 $$
-  P(2T) = \lim_{M\rightarrow\infty}\frac1M\sum_{i=11}\delta(2T-i).
+  P(S) = \lim_{M\rightarrow\infty}\frac1M\sum_{i=11}\delta(S-i).
 $$ 
 
-By design, this is uniform in $T$ and we can ignore it as well.
+By design, this is uniform in $S$ and we can ignore it as well.
 
 This tells us that 
 
