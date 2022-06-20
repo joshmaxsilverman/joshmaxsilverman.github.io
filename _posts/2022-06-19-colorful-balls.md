@@ -59,7 +59,7 @@ That's just great.
 
 ### The letdown
 
-But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10%$ under its maximum value. 
+But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10\%$ under its maximum value. 
 
 ![](/img/2022-06-19-colorful-balls-zoom.png){:width="400 px" class="image-centered"}
 
