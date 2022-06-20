@@ -1,7 +1,9 @@
 ---
 layout: post
 published: true
-title: How many balls do they have?
+title: Colorful balls
+subtitle: How many do they have?
+tags: counting inference
 date: 2022/06/19
 ---
 
