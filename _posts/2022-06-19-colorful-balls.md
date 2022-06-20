@@ -54,4 +54,6 @@ Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which 
 
 That's just great. 
 
+But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10%$ under its maximum value. So in the end, it's anyone's guess.
+
 <br>
