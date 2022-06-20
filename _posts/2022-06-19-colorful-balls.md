@@ -31,7 +31,7 @@ $$
   P(2S\rvert\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}) = P(\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}\rvert 2S)
 $$
 
-the right side can be gotten by counting: there are $\binom{S}{8}\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
+the right side can be gotten by counting: there are $\binom{S}{8}\times\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
 
 $$
   P(2S\rvert\color{red}{8}\color{black}{,}\color{blue}{11}\color{black}) \sim \dfrac{\binom{S}{8}\binom{S}{11}}{\binom{2S}{19}}
