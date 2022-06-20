@@ -17,6 +17,8 @@ date: 2022/06/19
 
 In this problem, we are urn detectives. We want to look at the probability that there are $2S$ balls in the urn given that we drew $8$ red balls, and $11$ blue balls, and eyeball the maximum.
 
+### Bayesian inference
+
 Using Bayes' rule, we can write $P(2S\text{ and }{\color{red}8},{\color{blue}{11}})$ two different ways, and find:
 
 $$
@@ -39,6 +41,8 @@ $$
   P(2S\rvert{\color{red}8},{\color{blue}{11}}) \sim P({\color{red}8},{\color{blue}{11}}\rvert 2S)
 $$
 
+### Count 'em up
+
 The right side can be gotten by counting. There are $\binom{S}{8}\binom{S}{11}$ ways to draw $8$ red balls and $11$ blue balls, and there are $\binom{2S}{19}$ ways to draw any $19$ balls, so:
 
 $$
@@ -51,6 +55,8 @@ Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which 
 ![](/img/2022-06-19-colorful-balls-dist.png){:width="400 px" class="image-centered"}
 
 That's just great. 
+
+### The letdown
 
 But it's not that great, because it's a weak maximum. As $S$ tends to infinity, the curve plateaus about $10%$ under its maximum value. 
 
