@@ -17,7 +17,7 @@ date: 2022/06/19
 
 In this problem, we are urn detectives. We want to look at the probability that there are $2S$ balls in the urn given that we drew $8$ red balls, and $11$ blue balls, and eyeball the maximum.
 
-Using Bayes' rule, we can write $P(2S\text{ and }{\color{red}8},{\color{blue} 11})$ two different ways:
+Using Bayes' rule, we can write $P(2S\text{ and }{\color{red}8},{\color{blue}{11}})$ two different ways:
 
 $$
   P(2S\rvert{\color{red}8},{\color{blue} 11}) = \frac{P({\color{red}8},{\color{blue} 11}\rvert 2S)}{P({\color{red}8},{\color{blue} 11})}P(2S).
@@ -25,7 +25,7 @@ $$
 
 The denominator is the same for all values of $S,$ so we can forget about it.
 
-We don't have any evidence about the number of balls beyond the balls we've drawn. So, to ensure we're unbiased, we use a uniform prior distribution with Dirac spikes at each possible value (starting at $S=11$ since we drew $11$ blue balls)
+We don't have any evidence about the number of balls beyond the balls we've drawn. So, to ensure we're unbiased, we use a uniform prior distribution with Dirac spikes at each possible value (starting the sum at $11$ since we drew $11$ blue balls)
 
 $$
   P(S) = \lim_{M\rightarrow\infty}\frac1M\sum_{i=11}^\infty\delta(S-i).
