@@ -39,6 +39,6 @@ $$
 
 plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $34$ total balls in the urn.
 
-that's just great.
+that's just great. 
 
 <br>
