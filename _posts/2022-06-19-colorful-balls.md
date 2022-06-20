@@ -5,11 +5,11 @@ title: How many balls do they have?
 date: 2022/06/19
 ---
 
->Question
+>**Question:** You have an urn with an equal number of red balls and white balls, but you have no information about what that number might be. You draw 19 balls at random, without replacement, and you get eight red balls and 11 white balls. What is your best guess for the original number of balls (red and white) in the urn?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-switch-a-digit/))
 
 ## Solution
 
@@ -44,6 +44,8 @@ $$
 $$
 
 Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $34$ total balls in the urn.
+
+![](/img/2022-06-19-colorful-balls.png){:width="400 px" class="image-centered"}
 
 That's just great. 
 
