@@ -47,7 +47,6 @@ The right side can be gotten by counting. There are $\binom{S}{8}\binom{S}{11}$ 
 
 $$
     P(2S\rvert{\color{red}8},{\color{blue}{11}}) \sim P({\color{red}8},{\color{blue}{11}}\rvert 2S) = \binom{S}{8}\binom{S}{11}/\binom{2S}{19}.
-  \end{align}
 $$
 
 Plotting this as a function of $S,$ we see that it's maximized at $S=17,$ which corresponds to $2S = 34$ total balls in the urn.
