@@ -23,7 +23,13 @@ $$
 
 the denominator is the same for all values of $S,$ so we can forget about it.
 
-we don't have any evidence about the number of balls beyond the balls we've drawn. so, to ensure we're unbiased, we use a uniform prior distribution $P(T) = \lim_{M\rightarrow\infty}\sum_{i=11}\dfrac{\delta(T-i)}{M}.$ by design, this is uniform in $T$ and we can ignore it as well.
+we don't have any evidence about the number of balls beyond the balls we've drawn. so, to ensure we're unbiased, we use a uniform prior distribution 
+
+$$
+  P(T) = \lim_{M\rightarrow\infty}\sum_{i=11}\dfrac{\delta(T-i)}{M}.
+$$ 
+
+by design, this is uniform in $T$ and we can ignore it as well.
 
 this tell us that 
 
