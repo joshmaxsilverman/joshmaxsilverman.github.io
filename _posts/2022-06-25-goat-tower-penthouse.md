@@ -2,11 +2,12 @@
 layout: post
 published: true
 title: Goat Tower Penthouse
-subtitle: 
+subtitle: What's the chance this unlucky entrepreneur will have to finance a goat party?
+tags: counting recursion 
 date: 2022/06/25
 ---
 
->**Question:** an entrepreneur runs a time-share for goats. Each goat has their favorite room, but it's first come first served. If
+>**Question:** an entrepreneur runs a time-share for goats. Each goat has their favorite floor, but it's first come first served. If a goat arrives to find their favorite floor occupied, they'll go up one floor at a time, looking for an empty one. If they don't find one, then they'll go to the party lounge on the penthouse floor. What is the probability the entrepreneur will have to host a goat party?
 
 <!--more-->
 
@@ -22,7 +23,7 @@ This also means that all the goats on floors $(e+1)$ through $N$ would form thei
 
 Finally, there are $\binom{N-1}{e-1}$ ways to divide the $(N-1)$ goats between the upper and lower good goat towers.
 
-Putting it all together, there are $\binom{N-1}{e-1}\times e\times G(N-e)\times G(e-1)$ ways to form a good goat tower. The empty floor $e$ can be any floor from floor $1$ to $N,$ so
+Putting it all together, there are $\binom{N-1}{e-1}\cdot e\cdot G(N-e)\cdot G(e-1)$ ways to form a good goat tower. The empty floor $e$ can be any floor from floor $1$ to $N,$ so
 
 $$
   G(N) = \sum\limits_{e=1}^N \binom{N-1}{e-1}\times e\times G(N-e-1)\times G(e-1),
