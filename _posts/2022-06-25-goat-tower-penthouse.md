@@ -19,6 +19,8 @@ Let's call a good goat tower a goat tower in which there is one goat to a floor 
 
 If we have a good goat tower, it means that the final goat arrived to find a floor $e$ open, and that their preferred floor was less than or equal to $e.$ 
 
+![](/img/2022-06-25-goat-tower.png){:width="450 px" class="image-centered"}
+
 This also means that all the goats on floors $(e+1)$ through $N$ would form their own good goat tower, independent of the goats on floors $1$ through $(e-1)$ and likewise for the goats on floors $1$ through $(e-1).$
 
 Finally, there are $\binom{N-1}{e-1}$ ways to divide the $(N-1)$ goats between the upper and lower good goat towers.
