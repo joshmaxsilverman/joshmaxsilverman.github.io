@@ -15,21 +15,21 @@ date: 2022/06/25
 
 ## Solution
 
-Let's call a good goat tower a goat tower in which there is one goat to a floor with no goats on the penthouse. We're going to find the probability of a good goat tower by counting the number of ways to form a good goat tower.
+Let's call a good goat tower (GGT) a goat tower in which there is one goat to a floor with no goats on the penthouse. We're going to find the probability of a GGT by counting the number of ways to form a good goat tower.
 
 ### Counting
 
-If we have a good goat tower, it means that the final goat arrived to find a floor $e$ open, and that their preferred floor was less than or equal to $e.$ 
+If we have a GGT, it means that the final goat arrived to find a floor $e$ open, and that their preferred floor was less than or equal to $e.$ 
 
 ![](/img/2022-06-25-goat-tower.png){:width="450 px" class="image-centered"}
 
-This also means that all the goats on floors $(e+1)$ through $N$ would form their own good goat tower, independent of the goats on floors $1$ through $(e-1)$ and likewise for the goats on floors $1$ through $(e-1).$
+This also means that all the goats on floors $(e+1)$ through $N$ would form their own GGT, independent of the goats on floors $1$ through $(e-1)$ and likewise for the goats on floors $1$ through $(e-1).$
 
-Finally, there are $\binom{N-1}{e-1}$ ways to divide the $(N-1)$ goats between the upper and lower good goat towers.
+Finally, there are $\binom{N-1}{e-1}$ ways to divide the $(N-1)$ goats between the upper and lower GGTs.
 
 ### Recursion
 
-Putting it all together, there are $\binom{N-1}{e-1}\cdot e\cdot G(N-e)\cdot G(e-1)$ ways to form a good goat tower. The empty floor $e$ can be any floor from floor $1$ to $N,$ so
+Putting it all together, there are $\binom{N-1}{e-1}\cdot e\cdot G(N-e)\cdot G(e-1)$ ways to form a GGT. The empty floor $e$ can be any floor from floor $1$ to $N,$ so
 
 $$
   G(N) = \sum\limits_{e=1}^N \binom{N-1}{e-1} \cdot e \cdot G(N-e)\cdot G(e-1),
@@ -37,7 +37,7 @@ $$
 
 with the base conditions $G(1) = G(0) = 1.$
 
-Since there are $N^N$ possible preference lists for the goats, the probability of a good goat tower is $P(N) = G(N)/N^N.$
+Since there are $N^N$ possible preference lists for the goats, the probability of a GGT is $P(N) = G(N)/N^N.$
 
 Evaluating, we get the initial values of $P(N):$
 
