@@ -7,7 +7,7 @@ tags: counting recursion
 date: 2022/06/25
 ---
 
->**Question:** an entrepreneur runs a time-share for goats. Each goat has their favorite floor, but it's first come first served. If a goat arrives to find their favorite floor occupied, they'll go up one floor at a time, looking for an empty one. If they don't find one, then they'll go to the party lounge on the penthouse floor. What is the probability the entrepreneur will have to host a goat party?
+>**Question:** an entrepreneur runs a time-share for goats. Each goat has their favorite floor, but it's first come first served. If a goat arrives to find their favorite floor occupied, they'll go up one floor at a time, looking for an empty one. If they don't find one, then they'll go to the party lounge on the penthouse floor. What is the probability the entrepreneur will not have to host a goat party?
 
 <!--more-->
 
