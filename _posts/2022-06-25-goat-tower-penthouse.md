@@ -28,7 +28,7 @@ Finally, there are $\binom{N-1}{e-1}$ ways to divide the $(N-1)$ goats between t
 Putting it all together, there are $\binom{N-1}{e-1}\cdot e\cdot G(N-e)\cdot G(e-1)$ ways to form a good goat tower. The empty floor $e$ can be any floor from floor $1$ to $N,$ so
 
 $$
-  G(N) = \sum\limits_{e=1}^N \binom{N-1}{e-1} e G(N-e-1) G(e-1),
+  G(N) = \sum\limits_{e=1}^N \binom{N-1}{e-1} \cdot e \cdot G(N-e)\cdot G(e-1),
 $$
 
 with the base conditions $G(1) = G(0) = 1.$
