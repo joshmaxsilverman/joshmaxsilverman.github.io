@@ -11,7 +11,7 @@ date: 2022/06/25
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-make-room-for-goats/))
 
 ## Solution
 
