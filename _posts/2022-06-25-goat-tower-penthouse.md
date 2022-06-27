@@ -59,7 +59,7 @@ $$
 \end{array}
 $$
 
-Plotting, we can see that when the number of goats gets big, the probability dies like \\(\\sim N^{-1}.\\)
+Plotting, we can see that when the number of goats gets big, the probability of a GGT dies like \\(\\sim N^{-1}.\\)
 
 
 ![](/img/2022-06-25-ggt-plot.png){:width="450 px" class="image-centered"}
