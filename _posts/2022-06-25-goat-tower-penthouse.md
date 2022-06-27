@@ -43,7 +43,7 @@ Evaluating, we get the initial values of $P(N):$
 
 $$
 \begin{array}{c|c|c}
-   N & P(N) \\ \hline
+   N & P(N) \\\\ \hline
    1 & 1 \\
    2 & \frac{3}{4} = 0.75 \\
    3 & \frac{16}{27} \approx 0.592593 \\
