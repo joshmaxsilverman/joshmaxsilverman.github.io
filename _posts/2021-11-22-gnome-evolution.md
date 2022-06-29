@@ -39,7 +39,7 @@ We are trying to find a similar sort of structure here.
 
 ### No strategy
 
-Without any structure (i.e. the gnomes use random strategies) they will survive in, on average, $65$ of the $81$ cases. The first gnome makes $27$ correct guesses which is a third of cases. So the second player will make, on average, $18$ of their correct guesses in cases where the first player is wrong.Ttogether, $18$ and $27$ make $45$ which is $5/9^\text{th}$s of all cases, so the third player will make correct guesses in $12$ cases where the first two players are wrong. Finally, fourth player will be correct in $8$ novel cases. all together, $27+18+12+8 = 65.$
+Without any structure (i.e. the gnomes use random strategies) they will survive in, on average, $65$ of the $81$ cases. The first gnome makes $27$ correct guesses which is a third of cases. So the second player will make, on average, $18$ of their correct guesses in cases where the first player is wrong. Together, $18$ and $27$ make $45$ which is $5/9^\text{th}$s of all cases, so the third player will make correct guesses in $12$ cases where the first two players are wrong. Finally, fourth player will be correct in $8$ novel cases. all together, $27+18+12+8 = 65.$
 
 Similarly, the gnomes will survive in no fewer than $45$ of the $81$ cases.
 
