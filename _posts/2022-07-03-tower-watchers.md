@@ -23,6 +23,8 @@ The answer will depend on the ratio of the initial height $h_0$ to the radius of
 
 Without a value for the radius, we can estimate a lower bound. Spheres in space don't happen by accident, they happen because the gravitation of the body is strong enough to collapse any irregularities that are significant with respect to the length scale of the planet. 
 
+![](/img/2022-07-03-protuberance.png){:width="350 px" class="image-centered"}
+
 Taking granite as a representative material, its compressive strenght is $\sigma = 10^8 \text{ N/m}^2$ and its density if about $\rho = 3000 \text{ kg/m}^3.$ Assuming that our protuberance has uniform area $A$ and height $h$, the total mass of the protuberance is $\rho A h.$ We can estimate the gravitational field of the planet by Newton's constant times the mass divided by the length scale of the planet: $\text{"}g\text{"}=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these ($M\text{"}g\text{"} = \rho A H GM/R$).
 
 Equating the compression at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
@@ -39,10 +41,13 @@ Setting $h^\ast/R \approx 1/100$ as an aesthetic cutoff for being "spherical", w
 
 ## Now you see me, now you don't
 
-with $R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
+With $R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
+
+![](/img/2022-07-03-first-towers.png){:width="450 px" class="image-centered"}
 
 Drawing the initial scenario, we get that $\cos\theta = R/(R + h_0),$ $\sin\theta = b/(R + h_0),$ and $b^2 = (R + h_0)^2 - R^2.$
 
+![](/img/2022-07-03-second-towers.png){:width="450 px" class="image-centered"}
 In the second situation, the guard in the high tower is going to continue moving up the tower. With coordinates centered on the center of the planet, we can describe their path by 
 
 $$y_\text{ht} = \frac{R}{b} x_\text{ht}.$$
