@@ -35,10 +35,22 @@ this gets us $h/R = \frac{\sigma}{\rho} \frac{1}{GM}.$
 
 the mass of the planet is about $\rho R^3$ so we get $h/R = \frac{\sigma}{\rho^2 G R^3}.$
 
-setting $h/R \approx 1/100$ as a cutoff for being spherical, we get $\rho R^3 \approx 100\sigma/\rho \approx \frac{100 \cdot 10^8 \cdot 10^{11}}{10^3} = 10^{18}\text{ kg}$ or $R\approx 10^5\text{ m}.$
+setting $h/R \approx 1/100$ as a cutoff for being spherical, we get $R \approx \sqrt[3]{100\sigma/G\rho^2} \approx \sqrt[3]{10^2\times 10^8\times 10^{11}/10^6}$ or $R\approx 10^5\text{ m}.$
 
 ## now you see me, now you don't
 
 with $h/R \approx 10^{-5}$ on the table, we can move on to the geometry. 
+
+drawing the initial scenario, we get that $\cos\theta = R/(R + h_0)$ and $b^2 = (R + h_0)^2 - R^2.$
+
+in the second situation, the guard in the high tower is going to continue moving up the tower. with respect to the center of the planet, we can describe their path by $y_\text{ht} = \frac{R}{b} x_\text{ht}.$
+
+meanwhile, the guard on the ground will have a direct line of sight to the other guard. since they can just barely see each other, their line of sight will be parallel to the ground, and has the slope $b/R.$ as their initial position is given by $(R\sin\theta, R\cos\theta),$ their line of sight follows $y_\text{g} = R\cos\theta + \frac{b}{R}\left(x_\text{g} + R\sin\theta\right).$
+
+setting this equal, we can find $x$ when the paths intersect:
+
+$$
+  x = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \frac{b}{R}}
+$$
 
 <br>
