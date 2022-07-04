@@ -31,7 +31,7 @@ Without a value for the radius, we can estimate a lower bound. Spheres in space 
 
 Taking granite as a representative material, its maximal compressive strength is $\sigma = 10^8 \text{ N/m}^2$ and its density is about $\rho = 3000 \text{ kg/m}^3.$ If we assume that our protuberance has uniform area $A$ and height $h$, then the total mass of the protuberance is $\rho A h.$ 
 
-We can estimate the gravitational field of the planet by Newton's constant times the planet's mass divided by its prevailing length scale: $\text{''}g\text{''}=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these $\left(M\text{''\math{g}''} = \rho A H GM/R\right).$
+We can estimate the gravitational field of the planet by Newton's constant times the planet's mass divided by its prevailing length scale: $g=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these $\left(Mg = \rho A h GM/R\right).$
 
 Equating the maximal compression at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
 
