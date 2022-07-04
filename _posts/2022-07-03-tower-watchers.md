@@ -1,13 +1,17 @@
 ---
 layout: post
 published: true
-title: Hide and go seek tower guards
+title: Hide and go seek tower
 subtitle: Now you see me, now you don't
 tags: geometry approximation physics materials
 date: 2022/07/03
 ---
 
->Question
+>**Question:** As the Royal Astronomer of Planet Xiddler, you wake up from a dream in which you measured the planet’s radius using a satellite. “How silly!” you think to yourself. “Satellites haven’t even been invented yet!” And so you and another astronomer set out to investigate the curvature of the planet.
+>
+>The two of you climb two of the tallest towers on the planet, which happen to be in neighboring cities. You both travel 100 meters up each tower on a clear day. Due to the curvature of the planet, you can barely make each other out.
+>
+>Next, your friend returns to the ground floor of their tower. How high up your tower must you be so that you can just barely make out your friend again?
 
 <!--more-->
 
@@ -17,7 +21,7 @@ date: 2022/07/03
 
 The problem doesn't mention a radius for the planet, but does say that it's spherical. 
 
-The answer will depend on the ratio of the initial height $h_0$ to the radius of the planet $R$. If the planet is say, $1\text{ m}$ in radius, then there may not be any height where the second guard can see the first guard on the ground. 
+The answer will depend on the ratio of the initial height $h_0$ to the radius of the planet $R$. If the planet is say, $1\text{ m}$ in radius, then there may not be any height where the friend in the tower can see the friend on the ground. 
 
 ## Minimal radius for the planet
 
@@ -48,11 +52,11 @@ With $R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry
 Drawing the initial scenario, we get that $\cos\theta = R/(R + h_0),$ $\sin\theta = b/(R + h_0),$ and $b^2 = (R + h_0)^2 - R^2.$
 
 ![](/img/2022-07-03-second-towers.png){:width="450 px" class="image-centered"}
-In the second situation, the guard in the high tower is going to continue moving up the tower. With coordinates centered on the center of the planet, we can describe their path by 
+In the second situation, the friend in the high tower is going to continue moving up the tower. With coordinates centered on the center of the planet, we can describe their path by 
 
 $$y_\text{ht} = \frac{R}{b} x_\text{ht}.$$
 
-The guard on the ground will have a direct line of sight to the other guard. Since they can just barely see each other, the line of sight will be parallel to the ground where the second guard stands. The slope of the line of sight will be $b/R,$ which can be seen by reflecting the first line across the $y$-axis, and rotating it by $90^\circ$ clockwise. As their initial position is given by $(R\sin\theta, R\cos\theta),$ their line of sight follows the line 
+The friend on the ground will have a direct line of sight to the friend in the tower. Since they can just barely see each other, the line of sight will be parallel to the ground where the second friend stands. The slope of the line of sight will be $b/R,$ which can be seen by reflecting the first line across the $y$-axis, and rotating it by $90^\circ$ clockwise. As their initial position is given by $(R\sin\theta, R\cos\theta),$ their line of sight follows the line 
 
 $$y_\text{g} = R\cos\theta + \dfrac{b}{R}\left(x_\text{g} + R\sin\theta\right).$$
 
@@ -62,7 +66,7 @@ $$
   x^\ast = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
 $$
 
-During this second tower climb, the first guard will be $(R+h)$ from the center of the planet with coordinates $\left(x^\ast, y^\ast\right):$
+In this second scenario, the friend in the tower will be $(R+h)$ from the center of the planet with coordinates $\left(x^\ast, y^\ast\right):$
 
 $$
   \begin{align}
@@ -90,6 +94,6 @@ $$
   \end{align}
 $$
 
-Where we have kept all terms to first order in $h_0.$ So, for all spherical planets, the second guard would have to go up $4h_0 = 400\text{ m}$ to see the other guard at the base of their tower.
+Where we have kept all terms to first order in $h_0.$ So, for all spherical planets, the friend in the tower would have to go up $4h_0 = 400\text{ m}$ to see the friend on the ground at the base of their tower.
 
 <br>
