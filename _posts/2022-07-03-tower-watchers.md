@@ -50,7 +50,17 @@ meanwhile, the guard on the ground will have a direct line of sight to the other
 setting this equal, we can find $x$ when the paths intersect:
 
 $$
-  x = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
+  x^* = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
+$$
+
+when the guard is at $\left(x^*,y^*\right)$ they are $R+h$ from the center of the planet:
+
+$$
+  \begin{align}
+  \left(R + h\right)^2 &= {x^*}^2 + {y^*}^2 \\
+  &= \left(1 + \left(\frac{R}{b}\right)^2\right)\left(\frac{R\cos\theta + b\sin\theta}{\frac{R}{b} - \frac{b}{R}}\right)^2 \\
+  &= \left(1 + \left(\frac{R}{b}\right)^2 \dfrac{\left(\frac{R^2 + b^2}{R+h_0}\right)^2}{\left(\frac{R}{b}\right)^2\left(1-\frac{b}{R}\right)^2}
+  \end{align}
 $$
 
 <br>
