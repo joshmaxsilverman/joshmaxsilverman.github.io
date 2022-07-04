@@ -67,6 +67,6 @@ $$
   \end{align}
 $$
 
-so, $ h = R\left(R+h_0)\right)^2/\left(R-h_0\right) - R$
+so, $ h = R\left(R+h_0)\right)^2/\left(R-h_0\right)^2 - R$
 
 <br>
