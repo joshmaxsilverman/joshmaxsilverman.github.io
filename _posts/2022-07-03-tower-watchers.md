@@ -39,7 +39,7 @@ $$
   \sigma A = \rho A h^\ast \dfrac{GM}{R}
 $$
 
-This gets us $h^\ast/R = \frac{\sigma}{\rho} \frac{1}{GM}.$
+This gets us $h^\ast/R = \sigma/\rho GM.$
 
 Since, the mass of the planet is about $\rho R^3$ so we get $h^\ast/R = \frac{\sigma}{\rho^2 G R^3}.$
 
