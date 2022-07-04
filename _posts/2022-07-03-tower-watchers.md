@@ -39,7 +39,7 @@ setting $h/R \approx 1/100$ as a cutoff for being spherical, we get $R \approx \
 
 ## now you see me, now you don't
 
-with $h/R \greatapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
+with $h/R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
 
 drawing the initial scenario, we get that $\cos\theta = R/(R + h_0)$ and $b^2 = (R + h_0)^2 - R^2.$
 
