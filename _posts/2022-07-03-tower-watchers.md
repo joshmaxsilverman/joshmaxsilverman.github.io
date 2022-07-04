@@ -15,58 +15,76 @@ date: 2022/07/03
 
 ## Solution
 
-the problem doesn't mention a radius for the planet, but mentions that it's spherical. 
+The problem doesn't mention a radius for the planet, but does say that it's spherical. 
 
-however, the answer will strongly depend on the ratio of the initial height to the radius of the planet. if the planet is say, 1 m in radius, then there may be no height where the second guard can still see the first guard on the ground. 
+The answer will depend on the ratio of the initial height $h_0$ to the radius of the planet $R$. If the planet is say, $1\text{ m}$ in radius, then there may not be any height where the second guard can see the first guard on the ground. 
 
-## minimal radius for the planet
+## Minimal radius for the planet
 
-without a radius, we can estimate a lower bound. spheres in space don't happen by accident, they happen because the gravitation of the body is strong enough to collapse any irregularities that are significant with respect to the length scale of the planet. 
+Without a value for the radius, we can estimate a lower bound. Spheres in space don't happen by accident, they happen because the gravitation of the body is strong enough to collapse any irregularities that are significant with respect to the length scale of the planet. 
 
-taking granite as our material, its compressive strenght is $\sigma = 10^8 \text{ N/m}^2$ and its density if about $\rho = 3000 \text{ kg/m}^3.$ assuming the protuberance has uniform area $A$ and height $h$, the total mass of the protuberance is $\rho A h.$ we can estimate the gravitational field of the planet by newton's constant times the mass divided by the length scale of the planet: $GM/R.$ 
+Taking granite as a representative material, its compressive strenght is $\sigma = 10^8 \text{ N/m}^2$ and its density if about $\rho = 3000 \text{ kg/m}^3.$ Assuming that our protuberance has uniform area $A$ and height $h$, the total mass of the protuberance is $\rho A h.$ We can estimate the gravitational field of the planet by Newton's constant times the mass divided by the length scale of the planet: $\text{"}g\text{"}=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these ($M\text{"}g\text{"} = \rho A H GM/R$).
 
-equating the force at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
+Equating the compression at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
 
 $$
-  \sigma A = \rho A h \dfrac{GM}{R}
+  \sigma A = \rho A h^\ast \dfrac{GM}{R}
 $$
 
-this gets us $h/R = \frac{\sigma}{\rho} \frac{1}{GM}.$
+This gets us $h^\ast/R = \frac{\sigma}{\rho} \frac{1}{GM}.$
 
-the mass of the planet is about $\rho R^3$ so we get $h/R = \frac{\sigma}{\rho^2 G R^3}.$
+Since, the mass of the planet is about $\rho R^3$ so we get $h^\ast/R = \frac{\sigma}{\rho^2 G R^3}.$
 
-setting $h/R \approx 1/100$ as a cutoff for being spherical, we get $R \approx \sqrt[3]{100\sigma/G\rho^2} \approx \sqrt[3]{10^2\times 10^8\times 10^{11}/10^6}$ or $R\approx 10^5\text{ m}.$
+Setting $h^\ast/R \approx 1/100$ as an aesthetic cutoff for being "spherical", we get $R \approx \sqrt[3]{100\sigma/G\rho^2} \approx \sqrt[3]{10^2\times 10^8\times 10^{11}/10^6}$ or $R\approx 10^5\text{ m}.$
 
-## now you see me, now you don't
+## Now you see me, now you don't
 
-with $h/R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
+with $R \gtrapprox 10^{5}\text{ m}$ on the table, we can move on to the geometry. 
 
-drawing the initial scenario, we get that $\cos\theta = R/(R + h_0)$ and $b^2 = (R + h_0)^2 - R^2.$
+Drawing the initial scenario, we get that $\cos\theta = R/(R + h_0),$ $\sin\theta = b/(R + h_0),$ and $b^2 = (R + h_0)^2 - R^2.$
 
-in the second situation, the guard in the high tower is going to continue moving up the tower. with respect to the center of the planet, we can describe their path by $y_\text{ht} = \frac{R}{b} x_\text{ht}.$
+In the second situation, the guard in the high tower is going to continue moving up the tower. With coordinates centered on the center of the planet, we can describe their path by 
 
-meanwhile, the guard on the ground will have a direct line of sight to the other guard. since they can just barely see each other, their line of sight will be parallel to the ground, and has the slope $b/R.$ as their initial position is given by $(R\sin\theta, R\cos\theta),$ their line of sight follows $y_\text{g} = R\cos\theta + \frac{b}{R}\left(x_\text{g} + R\sin\theta\right).$
+$$y_\text{ht} = \frac{R}{b} x_\text{ht}.$$
 
-setting this equal, we can find $x$ when the paths intersect:
+The guard on the ground will have a direct line of sight to the other guard. Since they can just barely see each other, the line of sight will be parallel to the ground where the second guard stands. The slope of the line of sight will be $b/R,$ which can be seen by reflecting the first line across the $y$-axis, and rotating it by $90^\circ$ clockwise. As their initial position is given by $(R\sin\theta, R\cos\theta),$ their line of sight follows the line 
+
+$$y_\text{g} = R\cos\theta + \dfrac{b}{R}\left(x_\text{g} + R\sin\theta\right).$$
+
+Setting these equal, we can find $x^\ast$ when the paths intersect:
 
 $$
   x^\ast = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
 $$
 
-when the guard is at $\left(x^\ast, y^\ast\right)$ they are $R+h$ from the center of the planet:
+During this second tower climb, the first guard will be $(R+h)$ from the center of the planet with coordinates $\left(x^\ast, y^\ast\right):$
 
 $$
   \begin{align}
   \left(R + h\right)^2 &= {x^\ast}^2 + {y^\ast}^2 \\
-  &= \left[1 + \left(\frac{R}{b}\right)^2\right]\left(\dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \frac{b}{R}}\right)^2 \\
-    &= \left[1 + \left(\frac{R}{b}\right)^2\right] \dfrac{\left(\dfrac{R^2 + b^2}{R+h_0}\right)^2}{\left(\dfrac{R}{b}\right)^2\left[1-\left(\frac{b}{R}\right)^2\right]^2} \\
+  &= \left[1 + \left(\dfrac{R}{b}\right)^2\right]\left(\dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}\right)^2 \\
+    &= \left[1 + \left(\dfrac{R}{b}\right)^2\right] \dfrac{\left(\dfrac{R^2 + b^2}{R+h_0}\right)^2}{\left(\dfrac{R}{b}\right)^2\left[1-\left(\dfrac{b}{R}\right)^2\right]^2} \\
     &= \dfrac{b^2 + R^2}{R^{-2}\left(R^2 - b^2\right)^2}\left(R + h_0\right)^2 \\
     &= \dfrac{R^2\left(R+h_0\right)^4}{\left(R^2 - b^2\right)^2} \\
     &= \dfrac{R^2\left(R+h_0\right)^4}{\left[2R^2 - (R+h_0)^2\right]^2} \\
-    &= \dfrac{R^2\left(R+h_0\right)^4}{(R-h_0)^4} \\
+    &= \dfrac{R^2\left(R+h_0\right)^4}{(R-h_0)^4}. \\
   \end{align}
 $$
 
-so, $ h = R\left(R+h_0)\right)^2/\left(R-h_0\right)^2 - R$
+So, $ h = R\left(R+h_0)\right)^2/\left(R-h_0\right)^2 - R.$
+
+Since $R \gtrapprox 10^5\text{ m},$ the ratio $h_0/R$ is on the order of $10^{-3}$ and we can safely expand in powers of $h_0/R.$
+
+$$
+  \begin{align}
+  h &= \dfrac{(R+h_0)^2}{R(1-h_0/R)^2} - R \\
+    &= \dfrac1R (R+h_0)^2(1+h_0/R+\ldots)(1+h_0/R+\ldots) - R\\
+    &\approx \dfrac1R(R^2 + 2Rh_0 + h_0^2)(1+2h_0/R) - R \\
+    &\approx \dfrac1R (R^2 + 2Rh_0 + R^2 2h_0/R) - R \\
+    &= 4h_0
+  \end{align}
+$$
+
+Where we have kept all terms to first order in $h_0.$ So, for all spherical planets, the second guard would have to go up $4h_0 = 400\text{ m}$ to see the other guard at the base of their tower.
 
 <br>
