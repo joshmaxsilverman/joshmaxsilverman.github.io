@@ -59,7 +59,6 @@ $$
   \begin{align}
   \left(R + h\right)^2 &= {x^*}^2 + {y^*}^2 \\
   &= \left(1 + \left(\frac{R}{b}\right)^2\right)\left(\frac{R\cos\theta + b\sin\theta}{\frac{R}{b} - \frac{b}{R}}\right)^2 \\
-  &= \left(1 + \left(\frac{R}{b}\right)^2\right) \dfrac{\left(\frac{R^2 + b^2}{R+h_0}\right)^2}{\left(\frac{R}{b}\right)^2\left(1-\frac{b}{R}\right)^2}
   \end{align}
 $$
 
