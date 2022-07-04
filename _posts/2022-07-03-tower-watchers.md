@@ -61,9 +61,9 @@ $$
   &= \left[1 + \left(\frac{R}{b}\right)^2\right]\left(\dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \frac{b}{R}}\right)^2 \\
     &= \left[1 + \left(\frac{R}{b}\right)^2\right] \dfrac{\left(\dfrac{R^2 + b^2}{R+h_0}\right)^2}{\left(\dfrac{R}{b}\right)^2\left[1-\left(\frac{b}{R}\right)^2\right]^2} \\
     &= \dfrac{b^2 + R^2}{R^{-2}\left(R^2 - b^2\right)^2}\left(R + h_0\right)^2
-    &= \dfrac{R^2\left(R+h_0)^4}{R^2 - b^2} \\
-    &= \dfrac{R^2\left(R+h_0)^4}{2R^2 - (R+h_0)^2} \\
-    &= \dfrac{R^2\left(R+h_0)^4}{(R-h_0)^2} \\
+    &= \dfrac{R^2\left(R+h_0\right)^4}{R^2 - b^2} \\
+    &= \dfrac{R^2\left(R+h_0\right)^4}{2R^2 - (R+h_0)^2} \\
+    &= \dfrac{R^2\left(R+h_0\right)^4}{(R-h_0)^2} \\
   \end{align}
 $$
 
