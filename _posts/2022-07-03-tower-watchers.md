@@ -50,7 +50,7 @@ meanwhile, the guard on the ground will have a direct line of sight to the other
 setting this equal, we can find $x$ when the paths intersect:
 
 $$
-  x = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \frac{b}{R}}
+  x = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
 $$
 
 <br>
