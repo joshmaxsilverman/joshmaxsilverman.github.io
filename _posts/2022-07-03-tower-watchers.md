@@ -29,17 +29,17 @@ Without a value for the radius, we can estimate a lower bound. Spheres in space 
 
 ![](/img/2022-07-03-protuberance.png){:width="350 px" class="image-centered"}
 
-Taking granite as a representative material, its compressive strenght is $\sigma = 10^8 \text{ N/m}^2$ and its density if about $\rho = 3000 \text{ kg/m}^3.$ Assuming that our protuberance has uniform area $A$ and height $h$, the total mass of the protuberance is $\rho A h.$ 
+Taking granite as a representative material, its maximal compressive strength is $\sigma = 10^8 \text{ N/m}^2$ and its density is about $\rho = 3000 \text{ kg/m}^3.$ If we assume that our protuberance has uniform area $A$ and height $h$, then the total mass of the protuberance is $\rho A h.$ 
 
-We can estimate the gravitational field of the planet by Newton's constant times the mass divided by the length scale of the planet: $\text{''}g\text{"}=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these ($M\text{''}g\text{"} = \rho A H GM/R$).
+We can estimate the gravitational field of the planet by Newton's constant times the planet's mass divided by its prevailing length scale: $\text{''}g\text{''}=GM/R.$ The crushing force that the protuberance imparts on its base is the product of these $\left(M\text{''\math{g}''} = \rho A H GM/R\right).$
 
-Equating the compression at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
+Equating the maximal compression at the base of the protuberance to the gravitational pull on the protuberance, we get the critical height $h$ at which the protuberance will crack:
 
 $$
   \sigma A = \rho A h^\ast \dfrac{GM}{R}
 $$
 
-This gets us $h^\ast/R = \sigma/\rho GM.$
+This gets us $h^\ast/R = \sigma/\left(\rho GM\right).$
 
 Since, the mass of the planet is about $\rho R^3$ so we get $h^\ast/R = \frac{\sigma}{\rho^2 G R^3}.$
 
