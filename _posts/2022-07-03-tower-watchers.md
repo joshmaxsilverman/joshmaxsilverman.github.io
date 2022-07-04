@@ -53,7 +53,7 @@ $$
   x^\* = \dfrac{R\cos\theta + b\sin\theta}{\dfrac{R}{b} - \dfrac{b}{R}}
 $$
 
-when the guard is at $\left(x^\*,y^\*\right)$ they are $R+h$ from the center of the planet:
+when the guard is at $\left(x^\*, y^\*\right)$ they are $R+h$ from the center of the planet:
 
 $$
   \begin{align}
