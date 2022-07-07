@@ -41,7 +41,7 @@ $$
 
 This gets us $h^\ast/R = \sigma/\left(\rho GM\right).$
 
-Since, the mass of the planet is about $\rho R^3$ so we get $h^\ast/R = \frac{\sigma}{\rho^2 G R^3}.$
+Since, the mass of the planet is about $\rho R^3$ so we get $h^\ast/R = \dfrac{\sigma}{\rho^2 G R^3}.$
 
 Setting $h^\ast/R \approx 1/100$ as an aesthetic cutoff for being "spherical", we get 
 
