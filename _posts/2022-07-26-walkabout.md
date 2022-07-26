@@ -24,7 +24,7 @@ we want to know if he'll have an exceptional experience in the kitchen. since th
 whenever andy takes a step, he has a $1/3$ chance to move onto some neighboring tile, each of which has an expected number of steps before it returns to the origin for the first time. this results in the harmonic relationship
 
 $$
-  \langle T_i\rangle = 1 + \frac13\sum\limits_{j\elem\text{neighbors of $i$}} T_j
+  \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\text{neighbors of $i$}} T_j
 $$
 
 to get rolling, we have to encode the surface of the ball 
