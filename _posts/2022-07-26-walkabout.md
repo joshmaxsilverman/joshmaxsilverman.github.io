@@ -19,7 +19,7 @@ on the ball, he can only walk so far into the forest before he starts to walk ou
 
 we want to know if he'll have an exceptional experience in the kitchen. since this depends on knowing the expected walk on his soccer ball, we'll start there.
 
-# Soccer ball
+# soccer ball
 
 whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in the neighborhood of $i,$ $\sigma(i)$ which has an expected number of steps $\langle T_j\rangle$ before it returns to the origin for the first time. putting this to symbols gets the harmonic relationship
 
@@ -55,5 +55,13 @@ sols = First@Solve[system, VertexList[g]]
 ```
 
 putting these back on the ball, we see that the expected waiting time increases as we move away from the starting point, up until a maximum at the furthest point, $D_3.$ as expected, the expected waiting time at each of $A_1$'s neighbors is $1$ less than $T(A_1).$
+
+so, we're looking for the probability that his kitchen walk goes longer than $\langle T\rangle_\text{soccer} = 20.$
+
+# kitchen constitutional
+
+in the kitchen, the lattice is bigger and it pays to be smart before diving in. since andy's walks return to the origin, they'll have an even number of steps. this means that we focus on tiles that are an even number of steps from the origin. 
+
+if andy starts from the marked tile, then his first options are to step in one of the directions $\{\pi/6, 5\pi/6, 3\pi/2\}.$ on the second step, his options are these reflected about the $x$-axis: $\{-\pi/6, -5\pi/6, 3\pi/2\}.$
 
 <br>
