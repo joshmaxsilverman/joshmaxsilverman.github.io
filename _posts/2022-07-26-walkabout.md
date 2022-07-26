@@ -21,7 +21,7 @@ we want to know if he'll have an exceptional experience in the kitchen. since th
 
 # Soccer ball
 
-whenever andy takes a step, he has a $1/3$ chance to move onto some neighboring tile, each of which has an expected number of steps before it returns to the origin for the first time. this results in the harmonic relationship
+whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile, each of which has an expected number of steps before it returns to the origin for the first time. this results in the harmonic relationship
 
 $$
   \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)} \langle T_j\rangle
