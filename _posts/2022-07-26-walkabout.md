@@ -62,6 +62,6 @@ so, we're looking for the probability that his kitchen walk goes longer than $\l
 
 in the kitchen, the lattice is bigger and it pays to be smart before diving in. since andy's walks return to the origin, they'll have an even number of steps. this means that we focus on tiles that are an even number of steps from the origin. 
 
-if andy starts from the marked tile, then his first options are to step in one of the directions $\{\pi/6, 5\pi/6, 3\pi/2\}.$ on the second step, his options are these reflected about the $x$-axis: $\{-\pi/6, -5\pi/6, 3\pi/2\}.$
+if andy starts from the marked tile, then his first options are to step in one of the directions $\\{\frac{\pi}{6}, \frac{5\pi}{6}, \frac{3\pi}{2}\\}.$ on the second step, his options are these reflected about the $x$-axis: $\\{-\frac{\pi}{6}, -\frac{5\pi}{6}, \frac{3\pi}{2}\\}.$
 
 <br>
