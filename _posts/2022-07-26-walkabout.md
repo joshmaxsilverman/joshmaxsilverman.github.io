@@ -70,7 +70,7 @@ any $n$ step path on the reduced lattice is a path of length $2n$ on the origina
 
 ## count them up
 
-we can count paths with a simple observation. if there is an $(n-1)$ step path to one of my neighbors, then there is an $n$ step path to me. in other words:
+we can count paths with a simple observation. if there is an $(n-1)$ step path to any of my neighbors, then there is an $n$ step path to me. in other words:
 
 $$
   \omega_i^n = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_j^{n-1}
@@ -78,7 +78,7 @@ $$
 
 the number of steps to tile $i$ in $n$ steps is the sum of the number of paths to each of its neighbors in $(n-1)$ steps. we only want to count first returns to the origin, so we don't count the origin when it happens to be a neighbor.
 
-with this recursion, we can count $\omega_\boldsymbol{0}^n,$ but we need the base case — the number of ways to step from the origin. we can get these from the first steps on the reduced lattice.
+with this recursion, we can count $\omega_\boldsymbol{0}^n,$ but we need the base case — the path counts after the first step. 
 
 on the reduced lattice we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. there are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
 
