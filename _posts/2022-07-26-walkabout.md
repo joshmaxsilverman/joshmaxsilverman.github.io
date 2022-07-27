@@ -66,7 +66,7 @@ if andy starts from the marked tile, then his first options are to take a unit s
 
 since andy's walks return to the origin, they'll have an even number of steps. this means that we can focus on tiles that are an even number of steps from the origin and ignore the others.
 
-any $n$ step path on the reduced lattice is a path of length $2n$ on the original, and therefore has probability $1/3^(2n)$ of occurring. if we can count the number of $n$ step paths on the reduced lattice $\omega(n)$, then we will inherit the distribution of path lengths $p(n) = \omega(n)/3^{2n}.$
+any $n$ step path on the reduced lattice is a path of length $2n$ on the original, and therefore has probability $1/3^{2n}$ of occurring. if we can count the number of $n$ step paths on the reduced lattice $\omega(n)$, then we will inherit the distribution of path lengths $p(n) = \omega(n)/3^{2n}.$
 
 ## count them up
 
