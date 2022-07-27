@@ -70,13 +70,53 @@ any $n$ step path on the reduced lattice is a path of length $2n$ on the origina
 
 ## count them up
 
-we can count paths with a simple observation. if there is an $(n-1)$ step path to one of my neighbors, then there is an $n$ step path to me. in other words
+we can count paths with a simple observation. if there is an $(n-1)$ step path to one of my neighbors, then there is an $n$ step path to me. in other words:
 
 $$
-  \omega_n^t = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_n^{t-1}
+  \omega_i^n = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_j^{n-1}
 $$
+
+the number of steps to tile $i$ in $n$ steps is the sum of the number of paths to each of its neighbors in $(n-1)$ steps. we only want to count first returns to the origin, so we don't count the origin when it happens to be a neighbor.
+
+with this recursion, we can count $\omega_\boldsymbol{0}^n,$ but we need the base case — the number of ways to step from the origin. we can get these from the first steps on the reduced lattice.
 
 on the reduced lattice we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. there are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
+
+now, we have everything we need.
+
+```mathematica
+(* form first moves on the original lattice *)
+oddMoves = {{Cos[π/6], Sin[π/6]}, {Cos[5 π/6], 
+    Sin[5 π/6]}, {0, -1}};
+
+(* reflect to form the second moves on the original lattice *)
+evenMoves = ({-1, -1} * #) & /@ oddMoves;
+
+(* form the moves on the reduced lattice *)
+twoStepMoves = Total /@ Tuples[{oddMoves, evenMoves}];
+
+(* initialize ω *)
+ω[pt_, 1] := 0;
+
+(* use the two step moves to fill in the base case *)
+Do[ω[twoStepMoves[[i]], 1] += 1, {i, 1, Length@twoStepMoves}];
+
+(* one time step recursion over neighbors, excluding the origin *)
+ω[pt_, t_] := ω[pt, t] = (
+   neighbors = 
+    Table[pt - twoStepMoves[[i]], {i, 1, Length@twoStepMoves}];
+   neighbors = Select[neighbors, # != {0, 0} &];
+   Return[
+    Total[ω[#, t - 1] & /@ neighbors]
+    ]
+   )
+```
+
+with this in hand, we can find $p(\text{kitchen longer than }\langle T\rangle_\text{soccer}):$
+
+$$
+  1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}}.
+$$
 
 
 
