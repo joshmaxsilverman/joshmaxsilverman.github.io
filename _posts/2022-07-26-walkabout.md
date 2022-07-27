@@ -114,7 +114,7 @@ Do[ω[twoStepMoves[[i]], 1] += 1, {i, 1, Length@twoStepMoves}];
 with this in hand, we can find $p(\text{kitchen longer than }\langle T\rangle_\text{soccer}):$
 
 $$
-  1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}} = \frac{173576992}{387420489} \approx 44.8\%
+  1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}} = \frac{173576992}{387420489} \approx 44.8\\%
 $$
 
 
