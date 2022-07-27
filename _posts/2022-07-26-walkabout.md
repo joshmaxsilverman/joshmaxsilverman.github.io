@@ -115,7 +115,7 @@ with this in hand, we can find
 
 $$
   \begin{align}
-    $p(\text{kitchen longer than }\langle T\rangle_\text{soccer}) &= 1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}} \\
+    P(\text{kitchen longer than }\langle T\rangle_\text{soccer}) &= 1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}} \\
     &= \frac{173576992}{387420489} \\
     &\approx 44.8\\%
   \end{align}
