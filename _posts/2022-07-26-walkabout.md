@@ -86,8 +86,7 @@ now, we have everything we need.
 
 ```mathematica
 (* form first moves on the original lattice *)
-oddMoves = {{Cos[π/6], Sin[π/6]}, {Cos[5 π/6], 
-    Sin[5 π/6]}, {0, -1}};
+oddMoves = {Cos[#], Sin[#]} & /@ {\[Pi]/6, 5 \[Pi]/6, -3 \[Pi]/2};
 
 (* reflect to form the second moves on the original lattice *)
 evenMoves = ({-1, -1} * #) & /@ oddMoves;
