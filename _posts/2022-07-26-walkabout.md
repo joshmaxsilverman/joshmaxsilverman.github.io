@@ -21,7 +21,7 @@ we want to know if he'll have an exceptional experience in the kitchen. since th
 
 # soccer ball
 
-whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in the neighborhood of $i,$ $\sigma(i)$ which has an expected number of steps $\langle T_j\rangle$ before it returns to the origin for the first time. putting this to symbols gets the harmonic relationship
+whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in the neighborhood of $i,$ $\sigma(i)$ which has an expected number of additional tiles $\langle T_j\rangle$ before it returns to the origin for the first time. putting this to symbols gets the harmonic relationship
 
 $$
   \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)} \langle T_j\rangle
