@@ -60,8 +60,28 @@ so, we're looking for the probability that his kitchen walk goes longer than $\l
 
 # kitchen constitutional
 
-in the kitchen, the lattice is bigger and it pays to be smart before diving in. since andy's walks return to the origin, they'll have an even number of steps. this means that we focus on tiles that are an even number of steps from the origin. 
+in the kitchen, the lattice is bigger and it pays to be smart before diving in.
 
 if andy starts from the marked tile, then his first options are to take a unit step — i.e. $\left(\cos\theta,\sin\theta\right)$ — in one of the directions $\\{\frac{\pi}{6}, \frac{5\pi}{6}, \frac{3\pi}{2}\\}.$ on the second step, his options are these reflected about the $x$-axis: $\\{-\frac{\pi}{6}, -\frac{5\pi}{6}, \frac{3\pi}{2}\\}.$
+
+since andy's walks return to the origin, they'll have an even number of steps. this means that we can focus on tiles that are an even number of steps from the origin and ignore the others.
+
+any $n$ step path on the reduced lattice is a path of length $2n$ on the original, and therefore has probability $1/3^(2n)$ of occurring. if we can count the number of $n$ step paths on the reduced lattice $\omega(n)$, then we will inherit the distribution of path lengths $p(n) = \omega(n)/3^{2n}.$
+
+## count them up
+
+we can count paths with a simple observation. if there is an $(n-1)$ step path to one of my neighbors, then there is an $n$ step path to me. in other words
+
+$$
+  \omega(n)^t = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega(n)^{t-1}
+$$
+
+on the reduced lattice we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. there are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
+
+
+
+
+
+
 
 <br>
