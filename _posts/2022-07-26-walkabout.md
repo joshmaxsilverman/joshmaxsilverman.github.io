@@ -73,7 +73,7 @@ any $n$ step path on the reduced lattice is a path of length $2n$ on the origina
 we can count paths with a simple observation. if there is an $(n-1)$ step path to one of my neighbors, then there is an $n$ step path to me. in other words
 
 $$
-  \omega(n)^t = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega(n)^{t-1}
+  \omega_n^t = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_n^{t-1}
 $$
 
 on the reduced lattice we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. there are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
