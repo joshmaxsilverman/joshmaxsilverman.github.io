@@ -37,6 +37,8 @@ $$
 
 to get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups (A, B, C, and D). the top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
 
+![](/img/2022-07-26-vertex-labels-save.png){:width="400 px" class="image-centered"}
+
 putting this to a graph, we can generate the system of expectation equations like
 
 ```mathematica
@@ -64,7 +66,9 @@ sols = First@Solve[system, VertexList[g]]
 
 putting these back on the ball, we see that the expected waiting time increases as we move away from the starting point, up until a maximum at the furthest point, $D_3.$ as expected, the expected waiting time at each of $A_1$'s neighbors is $1$ less than $T(A_1).$
 
-so, we're looking for the probability that his kitchen walk goes longer than $\langle T\rangle_\text{soccer} = 20.$
+![](/img/2022-07-26-vertex-labels-sols.png){:width="400 px" class="image-centered"}
+
+so, we'll be finding the probability that his kitchen walk goes longer than $\langle T\rangle_\text{soccer} = 20.$
 
 # kitchen constitutional
 
