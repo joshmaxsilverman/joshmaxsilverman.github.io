@@ -8,7 +8,7 @@
 .highlight .cs { color: #0000aa; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #aa0000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gr { color: #0000aa } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00aa00 } /* Generic.Inserted */
 .highlight .go { color: #888888 } /* Generic.Output */
