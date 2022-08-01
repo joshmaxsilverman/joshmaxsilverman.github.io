@@ -117,6 +117,10 @@ Do[ω[twoStepMoves[[i]], 1] += 1, {i, 1, Length@twoStepMoves}];
    )
 ```
 
+the recursive result has good agreement with a $10^7$ round simulation:
+
+![](/img/2022-07-31-ant-hexagon-plot.png){:width="450 px" class="image-centered"}
+
 with this in hand, we can find the chance that Andy has an unusually long walk during his kitchen sojourn:
 
 $$
