@@ -30,7 +30,7 @@ we want to know if he'll have an exceptional experience in the kitchen. since th
 whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in $\sigma(i),$ the neighborhood of $i,$ which has an expected number of additional tiles $\langle T_j\rangle$ before it returns to the origin for the first time. putting this to symbols gets the harmonic relationship
 
 $$
-  \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)} \langle T_j\rangle.
+  \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)\setminus\boldsymbol{0}} \langle T_j\rangle.
 $$
 
 to get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups (A, B, C, and D). the top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
