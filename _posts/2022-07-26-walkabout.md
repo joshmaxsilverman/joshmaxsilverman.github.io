@@ -2,6 +2,8 @@
 layout: post
 published: true
 title: Morning walkabout
+subtitle: Will the friendly ant have an unusual experience?
+tags: recursion, counting, waiting-time, coarse-graining
 date: 2022/07/26
 ---
 
