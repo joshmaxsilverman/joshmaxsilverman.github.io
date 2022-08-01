@@ -123,7 +123,7 @@ $$
   \begin{align}
     P(T_\text{kitchen} \gt \langle T\rangle_\text{soccer}) &= 1 - \sum\limits_{n=1}^{10}\frac{\omega_\boldsymbol{0}^n}{3^{2n}} \\
     &= \frac{173576992}{387420489} \\
-    &\approx 44.8\\%
+    &\approx 44.80326\\%
   \end{align}
 $$
 
