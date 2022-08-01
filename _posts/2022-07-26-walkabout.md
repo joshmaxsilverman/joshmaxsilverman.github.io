@@ -101,7 +101,7 @@ now, we have everything we need.
 oddMoves = {Cos[#], Sin[#]} & /@ {π/6, 5 π/6, -3 π/2};
 
 (* reflect to form the second moves on the original lattice *)
-evenMoves = ({-1, -1} * #) & /@ oddMoves;
+evenMoves = ({1, -1} * #) & /@ oddMoves;
 
 (* form the set of moves on the reduced lattice *)
 twoStepMoves = Total /@ Tuples[{oddMoves, evenMoves}];
