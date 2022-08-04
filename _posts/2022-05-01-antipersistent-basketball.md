@@ -229,7 +229,7 @@ $$
   \boxed{S_+ = \dfrac{1-2x}{2 + 8x}}.
 $$
 
-Plotting this against $x,$ we see
+Plotting this against an $N=10^6$ round simulation for $S_+,$ we see
 
 ![](/img/2022-05-01-Splus-plot.JPG){:width="450 px" class="image-centered"}
 
