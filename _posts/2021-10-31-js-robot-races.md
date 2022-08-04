@@ -33,9 +33,9 @@ The only hope for a dissenter to win is to put fuel on a race that nobody else d
 
 ### Chance to win
 
-As the number of races grows, it should get easier for the system to fluctuate into a state where one race goes empty among the $3N-1$ Nash equilibrists. The question is, when do the dissenter's prospects overcome the equilibrists?
+As the number of races grows, it should get easier for the system to fluctuate into a state where one race goes empty among the $3N-1$ Nash equilibrists. The question is, when do the dissenter's prospects overcome the equilibrists'?
 
-The dissenter wins if at least one lane is open. But we need to avoid doublecounting — the chance for lane $1$ to be open includes the case where lane $2$ is also open, and vice versa.
+The dissenter wins if at least one lane is empty. But we need to avoid doublecounting — the chance for lane $1$ to be empty includes the case where lane $2$ is also empty, and vice versa.
 
 The chance that at least one lane is empty, is 
 
@@ -59,7 +59,7 @@ P(1\cup 2\cup 3) &= P(1\cup 2) + P(3) - P((1\cup 2)\cap 3) \\
 &= P(1) + P(2) - P(1\cap 2) + P(3) - P((1\cap3)\cup(2\cap3)) \\
 &= P(1) + P(2) + P(3) - P(1\cap2) - \left[P(1\cap3) + P(2\cap3) - P(1\cap2\cap3)\right] \\
 &= P(1) + P(2) + P(3) -  P(1\cap2) - P(1\cap3) - P(2\cap3) + P(1\cap2\cap3) \\
-&= \binom{3}{1}P(\text{one lane open}) - \binom{3}{2}P(\text{two lanes open}) + P(\text{three lanes open})
+&= \binom{3}{1}P(\text{one lane empty}) - \binom{3}{2}P(\text{two lanes empty}) + P(\text{three lanes empty})
 \end{align}
 $$
 
