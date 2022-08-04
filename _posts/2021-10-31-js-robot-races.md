@@ -40,7 +40,7 @@ The dissenter wins if at least one lane is open. But we need to avoid doublecoun
 The chance that at least one lane is empty, is 
 
 $$
-P(\text{lane 1} \cup \text{lane 2} \cup \ldots \cup \text{lane }N),
+P(\text{lane 1 empty} \cup \text{lane 2 empty} \cup \ldots \cup \text{lane }N\text{ empty}),
 $$
 
 which isn't so useful, since unions are hard to calculate. Intersections are easy, though, and we can break it up into disjoint intersections.
@@ -71,7 +71,7 @@ Putting it all together, this becomes
 
 $$
 \begin{align}
-P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\right) \\
+P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\text{ empty}\right) \\
 &= \sum\limits_{j=1}^{N-1}\binom{N}{j}\left(\frac{N-j}{N}\right)^{3N-j}(-1)^{j+1} 
 \end{align}
 $$
