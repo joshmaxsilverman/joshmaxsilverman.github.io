@@ -76,6 +76,6 @@ P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\text{ empty}\right) \
 \end{align}
 $$
 
-which first overtakes the equilibrist's chance $p=\frac13$ when there are $8$ races.
+which first overtakes the equilibrists' chance $p=\frac13$ when there are $8$ races.
  
 <br>
