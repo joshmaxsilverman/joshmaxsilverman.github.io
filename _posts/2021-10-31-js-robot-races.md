@@ -78,6 +78,6 @@ $$
 
 which first overtakes the equilibrists' chance $p=\frac13$ when there are $8$ races:
 
-![](/img/2022-10-01-JS-robot-races.png){:width="450 px" class="image-centered"}
+![](/img/2021-10-01-JS-robot-races-compare.png){:width="450 px" class="image-centered"}
  
 <br>
