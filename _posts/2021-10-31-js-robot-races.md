@@ -65,7 +65,7 @@ $$
 
 In other words, we sum the chance for all single lanes to be empty, then subtract the chance that any two lanes are empty, then add the chance that any three lanes are empty, and so on, up until the chance that all $3N$ lanes are empty.
 
-The probability that all of the equilibrists avoid $j$ particular races is $\left(\frac{N-j}{N}\right)^{3n-1},$ and there are $\binom{N}{j}$ ways to pick $j$ races to avoid.
+The probability that all of the equilibrists avoid $j$ particular races is $\left(\frac{N-j}{N}\right)^{3N-1},$ and there are $\binom{N}{j}$ ways to pick $j$ races to avoid.
 
 Putting it all together, this becomes 
 
