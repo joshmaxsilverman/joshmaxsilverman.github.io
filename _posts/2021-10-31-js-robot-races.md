@@ -33,7 +33,7 @@ The only hope for a dissenter to win is to put fuel on a race that nobody else d
 
 ### Chance to win
 
-As the number of races grows, it should get easier for the system to fluctuate into a state where one race goes empty among the $3N-1$ Nash equilibrists. The question is, when do the dissenter's prospects overcome the equilibrists'?
+As the number of races grows, it should get easier for the system to fluctuate into a state where one race goes empty among the $\left(3N-1\right)$ Nash equilibrists. The question is, when do the dissenter's prospects overcome the equilibrists'?
 
 The dissenter wins if at least one lane is empty. But we need to avoid doublecounting — the chance for lane $1$ to be empty includes the case where lane $2$ is also empty, and vice versa.
 
@@ -72,7 +72,7 @@ Putting it all together, this becomes
 $$
 \begin{align}
 P(\text{a lane empty}) &= P\left(\bigcup\limits_{i=0}^{N}i\text{ empty}\right) \\
-&= \sum\limits_{j=1}^{N-1}\binom{N}{j}\left(\frac{N-j}{N}\right)^{3N-j}(-1)^{j+1} 
+&= \sum\limits_{j=1}^{N-1}\binom{N}{j}\left(\frac{N-j}{N}\right)^{3N-1}(-1)^{j+1} 
 \end{align}
 $$
 
