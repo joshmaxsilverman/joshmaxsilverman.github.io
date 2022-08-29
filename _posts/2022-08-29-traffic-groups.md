@@ -15,7 +15,7 @@ date: 2022/08/29
 
 Each additional driver introduces an expected number of additional groups $\langle G_i\rangle$, making the total
 
-$$\langle \text{num groups}\rangle = \langle G_1\rangle + \langle G_2\rangle + ... \langle G_N\rangle.$$
+$$\langle \text{num groups}\rangle_N = \langle G_1\rangle + \langle G_2\rangle + ... \langle G_N\rangle.$$
 
 Now, the $i^\text{th}$ driver has a $1/i$ chance of being the $1^\text{st}$ fastest, or $2^\text{nd}$ fastest, all the way up to being the $i^\text{th}$ fastest driver.
 
