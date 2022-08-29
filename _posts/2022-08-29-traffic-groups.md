@@ -25,6 +25,10 @@ If those drivers weren't in increasing order, then at least one driver who is sl
 
 So, 
 
-$$\langle G_i\rangle = \frac{1}{i}\left[1 + 1 + 1/2! + ... 1/(i-1)!\rangle].$$
+$$\langle G_i\rangle = \frac{1}{i}\left[1 + 1 + 1/2! + ... 1/(i-1)!\rangle],$$
+
+and
+
+$$\langle\text{num groups}\rangle = \sum_n\frac1n\sum\limits_0^{n-1} \frac{1}{i!}.$$
 
 <br>
