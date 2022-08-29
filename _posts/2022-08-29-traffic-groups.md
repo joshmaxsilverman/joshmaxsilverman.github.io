@@ -50,4 +50,8 @@ In the high-$n$ limit, this converges to
 
 $$\langle\text{num groups}\rangle_n = H(n)e + O(1).$$
 
+Plotting the approximation alongside the previous results shows good agreement at low $n$:
+
+![](/img/2022-08-29-traffic-groups-approx.png){:width="450 px" class="image-centered"}
+
 <br>
