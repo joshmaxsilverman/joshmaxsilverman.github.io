@@ -46,11 +46,11 @@ Plotting this (gold) next to a $10^3$ round simulation (blue) shows good agreeme
 
 ![](/img/2022-08-29-traffic-groups.png){:width="450 px" class="image-centered"}
 
-In the high-$n$ limit, this converges to 
+In the high-$N$ limit, this converges to 
 
-$$\langle\text{num groups}\rangle_n = H(n)e + O(1).$$
+$$\langle\text{num groups}\rangle_N = H(N)e + O(1).$$
 
-Plotting the approximation (dark gray) alongside the previous results shows good agreement at low $n$:
+Plotting the approximation (dark gray) alongside the previous results shows good agreement at low $N$:
 
 ![](/img/2022-08-29-traffic-groups-approx.png){:width="450 px" class="image-centered"}
 
