@@ -42,7 +42,7 @@ and
 
 $$\langle\text{num groups}\rangle_N = \sum_{i=1}^N\frac1i\sum\limits_{j=0}^{i-1} \frac{1}{j!}.$$
 
-Plotting this (gold) next to a $10^3$ round simulation shows good agreement:
+Plotting this (gold) next to a $10^3$ round simulation (blue) shows good agreement:
 
 ![](/img/2022-08-29-traffic-groups.png){:width="450 px" class="image-centered"}
 
