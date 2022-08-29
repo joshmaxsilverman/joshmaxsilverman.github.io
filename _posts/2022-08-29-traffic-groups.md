@@ -7,7 +7,16 @@ subtitle: How many will go as fast as they want if everyone goes as fast as they
 tags: occlusion counting ensemble
 ---
 
->Question
+>**Question**:
+>A long time ago, there once was a riddle about cars getting caught in traffic jams. You could say that one really stuck with me.
+>
+>In the original puzzle, there were $N$ cars on a long, straight highway with a single lane. Each car traveled in the same direction but at a constant speed that was unique and randomly selected. However, if a driver caught up to another, slower car (or a group of cars similarly blocked by that slower car), they remained stuck behind that slower car.
+>
+>This time around (as suggested by one of the original puzzle’s extension problems), a second lane opens up. The catch is that there is only one entry point into this second lane, so each car has exactly one opportunity to decide whether to proceed into this second lane. 
+>
+>From the first car in the original lane to the last car, each decides whether to make the switch to the second lane as it passes. Fortunately, each car knows the speed of every other car, so each will make the switch provided that it can ultimately proceed at a greater speed (whether on its own or as part of a faster group).
+>
+>On average, how many total groups of cars will eventually form in the two lanes?
 
 <!--more-->
 
@@ -40,4 +49,5 @@ Plotting this (gold) next to a $10^3$ round simulation shows good agreement:
 In the high-$n$ limit, this converges to 
 
 $$\langle\text{num groups}\rangle_n = H(n)e + O(1).$$
+
 <br>
