@@ -27,10 +27,17 @@ If those drivers weren't in increasing order, then at least one driver who is sl
 
 So, 
 
-$$\langle G_i\rangle = \frac{1}{i}\left[1 + 1 + 1/2! + ... 1/(i-1)!\right],$$
+$$\langle G_i\rangle = \frac{1}{i}\left[1 + 1 + 1/2! + ... 1/(i-1)!\right]$$
 
 and
 
-$$\langle\text{num groups}\rangle_N = \sum_{n=1}^N\frac1n\sum\limits_{i=0}^{n-1} \frac{1}{i!}.$$
+$$\langle\text{num groups}\rangle_N = \sum_{i=1}^N\frac1i\sum\limits_{j=0}^{i-1} \frac{1}{j!}.$$
 
+Plotting this (gold) next to a $10^3$ round simulation shows good agreement:
+
+![](/img/2022-08-29-traffic-groups.png){:width="450 px" class="image-centered"}
+
+In the high-$n$ limit, this converges to 
+
+$$\langle\text{num groups}\rangle_n = H(n)e + O(1).$$
 <br>
