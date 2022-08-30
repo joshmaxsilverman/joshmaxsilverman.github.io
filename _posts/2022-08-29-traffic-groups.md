@@ -28,7 +28,7 @@ Each additional driver introduces an expected number of additional groups $\lang
 
 $$\langle \text{num groups}\rangle_N = \langle G_1\rangle + \langle G_2\rangle + ... \langle G_N\rangle.$$
 
-Now, the $i^\text{th}$ driver has a $1/i$ chance of being the $1^\text{st}$ fastest, or $2^\text{nd}$ fastest, all the way up to being the $i^\text{th}$ fastest driver.
+Now, the $i^\text{th}$ driver has a $1/i$ chance of being the $1^\text{st}$ fastest, or $2^\text{nd}$ fastest, all the way up to being the $i^\text{th}$ fastest driver out of the first $i$ drivers to reach the entry point.
 
 If they are the first fastest, then they will only introduce a new group if all $(i-1)$ drivers before them are in increasing order. If they are $(i-1)$ fastest, they will only introduce a new group of the top $(i-2)$ drivers are in increasing order, and so on.
 
@@ -46,7 +46,7 @@ Plotting this (gold) next to a $10^3$ round simulation (blue) shows good agreeme
 
 ![](/img/2022-08-29-traffic-groups.png){:width="450 px" class="image-centered"}
 
-In the high-$N$ limit, this converges to 
+In the high-$N$ limit, this becomes 
 
 $$\langle\text{num groups}\rangle_N = H(N)e + O(1).$$
 
