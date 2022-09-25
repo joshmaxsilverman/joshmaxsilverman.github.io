@@ -19,4 +19,13 @@ tags:
 
 ## Solution
 
+If G didn't put a cutoff on the number of ways he was willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters.
+
+Since there's a cutoff, the number of letters D expects is
+
+$$
+\langle L\rangle_\text{cutoff} = \frac12\langle L|\text{monster seen before day $N$}\rangle  \frac12\langle L|\text{monster not seen before day $N$}\rangle. $$
+
+
+
 <br>
