@@ -52,4 +52,16 @@ Then, the fraction of days with a letter is
 $$
   \dfrac{\langle L\rangle_\text{cutoff}}{N} = \dfrac{1}{2N}\dfrac{1}{1-2^{-1/N}}.
 $$
+
+Writing $2^{-1/N}$ as $e^{-frac1N \log{2}}$ and expanding to first order, we get
+
+$$
+  \begin{align}
+    \dfrac{\langle L\rangle_\text{cutoff}}{N} &= \dfrac{1}{2N}\dfrac{1}{1-(1 - \frac1N \log{2})} \\
+    &= \frac{1}{2\log 2}.
+  \end{align}
+$$
+
+
+
 <br>
