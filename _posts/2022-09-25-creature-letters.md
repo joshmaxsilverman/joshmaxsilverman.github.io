@@ -45,5 +45,11 @@ $$
   \end{align}
 $$
 
-Now, since there's just a $50\\%$ chance to see the monster by day $N,$ we can set $(1-p)^N = 1/2$ and get 
+Now, since there's just a $50\\%$ chance to see the monster by day $N,$ we can set $(1-p)^N = 1/2$ and get $p = 1 - 2^{-1/N}.$
+
+Then, the fraction of days with a letter is
+
+$$
+  \dfrac{\langle L\rangle_\text{cutoff}}{N} = \dfrac{1}{2N}\dfrac{1}{1-2^{-1/N}}.
+$$
 <br>
