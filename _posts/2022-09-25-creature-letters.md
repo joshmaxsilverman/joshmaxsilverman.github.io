@@ -25,7 +25,7 @@ $$
   \langle L\rangle = \frac12\langle L|\text{monster seen before day $N$}\rangle + \frac12\langle L|\text{monster not seen before day $N$}\rangle. 
 $$
 
-If G didn't put a cutoff on the number of days he was willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. Likewise, the expectation of $\langle L|\text{monster not seen before day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff}$ (since our fortunes after day $N$ are not effected by our efforts before day $N$).
+If G didn't put a cutoff on the number of days he was willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. Likewise, the expectation $\langle L|\text{monster not seen before day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff}$ (since our fortunes after day $N$ are not effected by our efforts before day $N$).
 
 But when there's a cutoff, $\langle L|\text{monster not seen before day $N$}\rangle$ is equal to $N,$ the number of letters sent by the time G gives up on day $N.$ 
 
@@ -35,7 +35,7 @@ $$
   \langle L|\text{monster seen before day }N\rangle = N - \frac1p
 $$
 
-So, when G has a cutoff, the expected number of letters is
+So, when G has a cutoff, the expected number of letters is 
 
 $$ 
   \begin{align}
@@ -44,4 +44,6 @@ $$
     &= \dfrac{1}{2p}
   \end{align}
 $$
+
+Now, since there's just a $50\\%$ chance to see the monster by day $N,$ we can set $(1-p)^N = 1/2$ and get 
 <br>
