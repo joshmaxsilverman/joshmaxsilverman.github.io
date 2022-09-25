@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Letters from the sea
 date: 2022/09/25
 subtitle: How many letters are you going to have to read?
-tags: 
+tags: expectation scaling translation
 ---
 
 >**Question:** Graydon is about to depart on a boating expedition that seeks to catch footage of the rare aquatic creature, _F. Riddlerius_. Every day he is away, he will send a hand-written letter to his new best friend, David Hacker. But if Graydon still has not spotted the creature after $N$ days (where $N$ is some very, very large number), he will return home.
@@ -58,10 +58,11 @@ Writing $2^{-1/N}$ as $e^{-\frac1N \log{2}}$ and expanding to first order, we ge
 $$
   \begin{align}
     f &= \dfrac{1}{2N}\dfrac{1}{1-(1 - \frac1N \log{2})} \\
-    &= \frac{1}{2\log 2}.
+    &= \frac{1}{2\log 2}
   \end{align}
 $$
 
+for big $N.$
 
 
 <br>
