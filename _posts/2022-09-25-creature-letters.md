@@ -25,11 +25,17 @@ $$
   \langle L\rangle = \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day }N\rangle. 
 $$
 
+### No cutoff
+
 If G didn't put a cutoff on the number of days he's willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
 
-Likewise, the expectation $\langle L\rvert\text{no monster by day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
+Likewise, the expectation $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + \langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
 
-But when there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle$ is equal to $N,$ the number of letters sent by the time G gives up on day $N.$ 
+### Yes cutoff
+
+When there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle_\text{cutoff}$ is equal to $N,$ the number of letters sent by the time G gives up. 
+
+### Putting it together
 
 Whether or not there's a cutoff, the value of $\langle L\rvert\text{monster by day }N\rangle$ is the same. Using the no cutoff case to solve for it, we get
 
