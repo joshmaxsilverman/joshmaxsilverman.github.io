@@ -15,7 +15,7 @@ tags: expectation scaling translation
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-buy-the-right-shirt/))
 
 ## Solution
 
