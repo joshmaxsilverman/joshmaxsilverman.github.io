@@ -76,7 +76,7 @@ so that, for big $N,$ David gets a letter on $1$ out of every $2\log 2$ of the $
 
 Plotting the prediction (gold) against a $10^6$ round simulation (blue), this seems pretty good:
 
-![](/img/2022-09-25-creature-letters-plot.png){:width="450 px" class=image-centered"}
+![](/img/2022-09-25-creature-letters-plot.png){:width="450 px" class="image-centered"}
 
 
 <br>
