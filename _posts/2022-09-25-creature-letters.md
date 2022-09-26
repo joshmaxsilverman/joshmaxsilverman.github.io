@@ -31,7 +31,7 @@ the average of the expected number of letters received when the monster is seen 
 
 If Graydon didn't put a cutoff on the number of days he's willing to wait, then David would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
 
-Likewise, $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + \langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
+Likewise, $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + 1/p,$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
 
 ### Yes cutoff
 
@@ -42,7 +42,7 @@ When there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle_\text{c
 Whether or not there's a cutoff, the value of $\langle L\rvert\text{monster by day }N\rangle$ is the same. Using the no cutoff case to solve for it, we get
 
 $$
-  \langle L\rvert\text{monster by day }N\rangle = N - \frac1p
+  \langle L\rvert\text{monster by day }N\rangle = \frac{1}{p} - N
 $$
 
 So, when Graydon has a cutoff, the expected number of letters is 
@@ -50,7 +50,7 @@ So, when Graydon has a cutoff, the expected number of letters is
 $$ 
   \begin{align}
     \langle L\rangle_\text{cutoff} &= \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day $N$}\rangle_\text{cutoff} \\
-    &= \frac12 \left(N - \frac1p\right) + \frac12 N \\
+    &= \frac12 \left(\frac1p\right - N) + \frac12 N \\
     &= \dfrac{1}{2p}
   \end{align}
 $$
