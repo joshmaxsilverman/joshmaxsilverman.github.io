@@ -19,23 +19,23 @@ tags: expectation scaling translation
 
 ## Solution
 
-The number of letters D expects is equal to
+The number of letters David expects is equal to
 
 $$
   \langle L\rangle = \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day }N\rangle,
 $$
 
-the average of the number of letters received when the monster is seen by day $N$ and the average number of letters received when the monster is not seen by day $N.$
+the average of the expected number of letters received when the monster is seen by day $N$ and the expected number of letters received when the monster is not seen by day $N.$
 
 ### No cutoff
 
-If G didn't put a cutoff on the number of days he's willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
+If Graydon didn't put a cutoff on the number of days he's willing to wait, then David would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
 
 Likewise, $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + \langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
 
 ### Yes cutoff
 
-When there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle_\text{cutoff}$ is equal to $N,$ the number of letters sent by the time G gives up. 
+When there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle_\text{cutoff}$ is equal to $N,$ the number of letters sent by the time Graydon gives up. 
 
 ### Putting it together
 
@@ -45,7 +45,7 @@ $$
   \langle L\rvert\text{monster by day }N\rangle = N - \frac1p
 $$
 
-So, when G has a cutoff, the expected number of letters is 
+So, when Graydon has a cutoff, the expected number of letters is 
 
 $$ 
   \begin{align}
@@ -72,7 +72,7 @@ $$
   \end{align}
 $$
 
-so that, for big $N,$ D gets a letter on $1$ out of every $2\log 2$ of the $N$ days, or $\approx72.1\\%$ of the time.
+so that, for big $N,$ David gets a letter on $1$ out of every $2\log 2$ of the $N$ days, or $\approx72.1\\%$ of the time.
 
 Plotting the prediction (gold) against a $10^6$ round simulation (blue), this seems pretty good:
 
