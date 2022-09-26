@@ -42,7 +42,7 @@ When there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle_\text{c
 Whether or not there's a cutoff, the value of $\langle L\rvert\text{monster by day }N\rangle$ is the same. Using the no cutoff case to solve for it, we get
 
 $$
-  \langle L\rvert\text{monster by day }N\rangle = \frac{1}{p} - N
+  \langle L\rvert\text{monster by day }N\rangle = \frac{1}{p} - N 
 $$
 
 So, when Graydon has a cutoff, the expected number of letters is 
