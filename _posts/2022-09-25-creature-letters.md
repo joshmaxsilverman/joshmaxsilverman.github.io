@@ -22,7 +22,7 @@ tags: expectation scaling translation
 The number of letters D expects is equal to
 
 $$
-  \langle L\rangle = \frac12\langle L|\text{monster seen before day $N$}\rangle + \frac12\langle L|\text{monster not seen before day $N$}\rangle. 
+  \langle L\rangle = \frac12\langle L|\text{monster seen before day }N\rangle + \frac12\langle L|\text{monster not seen before day }N\rangle. 
 $$
 
 If G didn't put a cutoff on the number of days he was willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. Likewise, the expectation $\langle L|\text{monster not seen before day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff}$ (since our fortunes after day $N$ are not effected by our efforts before day $N$).
