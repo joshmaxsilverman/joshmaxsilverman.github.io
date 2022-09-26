@@ -50,7 +50,7 @@ So, when Graydon has a cutoff, the expected number of letters is
 $$ 
   \begin{align}
     \langle L\rangle_\text{cutoff} &= \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day $N$}\rangle_\text{cutoff} \\
-    &= \frac12 \left(\frac1p\right - N) + \frac12 N \\
+    &= \frac12 \left(\frac1p - N\right) + \frac12 N \\
     &= \dfrac{1}{2p}
   \end{align}
 $$
