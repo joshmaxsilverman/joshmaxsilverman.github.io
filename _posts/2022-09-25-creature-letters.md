@@ -31,7 +31,7 @@ the average of the number of letters received when the monster is seen by day $N
 
 If G didn't put a cutoff on the number of days he's willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
 
-Likewise, the expectation $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + \langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
+Likewise, $\langle L\rvert\text{no monster by day }N\rangle_\text{no cutoff} = N + \langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
 
 ### Yes cutoff
 
@@ -49,7 +49,7 @@ So, when G has a cutoff, the expected number of letters is
 
 $$ 
   \begin{align}
-    \langle L\rangle &= \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day $N$}\rangle. \\
+    \langle L\rangle_\text{cutoff} &= \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day $N$}\rangle_\text{cutoff} \\
     &= \frac12 \left(N - \frac1p\right) + \frac12 N \\
     &= \dfrac{1}{2p}
   \end{align}
@@ -72,7 +72,7 @@ $$
   \end{align}
 $$
 
-for big $N.$
+so that, for big $N,$ D gets a letter on $1$ out of every $2\log 2$ of the $N$ days, or $\approx72.1\\%$ of the time.
 
 
 <br>
