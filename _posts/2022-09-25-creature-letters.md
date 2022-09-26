@@ -39,7 +39,7 @@ So, when G has a cutoff, the expected number of letters is
 
 $$ 
   \begin{align}
-    \langle L\rangle &= \frac12\langle L|\text{monster seen before day $N$}\rangle + \frac12\langle L|\text{monster not seen before day $N$}\rangle. \\
+    \langle L\rangle &= \frac12\langle L|\text{monster seen before day }N\rangle + \frac12\langle L|\text{monster not seen before day $N$}\rangle. \\
     &= \frac12 \left(N - \frac1p\right) + \frac12 N \\
     &= \dfrac{1}{2p}
   \end{align}
