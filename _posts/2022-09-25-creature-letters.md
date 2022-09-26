@@ -22,26 +22,26 @@ tags: expectation scaling translation
 The number of letters D expects is equal to
 
 $$
-  \langle L\rangle = \frac12\langle L\rvert\text{monster before day }N\rangle + \frac12\langle L\rvert\text{no monster before day }N\rangle. 
+  \langle L\rangle = \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day }N\rangle. 
 $$
 
 If G didn't put a cutoff on the number of days he's willing to wait, then D would expect to receive $\langle L\rangle_\text{no cutoff} = 1/p$ letters altogether. 
 
-Likewise, the expectation $\langle L\rvert\text{no monster before day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
+Likewise, the expectation $\langle L\rvert\text{no monster by day }N\rangle$ is $N$ plus $\langle L\rangle_\text{no cutoff},$ since our fortunes after day $N$ are not effected by our efforts before day $N.$
 
-But when there's a cutoff, $\langle L\rvert\text{no monster before day }N\rangle$ is equal to $N,$ the number of letters sent by the time G gives up on day $N.$ 
+But when there's a cutoff, $\langle L\rvert\text{no monster by day }N\rangle$ is equal to $N,$ the number of letters sent by the time G gives up on day $N.$ 
 
-Whether or not there's a cutoff, the value of $\langle L\rvert\text{monster before day }N\rangle$ is the same. Using the no cutoff case to solve for it, we get
+Whether or not there's a cutoff, the value of $\langle L\rvert\text{monster by day }N\rangle$ is the same. Using the no cutoff case to solve for it, we get
 
 $$
-  \langle L\rvert\text{monster before day }N\rangle = N - \frac1p
+  \langle L\rvert\text{monster by day }N\rangle = N - \frac1p
 $$
 
 So, when G has a cutoff, the expected number of letters is 
 
 $$ 
   \begin{align}
-    \langle L\rangle &= \frac12\langle L\rvert\text{monster before day }N\rangle + \frac12\langle L\rvert\text{no monster before day $N$}\rangle. \\
+    \langle L\rangle &= \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day $N$}\rangle. \\
     &= \frac12 \left(N - \frac1p\right) + \frac12 N \\
     &= \dfrac{1}{2p}
   \end{align}
