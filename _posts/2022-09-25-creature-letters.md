@@ -22,8 +22,10 @@ tags: expectation scaling translation
 The number of letters D expects is equal to
 
 $$
-  \langle L\rangle = \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day }N\rangle. 
+  \langle L\rangle = \frac12\langle L\rvert\text{monster by day }N\rangle + \frac12\langle L\rvert\text{no monster by day }N\rangle,
 $$
+
+the average of the number of letters received when the monster is seen by day $N$ and the average number of letters received when the monster is not seen by day $N.$
 
 ### No cutoff
 
