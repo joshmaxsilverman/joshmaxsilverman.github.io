@@ -46,7 +46,12 @@ With the recursion in hand, we can vary the chair capacity $T$ relative to the n
 
 ![](/img/2022-10-07-plot-sigma.png){:width="500px" class="image-centered"}
 
-Running $N$ up, we see that the sigmoid behavior persists, but the transition gets sharper, and the halfway induction point gets smaller. Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
+{:.caption}
+A plot of $P(\text{no overload})$ vs $T/N$ as $N$ varies from $10$ up to $320.$
+
+Running $N$ up, we see that the sigmoid behavior persists, but the transition gets sharper, and the halfway induction point gets smaller. 
+
+Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
 
 ![](/img/2022-10-07-plot-halfpoints.png){:width="500px" class="image-centered"}
 
