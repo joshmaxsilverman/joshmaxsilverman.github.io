@@ -55,7 +55,7 @@ Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to 
 
 ![](/img/2022-10-07-plot-halfpoints-label.png){:width="500px" class="image-centered"}
 
-However, better analytic approach, or more computation time would be needed to weigh in with conviction.
+However, a better analytic approach or more computation time would be needed to weigh in with conviction.
 
 
 
