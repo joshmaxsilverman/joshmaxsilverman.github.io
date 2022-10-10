@@ -46,9 +46,9 @@ With the recursion in hand, we can vary the chair capacity $T$ relative to the n
 
 ![](/img/2022-10-07-plot-sigma.png){:width="500px" class="image-centered"}
 
-Running $N$ up (from $10$ to $20, 40, 80, 160, 320$) we see that the sigmoid behavior persists, but the transition gets sharper, and the halfway induction point gets smaller. Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
+Running $N$ up, we see that the sigmoid behavior persists, but the transition gets sharper, and the halfway induction point gets smaller. Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
 
-![](2022-10-07-plot-halfpoints.png){:width="500px" class="image-centered"}
+![](/img/2022-10-07-plot-halfpoints.png){:width="500px" class="image-centered"}
 
 A better analytic approach, or more computation time would be needed to weigh in with conviction.
 
