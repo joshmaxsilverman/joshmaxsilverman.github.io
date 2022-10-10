@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Sock wash
 date: 2022/10/09
 subtitle: Will you be able to fit all your lonely socks on the chair?
