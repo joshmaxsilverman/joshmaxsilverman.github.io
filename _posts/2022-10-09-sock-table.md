@@ -21,16 +21,16 @@ tags: recursion scaling
 
 There are three relevant locations for socks: in the basket, on the chair, or in the drawer.
 
-When socks pair up into the drawer, we don't care about them anymore because they can't increase the number of unpaired socks on the chair. Also, the number of unpaired socks on the chair is equal to the number of unpaired socks in the basket. 
+When socks pair up and enter the drawer, we don't care about them anymore because they can't increase the number of unpaired socks on the chair. Also, the number of unpaired socks on the chair is equal to the number of unpaired socks in the basket. 
 
-So, we can uniquely describe the state of the system by tracking the number of single socks on the chair ($s$), and the number of doubles in the basket ($d$).
+So, we can uniquely describe the state of the system by tracking the number of single socks on the chair $s,$ and the number of doubles in the basket $d.$
 
 At each step, two things can happen:
 
-1. with probability $2d/(s+2d),$ we grab a member of a double in the basket and put it on the chair
-2. with probability $s/(s+2d),$ we grab a single in the basket and pair it with its partner on the chair
+- we grab a member of a double in the basket and put it on the chair, with probability $2d/(s+2d),$ or
+- we grab a single in the basket and pair it with its partner on the chair, with probability $s/(s+2d).$
 
-In the first case, a new singleton is created ($s \rightarrow (s+1)$) and an existing double is annihilated ($d\rightarrow (d-1)$). In the second case a singleton is annihilated ($d\rightarrow (d-1)$).
+In the first case, a new singleton is created $s \rightarrow (s+1)$ and an existing double is annihilated $d\rightarrow (d-1).$ In the second case a singleton is annihilated $s\rightarrow (s-1).$
 
 Putting this all together, and calling the probability that the state $(s,d)$ leads to an overloaded chair $P(s,d),$ we get
 
@@ -55,7 +55,7 @@ Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to 
 
 ![](/img/2022-10-07-plot-halfpoints-label.png){:width="500px" class="image-centered"}
 
-A better analytic approach, or more computation time would be needed to weigh in with conviction.
+However, better analytic approach, or more computation time would be needed to weigh in with conviction.
 
 
 
