@@ -15,7 +15,7 @@ tags: recursion scaling
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-fold-all-your-socks/))
 
 ## Solution
 
