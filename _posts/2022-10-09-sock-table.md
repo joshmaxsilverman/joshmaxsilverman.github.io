@@ -40,7 +40,7 @@ $$
 
 The "base case" is that $P(10,d) = 1$ and $P(s,d) = 0$ whenever $s + d \leq 10$ (because it doesn't have enough ingredients to make an overloaded chair).
 
-<!-- Running the recursion shows that $ P(0,14) = 15627431/22309287 \approx 0.70049$ -->
+Running the recursion shows that $P(0,14) = \frac{15627431}{22309287} \approx 0.70049$
 
 With the recursion in hand, we can vary the chair capacity $T$ relative to the number of pairs $N.$ Evidently, it shows sigmoid behavior, with no probability up until a transition point, after which it plateaus to $1$. 
 
