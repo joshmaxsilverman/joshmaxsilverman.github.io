@@ -38,7 +38,7 @@ $$
   P(s,d) = \dfrac{s}{s+2d} P(s-1,d) + \dfrac{2d}{s+2d}P(s+1,d-1).
 $$
 
-The "base case" is that $P(10,x) = 1$ and $P(s,d) = 0$ whenever $s + d\leq 10$ (because it doesn't have enough ingredients to make an overloaded chair).
+The "base case" is that $P(10,d) = 1$ and $P(s,d) = 0$ whenever $s + d\leq 10$ (because it doesn't have enough ingredients to make an overloaded chair).
 
 Running the recursion shows that $P(0,14) = 15627431/22309287 \approx 0.70049$
 
