@@ -30,9 +30,9 @@ At each step, two things can happen:
 1. with probability $2d/(s+2d),$ we grab a member of a double in the basket and put it on the chair
 2. with probability $s/(s+2d),$ we grab a single in the basket and pair it with its partner on the chair
 
-In the first case, a new singleton is created ($s \rightarrow s+1$) and an existing double is annihilated ($d\rightarrow d-1$). In the second case a singleton is annihilated ($d\rightarrow d-1$).
+In the first case, a new singleton is created ($s \rightarrow (s+1)$) and an existing double is annihilated ($d\rightarrow (d-1)$). In the second case a singleton is annihilated ($d\rightarrow (d-1)$).
 
-Putting this all together, and calling the probability that the state $(s,d)$ $P(s,d)$ leads to an overloaded chair, we get
+Putting this all together, and calling the probability that the state $(s,d)$ leads to an overloaded chair $P(s,d),$ we get
 
 $$
   P(s,d) = \dfrac{s}{s+2d} P(s-1,d) + \dfrac{2d}{s+2d}P(s+1,d-1).
