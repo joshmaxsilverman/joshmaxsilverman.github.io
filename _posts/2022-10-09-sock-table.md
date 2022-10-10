@@ -42,7 +42,7 @@ The "base case" is that $P(10,x) = 1$ and $P(s,d) = 0$ whenever $s + d\leq 10$ (
 
 Running the recursion shows that $P(0,14) = 15627431/22309287 \approx 0.70049$
 
-With the recursive defintion in hand, we can vary the chair capacity $T$ relative to the number of pairs $N.$ Evidently, it shows sigmoid behavior, with no probability up until a transition point, after which it plateaus to $1$. 
+With the recursion in hand, we can vary the chair capacity $T$ relative to the number of pairs $N.$ Evidently, it shows sigmoid behavior, with no probability up until a transition point, after which it plateaus to $1$. 
 
 Running $N$ up (from $10$ to $20, 40, 80, 160, 320$) we see that the sigmoid behavior persists, but the transition gets sharper, and the halfway induction point gets smaller. Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
 
