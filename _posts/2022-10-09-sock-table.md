@@ -53,7 +53,7 @@ Running $N$ up, we see that the sigmoid behavior persists, but the transition ge
 
 Plotting the halfway induction value of $T/N$ for increasing $N,$ it appears to approach a limit that may remain above the intuitive limit of $1/2.$ 
 
-![](/img/2022-10-07-plot-halfpoints.png){:width="500px" class="image-centered"}
+![](/img/2022-10-07-plot-halfpoints-label.png){:width="500px" class="image-centered"}
 
 A better analytic approach, or more computation time would be needed to weigh in with conviction.
 
