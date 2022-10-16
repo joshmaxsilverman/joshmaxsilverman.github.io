@@ -111,6 +111,25 @@ or approximately $88.74$
 
 The third approach is through counting. In the recursive section, we labeled the states using $(s,d).$ Now we'll count how many ways $N(s,d)$ are there to form states $(s,d),$ with $n$ total people. 
 
+First we have to pick $(s+d)$ birthdays out of $365$ which gives a factor of $\binom{365}{s+d}.$ Next, we have to pick out how to assign singlets and doublets to the $(s+d)$ chosen birthdays which gives a factor of $\binom{s+d}{s}.$ Next there are $(s+2d)!$ ways to pick the order in which the people walk into the room. Finally, we don't about the order in which two pairs of a doublet walk into the room, so we divide by $2^d.$ Putting it all together, the number of ways to pick form the state $(s,d)$ is 
+
+$$\Omega(s,d) = \dfrac{\dbinom{365}{s+d}\dbinom{s+d}{s}(s+2d)!}{2^d}.$$
+
+Now, we just sum over all possibly triplet free states $(s,d)$
+
+$$
+  N(\text{no triplets with }n\text{ people}) = \sum_{d=0}{n/2}\Omega{n-2d,d}
+$$
+
+Finally, we have to divide by the number of ways to pick $n$ birthdays:
+
+$$
+  P(\text{no triplets with }n\text{ people}) = \dfrac{N(\text{no triplets with }n\text{ people})}{365^n}
+$$
+
+which gives the same result as the recursion.
+
+## Comparing exact and approximate results
 
 
 <br>
