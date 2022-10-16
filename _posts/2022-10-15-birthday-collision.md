@@ -52,7 +52,7 @@ The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot36
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
 $$
-    \int\limits_0^{2*365+1}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2}
+    \int\limits_0^{2*365+1}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
@@ -130,6 +130,9 @@ $$
 which gives the same result as the recursion.
 
 ## Comparing exact and approximate results
+
+What the extra work of the recursion/counting methods gets us are the built-in time lags that comes from e.g. singlets needing to precede doublets. In the approximation, it's open season on collisions right from the get go, and the lags dissolve from view.
+
 
 
 <br>
