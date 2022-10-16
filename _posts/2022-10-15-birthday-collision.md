@@ -35,7 +35,7 @@ To find the average amount of people at which the collision first appears $n^*$,
 
 $$\text{pdf}(n) = \text{cdf}^\prime(n) \approx \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
 
-The expected value of $n^*$ is then $\int\limits_0^{365}dn\, n \text{pdf}(n),$ or
+The expected value of $n^*$ is then $\int\limits_0^{365}dn\ n\cdot\text{pdf}(n),$ or
 
 $$
   \begin{align}
