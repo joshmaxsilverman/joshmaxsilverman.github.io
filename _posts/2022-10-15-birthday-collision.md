@@ -66,10 +66,10 @@ $$
 which, after a simular substitution, becomes
 
 $$
-  n^* \approx 365^{2/3}\sqrt[3]{3!}\Gamma(4/3) \approx 82.87
+  n^* \approx 365^{2/3}\cdot\sqrt[3]{3!}\cdot\Gamma(4/3) \approx 82.87
 $$
 
-In general, the prediction of the approximation for $c$-birthday collisions is $365^{1-1/j}\sqrt[c]{c!}\Gamma(1+1/j).$
+In general, the prediction of the approximation for $c$-birthday collisions is $365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
 
