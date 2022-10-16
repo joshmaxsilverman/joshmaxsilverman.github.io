@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Birthday collisions
 date: 2022/10/15
-subtitle:
-tags:
+subtitle: How many people in this room have stolen your birthday?
+tags: approximation recursion combinatorics
 ---
 
 >Question
@@ -30,6 +30,8 @@ A more audacious way to get the same result is to think about pairs. As long as 
 $$\left(1-\frac{1}{365}\right)^\binom{n}{2} \approx e^{-\dbinom{n}{2}/365}$$
 
 The probability of **having** a collision among $n$ (or fewer) people is then $\text{cdf}(n) = 1 - e^{-\dbinom{n}{2}/365}.$
+
+The big idea here is that the low probability of getting a collision is up against the number of pairs. As soon as the number of pairs is on the order of the inverse probability, we should expect to see a collision.
 
 To find the average amount of people at which the collision first appears $n^*$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
 
