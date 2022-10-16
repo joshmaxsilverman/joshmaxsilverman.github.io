@@ -47,7 +47,7 @@ $$
     \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
 $$
 
-The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
+The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
 
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
@@ -58,7 +58,7 @@ $$
 which, after a simular substitution, becomes
 
 $$
-  n^* \approx \sqrt[3]{3!}365^{2/3}\gamma(4/3) \approx 82.87
+  n^* \approx \sqrt[3]{3!}365^{2/3}\Gamma(4/3) \approx 82.87
 $$
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
