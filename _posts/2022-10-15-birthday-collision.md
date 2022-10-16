@@ -36,13 +36,13 @@ A more audacious way to get the same result is to think about pairs. As long as 
 $$\left(1-\frac{1}{365}\right)^\binom{n}{2} \approx e^{-\dbinom{n}{2}/365} \approx e^{-n^2/(2!\cdot365)}$$
 
 The probability of **having** a collision among $n$ (or fewer) people is then 
-$$\text{cdf}(n) = 1 - e^{-n^2/(2!\cdot365)}.$$
+$$\text{cdf}(n) \approx 1 - e^{-n^2/(2!\cdot365)}.$$
 
 The big idea here is that the low probability of getting a collision is up against the number of pairs. As soon as the number of pairs is on the order of the inverse probability, we should expect to see a collision.
 
 To find the average amount of people at which the collision first appears $n^*$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
 
-$$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) \approx \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
+$$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) = \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
 
 The expected value of $n^*$ is then $\int\limits_0^{365+1}dn\ n\ \text{pdf}(n),$ or
 
