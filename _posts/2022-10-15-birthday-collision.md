@@ -31,11 +31,11 @@ $$\left(1-\frac{1}{365}\right)^\binom{n}{2} \approx e^{-\dbinom{n}{2}/365}$$
 
 The probability of **having** a collision among $n$ (or fewer) people is then $\text{cdf}(n) = 1 - e^{-\dbinom{n}{2}/365}.$
 
-To find the average amount of people at which the collision first appears $n^\star$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
+To find the average amount of people at which the collision first appears $n^*$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
 
-$$\text{pdf(n) = \text{cdf}^\prime(n) = \dfrac{n}{365}e^{-\dbinom{n}{2}/365}.$$
+$$\text{pdf}(n) = \text{cdf}^\prime(n) = \dfrac{n}{365}e^{-\dbinom{n}{2}/365}.$$
 
-The expected value of $n^\star$ is then $\int\limits_0^{365}dn\, n \text{pdf}n,$ or
+The expected value of $n^*$ is then $\int\limits_0^{365}dn\, n \text{pdf}(n),$ or
 
 $$
   \begin{align}
