@@ -61,7 +61,7 @@ The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot36
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
 $$
-    \int\limits_0^{2*365+1}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
+    \int\limits_0^{2\cdot365+1}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
