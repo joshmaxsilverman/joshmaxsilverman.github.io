@@ -42,7 +42,7 @@ The big idea here is that the low probability of getting a collision is up again
 
 To find the average amount of people at which the collision first appears $n^*$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
 
-$$\text{pdf}(n) = \text{cdf}^\prime(n) \approx \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
+$$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) \approx \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
 
 The expected value of $n^*$ is then $\int\limits_0^{365+1}dn\ n\ \text{pdf}(n),$ or
 
