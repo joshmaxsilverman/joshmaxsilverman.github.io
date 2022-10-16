@@ -38,7 +38,7 @@ $$\text{pdf}(n) = \text{cdf}^\prime(n) \approx \dfrac{n}{365}e^{-n^2/(2!\cdot365
 The expected value of $n^*$ is then $\int\limits_0^{365}dn\ n\ \text{pdf}(n),$ or
 
 $$
-    \int\limits_0^{365}dn\ n \dfrac{n}{365}e^{-n^2/(2!\cdot 365)}
+    \frac{1}{365}\int\limits_0^{365}dn\ n^2 e^{-n^2/(2!\cdot 365)}
 $$
 
 <br>
