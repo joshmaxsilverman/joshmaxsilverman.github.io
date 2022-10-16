@@ -61,7 +61,7 @@ $$
   n^* \approx \sqrt[3]{3!}365^{2/3}\Gamma(4/3) \approx 82.87
 $$
 
-In general, the prediction of the approximation for $c$-birthday collisions is \sqrt[c]{c!}365^{1-1/j}\Gamma(1+1/j).$
+In general, the prediction of the approximation for $c$-birthday collisions is $\sqrt[c]{c!}365^{1-1/j}\Gamma(1+1/j).$
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
 
