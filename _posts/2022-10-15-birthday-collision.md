@@ -133,6 +133,7 @@ which gives the same result as the recursion.
 
 What the extra work of the recursion/counting methods gets us are the built-in time lags that comes from e.g. singlets needing to precede doublets. In the approximation, it's open season on collisions right from the get go, and the lags dissolve from view.
 
-
+![](/img/2022-10-15-double-plot.png){:width="450 px" class="image-centered"}
+![](/img/2022-10-15-triple-plot.png){:width="450 px" class="image-centered"}
 
 <br>
