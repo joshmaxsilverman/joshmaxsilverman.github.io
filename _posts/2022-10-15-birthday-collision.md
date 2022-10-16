@@ -7,11 +7,17 @@ subtitle: How many people in this room have stolen your birthday?
 tags: approximation recursion combinatorics
 ---
 
->Question
+>**Question**:Today I happen to be celebrating the birthday of a family member, which got me wondering about how likely it is for two people in a room to have the same birthday.
+>
+>Suppose people walk into a room, one at a time. Their birthdays happen to be randomly distributed throughout the $365$ days of the year (and no one was born on a leap day). The moment two people in the room have the same birthday, no more people enter the room and everyone inside celebrates by eating cake, regardless of whether that common birthday happens to be today.
+>
+>On average, what is the expected number of people in the room when they eat cake?
+>
+>**Extra credit**: Suppose everyone eats cake the moment three people in the room have the same birthday. On average, what is this expected number of people?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-salvage-your-rug/))
 
 ## Solution
 
