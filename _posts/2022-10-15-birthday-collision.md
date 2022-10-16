@@ -118,7 +118,7 @@ $$\Omega(s,d) = \dfrac{\dbinom{365}{s+d}\dbinom{s+d}{s}(s+2d)!}{2^d}.$$
 Now, we just sum over all possibly triplet free states $(s,d)$
 
 $$
-  N(\text{no triplets with }n\text{ people}) = \sum_{d=0}{n/2}\Omega{n-2d,d}
+  N(\text{no triplets with }n\text{ people}) = \sum_{d=0}^{n/2}\Omega(n-2d,d)
 $$
 
 Finally, we have to divide by the number of ways to pick $n$ birthdays:
