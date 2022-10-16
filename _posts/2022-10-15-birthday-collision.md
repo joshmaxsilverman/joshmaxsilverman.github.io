@@ -39,7 +39,7 @@ The expected value of $n^*$ is then $\int\limits_0^{365}dn\, n \text{pdf}(n),$ o
 
 $$
   \begin{align}
-    n^* &= \int\limits_0^{365}dn\, n \dfrac{n}{365}e^{-\binom{n}{2}/365} \\ 
+    n^* &= \int\limits_0^{365}dn\ n \dfrac{n}{365}e^{-\binom{n}{2}/365} \\ 
   \end{align}
 $$
 
