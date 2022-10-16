@@ -35,7 +35,8 @@ A more audacious way to get the same result is to think about pairs. As long as 
 
 $$\left(1-\frac{1}{365}\right)^\binom{n}{2} \approx e^{-\dbinom{n}{2}/365} \approx e^{-n^2/(2!\cdot365)}$$
 
-The probability of **having** a collision among $n$ (or fewer) people is then $\text{cdf}(n) = 1 - e^{-n^2/(2!\cdot365)}.$
+The probability of **having** a collision among $n$ (or fewer) people is then 
+$$\text{cdf}(n) = 1 - e^{-n^2/(2!\cdot365)}.$$
 
 The big idea here is that the low probability of getting a collision is up against the number of pairs. As soon as the number of pairs is on the order of the inverse probability, we should expect to see a collision.
 
@@ -55,7 +56,7 @@ $$
     \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
 $$
 
-The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
+The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\cdot\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
 
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
