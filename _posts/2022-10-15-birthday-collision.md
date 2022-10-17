@@ -72,7 +72,7 @@ $$
   \langle n_3\rangle \approx 365^{2/3}\cdot\sqrt[3]{3!}\cdot\Gamma(4/3) \approx 82.87
 $$
 
-In general, the prediction of the approximation for $c$-birthday collisions is $\langle n_c\rangle \approx 365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$ However, the assumption used to make the approximation starts to crumble around $6$- or $7$-birthday collisions. 
+In general, the prediction of the approximation for $c$-birthday collisions is $\langle n_c\rangle \approx 365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$ However, the assumption used to make the approximation starts to devastate around $6$- or $7$-birthday collisions. 
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
 
