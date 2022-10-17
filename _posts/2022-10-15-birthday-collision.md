@@ -92,7 +92,11 @@ $$
 
 With the base conditions of $P(0,0)=1$ and $P(s,d) = 0$ whenever $s$ or $d$ is less than zero.
 
-As a sanity check, we can look at $P(s,0)$ as $s$ varies. As expected, it crosses $50%$ at $s=23.$
+As a sanity check, we can look at $P(s,0)$ as $s$ varies. 
+
+![](/img/2022-10-15-sanity-check.png){:width="450 px" class="image-centered"}
+
+As expected, it crosses $50%$ at $s=23.$
 
 To find the probability that a room with $n$ people has no birthday triplets, we have to add up all the ways that $n$ people could have no triplets. For $n=5$ people, the relevant states are $(s,d) = (5,0),$ $(3,1),$ and $(1,2)$ corresponding to $5$ singlets, $3$ singlets plus $1$ pair of twins, and $1$ singlet plus $2$ pairs of twins.
 
@@ -147,4 +151,7 @@ What the extra work of the recursion/counting methods gets us are the built-in t
 ![](/img/2022-10-15-double-plot.png){:width="450 px" class="image-centered"}
 ![](/img/2022-10-15-triple-plot.png){:width="450 px" class="image-centered"}
 
+{:.caption}
+
+In each plot, the exact distribution is plotted in gold and the approximation in black.
 <br>
