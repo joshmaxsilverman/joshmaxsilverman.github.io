@@ -47,30 +47,30 @@ $$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) = \dfrac{n}{365}e^{-n^2/(2!\cdot365
 The expected value of $n^*$ is then $\int\limits_0^{365+1}\hspace{-0.8em}dn\ n\ \text{pdf}(n),$ or
 
 $$
-    \frac{1}{365}\int\limits_0^{365+1}\hspace{-0.8em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
+    n^*(2) = \frac{1}{365}\int\limits_0^{365+1}\hspace{-0.8em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
 $$
 
 We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the integral becomes
 
 $$
-    \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
+    n^*(2) = \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
 $$
 
-The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\cdot\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
+The integral is just the gamma function of $3/2$ so we get $n^*(2) = \sqrt{2\cdot365}\cdot\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
 
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
 $$
-    \int\limits_0^{2\cdot365+1}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
+    n^*(3) = \int\limits_0^{2\cdot365+1}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
 
 $$
-  n^* \approx 365^{2/3}\cdot\sqrt[3]{3!}\cdot\Gamma(4/3) \approx 82.87
+  n^*(3) \approx 365^{2/3}\cdot\sqrt[3]{3!}\cdot\Gamma(4/3) \approx 82.87
 $$
 
-In general, the prediction of the approximation for $c$-birthday collisions is $365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$
+In general, the prediction of the approximation for $c$-birthday collisions is $n^*(c) \approx 365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
 
