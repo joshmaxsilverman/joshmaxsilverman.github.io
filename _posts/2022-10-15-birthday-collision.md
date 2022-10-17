@@ -7,7 +7,7 @@ subtitle: How many people in this room have stolen your birthday?
 tags: approximation recursion combinatorics
 ---
 
->**Question**:Today I happen to be celebrating the birthday of a family member, which got me wondering about how likely it is for two people in a room to have the same birthday.
+>**Question**: Today I happen to be celebrating the birthday of a family member, which got me wondering about how likely it is for two people in a room to have the same birthday.
 >
 >Suppose people walk into a room, one at a time. Their birthdays happen to be randomly distributed throughout the $365$ days of the year (and no one was born on a leap day). The moment two people in the room have the same birthday, no more people enter the room and everyone inside celebrates by eating cake, regardless of whether that common birthday happens to be today.
 >
@@ -27,7 +27,7 @@ The first way is the most insightful and helps reveal what the exact solutions a
 
 ## Approximate argument
 
-An exact way to treat the birthday twin case is to multiply the probability that the second person doesn't collide with the first $(1-1/365),$ with the probability that the third person doesn't collide with the first two $(1-2/365)$ and so on up to the $n^\text{th}$ person. The resulting expression is exact and at some point falls below $50%$ giving us the answer for birthday twins.
+One way to treat the birthday twin case is to multiply the probability that the second person doesn't collide with the first $(1-1/365),$ with the probability that the third person doesn't collide with the first two $(1-2/365)$ and so on up to the $n^\text{th}$ person. The resulting expression is exact and at some point falls below $50\%$ giving us the answer to the classic birthday birthday collision problem.
 
 Each term in the product $(1-j/365)$ is approximately equal to $e^{-j/365}$ and so we can add up all the exponents $\frac{1}{365}\left(1 + 2 + \ldots + n\right) = n(n+1)/2$ and we end up with $P(\text{no collisions in }n\text{ people}) \approx e^{-n^2/(2!\cdot 365)}.$ This is nice but, but the logic doesn't easily extend to triplets and above.
 
