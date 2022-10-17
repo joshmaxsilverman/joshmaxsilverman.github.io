@@ -123,12 +123,12 @@ $$
 CC[n_] := CC[n] = Sum[C[n - 2d, d], {d, 0, n/2}];
 ```
 
-As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $P(n-1) - P(n).$
+As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $C(n-1) - C(n).$
 
 To find the average $\langle n\rangle$ we just sum
 
 $$
-  \langle n\rangle = \sum\limits_{n=3}^{2\cdot 365+1} n\left[P(n-1) - P(n)\right]
+  \langle n\rangle = \sum\limits_{n=3}^{2\cdot 365+1} n\left[C(n-1) - C(n)\right]
 $$ 
 
 ```mathematica
