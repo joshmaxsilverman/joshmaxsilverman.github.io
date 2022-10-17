@@ -63,7 +63,7 @@ The integral is just the gamma function of $3/2$ so we get $\langle n_2\rangle =
 The same logic extends to triplets, quadruplets, and so on. For triplets, $\langle n\rangle$ is 
 
 $$
-    \langle n_3\rangle = \int\limits_0^{2\cdot365+1}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
+    \langle n_3\rangle = \int\limits_0^{\infty}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
@@ -72,7 +72,7 @@ $$
   \langle n_3\rangle \approx 365^{2/3}\cdot\sqrt[3]{3!}\cdot\Gamma(4/3) \approx 82.87
 $$
 
-In general, the prediction of the approximation for $c$-birthday collisions is $\langle n_c\rangle \approx 365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$
+In general, the prediction of the approximation for $c$-birthday collisions is $\langle n_c\rangle \approx 365^{(1-1/c)}\cdot\sqrt[c]{c!}\cdot\Gamma(1+1/c).$ However, the assumption used to make the approximation starts to crumble around $6$- or $7$-birthday collisions. 
 
 As we'll see, the true value for birthday twins is about $24.62$ and for birthday triplets it is $88.74,$ so these aren't perfect, but they aren't too bad either.
 
