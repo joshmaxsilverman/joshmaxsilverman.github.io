@@ -86,53 +86,53 @@ Each time we add a number, we can either pick a number that hasn't been chosen b
 
 The probability of these events are $\tfrac{365-(s-1)-d}{365}$ and $\tfrac{d}{365},$ respectively.
 
-The recursion is then
+The recursion is then (writing $C$ for $\text{cdf}$)
 
 $$
-P(s,d) = \dfrac{365-(s-1)-d}{365}P(s-1,d) + \dfrac{d}{365}P(s+1,d-1)
+C(s,d) = \dfrac{365-(s-1)-d}{365}C(s-1,d) + \dfrac{d}{365}C(s+1,d-1)
 $$
 
-With the base conditions of $P(0,0)=1$ and $P(s,d) = 0$ whenever $s$ or $d$ is less than zero.
+With the base conditions of $C(0,0)=1$ and $C(s,d) = 0$ whenever $s$ or $d$ is less than zero.
 
 Implemented, this looks like
 
 ```mathematica
-P[0, 0] = 1;
-P[s_, -1] := 0;
-P[-1, d_] := 0;
-P[s_, d_] :=
-  P[s, d] =
-   (365 - (s - 1) - d)/365 P[s - 1, d] + (s + 1)/365 P[s + 1, d - 1];
+C[0, 0] = 1;
+C[s_, -1] := 0;
+C[-1, d_] := 0;
+C[s_, d_] :=
+  C[s, d] =
+   (365 - (s - 1) - d)/365 C[s - 1, d] + (s + 1)/365 C[s + 1, d - 1];
 ```
 
-As a sanity check, we can look at $P(s,0)$ as $s$ varies. 
+As a sanity check, we can look at $C(s,0)$ as $s$ varies. 
 
 ![](/img/2022-10-15-sanity-check.png){:width="450 px" class="image-centered"}
 
-As expected, it crosses $50%$ at $s=23.$
+As expected, it crosses $50\%$ at $s=23.$
 
 To find the probability that a room with $n$ people has no birthday triplets, we have to add up all the ways that $n$ people could have no triplets. For $n=5$ people, the relevant states are $(s,d) = (5,0),$ $(3,1),$ and $(1,2)$ corresponding to $5$ singlets, $3$ singlets plus $1$ pair of twins, and $1$ singlet plus $2$ pairs of twins.
 
 So, the probability that there are no triplets in a group of $n$ or fewer people is 
 
 $$
-  \sum_{d=0}^{n/2} P(n-2d, d)
+  P(n) = \sum_{d=0}^{n/2} C(n-2d, d)
 $$
 
 ```mathematica
-PP[n_] := PP[n] = Sum[P[n - 2d, d], {d, 0, n/2}];
+P[n_] := P[n] = Sum[C[n - 2d, d], {d, 0, n/2}];
 ```
 
 As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $P(n-1) - P(n).$
 
-To find the average $n^*$ we just sum
+To find the average $\langle n\rangle$ we just sum
 
 $$
   \langle n\rangle = \sum\limits_{n=3}^{2\cdot 365+1} n\left[P(n-1) - P(n)\right]
 $$ 
 
 ```mathematica
-Sum[n (PP[n - 1] - PP[n]), {n, 0, 2*365 + 1}]
+Sum[n (P[n - 1] - P[n]), {n, 0, 2*365 + 1}]
 ```
 
 which gives
