@@ -53,7 +53,7 @@ $$
 We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the integral becomes
 
 $$
-    \sqrt{2\cdot 365} \int\limits_0^\infty\hspace{-0.6em} d\beta\ \sqrt{\beta}e^{-\beta}
+    \sqrt{2\cdot 365} \int\limits_0^\infty\hspace{-0.4em} d\beta\ \sqrt{\beta}e^{-\beta}
 $$
 
 The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\cdot\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
