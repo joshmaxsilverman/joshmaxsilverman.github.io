@@ -44,16 +44,16 @@ To find the average amount of people at which the collision first appears $n^*$,
 
 $$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) = \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
 
-The expected value of $n^*$ is then $\int\limits_0^{365+1}dn\ n\ \text{pdf}(n),$ or
+The expected value of $n^*$ is then $\int\limits_0^{365+1}\hspace{-0.8em}dn\ n\ \text{pdf}(n),$ or
 
 $$
-    \frac{1}{365}\int\limits_0^{365+1}\hspace{-1em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
+    \frac{1}{365}\int\limits_0^{365+1}\hspace{-0.8em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
 $$
 
 We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the integral becomes
 
 $$
-    \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
+    \sqrt{2\cdot 365} \int\limits_0^\infty\hspace{-0.8em} d\beta\ \sqrt{\beta}e^{-\beta}
 $$
 
 The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot365}\cdot\Gamma(3/2) = \sqrt{365\pi/2}$ which is approximately $23.94$
@@ -61,7 +61,7 @@ The integral is just the gamma function of $3/2$ so we get $n^* = \sqrt{2\cdot36
 The same logic extends to triplets, quadruplets, and so on. For triplets, $n^*$ is 
 
 $$
-    \int\limits_0^{2\cdot365+1}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
+    \int\limits_0^{2\cdot365+1}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
