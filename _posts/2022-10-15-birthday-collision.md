@@ -128,7 +128,7 @@ As before this is a cumulative probability ($\text{cdf}$), so the probability th
 To find the average $n^*$ we just sum
 
 $$
-  n^* = \sum\limits_{n=3}^{2\cdot 365+1} n\left[P(n-1) - P(n)\right]
+  \langle n\rangle = \sum\limits_{n=3}^{2\cdot 365+1} n\left[P(n-1) - P(n)\right]
 $$ 
 
 ```mathematica
