@@ -34,7 +34,7 @@ Each term in the product $(1-j/365)$ is approximately equal to $e^{-j/365}$ and 
 A more audacious way to get the same result is to think about pairs. As long as no pair of people in the room share the same birthday, we keep adding new people. Among $n$ people there are $\binom{n}{2}$ possible pairs and the chance that any given pair has a collision is $\frac{1}{365},$ so the probability of no collisions among $n$ people is approximately
 
 $$
-  \left(1-\frac{1}{365}\right)^\binom{n}{2} \approx e^{-\binom{n}{2}/365} \approx e^{-n^2/(2!\cdot365)}
+  \left(1-\tfrac{1}{365}\right)^\binom{n}{2} \approx e^{-\binom{n}{2}/365} \approx e^{-n^2/(2!\cdot365)}
 $$
 
 The probability of **having** a collision among $n$ (or fewer) people is then 
