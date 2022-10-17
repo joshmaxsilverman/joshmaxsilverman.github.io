@@ -142,7 +142,7 @@ $$
   P(\text{no triplets with }n\text{ people}) = \dfrac{N(\text{no triplets with }n\text{ people})}{365^n}
 $$
 
-which gives the same result as the recursion.
+which gives the same results as the recursion.
 
 ## Comparing exact and approximate results
 
