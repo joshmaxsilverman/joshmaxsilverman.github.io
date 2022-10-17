@@ -113,14 +113,14 @@ As expected, it crosses $50\%$ at $s=23.$
 
 To find the probability that a room with $n$ people has no birthday triplets, we have to add up all the ways that $n$ people could have no triplets. For $n=5$ people, the relevant states are $(s,d) = (5,0),$ $(3,1),$ and $(1,2)$ corresponding to $5$ singlets, $3$ singlets plus $1$ pair of twins, and $1$ singlet plus $2$ pairs of twins.
 
-So, the probability that there are no triplets in a group of $n$ or fewer people is 
+So, adding over all $(s,d)$ on the frontier, the probability that there are no triplets in a group of $n$ or fewer people is 
 
 $$
-  P(n) = \sum_{d=0}^{n/2} C(n-2d, d)
+  C(n) = \sum_{d=0}^{n/2} C(n-2d, d)
 $$
 
 ```mathematica
-P[n_] := P[n] = Sum[C[n - 2d, d], {d, 0, n/2}];
+CC[n_] := CC[n] = Sum[C[n - 2d, d], {d, 0, n/2}];
 ```
 
 As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $P(n-1) - P(n).$
@@ -132,7 +132,7 @@ $$
 $$ 
 
 ```mathematica
-Sum[n (P[n - 1] - P[n]), {n, 0, 2*365 + 1}]
+Sum[n (CC[n - 1] - CC[n]), {n, 0, 2*365 + 1}]
 ```
 
 which gives
