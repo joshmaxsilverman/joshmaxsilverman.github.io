@@ -47,7 +47,7 @@ $$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) = \dfrac{n}{365}e^{-n^2/(2!\cdot365
 The expected value of $n^*$ is then $\int\limits_0^{365+1}dn\ n\ \text{pdf}(n),$ or
 
 $$
-    \frac{1}{365}\int\limits_0^{365+1}\hspace{-2em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
+    \frac{1}{365}\int\limits_0^{365+1}\hspace{-1em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
 $$
 
 We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the integral becomes
