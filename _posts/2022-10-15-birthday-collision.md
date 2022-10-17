@@ -124,6 +124,19 @@ which gives
 
 or approximately $88.74$
 
+```mathematica
+P[0, 0] = 1;
+P[s_, -1] := 0;
+P[-1, d_] := 0;
+P[s_, d_] :=
+  P[s, d] =
+   (365 - (s - 1) - d)/365 P[s - 1, d] + (s + 1)/365 P[s + 1, d - 1];
+   
+PP[n_] := PP[n] = Sum[P[s, (n - s)/2], {s, n, 0, -2}];
+
+Sum[L (PP[L - 1] - PP[L]), {L, 0, 2*365 + 1}]
+```
+
 ## Combinatorics
 
 The third approach is through counting. In the recursive section, we labeled the states using $(s,d).$ Now we'll count how many ways $N(s,d)$ are there to form states $(s,d),$ with $n$ total people. 
