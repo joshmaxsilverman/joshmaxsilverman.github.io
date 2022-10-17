@@ -84,7 +84,7 @@ These are the macroscopic states we care about (how many singlets, doublets, and
 
 Each time we add a number, we can either pick a number that hasn't been chosen before $(s-1,d)\rightarrow(s,d)$ or pick a number that's currently a singlet $(s+1,d-1)\rightarrow(s,d).$
 
-The probability of these events are $(365-(s-1)-d)/365)$ and $d/365,$ respectively.
+The probability of these events are $\tfrac{365-(s-1)-d}{365}$ and $\tfrac{d}{365},$ respectively.
 
 The recursion is then
 
