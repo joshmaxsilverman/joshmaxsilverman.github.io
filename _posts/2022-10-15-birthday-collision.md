@@ -42,7 +42,7 @@ $$\text{cdf}(n) \approx 1 - e^{-n^2/(2!\cdot365)}.$$
 
 The big idea here is that the low probability of getting a collision is up against the number of pairs. As soon as the number of pairs is on the order of the inverse probability, we should expect to see a collision.
 
-To find the average amount of people at which the collision first appears $\langle n\rangle$, we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
+To find the average amount of people at which the collision first appears $\langle n\rangle$, we need the distribution ($\text{pdf}$) of $n,$ which we can get the $\text{pdf}$ by differentiating the $\text{cdf}$
 
 $$\text{pdf}(n) = \dfrac{d}{dn}\text{cdf}(n) = \dfrac{n}{365}e^{-n^2/(2!\cdot365)}.$$
 
@@ -52,7 +52,7 @@ $$
     \langle n_2\rangle = \frac{1}{365}\int\limits_0^{365+1}\hspace{-0.8em}dn\ n^2 e^{-n^2/(2!\cdot 365)}
 $$
 
-We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the integral becomes
+We can clean this up in a few ways. First of all, the exponential is basically dead by $n=366$ so we can make the upper bound $\infty$ without losing much accuracy. Second, we substitute $\beta = n^2/(2!\cdot 365)$ so that $d\beta = \frac{1}{365}n\ dn.$ With this, the expression becomes
 
 $$
     \langle n_2\rangle = \sqrt{2\cdot 365} \int\limits_0^\infty d\beta\ \sqrt{\beta}e^{-\beta}
