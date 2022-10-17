@@ -105,7 +105,7 @@ To find the probability that a room with $n$ people has no birthday triplets, we
 So, the probability that there are no triplets in a group of $n$ or fewer people is 
 
 $$
-  \sum_{d=0}^{n/2} P(n-d, d)
+  \sum_{d=0}^{n/2} P(n-2d, d)
 $$
 
 As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $P(n-1) - P(n).$
@@ -132,7 +132,7 @@ P[s_, d_] :=
   P[s, d] =
    (365 - (s - 1) - d)/365 P[s - 1, d] + (s + 1)/365 P[s + 1, d - 1];
    
-PP[n_] := PP[n] = Sum[P[s, (n - s)/2], {s, n, 0, -2}];
+PP[n_] := PP[n] = Sum[P[n - 2d, d], {d, 0, n/2}];
 
 Sum[L (PP[L - 1] - PP[L]), {L, 0, 2*365 + 1}]
 ```
