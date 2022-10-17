@@ -120,7 +120,7 @@ $$
 $$
 
 ```mathematica
-CC[n_] := CC[n] = Sum[C[n - 2d, d], {d, 0, n/2}];
+CC[n_] := Sum[C[n - 2d, d], {d, 0, n/2}];
 ```
 
 As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $C(n-1) - C(n).$
