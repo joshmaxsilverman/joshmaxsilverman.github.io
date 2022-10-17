@@ -94,6 +94,17 @@ $$
 
 With the base conditions of $P(0,0)=1$ and $P(s,d) = 0$ whenever $s$ or $d$ is less than zero.
 
+Implemented, this looks like
+
+```mathematica
+P[0, 0] = 1;
+P[s_, -1] := 0;
+P[-1, d_] := 0;
+P[s_, d_] :=
+  P[s, d] =
+   (365 - (s - 1) - d)/365 P[s - 1, d] + (s + 1)/365 P[s + 1, d - 1];
+```
+
 As a sanity check, we can look at $P(s,0)$ as $s$ varies. 
 
 ![](/img/2022-10-15-sanity-check.png){:width="450 px" class="image-centered"}
@@ -108,6 +119,10 @@ $$
   \sum_{d=0}^{n/2} P(n-2d, d)
 $$
 
+```mathematica
+PP[n_] := PP[n] = Sum[P[n - 2d, d], {d, 0, n/2}];
+```
+
 As before this is a cumulative probability ($\text{cdf}$), so the probability that the triplet first appears at $n$ people is $P(n-1) - P(n).$
 
 To find the average $n^*$ we just sum
@@ -116,6 +131,10 @@ $$
   n^* = \sum\limits_{n=3}^{2\cdot 365+1} n\left[P(n-1) - P(n)\right]
 $$ 
 
+```mathematica
+Sum[n (PP[n - 1] - PP[n]), {n, 0, 2*365 + 1}]
+```
+
 which gives
 
 ```
@@ -123,19 +142,6 @@ which gives
 ```
 
 or approximately $88.74$
-
-```mathematica
-P[0, 0] = 1;
-P[s_, -1] := 0;
-P[-1, d_] := 0;
-P[s_, d_] :=
-  P[s, d] =
-   (365 - (s - 1) - d)/365 P[s - 1, d] + (s + 1)/365 P[s + 1, d - 1];
-   
-PP[n_] := PP[n] = Sum[P[n - 2d, d], {d, 0, n/2}];
-
-Sum[L (PP[L - 1] - PP[L]), {L, 0, 2*365 + 1}]
-```
 
 ## Combinatorics
 
