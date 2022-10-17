@@ -63,7 +63,7 @@ The integral is just the gamma function of $3/2$ so we get $\langle n_2\rangle =
 The same logic extends to triplets, quadruplets, and so on. For triplets, $\langle n\rangle$ is 
 
 $$
-    \langle n_3\rangle = \int\limits_0^{\infty}\hspace{-0.8em}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
+    \langle n_3\rangle = \int\limits_0^{\infty}dn\ \frac{n^3}{2!\cdot 365^2} e^{-n^3/(3!\cdot 365^2)}
 $$
 
 which, after a simular substitution, becomes
