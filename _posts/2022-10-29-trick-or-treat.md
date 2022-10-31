@@ -97,7 +97,7 @@ We should check that our physics chutzpah did not lead us astray. At each step, 
 We should always make the choice that minimies expectation, so the expected penalty starting from $C$ candies, after seeing $T$ trick or treaters, is
 
 $$
-  E(C,T) = \min\limits_c\\{\gamma(C-1, T+1), \gamma(C-2,T+1), \gamma(C-3,T+1)\\}.
+  E(C,T) = \min\limits_c\{\gamma(C-1, T+1), \gamma(C-2,T+1), \gamma(C-3,T+1)\}.
 $$
 
 The value of the choice $\gamma(C, T)$ depends on where we find ourselves. 
