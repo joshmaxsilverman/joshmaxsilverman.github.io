@@ -63,6 +63,8 @@ If there are more than $L$ ToTs then we'll incur, on average, a penalty of $\fra
 
 If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $(L-50)/2$ which happens with probability $(L-50)/101.$
 
+If there are $L$ ToTs, then we'll incur a penalty of $(150 - L)$ for the unserved ToTs with probability $1/101.$
+
 Putting it together, the expected penalty is
 
 $$
@@ -76,6 +78,8 @@ $$
 $$
 
 which manifestly has roots at $L=0$ and $L = U + B$ and opens upward. Parabolas bottom out at the average of their roots, so the strategy of minimum penalty is $L_\text{min} = (U+B)/2 = 100.$
+
+This gives an average penalty of 
 
 ### Optimality check
 
@@ -91,17 +95,49 @@ $$
   E(C,T) = \min\limits_c\\{\gamma(C-1, T+1), \gamma(C-2,T+1), \gamma(C-3,T+1)\\}.
 $$
 
-The value of the choice $\gamma(C, T)$ depends on where we find ourselves.
+The value of the choice $\gamma(C, T)$ depends on where we find ourselves. 
+
+- if we've seen less than $49$ ToTs so far, then we immediately make our next choice. 
+- if we reach the end with no candies, we have no penalty. 
+- if we run out of candies, and we've seen $49$ or more ToTs, then there's a $1$ in $(150-T)$ chance that we've just given candy to the final ToT. If that's not the case, then we incur an average penalty of half the potential remaining ToTs.
+- if we have candies remaining and have seen $49$ or more ToTs, then we've either seen the last ToT, or we have another choice to make.
+
+Finally, we can't have a negative amount of candies. Putting it all together, we have.
 
 $$
   \displaystyle \gamma(C,T) = 
   \begin{cases}
-    0 & C=0,T=150 \\
-    \infty & C<0 \\
     E(C,T) & T < 49 \\
+    0 & C=0,T=150 \\
     \left(1-\dfrac{1}{150-T}\right)\dfrac{150-T}{2} & C=0, T\geq 49 \\
-    \dfrac{1}{150-T}C + \left(1-\dfrac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49
+    \dfrac{1}{150-T}C + \left(1-\dfrac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49 \\
+    \infty & C<0
   \end{cases} 
 $$
+
+Running this in Python, we get $E(150,0) = 2550/101,$ as expected.
+
+```python
+from functools import lru_cache
+
+impossible = 10_000
+
+@lru_cache(maxsize=10_000_000)
+
+def gamma(C, T):
+  if C < 0:
+    return impossible
+  if T == 150:
+    return C
+  if T < 49:
+    return E(C,T)
+  if C == 0:
+    return 1/(150-T) * 0 + (1 - 1/(150-T)) * (150-T)/2
+  if C > 0:
+    return 1/(150-T) * C + (1 - 1/(150-T)) * E(C, T)
+
+def E(C, T):
+  return min([gamma(C-1, T+1), gamma(C-2, T+1), gamma(C-3, T+1)])
+```
 
 <br>
