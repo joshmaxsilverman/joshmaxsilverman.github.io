@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Neurotic Halloween
-date: 2022/10/29
+date: 2022/10/30
 subtitle: How close can you get to perfect candy disbursement?
 tags: expectation dynamic-programming optimality
 ---
