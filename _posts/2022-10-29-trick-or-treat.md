@@ -1,27 +1,32 @@
 ---
 layout: post
-published: false
+published: true
 title: Neurotic Halloween
 date: 2022/10/29
 subtitle: How close can you get to perfect candy disbursement?
 tags:
 ---
 
->**Question**:
+>**Question**: For Halloween this year, you have purchased $150$ pieces of candy. However, you’re not sure how many trick-or-treaters will visit you. Based on previous years, it could be anywhere from $50$ to $150$ (inclusive), with each number being equally likely.
+>
+>As the trick-or-treaters arrive, you can decide to give each of them one, two or three candies. You want to avoid running out of candy, but you also want to avoid having any candy left over. Let $X$ represent the number of trick-or-treaters who won’t get candy (if you do run out) or the number of leftover pieces (if you don’t run out).
+>
+>This year, the day before Halloween, you come up with a strategy to minimize the expected value of $X.$ What is this minimum expected value?
+
+
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-hand-out-all-the-candy/))
 
 ## Solution
 
-The approach is roughly
+The plan for this solution is
 
-- illuminate the logic with the worst cases
-<!-- - solve the problem, pretend the chocolate is continuous -->
-- update the approach for discrete chocolates
-- calculate the expectation
-- make sure that physics chutzpah didn't mislead us by resolving with dynamic programming
+1. illuminate the logic with the worst cases
+2. discover the family of potential strategies
+3. calculate the expectation and minimize it
+4. make sure that physics chutzpah didn't mislead us by re-solving with dynamic programming
 
 ### Worst case
 
