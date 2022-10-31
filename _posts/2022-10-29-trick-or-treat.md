@@ -57,15 +57,19 @@ $$
   \overbrace{\\{C_1, C_2, \ldots, C_{49}, 1, 1, 1, \ldots, 1\\}}^{L\text{ entries}}
 $$
 
+### Expectation penalty
+
 If there are more than $L$ ToTs then we'll incur, on average, a penalty of $\frac12(150-L)$ for the unserved ToTs, which happens with probability $(150-L)/101.$ 
 
 If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $(L-50)/2$ which happens with probability $(L-50)/101.$
 
 Putting it together, the expected penalty is
 
-$
+$$
+  \frac12\frac{\left(150-L\right)^2}{202} + \frac12\frac{\left(L-50\right)^2}{202}
+$$
 
-### Expectation penalty
+which is minimized at $L=100$ which can be seen by symmetry, or taking a derivative, or massaging it into 
 
 ### Optimality check
 
