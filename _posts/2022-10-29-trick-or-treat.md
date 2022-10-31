@@ -96,11 +96,11 @@ The value of the choice $\gamma(C, T)$ depends on where we find ourselves.
 $$
   \displaystyle \gamma(C,T) = 
   \begin{cases}
-    0 & T=150 \\
-    \infty & C < 0 \\
-    E(C,T) & C < 49 \\
-    \left(1-\dfrac{1}{150-T}\right)\dfrac{150-T}{2} & C =0 \\
-    \dfrac{1}{150-T}C + \left(1-\dfrac{1}{150-T}\right)E(C,T) & C > 0
+    0 & C=0,T=150 \\
+    \infty & C<0 \\
+    E(C,T) & T < 49 \\
+    \left(1-\dfrac{1}{150-T}\right)\dfrac{150-T}{2} & C=0, T\geq 49 \\
+    \dfrac{1}{150-T}C + \left(1-\dfrac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49
   \end{cases} 
 $$
 
