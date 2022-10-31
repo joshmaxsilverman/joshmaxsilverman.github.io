@@ -103,9 +103,9 @@ $$
 The value of the choice $\gamma(C, T)$ depends on where we find ourselves. 
 
 - if we've seen less than $49$ ToTs so far, then we immediately make our next choice. 
-- if we reach the end with no candies, we have no penalty. 
 - if we run out of candies, and we've seen $49$ or more ToTs, then there's a $1$ in $(150-T)$ chance that we've just given candy to the final ToT. If that's not the case, then we incur an average penalty of half the potential remaining ToTs.
 - if we have candies remaining and have seen $49$ or more ToTs, then we've either seen the last ToT, or we have another choice to make.
+- if we reach the end with no candies, we have no penalty. 
 
 Finally, we can't have a negative amount of candies. Putting it all together, we have.
 
@@ -113,9 +113,9 @@ $$
   \displaystyle \gamma(C,T) = 
   \begin{cases}
     E(C,T) & T < 49 \\
+    \left(1-\frac{1}{150-T}\right)\frac{150-T}{2} & C=0, T\geq 49 \\
+    \frac{1}{150-T}C + \left(1-\frac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49 \\
     0 & C=0,T=150 \\
-    \left(1-\dfrac{1}{150-T}\right)\dfrac{150-T}{2} & C=0, T\geq 49 \\
-    \dfrac{1}{150-T}C + \left(1-\dfrac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49 \\
     \infty & C<0
   \end{cases} 
 $$
