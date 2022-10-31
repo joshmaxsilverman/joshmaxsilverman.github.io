@@ -71,7 +71,7 @@ If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $(L-
 Putting it together, the expected penalty is
 
 $$
-  \frac12\frac{\left(150-L\right)\left(150-L+1\right)}{202} + \frac12\frac{\left(L-50\right)\left(L-50+1\right)}{202}
+  \frac12\frac{\left(150-L\right)\left(150-L+1\right)}{101} + \frac12\frac{\left(L-50\right)\left(L-50+1\right)}{101}
 $$
 
 which is minimized at $L=100$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U,$ and $50$ as $B,$ and ignoring factors of $101$, the form is
