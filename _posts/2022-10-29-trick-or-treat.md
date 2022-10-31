@@ -112,8 +112,8 @@ $$
   \displaystyle \gamma(C,T) = 
   \begin{cases}
     E(C,T) & T < 49 \\
-    \left(1-\frac{1}{150-T}\right)\frac{150-T}{2} & C=0, T\geq 49 \\
-    \frac{1}{150-T}C + \left(1-\frac{1}{150-T}\right)E(C,T) & C > 0, T\geq 49 \\
+    (1-\frac{1}{150-T})\frac{150-T}{2} & C=0, T\geq 49 \\
+    \frac{1}{150-T}C + (1-\frac{1}{150-T})E(C,T) & C > 0, T\geq 49 \\
     0 & C=0,T=150 \\
     \infty & C<0
   \end{cases} 
