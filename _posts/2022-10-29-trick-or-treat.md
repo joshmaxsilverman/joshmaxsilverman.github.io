@@ -69,10 +69,26 @@ $$
   \frac12\frac{\left(150-L\right)^2}{202} + \frac12\frac{\left(L-50\right)^2}{202}
 $$
 
-which is minimized at $L=100$ which can be seen by symmetry, or taking a derivative, or massaging it into 
+which is minimized at $L=100$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U$ and $50$ as $B,$ we get
+
+$$
+  (U-L)^2 + (L-B)^2 = U^2 + B^2 + 2L(L- (U + B))
+$$
+
+which manifestly has roots at $L=0$ and $L = U + B$ and opens upward. Parabolas bottom out at the average of their roots, so the strategy of minimum penalty is $L_\text{min} = (U+B)/2 = 100.$
 
 ### Optimality check
 
+We can check that our physics chutzpah did not lead us astray. At each step, we have a choice between three decisions:
 
+- hand out $1$ chocolate,
+- hand out $2$ chocolates, or
+- hand out $3$ chocolates.
+
+We should always make the choice that minimies expectation, so the expected penalty starting from $C$ candies, after seeing $T$ trick or treaters, is
+
+$$
+  E(C,T) = \min\\{\gamma(C-1, T+1), \gamma(C-2,T+1), \gamma(C-3,T+1)\\}.
+$$
 
 <br>
