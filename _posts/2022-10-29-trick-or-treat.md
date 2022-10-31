@@ -74,16 +74,16 @@ $$
   \frac12\frac{\left(150-L\right)\left(150-L+1\right)}{202} + \frac12\frac{\left(L-50\right)\left(L-50+1\right)}{202}
 $$
 
-which is minimized at $L=100$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U$ and $50$ as $B$ and ignoring factors of $101$, the form is
+which is minimized at $L=100$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U,$ and $50$ as $B,$ and ignoring factors of $101$, the form is
 
 $$
   \begin{align}
     (U-L)(U-L+1) + (L-B)(L-B+1) &= U^2 + B^2 - 2(U+B)L + 2L^2 + U - B \\
-    &= U^2 + B^2 + U - B + 2L(L- (U + B))
+    &= \left(U^2 + B^2 + U - B\right) + 2L(L- (U + B))
   \end{align}
 $$
 
-which manifestly has roots at $L=0$ and $L = (U + B)$ and opens upward. Parabolas bottom out at the average of their roots, so the strategy of minimum penalty is $L_\text{min} = (U+B)/2 = 100,$ which gives an average penalty of $2550/101.$
+The $\left(U^2 + B^2 + U - B\right)$ is just an overall constant that shifts the parabola vertically. The shape and symmetry are determined by the expression $2L(L-U-B),$ which manifestly has roots at $L=0$ and $L = (U + B)$ and opens upward. Parabolas are symmetrical about the average of their roots, so the strategy of minimum penalty is $L_\text{min} = \frac12(U+B) = 100,$ which yields an average penalty of $2550/101\approx 25.248.$
 
 ### Optimality check
 
@@ -119,7 +119,7 @@ $$
   \end{cases} 
 $$
 
-Running this in Python, we get $E(150,0) = 2550/101,$ as expected.
+Running this in Python, we get $E(150,0) = 2550/101$ as expected.
 
 ```python
 from functools import lru_cache
