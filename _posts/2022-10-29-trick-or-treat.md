@@ -112,7 +112,7 @@ The value of the choice $\gamma(C, T)$ depends on where we find ourselves.
 - if we have candies remaining and have seen $49$ or more ToTs, then we've either seen the last ToT, or we have another choice to make.
 - if we reach the end with no candies, we have no penalty. 
 
-Finally, we can't have a negative amount of candies. Putting it all together, we have.
+Finally, we can't have a negative amount of candies. Putting it all together, we have:
 
 $$
   \displaystyle \gamma(C,T) = 
@@ -121,7 +121,7 @@ $$
     (1-\frac{1}{150-T})\frac{150-T}{2} & C=0, T\geq 49 \\
     \frac{1}{150-T}C + (1-\frac{1}{150-T})E(C,T) & C > 0, T\geq 49 \\
     0 & C=0,T=150 \\
-    \infty & C<0
+    \infty & C<0.
   \end{cases} 
 $$
 
