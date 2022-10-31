@@ -70,9 +70,9 @@ $$
 
 ### Expectation penalty
 
-If there are more than $L$ ToTs then we'll incur, on average, a penalty of $\frac12(150-L)$ for the unserved ToTs, which happens with probability $(150-L+1)/101.$ 
+If there are more than $L$ ToTs then we'll incur, on average, a penalty of $\frac12(150-L)$ for the unserved ToTs, which happens with probability $\frac{1}{101}(150-L+1).$ 
 
-If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $(L-50)/2$ for the leftover chocolates, which happens with probability $(L-50+1)/101.$
+If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $\frac12(L-50)$ for the leftover chocolates, which happens with probability $\frac{1}{101}(L-50+1).$
 
 Putting it together, the expected penalty is
 
