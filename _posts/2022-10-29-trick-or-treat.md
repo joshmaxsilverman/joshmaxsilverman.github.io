@@ -139,9 +139,9 @@ def gamma(C, T):
   if T == 150:
     return C
   if T < 49:
-    return E(C,T)
+    return E(C, T)
   if C == 0:
-    return 1/(150-T) * 0 + (1 - 1/(150-T)) * (150-T)/2
+    return (1 - 1/(150-T)) * (150-T)/2
   if C > 0:
     return 1/(150-T) * C + (1 - 1/(150-T)) * E(C, T)
 
