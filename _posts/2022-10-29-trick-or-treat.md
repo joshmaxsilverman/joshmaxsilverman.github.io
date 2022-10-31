@@ -7,9 +7,11 @@ subtitle: How close can you get to perfect candy disbursement?
 tags: expectation dynamic-programming optimality
 ---
 
->**Question**: For Halloween this year, you have purchased $150$ pieces of candy. However, you’re not sure how many trick-or-treaters will visit you. Based on previous years, it could be anywhere from $50$ to $150$ (inclusive), with each number being equally likely.
+>**Question**: For Halloween this year, David S. Pumpkins has asked you to purchase $150$ pieces of chocolate to hand out to trick or treaters. You’re not sure how many trick-or-treaters will visit you but, based on previous years, it could be anywhere from $50$ to $150$ (inclusive), with each number being equally likely.
 >
->As the trick-or-treaters arrive, you can decide to give each of them one, two or three candies. You want to avoid running out of candy, but you also want to avoid having any candy left over. Let $X$ represent the number of trick-or-treaters who won’t get candy (if you do run out) or the number of leftover pieces (if you don’t run out).
+> The twist is this: David S. Pumpkins loves Halloween, and he wants the trick or treaters to get as much chocolate as possible. If you're not perfect at planning the chocolate disbursement (running out of chocolate before the last trick or treater, or ending up with leftover chocolate) David S. Pumpkins will appear and quantify your failure. He will determine $X$ (which is either the number of unserved trick or treaters or the number of leftover chocolate) and then he and his skeleton beat boys will dance in your living room for that many days.
+>
+>As the trick-or-treaters arrive, you can decide to give each of them one, two or three chocolates.
 >
 >This year, the day before Halloween, you come up with a strategy to minimize the expected value of $X.$ What is this minimum expected value?
 
@@ -20,6 +22,10 @@ tags: expectation dynamic-programming optimality
 ([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-hand-out-all-the-candy/))
 
 ## Solution
+
+Once again, we are solving puzzles at the behest of David S. Pumpkins and his troupe of skeleton beat boys. How can we minimize the time they spend doing their retributive dance in our living room?
+
+![](/img/2020-11-1-david-s-pumpkins.JPG){:width="450 px" class="image-centered"}
 
 The plan for this solution is
 
