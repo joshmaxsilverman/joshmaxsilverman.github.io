@@ -132,7 +132,7 @@ from functools import lru_cache
 
 impossible = 10_000
 
-@lru_cache(maxsize=10_000_000)
+@lru_cache(maxsize=150*150)
 def gamma(C, T):
   if C < 0:
     return impossible
