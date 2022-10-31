@@ -51,11 +51,19 @@ We can figure out the "shape" of the strategy by thinking about the penalties.
 
 After the $50^\text{th}$ ToT, we're penalized for undisbursed chocolates. So, after that point, we'll only hand out single chocolates. This also means that, before ToT $50,$ it doesn't matter what order we hand out chocolates in, only the total number we dispense by that point.
 
-So, we'll plan for some number $L$ of ToTs, handing out single chocolates to ToTs $50$ through $L,$ and a total of $150-L$ to ToTs $1$ through $49$:
+So, we'll plan for some number $L$ of ToTs, handing out single chocolates to ToTs $50$ through $L,$ and a total of $\left(150-L\right)$ to ToTs $1$ through $49$:
 
 $$
   \overbrace{\\{C_1, C_2, \ldots, C_{49}, 1, 1, 1, \ldots, 1\\}}^{L\text{ entries}}
 $$
+
+If there are more than $L$ ToTs then we'll incur, on average, a penalty of $\frac12(150-L)$ for the unserved ToTs, which happens with probability $(150-L)/101.$ 
+
+If there are less than $L$ ToTs, then we'll incur, on average, a penalty of $(L-50)/2$ which happens with probability $(L-50)/101.$
+
+Putting it together, the expected penalty is
+
+$
 
 ### Expectation penalty
 
