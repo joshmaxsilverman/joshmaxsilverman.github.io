@@ -54,7 +54,7 @@ After the $50^\text{th}$ ToT, we're penalized for undisbursed chocolates. So, af
 So, we'll plan for some number $L$ of ToTs, handing out single chocolates to ToTs $50$ through $L,$ and a total of $150-L$ to ToTs $1$ through $49$:
 
 $$
-  \overbrace{\{C_1, C_2, \ldots, C_{49}, 1, 1, 1, \ldots, 1\}}^{L\text{ entries}}
+  \overbrace{\\{C_1, C_2, \ldots, C_{49}, 1, 1, 1, \ldots, 1\\}}^{L\text{ entries}}
 $$
 
 ### Expectation penalty
