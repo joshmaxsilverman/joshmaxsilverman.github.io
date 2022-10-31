@@ -91,10 +91,10 @@ $$
   E(C,T) = \min\limits_c\\{\gamma(C-1, T+1), \gamma(C-2,T+1), \gamma(C-3,T+1)\\}.
 $$
 
-The value of the choice $\gamma(C, T)$ can be laid out as follows
+The value of the choice $\gamma(C, T)$ depends on where we find ourselves.
 
 $$
-  \gamma(C,T) = 
+  \displaystyle \gamma(C,T) = 
   \begin{cases}
     0 & T=150 \\
     \infty & C < 0 \\
