@@ -54,7 +54,7 @@ On average, there will be $100$ ToTs. So, if we were free to divide the chocolat
 
 We can figure out the "shape" of the strategy by thinking about the penalties.
 
-After the $49^\text{th}$ ToT, we're penalized for undisbursed chocolates. So, after that point, we'll only hand out single chocolates. This also means that, before ToT $#50,$ it doesn't matter what order we hand out chocolates in, only the total number we dispense by that point.
+After the $49^\text{th}$ ToT, we're penalized for undisbursed chocolates. So, after that point, we'll only hand out single chocolates. This also means that, before ToT $\\#50,$ it doesn't matter what order we hand out chocolates in, only the total number we dispense by that point.
 
 So, we'll plan for some number $L$ of ToTs, handing out single chocolates to ToTs $50$ through $L,$ and a total of $\left(150-L\right)$ to ToTs $1$ through $49$:
 
