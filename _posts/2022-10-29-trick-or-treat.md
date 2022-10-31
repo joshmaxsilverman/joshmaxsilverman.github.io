@@ -76,7 +76,7 @@ $$
   \frac12\frac{\left(150-L\right)^2}{202} + \frac12\frac{\left(L-50\right)^2}{202} + \frac{150-L}{101}
 $$
 
-which is minimized at $L=201/2$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U$ and $50$ as $B,$ we get
+which is minimized at $L=201/2$ which can be seen by symmetry, or expanding it. Temporarily writing $150$ as $U$ and $50$ as $B$ and ignoring factors of $101$, the form is
 
 $$
   (U-L)^2 + (L-B)^2  + 2(U-L) = U^2 + B^2 + 2U + 2L(L- (U + B + 1))
