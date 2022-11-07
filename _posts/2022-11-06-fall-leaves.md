@@ -25,15 +25,25 @@ The leaves can start changing at any time up until $t,$ so
 
 $$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\, P(\text{color at }t\rvert t_\text{c})P(t_\text{c}). $$
 
-Given that $t > t_\text{c},$ the probability that $t_\text{f} > t$ is 
+Given $t_\text{c},$ the probability that the tree is colored at time $t$ is 
 
-$$ P(\text{color at }t\rvert t_\text{c}) = \dfrac{T-t}{T-t_\text{c}}. $$
+$$ P(\text{color at }t\rvert t_\text{c}) = 
+\begin{cases}
+\dfrac{T-t}{T-t_\text{c}} & t > t_\text{c} \\
+0 & t < t_\text{c}
+\end{cases}.
+$$
 
 So, 
 
 $$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c}}\dfrac{1}{T} = \dfrac{T-t}{T}\log\dfrac{T}{T-t}. $$
 
-Changing variables to $t = t/T,$ 
+Changing variables to $t^\prime = t/T,$ we have
+
+$$-(1-t^\prime)\log (1-t^\prime),$$ which is maximized when $\log (1-t^\prime)=-1,$ e.g. when $t^\prime=1-1/e.$
+
+
+
 <!-- For this to hold, the time of color change has to be less than $t,$ and the time of leaf fall has to be greater than $t:$ -->
 
 <!-- $$t_\text{f} > t > t_\text{c}. $$ -->
