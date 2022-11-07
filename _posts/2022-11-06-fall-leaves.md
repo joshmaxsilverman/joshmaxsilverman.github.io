@@ -42,7 +42,13 @@ P(\text{color at }t) &= \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c
 
 Changing variables to $t^\prime = t/T,$ we have
 
-$$-(1-t^\prime)\log (1-t^\prime),$$ which is maximized when $\log (1-t^\prime)=-1,$ e.g. when $t^\prime=1-1/e.$ At this time, the probability to see leaves is $1/e \approx 0.3679$
+$$-(1-t^\prime)\log (1-t^\prime),$$ 
+
+which is maximized when $\log (1-t^\prime)=-1$ i.e. at $t^\prime=1-1/e,$ when the probability to see leaves is $1/e \approx 0.3679$
+
+Plotting the prediction against an $N=10^6$ round simulation, it looks pretty good:
+
+![](/img/2022-11-06-fall-colors.png){width="450 px" class="image-centered"}
 
 <!-- For this to hold, the time of color change has to be less than $t,$ and the time of leaf fall has to be greater than $t:$ -->
 
