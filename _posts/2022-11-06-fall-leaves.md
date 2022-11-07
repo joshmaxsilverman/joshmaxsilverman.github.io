@@ -23,7 +23,7 @@ We want to know the probability that a single tree will have its fall colors at 
 
 The leaves can start changing at any time up until $t,$ so
 
-$$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\, P(\text{color at }t\rvert t_\text{c})P(t_\text{c}). $$
+$$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\ P(\text{color at }t\rvert t_\text{c})P(t_\text{c}). $$
 
 Given $t_\text{c},$ the probability that the tree is colored at time $t$ is 
 
