@@ -48,7 +48,7 @@ which is maximized when $\log (1-t^\prime)=-1$ i.e. at $t^\prime=1-1/e,$ when th
 
 Plotting the prediction against an $N=10^6$ round simulation, it looks pretty good:
 
-![](/img/2022-11-06-fall-colors.png){width="450 px" class="image-centered"}
+![](/img/2022-11-06-fall-colors.png){:width="450 px" class="image-centered"}
 
 <!-- For this to hold, the time of color change has to be less than $t,$ and the time of leaf fall has to be greater than $t:$ -->
 
