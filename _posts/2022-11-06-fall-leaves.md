@@ -36,7 +36,10 @@ $$
 
 So, 
 
-$$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c}}\dfrac{1}{T} = \dfrac{T-t}{T}\log\dfrac{T}{T-t}. $$
+$$\begin{align} 
+P(\text{color at }t) &= \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c}}\dfrac{1}{T} \\
+&= \dfrac{T-t}{T}\log\dfrac{T}{T-t}. 
+\end{align}$$
 
 Changing variables to $t^\prime = t/T,$ we have
 
