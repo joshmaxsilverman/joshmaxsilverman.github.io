@@ -7,25 +7,24 @@ subtitle:
 tags:
 ---
 
->Question
+>**Question:** It’s peak fall foliage season in Riddler Nation, where the trees change color in a rather particular way. Each tree independently begins changing color at a random time between the autumnal equinox and the winter solstice. Then, at a random later time for each tree — between when that tree’s leaves began changing color and the winter solstice — the leaves of that tree will all fall off at once.
+>
+>At a certain time of year, the fraction of trees with changing leaves will peak. What is this maximal fraction?
 
 <!--more-->
 
-
-
-
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/when-will-the-fall-colors-peak/))
 
 ## Solution
 
 
 <!-- We want to know the probability that a single tree will have its fall colors at time $t$, $P(\text{color at }t).$ -->
 
-The leaves can start changing at any time up until $t,$ so the chance that a single tree will have its fall colors at time $t$, $P(\text{color at }t),$ is
+The leaves can start changing at any time $t_\text{c}$ up until $t,$ so the chance that a tree will have its fall colors at time $t$, $P(\text{color at }t),$ is
 
 $$ P(\text{color at }t) = \int\limits_0^t\text{d}t_\text{c}\ P(\text{color at }t\rvert t_\text{c})P(t_\text{c}). $$
 
-Given $t_\text{c},$ the probability that the tree is colored at time $t$ is 
+Given $t_\text{c},$ the probability that the tree is colored at time $t$ is zero if $t_\text{c}$ hasn't happened yet, otherwise there is chance $(T-t)/(T-t_\text{c})$ that the leaves fall after time $t:$
 
 $$ P(\text{color at }t\rvert t_\text{c}) = 
 \begin{cases}
@@ -34,7 +33,7 @@ $$ P(\text{color at }t\rvert t_\text{c}) =
 \end{cases}.
 $$
 
-So, 
+Putting it all together, the probability to see leaves at time $t$ is
 
 $$\begin{align} 
 P(\text{color at }t) &= \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c}}\dfrac{1}{T} \\
@@ -43,7 +42,7 @@ P(\text{color at }t) &= \int\limits_0^t\text{d}t_\text{c}\dfrac{T-t}{T-t_\text{c
 
 Changing variables to $t^\prime = t/T,$ we have
 
-$$-(1-t^\prime)\log (1-t^\prime),$$ which is maximized when $\log (1-t^\prime)=-1,$ e.g. when $t^\prime=1-1/e.$
+$$-(1-t^\prime)\log (1-t^\prime),$$ which is maximized when $\log (1-t^\prime)=-1,$ e.g. when $t^\prime=1-1/e.$ At this time, the probability to see leaves is $1/e \approx 0.3679$
 
 <!-- For this to hold, the time of color change has to be less than $t,$ and the time of leaf fall has to be greater than $t:$ -->
 
