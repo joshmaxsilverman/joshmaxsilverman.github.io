@@ -19,6 +19,8 @@ tags: parameter-space geometry probability
 
 This problem is rooted in the geometry created by the slice, but to solve it we'll focus on the geometry of the parameter space — the plane defined by $a$ and $b,$ the positions along the sides where each cut is made.
 
+One quarter of the time, $a$ and $b$ are on the same side of the sandwich, and the small piece has size zero.
+
 If $a$ and $b$ are on adjacent sides, which happens $2/4$ of the time, then the smaller sandwich space is a right triangle of area $\frac12ab.$ 
 
 ![](/img/2022-11-11-adjacent-sides.png){:width="450 px" class="image-centered"}
