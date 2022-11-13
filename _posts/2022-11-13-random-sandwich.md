@@ -54,7 +54,7 @@ putting it all together, the total area contributing to $A_\text{min} \geq \frac
 $$ 
   \begina{align}
     P(A_\text{min}\geq \frac14) &= \frac23\left(\frac12 - \frac12\log 2\right) + \frac13\frac34 \\
-    & = \frac{7}{12} - \frac{\log 2}{3} \\
+    &= \frac{7}{12} - \frac{\log 2}{3} \\
     &\approx 0.3523 
   \end{align}
 $$
