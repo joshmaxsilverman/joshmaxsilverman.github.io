@@ -51,7 +51,13 @@ the area of the stripe is just $1 - 2\times \frac18 = 3/4.$
 
 putting it all together, the total area contributing to $A_\text{min} \geq \frac14$ is 
 
-$$ P(A_\text{min}\geq \frac14) = \frac23\left(\frac12 - \frac12\log 2\right) + \frac13\frac34 = \frac{7}{12} - \frac{\log 2}{3} \approx 0.3523 $$
+$$ 
+  \begina{align}
+    P(A_\text{min}\geq \frac14) &= \frac23\left(\frac12 - \frac12\log 2\right) + \frac13\frac34 \\
+    & = \frac{7}{12} - \frac{\log 2}{3} \\
+    &\approx 0.3523 
+  \end{align}
+$$
 
 
 
