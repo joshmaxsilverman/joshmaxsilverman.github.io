@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Reasonable Sandwich
 date: 2022/11/13
-subtitle:
-tags:
+subtitle: How often will the hand of fate deliver a reasonable slice to the undercard?
+tags: paramter-space geometry probability
 ---
 
 >**Question**: I have made a square peanut butter and jelly sandwich, and now it’s time to slice it. But rather than making a standard horizontal or diagonal cut, I instead pick two random points along the perimeter of the sandwich and make a straight cut from one point to the other. (These points can be on the same side.)
@@ -13,7 +13,7 @@ My slice is “reasonable” if I cut the square into two pieces and the smaller
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-knock-down-the-gates/))
 
 ## Solution
 
@@ -45,7 +45,7 @@ when $a$ and $b$ are on opposite sides, which happens the other $1/3$ of the tim
 
 if e.g. $a > b,$ then the rectangle has area $1\times b$ and the triangle area is $\frac12 (a-b)\times 1,$ which makes $\dfrac12(a+b).$ when $b > a,$ the roles are reversed, but the expression is the same. 
 
-we want the small piece to be "reasonable" so we're interested in values of $a$ and $b$ where $\dfrac14 \leq \dfrac12(a+b) \leq \dfrac34,$ which gives us two inequalities: $a \geq \frac12 - b$ and $a \leq \frac32 - b.$ plotting them, this makes a stripe of admissible values that goes diagonally down and to the right. 
+we want the small piece to be "reasonable" so we're interested in values of $a$ and $b$ where $\dfrac14 \leq \dfrac12(a+b) \leq \dfrac34,$ which gives us two inequalities: $a \geq \frac12 - b$ and $a \leq \frac32 - b.$ plotting them, this makes a stripe of admissible values in the parameter space that goes diagonally down and to the right. 
 <!-- for every pair $(a,b)$ that satisfies this, there is a corresponding pair $(a^\prime, b^\prime) = (1-a, 1-b)$ that also satisfy it.  -->
 the area of the stripe is just $1 - 2\times \frac18 = 3/4.$ 
 
