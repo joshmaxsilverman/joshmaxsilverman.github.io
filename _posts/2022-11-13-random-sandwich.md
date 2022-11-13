@@ -19,7 +19,7 @@ tags: parameter-space geometry probability
 
 This problem is rooted in the geometry created by the slice, but to solve it we'll focus on the geometry of the parameter space — the plane defined by $a$ and $b,$ the positions along the sides where each cut is made.
 
-If $a$ and $b$ are on adjacent sides, which happens $2/3$ of the time, then the smaller sandwich space is a right triangle of area $\frac12ab.$ 
+If $a$ and $b$ are on adjacent sides, which happens $2/4$ of the time, then the smaller sandwich space is a right triangle of area $\frac12ab.$ 
 
 ![](/img/2022-11-11-adjacent-sides.png){:width="450 px" class="image-centered"}
 
@@ -41,7 +41,7 @@ The relevant area for "reasonable" small pieces is the complement, so the chance
 
 ![](/img/2022-11-11-far-side-diagram.png){:width="450 px" class="image-centered"}
 
-When $a$ and $b$ are on opposite sides, which happens the other $1/3$ of the time, the area is made up of a rectangle and a triangle. 
+When $a$ and $b$ are on opposite sides, which happens the other $1/4$ of the time, the area is made up of a rectangle and a triangle. 
 
 If $a > b,$ then the rectangle has area $1\times b$ and the triangle area is $\frac12 (a-b)\times 1,$ which makes $\dfrac12(a+b).$ When $b > a,$ the roles are reversed, but the expression is the same. 
 
@@ -56,12 +56,13 @@ Putting it all together, the total area contributing to $A_\text{min} \geq \frac
 
 $$ 
   \begin{align}
-    P(A_\text{min}\geq \frac14) &= \frac23\left(\frac12 - \frac12\log 2\right) + \frac13\frac34 \\
-    &= \frac{7}{12} - \frac{\log 2}{3} \\
-    &\approx 0.3523 
+    P(A_\text{min}\geq \frac14) &= \frac12\left(\frac12 - \frac14\log 2\right) + \frac13\frac34 \\
+    &= \frac{7}{16} - \frac{\log 2}{4} \\
+    &\approx 0.2642 
   \end{align}
 $$
 
+almost a quarter of the time.
 
 
 
