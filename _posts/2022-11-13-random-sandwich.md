@@ -29,7 +29,7 @@ $$ b\geq \frac{1}{2b} $$
 
 this is a curve from the point $(1,\frac12)$ to $(\frac12, 1).$ 
 
-the area under this curve is $\frac12 + \int\limits_{\frac12}^1 \frac{\text{d}b}{2b} = \frac{\log 2}{2}.$
+the area under this curve is $\frac12 + \int\limits_{\frac12}^1 \frac{\text{d}b}{2b} = \frac12 + \frac{\log 2}{2}.$ the relevant area is the complement, so the chance of a reasonable smaller triangle is $\frac12 - \frac12 \log 2.$
 
 when $a$ and $b$ are on opposite sides, which happens the other $1/3$ of the time, the area is made up of a rectangle and a triangle. if e.g. $a > b,$ then the rectangle has area $1\times b$ and the triangle area is $\frac12 (a-b)\times 1,$ which makes $\dfrac12(a+b).$ when $b > a,$ the roles are reversed, but the expression is the same. 
 
