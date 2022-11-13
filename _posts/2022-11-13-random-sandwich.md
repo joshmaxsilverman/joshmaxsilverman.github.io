@@ -35,7 +35,9 @@ in the parameter space, this is a curve from the point $(1,\frac12)$ to $(\frac1
 
 ![](/img/2022-11-11-first-area.png){:width="450 px" class="image-centered"}
 
-the area under this curve is $\int\limits_0^1 \text{d}b\ a = \frac12 + \int\limits_{\frac12}^1 \frac{\text{d}b}{2b} = \frac12 + \frac{\log 2}{2}.$ the relevant area for "reasonable" small pieces is the complement, so the chance of a reasonable smaller triangle is $\frac12 - \frac12 \log 2.$
+the area under this curve is $\int\limits_0^1 \text{d}b\ a = \frac12 + \int\limits_{\frac12}^1 \frac{\text{d}b}{2b} = \frac12 + \frac{\log 2}{2}.$ 
+
+the relevant area for "reasonable" small pieces is the complement, so the chance of a reasonable smaller triangle is $\frac12 - \frac12 \log 2.$
 
 ![](/img/2022-11-11-far-side-diagram.png){:width="450 px" class="image-centered"}
 
