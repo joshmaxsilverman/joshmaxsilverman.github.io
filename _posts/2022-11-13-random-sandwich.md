@@ -42,7 +42,9 @@ when $a$ and $b$ are on opposite sides, which happens the other $1/3$ of the tim
 
 ![](/img/2022-11-11-second-area.png){:width="450 px" class="image-centered"}
 
-again, we're considering the smaller piece, so $ \dfrac14 \leq \frac12(a+b) \leq \dfrac12,$ which gives us two inequalities: $a \geq \frac12 - b$ and $a \leq 1 - b.$ plotting them, this makes a stripe of admissible values that goes diagonally down and to the right. for every pair $(a,b)$ that satisfies this, there is a corresponding pair $(a^\prime, b^\prime) = (1-a, 1-b)$ that also satisfy it. the area of the stripe is just $1 - 2\times \frac18 = 3/4.$ 
+we want the smaller piece to be "reasonable" so we're interested in $ \dfrac14 \leq \dfrac12(a+b) \leq \dfrac34,$ which gives us two inequalities: $a \geq \frac12 - b$ and $a \leq \frac32 - b.$ plotting them, this makes a stripe of admissible values that goes diagonally down and to the right. 
+<!-- for every pair $(a,b)$ that satisfies this, there is a corresponding pair $(a^\prime, b^\prime) = (1-a, 1-b)$ that also satisfy it.  -->
+the area of the stripe is just $1 - 2\times \frac18 = 3/4.$ 
 
 putting it all together, the total area contributing to $A_\text{min} \geq \frac14$ is $\frac{7}{12} - \frac{\log 2}{3} \approx 0.3523$
 
