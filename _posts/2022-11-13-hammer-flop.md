@@ -1,13 +1,17 @@
 ---
 layout: post
 published: true
-title: Fast Hammer
+title: Speedy Hammer
 date: 2022/11/13
-subtitle: 
-tags:
+subtitle: Will the giant hammer be going fast enough when it hits the big elf door?
+tags: conservation-of-energy optimization vectors
 ---
 
->Question
+>**Question**: From the fantastical land of Central Earth comes a physics riddle that will break down your doors:
+>
+>In an effort to break open the gates of the city Tinas Mirith, an army of orcs first tried using a battering ram, but to no avail. They next erected a $100$-foot pole with a very massive weight at the top (i.e., the weight is much, much heavier than the rest of the pole). The pole is also anchored at the bottom, so that as the weight falls the entire pole rotates around its bottom without slipping.
+>
+>How far away should the orcs position the vertical pole from the gates so that when the weight comes crashing down on the gates, its horizontal speed is as great as possible?
 
 <!--more-->
 
@@ -25,7 +29,7 @@ $$ V(\phi) = \sqrt{2g\ell\left(1-\sin\phi\right)}. $$
 
 We care about the horizontal component of the hammer's velocity, $V_x(\phi) = V(\phi)\sin\phi.$ 
 
-![](/img/2022-11-13-falling-hammer.png){:width="450 px" class="image-centered"}
+![](/img/2022-11-13-falling-hammer.png){:width="400 px" class="image-centered"}
 
 We want to maximize this, and it's easier to do that working with the square $V_x(\phi)^2:$
 
@@ -39,6 +43,6 @@ so that $V_x(\phi)$ is maximized when $\sin\phi = \frac23.$
 
 The hammer hits the door when $\ell\sin\phi = d_\text{init},$ so we should place the hammer $\boxed{d_\text{init} = \frac23\ell}$ away from the door. 
 
-If we do that, then the hammer will hit the door with speed $V_x = \frac23\sqrt{\frac23 g\ell} \approx 9.41\text{ m/s}$
+If we do that, then the hammer will hit the door with speed $V_x = \frac23\sqrt{\frac23 g\ell} \approx 9.41\text{ m/s}$ (where $\ell=100\text{ ft}\approx 30.48\text{ m}$).
 
 <br>
