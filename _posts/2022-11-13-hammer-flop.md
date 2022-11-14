@@ -23,7 +23,11 @@ Initially, the hammer is standing still and straight which lets us solve for $V(
 
 $$ V(\phi) = \sqrt{2g\ell\left(1-\sin\phi\right)}. $$
 
-We care about the horizontal component of the hammer's velocity, $V_x(\phi) = V(\phi)\sin\phi.$ We want to maximize this, and it's easier to do that working with the square $V_x(\phi)^2:$
+We care about the horizontal component of the hammer's velocity, $V_x(\phi) = V(\phi)\sin\phi.$ 
+
+![](/img/2022-11-13-falling-hammer.png){:width="450 px" class="image-centered"}
+
+We want to maximize this, and it's easier to do that working with the square $V_x(\phi)^2:$
 
 $$ V_x(\phi)^2 = \sin^2\phi\left(1-\sin\phi\right). $$
 
