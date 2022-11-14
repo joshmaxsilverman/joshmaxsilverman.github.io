@@ -41,7 +41,7 @@ $$ 2\sin\phi\cos\phi = 3\sin^2\phi\cos\phi, $$
 
 so that $V_x(\phi)$ is maximized when $\sin\phi = \frac23.$
 
-The hammer hits the door when $\ell\cos\phi = d_\text{init},$ so we should place the hammer $\boxed{d_\text{init} = \sqrt{1-2^2/3^2}\ell}$ away from the door. 
+The hammer hits the door when $\ell\cos\phi = d_\text{init},$ so we should place the hammer $\boxed{d_\text{init} = \ell\sqrt{1-2^2/3^2}}$ away from the door. 
 
 If we do that, then the hammer will hit the door with speed $V_x = \frac23\sqrt{\frac23 g\ell} \approx 9.41\text{ m/s}$ (where $\ell=100\text{ ft}\approx 30.48\text{ m}$).
 
