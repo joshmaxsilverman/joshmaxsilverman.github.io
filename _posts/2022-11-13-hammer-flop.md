@@ -19,7 +19,7 @@ Throughout the hammer's fall, energy is conserved. When the hammer makes angle $
 
 $$ E = \frac12 MV^2 + Mg\ell\sin\phi. $$
 
-Initially, the hammer is standing straight which lets us solve for $V(\phi):$
+Initially, the hammer is standing still and straight which lets us solve for $V(\phi):$
 
 $$ V(\phi) = \sqrt{2g\ell\left(1-\sin\phi\right)}. $$
 
