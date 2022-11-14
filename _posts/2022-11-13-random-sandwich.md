@@ -54,11 +54,11 @@ We want the small piece to be "reasonable," so we're interested in values of $a$
 <!-- for every pair $(a,b)$ that satisfies this, there is a corresponding pair $(a^\prime, b^\prime) = (1-a, 1-b)$ that also satisfy it.  -->
 The area of the stripe is just $1 - 2\times \frac18 = 3/4.$ 
 
-Putting it all together, the total area contributing to $A_\text{min} \geq \frac14$ is 
+Putting it all together, the total area contributing to $A_\text{small} \geq \frac14$ is 
 
 $$ 
   \begin{align}
-    P(A_\text{min}\geq \frac14) &= \frac24\left(\frac12 - \frac12\log 2\right) + \frac14\frac34 \\
+    P(A_\text{small}\geq \frac14) &= \frac24\left(\frac12 - \frac12\log 2\right) + \frac14\frac34 \\
     &= \frac{7}{16} - \frac{\log 2}{4} \\
     &\approx 0.2642 
   \end{align}
