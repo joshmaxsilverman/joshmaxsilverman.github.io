@@ -29,7 +29,7 @@ $$ V(\phi) = \sqrt{2g\ell\left(1-\sin\phi\right)}. $$
 
 We care about the horizontal component of the hammer's velocity, $V_x(\phi) = V(\phi)\sin\phi.$ 
 
-![](/img/2022-11-13-falling-hammer.png){:width="400 px" class="image-centered"}
+![](/img/2022-11-13-fast-hammer.png){:width="400 px" class="image-centered"}
 
 We want to maximize this, and it's easier to do that working with the square $V_x(\phi)^2:$
 
