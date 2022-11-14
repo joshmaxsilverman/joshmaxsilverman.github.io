@@ -15,7 +15,7 @@ tags: conservation-of-energy optimization vectors
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-knock-down-the-gates/))
 
 ## Solution
 
