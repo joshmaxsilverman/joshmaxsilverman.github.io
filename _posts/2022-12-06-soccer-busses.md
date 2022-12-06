@@ -24,7 +24,7 @@ with probability $d/(a+d),$ the new group will be formed by a Dutch. in that cas
 this means
 
 $$
-  G(a,d) = \dfrac{a}{a+d}G(a-1,d) + \dfrac{d}{a+d}G(a,d-1)
+  G(a,d) = \dfrac{a}{a+d}A(a-1,d) + \dfrac{d}{a+d}D(a,d-1)
 $$
 
 now, when we're building an A-group, we can either:
