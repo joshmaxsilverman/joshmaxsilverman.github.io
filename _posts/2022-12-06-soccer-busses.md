@@ -17,7 +17,11 @@ tags: recursion symmetry
 
 first some notation — $a$ is the number of Americans, $d$ is the number of Dutch, and $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d).$
 
-with probability $a/(a+d),$ the new group will be formed by an American. in that case, the expected number of new groups to form is $A(a-1,d).$ with probability $d/(a+d),$ the new group will be formed by a Dutch. in that case, the expected number of new groups to form is $D(a,d-1).$ this means
+with probability $a/(a+d),$ the new group will be formed by an American. in that case, the expected number of new groups to form is $A(a-1,d).$ 
+
+with probability $d/(a+d),$ the new group will be formed by a Dutch. in that case, the expected number of new groups to form is $D(a,d-1).$ 
+
+this means
 
 $$
   G(a,d) = \dfrac{a}{a+d}G(a-1,d) + \dfrac{d}{a+d}G(a,d-1)
