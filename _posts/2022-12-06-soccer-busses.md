@@ -27,17 +27,26 @@ tags: recursion symmetry
 
 the order of the As and Ds is random and any random order is valid. for any particular random order we can cyclically permute the order (moving the first person to last, the second person to first, and so on) and make another valid order. as we cycle the list there will be $a$ lists that have an American bus going last and $d$ lists that have a Dutch bus going last, so the probability that the last bus is carrying American fans is just $a/(a+d)$ or $11/18\approx 61.1\%,$ for our problem.
 
-for the second part, we want to figure out the number of groups. a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of groups is 
+for the second part, we want to figure out the number of groups. first, an intuitive argument.
 
-$$ \langle G\rangle = 1 + 2\frac{ad}{a+d}. $$
+### Intuitive argument
+
+a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of groups is one more than the harmonic mean of $a$ and $d$:
+
+$$ \langle G\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 for the problem in question, that's $\langle G\\rangle = 86/9.$
 
-first some notation — $a$ is the number of Americans, $d$ is the number of Dutch, and $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d).$
+now we'll argue this formally, which will be good setup work for the second interpretation.
 
-with probability $a/(a+d),$ the new group will be formed by an American. in that case, the expected number of new groups to form is $A(a-1,d).$ 
+## Formal argument
 
-with probability $d/(a+d),$ the new group will be formed by a Dutch. in that case, the expected number of new groups to form is $D(a,d-1).$ 
+first some notation — $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d),$ $A(a,d)$ is the expected number of new groups given that we're in the midst of adding people to an A-bus, and $D(a,d)$ is the corresponding quantity when we're adding people to a D-bus.
+
+suppose we're at the beginning of the process, then
+
+- with probability $a/(a+d),$ the new group will be formed by an American. 
+- with probability $d/(a+d),$ the new group will be formed by a Dutch.
 
 this means
 
@@ -82,7 +91,14 @@ multiplying through by $(a+d)$ we get the cleaner equation
 $$
   (a+d)G(a,d) = \dfrac{2ad}{a+d-1} + aG(a-1,d) + dG(a,d-1),
 $$
-  
+
+by inspection (or using our result from the intuitive argument), we can see that this is solved by $G(a,d) = 2ad/(a+d).$ at the beginning there is already one group (the first one), so the expected of groups is 
+
+$$ \langle G\rangle = 1 + \dfrac{2ad}{a+d}. $$
+
+# Interpretation 2
+
+
 
 
 <br>
