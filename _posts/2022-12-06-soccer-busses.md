@@ -39,7 +39,7 @@ for the problem in question, that's $\langle G\\rangle = 86/9.$
 
 now we'll argue this formally, which will be good setup work for the second interpretation.
 
-## Formal argument
+### Formal argument
 
 first some notation — $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d),$ $A(a,d)$ is the expected number of new groups given that we're in the midst of adding people to an A-bus, and $D(a,d)$ is the corresponding quantity when we're adding people to a D-bus.
 
