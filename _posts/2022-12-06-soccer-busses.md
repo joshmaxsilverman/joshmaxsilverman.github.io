@@ -7,13 +7,31 @@ subtitle: How many trips will the poor driver have to make?
 tags: recursion symmetry
 ---
 
->Question
+>**Question**: A certain hotel in Qatar is hosting 11 American fans and seven Dutch fans. Since no alcohol is available inside the stadiums, the fans spend the afternoon at the hotel bar before shuttle buses will take them to a match. Then, they haphazardly write their room numbers on a big board by the concierge desk.
+>
+>To avoid any rowdiness between rival fans, shuttle bus drivers have been instructed to ferry American and Dutch fans separately. To ensure this, a shuttle pulls up in front of the hotel, and its driver calls out room numbers from the board, one by one at random. As long as they support the same team, each fan climbs aboard the bus and their room number is erased. Once the driver calls out the room number of a fan for the second team, the shuttle leaves with only the fans of the single team aboard. The next shuttle then pulls up and repeats the process.
+>
+>What is the probability that the last shuttle ferries American fans?
+>
+>Extra credit: On average, what is the expected number of shuttle buses needed to ferry all 18 fans?
 
 <!--more-->
 
 ([FiveThirtyEight](URL))
 
 ## Solution
+
+**A note**: there are two ways to interpret the inter-group policy. one is that when a new group is triggered by switching from e.g. a run of American fans to a Dutch fan, the Dutch fan begins the next group. the other way is that the Dutch fan has only triggered the transition, but who begins the next group will be redrawn from random. we'll solve the problem both ways, starting with the first.
+
+# Interpretation 1
+
+the order of the As and Ds is random and any random order is valid. for any particular random order we can cyclically permute the order (moving the first person to last, the second person to first, and so on) and make another valid order. as we cycle the list there will be $a$ lists that have an American bus going last and $d$ lists that have a Dutch bus going last, so the probability that the last bus is carrying American fans is just $a/(a+d)$ or $11/18\approx 61.1\%,$ for our problem.
+
+for the second part, we want to figure out the number of groups. a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of groups is 
+
+$$ \langle G\rangle = 1 + 2\frac{ad}{a+d}. $$
+
+for the problem in question, that's $\langle G\\rangle = 86/9.$
 
 first some notation — $a$ is the number of Americans, $d$ is the number of Dutch, and $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d).$
 
