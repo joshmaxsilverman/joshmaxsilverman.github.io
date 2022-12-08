@@ -21,23 +21,23 @@ tags: recursion symmetry
 
 ## Solution
 
-**A note**: there are two ways to interpret the inter-group policy. one is that when a new group is triggered by switching from e.g. a run of American fans to a Dutch fan, the Dutch fan begins the next group. the other way is that the Dutch fan has only triggered the transition, but who begins the next group will be redrawn from random. we'll solve the problem both ways, starting with the first.
+**A note**: *there are two ways to interpret the inter-group policy. One is that when a new group is triggered by switching from e.g. a run of American fans to a Dutch fan, the Dutch fan begins the next group. The other way is that the Dutch fan has only triggered the transition, but who begins the next group will be redrawn from random. We'll solve the problem both ways.*
 
 # Interpretation 1
 
-the order of the As and Ds is random and any random order is valid. for any particular random order we can cyclically permute the order (moving the first person to last, the second person to first, and so on) and make another valid order. as we cycle the list there will be $a$ lists that have an American bus going last and $d$ lists that have a Dutch bus going last, so the probability that the last bus is carrying American fans is just $a/(a+d)$ or $11/18\approx 61.1\%,$ for our problem.
+The order of the As and Ds is random and any random order is valid. For any particular random order we can cyclically permute the order (moving the first person to last, the second person to first, and so on) and make another valid order. As we cycle the order there will be $a$ orders that have an American bus going last and $d$ orders that have a Dutch bus going last, so the probability that the last bus is carrying American fans is just $a/(a+d)$ or $11/18\approx 61.1\%,$ for our problem.
 
-for the second part, we want to figure out the number of groups. first, an intuitive argument.
+For the second part, we want to figure out the number of groups. First, an intuitive argument.
 
 ### Intuitive argument
 
-a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of buses is one more than the harmonic mean of $a$ and $d$:
+A new group occurs whenever there's a switch from As to Ds. Circularize the list, so that the first person is in back of the last person. There are $a$ American fans in the circle and so, $a$ positions behind Americans. By linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ Likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. Putting it together, the expected number of identity switches is $2ad/(a+d).$ Since the circle is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). All in all, the expected number of buses is one more than the harmonic mean of $a$ and $d$:
 
 $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
-for the problem in question, that's $\langle B\rangle = 86/9.$
+For the problem in question, that's $\langle B\rangle = 86/9.$
 
-now we'll argue this formally, which will be good setup work for the second interpretation.
+Now we'll argue this formally, which will be good setup work for the second interpretation.
 
 ### Rigorous argument
 
@@ -112,7 +112,9 @@ to find the number of buses, we can use the same equations from the formal argum
 
 $$ A(a,d) = \frac{a}{a+d}A(a-1,d) + \frac{d}{a+d} \left[\frac{d}{a+d} D(a,d-1) + \frac{a}{a+d} A(a-1,d) + 1\right] $$
 
-with the equivalent modification for $D(a,d).$ implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. this is quite close, though as fan counts increase, the divergence is more striking.
+with the equivalent modification for $D(a,d).$ 
+
+implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. this is quite close, but as fan counts increase, the divergence is more striking.
 
 ```python
 @lru_cache
