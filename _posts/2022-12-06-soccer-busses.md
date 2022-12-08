@@ -98,7 +98,7 @@ $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 # Interpretation 2
 
-
+in the second interpretation the fans are scrambled after each bus leaves, opening up the possibility for e.g. $2$ American buses in a row. 
 
 
 <br>
