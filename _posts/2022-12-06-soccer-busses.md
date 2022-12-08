@@ -100,5 +100,6 @@ $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 in the second interpretation the fans are scrambled after each bus leaves, opening up the possibility for e.g. $2$ American buses in a row. 
 
+at some point, the system will get to the point where the Dutch or the Americans only have $1$ fan left, and the other team has $N$ left. for argument's sake, let's assume the team with $1$ left is the Americans. if the very next fan who's called is American, a $1/(N+1)$ chance, then they will not be on the last bus
 
 <br>
