@@ -77,16 +77,16 @@ $$
   \end{align}
 $$
 
-plugging these back in to the first, we get
+plugging these back in to the first, we get a self-consistent equation that $G(a,d)$ needs t satisfy:
 
 $$
   \begin{align}
     G(a,d) &= \dfrac{a}{a+d}\left[G(a-1,d) + \dfrac{d}{a+d-1}\right] + \dfrac{d}{a+d}\left[G(a,d-1) + \dfrac{a}{a+d-1}\right] \\
-    &= \dfrac{1}{a+d-1}\dfrac{2ad}{a+d} + \dfrac{a}{a+d}G(a-1,d) + \dfrac{d}{a+d}G(a,d-1)
+    &= \dfrac{1}{a+d-1}\dfrac{2ad}{a+d} + \dfrac{a}{a+d}G(a-1,d) + \dfrac{d}{a+d}G(a,d-1).
   \end{align}
 $$
 
-multiplying through by $(a+d)$ we get the cleaner equation
+multiplying through by $(a+d)$ we get the cleaner form
 
 $$
   (a+d)G(a,d) = \dfrac{2ad}{a+d-1} + aG(a-1,d) + dG(a,d-1),
