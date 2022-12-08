@@ -31,15 +31,15 @@ for the second part, we want to figure out the number of groups. first, an intui
 
 ### Intuitive argument
 
-a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of groups is one more than the harmonic mean of $a$ and $d$:
+a new group occurs whenever there's a switch from As to Ds. circularize the list, so that the first person is in back of the last person. there are $a$ American fans in the line and so, $a$ positions behind Americans. by linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. putting it together, the expected number of identity switches is $2ad/(a+d).$ since the list is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). all in all, the expected number of buses is one more than the harmonic mean of $a$ and $d$:
 
-$$ \langle G\rangle = 1 + \dfrac{2ad}{a+d}. $$
+$$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
-for the problem in question, that's $\langle G\\rangle = 86/9.$
+for the problem in question, that's $\langle B\rangle = 86/9.$
 
 now we'll argue this formally, which will be good setup work for the second interpretation.
 
-### Formal argument
+### Rigorous argument
 
 first some notation — $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d),$ $A(a,d)$ is the expected number of new groups given that we're in the midst of adding people to an A-bus, and $D(a,d)$ is the corresponding quantity when we're adding people to a D-bus.
 
@@ -92,9 +92,9 @@ $$
   (a+d)G(a,d) = \dfrac{2ad}{a+d-1} + aG(a-1,d) + dG(a,d-1),
 $$
 
-by inspection (or using our result from the intuitive argument), we can see that this is solved by $G(a,d) = 2ad/(a+d).$ at the beginning there is already one group (the first one), so the expected of groups is 
+by inspection (or plugging in our result from the intuitive argument), we can see that this is solved by $G(a,d) = 2ad/(a+d).$ at the beginning there is already one group (the first one), so the expected of buses is 
 
-$$ \langle G\rangle = 1 + \dfrac{2ad}{a+d}. $$
+$$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 # Interpretation 2
 
