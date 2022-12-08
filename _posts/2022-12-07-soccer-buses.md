@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Soccer Busses
+title: Soccer Buses
 date: 2022/12/07
 subtitle: How many trips will the poor saps have to make?
 tags: recursion symmetry linearity-of-expectation
