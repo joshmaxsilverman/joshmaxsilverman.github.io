@@ -2,8 +2,8 @@
 layout: post
 published: true
 title: Soccer Busses
-date: 2022/12/06
-subtitle: How many trips will the poor driver have to make?
+date: 2022/12/08
+subtitle: How many trips will the poor saps have to make?
 tags: recursion symmetry linearity-of-expectation
 ---
 
@@ -17,7 +17,7 @@ tags: recursion symmetry linearity-of-expectation
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-separate-the-world-cup-fans/))
 
 ## Solution
 
