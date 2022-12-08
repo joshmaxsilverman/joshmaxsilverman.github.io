@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Soccer Busses
 date: 2022/12/06
 subtitle: How many trips will the poor driver have to make?
@@ -100,6 +100,38 @@ $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 in the second interpretation the fans are scrambled after each bus leaves, opening up the possibility for e.g. $2$ American buses in a row. 
 
-at some point, the system will get to the point where the Dutch or the Americans only have $1$ fan left, and the other team has $N$ left. for argument's sake, let's assume the team with $1$ left is the Americans. if the very next fan who's called is American, a $1/(N+1)$ chance, then they will not be on the last bus
+at some point, the system will get to the point where the Dutch or the Americans only have $1$ fan left, and the other team has $N$ left. for argument's sake, let's assume the team with $1$ left is the Americans. 
+
+there is a $1/(N+1)$ chance that we get to the end of the line without hitting the American, and a $1/(N+1)$ chance to restart the game from any of the $(N-1)$ possible number of remaining Dutch fans between $1$ and $(N-1):$
+
+$$ P(N) = \frac{1}{N+1} + \frac{1}{N+1}\left[P(1) + P(2) + \ldots + P(N-1)\right] $$
+
+which is solved by $P(N) = \frac12.$
+
+to find the number of buses, we can use the same equations from the formal argument above, now less analyzable. instead of immediately starting a new bus when a fan from the opposite team is called, we now reset the game. that means that the equation for $A(a,d)$ becomes 
+
+$$ A(a,d) = \frac{a}{a+d}A(a-1,d) + \frac{d}{a+d} * \left[\frac{d}{a+d} D(a,d-1) + \frac{a}{a+d} A(a-1,d) + 1\right] $$
+
+with the equivalent modification for $D(a,d).$ implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. this is quite close, though as fan counts increase, the divergence is more striking.
+
+```python
+@lru_cache
+def A(a,d):
+  if a > 0 and d == 0:
+    return 0
+  if a == 0 and d > 0:
+    return 1
+  return a/(a+d) * A(a-1,d) + d/(a+d) * (d/(a+d) * D(a,d-1) + a/(a+d) * A(a-1,d) + 1)
+
+def D(a,d):
+  if a > 0 and d == 0:
+    return 1
+  if a == 0 and d > 0:
+    return 0
+  return a/(a+d) * (a/(a+d) * A(a-1,d) + d/(a+d) * D(a,d-1)+ 1) + d/(a+d) * D(a,d-1)
+
+def G(a,d):
+  return 1 + a/(a+d) * A(a-1,d) + d/(a+d) * D(a,d-1)
+```
 
 <br>
