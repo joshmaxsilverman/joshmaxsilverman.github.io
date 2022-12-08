@@ -43,25 +43,25 @@ Now we'll argue this formally, which will be good setup work for the second inte
 
 ### Rigorous argument
 
-first some notation — $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d),$ $A(a,d)$ is the expected number of new groups given that we're in the midst of adding people to an A-bus, and $D(a,d)$ is the corresponding quantity when we're adding people to a D-bus.
+First some notation — $G(a,d)$ is the expected number of new groups given that a bus just left and composition of the remaining people is $(a,d),$ $A(a,d)$ is the expected number of new groups given that we're in the midst of adding people to an A-bus, and $D(a,d)$ is the corresponding quantity when we're adding people to a D-bus.
 
-suppose we're at the beginning of the process, then
+Suppose we're at the beginning of the process, then
 
 - with probability $a/(a+d),$ the new group will be formed by an American. 
 - with probability $d/(a+d),$ the new group will be formed by a Dutch.
 
-this means
+This means
 
 $$
   G(a,d) = \dfrac{a}{a+d}A(a-1,d) + \dfrac{d}{a+d}D(a,d-1)
 $$
 
-now, when we're building an A-group, we can either:
+Now, when we're building an A-group, we can either:
 
 - stay in the A-group with probability $a/(a+d)$, or
 - start a new group of Ds with probability $d/(a+d).$
 
-similar logic applies if we're in a D-group, and we get
+Similar logic applies if we're in a D-group, and we get
 
 $$
   \begin{align}
@@ -70,16 +70,16 @@ $$
   \end{align}
 $$
 
-using the first equation, these two become
+Using the first equation, these two become
 
 $$
   \begin{align}
     A(a,d) &= G(a,d) + \dfrac{d}{a+d} \\
-    D(a,d) &= G(a,d) + \dfrac{a}{a+d}
+    D(a,d) &= G(a,d) + \dfrac{a}{a+d}.
   \end{align}
 $$
 
-plugging these back in to the first, we get a self-consistent equation that $G(a,d)$ needs t satisfy:
+Plugging these back in to the first, we get a self-consistent equation that $G(a,d)$ needs to satisfy:
 
 $$
   \begin{align}
@@ -88,35 +88,35 @@ $$
   \end{align}
 $$
 
-multiplying through by $(a+d)$ we get the cleaner form
+Multiplying through by $(a+d)$ we get the cleaner form
 
 $$
   (a+d)G(a,d) = \dfrac{2ad}{a+d-1} + aG(a-1,d) + dG(a,d-1),
 $$
 
-by inspection (or plugging in our result from the intuitive argument), we can see that this is solved by $G(a,d) = 2ad/(a+d).$ at the beginning there is already one group (the first one), so the expected of buses is 
+By inspection (or plugging in our result from the intuitive argument), we can see that this is solved by $G(a,d) = 2ad/(a+d).$ At the beginning there is already one group (the first one), so the expected of buses is 
 
 $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 # Interpretation 2
 
-in the second interpretation the fans are scrambled after each bus leaves, opening up the possibility for e.g. $2$ American buses in a row. 
+In the second interpretation the fans are scrambled after each bus leaves, opening up the possibility for e.g. $2$ American buses in a row. 
 
-at some point, the system will get to the point where the Dutch or the Americans only have $1$ fan left, and the other team has $N$ left. for argument's sake, let's assume the team with $1$ left is the Americans. 
+At some point, the system will get to the point where the Dutch or the Americans only have $1$ fan left, and the other team has $N$ left. For argument's sake, let's assume the team with $1$ left is the Americans. 
 
-there is a $1/(N+1)$ chance that we get to the end of the line without hitting the American, and a $1/(N+1)$ chance to restart the game from any of the $(N-1)$ possible number of remaining Dutch fans between $1$ and $(N-1):$
+There is a $1/(N+1)$ chance that we get to the end of the line without hitting the American, and a $1/(N+1)$ chance to restart the game from any of the $(N-1)$ possible number of remaining Dutch fans between $1$ and $(N-1):$
 
 $$ P(N) = \frac{1}{N+1} + \frac{1}{N+1}\left[P(1) + P(2) + \ldots + P(N-1)\right] $$
 
 which is solved by $P(N) = \frac12.$
 
-to find the number of buses, we can use the same equations from the formal argument above, now less analyzable. instead of immediately starting a new bus when a fan from the opposite team is called, we now reset the game. that means that the equation for $A(a,d)$ becomes 
+To find the number of buses, we can use the same equations from the formal argument above, now less analyzable. Instead of immediately starting a new bus when a fan from the opposite team is called, we now reset the game. That means that the equation for $A(a,d)$ becomes 
 
 $$ A(a,d) = \frac{a}{a+d}A(a-1,d) + \frac{d}{a+d} \left[\frac{d}{a+d} D(a,d-1) + \frac{a}{a+d} A(a-1,d) + 1\right] $$
 
-with the equivalent modification for $D(a,d).$ 
+With the equivalent modification for $D(a,d).$ 
 
-implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. this is quite close, but as fan counts increase, the divergence is more striking.
+Implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. This is quite close, but as fan counts increase, the divergence is more striking.
 
 ```python
 @lru_cache
