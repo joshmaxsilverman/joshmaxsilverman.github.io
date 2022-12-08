@@ -31,7 +31,9 @@ For the second part, we want to figure out the number of groups. First, an intui
 
 ### Intuitive argument
 
-A new group occurs whenever there's a switch from As to Ds. Circularize the list, so that the first person is in back of the last person. There are $a$ American fans in the circle and so, $a$ positions behind Americans. By linearity, the probability that a Dutch is behind any given American is $d/(a+d).$ Likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d)$ that an American is there. Putting it together, the expected number of identity switches is $2ad/(a+d).$ Since the circle is actually linear, we have to cut the circle back into a line, which introduces one more group (the first one). All in all, the expected number of buses is one more than the harmonic mean of $a$ and $d$:
+A new group occurs whenever there's a switch from As to Ds. Circularize the list, so that the first person is in back of the last person. There are $a$ American fans in the circle and so, $a$ positions behind Americans. By linearity, the probability that a Dutch is behind any given American is $d/(a+d-1).$ Likewise, there are $d$ positions behind Dutch players, and probability $a/(a+d-1)$ that an American is there. Putting it together, the expected number of identity switches is $2ad/(a+d-1).$ Since the circle is actually linear, we have to cut the circle back into a line, which introduces one more group if the first and last fans support the same team. The probability of that is $\frac{a}{a+d}\frac{a-1}{a+d-1} + \frac{d}{a+d}\frac{d-1}{a+d-1}.$
+
+Adding it all up, the expected number of buses is one more than the harmonic mean of $a$ and $d$:
 
 $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
