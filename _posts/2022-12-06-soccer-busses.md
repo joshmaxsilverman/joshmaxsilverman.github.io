@@ -110,7 +110,7 @@ which is solved by $P(N) = \frac12.$
 
 to find the number of buses, we can use the same equations from the formal argument above, now less analyzable. instead of immediately starting a new bus when a fan from the opposite team is called, we now reset the game. that means that the equation for $A(a,d)$ becomes 
 
-$$ A(a,d) = \frac{a}{a+d}A(a-1,d) + \frac{d}{a+d} * \left[\frac{d}{a+d} D(a,d-1) + \frac{a}{a+d} A(a-1,d) + 1\right] $$
+$$ A(a,d) = \frac{a}{a+d}A(a-1,d) + \frac{d}{a+d} \left[\frac{d}{a+d} D(a,d-1) + \frac{a}{a+d} A(a-1,d) + 1\right] $$
 
 with the equivalent modification for $D(a,d).$ implementing this and evaluating it for $(a,d)=(11,7),$ we get $\langle B\rangle \approx 9.54538,$ which is nearly identical to the result under the non-reset rules. this is quite close, though as fan counts increase, the divergence is more striking.
 
