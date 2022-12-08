@@ -39,6 +39,8 @@ $$ \langle B\rangle = 1 + \dfrac{2ad}{a+d}. $$
 
 For the problem in question, that's $\langle B\rangle = 86/9.$
 
+![](/img/2022-12-08-circularized.JPG){:width="450px" class="image-centered"}
+
 Now we'll argue this formally, which will be good setup work for the second interpretation.
 
 ### Rigorous argument
