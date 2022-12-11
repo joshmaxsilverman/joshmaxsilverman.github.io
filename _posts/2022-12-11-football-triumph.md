@@ -39,7 +39,7 @@ $$ \langle q\rangle = 4! \int\limits_0^1\text{d}a\ \int\limits_0^a\text{d}b\ \in
 
 By the magic of computers, we can evaluate this numerically or symbolically, and find
 
-$$ \langle q\rangle = \frac25\left[23-\pi^2\log4 -\log2\left(29+\log2\left(\log256 -39\right)\right) - 3\zeta(3)\right] $$ 
+$$ \langle q\rangle = \frac25\left[23-\pi^2\log4 -\log2\left(29+\log2\left[\log256 -39\right]\right) - 3\zeta(3)\right] $$ 
 
 which is approximately $0.6735\ldots,$ not far off from what we get using the mean-field values of $a, b, c$ and $d.$
 
