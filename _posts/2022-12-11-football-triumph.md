@@ -25,14 +25,14 @@ $$ P(\text{A wins it all}) = P(\text{A wins bracket})\left[P(\text{B wins bracke
 
 there are corresponding expressions for players B, C, or D winning it all, tracking the probabilities of the events that lead them to top the podium. if we multiply them by the quality of the victor and add them up, then we have the expectation value for the quality of the victor for a given draw of $a, b, c,$ and $d:$
 
-$$ \langle q\rangle(a,b,c,d) = a P(\text{A wins it all}) + b P(\text{B wins it all}) + c P(\text{C wins it all}) + d P(\text{D wins it all}). $$
+$$ \langle q\rangle_{(a,b,c,d)} = a P(\text{A wins it all}) + b P(\text{B wins it all}) + c P(\text{C wins it all}) + d P(\text{D wins it all}). $$
 
-by symmetry, the expected quality of players A, B, C, and D are $\left(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}right).$ if we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.64\ldots$ which isn't far off from the true value (see below).
+by symmetry, the expected quality of players A, B, C, and D are $\left(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}\right).$ if we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.64\ldots$ which isn't far off from the true value (see below).
 
 to get the true value, we have to average this expectation value over all possible qualities $a, b, c$ and $d.$ because we assume the players are ranked first to last, $d$ can vary from $0$ up to $c,$ while $c$ can vary from $0$ up to $b,$ $b$ from $0$ up to $a,$ and $a$ can be anything from $0$ to $1.$
 
 incorporating these limits, the expected quality of the victor is
 
-$$ \langle q\rangle = \int\limits_0^1\text{d}a\, \int\limits_0^a\text{d}b\, \int\limits_0^b\text{d}c\, \int\limits_0^c\text{d}d\, \langle q\rangle(a,b,c,d) $$
+$$ \langle q\rangle = \int\limits_0^1\text{d}a\, \int\limits_0^a\text{d}b\, \int\limits_0^b\text{d}c\, \int\limits_0^c\text{d}d\, \langle q\rangle_{(a,b,c,d)} $$
 
 <br>
