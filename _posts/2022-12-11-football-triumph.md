@@ -35,4 +35,8 @@ incorporating these limits, the expected quality of the victor is
 
 $$ \langle q\rangle = \int\limits_0^1\text{d}a\ \int\limits_0^a\text{d}b\ \int\limits_0^b\text{d}c\ \int\limits_0^c\text{d}d\ \langle q\rangle_{(a,b,c,d)} $$
 
+by the magic of computers, we can evaluate this numerically or symbolically, and find
+
+$$ \langle q\rangle = \frac25\left(23-\pi^2\log4 -\log2\left(29+\log2\left(\log256 -39\right)\right) - 3\zeta_3\right). $$
+
 <br>
