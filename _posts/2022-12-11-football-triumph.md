@@ -15,7 +15,7 @@ On average, what is the quality of the RFP champion?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-win-the-riddler-football-playoff/))
 
 ## Solution
 
