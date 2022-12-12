@@ -8,10 +8,10 @@ tags: uniform-probability rankings
 ---
 
 >**Question**: Speaking of “football,” the Riddler Football Playoff (RFP) consists of four teams. Each team is assigned a random real number between 0 and 1, representing the “quality” of the team. If team A has quality $a$ and team B has quality $b,$ then the probability that team A will defeat team B in a game is $a/(a+b).$
-
-In the semifinal games of the playoff, the team with the highest quality (the “1 seed”) plays the team with the lowest quality (the “4 seed”), while the other two teams play each other as well. The two teams that win their respective semifinal games then play each other in the final.
-
-On average, what is the quality of the RFP champion?
+>
+>In the semifinal games of the playoff, the team with the highest quality (the “1 seed”) plays the team with the lowest quality (the “4 seed”), while the other two teams play each other as well. The two teams that win their respective semifinal games then play each other in the final.
+>
+>On average, what is the quality of the RFP champion?
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Incorporating these insights, the expected quality of the victor is:
 
 $$ \langle q\rangle = 4! \int\limits_0^1\text{d}a\ \int\limits_0^a\text{d}b\ \int\limits_0^b\text{d}c\ \int\limits_0^c\text{d}d\ \langle q\rangle_{(a,b,c,d)} $$
 
-By the magic of computers, we can evaluate this numerically or symbolically, and find
+By the magic of computers, we can evaluate this numerically or symbolically, and find the simple expression
 
 $$ \langle q\rangle = \frac25\left[23-\pi^2\log4 -\log2\left(29+\log2\left[\log256 -39\right]\right) - 3\zeta(3)\right] $$ 
 
