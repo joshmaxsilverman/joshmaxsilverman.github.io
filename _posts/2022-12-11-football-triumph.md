@@ -23,11 +23,19 @@ Any of the $4$ players can end up on top. To do it they have to win their bracke
 
 $$ P(\text{A wins it all}) = P(\text{A wins bracket})\left[P(\text{B wins bracket})P(\text{A beats B}) + P(\text{C wins bracket})P(\text{A beats C})\right] $$
 
-There are corresponding expressions for players B, C, or D winning it all, tracking the probabilities of the events that lead them to top the podium. If we multiply them by the quality of the victor and add them up, then we have the expectation value for the quality of the victor for a given draw of $a, b, c,$ and $d:$
+There are corresponding expressions for players B, C, or D winning it all, tracking the probabilities of the events that lead them to top the podium. 
+
+### Local expectation value
+
+If we multiply them by the quality of the victor and add them up, then we have the expectation value for the quality of the victor for a given draw of $a, b, c,$ and $d:$
 
 $$ \langle q\rangle_{(a,b,c,d)} = a P(\text{A wins it all}) + b P(\text{B wins it all}) + c P(\text{C wins it all}) + d P(\text{D wins it all}). $$
 
-By symmetry, the expected qualities of players A, B, C, and D are $\left(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}\right).$ If we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.6429\ldots$ which isn't far off from the true value (see below).
+By symmetry, the expected qualities of players A, B, C, and D are $\left(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}\right).$ If we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.6429\ldots$
+
+<!-- which isn't far off from the true value (see below). -->
+
+### Ensemble average
 
 To get the true value, we have to average this expectation value over all possible qualities $a, b, c$ and $d.$ Because we assume the players are ranked first to last, $d$ can vary from $0$ up to $c,$ while $c$ can vary from $0$ up to $b,$ $b$ from $0$ up to $a,$ and $a$ can be anything from $0$ to $1.$ 
 
