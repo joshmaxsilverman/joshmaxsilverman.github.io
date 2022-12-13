@@ -21,7 +21,12 @@ tags: uniform-probability rankings
 
 Any of the $4$ players can end up on top. To do it they have to win their bracket, followed by the championship. Take player A for example, to triumph they need to first defeat player D and then win the championship which would be against player B or player C. This means 
 
-$$ P(\text{A wins it all}) = P(\text{A wins bracket})\left[P(\text{B wins bracket})P(\text{A beats B}) + P(\text{C wins bracket})P(\text{A beats C})\right] $$
+$$ 
+  \begin{align}
+    P(\text{A wins it all}) &= P(\text{A wins bracket})\left[P(\text{B wins bracket})P(\text{A beats B}) + P(\text{C wins bracket})P(\text{A beats C})\right]\\
+    &= \frac{a}{a+d}\left[\frac{b}{b+c}\frac{a}{a+b} + \frac{c}{b+c}\frac{a}{a+c}\right]
+\end{align}    
+$$
 
 There are corresponding expressions for players B, C, or D winning it all, tracking the probabilities of the events that lead them to top the podium. 
 
