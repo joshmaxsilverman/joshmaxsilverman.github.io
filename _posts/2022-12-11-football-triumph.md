@@ -36,7 +36,7 @@ If we multiply them by the quality of the victor and add them up, then we have t
 
 $$ \langle q\rangle_{(a,b,c,d)} = a P(\text{A wins it all}) + b P(\text{B wins it all}) + c P(\text{C wins it all}) + d P(\text{D wins it all}). $$
 
-By symmetry, the expected qualities of players A, B, C, and D are $\left(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}\right).$ If we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.6429\ldots$
+By symmetry, the expected qualities of players A, B, C, and D are $(\frac{8}{10}, \frac{6}{10}, \frac{4}{10}, \frac{2}{10}).$ If we plug these values into the expression, we get $P(\text{A wins it all})\approx 0.6429\ldots$
 
 <!-- which isn't far off from the true value (see below). -->
 
