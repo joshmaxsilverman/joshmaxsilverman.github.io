@@ -42,6 +42,6 @@ $$\begin{align}
   &\approx 22.26651
 \end{align}$$
 
-estimating $P_n$ with a $10^8$ round simulation produces $\langle \hat{T}\rangle \approx 22.13.$ pretty good.
+using a $10^8$ round simulation to estimate each $P_n$ produces $\hat{\langle T\rangle} \approx 22.13.$ pretty good.
 
 <br>
