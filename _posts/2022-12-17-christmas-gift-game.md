@@ -48,12 +48,16 @@ $$\begin{align}
   &\approx 22.26651
 \end{align}$$
 
-Using a $10^8$ round simulation to estimate each $P_n$ produces $\hat{\langle T\rangle} \approx 22.13.$ Pretty good.
+Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{\langle T\rangle} \approx 22.13.$ Pretty good.
 
-The approximation becomes exact in the high-$n$ limit and so, in general, the waiting time for an $n$ guest game is
+Ploting the approximation (gold points) against the high-$N$ simulation (blue)
+
+![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
+
+we can see that the approximation gets asymptotic quickly and so, in general, the waiting time for an $n$ guest game is
 
 $$ \langle T\rangle = 2n + 2\sum\limits_{j=1}^n\frac{1}{2j+1}. $$
 
-The sum is much smaller than $n,$ so the waiting time is approximately linear.
+The sum is much smaller than $n,$ so the waiting time is approximately linear in the number of guests.
 
 <br>
