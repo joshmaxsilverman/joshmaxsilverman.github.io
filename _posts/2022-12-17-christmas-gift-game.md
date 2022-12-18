@@ -85,7 +85,7 @@ $$\begin{align}
   &\approx 22.1385
 \end{align}$$
 
-Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\widehat{T}_{20} \approx 22.13.$ Pretty good.
+Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{T}_{20} \approx 22.13.$ Pretty good.
 
 Ploting the approximation (gold points) against the high-$N$ simulation (blue)
 
