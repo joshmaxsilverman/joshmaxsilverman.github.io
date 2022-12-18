@@ -53,11 +53,11 @@ If Player 1 did not submit the tile they picked (probability $\frac23$), then th
 
 Putting it together, the chance that Player 2 picks a $1,$ given that Player 1 did not pick a 1 is 
 
-$$ P(1 | \text{player 1 doesn't pick a 1}) = \frac13\times\frac39 + \frac23\frac29 = \frac{7}{27} \approx 0.26526 $$
+$$ P(1 | \text{player 1 doesn't pick a 1}) = \frac13\times\frac39 + \frac23\times\frac29 = \frac{7}{27} \approx 0.26526 $$
 
 This makes the exact probability that a pair forms equal to 
 
-$$ P_4 = 2\frac34\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
+$$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
 
 In general, for $n$ players, the expected number of pairs in a round of $n$ players is
 
