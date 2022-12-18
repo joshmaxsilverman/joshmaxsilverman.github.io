@@ -29,7 +29,7 @@ in general, for $n$ players, the probability that a pair forms
 
 $$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$
 
-in each round of the game, we should expect to wait $\langle T_n \rangle = 1/P_n = \frac{2n}{n-1}$ attempts for a pair to form.
+in each round of the game, we should expect to wait $\langle T_n \rangle = P_n^{-1} = \frac{2n}{n-1}$ attempts for a pair to form.
 
 the expected duration of the game is then just 
 
