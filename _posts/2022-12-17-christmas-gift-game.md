@@ -25,20 +25,20 @@ for four players, there are two potential pairs. since anyone can draw anyone fr
 
 $$ P_2 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\\% $$
 
-in general, for $2n$ players, the probability that a pair forms
+in general, for $n$ players, the probability that a pair forms
 
-$$ P_{2n} = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$
+$$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$
 
-in each round of the game, we should expect to wait $\langle T_{2n} \rangle = 1/P_{2n} = \frac{2n}{n-1}$ attempts for a pair to form.
+in each round of the game, we should expect to wait $\langle T_n \rangle = 1/P_n = \frac{2n}{n-1}$ attempts for a pair to form.
 
 the expected duration of the game is then just 
 
 $$\begin{align}
   \langle T\rangle &= \langle T_2\rangle + \langle T_4\rangle + \ldots + \langle T_{2n}\rangle \\
-  &= 2 + \sum\limits_{n=2}^{10} \langle T_{2n}\rangle \\
-  &= 2 + \sum\limits_{n=1}^{9} \langle T_{2(n+1)}\rangle \\
-    &= 2 + \sum\limits_{n=1}^{9} \frac{2n+2}{n} \\
-    &= 2 + 18 + 2\sum\limits_{n=1}^9\frac{1}{n} \\
+  &= 2 + \sum\limits_{j=2}^{10} \langle T_{2j}\rangle \\
+  &= 2 + \sum\limits_{j=1}^{9} \langle T_{2(j+1)}\rangle \\
+    &= 2 + \sum\limits_{j=1}^{9} \frac{2j+2}{j} \\
+    &= 2 + 18 + 2\sum\limits_{j=1}^9\frac{1}{j} \\
     &= 20 + H_9 \\
     &\approx 
 \end{align}$$
