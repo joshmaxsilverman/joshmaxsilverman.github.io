@@ -44,4 +44,10 @@ $$\begin{align}
 
 using a $10^8$ round simulation to estimate each $P_n$ produces $\hat{\langle T\rangle} \approx 22.13.$ pretty good.
 
+the approximation becomes exact in the high-$n$ limit and so, in general, the waiting time for an $n$ guest game is
+
+$$ \langle T\rangle = 2n + 2\sum\limits_{j=1}^n\frac{1}{2j+1}. $$
+
+the sum is much smaller than $n,$ so the waiting time is approximately linear.
+
 <br>
