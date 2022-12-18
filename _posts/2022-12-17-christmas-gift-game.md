@@ -40,7 +40,7 @@ So, at each stage of the game, we should expect to wait $P_n^{-1} = \frac{2n}{n-
 The expected duration of the game is then just 
 
 $$\begin{align}
-  \langle T\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
+  \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
   &= 2 + \sum\limits_{j=2}^{10} P_{2j}^{-1} \\
   &= 2 + \sum\limits_{j=1}^{9} P_{2(j+1)}^{-1} \\
   &= 2 + \sum\limits_{j=1}^{9} \frac{4j+4}{2j+1} \\
@@ -48,7 +48,7 @@ $$\begin{align}
   &\approx 22.26651
 \end{align}$$
 
-Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{\langle T\rangle} \approx 22.13.$ Pretty good.
+Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{T_{20}} \approx 22.13.$ Pretty good.
 
 Ploting the approximation (gold points) against the high-$N$ simulation (blue)
 
