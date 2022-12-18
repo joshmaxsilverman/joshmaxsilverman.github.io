@@ -29,7 +29,7 @@ First of all, with two players, the probability that a pair forms is $P_2 = \fra
 
 With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34.$ Similarly, the probability that the first person's pick picks them back is approximately $\frac14.$ Finally, there are two possible pairs. So, the probability that a pair forms is
 
-$$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\\% $$
+$$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
 
 In general, for $n$ players, the probability that a pair forms in a round
 
