@@ -67,6 +67,11 @@ $$
           &= \frac{(n-3)n + 3}{2(n-1)^2}. 
    \end{align}
 $$
+
+Comparing the prediction (gold) with a high-$N$ simulation, we see good agreement
+
+![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
+
 <!-- $$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$ -->
 
 ### Expected waiting time
@@ -88,7 +93,7 @@ Running a $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1367.$ P
 
 Ploting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
 
-![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
+![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
 
 In general, the waiting time for an $n$ guest game is
 
