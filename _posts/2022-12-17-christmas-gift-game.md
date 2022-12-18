@@ -19,11 +19,11 @@ this problem is hard because the connections formed by earlier draws preclude ce
 
 in this solution i'm going to make the simplifying assumption that each pair is independent. in this scheme, we can calculate the probability that any given pair forms a loop in a round of the game, and multiply it by the number of pairs.
 
-first of all, with two players, there's a $\frac12$ chance that a pair is formed.
+first of all, with two players, there's chance $P_2 = \frac12$ that a pair is formed.
 
 for four players, there are two potential pairs. since anyone can draw anyone from the hat, the chance that the first person doesn't pick themself is $\frac14.$ similarly, the probability that the first person's pick picks them back is $\frac14.$ finally, there are two potential pairs. so, the probability that a pair forms is
 
-$$ P_2 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\\% $$
+$$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\\% $$
 
 in general, for $n$ players, the probability that a pair forms
 
