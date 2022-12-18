@@ -72,11 +72,12 @@ The expected duration of the game is then just
 
 $$\begin{align}
   \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
-  &= 2 + \sum\limits_{j=2}^{10} P_{2j}^{-1} \\
-  &= 2 + \sum\limits_{j=1}^{9} P_{2(j+1)}^{-1} \\
-  &= 2 + \sum\limits_{j=1}^{9} \frac{4j+4}{2j+1} \\
-  &= 2 + 18 + 2\sum\limits_{j=1}^9\frac{1}{2j+1} \\
-  &\approx 22.26651
+  &= \sum\limits_{2n=j=1}^{10} P_{2j}^{-1} \\
+  &= 2\sum\limits_{2n=j=1}^{10} \frac{(n-1)^2}{(n-3)n + 3} \\
+  &= 2\sum\limits_{2n=j=1}^{10} \frac{n^2 - 3n + 3 + n - 2}{(n^2 - 3n + 3} \\
+  &= 2\sum\limits_{2n=j=1}^{10} \left[1 + \frac{n - 2}{(n^2 - 3n + 3}\right] \\
+  &= 2n \sum\limits_{2n=j=1}^{10} \frac{n - 2}{(n^2 - 3n + 3} \\
+  &\approx 22.1385
 \end{align}$$
 
 Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{T_{20}} \approx 22.13.$ Pretty good.
