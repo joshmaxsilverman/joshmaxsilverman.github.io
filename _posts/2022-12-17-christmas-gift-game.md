@@ -34,7 +34,7 @@ in each round of the game, we should expect to wait $\langle T_n \rangle = P_n^{
 the expected duration of the game is then just 
 
 $$\begin{align}
-  \langle T\rangle &= \langle T_2\rangle + \langle T_4\rangle + \ldots + \langle T_{2n}\rangle \\
+  \langle T\rangle &= \langle T_2\rangle + \langle T_4\rangle + \ldots + \langle T_{20}\rangle \\
   &= 2 + \sum\limits_{j=2}^{10} \langle T_{2j}\rangle \\
   &= 2 + \sum\limits_{j=1}^{9} \langle T_{2(j+1)}\rangle \\
     &= 2 + \sum\limits_{j=1}^{9} \frac{2j+2}{j} \\
