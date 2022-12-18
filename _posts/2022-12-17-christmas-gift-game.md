@@ -76,7 +76,7 @@ $$\begin{align}
   &= 2\sum\limits_{2n=j=1}^{10} \frac{(n-1)^2}{(n-3)n + 3} \\
   &= 2\sum\limits_{2n=j=1}^{10} \frac{n^2 - 3n + 3 + n - 2}{n^2 - 3n + 3} \\
   &= 2\sum\limits_{2n=j=1}^{10} \left[1 + \frac{n - 2}{n^2 - 3n + 3}\right] \\
-  &= 2n + \sum\limits_{2n=j=1}^{10} \frac{n - 2}{n^2 - 3n + 3} \\
+  &= n + \sum\limits_{2n=j=1}^{10} \frac{n - 2}{n^2 - 3n + 3} \\
   &\approx 22.1385
 \end{align}$$
 
