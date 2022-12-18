@@ -61,7 +61,12 @@ $$ P_4 = 2\frac34\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
 
 In general, for $n$ players, the expected number of pairs in a round of $n$ players is
 
-$$ P_n = \frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} = \frac{(n-3)n + 3}{2(n-1)^2} . $$
+$$ 
+   \begin{align}
+      P_n &= \frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} \\
+          &= \frac{(n-3)n + 3}{2(n-1)^2}. 
+   \end{align}
+$$
 <!-- $$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$ -->
 
 ### Expected waiting time
