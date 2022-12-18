@@ -81,10 +81,10 @@ $$\begin{align}
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(2j-1)^2}{4j^2 - 6j + 3} \\
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{2j - 2}{4j^2 - 6j + 3}\right] \\
   &= 20 + \sum\limits_{j=\frac12 n=1}^{10} \frac{2j - 2}{4j^2 - 6j + 3} \\
-  &\approx 22.1385
+  &= \frac{379805958234048}{17155864988899} \approx 22.1385
 \end{align}$$
 
-Running a $N = 10^8$ round simulation to estimate produces $\hat{T}_{20} \approx 22.1367.$ Pretty good.
+Running a $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1367.$ Pretty good.
 
 Ploting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
 
