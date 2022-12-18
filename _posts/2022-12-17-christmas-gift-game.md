@@ -78,21 +78,21 @@ The expected duration of the game is then just
 $$\begin{align}
   \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
   &= \sum\limits_{j=\frac12 n=1}^{10} P_{2j}^{-1} \\
-  &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(n-1)^2}{n^2 - 3n + 3} \\
-  &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{n - 2}{n^2 - 3n + 3}\right] \\
-  &= 20 + \sum\limits_{j=\frac12 n=1}^{10} \frac{n - 2}{n^2 - 3n + 3} \\
+  &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(2j-1)^2}{4j^2 - 6j + 3} \\
+  &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{2j - 2}{4j^2 - 6j + 3}\right] \\
+  &= 20 + \sum\limits_{j=\frac12 n=1}^{10} \frac{2j - 2}{4j^2 - 6j + 3} \\
   &\approx 22.1385
 \end{align}$$
 
-Using an $N = 10^8$ round simulation to estimate each $P_n$ produces $\hat{T}_{20} \approx 22.13.$ Pretty good.
+Running a $N = 10^8$ round simulation to estimate produces $\hat{T}_{20} \approx 22.1367.$ Pretty good.
 
-Ploting the approximation (gold points) against the high-$N$ simulation (blue)
+Ploting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
 
 ![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
 
-we can see that the approximation gets asymptotic quickly and so, in general, the waiting time for an $n$ guest game is
+In general, the waiting time for an $n$ guest game is
 
-$$ \langle T_n\rangle = n + 2\sum\limits_{j=1}^{\frac12(n-1)}\frac{1}{2j+1}. $$
+$$ \langle T_n\rangle = n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
 
 The sum grows sublinearly in $n,$ so the waiting time is approximately linear in the number of guests.
 
