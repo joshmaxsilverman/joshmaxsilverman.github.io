@@ -21,15 +21,31 @@ tags: approximation linearity-of-expectation
 
 ## Solution
 
-This problem is hard because the connections formed by earlier draws preclude certain potential pairs for later draws. 
+This problem is hard because connections formed by early draws preclude certain potential pairs for later draws. 
 
-I'm going to make the simplifying assumption that each pair is independent. In this scheme, we can calculate the probability that any given pair forms a loop in a round of the game, and simply multiply it by the number of possible pairs.
+Things are easier if we work in the ensemble of all possible series of draws. 
+
+<!-- I'm going to make the simplifying assumption that each pair is independent.  -->
+
+From this perspective, we can calculate the probability that any given pair forms a loop in a round of the game, and simply multiply it by the number of possible pairs.
 
 First of all, with two players, the probability that a pair forms is $P_2 = \frac12.$
 
-With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34.$ Similarly, the probability that the first person's pick picks them back is approximately $\frac14.$ Finally, there are two possible pairs. So, the probability that a pair forms is
+With more players, we have to do more careful accounting. But to get the intuition going, let's do the $N=4$ case playing fast and loose. 
+
+### Intuitive argument
+
+With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
 $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
+
+### Exact argument
+
+Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each tiles is uniformly probably in the initial bag). 
+
+However, the first person's choice changes the probability of a $1$ in the bag, and we have to find 
+
+$$ P(1 | \text{player 1 doesn't pick a 1}). $$
 
 In general, for $n$ players, the probability that a pair forms in a round
 
