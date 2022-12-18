@@ -77,11 +77,10 @@ The expected duration of the game is then just
 
 $$\begin{align}
   \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
-  &= \sum\limits_{2n=j=1}^{10} P_{2j}^{-1} \\
-  &= 2\sum\limits_{2n=j=1}^{10} \frac{(n-1)^2}{(n-3)n + 3} \\
-  &= 2\sum\limits_{2n=j=1}^{10} \frac{n^2 - 3n + 3 + n - 2}{n^2 - 3n + 3} \\
-  &= 2\sum\limits_{2n=j=1}^{10} \left[1 + \frac{n - 2}{n^2 - 3n + 3}\right] \\
-  &= n + \sum\limits_{2n=j=1}^{10} \frac{n - 2}{n^2 - 3n + 3} \\
+  &= \sum\limits_{j=\frac12 n=1}^{10} P_{2j}^{-1} \\
+  &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(n-1)^2}{n^2 - 3n + 3} \\
+  &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{n - 2}{n^2 - 3n + 3}\right] \\
+  &= 20 + \sum\limits_{j=\frac12 n=1}^{10} \frac{n - 2}{n^2 - 3n + 3} \\
   &\approx 22.1385
 \end{align}$$
 
