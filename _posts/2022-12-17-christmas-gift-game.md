@@ -56,7 +56,7 @@ Ploting the approximation (gold points) against the high-$N$ simulation (blue)
 
 we can see that the approximation gets asymptotic quickly and so, in general, the waiting time for an $n$ guest game is
 
-$$ \langle T_n\rangle = 2n + 2\sum\limits_{j=1}^n\frac{1}{2j+1}. $$
+$$ \langle T_n\rangle = 2n + 2\sum\limits_{j=1}^{\frac12(n-1)}\frac{1}{2j+1}. $$
 
 The sum is much smaller than $n,$ so the waiting time is approximately linear in the number of guests.
 
