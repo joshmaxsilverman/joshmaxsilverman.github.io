@@ -27,6 +27,6 @@ $$ \langle P_2\rangle \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\
 
 in general, for $2n$ players, the expected number of pairs is
 
-$$ \langle P_n\rangle = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n} .$$
+$$ \langle P_{2n}\rangle = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n} .$$
 
 <br>
