@@ -37,10 +37,11 @@ $$\begin{align}
   \langle T\rangle &= \langle T_2\rangle + \langle T_4\rangle + \ldots + \langle T_{20}\rangle \\
   &= 2 + \sum\limits_{j=2}^{10} \langle T_{2j}\rangle \\
   &= 2 + \sum\limits_{j=1}^{9} \langle T_{2(j+1)}\rangle \\
-    &= 2 + \sum\limits_{j=1}^{9} \frac{2j+2}{j} \\
-    &= 2 + 18 + 2\sum\limits_{j=1}^9\frac{1}{j} \\
-    &= 20 + H_9 \\
-    &\approx 
+  &= 2 + \sum\limits_{j=1}^{9} \frac{4j+4}{2j+1} \\
+  &= 2 + 18 + 2\sum\limits_{j=1}^9\frac{1}{2j+1} \\
+  &\approx 22.26651
 \end{align}$$
+
+estimating $P_n$ with a $10^8$ round simulation produces $\langle \hat{T}\rangle \approx 22.13.$ pretty good.
 
 <br>
