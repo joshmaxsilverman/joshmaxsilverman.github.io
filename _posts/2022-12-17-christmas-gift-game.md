@@ -35,14 +35,14 @@ In general, for $n$ players, the probability that a pair forms in a round
 
 $$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$
 
-So, at each stage of the game, we should expect to wait $\langle T_n \rangle = P_n^{-1} = \frac{2n}{n-1}$ rounds for a pair to form.
+So, at each stage of the game, we should expect to wait $P_n^{-1} = \frac{2n}{n-1}$ rounds for a pair to form.
 
 The expected duration of the game is then just 
 
 $$\begin{align}
-  \langle T\rangle &= \langle T_2\rangle + \langle T_4\rangle + \ldots + \langle T_{20}\rangle \\
-  &= 2 + \sum\limits_{j=2}^{10} \langle T_{2j}\rangle \\
-  &= 2 + \sum\limits_{j=1}^{9} \langle T_{2(j+1)}\rangle \\
+  \langle T\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
+  &= 2 + \sum\limits_{j=2}^{10} P_{2j}^{-1} \\
+  &= 2 + \sum\limits_{j=1}^{9} P_{2(j+1)}^{-1} \\
   &= 2 + \sum\limits_{j=1}^{9} \frac{4j+4}{2j+1} \\
   &= 2 + 18 + 2\sum\limits_{j=1}^9\frac{1}{2j+1} \\
   &\approx 22.26651
@@ -56,7 +56,7 @@ Ploting the approximation (gold points) against the high-$N$ simulation (blue)
 
 we can see that the approximation gets asymptotic quickly and so, in general, the waiting time for an $n$ guest game is
 
-$$ \langle T\rangle = 2n + 2\sum\limits_{j=1}^n\frac{1}{2j+1}. $$
+$$ \langle T_n\rangle = 2n + 2\sum\limits_{j=1}^n\frac{1}{2j+1}. $$
 
 The sum is much smaller than $n,$ so the waiting time is approximately linear in the number of guests.
 
