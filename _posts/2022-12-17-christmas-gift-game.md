@@ -47,11 +47,11 @@ $$ P(\text{second person picks first person} | \text{first person picks someone 
 
 This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
-Given that Player 1 didn't draw a $``1'',$ there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $``1''.$
+Given that Player 1 didn't draw a $``1",$ there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $``1".$
 
-Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $``1''.$
+Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $``1".$
 
-Putting it together, the chance that Player 1's pick picks a $``1'',$ given that Player 1 did not pick a $``1''$ is 
+Putting it together, the chance that Player 1's pick picks a $``1",$ given that Player 1 did not pick a $``1"$ is 
 
 $$ 
    \begin{align}
