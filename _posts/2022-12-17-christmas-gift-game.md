@@ -47,15 +47,15 @@ $$ P(\tiny\text{player 1's pick picks them} | \text{player 1 doesn't pick themse
 
 This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
-Given that Player 1 didn't draw a $1,$ there's a $\frac13$ chance that they submitted the tile they drew. In that case, the second person will be drawing from three tiles submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $1.$
+Given that Player 1 didn't draw a $``1'',$ there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $``1''.$
 
-Likewise, if Player 1 did not submit the tile they drew (probability $\frac23$), then the second player is drawing from three tiles submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $1.$
+Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $``1''.$
 
-Putting it together, the chance that Player 2 picks a $1,$ given that Player 1 did not pick a 1 is 
+Putting it together, the chance that Player 1's pick picks a $``1'',$ given that Player 1 did not pick a $``1''$ is 
 
-$$ P(\tiny\text{player 1's pick picks them} | \text{player 1 doesn't pick themself}) = \frac13\times\frac39 + \frac23\times\frac29 = \frac{7}{27} \approx 0.26526 $$
+$$ P(\tiny\text{player 1's pick picks them} | \text{player 1 doesn't pick themself}) = \frac13\times\frac39 + \frac23\times\frac29 = \frac{7}{27} $$
 
-This makes the expected number of pairs equal to 
+This makes the expected number of pairs in a round with $4$ players equal to 
 
 $$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
 
@@ -75,7 +75,7 @@ Comparing the prediction (gold) with a high-$N$ simulation for $P_n,$ we see goo
 
 ### Expected waiting time
 
-Now, we're going to make a simplifying assumption. Rather than tracking the potential for, e.g., multiple loops forming in a single round, we're just going to find the expected waiting time for a loop to form at each stage, and add up those waiting times to find the total.  
+Now, we're going to make a simplifying assumption. Rather than track the potential for, e.g., multiple pairs forming in a single round, we're just going to find the expected waiting time for a pair to form at each stage, and add up those waiting times to find the total.  
 
 At each stage of the game, we should expect to wait $P_n^{-1} = \frac{2(n-1)^2}{(n-3)n + 3}$ rounds for a pair to form, so the expected duration of the game is just
 
@@ -100,6 +100,6 @@ Plotting the prediction (gold points) against a high-$N$ simulation (blue), we s
 
 ![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
 
-Empirically, the expected waiting time is basically a linear function in $n.$ This is because the summation grows sublinearly in $n$ (practically $\approx O(1)$), so the waiting time is dominated by the bare number of guests.
+Empirically, the expected waiting time is basically a linear function in $n.$ This is because the summation term grows sublinearly in $n$ (practically $\approx O(1)$), so the waiting time is dominated by the bare number of guests.
 
 <br>
