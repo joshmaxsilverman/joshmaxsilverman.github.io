@@ -57,7 +57,7 @@ Given that Player 1 didn't draw their own name, "1", there's a $\frac13$ chance 
 
 Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a "1"
 
-Putting it together, the chance that Player 1's draw draws a "1" given that Player 1 did not draw a "1" is 
+Putting it together, the chance that the second person draws the first person's name (given that the first person did not draw their own name) is 
 
 $$ 
    \begin{align}
