@@ -27,23 +27,23 @@ This problem is hard because connections formed by early draws influence the pot
 
 From this perspective, each round of $n$ people consists of $\frac12n$ independent potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair forms successfully and multiply it by the number of possible pairs.
 
-First of all, with two players, the expected number of pairs formed is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
+First of all, with two players, the expected number of pairs formed is $P_2 = \frac12.$ Either the first person draws the other person's name, or they don't.
 
 With more players we have to do more careful accounting, but to get the intuition going let's do the $N=4$ case playing fast and loose. 
 
 ### Intuitive sketch
 
-With four players, there are two potential pairs. Since the names are — at the beginning — uniformly probable, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
+With four players, there are two potential pairs. Since the names are — at the beginning — uniformly probable, the chance that the first person of a pair doesn't draw their own name is $\frac34$ (this part is exact). Similarly, the probability that the first person's draw draws their name in return is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
 $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
 ### Careful argument
 
-Again, there is a $\frac34$ probability that the first person does not pick their own name. 
+Again, there is a $\frac34$ probability that the first person does not draw their own name. 
 
 However, the first person's draw affects the probability that their name, $``1'',$ is in the bag, and we have to find 
 
-$$ P(\small\text{second person picks first person} | \text{first person picks someone else}). $$
+$$ P(\small\text{second person draws first person} | \text{first person draws someone else}). $$
 
 This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
@@ -51,11 +51,11 @@ Given that Player 1 didn't draw a $``1",$ there's a $\frac13$ chance that they s
 
 Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $``1".$
 
-Putting it together, the chance that Player 1's pick picks a $``1",$ given that Player 1 did not pick a $``1"$ is 
+Putting it together, the chance that Player 1's draw draws a $``1",$ given that Player 1 did not draw a $``1"$ is 
 
 $$ 
    \begin{align}
-      P(\small\text{second person picks first person} | \text{first person picks someone else}) &= \frac13\times\frac39 + \frac23\times\frac29 \\
+      P(\small\text{second person draws first person} | \text{first person draws someone else}) &= \frac13\times\frac39 + \frac23\times\frac29 \\
       &= \frac{7}{27}
    \end{align}
 $$
