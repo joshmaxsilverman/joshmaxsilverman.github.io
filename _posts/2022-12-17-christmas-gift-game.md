@@ -41,13 +41,19 @@ $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
 Again, there is a $\frac34$ probability that the first person does not draw their own name. 
 
-However, the first person's draw affects the probability that their name, "1", is in the bag, and we have to find 
+However, the first person's draw affects the probability that their name, "1", is in the bag. Overall, the expected number of pairs formed in a $4$-person round is
 
-$$ P(\small\text{second person draws first person} | \text{first person draws someone else}). $$
+$$
+   \begin{align}
+      P_4 = &\text{number of potential pairs} \times \\
+          &P(\text{Player 1 does not pick themself}) \\
+          & P(\small\text{second person draws first person} | \text{first person draws someone else})
+   \end{align}
+$$
 
-This chance depends on whether the tile Player 1 drew was one that they submitted or not.
+and we have to find the last term. This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
-Given that Player 1 didn't draw a "1" there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a "1".
+Given that Player 1 didn't draw their own name, "1", there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a "1".
 
 Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a "1"
 
