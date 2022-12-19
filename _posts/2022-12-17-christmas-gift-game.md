@@ -33,7 +33,7 @@ With more players we have to do more careful accounting, but to get the intuitio
 
 ### Intuitive sketch
 
-With four players, there are two potential pairs. Since the names are — at the beginning — uniformly probable, the chance that the first person of a pair doesn't draw their own name is $\frac34$ (this part is exact). Similarly, the probability that the first person's draw draws their name in return is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
+With four players, there are two potential pairs. Since the names are (at the beginning) uniformly probable, the chance that the first person of a pair doesn't draw their own name is $\frac34$ (this part is exact). Similarly, the probability that the first person's draw draws their name in return is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
 $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
