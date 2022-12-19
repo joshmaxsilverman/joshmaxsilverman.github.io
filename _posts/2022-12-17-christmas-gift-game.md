@@ -43,13 +43,15 @@ $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
 
 Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each name is uniformly probably in the initial bag). 
 
-However, the first person's choice changes the probability of their name, "$1$", in the bag, and we have to find 
+However, the first person's choice changes the probability of their name, $``1",$ in the bag, and we have to find 
 
 $$ P(1 | \text{player 1 doesn't pick a 1}). $$
 
-If Player 1 didn't pick a $1,$ there is a $\frac13$ chance they submitted the tile they did pick. In that case, the second person is picking from three tiles submitted by Players 2, 3, and 4, which have a $\frac39$ probability of being a $1.$
+This chance depend on whether the tile Player 1 drew was one they submitted or not.
 
-If Player 1 did not submit the tile they picked (probability $\frac23$), then the second player is picking from three tiles submitted by Players 1, 3, and 4, which have a $\frac29$ probability of being a $1.$
+Given that Player 1 didn't draw a $1,$ there's a $\frac13$ chance that they submitted the tile they drew. In that case, the second person will be drawing from three tiles submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $1.$
+
+Likewise, if Player 1 did not submit the tile they drew (probability $\frac23$), then the second player is drawing from three tiles submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a $1.$
 
 Putting it together, the chance that Player 2 picks a $1,$ given that Player 1 did not pick a 1 is 
 
@@ -58,6 +60,8 @@ $$ P(1 | \text{player 1 doesn't pick a 1}) = \frac13\times\frac39 + \frac23\time
 This makes the exact probability that a pair forms equal to 
 
 $$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
+
+<!-- For 6 players, if player 1 didn't draw a 1, there is a 5/( -->
 
 In general, for $n$ players, the expected number of pairs in a round of $n$ players is
 
@@ -89,7 +93,7 @@ $$\begin{align}
   &= \frac{379805958234048}{17155864988899} \approx 22.1385
 \end{align}$$
 
-Running a $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1367.$ Pretty good.
+Running a $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ Pretty good.
 
 Ploting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
 
