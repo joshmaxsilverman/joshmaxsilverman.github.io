@@ -21,13 +21,11 @@ tags: approximation linearity-of-expectation
 
 ## Solution
 
-This problem is hard because connections formed by early draws influence the potential pairs for later draws. 
-
-Things are easier if we work in the ensemble of all possible series of draws. 
+This problem is hard because connections formed by early draws influence the potential pairs for later draws. Things are simpler if we work in the ensemble of all possible series of draws. 
 
 <!-- I'm going to make the simplifying assumption that each pair is independent.  -->
 
-From this perspective, each round of $n$ people is $\frac12n$ potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair forms successfully and multiply it by the number of possible pairs.
+From this perspective, each round of $n$ people consists of $\frac12n$ independent potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair forms successfully and multiply it by the number of possible pairs.
 
 First of all, with two players, the expected number of pairs formed is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
 
@@ -35,17 +33,17 @@ With more players we have to do more careful accounting, but to get the intuitio
 
 ### Intuitive sketch
 
-With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
+With four players, there are two potential pairs. Since the names are — at the beginning — uniformly probable, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
 $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
 ### Careful argument
 
-Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each name is uniformly probably in the initial bag). 
+Again, there is a $\frac34$ probability that the first person does not pick their own name. 
 
-However, the first person's choice changes the probability that their name, $``1",$ is in the bag, and we have to find 
+However, the first person's draw affects the probability that their name, $``1",$ is in the bag, and we have to find 
 
-$$ P(1 | \text{player 1 doesn't pick a 1}). $$
+$$ P(\small\text{player 1's pick picks player 1} | \text{player 1 doesn't pick themself}). $$
 
 This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
