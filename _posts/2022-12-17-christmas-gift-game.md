@@ -45,9 +45,9 @@ However, the first person's draw affects the probability that their name, "1", i
 
 $$
    \begin{align}
-      P_4 = &\text{number of potential pairs} \times \\
-          &P(\text{Player 1 does not pick themself}) \\
-          & P(\small\text{second person draws first person} | \text{first person draws someone else})
+      P_4 =\ &\text{number of potential pairs} \times \\
+          &P(\text{first person draws someone else}) \\
+          & P(\text{second person draws first person})
    \end{align}
 $$
 
@@ -61,7 +61,7 @@ Putting it together, the chance that Player 1's draw draws a "1" given that Play
 
 $$ 
    \begin{align}
-      P(\small\text{second person draws first person} | \text{first person draws someone else}) &= \frac13\times\frac39 + \frac23\times\frac29 \\
+      P(\text{second person draws first person}) &= \frac13\times\frac39 + \frac23\times\frac29 \\
       &= \frac{7}{27}
    \end{align}
 $$
