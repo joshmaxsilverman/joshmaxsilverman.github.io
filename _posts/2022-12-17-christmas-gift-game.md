@@ -27,27 +27,27 @@ Things are easier if we work in the ensemble of all possible series of draws.
 
 <!-- I'm going to make the simplifying assumption that each pair is independent.  -->
 
-From this perspective, each round of $n$ people is $\frac12n$ potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair successfully forms and multiply it by the number of possible pairs.
+From this perspective, each round of $n$ people is $\frac12n$ potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair forms successfully and multiply it by the number of possible pairs.
 
 First of all, with two players, the probability that a pair forms is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
 
 With more players we have to do more careful accounting, but to get the intuition going let's do the $N=4$ case playing fast and loose. 
 
-### Intuitive argument
+### Intuitive sketch
 
 With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
 $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
 
-### Exact argument
+### Careful argument
 
 Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each name is uniformly probably in the initial bag). 
 
-However, the first person's choice changes the probability of their name, $``1",$ in the bag, and we have to find 
+However, the first person's choice changes the probability that their name, $``1",$ is in the bag, and we have to find 
 
 $$ P(1 | \text{player 1 doesn't pick a 1}). $$
 
-This chance depend on whether the tile Player 1 drew was one they submitted or not.
+This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
 Given that Player 1 didn't draw a $1,$ there's a $\frac13$ chance that they submitted the tile they drew. In that case, the second person will be drawing from three tiles submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a $1.$
 
@@ -61,28 +61,25 @@ This makes the exact probability that a pair forms equal to
 
 $$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
 
-<!-- For 6 players, if player 1 didn't draw a 1, there is a 5/( -->
-
 In general, for $n$ players, the expected number of pairs in a round of $n$ players is
 
 $$ 
    \begin{align}
-      P_n &= \frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} \\
+      P_n &= \frac{1}{n-1}\frac{n-1}{(n-1)^2} + \frac{n-2}{n-1}\frac{n-2}\frac{(n-1)^2} \\
+          &=\frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} \\
           &= \frac{(n-3)n + 3}{2(n-1)^2}. 
    \end{align}
 $$
 
-Comparing the prediction (gold) with a high-$N$ simulation, we see good agreement
+Comparing the prediction (gold) with a high-$N$ simulation for $P_n,$ we see good agreement
 
 ![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
 
-<!-- $$ P_n = \frac{n}{2}\frac{n-1}{n^2} = \frac{n-1}{2n}. $$ -->
-
 ### Expected waiting time
 
-So, at each stage of the game, we should expect to wait $P_n^{-1} = \frac{2(n-1)^2}{(n-3)n + 3}$ rounds for a pair to form.
+Now, we're going to make a simplifying assumption. Rather than tracking the potential for, e.g., multiple loops forming in a single round, we're just going to find the expected waiting time for a loop to form at each stage, and add up those waiting times to find the total.  
 
-The expected duration of the game is then just 
+At each stage of the game, we should expect to wait $P_n^{-1} = \frac{2(n-1)^2}{(n-3)n + 3}$ rounds for a pair to form, so the expected duration of the game is just
 
 $$\begin{align}
   \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
@@ -93,16 +90,18 @@ $$\begin{align}
   &= \frac{379805958234048}{17155864988899} \approx 22.1385
 \end{align}$$
 
-Running a $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ Pretty good.
-
-Ploting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
+Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ Plotting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
 
 ![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
 
-In general, the waiting time for an $n$ guest game is
+Pretty good.
+
+$$$ General waiting time
+
+Empirically, the expected waiting time is basically a linear function in $n,$ and we can show this from the general form of our last calculation. In general, the waiting time for an $n$ guest game is
 
 $$ \langle T_n\rangle = n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
 
-The sum grows sublinearly in $n,$ so the waiting time is approximately linear in the number of guests.
+The summation grows sublinearly in $n,$ so the waiting time is dominated by the bare number of guests.
 
 <br>
