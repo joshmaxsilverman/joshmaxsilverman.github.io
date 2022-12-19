@@ -51,7 +51,7 @@ $$
    \end{align}
 $$
 
-and we have to find the last term. This chance depends on whether the tile Player 1 drew was one that they submitted or not.
+and we have to find the last term. This chance depends on whether the name Player 1 drew was one that they submitted or not.
 
 Given that the first person didn't draw their own name, "1", there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by the other three people, which will have probability $\frac39$ of being a "1".
 
@@ -74,7 +74,7 @@ In general, for $n$ players, the expected number of pairs in a round of $n$ play
 
 $$ 
    \begin{align}
-      P_n &= \frac{1}{n-1}\frac{n-1}{(n-1)^2} + \frac{n-2}{n-1}\frac{n-2}{(n-1)^2} \\
+      P_n &= \frac{n}{2}\frac{n-1}{n}\left[\frac{1}{n-1}\frac{n-1}{(n-1)^2} + \frac{n-2}{n-1}\frac{n-2}{(n-1)^2}\right] \\
           &=\frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} \\
           &= \frac{(n-3)n + 3}{2(n-1)^2}. 
    \end{align}
