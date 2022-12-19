@@ -43,7 +43,7 @@ $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
 
 Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each name is uniformly probably in the initial bag). 
 
-However, the first person's choice changes the probability of their name, $``1",$ in the bag, and we have to find 
+However, the first person's choice changes the probability of their name, "$1$", in the bag, and we have to find 
 
 $$ P(1 | \text{player 1 doesn't pick a 1}). $$
 
