@@ -59,7 +59,7 @@ $$
       &= \frac{7}{27}
    \end{align}
 $$
-
+ 
 This makes the expected number of pairs in a round with $4$ players equal to 
 
 $$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
