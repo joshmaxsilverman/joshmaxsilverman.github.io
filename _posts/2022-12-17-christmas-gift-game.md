@@ -105,6 +105,6 @@ Plotting the prediction (gold points) against a high-$N$ simulation (blue), we s
 
 ![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
 
-Empirically, the expected waiting time is basically a linear function in $n.$ This is because the summation term grows sublinearly in $n$ (practically $\approx O(1)$), so the waiting time is dominated by the bare number of guests.
+Empirically, the expected waiting time is basically a linear function in $n.$ This is because the summation term grows sublinearly in $n$ (practically $\approx O(1)$), so the waiting time is dominated by the bare number of guests. 
 
 <br>
