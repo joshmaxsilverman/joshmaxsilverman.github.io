@@ -96,7 +96,7 @@ Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ 
 
 Pretty good.
 
-$$$ General waiting time
+### General waiting time
 
 Empirically, the expected waiting time is basically a linear function in $n,$ and we can show this from the general form of our last calculation. In general, the waiting time for an $n$ guest game is
 
