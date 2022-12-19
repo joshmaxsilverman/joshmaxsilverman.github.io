@@ -96,7 +96,7 @@ $$\begin{align}
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(2j-1)^2}{4j^2 - 6j + 3} \\
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{2j - 2}{4j^2 - 6j + 3}\right] \\
   &= 20 + 2\sum\limits_{j=\frac12 n=1}^{10} \frac{2j - 2}{4j^2 - 6j + 3} \\
-  &= \frac{379805958234048}{17155864988899} \approx 22.1385\ldots
+  &\approx 22.1385\ldots
 \end{align}$$
 
 Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ 
