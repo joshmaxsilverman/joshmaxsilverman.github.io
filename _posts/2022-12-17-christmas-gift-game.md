@@ -37,7 +37,7 @@ With more players we have to do more careful accounting, but to get the intuitio
 
 With four players, there are two potential pairs. Since anyone can draw anyone from the hat, the chance that the first person of a pair doesn't pick themself is $\frac34$ (this part is exact). Similarly, the probability that the first person's pick picks them back is approximately $\frac14$ (this piece is slightly wrong). So, the expected number of pairs per round is
 
-$$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
+$$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
 ### Careful argument
 
