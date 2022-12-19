@@ -65,7 +65,7 @@ In general, for $n$ players, the expected number of pairs in a round of $n$ play
 
 $$ 
    \begin{align}
-      P_n &= \frac{1}{n-1}\frac{n-1}{(n-1)^2} + \frac{n-2}{n-1}\frac{n-2}\frac{(n-1)^2} \\
+      P_n &= \frac{1}{n-1}\frac{n-1}{(n-1)^2} + \frac{n-2}{n-1}\frac{n-2}{(n-1)^2} \\
           &=\frac{n}{2}\frac{n-1}{n}\frac{(n-3)n+3}{(n-1)^3} \\
           &= \frac{(n-3)n + 3}{2(n-1)^2}. 
    \end{align}
