@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: White elephant
+title: Secret Santa administrivia
 date: 2022/12/17
 subtitle: How long must you wait to pawn your candle off on some poor relative?
 tags: approximation linearity-of-expectation 
