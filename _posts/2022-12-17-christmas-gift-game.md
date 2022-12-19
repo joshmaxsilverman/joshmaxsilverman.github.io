@@ -41,7 +41,7 @@ $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38 = 0.375 $$
 
 Again, there is a $\frac34$ probability that the first person does not pick their own name. 
 
-However, the first person's draw affects the probability that their name, $``1",$ is in the bag, and we have to find 
+However, the first person's draw affects the probability that their name, $``1'',$ is in the bag, and we have to find 
 
 $$ P(\small\text{second person picks first person} | \text{first person picks someone else}). $$
 
