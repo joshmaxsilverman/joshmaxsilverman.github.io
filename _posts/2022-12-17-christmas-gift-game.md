@@ -90,18 +90,18 @@ $$\begin{align}
   &= \frac{379805958234048}{17155864988899} \approx 22.1385
 \end{align}$$
 
-Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ Plotting the prediction (gold points) against the high-$N$ simulation (blue), we see good agreement
-
-![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
-
-Pretty good.
+Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$ 
 
 ### General waiting time
 
-Empirically, the expected waiting time is basically a linear function in $n,$ and we can show this from the general form of our last calculation. In general, the waiting time for an $n$ guest game is
+Generalizing the last calculation, the waiting time for an $n$ guest game is
 
 $$ \langle T_n\rangle = n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
 
-The summation grows sublinearly in $n,$ so the waiting time is dominated by the bare number of guests.
+Plotting the prediction (gold points) against a high-$N$ simulation (blue), we see good agreement
+
+![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
+
+Empirically, the expected waiting time is basically a linear function in $n.$ This is because the summation grows sublinearly in $n$ $\left\approx O(1)\right),$ so the waiting time is dominated by the bare number of guests.
 
 <br>
