@@ -73,7 +73,7 @@ $$
 
 Comparing the prediction (gold) with a high-$N$ simulation for $P_n,$ we see good agreement
 
-![](/img/2022-12-17-christmas-game.png){:width="450 px" class="image-centered"}
+![](/img/2022-12-17-christmas-game-expected.png){:width="450 px" class="image-centered"}
 
 ### Expected waiting time
 
