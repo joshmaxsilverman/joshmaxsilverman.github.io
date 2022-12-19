@@ -21,17 +21,17 @@ tags: approximation linearity-of-expectation
 
 ## Solution
 
-This problem is hard because connections formed by early draws preclude certain potential pairs for later draws. 
+This problem is hard because connections formed by early draws influence the potential pairs for later draws. 
 
 Things are easier if we work in the ensemble of all possible series of draws. 
 
 <!-- I'm going to make the simplifying assumption that each pair is independent.  -->
 
-From this perspective, we can calculate the probability that any given pair forms a loop in a round of the game, and simply multiply it by the number of possible pairs.
+From this perspective, each round of $n$ people is $\frac12n$ potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair successfully forms and multiply it by the number of possible pairs.
 
-First of all, with two players, the probability that a pair forms is $P_2 = \frac12.$
+First of all, with two players, the probability that a pair forms is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
 
-With more players, we have to do more careful accounting. But to get the intuition going, let's do the $N=4$ case playing fast and loose. 
+With more players we have to do more careful accounting, but to get the intuition going let's do the $N=4$ case playing fast and loose. 
 
 ### Intuitive argument
 
@@ -41,9 +41,9 @@ $$ P_4 \approx 2\times\frac34\times\frac14 = \frac38\approx 37.5\% $$
 
 ### Exact argument
 
-Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each tiles is uniformly probably in the initial bag). 
+Overall there is a $\frac34$ probability that the first person does not pick their own tile (since each name is uniformly probably in the initial bag). 
 
-However, the first person's choice changes the probability of a $1$ in the bag, and we have to find 
+However, the first person's choice changes the probability of their name, $``1",$ in the bag, and we have to find 
 
 $$ P(1 | \text{player 1 doesn't pick a 1}). $$
 
