@@ -53,9 +53,9 @@ $$
 
 and we have to find the last term. This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
-Given that Player 1 didn't draw their own name, "1", there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by Players 2, 3, and 4, which will have probability $\frac39$ of being a "1".
+Given that the first person didn't draw their own name, "1", there's a $\frac13$ chance that they submitted the name they drew. In that case, the second person will be drawing from three names submitted by the other three people, which will have probability $\frac39$ of being a "1".
 
-Likewise, if Player 1 did not submit the name they drew (probability $\frac23$), then the second player is drawing from three names submitted by Players 1, 3, and 4, which will have a $\frac29$ probability of being a "1"
+Likewise, if the first person did not submit the name they drew (probability $\frac23$), then the second player will be drawing from three names submitted by the first person (who can't contribute their own name to the hat) and the other two players (who can contribute the first person's name to the hat) which will have a $\frac29$ probability of being the first person's name, "1".
 
 Putting it together, the chance that the second person draws the first person's name (given that the first person did not draw their own name) is 
 
