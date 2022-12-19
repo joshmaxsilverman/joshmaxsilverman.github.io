@@ -43,7 +43,7 @@ Again, there is a $\frac34$ probability that the first person does not pick thei
 
 However, the first person's draw affects the probability that their name, $``1",$ is in the bag, and we have to find 
 
-$$ P(\tiny\text{player 1's pick picks them} | \text{player 1 doesn't pick themself}). $$
+$$ P(\text{second person picks first person} | \text{first person picks someone else}). $$
 
 This chance depends on whether the tile Player 1 drew was one that they submitted or not.
 
@@ -53,7 +53,12 @@ Likewise, if Player 1 did not submit the name they drew (probability $\frac23$),
 
 Putting it together, the chance that Player 1's pick picks a $``1'',$ given that Player 1 did not pick a $``1''$ is 
 
-$$ P(\tiny\text{player 1's pick picks them} | \text{player 1 doesn't pick themself}) = \frac13\times\frac39 + \frac23\times\frac29 = \frac{7}{27} $$
+$$ 
+   \begin{align}
+      P(\text{second person picks first person} | \text{first person picks someone else}) &= \frac13\times\frac39 + \frac23\times\frac29 \\
+      &= \frac{7}{27}
+   \end{align}
+$$
 
 This makes the expected number of pairs in a round with $4$ players equal to 
 
