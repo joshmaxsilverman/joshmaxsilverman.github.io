@@ -29,7 +29,7 @@ Things are easier if we work in the ensemble of all possible series of draws.
 
 From this perspective, each round of $n$ people is $\frac12n$ potential pairs. To find the expected number of pairs formed in a round, we can calculate the probability that any given pair forms successfully and multiply it by the number of possible pairs.
 
-First of all, with two players, the probability that a pair forms is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
+First of all, with two players, the expected number of pairs formed is $P_2 = \frac12.$ Either the first person picks the other person's name, or they don't.
 
 With more players we have to do more careful accounting, but to get the intuition going let's do the $N=4$ case playing fast and loose. 
 
@@ -57,7 +57,7 @@ Putting it together, the chance that Player 2 picks a $1,$ given that Player 1 d
 
 $$ P(1 | \text{player 1 doesn't pick a 1}) = \frac13\times\frac39 + \frac23\times\frac29 = \frac{7}{27} \approx 0.26526 $$
 
-This makes the exact probability that a pair forms equal to 
+This makes the expected number of pairs equal to 
 
 $$ P_4 = 2\times\frac34\times\frac{7}{27} = \frac{7}{18} \approx 0.3888\ldots $$
 
