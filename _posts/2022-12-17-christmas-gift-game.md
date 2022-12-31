@@ -88,10 +88,10 @@ Comparing the prediction (gold) with a high-$N$ simulation for $P_n,$ we see goo
 
 Now, we're going to make a simplifying assumption. Rather than track the potential for, e.g., multiple pairs forming in a single round, we're just going to find the expected waiting time for a pair to form at each stage, and add up those waiting times to find the total.  
 
-At each stage of the game, we should expect to wait $P_n^{-1} = \frac{2(n-1)^2}{(n-3)n + 3}$ rounds for a pair to form, so the expected duration of the game is just
+At each stage of the game, we should expect to wait $P_n^{-1} = \frac{2(n-1)^2}{(n-3)n + 3}$ rounds for a pair to form, so the expected duration of the game is approximately
 
 $$\begin{align}
-  \langle T_{20}\rangle &= P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
+  \langle T_{20}\rangle &\approx P_2^{-1} + P_4^{-1} + \ldots + P_{20}^{-1} \\
   &= \sum\limits_{j=\frac12 n=1}^{10} P_{2j}^{-1} \\
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \frac{(2j-1)^2}{4j^2 - 6j + 3} \\
   &= 2\sum\limits_{j=\frac12 n=1}^{10} \left[1 + \frac{2j - 2}{4j^2 - 6j + 3}\right] \\
@@ -105,7 +105,7 @@ Running an $N = 10^6$ round simulation produces $\hat{T}_{20} \approx 22.1104.$
 
 Generalizing the last calculation, the waiting time for an $n$ guest game is
 
-$$ \langle T_n\rangle = n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
+$$ \langle T_n\rangle \approx n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
 
 Plotting the prediction (gold points) against a high-$N$ simulation (blue), we see good agreement
 
