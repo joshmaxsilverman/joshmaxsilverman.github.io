@@ -107,7 +107,7 @@ Generalizing the last calculation, the waiting time for an $n$ guest game is
 
 $$ \langle T_n\rangle \approx n + 2\sum\limits_{j=1}^{\frac12 n}\frac{2j-2}{4j^2-6j+3}. $$
 
-Plotting the prediction (gold points) against a high-$N$ simulation (blue), we see good agreement
+Plotting the prediction (gold curve) against a high-$N$ simulation (blue points), we see good agreement
 
 ![](/img/2022-12-17-christmas-game-theory-comparison.png){:width="450 px" class="image-centered"}
 
