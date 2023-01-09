@@ -42,7 +42,7 @@ $S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
 
 For $h = 2400,$ we will make assemblers for $\lfloor 2400/144\rfloor = 15$ cycles, or $90$ days, at which point we'll have $32,768$ assemblers, and $10$ days (or $240$ hours) left to make starships. This will leave us with
 
-$$ \begin{align} S(2400) &= \left(240\right) 2^{15} \\ &= 7,864,320 \end{align} $$
+$$ \begin{align} S(2400) &= 240 \times 2^{15} \\ &= 7,864,320 \end{align} $$
 
 starships.
 
