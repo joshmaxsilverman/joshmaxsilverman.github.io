@@ -36,7 +36,7 @@ $S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
 
 For $h = 2400,$ this is equal to
 
-$$ S(2400) = \left(2400 - 144 \times 15\right) 2^{15} = 7,864,320. $$
+$$ \begin{align} S(2400) &= \left(2400 - 144 \times 15\right) 2^{15} \\ &= 7,864,320. \end{align} $$
 
 
 <br>
