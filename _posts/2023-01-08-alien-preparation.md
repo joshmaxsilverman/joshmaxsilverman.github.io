@@ -34,13 +34,13 @@ We can quantify this tradeoff to find the tipping point.
 
 Suppose we have $h$ hours left. 
 
-If we set an assembler to make an assembler, and then make starships with the time left over, they'll devote $144$ hours to make assemblers, and $(h-144)$ to make starships (at double the rate), whereas if we let the original start making starships, it would have made $h$ of them:
+If we set an assembler to make an assembler, and then make starships with the time left over, we'll use $144$ hours to make the second, and $(h-144)$ hours to make starships (at double the rate), whereas if we let the original start making starships, it would have made $h$ of them:
 
 $$ 2(h-144) = h. $$
 
-When $h=288,$ the two sides are equal. So, if the time remaining is less than $288$ hours, we should devote all assemblers to make starships. Otherwise we should have them make assemblers, waiting to make the switch to starship assembly when $h < 144.$
+The two sides are equal when $h=288.$ So, if the time remaining is less than $288$ hours, we should devote all assemblers to make starships. Otherwise we should have them make assemblers, and switch to $100\%$ starship production the first time we end an assembler build with less than $288$ hours remaining.
 
-If we don't have at least $288$ hours ($12$ days) to play with, then there isn't enough time for the great amount of assemblers to outweigh the foregone starship production.
+If we don't have at least $288$ hours ($12$ days) to play with, then there isn't enough time for the greater number of assemblers to outweigh the foregone starship production.
 
 So, with $2400$ hours to work with, we should make assemblers for $\lfloor 2400/144 - 1\rfloor = 15$ cycles, after which we'll have $32,768$ assemblers, and $10$ days to starship production.
 
