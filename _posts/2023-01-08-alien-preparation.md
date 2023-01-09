@@ -3,11 +3,15 @@ layout: post
 published: true
 title: The Dark Forest
 date: 2023/01/08
-subtitle: How long will you wait 
+subtitle: How long will you wait to get off your assemblers?
 tags: optimality
 ---
 
->Question
+>**Question**: The astronomers of Planet Xiddler are back in action! Unfortunately, this time they have used their telescopes to spot an armada of hostile alien warships on a direct course for Xiddler. The armada will be arriving in exactly $100$ days. (Recall that, like Earth, there are 24 hours in a Xiddler day.)
+>
+>Fortunately, Xiddler’s engineers have just completed construction of the planet’s first assembler, which is capable of producing any object. An assembler can be used to build a space fighter to defend the planet, which takes one hour to produce. An assembler can also be used to build another assembler (which, in turn, can build other space fighters or assemblers). However, building an assembler is more time-consuming, requiring six whole days. Also, you cannot use multiple assemblers to build one space fighter or assembler in a shorter period of time.
+>
+>What is the greatest number of space fighters the Xiddlerian fleet can have when the alien armada arrives?
 
 <!--more-->
 
