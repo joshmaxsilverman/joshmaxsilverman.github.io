@@ -53,6 +53,6 @@ S(H,A) = \begin{cases} H\times A & H\leq 144 \\
 $$
 
 Coding this up in Python, it matches exactly with the analytic prediction.
-
+ 
 
 <br>
