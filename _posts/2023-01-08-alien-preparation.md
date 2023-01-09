@@ -65,6 +65,8 @@ S(H,A) = \begin{cases} H\times A & H\leq 144 \\
 $$
 
 Coding this up in Python, it matches exactly with the analytic prediction.
+
+![](/img/2023-01-09-alien-starships-log.png){:width="450 px" class="image-centered"}
  
 
 <br>
