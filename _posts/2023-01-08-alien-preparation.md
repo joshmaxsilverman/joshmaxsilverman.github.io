@@ -1,9 +1,9 @@
 ---
 layout: post
-published: false
-title: Alien Preparation
+published: true
+title: The Dark Forest
 date: 2023/01/08
-subtitle:
+subtitle: 
 tags:
 ---
 
@@ -51,6 +51,8 @@ S(H,A) = \begin{cases} H\times A & H\leq 144 \\
                        \max\limits_{0\leq x\leq A} S(H-144,2x) + (A-x) + S(H-1, A-x) & \text{otherwise}
          \end{cases}
 $$
+
+Coding this up in Python, it matches exactly with the analytic prediction.
 
 
 <br>
