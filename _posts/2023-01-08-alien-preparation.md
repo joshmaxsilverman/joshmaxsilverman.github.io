@@ -34,21 +34,23 @@ We can quantify this tradeoff to find the tipping point.
 
 Suppose we have $h$ hours left. 
 
-If we set an assembler to make as many assemblers as possible, and then make starships with the time left over, they'll devote $\lfloor \frac{h}{144}\rfloor\times 144$ hours to make assemblers, yielding $2^{\lfloor h/144\rfloor}(h-144\lfloor \frac{h}{144}\rfloor)$ starships, whereas if we let the original start making starships, it would have made $h$ of them. 
+If we set an assembler to make an assembler, and then make starships with the time left over, they'll devote $144$ hours to make assemblers, and $(h-144)$ to make starships (at double the rate), whereas if we let the original start making starships, it would have made $h$ of them:
 
-So, if $2^{\lfloor h/144\rfloor}(h-144\lfloor h/144\rfloor) \geq h,$ we should devote all available assemblers to make assemblers and use the remaining time to make starships. 
+$$ 2(h-144) = h. $$
 
-The tipping point occurs when $h = 288$ hours. So, if the time remaining is less than $288$ hours, we should devote all assemblers to make starships, otherwise we should have them make assemblers, waiting to make the switch to starship assembly when $h < 288.$
+When $h=288,$ the two sides are equal. So, if the time remaining is less than $288$ hours, we should devote all assemblers to make starships. Otherwise we should have them make assemblers, waiting to make the switch to starship assembly when $h < 144.$
 
-This means we will maximally make
+If we don't have at least $288$ hours ($12$ days) to play with, then there isn't enough time for the great amount of assemblers to outweigh the foregone starship production.
 
-$S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
+So, with $2400$ hours to work with, we should make assemblers for $\lfloor 2400/144 - 1\rfloor = 15$ cycles, after which we'll have $32,768$ assemblers, and $10$ days to starship production.
 
-For $h = 2400,$ we will make assemblers for $\lfloor 2400/144\rfloor = 15$ cycles, or $90$ days, at which point we'll have $32,768$ assemblers, and $10$ days (or $240$ hours) left to make starships. This will leave us with
+This will leave us with
 
 $$ \begin{align} S(2400) &= 240 \times 2^{15} \\ &= 7,864,320 \end{align} $$
 
 starships.
+
+In general, this production plan will build $S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
 
 ### Optimal policy
 
