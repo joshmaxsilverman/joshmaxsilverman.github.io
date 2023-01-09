@@ -3,8 +3,8 @@ layout: post
 published: true
 title: The Dark Forest
 date: 2023/01/08
-subtitle: 
-tags:
+subtitle: How long will you wait 
+tags: optimality
 ---
 
 >Question
@@ -28,7 +28,11 @@ We can quantify this tradeoff to find the tipping point.
 
 ### Calculation
 
-Suppose we have $h$ hours left. If we set an assembler to make as many assemblers as possible, and then make starships with the time left over, they'll make devote $\lfloor \frac{h}{144}\rfloor\times 144$ hours to make assemblers, yielding $2^{\lfloor h/144\rfloor}(h-144\lfloor \frac{h}{144}\rfloor)$ starships, whereas if we let the original start making starships, it would have made $h$ of them. So, if $2^{\lfloor h/144\rfloor}(h-144\lfloor h/144\rfloor) \geq h,$ we should devote all available assemblers to double. 
+Suppose we have $h$ hours left. 
+
+If we set an assembler to make as many assemblers as possible, and then make starships with the time left over, they'll devote $\lfloor \frac{h}{144}\rfloor\times 144$ hours to make assemblers, yielding $2^{\lfloor h/144\rfloor}(h-144\lfloor \frac{h}{144}\rfloor)$ starships, whereas if we let the original start making starships, it would have made $h$ of them. 
+
+So, if $2^{\lfloor h/144\rfloor}(h-144\lfloor h/144\rfloor) \geq h,$ we should devote all available assemblers to make assemblers and use the remaining time to make starships. 
 
 The tipping point occurs when $h = 288$ hours. So, if the time remaining is less than $288$ hours, we should devote all assemblers to make starships, otherwise we should have them make assemblers, waiting to make the switch to starship assembly when $h < 288.$
 
@@ -36,9 +40,11 @@ This means we will maximally make
 
 $S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
 
-For $h = 2400,$ this is equal to
+For $h = 2400,$ we will make assemblers for $\lfloor 2400/144\rfloor = 15$ cycles, or $90$ days, at which point we'll have $32,768$ assemblers, and $10$ days (or $240$ hours) left to make starships. This will leave us with
 
-$$ \begin{align} S(2400) &= \left(2400 - 144 \times 15\right) 2^{15} \\ &= 7,864,320. \end{align} $$
+$$ \begin{align} S(2400) &= \left(240\right) 2^{15} \\ &= 7,864,320 \end{align} $$
+
+starships.
 
 ### Optimal policy
 
