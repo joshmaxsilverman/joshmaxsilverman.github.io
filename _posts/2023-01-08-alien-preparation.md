@@ -50,7 +50,11 @@ $$ \begin{align} S(2400) &= 240 \times 2^{15} \\ &= 7,864,320 \end{align} $$
 
 starships.
 
-In general, this production plan will build $S(h) = (h-144t)2^t$ starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
+In general, this production plan will build 
+
+$$S(h) = (h-144t)2^t$$ 
+
+starships, where $t=\lfloor \frac{h}{144}-1\rfloor.$
 
 ### Optimal policy
 
