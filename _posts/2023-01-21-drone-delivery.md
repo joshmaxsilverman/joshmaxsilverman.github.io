@@ -53,10 +53,10 @@ As long as they have to travel horizontally **and** vertically, it does.
 
 To take advantage of this, they should travel diagonally until they are directly below or directly to the side of the delivery, and thereafter move in a straight line directly to the address.
 
-Drawing a picture, this means traveling diagonally across $\min{x,y}$ blocks (which contributes distance $\sqrt{2}\min{x,y}$) followed by $\max{x,y}-\min{x,y}$ blocks straight to the target, making the distance to the target
+Drawing a picture, this means traveling diagonally across $\min\{x,y\}$ blocks (which contributes distance $\sqrt{2}\min\{x,y\}$) followed by $\max\{x,y\}-\min\{x,y\}$ blocks straight to the target, making the distance to the target
 
 $$
-  \left(\sqrt{2}-1\right)\min{x,y} + \max{x,y}.
+  \left(\sqrt{2}-1\right)\min\{x,y\} + \max\{x,y\}.
 $$
 
 The problem is symmetric across the line $x = y,$ so we can evaluate the problem when $x > y.$ With this restriction, the distance becomes
@@ -68,14 +68,14 @@ $$
 Again, forming the drone-to-scooter advantage, we get
 
 $$
-  \langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
+  \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
 $$
 
 which comes to 
 
 $$ 
   \begin{align}
-    \langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] \\
+    \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] \\
     &= \dfrac{8}{\pi}\left(\sqrt{2}-1\right) \\
     &\approx 1.055
   \end{align}
