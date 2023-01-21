@@ -21,8 +21,64 @@ tags:
 
 ## Solution
 
-Because the drone can fly straight to the target, if a house has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left\lvert x\rvert + \lvert y\rvert\right).$
+Because the drone can fly straight to the target, if a delivery has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left(\lvert x\rvert + \lvert y\rvert\right).$
 
-Summing over the point
+Summing over the points of the lattice could be an excursion, but the city is big in comparison to the lengths of its blocks. That means that we can approximate the grid with a fine mesh where the lengths of blocks become infinitesimally small. 
+
+Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow $\left(r\lvert\cos\theta\rvert, r\lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r,$ and the ratio of scooter distance to drone distance becomes
+
+$$
+  \dfrac{d_\text{scoot}}{d_\text{drone}} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
+  
+$$
+
+In this approximation (where the city is much bigger than its blocks), distance dependence drops out, and the discrepancy depends solely on the direction $\theta.$
+
+The problem is the same whatever quadrant of the grid the delivery is in, so we can work with $\theta$ between $0$ and $\frac12\pi$ where $\cos\theta$ and $\sin\theta$ remain positive, allowing us to drop the absolute values.
+
+The expected advantage for drone deliveries is then just the average over all directions:
+
+$$
+  \begin{align}
+    \langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \dfrac{2}{\pi}\int\limits_0^{\frac12\pi}d\theta \left(\cos\theta + \sin\theta\right) \\
+    &= \dfrac{4}{\pi} \\
+    &\approx 1.273
+  \end{align}
+$$
+
+### Extra credit
+
+In the second scenario, the scootist can also travel along diagonals that cut northeast through each block, if it would shorten their delivery. 
+
+As long as they have to travel horizontally **and** vertically, it does.
+
+To take advantage of this, they should travel diagonally until they are directly below or directly to the side of the delivery, and thereafter move in a straight line directly to the address.
+
+Drawing a picture, this means traveling diagonally across $\min{x,y}$ blocks (which contributes distance $\sqrt{2}\min{x,y}$) followed by $\max{x,y}-\min{x,y}$ blocks straight to the target, making the distance to the target
+
+$$
+  left(\sqrt{2}-1\right)\min{x,y} + \max{x,y}.
+$$
+
+The problem is symmetric across the line $x = y,$ so we can evaluate the problem when $x > y.$ With this restriction, the distance becomes
+
+$$
+  \left(\sqrt{2}-1\right) y + x.
+$$
+
+Again, forming the drone-to-scooter advantage, we get
+
+$$
+  \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
+$$
+
+which comes to 
+
+$$ 
+  \begin{align}
+    \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] &= \dfrac{8}{\pi}\left(\sqrt{2}-1\right) \\
+    &\approx 1.055
+  \end{align}
+$$
 
 <br>
