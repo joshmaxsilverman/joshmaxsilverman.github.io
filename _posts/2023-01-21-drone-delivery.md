@@ -56,7 +56,7 @@ To take advantage of this, they should travel diagonally until they are directly
 Drawing a picture, this means traveling diagonally across $\min{x,y}$ blocks (which contributes distance $\sqrt{2}\min{x,y}$) followed by $\max{x,y}-\min{x,y}$ blocks straight to the target, making the distance to the target
 
 $$
-  left(\sqrt{2}-1\right)\min{x,y} + \max{x,y}.
+  \left(\sqrt{2}-1\right)\min{x,y} + \max{x,y}.
 $$
 
 The problem is symmetric across the line $x = y,$ so we can evaluate the problem when $x > y.$ With this restriction, the distance becomes
