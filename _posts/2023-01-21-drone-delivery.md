@@ -21,7 +21,7 @@ tags:
 
 ## Solution
 
-Because the drone can fly straight to the target, if a house has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left\abs{x} + \abs{y}\right).$
+Because the drone can fly straight to the target, if a house has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left\lvert x\rvert + \lvert y\rvert\right).$
 
 Summing over the point
 
