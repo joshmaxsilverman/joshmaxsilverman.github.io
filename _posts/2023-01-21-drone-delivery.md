@@ -39,7 +39,7 @@ The expected advantage for drone deliveries is then just the average over all di
 
 $$
   \begin{align}
-    \midd\langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \dfrac{2}{\pi}\int\limits_0^{\frac12\pi}d\theta \left(\cos\theta + \sin\theta\right) \\
+    \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \dfrac{2}{\pi}\int\limits_0^{\frac12\pi}d\theta \left(\cos\theta + \sin\theta\right) \\
     &= \dfrac{4}{\pi} \\
     &\approx 1.273
   \end{align}
