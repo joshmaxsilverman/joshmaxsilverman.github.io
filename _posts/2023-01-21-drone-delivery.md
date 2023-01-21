@@ -69,14 +69,15 @@ $$
 Again, forming the drone-to-scooter advantage, we get
 
 $$
-  \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
+  \langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
 $$
 
 which comes to 
 
 $$ 
   \begin{align}
-    \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] &= \dfrac{8}{\pi}\left(\sqrt{2}-1\right) \\
+    \langle\dfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] \\
+    &= \dfrac{8}{\pi}\left(\sqrt{2}-1\right) \\
     &\approx 1.055
   \end{align}
 $$
