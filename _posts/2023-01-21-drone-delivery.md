@@ -29,7 +29,6 @@ Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\ri
 
 $$
   \dfrac{d_\text{scoot}}{d_\text{drone}} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
-  
 $$
 
 In this approximation (where the city is much bigger than its blocks), distance dependence drops out, and the discrepancy depends solely on the direction $\theta.$
