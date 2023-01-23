@@ -25,7 +25,7 @@ Because the drone can fly straight to the target, if a delivery has coordinates 
 
 Summing over the points of the lattice could be an excursion, but the city is big in comparison to the lengths of its blocks. That means that we can approximate the grid with a fine mesh where the lengths of blocks become infinitesimally small. 
 
-Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow \left(r\lvert\cos\theta\rvert, r\lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r,$ and the ratio of scooter distance to drone distance becomes
+Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow r\left(\lvert\cos\theta\rvert+ \lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r,$ and the ratio of scooter distance to drone distance becomes
 
 $$
   \dfrac{d_\text{scoot}}{d_\text{drone}} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
