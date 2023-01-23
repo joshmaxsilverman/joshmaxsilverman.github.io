@@ -53,7 +53,7 @@ As long as they have to travel horizontally **and** vertically, it does.
 
 To take advantage of this, they should travel diagonally until they are directly below or directly to the side of the delivery, and thereafter move in a straight line directly to the address.
 
-Drawing a picture, this means traveling diagonally across $\min\{x,y\}$ blocks (which contributes distance $\sqrt{2}\min\{x,y\}$) followed by $\max\{x,y\}-\min\{x,y\}$ blocks straight to the target, making the distance to the target
+Drawing a picture, this means traveling diagonally across $\min\\{x,y\\}$ blocks (which contributes distance $\sqrt{2}\min\\{x,y\\}$) followed by $\max\\{x,y\\}-\min\{x,y\}$ blocks straight to the target, making the distance to the target
 
 $$
   \left(\sqrt{2}-1\right)\min\{x,y\} + \max\{x,y\}.
