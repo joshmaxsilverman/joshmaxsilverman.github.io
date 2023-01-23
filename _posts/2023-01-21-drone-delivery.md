@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Drone delivery
 date: 2023/01/21
 subtitle:
