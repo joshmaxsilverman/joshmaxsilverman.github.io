@@ -68,7 +68,7 @@ $$
 Again, forming the drone-to-scooter advantage, we get
 
 $$
-  \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
+  \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{\pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
 $$
 
 which comes to 
