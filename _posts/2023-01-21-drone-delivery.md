@@ -27,13 +27,13 @@ Summing over the points of the lattice could be an excursion, but the city is bi
 
 ### Estimating the advantage
 
-Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow r\left(\lvert\cos\theta\rvert+ \lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r,$ and the ratio of scooter distance to drone distance for any given delivery target $(x,y)$ becomes
+Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow r\left(\lvert\cos\theta\rvert+ \lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r.$ The scooter distance for any given delivery target $(x,y)$ becomes
 
 $$
-  \dfrac{d_\text{scoot}}{d_\text{drone}} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
+  d_\text{scoot} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
 $$
 
-In this approximation (where the city is much bigger than its blocks), distance dependence drops out, and the discrepancy depends solely on the direction $\theta.$
+In this approximation (where the city is much bigger than its blocks), distance dependence factors out, and the discrepancy depends solely on the direction $\theta.$
 
 The problem is the same whatever quadrant of the grid the delivery is in, so we can work with $\theta$ between $0$ and $\frac12\pi$ where $\cos\theta$ and $\sin\theta$ remain positive, allowing us to drop the absolute values.
 
@@ -41,7 +41,7 @@ The expected advantage for drone deliveries is then just the average over all di
 
 $$
   \begin{align}
-    \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \dfrac{2}{\pi}\int\limits_0^{\frac12\pi}d\theta \left(\cos\theta + \sin\theta\right) \\
+    \dfrac{\langle d_\text{scoot}\rangle}{\langle d_\text{drone}}\rangle} &= \dfrac{2}{\pi}\int\limits_0^{\frac12\pi}d\theta \left(\cos\theta + \sin\theta\right) \\
     &= \dfrac{4}{\pi} \\
     &\approx 1.273
   \end{align}
@@ -70,14 +70,14 @@ $$
 Again, forming the drone-to-scooter advantage, we get
 
 $$
-  \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle = \frac{4}{\pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
+  \dfrac{\langle d_\text{scoot}\rangle}{\langle d_\text{drone}}\rangle} = \frac{4}{\pi} \int\limits_0^{\frac14\pi} d\theta \left[\left(\sqrt{2}-1\right) \sin\theta + \cos\theta\right]
 $$
 
 which comes to 
 
 $$ 
   \begin{align}
-    \langle\tfrac{d_\text{scoot}}{d_\text{drone}}\rangle &= \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] \\
+    \dfrac{\langle d_\text{scoot}\rangle}{\langle d_\text{drone}}\rangle} &= \frac{4}{\pi}\left[\left(\sqrt{2}-1\right)\left(1-\dfrac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}}\right] \\
     &= \dfrac{8}{\pi}\left(\sqrt{2}-1\right) \\
     &\approx 1.055
   \end{align}
