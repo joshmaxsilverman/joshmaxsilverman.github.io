@@ -61,6 +61,8 @@ $$
   \left(\sqrt{2}-1\right)\min\{x,y\} + \max\{x,y\}.
 $$
 
+![](/img/2023-01-23-min-max-delivery.png){:width="450 px" class="image-centered"}
+
 The problem is symmetric across the line $x = y,$ so we can evaluate the problem when $x > y.$ With this restriction, the distance becomes
 
 $$
