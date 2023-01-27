@@ -37,21 +37,21 @@ Because the speed of each vehicle is constant, time is directly proportional to 
 
 Because the drone can fly straight to the target, if a delivery has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left(\lvert x\rvert + \lvert y\rvert\right).$
 
-Summing over the points of the lattice could be an excursion, but the city is big in comparison to the lengths of its blocks. That means that we can approximate the grid with a fine mesh where the lengths of blocks become infinitesimally small. 
+Summing over the points of the lattice could be an excursion, but the city is big in comparison to the lengths of its blocks. That means that we can approximate the grid with a fine mesh where the lengths of blocks become infinitesimally small relative to the city's expanse. 
 
 ### Estimating the advantage
 
 Switching to polar coordinates, we get $\left(\lvert x\rvert + \lvert y\rvert\right) \rightarrow r\left(\lvert\cos\theta\rvert+ \lvert\sin\theta\rvert\right)$ and $\sqrt{x^2+y^2}\rightarrow r.$ The scooter distance for any given delivery target $(x,y)$ becomes
 
 $$
-  d_\text{scoot} = \lvert\cos\theta\rvert + \lvert\sin\theta\rvert
+  d_\text{scoot} = r\left(\lvert\cos\theta\rvert + \lvert\sin\theta\rvert\right)
 $$
 
-In this approximation (where the city is much bigger than its blocks), distance dependence factors out, and the discrepancy depends solely on the direction $\theta.$
+In this approximation (where the city is much bigger than its blocks), the distance dependence factors out, so the discrepancy will depend solely on the direction $\theta.$ From here on we will drop the factor of $r.$
 
-The problem is the same whatever quadrant of the grid the delivery is in, so we can work with $\theta$ between $0$ and $\frac12\pi$ where $\cos\theta$ and $\sin\theta$ remain positive, allowing us to drop the absolute values.
+The problem is the same whatever quadrant of the grid the delivery is in, so we can work with $\theta$ between $0$ and $\frac12\pi,$ where $\cos\theta$ and $\sin\theta$ remain positive, allowing us to drop the absolute values.
 
-The expected advantage for drone deliveries is then just the average over all directions:
+The expected advantage for drone deliveries is then just the ratio of the averages:
 
 $$
   \begin{align}
@@ -63,9 +63,7 @@ $$
 
 ### Extra credit
 
-In the second scenario, the scootist can also travel along diagonals that cut northeast through each block, if it would shorten their delivery. 
-
-As long as they have to travel horizontally **and** vertically, it does.
+In the second scenario, the scootist can also travel along diagonals that cut through each block, if it can shorten their delivery. As long as they have to travel horizontally **and** vertically, it does.
 
 To take advantage of this, they should travel diagonally until they are directly below or directly to the side of the delivery, and thereafter move in a straight line directly to the address.
 
