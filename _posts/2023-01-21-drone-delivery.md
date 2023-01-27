@@ -21,6 +21,20 @@ tags: expectation geometry integration
 
 ## Solution
 
+Set some total amount of time $T,$ and give each delivery person an arbitrarily long list of addresses which they'll deliver to until time runs out. 
+
+The total time for the deliveries is just
+
+$$ t_1 + t_2 + \ldots + t_m + \ldots $$
+
+and the expected value of first $m$ deliveries is simply $m\langle t\rangle.$ 
+
+The expected number of total deliveries made is then just $n = T/\langle t\rangle.$
+
+Because the speed of each vehicle is constant, $d = vt,$ and time is directly proportional to distance. So, we can find $\langle t\rangle$ for each mode of transportation by averaging $d$ over all possible addresses in the city, i.e., $n = vT/\langle d\rangle.$
+
+### The road to el $\langle d\rangle$-rado
+
 Because the drone can fly straight to the target, if a delivery has coordinates $(x,y)$ on the city grid, the drone has to cover distance $\sqrt{x^2 + y^2}$ whereas the scooter, confined to the blocks of the grid, has to cover distance $\left(\lvert x\rvert + \lvert y\rvert\right).$
 
 Summing over the points of the lattice could be an excursion, but the city is big in comparison to the lengths of its blocks. That means that we can approximate the grid with a fine mesh where the lengths of blocks become infinitesimally small. 
