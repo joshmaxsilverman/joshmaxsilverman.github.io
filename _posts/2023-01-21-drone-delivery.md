@@ -23,7 +23,7 @@ tags: expectation geometry integration
 
 Set some total amount of time $T,$ and give each delivery person an arbitrarily long list of addresses which they'll deliver to until time runs out. 
 
-The total time for the deliveries is just
+If $t_i$ is the time that the $i^\text{th}$ delivery ends up taking, then the total time for the deliveries is
 
 $$ t_1 + t_2 + \ldots + t_m + \ldots $$
 
