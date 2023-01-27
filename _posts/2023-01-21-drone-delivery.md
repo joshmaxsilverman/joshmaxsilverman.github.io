@@ -29,9 +29,9 @@ $$ t_1 + t_2 + \ldots + t_m + \ldots $$
 
 and the expected duration of the first $m$ deliveries is simply $m\langle t\rangle.$ 
 
-The expected number of deliveries that will be made is then simply $n = T/\langle t\rangle.$
+The expected number of deliveries that will be made is then $n = T/\langle t\rangle.$
 
-Because the speed of each vehicle is constant, time is directly proportional to distance $\left(d = vt\right)$. So, we can find $\langle t\rangle$ for each mode of transportation by averaging $d$ over all possible addresses in the city, i.e., $n = vT/\langle d\rangle.$
+Because the speed of each vehicle is constant, time is directly proportional to distance $\left(d = vt\right)$. So, we can find $\langle t\rangle$ for each mode of transportation by averaging $d$ over all possible addresses in the city, i.e., $n = vT/\langle d\rangle.$ 
 
 ### The road to el $\langle d\rangle$-rado
 
