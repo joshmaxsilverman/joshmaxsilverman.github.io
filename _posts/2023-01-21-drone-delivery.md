@@ -21,7 +21,7 @@ tags: expectation geometry integration
 
 ## Solution
 
-Set some total amount of time $T,$ and give each delivery person an arbitrarily long list of addresses which they'll deliver to until time runs out. 
+Set some total amount of time $T,$ and give each delivery person an arbitrarily long list of addresses $\\{a_1,a_2,\ldots,a_m,\ldots\\}$ which they'll deliver to until time runs out. 
 
 If $t_i$ is the time that the $i^\text{th}$ delivery ends up taking, then the total time for the deliveries is
 
