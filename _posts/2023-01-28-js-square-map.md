@@ -17,7 +17,7 @@ tags:
 
 first of all, the map from one square to the next is 
 
-$$ f\left(a,b,c,d\right) \rightarrow \left(\lvert a-b\rvert, \lvert b-c\rvert, \lvert c-d\rvert, \lvert d-a\rvert\right). $$
+$$ \left(a,b,c,d\right) \overset{M}{\longrightarrow} \left(\lvert a-b\rvert, \lvert b-c\rvert, \lvert c-d\rvert, \lvert d-a\rvert\right). $$
 
 from this we can see two properties of the map:
 
