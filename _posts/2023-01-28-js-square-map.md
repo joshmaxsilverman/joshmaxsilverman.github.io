@@ -43,8 +43,17 @@ the second property shows that we can think of $(a,b,c,d)$ as a relative composi
 
 we will look for such a composition, and then look for the closest integer approximation we can find. the bigger numbers we use, the more closely we should expect to get.
 
-if $(a,b,c,d)$ maps to itself, then, up to an overall multiplicative constant,
+if $(a,b,c,d)$ maps to itself, then, up to an overall multiplicative constant:
 
 $$ (a,b,c,d) = \left(\lvert a-b\rvert, \lvert b-c\rvert, \lvert c-d\rvert, \lvert d-a\rvert\right). $$
+
+since the two compositions are the same, ratios between like components are the same. taking the ratio of the first and second components of each composition, we get:
+
+$$
+  \begin{align} 
+      \frac{a}{b} &= \dfrac{\lvert a - b\rvert}{\lvert b-c\rvert} \\
+    &= \frac{a}{b}\dfrac{\lvert 1-\frac{b}{a}\rvert}{\lvert 1-\frac{c}{b}\rvert}.
+  \end{align}
+$$
 
 <br>
