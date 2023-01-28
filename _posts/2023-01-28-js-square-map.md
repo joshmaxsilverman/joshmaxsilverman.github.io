@@ -33,6 +33,7 @@ from the map, we can see two properties of $f$:
 
 1. $f$ is invariant under uniform translations
   $$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k) $$
+  
 2. $f$ is invariant to uniform scaling
   $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
 
