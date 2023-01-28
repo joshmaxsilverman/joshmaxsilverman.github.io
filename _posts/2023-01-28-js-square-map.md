@@ -78,10 +78,15 @@ $$
   \end{align}
 $$
 
-so, an ideal composition vector is given by $\dfrac{\left(1,\gamma,\gamma^2,\gamma^3\right)}{1+\gamma+\gamma^2+\gamma^3}$ which is stationary under the map, as expected. from here i just scaled the composition vector, looking for its closest integer approximation, which turns out to be 
+so, an ideal composition vector is given by 
 
-$$ \vec{c} = \left(...\right) $$
+$$ \dfrac{\left(1,\gamma,\gamma^2,\gamma^3\right)}{1+\gamma+\gamma^2+\gamma^3} $$ 
 
+which is stationary under the map, as expected. from here i just scaled the composition vector, looking for its closest integer approximation, which is
+
+$$ \vec{\phi} = \left(...\right) $$
+
+running this through $f,$ we find $f(vec{\phi}) = 43.$
 
 
 <br>
