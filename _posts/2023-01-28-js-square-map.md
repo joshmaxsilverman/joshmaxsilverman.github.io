@@ -72,7 +72,7 @@ $$
 or $2\gamma^3 -\gamma^4 - 1 = 0$ which has real root
 
 $$
-  \gamma = \frac13 \left(1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}}\right)
+  \gamma = \frac13 (1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}})
 $$
 
 <br>
