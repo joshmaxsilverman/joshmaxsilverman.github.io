@@ -56,4 +56,23 @@ $$
   \end{align}
 $$
 
+which shows that $b/a = c/b.$ the same comparison for the second and third components shows that $c/b = d/c$ as well.
+
+putting it together, we have shown that $a = \gamma b = \gamma^2 c = \gamma^3 d,$ which shows that $(a,b,c,d)$ is monotonic
+
+now, if we compare the first and fourth components, we get (assuming $a>b>c>d,$ and therefore $\gamma < 1$):
+
+$$
+  \begin{align}
+    \frac{d}{a} &= \dfrac{\lvert d-a\rvert}{\lvert a-b\rvert} \\
+    \gamma^3 &= \dfrac{1 - \gamma^3}{1-\gamma},
+  \end{align}
+$$
+
+or $2\gamma^3 -\gamma^4 - 1 = 0$ which has real root
+
+$$
+  \gamma = \frac13 \left(1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}}\right)
+$$
+
 <br>
