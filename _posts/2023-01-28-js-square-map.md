@@ -32,10 +32,12 @@ we want to find the starting configuration that takes the most map iterations to
 from the map, we can see two properties of $f$:
 
 1. $f$ is invariant under uniform translations
-  $$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k) $$
+
+$$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k) $$
   
 2. $f$ is invariant to uniform scaling
-  $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
+
+$$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
 
 ggg
 
