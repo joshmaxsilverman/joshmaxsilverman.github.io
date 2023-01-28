@@ -80,7 +80,7 @@ $$
 
 so, an ideal composition vector is given by 
 
-$$ \dfrac{\left(1,\gamma,\gamma^2,\gamma^3\right)}{1+\gamma+\gamma^2+\gamma^3} $$ 
+$$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right) $$ 
 
 which is stationary under the map, as expected. from here i just scaled the composition vector, looking for its closest integer approximation, which is
 
