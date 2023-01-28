@@ -72,7 +72,16 @@ $$
 or $2\gamma^3 -\gamma^4 - 1 = 0$ which has real root
 
 $$
-  \gamma = \frac13 (1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}})
+  \begin{align}
+    \gamma &= \frac13 \left(1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}}\right) \\
+    &\approx 1.8393
+  \end{align}
 $$
+
+so, an ideal composition vector is given by $\dfrac{\left(1,\gamma,\gamma^2,\gamma^3\right)}{1+\gamma+\gamma^2+\gamma^3}$ which is stationary under the map, as expected. from here i just scaled the composition vector, looking for its closest integer approximation, which turns out to be 
+
+$$ \vec{c} = \left(...\right) $$
+
+
 
 <br>
