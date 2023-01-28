@@ -86,7 +86,7 @@ which is stationary under the map, as expected. from here i just scaled the comp
 
 $$ \vec{\phi} = \left(...\right) $$
 
-running this through $f,$ we find $f(vec{\phi}) = 43.$
+running this through $f,$ we find $f(\vec{\phi}) = 43.$
 
 
 <br>
