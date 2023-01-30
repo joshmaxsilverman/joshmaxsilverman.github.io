@@ -84,7 +84,7 @@ $$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right) 
 
 which is stationary under the map, as expected. from here we can just scaled the composition vector, looking for its closest integer approximation, which is
 
-$$ \vec{\phi} = \left(1655616, 3045153, 5600910, 10301680\right). $$
+$$ \vec{\phi} = \left(1655616,3045153,5600910,10301680\right). $$
 
 running this through $f$ gets $f(\vec{\phi}) = 44.$
 
