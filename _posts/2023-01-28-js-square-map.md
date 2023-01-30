@@ -90,8 +90,6 @@ running this through $f$ gets $f(\vec{\phi}) = 44.$
 
 because of the first property, we can subtract the minimum entry from each component of the composition vector without changing $f,$ so the vector with minimum sum is 
 
-$\vec{\phi} = \left(8646064, 3945294, 1389537, 0\right).$ 
-
-ddd
+$$ \vec{\phi} = \left(8646064, 3945294, 1389537, 0\right). $$
 
 <br>
