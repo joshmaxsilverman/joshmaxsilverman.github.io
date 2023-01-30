@@ -86,9 +86,10 @@ which is stationary under the map, as expected. from here we can just scaled the
 
 $$ \vec{\phi} = \left(10301680, 5600910, 3045153, 1655616\right). $$
 
-running this through $f,$ we find $f(\vec{\phi}) = 44.$
+running this through $f$ gets $f(\vec{\phi}) = 44.$
 
-because of the first property, we can subtract the minimum entry from each component of the composition vector without changing $f,$ so the vector with minimum sum is $\vec{\phi} = \left(8646064, 3945294, 1389537, 0\right).$ 
+because of the first property, we can subtract the minimum entry from each component of the composition vector without changing $f,$ so the vector with minimum sum is 
+<!-- $\vec{\phi} = \left(8646064, 3945294, 1389537, 0\right).$  -->
 
 
 <br>
