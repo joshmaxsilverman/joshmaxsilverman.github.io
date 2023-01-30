@@ -92,5 +92,6 @@ because of the first property, we can subtract the minimum entry from each compo
 
 $\vec{\phi} = \left(8646064, 3945294, 1389537, 0\right).$ 
 
+ddd
 
 <br>
