@@ -25,7 +25,7 @@ $$ \left(a,b,c,d\right) \overset{M}{\longrightarrow} \left(\lvert a-b\rvert, \lv
 
 we can follow the map on a couple of squares to get the hang of it
 
-![drawing of squares](/img/2023-01-30-square-drawing.png)
+![drawing of squares](/img/2023-01-30-square-drawing.png){:width="450 px" class="image-centered"}
 
 we want to find the starting configuration $(a,b,c,d)$ that takes the most map iterations to reach the $\left(0,0,0,0\right)$ square. 
 
