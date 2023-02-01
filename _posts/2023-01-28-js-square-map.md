@@ -25,7 +25,7 @@ tags: fixed-point dynamics
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
 
 ## Solution
 
