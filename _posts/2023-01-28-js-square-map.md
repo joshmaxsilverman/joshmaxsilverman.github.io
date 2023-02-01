@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Chain of squares 
 date: 2023/01/28
-subtitle:
-tags:
+subtitle: How long can you keep your square away from the covetous origin?
+tags: fixed-point dynamics 
 ---
 
 >**Question**:
