@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Chain of squares 
 date: 2023/01/28
 subtitle: How long can you keep your square away from the covetous origin?
