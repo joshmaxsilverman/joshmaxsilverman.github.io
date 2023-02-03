@@ -12,12 +12,7 @@ tags: fixed-point dynamics
 >
 >Define $f(a, b, c, d)$ to be the total number of squares drawn during this process when beginning with the numbers $(a, b, c, d)$ written on the starting square in clockwise order. For example, given a starting arrangement of $(10, 6, 3, 1),$ we would get the sequence of
 >
->$(4, 3, 2, 9)$
->$(1, 1, 7, 5)$
->$(0, 6, 2, 4)$
->$(6, 4, 2, 4)$
->$(2, 2, 2, 2)$
->$(0, 0, 0, 0)$
+>$(4, 3, 2, 9)\rightarrow(1, 1, 7, 5)\rightarrow(0, 6, 2, 4)\rightarrow(6, 4, 2, 4)\rightarrow(2, 2, 2, 2)\rightarrow(0, 0, 0, 0),$
 >
 > where the game ends (pictured above). So $f(10, 6, 3, 1) = 7.$ And trivially, $f(0, 0, 0, 0) = 1.$
 >
