@@ -19,11 +19,11 @@ tags: fixed-point dynamics
 >$(2, 2, 2, 2)$
 >$(0, 0, 0, 0)$
 >
->where the game ends (pictured above). So $f(10, 6, 3, 1) = 7.$ And trivially, $f(0, 0, 0, 0) = 1.$
+> where the game ends (pictured above). So $f(10, 6, 3, 1) = 7.$ And trivially, $f(0, 0, 0, 0) = 1.$
 >
->Consider the set $S = \\{(a, b, c, d) | a, b, c, d\in\mathbb{Z}, 0 \leq a, b, c, d \leq 10^7\\}.$ 
+> Consider the set $S = \\{(a, b, c, d) | a, b, c, d\in\mathbb{Z}, 0 \leq a, b, c, d \leq 10^7\\}.$ 
 >
->Let $M$ be the maximum value $f$ obtains on $S.$ Find $(a, b, c, d)$ in $S$ with minimum sum $(a+b+c+d)$ where $f(a, b, c, d) = M.$
+> Let $M$ be the maximum value $f$ obtains on $S.$ Find $(a, b, c, d)$ in $S$ with minimum sum $(a+b+c+d)$ where $f(a, b, c, d) = M.$
 
 <!--more-->
 
