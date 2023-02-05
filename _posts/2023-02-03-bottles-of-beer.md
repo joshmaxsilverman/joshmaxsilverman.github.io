@@ -27,7 +27,7 @@ $$\small
           &= 1 + \left[(1-f) + (1-f)^2T_{j-2}\right] + \left[(1-f)f + f\right]T_{N} \\
           &= 1 + \left[(1-f) + (1-f)^2 + (1-f)^3T_{j-3}\right] + \left[(1-f)^2f + (1-f)f + f\right]T_{N} \\
           &= \left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^{j-1}\right] + f\left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^{j-1}\right]T_{N} \\
-          &= \dfrac{1 - (1-f)^j}{f} + \left(1 - (1-f)^{j}\right)T_{N}
+          &= \dfrac{1 - (1-f)^j}{f} + \left[1 - (1-f)^{j}\right]T_{N}
   \end{align}
 $$
 
