@@ -40,7 +40,7 @@ $$
     T_{N} &= \frac{1}{1-f} + \dfrac{1-(1-f)^{N-1}}{f} + \left[1-(1-f)^{N-1}\right]T_{N} \\
     &= \dfrac{1-(1-f)^{N}}{(1-f)f} + \left[1-(1-f)^{N-1}\right]T_{N} \\
     &= \dfrac{f+1-f-(1-f)^N}{(1-f)f}\dfrac{1}{(1-f)^{N-1}} \\
-    &= \frac{1}{f}\left[\dfrac{1}{(1-f)^{N}}-1\right]
+    &= \frac{1}{f}\left[\dfrac{1}{(1-f)^{N}}-1\right] 
   \end{align}
 $$
 
