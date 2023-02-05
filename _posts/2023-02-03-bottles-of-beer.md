@@ -15,21 +15,31 @@ tags:
 
 ## Solution
 
-at each step, the song can either proceed to the next step (with probability $(1-f)$) or return to $99$ bottles (with probability $f$). so, the expectation number of verses to finish from "$j$ bottles" is
+at each step, the song can either proceed to the next step (with probability $(1-f)$) or return to $N = 99$ bottles (with probability $f$). so, the expectation number of verses to finish from "$j$ bottles" is
 
-$$ T_j = 1 + (1-f)T_{j-1} + fT_{99}. $$
+$$ T_j = 1 + (1-f)T_{j-1} + fT_{N}. $$
 
-plugging this back into itself a few times, we get
+plugging this back into itself a few times, and using the fact that $T_0 = 0$, we get
 
 $$
   \begin{align}
-      T_j &= 1 + (1-f)T_{j-1} + fT_{99} \\
-          &= 1 + \left[(1-f) + (1-f)^2T_{j-2}\right] + \left[(1-f)f + f\right]T_{99} \\
-          &= 1 + \left[(1-f) + (1-f)^2 + (1-f)^3T_{j-3}\right] + \left[(1-f)^2f + (1-f)f + f\right]T_{99} \\
-          &= \left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^{j-1}\right] + f\left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^j\right]T_{99} \\
-          &= \dfrac{1 - (1-f)^j}{f} + \dfrac{1 - (1-f)^{j-1}}{f}T_{99}
+      T_j &= 1 + (1-f)T_{j-1} + fT_{N} \\
+          &= 1 + \left[(1-f) + (1-f)^2T_{j-2}\right] + \left[(1-f)f + f\right]T_{N} \\
+          &= 1 + \left[(1-f) + (1-f)^2 + (1-f)^3T_{j-3}\right] + \left[(1-f)^2f + (1-f)f + f\right]T_{N} \\
+          &= \left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^{j-1}\right] + f\left[1 + (1-f) + (1-f)^2 + \ldots + (1-f)^j\right]T_{N} \\
+          &= \dfrac{1 - (1-f)^j}{f} + \dfrac{1 - (1-f)^{j+1}}{f}T_{N}
   \end{align}
 $$
 
+so, $T_{N-1} = f^{-1}\left[1 - (1-f)^{N-1} + \left(1 - (1-f)^{N}\right)T_{N}\right]$
+
+plugging this into the equation for $T_{N},$ we get
+
+$$
+  \begin{align}
+    T_{N} &= 1 + (1-f)f^{-1}\left[1 - (1-f)^{N-1} + \left(1 - (1-f)^{N}\right)T_{N}\right] + fT_{N} \\
+          &= \dfrac{1}{1-f} + f^{-1}\left[1 - (1-f)^{N-1} + \left(1 - (1-f)^{N}\right)T_{N}\right]
+  \end{align}
+$$
 
 <br>
