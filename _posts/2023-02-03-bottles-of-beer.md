@@ -7,15 +7,21 @@ subtitle: Will you get to zero bottles of beer on the wall before someone loses 
 tags: recursion expectation markov
 ---
 
->Question
+>**Question**: You and your friends are singing the traditional song, “99 Bottles of Beer.” With each verse, you count down the number of bottles. The first verse contains the lyrics “$99$ bottles of beer,” the second verse contains the lyrics “$98$ bottles of beer,” and so on. The last verse contains the lyrics “$1$ bottle of beer.”
+>
+>There’s just one problem. When completing any given verse, your group of friends has a tendency to forget which verse they’re on. When this happens, you finish the verse you are currently singing and then go back to the beginning of the song (with $99$ bottles) on the next verse.
+>
+>For each verse, suppose you have a $1$ percent chance of forgetting which verse you are currently singing. On average, how many total verses will you sing in the song?
+>
+>**Extra credit**: Instead of “$99$ Bottles of Beer,” suppose you and your friends are singing “N Bottles of Beer,” where $N$ is some very, very large number. And suppose your collective probability of forgetting where you are in the song is $1/N$ for each verse. If it takes you an average of $K$ verses to finish the song, what value does the ratio of $K/N$ approach?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-take-down-all-the-bottles-of-beer/))
 
 ## Solution
 
-at each step, the song can either proceed to the next step (with probability $(1-f)$) or return to $N = 99$ bottles (with probability $f$). so, the expectation number of verses to finish from "$j$ bottles" is
+at each step, the song can either proceed to the next step (with probability $(1-f)$) or return to $N = 99$ bottles (with probability $f$). so, the expectation number of verses to finish from "$j$ bottles of beer on the wall" is
 
 $$ T_j = 1 + (1-f)T_{j-1} + fT_{N}. $$
 
