@@ -1,10 +1,10 @@
 ---
 layout: post
 published: false
-title: 
+title: Keep on singing
 date: 2023/02/03
-subtitle:
-tags:
+subtitle: Will you get to zero bottles of beer on the wall before someone loses their cool?
+tags: recursion expectation markov
 ---
 
 >Question
