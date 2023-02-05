@@ -31,13 +31,14 @@ $$\small
   \end{align}
 $$
 
-so, $T_{N-1} = \left[f^{-1}\left(1 - (1-f)^{N-1}\right) + \left(1 - (1-f)^{N-1}\right)T_{N}\right]$
+so, $T_{N-1} = \frac1f \left(1 - (1-f)^{N-1}\right) + \left(1 - (1-f)^{N-1}\right)T_{N}$
 
 plugging this into the equation for $T_{N},$ we get
 
 $$
   \begin{align}
     T_{N} &= \frac{1}{1-f} + \dfrac{1-(1-f)^{N-1}}{f} + \left[1-(1-f)^{N-1}\right]T_{N} \\
+    &= \dfrac{1-(1-f)^{N-1}}{(1-f)f} + \left[1-(1-f)^{N-1}\right]T_{N} \\
     &= \dfrac{f+1-f-(1-f)^N}{(1-f)f}\dfrac{1}{(1-f)^{N-1}} \\
     &= \frac{1}{f}\left[\dfrac{1}{(1-f)^{N}}-1\right]
   \end{align}
