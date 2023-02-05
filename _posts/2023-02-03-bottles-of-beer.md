@@ -21,7 +21,7 @@ $$ T_j = 1 + (1-f)T_{j-1} + fT_{N}. $$
 
 plugging this back into itself a few times, and using the fact that $T_0 = 0$, we get
 
-$$
+$$\small
   \begin{align}
       T_j &= 1 + (1-f)T_{j-1} + fT_{N} \\
           &= 1 + \left[(1-f) + (1-f)^2T_{j-2}\right] + \left[(1-f)f + f\right]T_{N} \\
