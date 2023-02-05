@@ -26,7 +26,7 @@ tags: fixed-point dynamics
 
 ## Solution
 
-first of all, the map from one square to the next is 
+First of all, the map from one square to the next is 
 
 $$ \left(a,b,c,d\right) \overset{M}{\longrightarrow} \left(\lvert a-b\rvert, \lvert b-c\rvert, \lvert c-d\rvert, \lvert d-a\rvert\right). $$
 
@@ -34,31 +34,31 @@ $$ \left(a,b,c,d\right) \overset{M}{\longrightarrow} \left(\lvert a-b\rvert, \lv
 
 1. the map is  -->
 
-we can follow the map on a couple of squares to get the hang of it
+We can follow the map on a couple of squares to get the hang of it:
 
-![drawing of squares](/img/2023-01-30-square-drawing.png){:width="550 px" class="image-centered"}
+![drawing of squares](/img/2023-01-30-square-drawing-tight.png){:width="550 px" class="image-centered"}
 
-we want to find the starting configuration $(a,b,c,d)$ that takes the most map iterations to reach the $\left(0,0,0,0\right)$ square. 
+We want to find the starting configuration $(a,b,c,d)$ that takes the most map iterations to reach the $\left(0,0,0,0\right)$ square. 
 
-from the map, we can see two properties of $f$:
+From the map, we can see two properties of $f$:
 
 1. $f$ is invariant under uniform translations
 
-$$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k) $$
+$$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k),$$
   
-2. $f$ is invariant to uniform scaling
+2. and $f$ is invariant under uniform scaling
 
 $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
 
-the second property shows that we can think of $(a,b,c,d)$ as a relative composition (normalize it so that its components sum to $1$). in principle, if we can find a composition $(a,b,c,d)$ that maps back to itself, the value of $f$ would be infinite. 
+The second property shows that we can think of $(a,b,c,d)$ as a relative composition (normalize it so that its components sum to $1$). If we can find a composition $(a,b,c,d)$ that maps back to itself then, in principle, the value of $f$ would be infinite. 
 
-we will look for such a composition, and then look for the closest integer approximation we can find. the bigger numbers we use, the more closely we should expect to get.
+We will look for such a composition, and then look for the closest integer approximation we can find. The bigger the numbers we use, the more closely we should be able to approximate the ideal composition.
 
-if $(a,b,c,d)$ maps to itself, then, up to an overall multiplicative constant:
+If $(a,b,c,d)$ maps to itself, then, up to an overall multiplicative constant
 
 $$ (a,b,c,d) = \left(\lvert a-b\rvert, \lvert b-c\rvert, \lvert c-d\rvert, \lvert d-a\rvert\right). $$
 
-since the two compositions are the same, ratios between like components are the same. taking the ratio of the first and second components of each composition, we get:
+Since the two compositions are the same, ratios between like components are the same as well. Taking the ratio of the first and second components of each composition, we get:
 
 $$
   \begin{align} 
@@ -67,11 +67,11 @@ $$
   \end{align}
 $$
 
-which shows that $b/a = c/b.$ the same comparison for the second and third components shows that $c/b = d/c$ as well.
+Which shows that $b/a = c/b.$ The same comparison for the second and third components shows that $c/b = d/c$ as well.
 
-putting it together, we have shown that $a = \gamma b = \gamma^2 c = \gamma^3 d,$ which shows that $(a,b,c,d)$ is monotonic
+Putting it all together, we have shown that $a = \gamma b = \gamma^2 c = \gamma^3 d,$ which shows that $(a,b,c,d)$ is monotonic
 
-now, if we compare the first and fourth components, we get (assuming $a>b>c>d,$ and therefore $\gamma > 1$):
+Now, if we compare the first and fourth components, we get (assuming $a>b>c>d,$ and therefore $\gamma > 1$):
 
 $$
   \begin{align}
@@ -80,26 +80,26 @@ $$
   \end{align}
 $$
 
-or $2\gamma^3 -\gamma^4 - 1 = 0$ which has one relevant root
+or $2\gamma^3 -\gamma^4 - 1 = 0,$ which has one relevant root
 
 $$
   \begin{align}
     \gamma &= \frac13 \left(1 + \sqrt[3]{\left(19 - 3 \sqrt{33}\right)} + \sqrt[3]{19 + 3 \sqrt{33}}\right) \\
-    &\approx 1.8393
+    &\approx 1.8393\ldots
   \end{align}
 $$
 
-so, an ideal composition vector is given by 
+So, an ideal composition vector is given by 
 
-$$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right) $$ 
+$$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right), $$ 
 
-which is stationary under the map, as expected. from here we can just scaled the composition vector, looking for its closest integer approximation, which is
+which is stationary under the map, as expected. From here we can just scaled the composition vector, looking for its closest integer approximation, which is
 
 $$ \vec{\phi} = \left(1655616,3045153,5600910,10301680\right). $$
 
-running this through $f$ gets $f(\vec{\phi}) = 44.$
+Running this through $f$ gets $f(\vec{\phi}) = 44.$
 
-because of the first property, we can subtract the minimum entry from each component of the composition vector without changing $f,$ so the vector with minimum sum is 
+Because of the first property, we can subtract the minimum entry from each component of the composition vector without changing the value of $f,$ so the vector with minimum sum is 
 
 $$ \vec{\phi} = \left(0,1389537,3945294,8646064\right). $$
 
