@@ -37,7 +37,9 @@ $$
   \end{align}
 $$
 
-so, $T_{N-1} = \frac1f \left(1 - (1-f)^{N-1}\right) + \left(1 - (1-f)^{N-1}\right)T_{N}$
+so, 
+
+$$ T_{N-1} = \dfrac{1 - (1-f)^{N-1}}{f} + \left[1 - (1-f)^{N-1}\right]T_{N} $$
 
 plugging this into the equation for $T_{N},$ we get
 
