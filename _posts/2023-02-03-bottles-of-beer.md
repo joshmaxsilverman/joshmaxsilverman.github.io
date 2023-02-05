@@ -43,4 +43,11 @@ $$
   \end{align}
 $$
 
+since the probability of forgetting is staked to $f=1/N,$ $T_N$ becomes
+
+$$ T_N = N\left[\dfrac{1}{(1-1/N)^{N}}-1\right], $$
+
+so $T_N/N$ approaches $(e-1)$ as $N$ gets big.
+
+
 <br>
