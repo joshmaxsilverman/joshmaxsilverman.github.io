@@ -95,12 +95,12 @@ $$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right),
 
 which is stationary under the map, as expected. From here we can just scaled the composition vector, looking for its closest integer approximation, which is
 
-$$ \vec{\phi} = \left(1655616,3045153,5600910,10301680\right). $$
+$$ \phi = \left(10301680,5600910,3045153,1655616\right). $$
 
-Running this through $f$ gets $f(\vec{\phi}) = 44.$
+Running this through $f$ gets $f(\phi) = 44.$
 
 Because of the first property, we can subtract the minimum entry from each component of the composition vector without changing the value of $f,$ so the vector with minimum sum is 
 
-$$ \vec{\phi} = \left(0,1389537,3945294,8646064\right). $$
+$$ \phi = \left(8646064,3945294,1389537,0\right). $$
 
 <br>
