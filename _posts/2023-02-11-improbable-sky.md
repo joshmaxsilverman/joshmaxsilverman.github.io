@@ -31,7 +31,9 @@ first of all, the stars are uniform with respect to our perspective. i.e. if we 
 
 however, we have to account for the fact that when we look up at an angle $\theta$ to the horizon, we can look at any angle $\phi.$ this gives small angles of $\theta$ a larger circle of sky to intercept. the radius if proportional to $\cos\theta$ so
 
-$$ p_\text{star}(\theta) = \dfrac{\cos\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta $$
+$$ p_\text{stars}(\theta) = \dfrac{\cos\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta. $$
+
+once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\theta$ it overtakes $p_\text{stars}(\theta).$
 
 ### airplanes
 
@@ -47,7 +49,7 @@ taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have
 
 $$
   \begin{align}
-    \lvert(\vec{R}+\vec{h})\rvert^2 &= \left(\vec{\ell} + \vec{R}\right)\cdot\left(\vec{\ell} + \vec{R}\right) \\
+    \lvert\vec{R}+\vec{h}\rvert^2 &= \left(\vec{\ell} + \vec{R}\right)\cdot\left(\vec{\ell} + \vec{R}\right) \\
     &= \ell^2 + R^2 + 2\ell R\cos\left(\theta + \tfrac12\pi\right)
   \end{align}
 $$
@@ -55,6 +57,10 @@ $$
 which, after solving the quadratic for $\ell,$ gets 
 
 $$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} + R \sin\theta. $$
+
+with this in hand, we can find $p_\text{planes}(\theta)$ by computing
+
+$$ \dfrac{\ell^2(\theta)}{\int\limits_0^{\frac12\pi} \ell^2(\theta)\,\text{d}\theta}. $$
     
 
 <br>
