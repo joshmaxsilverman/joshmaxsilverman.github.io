@@ -29,6 +29,6 @@ first of all, the stars are uniform with respect to our perspective. i.e. if we 
 
 however, we have to account for the fact that when we look up at an angle $\theta$ to the horizon, we can look at any angle $\phi.$ this gives small angles of $\theta$ a larger circle of sky to intercept. the radius if proportional to $\cos\theta$ so
 
-$$ P_\text{star}(\theta) = \dfrac{\cos\theta \Delta\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta}} = \cos\theta\Delta\theta $$
+$$ P_\text{star}(\theta) = \dfrac{\cos\theta \Delta\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta\Delta\theta $$
 
 <br>
