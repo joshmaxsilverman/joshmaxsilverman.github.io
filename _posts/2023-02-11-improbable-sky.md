@@ -45,11 +45,19 @@ with the planes, we have to account for the tilt of the surface of the airplane 
 
 the total probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \psi$ to define the patch.
 
-looking at an angle $\theta$ from the horizontal, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\psi$ direction is $\ell(\theta)\cos\theta\Delta\psi,$ making the area of the patch
+looking at an angle $\theta$ from the horizontal, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta\Delta\phi,$ making the area of the patch
 
-$$ dA = l^2(\theta)\cos\theta\Delta\theta\Delta\psi. $$
+$$ dA = \left[l^2(\theta)\cos\theta\right]\Delta\theta\Delta\phi. $$
 
-we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$
+if the sphere of planes were always perpendicular to our patch, this would be it. however, away from the zenith, the tilt increases with $\theta.$ 
+
+the surface of the sphere is defined by $y^2 = (R+h)^2 - x^2$ which has slope $dy/dx = -x/y.$ this means that the sphere makes angle $\tan\psi = x/y$ with the vertical, which we can see by drawing a vertical line.
+
+drawing the right triangle defined by $\ell(\theta)$ and extending a similar right triangle off the back, we can see that the angle between the sphere and our visual patch is $\alpha = \psi - \theta = \arctan\frac{x}{y} - \theta.$
+
+we can express $x$ and $y$ in terms of $\theta$ through $x = \ell(\theta)\cos\theta$ and $y = R + \ell(\theta)\sin\theta.$
+
+<!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
 <!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/cos\theta = 2\pi\ell^2.$ -->
 
