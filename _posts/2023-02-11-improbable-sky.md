@@ -27,11 +27,15 @@ with this intuition, we can go about calculating the probability distributions.
 
 ### stars
 
-first of all, the stars are uniform with respect to our perspective. i.e. if we are just considering small patches of sky, we'd have a true uniform distribution $p(\theta,\phi) = 1/4\pi.$ 
+first of all, the stars are uniform with respect to our perspective. if we gaze up from the horizon, stars are equally likely to be in any angular patch. considering our view goes from the horizon to the zenith, the probability distribution is
 
-however, we have to account for the fact that when we look up at an angle $\theta$ to the horizon, we can look at any angle $\phi.$ this gives small angles of $\theta$ a larger circle of sky to intercept. the radius if proportional to $\cos\theta$ so
+$$ p_\text{stars}(\theta) = \frac{2}{\pi}. $$
 
-$$ p_\text{stars}(\theta) = \dfrac{\cos\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta. $$
+<!-- i.e. if we are just considering small patches of sky, we'd have a true uniform distribution $p(\theta,\phi) = 1/4\pi.$  -->
+
+<!-- however, we have to account for the fact that when we look up at an angle $\theta$ to the horizon, we can look at any angle $\phi.$ this gives small angles of $\theta$ a larger circle of sky to intercept. the radius if proportional to $\cos\theta$ so -->
+
+<!-- $$ p_\text{stars}(\theta) = \dfrac{\cos\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta. $$ -->
 
 once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\theta$ it overtakes $p_\text{stars}(\theta).$
 
