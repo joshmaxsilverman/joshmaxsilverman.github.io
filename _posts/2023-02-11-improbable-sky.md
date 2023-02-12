@@ -41,11 +41,17 @@ once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\th
 
 ### airplanes
 
-the planes are not too much different, except that we have to account for the tilt of the airplane sphere relative to our line of sight, and the changing distance between where we stand to the airplane sphere.
+with the planes, we have to account for the tilt of the surface of the airplane sphere relative to our line of sight, and the changing distance to the airplane sphere.
+
+the total probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \psi$ to define the patch.
+
+looking at an angle $\theta$ from the horizontal, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\psi$ direction is $\ell(\theta)\cos\theta\Delta\psi,$ making the area of the patch
+
+$$ dA = l^2(\theta)\cos\theta\Delta\theta\Delta\psi. $$
 
 we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$
 
-the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/cos\theta = 2\pi\ell^2.$
+<!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/cos\theta = 2\pi\ell^2.$ -->
 
 now $\ell$ itself is a function of $\theta,$ which we can find with the law of cosines, which for posterity, we'll derive.
 
@@ -54,13 +60,13 @@ taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have
 $$
   \begin{align}
     \lvert\vec{R}+\vec{h}\rvert^2 &= \left(\vec{\ell} + \vec{R}\right)\cdot\left(\vec{\ell} + \vec{R}\right) \\
-    &= \ell^2 + R^2 + 2\ell R\cos\left(\theta + \tfrac12\pi\right)
+    &= \ell^2 + R^2 + 2\ell R\cos\left(\tfrac12\pi - \theta\right)
   \end{align}
 $$
 
 which, after solving the quadratic for $\ell,$ gets 
 
-$$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} + R \sin\theta. $$
+$$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} - R \sin\theta. $$
 
 with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 
