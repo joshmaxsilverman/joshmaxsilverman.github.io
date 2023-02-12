@@ -48,7 +48,7 @@ taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have
 $$
   \begin{align}
     \lvert(R+h)\rvert^2 &= \left(\vec{\ell} + \vec{R}\right)\cdot\left(\vec{\ell} + \vec{R}\right) \\
-    &= \ell^2 + R^2 + 2\ell R\cos\left(\theta + \frac12\pi\right)
+    &= \ell^2 + R^2 + 2\ell R\cos\left(\theta + \tfrac12\pi\right)
   \end{align}
 $$
 
