@@ -21,14 +21,22 @@ the stars are spherically symmetric, in actuality and with respect to our perspe
 
 to see this, we can just draw a sphere representing the uniform plane distribution. a patch of view, perpendicular to our line of sight, sweeps out a larger patch of the plane sphere whereas at the North pole, they are one and the same.
 
-### calculation
+## calculation
 
 with this intuition, we can go about calculating the probability distributions. 
 
-first of all, the stars are uniform with respect to our perspective. i.e. if we are just considering small patches of sky, we'd have a true uniform distribution $P(\theta,\phi) = 1/4\pi.$ 
+### stars
+
+first of all, the stars are uniform with respect to our perspective. i.e. if we are just considering small patches of sky, we'd have a true uniform distribution $p(\theta,\phi) = 1/4\pi.$ 
 
 however, we have to account for the fact that when we look up at an angle $\theta$ to the horizon, we can look at any angle $\phi.$ this gives small angles of $\theta$ a larger circle of sky to intercept. the radius if proportional to $\cos\theta$ so
 
 $$ p_\text{star}(\theta) = \dfrac{\cos\theta}{\int\limits_0^{\frac12\pi}\cos\theta\,\text{d}\theta} = \cos\theta $$
+
+### airplanes
+
+the planes are not too much different, except that we have to account for the tilt of the airplane sphere relative to our line of sight, and the changing distance between where we stand to the airplane sphere.
+
+we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$
 
 <br>
