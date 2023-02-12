@@ -54,7 +54,7 @@ $$
 
 which, after solving the quadratic for $\ell,$ gets 
 
-$$ xxx $$
+$$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} + R \sin\theta. $$
     
 
 <br>
