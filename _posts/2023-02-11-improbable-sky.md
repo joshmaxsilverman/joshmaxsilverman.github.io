@@ -7,11 +7,19 @@ subtitle: A cool puzzle if planes could fly at $\approx 0\,\text{mph}.$
 tags: spherical-geometry distributions projection
 ---
 
->Question
+>**Question**: One cloudless night, the sky above you contains an equal number of visible stars and planes. Suddenly, you spot a point of light at a particular angle of elevation above the horizon. Based purely on this angle, you want to determine whether the point of light is more likely to be a star or a plane.
+>
+>While figuring this out, you make the following simplifying assumptions:
+>
+>- Earth is a perfect sphere with a radius of 4,000 miles.
+>- Stars are equally likely to be anywhere in the night sky.
+>- Planes are equally likely to be flying anywhere over Earth (i.e., not just limited to established air routes) at an altitude of 6 miles. You can neglect takeoffs and landings.
+>
+>After some quick thinking, you realize that at this particular angle, the point of light is equally likely to be a star or a plane. What is this angle of elevation?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/its-a-star-its-a-plane-its-the-riddler/))
 
 ## Solution
 
