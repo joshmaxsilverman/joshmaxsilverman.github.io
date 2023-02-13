@@ -67,7 +67,7 @@ $$ \tan\psi = \dfrac{dx}{dy}.$$
 
 the surface of the sphere is defined by $y^2 = (R+h)^2 - x^2$ which gives $dx/dy = -y/x$ (sign not important). 
 
-drawing the right triangle defined by $\ell(\theta)$ and extending a similar right triangle off the back, we can see that the angle between the sphere and our visual patch is $\alpha = \psi - \theta = \arctan\frac{x}{y} - \theta.$
+drawing the right triangle defined by $\ell(\theta)$ and extending a similar right triangle off the back, we can see that the angle between the sphere and our visual patch is $\alpha = \psi - \theta = \arctan\frac{y}{x} - \theta.$
 
 we can express $x$ and $y$ in terms of $\theta$ through $x = \ell(\theta)\cos\theta$ and $y = R + \ell(\theta)\sin\theta.$
 
