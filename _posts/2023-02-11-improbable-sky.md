@@ -106,7 +106,7 @@ now, we can plot $p_\text{plane}(\theta)$ to check when it crosses $1/2\pi.$ the
 
 ![](/img/2023-02-11-improbable-stars.png){:width="450 px" class="image-centered"}
 
-plotting the intersection, we find that the likelihood of a plan matches the likelihood of a star when $\theta \approx 0.10563$ or about $6.05$ degrees above the horizon.
+plotting the intersection, we find that the likelihood of an airplane matches the likelihood of a star when $\theta \approx 0.10563$ or about $6.05$ degrees above the horizon.
     
 
 <br>
