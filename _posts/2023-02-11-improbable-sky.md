@@ -73,7 +73,7 @@ we can express $x$ and $y$ in terms of $\theta$ through $x = \ell(\theta)\cos\th
 
 with all this taken into account, the effective area on the surface of the plane sphere occupied by a patch of vision at angle $\theta$ to the horizon is
 
-$$ dA^\prime = \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}. $$
+$$ dA^\prime = \left[\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\right]\Delta\theta\Delta\phi. $$
 
 <!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
