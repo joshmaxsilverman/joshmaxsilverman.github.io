@@ -61,7 +61,7 @@ if the sphere of planes were always perpendicular to our patch, this would be it
 
 ![](/img/2023-02-11-alpha-diagram.png){:width="450 px" class="image-centered"}
 
-the surface of the sphere makes angle $\psi$ with our vision patch. as shown in the diagram, the tangent of this angle is 
+the surface of the sphere makes angle $\psi$ with the vertical. as shown in the diagram, the tangent of this angle is 
 
 $$ \tan\psi = \dfrac{dx}{dy}.$$ 
 
