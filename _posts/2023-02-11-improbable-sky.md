@@ -69,7 +69,7 @@ if the rude goldberg machine we constructed is correct, we should be able to int
 
 <!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
-<!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/cos\theta = 2\pi\ell^2.$ -->
+<!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/\cos\theta = 2\pi\ell^2.$ -->
 
 now $\ell$ is itself a function of $\theta,$ which we can find with the law of cosines, which for posterity, we can derive.
 
@@ -88,7 +88,7 @@ $$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} - R \sin\theta. $$
 
 with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 
-$$ \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\,\text{d}\theta}. $$
+$$ \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\,\text{d}\theta^\prime}. $$
 
 now, we can plot $p_\text{plane}(\theta)$ to check when it crosses $1/2\pi.$ the effect of the tilt is to compress a very large amount of airplane sphere into vision patches near the horizon, so we should expect planes to be far more likely at the horizon, then taper off as we approach the zenith.
 
