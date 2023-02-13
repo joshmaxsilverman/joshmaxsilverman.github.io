@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: The Chance in Our Stars
+title: The chance in our stars
 date: 2023/02/11
 subtitle: A cool puzzle for planes that fly at $\approx 0\,\text{mph}.$
 tags: spherical-geometry distributions projection
