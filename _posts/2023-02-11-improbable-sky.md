@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: The Chance in Our Stars
 date: 2023/02/11
 subtitle: A cool puzzle for planes that fly at $\approx 0\,\text{mph}.$
