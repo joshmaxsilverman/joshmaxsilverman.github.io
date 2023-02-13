@@ -27,9 +27,9 @@ with this intuition, we can go about calculating the probability distributions.
 
 ### stars
 
-first of all, the stars are uniform with respect to our perspective. if we gaze up from the horizon, stars are equally likely to be in any angular patch. considering our view goes from the horizon to the zenith, the probability distribution is
+first of all, the stars are uniform with respect to our perspective. if we gaze up from the horizon, stars are equally likely to be in any angular patch. since the stars are equally likely to be anywhere in our gaze, the uniform probability distribution is
 
-$$ p_\text{stars}(\theta) = \frac{2}{\pi}. $$
+$$ p_\text{stars}(\theta) = \frac{1}{2\pi}. $$
 
 <!-- i.e. if we are just considering small patches of sky, we'd have a true uniform distribution $p(\theta,\phi) = 1/4\pi.$  -->
 
@@ -43,7 +43,7 @@ once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\th
 
 with the planes, we have to account for the tilt of the surface of the airplane sphere relative to our line of sight, and the changing distance to the airplane sphere.
 
-the total probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \psi$ to define the patch.
+the probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \psi$ to define our patch.
 
 looking at an angle $\theta$ from the horizontal, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta\Delta\phi,$ making the area of the patch
 
@@ -51,17 +51,27 @@ $$ dA = \left[l^2(\theta)\cos\theta\right]\Delta\theta\Delta\phi. $$
 
 if the sphere of planes were always perpendicular to our patch, this would be it. however, away from the zenith, the tilt increases with $\theta.$ 
 
-the surface of the sphere is defined by $y^2 = (R+h)^2 - x^2$ which has slope $dy/dx = -x/y.$ this means that the sphere makes angle $\tan\psi = x/y$ with the vertical, which we can see by drawing a vertical line.
+the surface of the sphere makes angle $\psi$ with our vision patch. as shown in the diagram, the tangent of this angle is 
+
+$$ \tan\psi = \dfrac{dx}{dy}.$$ 
+
+the surface of the sphere is defined by $y^2 = (R+h)^2 - x^2$ which gives $dx/dy = -y/x$ (sign not important). 
 
 drawing the right triangle defined by $\ell(\theta)$ and extending a similar right triangle off the back, we can see that the angle between the sphere and our visual patch is $\alpha = \psi - \theta = \arctan\frac{x}{y} - \theta.$
 
 we can express $x$ and $y$ in terms of $\theta$ through $x = \ell(\theta)\cos\theta$ and $y = R + \ell(\theta)\sin\theta.$
 
+with all this taken into account, the effective area on the surface of the plane sphere occupied by a patch of vision at angle $\theta$ to the horizon is
+
+$$ dA^\prime = \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}. $$
+
+if the rude goldberg machine we constructed is correct, we should be able to integrate this over $\theta$ and $\phi$ to find the surface area of the portion of the plane sphere we can see. indeed, integrating $\ell^2 \cos\theta/cos\alpha$ over $\theta$ and $\phi$ we get $\approx 151023.64\ldots$ which matches the expectation from [$2\pi(R+h)h$](https://mathworld.wolfram.com/SphericalCap.html)
+
 <!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
 <!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/cos\theta = 2\pi\ell^2.$ -->
 
-now $\ell$ itself is a function of $\theta,$ which we can find with the law of cosines, which for posterity, we'll derive.
+now $\ell$ is itself a function of $\theta,$ which we can find with the law of cosines, which for posterity, we can derive.
 
 taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have 
 
@@ -78,7 +88,11 @@ $$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} - R \sin\theta. $$
 
 with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 
-$$ \dfrac{\ell^2(\theta)}{\int\limits_0^{\frac12\pi} \ell^2(\theta)\,\text{d}\theta}. $$
+$$ \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\,\text{d}\theta}. $$
+
+now, we can plot $p_\text{plane}(\theta)$ to check when it crosses $1/2\pi.$ the effect of the tilt is to compress a very large amount of airplane sphere into vision patches near the horizon, so we should expect planes to be far more likely at the horizon, then taper off as we approach the zenith.
+
+plotting the intersection, we find that the likelihood of a plan matches the likelihood of a star when $\theta \approx 0.10563$ or about $6.05$ degrees above the horizon.
     
 
 <br>
