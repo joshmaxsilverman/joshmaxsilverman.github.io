@@ -25,7 +25,7 @@ tags: spherical-geometry distributions projection
 
 on first thought, there doesn't seem to be a puzzle — the planes are spherically symmetric and so are the stars. what makes the difference?
 
-the stars are spherically symmetric, in actuality and with respect to our perspective. the planes however are on a nearby sphere which means that, for the same angular increment, there are more planes at the horizon then there are when we look straight up.
+the stars are spherically symmetric, in actuality and with respect to our perspective. the planes however are on a nearby sphere which means that, for the same angular increment, there are more planes at the horizon than there are when we look straight up.
 
 to see this, we can just draw a sphere representing the uniform plane distribution. a patch of view, perpendicular to our line of sight, sweeps out a larger patch of the plane sphere whereas at the North pole, they are one and the same.
 
