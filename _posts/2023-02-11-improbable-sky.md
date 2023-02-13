@@ -51,7 +51,7 @@ $$ dA = \left[l^2(\theta)\cos\theta\right]\Delta\theta\Delta\phi. $$
 
 if the sphere of planes were always perpendicular to our patch, this would be it. however, away from the zenith, the tilt increases with $\theta.$ 
 
-![](/img/2023-02-11-alpha-diagram.png)
+![](/img/2023-02-11-alpha-diagram.png){:width="450 px" class="image-centered"}
 
 the surface of the sphere makes angle $\psi$ with our vision patch. as shown in the diagram, the tangent of this angle is 
 
@@ -73,7 +73,7 @@ $$ dA^\prime = \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}. $$
 
 now $\ell$ is itself a function of $\theta,$ which we can find with the law of cosines, which for posterity, we can derive.
 
-![](/img/2023-02-11-law-cosines.png)
+![](/img/2023-02-11-law-cosines.png){:width="450 px" class="image-centered"}
 
 taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have 
 
@@ -95,6 +95,8 @@ with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 $$ p_\text{planes}(\theta) = \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta^\prime)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\,\text{d}\theta^\prime}. $$
 
 now, we can plot $p_\text{plane}(\theta)$ to check when it crosses $1/2\pi.$ the effect of the tilt is to compress a very large amount of airplane sphere into vision patches near the horizon, so we should expect planes to be far more likely at the horizon, then taper off as we approach the zenith.
+
+![](/img/2023-02-11-improbable-stars.png){:width="450 px" class="image-centered"}
 
 plotting the intersection, we find that the likelihood of a plan matches the likelihood of a star when $\theta \approx 0.10563$ or about $6.05$ degrees above the horizon.
     
