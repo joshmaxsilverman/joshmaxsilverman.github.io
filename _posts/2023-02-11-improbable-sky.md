@@ -92,7 +92,7 @@ if the rude goldberg machine we constructed is correct, we should be able to int
 
 with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 
-$$ \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\,\text{d}\theta^\prime}. $$
+$$ p_\text{planes}(\theta) = \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\,\text{d}\theta^\prime}. $$
 
 now, we can plot $p_\text{plane}(\theta)$ to check when it crosses $1/2\pi.$ the effect of the tilt is to compress a very large amount of airplane sphere into vision patches near the horizon, so we should expect planes to be far more likely at the horizon, then taper off as we approach the zenith.
 
