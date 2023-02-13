@@ -96,7 +96,7 @@ which, after solving the quadratic for $\ell,$ gets
 
 $$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} - R \sin\theta. $$
 
-if the rude goldberg machine we constructed is correct, we should be able to integrate this over $\theta$ and $\phi$ to find the surface area of the portion of the plane sphere we can see. indeed, integrating $\ell^2 \cos\theta/cos\alpha$ over $\theta$ and $\phi$ we get $\approx 151023.64\ldots$ which matches the expectation from [$2\pi(R+h)h$](https://mathworld.wolfram.com/SphericalCap.html)
+if the Rube Goldberg machine we constructed is correct, we should be able to integrate this over $\theta$ and $\phi$ to find the surface area of the portion of the plane sphere we can see. indeed, integrating $\ell^2 \cos\theta/cos\alpha$ over $\theta$ and $\phi$ we get $\approx 151023.64\ldots$ which matches the expectation from [$2\pi(R+h)h.$](https://mathworld.wolfram.com/SphericalCap.html)
 
 with this in hand, we can find $p_\text{planes}(\theta):$
 
