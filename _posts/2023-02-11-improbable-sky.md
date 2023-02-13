@@ -51,6 +51,8 @@ $$ dA = \left[l^2(\theta)\cos\theta\right]\Delta\theta\Delta\phi. $$
 
 if the sphere of planes were always perpendicular to our patch, this would be it. however, away from the zenith, the tilt increases with $\theta.$ 
 
+![](/img/2023-02-11-alpha-diagram.png)
+
 the surface of the sphere makes angle $\psi$ with our vision patch. as shown in the diagram, the tangent of this angle is 
 
 $$ \tan\psi = \dfrac{dx}{dy}.$$ 
@@ -65,13 +67,13 @@ with all this taken into account, the effective area on the surface of the plane
 
 $$ dA^\prime = \dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}. $$
 
-if the rude goldberg machine we constructed is correct, we should be able to integrate this over $\theta$ and $\phi$ to find the surface area of the portion of the plane sphere we can see. indeed, integrating $\ell^2 \cos\theta/cos\alpha$ over $\theta$ and $\phi$ we get $\approx 151023.64\ldots$ which matches the expectation from [$2\pi(R+h)h$](https://mathworld.wolfram.com/SphericalCap.html)
-
 <!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
 <!-- the length of the patch in the $\theta$-direction is just $\ell \Delta \theta,$ while the circumference of the strip is $2\pi\ell\cos\theta,$ making $dA = 2\pi\ell^2\cos\theta/\cos\theta = 2\pi\ell^2.$ -->
 
 now $\ell$ is itself a function of $\theta,$ which we can find with the law of cosines, which for posterity, we can derive.
+
+![](/img/2023-02-11-law-cosines.png)
 
 taking the sides to be vectors of lengths $R,$ $R+h,$ and $\ell,$ we have 
 
@@ -85,6 +87,8 @@ $$
 which, after solving the quadratic for $\ell,$ gets 
 
 $$ \ell(\theta) = \sqrt{h (h + 2 R) + R^2 \sin^2\theta} - R \sin\theta. $$
+
+if the rude goldberg machine we constructed is correct, we should be able to integrate this over $\theta$ and $\phi$ to find the surface area of the portion of the plane sphere we can see. indeed, integrating $\ell^2 \cos\theta/cos\alpha$ over $\theta$ and $\phi$ we get $\approx 151023.64\ldots$ which matches the expectation from [$2\pi(R+h)h$](https://mathworld.wolfram.com/SphericalCap.html)
 
 with this in hand, we can find $p_\text{planes}(\theta)$ by computing
 
