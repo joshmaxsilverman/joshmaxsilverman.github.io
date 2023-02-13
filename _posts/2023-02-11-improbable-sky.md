@@ -51,7 +51,7 @@ once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\th
 
 with the planes, we have to account for the tilt of the surface of the airplane sphere relative to our line of sight, and the changing distance to the airplane sphere.
 
-the probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \psi$ to define our patch.
+the probability of seeing a plane in a patch is proportional to its area. let's take some small angular extents $\Delta \theta$ and $\Delta \phi$ to define our patch.
 
 looking at an angle $\theta$ from the horizontal, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta\Delta\phi,$ making the area of the patch
 
