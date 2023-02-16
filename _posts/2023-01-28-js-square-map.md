@@ -43,11 +43,8 @@ We want to find the starting configuration $(a,b,c,d)$ that takes the most map i
 From the map, we can see two properties of $f$:
 
 1. $f$ is invariant under uniform translations
-
 $$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k),$$
-  
 2. and $f$ is invariant under uniform scaling
-
 $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
 
 The second property shows that we can think of $(a,b,c,d)$ as a relative composition (normalize it so that its components sum to $1$). If we can find a composition $(a,b,c,d)$ that maps back to itself then, in principle, the value of $f$ would be infinite. 
