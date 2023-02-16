@@ -46,6 +46,7 @@ From the map, we can see two properties of $f$:
 
 $$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k),$$
 
+
 2. and $f$ is invariant under uniform scaling
 
 $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
