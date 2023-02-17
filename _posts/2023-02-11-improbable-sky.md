@@ -29,11 +29,11 @@ The stars are spherically symmetric, in actuality and with respect to our perspe
 
 To see this, we can draw a sphere representing the uniform plane distribution. A patch of view, perpendicular to our line of sight, sweeps out a larger patch on the plane sphere at the horizon, whereas at zenith, they are one and the same.
 
-## calculation
+## Calculation
 
 With this intuition, we can go about calculating the probability distributions. 
 
-### stars
+### Stars
 
 <!-- First of all, the stars are uniform with respect to our perspective.  -->
 If we gaze up from the horizon, stars are equally likely to be in any angular patch. Since the stars are equally likely to be anywhere in our gaze, and our gaze covers the solid angle $2\pi,$ the probability distribution is
@@ -48,7 +48,7 @@ $$ p_\text{stars}(\theta) = \frac{1}{2\pi}. $$
 
 Once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\theta$ it overtakes $p_\text{stars}(\theta).$
 
-### airplanes
+### Airplanes
 
 With the airplanes, we have to account for the tilt of the surface of the airplane sphere relative to our line of sight, and the changing distance to the airplane sphere, $\ell(\theta).$
 
