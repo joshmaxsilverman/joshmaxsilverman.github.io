@@ -52,11 +52,11 @@ Once we have $p_\text{planes}(\theta),$ we'll check to see at what value of $\th
 
 With the airplanes, we have to account for the tilt of the surface of the airplane sphere relative to our line of sight, and the changing distance to the airplane sphere, $\ell(\theta).$
 
-The probability of seeing an airplane in a vision patch is proportional to its area. Let's take some small angular extents $\Delta \theta$ and $\Delta \phi$ to define our patch.
+The probability of seeing an airplane in a vision patch is proportional to its area. Let's take some small angular extents $d \theta$ and $d \phi$ to define our patch.
 
-Looking at an angle $\theta$ from the horizon, the extent in the $\theta$ direction is given by $\ell(\theta)\Delta \theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta\Delta\phi,$ making the area of the patch
+Looking at an angle $\theta$ from the horizon, the extent in the $\theta$ direction is given by $\ell(\theta)d\theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta d\phi,$ making the area of the patch
 
-$$ \Delta A = \left[l^2(\theta)\cos\theta\right]\Delta\theta\Delta\phi. $$
+$$ dA = \left[l^2(\theta)\cos\theta\right] d\theta d\phi. $$
 
 If the airplane sphere were always perpendicular to our vision patch, this would be it. However, away from the zenith, the tilt increases with $\theta.$ 
 
@@ -74,7 +74,12 @@ We can express $x$ and $y$ in terms of $\theta$ through $x = \ell(\theta)\cos\th
 
 With all this taken into account, the effective area on the surface of the plane sphere occupied by a patch of vision at angle $\theta$ to the horizon is
 
-$$ \Delta A^\prime = \dfrac{\Delta A}{\cos\alpha(\theta)} = \left[\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\right]\Delta\theta\Delta\phi. $$
+$$
+  \begin{align}
+    dA^\prime &= \dfrac{dA}{\cos\alpha(\theta)} \\
+    &= \left[\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\right] d\theta d\phi. 
+  \end{align}
+$$
 
 <!-- we can analyze the tilt by drawing a triangle. our vision patch is perpendicular to us and, so, makes angle $\theta$ with the corresponding patch on the sphere. that means our patch is a projection of the airplane patch at angle $\theta,$ so that $\text{d}A = \text{d}A^\prime/\cos\theta.$ -->
 
