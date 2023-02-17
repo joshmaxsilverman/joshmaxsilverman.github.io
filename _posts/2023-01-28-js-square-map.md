@@ -42,12 +42,12 @@ We want to find the starting configuration $(a,b,c,d)$ that takes the most map i
 
 From the map, we can see two properties of $f$:
 
-1. $f$ is invariant under uniform translations
+1 - $f$ is invariant under uniform translations
 
 $$ f(a,b,c,d) = f(a+k,b+k,c+k,d+k),$$
 
 
-2. and $f$ is invariant under uniform scaling
+2 - and $f$ is invariant under uniform scaling
 
 $$ f(a,b,c,d) = f(\gamma a, \gamma b, \gamma c, \gamma d). $$
 
@@ -70,7 +70,7 @@ $$
 
 Which shows that $b/a = c/b.$ The same comparison for the second and third components shows that $c/b = d/c$ as well.
 
-Putting it all together, we have shown that $a = \gamma b = \gamma^2 c = \gamma^3 d,$ which shows that $(a,b,c,d)$ is monotonic
+Putting it all together, we have shown that $a = b/\gamma = c/\gamma^2 = d/\gamma^3,$ which shows that $(a,b,c,d)$ is monotonic.
 
 Now, if we compare the first and fourth components, we get (assuming $a>b>c>d,$ and therefore $\gamma > 1$):
 
@@ -94,7 +94,7 @@ So, an ideal composition vector is given by
 
 $$ \dfrac{1}{1+\gamma+\gamma^2+\gamma^3}\left(1,\gamma,\gamma^2,\gamma^3\right), $$ 
 
-which is stationary under the map, as expected. From here we can just scaled the composition vector, looking for its closest integer approximation, which is
+which is stationary under the map, as expected. From here we can just scale up the composition vector, looking for its closest integer approximation, which is
 
 $$ \phi = \left(10301680,5600910,3045153,1655616\right). $$
 
