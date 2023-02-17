@@ -58,7 +58,7 @@ Looking at an angle $\theta$ from the horizon, the extent in the $\theta$ direct
 
 $$ dA = \left[l^2(\theta)\cos\theta\right] d\theta\, d\phi. $$
 
-If the airplane sphere were always perpendicular to our vision patch, this would be it. However, away from the zenith, the tilt increases with $\theta.$ 
+If the airplane sphere were always parallel to our vision patch, this would be it. However, away from the zenith, the tilt increases with $\theta.$ 
 
 ![](/img/2023-02-11-alpha-diagram.png){:width="450 px" class="image-centered"}
 
