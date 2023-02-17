@@ -56,7 +56,7 @@ The probability of seeing an airplane in a vision patch is proportional to its a
 
 Looking at an angle $\theta$ from the horizon, the extent in the $\theta$ direction is given by $\ell(\theta)d\theta$ while the extent in the $\phi$ direction is $\ell(\theta)\cos\theta d\phi,$ making the area of the patch
 
-$$ dA = \left[l^2(\theta)\cos\theta\right] d\theta d\phi. $$
+$$ dA = \left[l^2(\theta)\cos\theta\right] d\theta\, d\phi. $$
 
 If the airplane sphere were always perpendicular to our vision patch, this would be it. However, away from the zenith, the tilt increases with $\theta.$ 
 
@@ -77,7 +77,7 @@ With all this taken into account, the effective area on the surface of the plane
 $$
   \begin{align}
     dA^\prime &= \dfrac{dA}{\cos\alpha(\theta)} \\
-    &= \left[\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\right] d\theta d\phi. 
+    &= \left[\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}\right] d\theta\, d\phi. 
   \end{align}
 $$
 
@@ -106,7 +106,7 @@ If the Rube Goldberg machine we've constructed is correct, we should be able to 
 
 With this in hand, we can find
 
-$$ p_\text{planes}(\theta) = \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta^\prime)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\,\text{d}\theta^\prime}. $$
+$$ p_\text{planes}(\theta) = \dfrac{\dfrac{\ell^2(\theta)\cos\theta}{\cos\alpha(\theta)}}{2\pi\int\limits_0^{\frac12\pi} \dfrac{\ell^2(\theta^\prime)\cos\theta^\prime}{\cos\alpha(\theta^\prime)}\, d\theta^\prime}. $$
 
 Now, we can plot $p_\text{planes}(\theta)$ to see where it crosses $1/2\pi.$ The effect of the tilt is to compress a very large amount of airplane sphere into vision patches near the horizon, so we should expect planes to be far more likely at the horizon, then taper off as we approach the zenith. This is just what we see:
 
