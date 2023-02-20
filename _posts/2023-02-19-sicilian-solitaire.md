@@ -45,7 +45,7 @@ when $m\bmod 3 = 0,$ with similar relationships for the $m\bmod 3 = 1$ and $m\bm
 
 generalizing, we get
 
-$$ P(\vec{n}, m) = \sum_{j\neq m\bmod c} \frac{n_j}{rs - m}P(\vec{n} - \hat{e}_j, m+1) + \dfrac{rs - m -\sum_j n_j}{rs -m}P(\vec{n}, m+1) .$$
+$$ P(\vec{n}, m) = \sum_{j\neq m\,\bmod\,c} \frac{n_j}{rs - m}P(\vec{n} - \hat{e}_j, m+1) + \dfrac{rs - m -\sum_j n_j}{rs -m}P(\vec{n}, m+1) .$$
 
 sss
 
