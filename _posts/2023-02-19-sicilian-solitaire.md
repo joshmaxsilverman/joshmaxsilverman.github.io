@@ -19,6 +19,17 @@ this puzzle has two question. the first is, what is the probability of winning? 
 
 we'll approach the first question in two ways — by a simple approximation, and by exact recursion.
 
+### approximation
+
+in the deck, there are $12$ cards whose positions we care about: the four $1$s, the four $2$s, and the four $3$s. because the deck is scrambled, on average, each of those cards has probability $\frac23$ to not be placed into one of its own slots.
+
+generalizing to $s$ suits and $r$ ranks, and $c$ counts, this gives
+
+$$ P_\text{win} = \left(\frac{c}{1+c}\right)^{sc}. $$
+
+### recursion
+
+sss
 
 
 <br>
