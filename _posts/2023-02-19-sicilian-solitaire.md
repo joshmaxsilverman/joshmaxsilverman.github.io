@@ -51,7 +51,7 @@ with $P(0,0,0,rs) = 0$ as the base case.
 
 with $\vec{n} = \left(n_1 = 4, n_2 = 4, n_3 = 4\right),$ we get 
 
-$$ P(\vec{n}, 0) = \dfrac{1124550557}{135373757400} = 0.008307005571819934 $$
+$$ P(\vec{n}, 0) = \dfrac{1124550557}{135373757400} \approx 0.008307 $$
 
 
 <br>
