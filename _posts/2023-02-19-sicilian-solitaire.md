@@ -27,7 +27,25 @@ generalizing to $s$ suits and $r$ ranks, and $c$ counts, this gives
 
 $$ P_\text{win} = \left(1-\frac{1}{c}\right)^{sc}. $$
 
+this is a good approximation that gets better as $r$ increases.
+
 ### recursion
+
+we can imagine placing numbers one at a time, starting from the first slot. 
+
+suppose we've already placed $m$ cards, still have $n_1$ $1$s, $n_2$ $2$s, and $n_3$ $3$s, haven't lost yet, and are currently on a "$1$" slot. 
+
+this means we can remain a winner so long as we place anything but a $1$ on the present turn. we can do this by placing a $2$ (probability $n_2/(40 - m)$), a $3$ (probability $n_3/(40-m)$), or any number from $4$ to $10$ (probability $(40 - m - n_1 - n_2 - n_3)/(40 - m)$).
+
+this gives us 
+
+$$ P(n_1, n_2, n_3, m) = \dfrac{n_2}{40-m}P(n_1, n_2-1, n_3, m+1) + \dfrac{n_3}{40-m}P(n_1, n_2, n_3-1, m+1) + \dfrac{40-m-n_1-n_2-n_3}{40-m}P(n_1, n_2, n_3, m+1) $$
+
+when $m\bmod 3 = 0,$ with similar relationships for the $m\bmod 3 = 1$ and $m\bmod 3 = 2$ cases.
+
+generalizing, we get
+
+$$ P(\vec{n}, m) = \sum_{j\neq m\bmod c} \frac{n_j}{rs - m}P(\vec{n} - \hat{e}_j, m+1) + \dfrac{rs - m -\sum_j n_j}{rs -m}P(\vec{n}, m+1) .$$
 
 sss
 
