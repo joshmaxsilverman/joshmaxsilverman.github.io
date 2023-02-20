@@ -41,7 +41,8 @@ this gives us
 
 $$\begin{align} 
 
-P(n_1, n_2, n_3, m) &= \dfrac{n_2}{40-m}P(n_1, n_2-1, n_3, m+1) + \dfrac{n_3}{40-m}P(n_1, n_2, n_3-1, m+1) \\
+P(n_1, n_2, n_3, m) &= \dfrac{n_2}{40-m}P(n_1, n_2-1, n_3, m+1) \\
+                    &+ \dfrac{n_3}{40-m}P(n_1, n_2, n_3-1, m+1) \\
                     &+ \dfrac{40-m-n_1-n_2-n_3}{40-m}P(n_1, n_2, n_3, m+1) 
 
 \end{align}$$
