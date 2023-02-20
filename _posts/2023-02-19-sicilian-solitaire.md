@@ -15,7 +15,7 @@ tags: recursion approximation
 
 ## Solution
 
-this puzzle has two question. the first is, what is the probability of winning? the second is, why would anyone want to play this game?
+this puzzle has two questions. the first is, what is the probability of winning? the second is, why would anyone want to play this game?
 
 we'll approach the first question in two ways — by a simple approximation, and by exact recursion.
 
