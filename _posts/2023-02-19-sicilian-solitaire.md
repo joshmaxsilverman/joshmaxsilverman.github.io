@@ -25,7 +25,7 @@ in the deck, there are $12$ cards whose positions we care about: the four $1$s, 
 
 generalizing to $s$ suits and $r$ ranks, and $c$ counts, this gives
 
-$$ P_\text{win} = \left(\frac{c}{1+c}\right)^{sc}. $$
+$$ P_\text{win} = \left(1-\frac{1}{c}\right)^{sc}. $$
 
 ### recursion
 
