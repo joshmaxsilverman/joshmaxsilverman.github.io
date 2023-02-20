@@ -53,5 +53,15 @@ with $\vec{n} = \left(n_1 = 4, n_2 = 4, n_3 = 4\right),$ we get
 
 $$ P(\vec{n}, 0) = \dfrac{1124550557}{135373757400} \approx 0.008307 $$
 
+### trends
+
+we can use the recursive result to confirm different trends.
+
+first, as $r$ increases, $P_\text{win}$ does indeed tend toward $(1-1/c)^{sc}.$
+
+second, the naive prediction captures the variation in $P_\text{win}$ as we increase the count $c,$ tending toward $e^{-4}\approx 0.0183.$
+
+finally, $P_\text{win}$ plummets to zero as the number of suits $s$ increases.
+
 
 <br>
