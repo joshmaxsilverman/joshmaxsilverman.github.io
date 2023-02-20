@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Sicilian solitaire
 date: 2023/02/19
-subtitle: What do you do when you have no control and no chance? 
-tags:
+subtitle: There's nothing to do and there's nothing to win
+tags: recursion approximation
 ---
 
 >Question
