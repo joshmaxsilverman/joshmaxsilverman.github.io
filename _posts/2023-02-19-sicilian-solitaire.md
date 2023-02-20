@@ -43,13 +43,11 @@ this means we can remain a winner so long as we place anything but a $1$ on the 
 
 this gives us 
 
-$$\begin{align} 
-
+$$
 P(n_1, n_2, n_3, m) &= \dfrac{n_2}{40-m}P(n_1, n_2-1, n_3, m+1) \\
                     &+ \dfrac{n_3}{40-m}P(n_1, n_2, n_3-1, m+1) \\
                     &+ \dfrac{40-m-n_1-n_2-n_3}{40-m}P(n_1, n_2, n_3, m+1) 
-
-\end{align}$$
+$$
 
 when $m\bmod 3 = 0,$ with similar relationships for the $m\bmod 3 = 1$ and $m\bmod 3 = 2$ cases.
 
