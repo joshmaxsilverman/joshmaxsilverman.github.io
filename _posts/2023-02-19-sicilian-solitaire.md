@@ -65,13 +65,15 @@ $$ P(\vec{n}, 0) = \dfrac{1124550557}{135373757400} \approx 0.008307 $$
 
 ### trends
 
-we can use the recursive result to confirm different trends.
+we can use the recursive result to confirm two trends:
 
-first, as $r$ increases, $P_\text{win}$ does indeed tend toward $(1-1/c)^{sc}.$
+- as $r$ increases, $P_\text{win}$ does indeed tend toward $(1-1/c)^{sc}.$
 
-second, the naive prediction captures the variation in $P_\text{win}$ as we increase the count $c,$ tending toward $e^{-s}$ $(e^{-4}\approx 0.0183\ldots$ for $s=4).$
+![](/img/2023-02-19-vary-r.png){:width="450 px" class="image-centered"}
 
-finally, $P_\text{win}$ plummets to zero as the number of suits $s$ increases.
+- $P_\text{win}$ plummets to zero as the number of suits $s$ increases.
 
+![](/img/2023-02-19-vary-s.png){:width="450 px" class="image-centered"}
 
+finally, $P_\text{win}$ tends toward $e^{-s}$ as $c$ gets large $($ with $c=3$, the example in the problem underwhelms $e^{-4}\approx 0.0183\ldots$ for $s=4).$
 <br>
