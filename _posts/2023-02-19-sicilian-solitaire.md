@@ -7,11 +7,15 @@ subtitle: There's nothing to do and there's nothing to win
 tags: recursion approximation
 ---
 
->Question
+>**Question**: There’s a version of solitaire played in southern Italy with a deck of $40$ Neapolitan cards, with four suits numbered from $1$ to $10.$ The deck is shuffled and then cards are turned over one at a time. Flipping over the first card you say “one,” the second card “two” and the third card “three.” You repeat this, saying “one” for the fourth card, “two” for the fifth card and “three” for the sixth card. You continue your way through the deck, until you at last say “one” for the $40^\text{th}$ card.
+>
+>If at any point the number you say matches the value of the card you flip over, you lose.
+>
+>What is your probability of winning the game?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/how-many-rectangles-can-you-make/))
 
 ## Solution
 
