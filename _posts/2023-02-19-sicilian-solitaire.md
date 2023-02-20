@@ -75,5 +75,5 @@ we can use the recursive result to confirm two trends:
 
 ![](/img/2023-02-19-vary-s-prime.png){:width="450 px" class="image-centered"}
 
-finally, $P_\text{win}$ tends toward $e^{-s}$ as $c$ gets large $($ with $c=3$, the example in the problem underwhelms $e^{-4}\approx 0.0183\ldots$ for $s=4).$
+finally, $P_\text{win}$ tends toward $e^{-s}$ as $c$ gets large $($with $c=3$, the example in the problem underwhelms $e^{-4}\approx 0.0183\ldots$ for $s=4).$
 <br>
