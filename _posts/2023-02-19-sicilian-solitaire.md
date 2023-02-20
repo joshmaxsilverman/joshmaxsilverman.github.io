@@ -57,7 +57,7 @@ generalizing, we get
 
 $$ P(\vec{n}, m) = \left[\sum_{j\neq \left(m\,\bmod\,c\right)} \frac{n_j}{rs - m}P(\vec{n} - \hat{e}_j, m+1)\right] + \dfrac{rs - m -\sum_j n_j}{rs -m}P(\vec{n}, m+1) $$
 
-with $P(0,0,0,rs) = 0$ as the base case.
+with $P(0,0,0,rs) = 1$ as the base case.
 
 with $\vec{n} = \left(n_1 = 4, n_2 = 4, n_3 = 4\right),$ we get 
 
