@@ -51,7 +51,7 @@ P(n_1, n_2, n_3, m) &= \dfrac{n_2}{40-m}P(n_1, n_2-1, n_3, m+1) \\
 \end{align}
 $$
 
-when $m\bmod 3 = 0,$ with similar relationships for the $m\bmod 3 = 1$ and $m\bmod 3 = 2$ cases.
+when $m\bmod 3 = 1,$ with similar relationships for the $m\bmod 3 = 2$ and $m\bmod 3 = 0$ cases.
 
 generalizing, we get
 
