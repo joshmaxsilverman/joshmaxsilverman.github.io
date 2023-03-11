@@ -40,7 +40,7 @@ breaking the linear segment into its horizontal and vertical components, we get 
 $$
   \begin{align}
 T &= \int \dfrac{\sqrt{dx^2 + dy^2}}{v(y)} \\
-  &= \int dx\,\dfrac{\sqrt{1 + \left(\frac{dy}{dx}\right)^2} }{v(y)}}.
+  &= \int dx\,\dfrac{\sqrt{1 + \left(\frac{dy}{dx}\right)^2} }{v(y)}.
   \end{align}
 $$
 
