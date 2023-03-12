@@ -50,7 +50,10 @@ conserving energy, the marble's velocity at height $y$ below its starting point 
 
 with this, we get
 
-$$ T = \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}}. $$
+$$ \begin{align}
+T &= \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}} \\
+&= \int dx\, \mathcal{T}(y,y^\prime). 
+\end{align}$$
 
 so, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the curve $y(x)$ that minimizes it. 
 
@@ -63,7 +66,7 @@ $$ T(y,y^\prime) = \int dx\, \mathcal{T}(y,y^\prime) $$
 expand around the optimum and get
 
 $$
-  \delta T(y,y^\prime) \approx \int dx\, \dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x).
+  \delta T(y,y^\prime) \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x)\right].
 $$
 
 the disturbance $\delta(x)$ is arbitrary, so there isn't much that we can say about its derivative. however, we can move the derivative off it if we integrate by parts. doing that, we get 
