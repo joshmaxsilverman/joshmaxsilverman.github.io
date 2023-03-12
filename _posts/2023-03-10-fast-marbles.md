@@ -74,7 +74,7 @@ $$
 
 for the optimal trajectory, this variation is equal to zero. looking at the integral, $\delta(x)$ is, apart from having small magnitude, a totally arbitrary function. for example, we could define it to be positive wherever the bracketed expression is positive, and negative wherever it's negative, making the integral a positive number. the only way for the variation to be zero, regardless of $\delta(x)$ is for the bracketed expression itself to be everywhere zero. this means that the optimal trajectory obeys 
 
-$$ \frac{\partial\mathcal{T}}\partial y} = \frac{d}{dx}\frac{\partial\mathcal{T}}{\partial y^\prime}, $$
+$$ \frac{\partial\mathcal{T}}{\partial y} = \frac{d}{dx}\frac{\partial\mathcal{T}}{\partial y^\prime}, $$
 
 which is the the euler-lagrange equation. 
 
