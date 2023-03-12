@@ -48,7 +48,7 @@ $$
 
 conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$ 
 
-with this, we get
+with this, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory.
 
 $$ \begin{align}
 T &= \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}} \\
@@ -80,6 +80,13 @@ for the optimal trajectory, this variation is equal to zero. looking at the inte
 $$ \frac{\partial\mathcal{T}}{\partial y} = \frac{d}{dx}\frac{\partial\mathcal{T}}{\partial y^\prime}, $$
 
 which is the the euler-lagrange equation. 
+
+to take these derivatives, we can use the explicit form for $\mathcal{T}$ above, which yields an unholy mess but boils down nicely to
+
+$$\begin{align}
+  0 &= \dfrac{y^{\prime\prime}}{1+{y^\prime}^2} + \dfrac{1}{2y} \\
+  &= 2y^\prime\prime}y + 1 + {y^\prime}^2
+\end{align}$$
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
