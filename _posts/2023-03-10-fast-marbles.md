@@ -60,6 +60,23 @@ add an arbitrary, but small amplitude function $\delta(x)$ to $y^*(x).$ this mea
 
 $$ T(y,y^\prime) = \int dx\, \mathcal{T}(y,y^\prime) $$
 
+expand around the optimum and get
+
+$$
+  \delta T(y,y^\prime) \approx \int dx\, \dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x).
+$$
+
+the disturbance $\delta(x)$ is arbitrary, so there isn't much that we can say about its derivative. however, we can move the derivative off it if we integrate by parts. doing that, we get 
+
+$$
+  \delta T(y,y^\prime) \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y} - \frac{d}{dx}\dfrac{\partial \mathcal{T}}{\partial y^\prime}\right]\delta(x).
+$$
+
+for the optimal trajectory, this variation is equal to zero. looking at the integral, $\delta(x)$ is, apart from having small magnitude, a totally arbitrary function. for example, we could define it to be positive wherever the bracketed expression is positive, and negative wherever it's negative, making the integral a positive number. the only way for the variation to be zero, regardless of $\delta(x)$ is for the bracketed expression itself to be everywhere zero. this means that the optimal trajectory obeys 
+
+$$ \frac{\partial\mathcal{T}}\partial y} = \frac{d}{dx}\frac{\partial\mathcal{T}}{\partial y^\prime}, $$
+
+which is the the euler-lagrange equation. 
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
