@@ -52,6 +52,8 @@ with this, we get
 
 $$ T = \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}}. $$
 
+we want to find the curve $y(x)$ that minimizes $T.$ if we had that function (let's call it $y^*(x)$), and it really is a minimum, then any small change we make to it should keep $T$ very close to the minimum value. in a sense, taking the derivative of $T$ with respect to the function $y(x)$ should be $0.$
+
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
 <br>
