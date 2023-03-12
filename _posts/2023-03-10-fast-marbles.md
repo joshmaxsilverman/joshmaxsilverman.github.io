@@ -85,7 +85,7 @@ to take these derivatives, we can use the explicit form for $\mathcal{T}$ above,
 
 $$\begin{align}
   0 &= \dfrac{y^{\prime\prime}}{1+{y^\prime}^2} + \dfrac{1}{2y} \\
-  &= 2y^\prime\prime}y + 1 + {y^\prime}^2
+  &= 2y^{\prime\prime}y + 1 + {y^\prime}^2
 \end{align}$$
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
