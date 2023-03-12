@@ -25,6 +25,8 @@ given two points and the imperative to minimize time, the cycloid will do whatev
 
 this makes good physical sense -- energy is conserved, and dipping down the full $\Delta y$ means we achieve the maximum velocity for the majority of the trajectory.
 
+### calculation
+
 with the logic behind us, what remains is deriving the shape of the curve (a cycloid), use it to determine the value of $\Delta x,$ and then plug the trajectory back into the expression for $T.$
 
 the total time $T$ is the sum of all the little time intervals that make up the trajectory:
@@ -44,6 +46,12 @@ T &= \int \dfrac{\sqrt{dx^2 + dy^2}}{v(y)} \\
   \end{align}
 $$
 
+conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$ 
 
+with this, we get
+
+$$ T = \int dx\,\dfrac{\sqrt{1 + \left(y^\prime\right)^2} }{2gy}. $$
+
+<!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
 <br>
