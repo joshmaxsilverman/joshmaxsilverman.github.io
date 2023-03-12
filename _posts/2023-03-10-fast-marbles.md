@@ -50,7 +50,7 @@ conserving energy, the marble's velocity at height $y$ below its starting point 
 
 with this, we get
 
-$$ T = \int dx\,\dfrac{\sqrt{1 + \left(y^\prime\right)^2} }{2gy}. $$
+$$ T = \int dx\,\sqrt{\dfrac{1 + \left(y^\prime\right)^2}{2gy}}. $$
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
