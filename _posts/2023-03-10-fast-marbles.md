@@ -58,7 +58,7 @@ if we had that curve (let's call it $y^*(x)$), and it really is a minimum, then 
 
 add an arbitrary, but small amplitude function $\delta(x)$ to $y^*(x).$ this means that $y(x) = y^*(x) + \delta(x)$ and $y^\prime(x) = {y^*}^\prime(x) + \frac{d}{dx}\delta(x).$
 
-$$ T(y,y^\prime) = \int\,\dx \mathcal{T}(y,y^\prime) $$
+$$ T(y,y^\prime) = \int dx\, \mathcal{T}(y,y^\prime) $$
 
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
