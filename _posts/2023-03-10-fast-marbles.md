@@ -1,17 +1,21 @@
 ---
 layout: post
-published: false
-title: 
-date: 2018/04/21
-subtitle:
-tags:
+published: true
+title: Fast times at the track
+date: 2023/03/12
+subtitle: It won't be long before this marble's at your door
+tags: optimality conservation-of-energy calculus
 ---
 
->Question
+>**Question**: While passing the time at home one evening, you decide to set up a marble race course. No Teflon is spared, resulting in a track that is effectively frictionless.
+#
+# The start and end of the track are $1$ meter apart, and both positions are $10$ centimeters off the floor. It’s up to you to design a speedy track. But the track must always be at floor level or higher — please don’t dig a tunnel through your floorboards.
+#
+# What’s the fastest track you can design, and how long will it take the marble to complete the course? 
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/how-fast-can-you-make-the-track/))
 
 ## Solution
 
