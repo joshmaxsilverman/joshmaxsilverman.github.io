@@ -90,8 +90,35 @@ $$\begin{align}
 
 if we can solve this differential equation, the ideal shape will be revealed. 
 
-the equation has a $1$ indicating a linear term in $y,$ as well as a mixed $y^{\prime\prime}y$ term, indicating coupling between the linear and first order terms. however, the coupled term can't simply be $y^\prime y$, or else there wouldn't be a $2$ on the ${y^\prime}^2$ term.
+the equation has a mixed $y^{\prime\prime}y$ term, indicating coupling between the linear and first order terms. however, the coupled term can't simply be $y^\prime y$, or else there wouldn't be a $2.$ the $2$ could arise if the term were $y{y^prime}^2.$ following this thread, if we multiply through by another factor of $y^\prime,$ we get
+
+$$ 2y^{\prime\prime}y^\prime y + y^\prime + {y^\prime}^3 = 0$$
+
+which is the derivative of 
+
+$$ y\left(1+{y^prime}^2\right) ,$$
+
+leading us to 
+
+$$ y\left(1+{y^prime}^2\right) = \text{const.}$$
+
+or
+
+$$ \frac{dy}{dx} = \sqrt{\frac{\text{const.} - y}{y}. $$
+
+we can actually solve this without doing an integral. drawing a diagram, we can equate $dx/dy$ with the tangent of the angle with the vertical (as i did in a [recent problem](https://joshmaxsilverman.github.io/2023-02-11-improbable-sky/)) giving
+
+$$\begin{align}
+\left(\dfrac{dx}{dy}\right)^2 &= \frac{\text{const.} - y}{y} \\
+\dfrac{\sin^2\theta}{\cos^2\theta} &= \\
+y\sin^2\theta &= \text{const.}\cos^2\theta - y\cos^2\theta \\
+y &= \text{const.}\cos^2\theta
+\end{align}$$
+
+
 
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
+
+
 
 <br>
