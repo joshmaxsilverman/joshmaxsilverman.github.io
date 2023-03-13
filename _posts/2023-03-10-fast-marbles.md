@@ -8,10 +8,10 @@ tags: optimality conservation-of-energy calculus
 ---
 
 >**Question**: While passing the time at home one evening, you decide to set up a marble race course. No Teflon is spared, resulting in a track that is effectively frictionless.
-#
-# The start and end of the track are $1$ meter apart, and both positions are $10$ centimeters off the floor. It’s up to you to design a speedy track. But the track must always be at floor level or higher — please don’t dig a tunnel through your floorboards.
-#
-# What’s the fastest track you can design, and how long will it take the marble to complete the course? 
+>
+>The start and end of the track are $1$ meter apart, and both positions are $10$ centimeters off the floor. It’s up to you to design a speedy track. But the track must always be at floor level or higher — please don’t dig a tunnel through your floorboards.
+>
+> What’s the fastest track you can design, and how long will it take the marble to complete the course? 
 
 <!--more-->
 
