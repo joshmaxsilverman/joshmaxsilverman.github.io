@@ -125,14 +125,16 @@ $$
 \begin{align}
   \frac{\sin\theta}{\cos\theta} &= \frac{dx}{dy} \\
     &= \frac{dx}{d\theta}\frac{d\theta}{dy} \\
-    &= -\frac{dx}{d\theta}\frac{1}{2\cos\theta\sin\theta}
+    &= -\frac{dx}{d\theta}\frac{1}{2h\cos\theta\sin\theta}
 \end{align}
 $$
 
 or 
 
-$$ \frac{dx}{d\theta} = -2\sin^2\theta. $$
+$$ \frac{dx}{d\theta} = 1 - 2\sin^2\theta. $$
 
+playing around with derivatives, $\sin\theta\cos\theta\rightarrow 1 - 2\sin^2\theta,$ so $h\left(\sin\theta\cos\theta - \theta\right)$ gives the behavior we're looking for, so
 
+$$ x = h\left(sin\theta\cos\theta - \theta\right). $$
 
 <br>
