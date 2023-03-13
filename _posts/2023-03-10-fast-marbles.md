@@ -94,7 +94,7 @@ $$\begin{align}
 
 if we can solve this differential equation, the ideal shape will be revealed. 
 
-the equation has a mixed $y^{\prime\prime}y$ term, indicating coupling between the linear and first order terms. however, the coupled term can't simply be $y^\prime y$, or else there wouldn't be a $2.$ the $2$ could arise if the term were $y{y^prime}^2.$ following this thread, if we multiply through by another factor of $y^\prime,$ we get
+the equation has a mixed $y^{\prime\prime}y$ term, indicating coupling between the linear and first order terms. however, the coupled term can't simply be $y^\prime y$, or else there wouldn't be a $2.$ the $2$ could arise if the term were $y{y^\prime}^2.$ following this thread, if we multiply through by another factor of $y^\prime,$ we get
 
 $$ 2y^{\prime\prime}y^\prime y + y^\prime + {y^\prime}^3 = 0$$
 
