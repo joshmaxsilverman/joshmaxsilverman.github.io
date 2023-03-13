@@ -147,9 +147,7 @@ with these solutions in hand, we can figure out where the marble hits the floor 
 
 ### characterizing the transit
 
-to recap, the marble follows the curve defined by $\left(x(\theta),y(\theta)\right)$ down to the floor at $x_h = \tfrac12h\pi$ where it tolls the distance $(1-2x_h)$ before following the same curve back up.
-
-plugging in $\theta = \pi/2,$ we get $y=h$ as expected, as well as $x = h\pi/2$ which is approximately $0.157\text{ m}.$
+the marble follows the curve defined by $\left(x(\theta),y(\theta)\right)$ down to the floor, which happens when $\theta = \pi/2,$ giving $x_h = \tfrac12h\pi.$ from there it slides the distance $(1-2x_h)$ before following the same curve back up at $x=1-x_h.$.
 
 ![](/img/2023-03-12-marble-track-plot.png.PNG){:width="450 px" class="image-centered"}
 
