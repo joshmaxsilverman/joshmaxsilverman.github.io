@@ -135,9 +135,9 @@ or
 
 $$ \frac{dx}{d\theta} = - h\cos^2\theta. $$
 
-playing around with derivatives, $\sin\theta\cos\theta\rightarrow \left(2\cos^2\theta - \theta\right),$ so $h\left(\sin\theta\cos\theta + \theta\right)$ gives the behavior we're looking for:
+playing around with derivatives, $\sin\theta\cos\theta\rightarrow \left(2\cos^2\theta - \theta\right),$ so $h\left(\theta + \sin\theta\cos\theta\right)$ gives the behavior we're looking for:
 
-$$ x = h\left(\sin\theta\cos\theta + \theta\right). $$
+$$ x = h\left(\theta + \sin\theta\cos\theta\right). $$
 
 with these solutions in hand, we can figure out where the marble hits the floor (and likewise, when it starts to curve back up), and the total time required for the marble to make its transit.
 
