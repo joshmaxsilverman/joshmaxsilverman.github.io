@@ -96,23 +96,25 @@ $$ 2y^{\prime\prime}y^\prime y + y^\prime + {y^\prime}^3 = 0$$
 
 which is the derivative of 
 
-$$ y\left(1+{y^prime}^2\right) ,$$
+$$ y\left(1+{y^\prime}^2\right) ,$$
 
 leading us to 
 
-$$ y\left(1+{y^prime}^2\right) = \text{const.}$$
+$$ y\left(1+{y^\prime}^2\right) = \text{const.}$$
 
 or
 
 $$ \frac{dy}{dx} = \sqrt{\frac{\text{const.} - y}{y}. $$
 
+since the curve should meet the floor at zero slope, we know that $dy/dx$ is zero when $y=h,$ which tells us that $\text{const.} = h.$
+
 we can actually solve this without doing an integral. drawing a diagram, we can equate $dx/dy$ with the tangent of the angle with the vertical (as i did in a [recent problem](https://joshmaxsilverman.github.io/2023-02-11-improbable-sky/)) giving
 
 $$\begin{align}
-\left(\dfrac{dx}{dy}\right)^2 &= \frac{\text{const.} - y}{y} \\
+\left(\dfrac{dx}{dy}\right)^2 &= \frac{h - y}{y} \\
 \dfrac{\sin^2\theta}{\cos^2\theta} &= \\
-y\sin^2\theta &= \text{const.}\cos^2\theta - y\cos^2\theta \\
-y &= \text{const.}\cos^2\theta
+y\sin^2\theta &= h\cos^2\theta - y\cos^2\theta \\
+y &= h\cos^2\theta
 \end{align}$$
 
 
