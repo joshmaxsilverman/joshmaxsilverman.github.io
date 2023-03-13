@@ -61,9 +61,9 @@ T &= \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}} \\
 
 so, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the curve $y(x)$ that minimizes it. 
 
-if we had that curve (let's call it $y^*(x)$), and it really is a minimum, then any small change we make to it should keep $T$ very close to the minimum value. in a sense, taking the derivative of $T$ with respect to the function $y(x)$ should be $0.$
+if we had that curve (let's call it $y^\*(x)$), and it really is a minimum, then any small change we make to it should keep $T$ very close to the minimum value. in a sense, taking the derivative of $T$ with respect to the function $y(x)$ should be $0.$
 
-add an arbitrary, but small amplitude function $\delta(x)$ to $y^\*(x).$ this means that $y(x) = y^*(x) + \delta(x)$ and $y^\prime(x) = {y^*}^\prime(x) + \frac{d}{dx}\delta(x).$
+add an arbitrary, but small amplitude function $\delta(x)$ to $y^\*(x).$ this means that $y(x) = y^\*(x) + \delta(x)$ and $y^\prime(x) = {y^\*}^\prime(x) + \frac{d}{dx}\delta(x).$
 
 $$ T(y,y^\prime) = \int dx\, \mathcal{T}(y,y^\prime) $$
 
