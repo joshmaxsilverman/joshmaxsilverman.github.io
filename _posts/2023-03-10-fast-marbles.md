@@ -131,7 +131,7 @@ $$
 
 or 
 
-$$ \frac{dx}{\theta} = -2\sin^2\theta. $$
+$$ \frac{dx}{d\theta} = -2\sin^2\theta. $$
 
 
 
