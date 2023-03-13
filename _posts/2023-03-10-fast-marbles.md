@@ -133,7 +133,7 @@ $$
 
 or 
 
-$$ \frac{dx}{d\theta} = - 2\cos^2\theta. $$
+$$ \frac{dx}{d\theta} = - h\cos^2\theta. $$
 
 playing around with derivatives, $\sin\theta\cos\theta\rightarrow \left(2\cos^2\theta - \theta\right),$ so $h\left(\sin\theta\cos\theta + \theta\right)$ gives the behavior we're looking for:
 
