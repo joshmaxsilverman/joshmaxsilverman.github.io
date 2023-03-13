@@ -125,8 +125,8 @@ $$
 \begin{align}
   \frac{\sin\theta}{\cos\theta} &= \frac{dx}{dy} \\
     &= \frac{dx}{d\theta}\frac{d\theta}{dy} \\
-    &= -\frac{dx}{d\theta}\frac{1}{2\cos\theta\sin\theta
-end{align}
+    &= -\frac{dx}{d\theta}\frac{1}{2\cos\theta\sin\theta}
+\end{align}
 $$
 
 or 
