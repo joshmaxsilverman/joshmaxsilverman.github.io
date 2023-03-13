@@ -153,7 +153,7 @@ to find out, we can go back to our original integral, now with the benefit of $y
 
 $$
 \begin{align}
-T_\text{curve} &= \frac{1}{\sqrt{2g}\int\limits_0^{x_h}dx\, \sqrt{\dfrac{1+{y^\prime}^2}{y}} \\
+T_\text{curve} &= \frac{1}{\sqrt{2g}}\int\limits_0^{x_h}dx\, \sqrt{\dfrac{1+{y^\prime}^2}{y}} \\
 &= ddd
 \end{align}
 $$
