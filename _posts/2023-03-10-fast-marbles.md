@@ -157,8 +157,8 @@ $$
 \begin{align}
 T_\text{curve} &= \frac{1}{\sqrt{2g}}\int\limits_0^{x_h}dx\, \sqrt{\dfrac{1+{y^\prime}^2}{y}} \\
 &= \frac{1}{\sqrt{2g}}\int\limits_0^{\tfrac12\pi}\frac{dx}{d\theta}d\theta\, \sqrt{\dfrac{1+\frac{h-y}{y}}{y}} \\
-&= \frac{1}{\sqrt{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \sqrt{\dfrac{h}{y^2}}h\left(1-\sin^2theta+\cos^2\theta\right) \\
-&= \sqrt{\frac{h}{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \dfrac{1}{\cos^2\theta}h\left(2\cos^2theta\right) \\
+&= \frac{1}{\sqrt{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \sqrt{\dfrac{h}{y^2}}h\left(1-\sin^2\theta+\cos^2\theta\right) \\
+&= \sqrt{\frac{h}{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \dfrac{1}{\cos^2\theta}h\left(2\cos^2\theta\right) \\
 &= \sqrt{\frac{h}{2g}}\pi
 \end{align}
 $$
@@ -175,7 +175,7 @@ $$
 
 taking limits, this has the behavior we expect. when $w\gg h,$ we get $T_\text{total} \approx w/\sqrt{2gh},$ the back of the envelope solution.
 
-were there no floor, we could have set the initial condition through $x(\pi/2) = \tfrac12 w$
+were there no floor, we could have set the initial condition through $x(\tfrac12\pi) = \tfrac12 w,$ giving $x = \tfrac{w}{\pi}\left(\theta + \sin\theta\cos\theta\right)$ and $y = \frac{w}{\pi}\cos^2\theta.$ as it happens, this is the relationship between $h$ and $w$ we get minimizing the expression above, confirming the fact that the marble does best bottoming out.
 
 
 <br>
