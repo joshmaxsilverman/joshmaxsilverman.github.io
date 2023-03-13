@@ -88,6 +88,10 @@ $$\begin{align}
   &= 2y^{\prime\prime}y + 1 + {y^\prime}^2
 \end{align}$$
 
+if we can solve this differential equation, the ideal shape will be revealed. 
+
+the equation has a $1$ indicating a linear term in $y,$ as well as a mixed $y^{\prime\prime}y$ term, indicating coupling between the linear and first order terms. however, the coupled term can't simply be $y^\prime y$, or else there wouldn't be a $2$ on the ${y^\prime}^2$ term.
+
 <!-- https://github.com/joshmaxsilverman/joshmaxsilverman.github.io/blob/master/_posts/2023-02-11-improbable-sky.md -->
 
 <br>
