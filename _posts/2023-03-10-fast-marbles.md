@@ -104,7 +104,7 @@ $$ y\left(1+{y^\prime}^2\right) = \text{const.}$$
 
 or
 
-$$ \frac{dy}{dx} = \sqrt{\frac{\text{const.} - y}{y}. $$
+$$ \frac{dy}{dx} = \sqrt{\frac{\text{const.} - y}{y}}. $$
 
 since the curve should meet the floor at zero slope, we know that $dy/dx$ is zero when $y=h,$ which tells us that $\text{const.} = h.$
 
