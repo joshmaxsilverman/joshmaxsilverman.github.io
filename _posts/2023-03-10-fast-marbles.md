@@ -123,7 +123,7 @@ with this in hand, we can find $x$
 
 $$ 
 \begin{align}
-  \frac{\sin\theta}{\cos\theta} &= \frac{dx}{dy} \\
+  \frac{\cos\theta}{\sin\theta} &= \frac{dx}{dy} \\
     &= \frac{dx}{d\theta}\frac{d\theta}{dy} \\
     &= -\frac{dx}{d\theta}\frac{1}{2h\cos\theta\sin\theta}
 \end{align}
@@ -131,10 +131,33 @@ $$
 
 or 
 
-$$ \frac{dx}{d\theta} = 1 - 2\sin^2\theta. $$
+$$ \frac{dx}{d\theta} = - 2\cos^2\theta. $$
 
-playing around with derivatives, $\sin\theta\cos\theta\rightarrow 1 - 2\sin^2\theta,$ so $h\left(\sin\theta\cos\theta - \theta\right)$ gives the behavior we're looking for, so
+playing around with derivatives, $\sin\theta\cos\theta\rightarrow \left(2\cos^2\theta - \theta\right),$ so $h\left(\sin\theta\cos\theta + \theta\right)$ gives the behavior we're looking for:
 
-$$ x = h\left(sin\theta\cos\theta - \theta\right). $$
+$$ x = h\left(sin\theta\cos\theta + \theta\right). $$
+
+with these solutions in hand, we can figure out where the marble hits the floor (and likewise, when it starts to curve back up), and the total time required for the marble to make its transit.
+
+### characterizing the transit
+
+to recap, the marble follows the curve defined by $\left(x(\theta),y(\theta)\right)$ down to the floor at $x_h = \tfrac12h\pi$ where it tolls the distance $(1-2x_h)$ before following the same curve back up.
+
+when the marble reaches the floor its velocity is $\sqrt{2gh},$ so it spends 
+
+$$ T_\text{flat} = \dfrac{1-2x_h}{\sqrt{2gh}} $$
+
+rolling on the floor. but how much time does it spend on the curve?
+
+to find out, we can go back to our original integral, now with the benefit of $y(\theta):$
+
+$$
+\begin{align}
+T_\text{curve} &= \frac{1}{\sqrt{2g}\int\limits_0^{x_h}dx\, \sqrt{\dfrac{1+{y^\prime}^2}{y}} \\
+&= ddd
+\end{align}
+$$
+
+plugging in $\theta = \pi/2,$ we get $y=h$ as expected, as well as $x = h\pi/2$ which is approximately $0.157\text{ m}.$
 
 <br>
