@@ -143,9 +143,11 @@ with these solutions in hand, we can figure out where the marble hits the floor 
 
 to recap, the marble follows the curve defined by $\left(x(\theta),y(\theta)\right)$ down to the floor at $x_h = \tfrac12h\pi$ where it tolls the distance $(1-2x_h)$ before following the same curve back up.
 
+plugging in $\theta = \pi/2,$ we get $y=h$ as expected, as well as $x = h\pi/2$ which is approximately $0.157\text{ m}.$
+
 when the marble reaches the floor its velocity is $\sqrt{2gh},$ so it spends 
 
-$$ T_\text{flat} = \dfrac{1-2x_h}{\sqrt{2gh}} $$
+$$ T_\text{flat} = \dfrac{w-2x_h}{\sqrt{2gh}} $$
 
 rolling on the floor. but how much time does it spend on the curve?
 
@@ -154,10 +156,26 @@ to find out, we can go back to our original integral, now with the benefit of $y
 $$
 \begin{align}
 T_\text{curve} &= \frac{1}{\sqrt{2g}}\int\limits_0^{x_h}dx\, \sqrt{\dfrac{1+{y^\prime}^2}{y}} \\
-&= ddd
+&= \frac{1}{\sqrt{2g}}\int\limits_0^{\tfrac12\pi}\frac{dx}{d\theta}d\theta\, \sqrt{\dfrac{1+\frac{h-y}{y}}{y}} \\
+&= \frac{1}{\sqrt{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \sqrt{\dfrac{h}{y^2}}h\left(1-\sin^2theta+\cos^2\theta\right) \\
+&= \sqrt{\frac{h}{2g}}\int\limits_0^{\tfrac12\pi}d\theta\, \dfrac{1}{\cos^2\theta}h\left(2\cos^2theta\right) \\
+&= \sqrt{\frac{h}{2g}}\pi
 \end{align}
 $$
 
-plugging in $\theta = \pi/2,$ we get $y=h$ as expected, as well as $x = h\pi/2$ which is approximately $0.157\text{ m}.$
+despite all the explosions and loud noises, the total time taken reduces to nothing but
+
+$$
+  \begin{align}
+    T_\text{total} &= 2T_\text{curve} + T_\text{floor} \\
+    &= \sqrt{\frac{2h}{g}}\pi + \frac{w-2x_h}{\sqrt{2gh}} \\
+    &= \frac{h\pi + w}{\sqrt{2gh}}.
+  \end{align}
+$$
+
+taking limits, this has the behavior we expect. when $w\gg h,$ we get $T_\text{total} \approx w/\sqrt{2gh},$ the back of the envelope solution.
+
+were there no floor, we could have set the initial condition through $x(\pi/2) = \tfrac12 w$
+
 
 <br>
