@@ -110,6 +110,8 @@ since the curve should meet the floor at zero slope, we know that $dy/dx$ is zer
 
 we can actually solve this without doing an integral. drawing a diagram, we can equate $dy/dx$ with the tangent of the angle with the horizontal (like we did in a [recent problem](https://joshmaxsilverman.github.io/2023-02-11-improbable-sky/)) and solve for $y$ algebraically
 
+![](/img/2023-03-11-tangent-diagram.png){:width="450 px" class="image-centered"}
+
 $$\begin{align}
 \left(\dfrac{dy}{dx}\right)^2 &= \frac{h - y}{y} \\
 \dfrac{\sin^2\theta}{\cos^2\theta} &= \\
