@@ -123,7 +123,7 @@ y\sin^2\theta &= h\cos^2\theta - y\cos^2\theta \\
 y &= h\cos^2\theta.
 \end{align}$$
 
-this gives the expected limits, with $y=0$ at the beginning ($\theta = 0$) and $h$ at the end ($\theta = \pi/2$).
+this gives the expected limits, with $y=0$ at the beginning $\left(\theta = 0\right)$ and $h$ at the end $\left(\theta = \pi/2\right).$
 
 with this in hand, we can find $x$
 
