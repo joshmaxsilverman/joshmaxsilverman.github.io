@@ -182,7 +182,7 @@ The marble follows the curve defined by $\left(x(\theta),y(\theta)\right)$ down 
 
 From there it slides the distance $(1-2x_h)$ before following the same curve back up at $x=1-x_h.$.
 
-![](/img/2023-03-12-marble-track-plot.png.PNG){:width="450 px" class="image-centered"}
+![](/img/2023-03-12-marble-track-plot.png.PNG){:width="550 px" class="image-centered"}
 
 ### Timing the transit
 
@@ -218,6 +218,6 @@ Taking limits, this has the behavior we expect. When $w\gg h,$ we get $T_\text{t
 
 Were there no floor, we could have set the initial condition through $x(\tfrac12\pi) = \tfrac12 w,$ giving $x = \tfrac{w}{\pi}\left(\theta \sin\theta\cos\theta\right)$ and $y = \frac{w}{\pi}\cos^2\theta.$ As it happens, this is the relationship between $h$ and $w$ we get minimizing the expression above.
 
-![](/img/2023-03-12-marble-track-plot-no-flat.png.PNG){:width="450 px" class="image-centered"}
+![](/img/2023-03-12-marble-track-plot-no-flat.png.PNG){:width="550 px" class="image-centered"}
 
 <br>
