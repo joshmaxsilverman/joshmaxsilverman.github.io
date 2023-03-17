@@ -85,8 +85,8 @@ If we expand around the optimum (this is just a Taylor series) we get
 
 $$ 
    \begin{align}
-      T(y_\* + \varepsilon(x), y_*^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y_* + \varepsilon(x), y_*^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
-      &\approx \int dx\, \mathcal{T}(y_*, y_*^\prime) + \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\varepsilon(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\varepsilon(x)\right].
+      T(y_\* + \varepsilon(x), y_\*^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y_\* + \varepsilon(x), y_\*^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
+      &\approx \int dx\, \mathcal{T}(y_\*, y_\*^\prime) + \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\varepsilon(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\varepsilon(x)\right].
    \end{align}   
 $$
 
