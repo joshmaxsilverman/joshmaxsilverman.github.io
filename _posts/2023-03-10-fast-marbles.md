@@ -19,29 +19,44 @@ tags: optimality conservation-of-energy calculus
 
 ## Solution
 
-we want to find the trajectory that makes the time from start to finish as small as possible.
+We want to find the trajectory that makes the time from start to finish as small as possible.
 
-the logic will be to express the total time $T$ in terms of the shape of the trajectory and the two endpoints, and then use functional calculus to find the minimal shape.
+### Intuition 
 
-in the big picture, that problem is analytic without the constraint. the shortest path between two points is a cycloid.
+The plan is to express the total time $T$ in terms of the shape and endpoints of the trajectory, then use functional calculus to minimize $T$ in terms of the shape.
 
-given two points and the imperative to minimize time, the cycloid will do whatever it needs to minimize time. however, we aren't allowed to build the track below $\Delta h.$ still, the cycloid is the fastest trajectory between points. this means that the fastest path is to follow a cycloid down to the lowest allowable height, hit the bottom at $\Delta x,$ follow the floor for a while, then follow the same curve back up to the opposite side. 
+Without the floor restriction, the problem is analytic and the shortest path is a cycloid.
 
-this makes good physical sense -- energy is conserved, and dipping down the full $\Delta y$ means we achieve the maximum velocity for the majority of the trajectory.
+We aren't allowed to build the track below $\Delta h.$ Still, the unrestricted cycloid is the fastest trajectory between two points. The fastest trajectory is to follow a cycloid down to the lowest allowable height, hit the floor at $\Delta x = h\pi/2,$ follow the floor for a while, then follow the same curve back up to the opposite side. 
 
-### calculation
+This makes good physical sense -- energy is conserved, and dipping down the full $\Delta y = h$ means that we achieve the maximum velocity for the majority of the trajectory.
 
-with the logic behind us, what remains is deriving the shape of the curve (a cycloid), use it to determine the value of $\Delta x,$ and then plug the trajectory back into the expression for $T.$
+With that, what remains is to derive the shape of the curve (a cycloid), use it to determine the value of $\Delta x,$ and plug the trajectory back into the expression for $T.$
 
-the total time $T$ is the sum of all the little time intervals that make up the trajectory:
+### Physics
+
+Throughout the process, the total energy is conserved. That means that the sum of potential and kinetic energy doesn't change. If we pick the ground level as the point of reference, and the marble starts at rest, then we have $E_\text{total} = 0$ and so
+
+$$ 
+   \begin{align}
+    0 &= T + V \\
+      &= \frac12mv^2 + mgh,
+   \end{align}
+$$
+
+and $v = \sqrt{2gh}.$
+
+### 
+
+The total time $T$ is the sum of all the little time intervals that make up the trajectory:
 
 $$ T = \int dt. $$
 
-the tiny distance traveled by the marble along the trajectory in time $dt$ is equal to $ds$ divided by the instaneous velocity:
+The tiny distance traveled by the marble along the trajectory in time $dt$ is equal to the corresponding tiny distance $ds$ divided by the instaneous velocity:
 
-$$ dt = \frac{ds}{v(y)} $$
+$$ dt = \frac{ds}{v(y)}. $$
 
-breaking the linear segment into its horizontal and vertical components, we get $ds = \sqrt{dx^2 + dy^2}$ and so
+Expressing the segment in terms of its horizontal and vertical components, we get $ds = \sqrt{dx^2 + dy^2}$ and so
 
 $$
   \begin{align}
@@ -50,7 +65,7 @@ T &= \int \dfrac{\sqrt{dx^2 + dy^2}}{v(y)} \\
   \end{align}
 $$
 
-conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$ 
+<!-- conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$  -->
 
 with this, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory.
 
