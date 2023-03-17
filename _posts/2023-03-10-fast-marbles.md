@@ -35,12 +35,12 @@ With that, what remains is to derive the shape of the curve (a cycloid), use it 
 
 ### Physics
 
-Throughout the process, the total energy is conserved. That means that the sum of potential and kinetic energy doesn't change. If we pick the ground level as the point of reference, and the marble starts at rest, then we have $E_\text{total} = 0$ and so
+Throughout the process, the total energy is conserved. That means that the sum of potential and kinetic energy doesn't change. If we pick the ground level as the point of reference (with positive $h$ corresponding to the distance below the ground), and the marble starts at rest, then we have $E_\text{total} = 0$ and so
 
 $$ 
    \begin{align}
     0 &= T + V \\
-      &= \frac12mv^2 + mgh,
+      &= \frac12mv^2 - mgh,
    \end{align}
 $$
 
