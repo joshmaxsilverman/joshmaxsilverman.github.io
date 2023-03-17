@@ -69,7 +69,7 @@ $$
 
 <!-- conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$  -->
 
-At this point, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory.
+At this point, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory for each increment in space, $dx.$
 
 ### Minimization
 
