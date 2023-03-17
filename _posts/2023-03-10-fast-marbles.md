@@ -73,20 +73,20 @@ At this point, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution
 
 ### Minimization
 
-So, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the particular curve $y^\*(x)$ that minimizes it. 
+So, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the particular curve $y_\*(x)$ that minimizes it. 
 
 If we had that curve, and it really was a minimum, then any small change we made to the trajectory should keep $T$ very close to the minimum value. In a sense, taking the "derivative" of $T$ with respect to the trajectory $y(x)$ should give us zero.
 
-We can do this by adding an arbitrary, but small amplitude, curve $\varepsilon(x)$ to $y^\*(x).$ 
+We can do this by adding an arbitrary, but small amplitude, curve $\varepsilon(x)$ to $y_\*(x).$ 
 
-This means that $y(x) = y^\*(x) + \varepsilon(x)$ and $y^\prime(x) = {y^\*}^\prime(x) + \frac{d}{dx}\varepsilon(x).$
+This means that $y(x) = y_\*(x) + \varepsilon(x)$ and $y^\prime(x) = {y_\*}^\prime(x) + \frac{d}{dx}\varepsilon(x).$
 
 If we expand around the optimum (this is just a Taylor series) we get
 
 $$ 
    \begin{align}
-      T(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
-      &\approx \int dx\, \mathcal{T}(y, y^\prime) + \left[\dfrac{\partial \mathcal{T}}{\partial y}\varepsilon(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\varepsilon(x)\right].
+      T(y_\* + \varepsilon(x), y_\*^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y_\* + \varepsilon(x), y_\*^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
+      &\approx \int dx\, \mathcal{T}(y_\*, y_\*^\prime) + \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\varepsilon(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\varepsilon(x)\right].
    \end{align}   
 $$
 
