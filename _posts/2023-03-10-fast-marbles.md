@@ -86,13 +86,8 @@ If we expand around the optimum (this is just a Taylor series) we get
 $$ 
    \begin{align}
       T(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
+      \approx \int dx\, \int dx\, \mathcal{T}(y, y^\prime) + \left[\dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x)\right]
    \end{align}   
-$$
-
-
-
-$$
-  \delta T(y,y^\prime) \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x)\right].
 $$
 
 the disturbance $\delta(x)$ is arbitrary, so there isn't much that we can say about its derivative. however, we can move the derivative off it if we integrate by parts. doing that, we get 
