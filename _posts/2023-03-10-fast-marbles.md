@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Fast times at the track
+title: Fast times at the marble track
 date: 2023/03/12
 subtitle: It won't be long before this marble's at your door
 tags: optimality conservation-of-energy calculus
