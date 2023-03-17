@@ -93,7 +93,7 @@ $$
 The disturbance $\varepsilon(x)$ is arbitrary, so there isn't much that we can say about its derivative. However, we can move the derivative off it if we integrate by parts. Doing that, we get 
 
 $$
-  \delta T(y,y^\prime) \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y} - \frac{d}{dx}\dfrac{\partial \mathcal{T}}{\partial y^\prime}\right]\varepsilon(x).
+  \delta T \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y} - \frac{d}{dx}\dfrac{\partial \mathcal{T}}{\partial y^\prime}\right]\varepsilon(x).
 $$
 
 For the optimal trajectory, this variation will be equal to zero. Looking at the integral, $\varepsilon(x)$ is, apart from having small magnitude, a totally arbitrary function. 
