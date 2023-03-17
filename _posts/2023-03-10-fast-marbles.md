@@ -46,7 +46,7 @@ $$
 
 and $v = \sqrt{2gh}.$
 
-### 
+### What time is the shape?
 
 The total time $T$ is the sum of all the little time intervals that make up the trajectory:
 
@@ -61,28 +61,35 @@ Expressing the segment in terms of its horizontal and vertical components, we ge
 $$
   \begin{align}
 T &= \int \dfrac{\sqrt{dx^2 + dy^2}}{v(y)} \\
-  &= \int dx\,\dfrac{\sqrt{1 + \left(\frac{dy}{dx}\right)^2} }{v(y)}.
+  &= \int dx\,\dfrac{\sqrt{1 + \left(\frac{dy}{dx}\right)^2} }{v(y)}\\
+  &= \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}} \\
+  &= \int dx\, \mathcal{T}(y,y^\prime). 
   \end{align}
 $$
 
 <!-- conserving energy, the marble's velocity at height $y$ below its starting point is $v(y) = \sqrt{2gy}.$  -->
 
-with this, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory.
+At this point, we can identify $\mathcal{T}(y(x),y^\prime(x)),$ the contribution to the total time along the trajectory.
 
-$$ \begin{align}
-T &= \int dx\,\sqrt{\dfrac{1 + {y^\prime}^2}{2gy}} \\
-&= \int dx\, \mathcal{T}(y,y^\prime). 
-\end{align}$$
+### Minimization
 
-so, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the curve $y(x)$ that minimizes it. 
+So, $T(y,y^\prime)$ depends on $y$ and its derivative $y^\prime$ and we want to find the particular curve $y^\*(x)$ that minimizes it. 
 
-if we had that curve (let's call it $y^\*(x)$), and it really is a minimum, then any small change we make to it should keep $T$ very close to the minimum value. in a sense, taking the derivative of $T$ with respect to the function $y(x)$ should be $0.$
+If we had that curve, and it really is a minimum, then any small change we make to the trajectory should keep $T$ very close to the minimum value. In a sense, taking the "derivative" of $T$ with respect to the trajectory $y(x)$ should give us zero.
 
-add an arbitrary, but small amplitude function $\delta(x)$ to $y^\*(x).$ this means that $y(x) = y^\*(x) + \delta(x)$ and $y^\prime(x) = {y^\*}^\prime(x) + \frac{d}{dx}\delta(x).$
+We can do this by adding an arbitrary, but small amplitude, curve $\varepsilon(x)$ to $y^\*(x).$ 
 
-$$ T(y,y^\prime) = \int dx\, \mathcal{T}(y,y^\prime) $$
+This means that $y(x) = y^\*(x) + \varepsilon(x)$ and $y^\prime(x) = {y^\*}^\prime(x) + \frac{d}{dx}\varepsilon(x).$
 
-expand around the optimum and get
+If we expand around the optimum (this is just a Taylor series) we get
+
+$$ 
+   \begin{align}
+      T(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) &= \int dx\, \mathcal{T}(y + \varepsilon(x), y^\prime + \tfrac{d}{dx}\varepsilon(x)) \\
+   \end{align}   
+$$
+
+
 
 $$
   \delta T(y,y^\prime) \approx \int dx\, \left[\dfrac{\partial \mathcal{T}}{\partial y}\delta(x) + \dfrac{\partial \mathcal{T}}{\partial y^\prime}\frac{d}{dx}\delta(x)\right].
