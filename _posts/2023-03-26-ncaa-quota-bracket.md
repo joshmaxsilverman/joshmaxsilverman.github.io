@@ -47,9 +47,9 @@ this makes $4!^4$ possible ways to select seeds $1$ throught $16,$ and so, the o
 
 $$ P(\text{quota bracket}) = 4!^4 \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
 
-when the teams are evenly matched, this is just $4!^4/4^{16}.$
+when the teams are evenly matched, this is just $4!^4/4^{16},$ or $\approx 0.0077%$ of the time. 
 
-when they're not evenly matched, we need to set up some accounting to handle all the substitutions.
+when they're not evenly matched, we need to set up some accounting to handle all the substitutions. as the advantage to the better team grows, the likelihood of a quota bracket drops to zero:
 
 ```mathematica
 put code here
