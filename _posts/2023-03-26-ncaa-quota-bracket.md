@@ -23,7 +23,7 @@ for example, a $1$-seed's sub-bracket has them play a $16$-seed, followed by the
 
 so, if the probability of team $i$ beating team $j$ is $P(i,j),$ the probability of any given $1$-seed making the sweet sixteen is 
 
-$$ P_\text{SS}(\text{1-seed}) = P(1,16)\left[P(1,8)P(8,9) + P(1,9)P(9,8)\right] $$
+$$ P_\text{sweet sixteen}(1) = P(1,16)\left[P(1,8)P(8,9) + P(1,9)P(9,8)\right] $$
 
 we're interested in the case where one of each seed makes the sweet sixteen (quota bracket), so the probability of any given realization is just
 
