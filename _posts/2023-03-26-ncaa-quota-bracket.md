@@ -45,7 +45,7 @@ since we have to pick one of each kind of seed, there are $4!$ ways to choose se
 
 this makes $4!^4$ possible ways to select seeds $1$ throught $16,$ and so, the overall probability is
 
-$$ P(\text{quota bracket}) = (4!)^4 \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
+$$ P(\text{quota bracket}) = 4!^4 \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
 
 when the teams are evenly matched, this is just $4!^4/4^{16}.$
 
