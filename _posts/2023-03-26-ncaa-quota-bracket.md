@@ -29,7 +29,7 @@ likewise, if a team's sub-bracket looks like this:
 
 the probability of team $i$ making the sweet sixteen is
 
-$$ $$ P_\text{sweet sixteen}(i) = P(i,j)\left[P(i,m)P(m,n) + P(i,n)P(n,m)\right]. $$
+$$ P_\text{sweet sixteen}(i) = P(i,j)\left[P(i,m)P(m,n) + P(i,n)P(n,m)\right]. $$
 
 we're interested in the case where one of each seed makes the sweet sixteen (quota bracket), so the probability of any given realization is just
 
