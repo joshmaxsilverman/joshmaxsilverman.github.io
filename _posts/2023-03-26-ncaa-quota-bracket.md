@@ -21,7 +21,7 @@ tags: counting symmetry tournament
 
 there are $4$ equivalent subtournaments (crudely, four geographic regions of the US), and each will send $4$ teams to the sweet sixteen.
 
-![](put sub-bracket drawing here)
+![](/img/2023-03-26-regional-tournament.png){:width="550 px" class="image-centered"}
 
 if a team makes it to the sweet sixteen, it means that they won their sub-bracket of $4$ teams.
 
@@ -33,7 +33,7 @@ $$ P_\text{sweet sixteen}(1) = P(1,16)\left[P(1,8)P(8,9) + P(1,9)P(9,8)\right]. 
 
 likewise, if a team's sub-bracket looks like this:
 
-![](put drawing here)
+![](/img/2023-03-26-sub-bracket.png){:width="550 px" class="image-centered"}
 
 the probability of team $i$ making the sweet sixteen is
 
@@ -45,7 +45,7 @@ $$ P(\text{any given quota bracket}) = \prod\limits_{s=1}^{16} P_\text{sweet six
 
 since we have to pick one of each kind of seed, there are $4!$ ways to choose seeds $\{1,16,8,9\}$ and likewise for the other initial groupings. 
 
-![](put overall bracket drawing here)
+![](/img/2023-03-26-tournament.jpg){:width="550 px" class="image-centered"}
 
 this makes $4!^4$ possible ways to select seeds $1$ throught $16,$ and so, the overall probability is
 
@@ -84,7 +84,7 @@ pQuotaBracket[f_] := (
 
 ```
 
-![](put graph here)
+![](/img/2023-03-26-tournament-prob-f.png){:width="550 px" class="image-centered"}
 
 <br>
 
