@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: NCAA census bracket
+title: NCAA quota bracket
 date: 2023/03/26
 subtitle: I'll take one of each.
 tags: counting symmetry tournament
@@ -15,7 +15,7 @@ tags: counting symmetry tournament
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/the-riddler-meets-jeopardy/))
 
 ## Solution
 
