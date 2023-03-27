@@ -73,8 +73,8 @@ then we need a function that takes a sub-bracket and returns the four variants $
 makeWinners[
    b_] := {
       b
-      , {Reverse@b[[1]], b[[2]]}, {b[[2]]
-      , b[[1]]}
+      , {Reverse@b[[1]], b[[2]]}
+      , {b[[2]], b[[1]]}
       , {Reverse@b[[2]], b[[1]]}
       };
 ```
