@@ -67,8 +67,12 @@ firstWinsBracket[b_, f_] := (
    );
 
 makeWinners[
-   b_] := {b, {Reverse@b[[1]], b[[2]]}, {b[[2]], 
-    b[[1]]}, {Reverse@b[[2]], b[[1]]}};
+   b_] := {
+      b
+      , {Reverse@b[[1]], b[[2]]}, {b[[2]]
+      , b[[1]]}
+      , {Reverse@b[[2]], b[[1]]}
+      };
 
 brackets = Flatten[makeWinners[#] & /@ tournament, 1];
 
