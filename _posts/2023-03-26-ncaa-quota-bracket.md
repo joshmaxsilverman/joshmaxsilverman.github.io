@@ -3,11 +3,15 @@ layout: post
 published: true
 title: NCAA census bracket
 date: 2023/03/26
-subtitle:
-tags:
+subtitle: I'll take one of each.
+tags: counting symmetry tournament
 ---
 
->Question
+>**Question**:It feels like there’s more parity in college basketball’s March Madness than ever, with lower-seeded teams advancing further in the tournaments at the expense of the favorites. This year’s Sweet 16 on the men’s side consists of two 1 seeds, two 2 seeds, two 3 seeds, two 4 seeds, a 5 seed, a 6 seed, a 7 seed, an 8 seed, a 9 seed and a 15 seed. This got Jeremy wondering about the likelihood that the Sweet 16 consists of exactly one of each seed: one 1 seed, one 2 seed, etc., up to one 16 seed.
+>
+>Suppose each team is equally likely to win any given game. What are the chances that the Sweet 16 does indeed consist of one of each seed?
+>
+>**Extra credit**: Looking at historical data on the men’s side, Jeremy estimates that the probability that seed A will defeat seed B is $\frac12 + 0.033 (B−A).$ Using these probabilities, what are the chances that the Sweet 16 consists of one of each seed?
 
 <!--more-->
 
@@ -49,12 +53,34 @@ $$ P(\text{quota bracket}) = 4!^4 \prod\limits_{s=1}^{16} P_\text{sweet sixteen}
 
 when the teams are evenly matched, this is just $4!^4/4^{16},$ or $\approx 0.0077\%$ of the time. 
 
-when they're not evenly matched, we need to set up some accounting to handle all the substitutions. as the advantage to the better team grows, the likelihood of a quota bracket drops to zero:
+when they're not evenly matched, we need to set up some accounting to handle all the substitutions. now the probability that seed $i$ beats seed $j$ is 
+
+$$ P(i, j) = \frac12 + f(j-i). $$
+
+as the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
 
 ```mathematica
-put code here
+firstWinsBracket[b_, f_] := (
+   p[b[[1]], f]
+    (p[{b[[1]][[1]], b[[2]][[1]]}, f] p[b[[2]], f]
+      + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f])
+   );
+
+makeWinners[
+   b_] := {b, {Reverse@b[[1]], b[[2]]}, {b[[2]], 
+    b[[1]]}, {Reverse@b[[2]], b[[1]]}};
+
+brackets = Flatten[makeWinners[#] & /@ tournament, 1];
+
+pQuotaBracket[f_] := (
+  winProbs = firstWinsBracket[#, f] & /@ brackets;
+  pOverall = Fold[Times, winProbs];
+  Return[(4!)^4 pOverall]
+  )
+
 ```
 
 ![](put graph here)
 
 <br>
+
