@@ -19,19 +19,19 @@ tags: counting symmetry tournament
 
 ## Solution
 
-there are $4$ equivalent subtournaments (crudely, four geographic regions of the US), and each will send $4$ teams to the sweet sixteen.
+In the NCAA tournament, there are $4$ equivalent subtournaments (crudely, four geographic regions of the US), and each will send $4$ teams to the "sweet sixteen".
 
 ![](/img/2023-03-26-regional-tournament.png){:width="550 px" class="image-centered"}
 
-if a team makes it to the sweet sixteen, it means that they won their sub-bracket of $4$ teams.
+If a team makes it to the sweet sixteen, it means that they won their sub-bracket of $4$ teams.
 
-for example, a $1$-seed's sub-bracket has them play a $16$-seed, followed by the winner of the $8$ and $9$-seed.
+For example, a $1$-seed's sub-bracket has them play a $16$-seed, followed by the winner of the $8$ and $9$-seed.
 
-so, if the probability of team $i$ beating team $j$ is $P(i,j),$ the probability of any given $1$-seed making the sweet sixteen is 
+So, if we call $P(i,j)$ the probability of team $i$ beating team $j,$ the probability of any given $1$-seed making the sweet sixteen is 
 
 $$ P_\text{sweet sixteen}(1) = P(1,16)\left[P(1,8)P(8,9) + P(1,9)P(9,8)\right]. $$
 
-likewise, if a team's sub-bracket looks like this:
+Likewise, for a general sub-bracket
 
 ![](/img/2023-03-26-sub-bracket.png){:width="550 px" class="image-centered"}
 
@@ -39,25 +39,36 @@ the probability of team $i$ making the sweet sixteen is
 
 $$ P_\text{sweet sixteen}(i) = P(i,j)\left[P(i,m)P(m,n) + P(i,n)P(n,m)\right]. $$
 
-we're interested in the case where one of each seed makes the sweet sixteen (quota bracket), so the probability of any given realization is just
+We're interested in the case where one of each kind of seed makes the sweet sixteen (referred to from here on as a "quota bracket"), so the probability of any given realization is just
 
 $$ P(\text{any given quota bracket}) = \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
 
-since we have to pick one of each kind of seed, there are $4!$ ways to choose seeds $\{1,16,8,9\}$ and likewise for the other initial groupings. 
+Since we have to pick one of each kind of seed, there are $4!$ ways to choose seeds $\{1,16,8,9\}$ and likewise for the other sub-brackets. 
 
 ![](/img/2023-03-26-tournament.jpg){:width="550 px" class="image-centered"}
 
-this makes $4!^4$ possible ways to select seeds $1$ throught $16,$ and so, the overall probability is
+This makes $4!^4$ possible ways to select seeds $1$ throught $16$ and, so, the overall probability is
 
 $$ P(\text{quota bracket}) = 4!^4 \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
 
-when the teams are evenly matched, this is just $4!^4/4^{16},$ or $\approx 0.0077\%$ of the time. 
+When the teams are evenly matched, this is just $4!^4/4^{16},$ or $\approx 0.0077\%$ of the time. 
 
-when they're not evenly matched, we need to set up some accounting to handle all the substitutions. now the probability that seed $i$ beats seed $j$ is 
+When they're not evenly matched, we need to set up some accounting to handle all the substitutions. Now the probability that seed $i$ beats seed $j$ is 
 
 $$ P(i, j) = \frac12 + f(j-i). $$
 
-first, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning.
+First, we need to represent the structure of the sub-brackets
+
+```mathematica
+tournament = {
+       {{1, 16}, {9, 8}}
+   , {{13, 4}, {12, 5}}
+   , {{10, 7}, {15, 2}}
+   , {{14, 3}, {11, 6}}
+   };
+```
+
+Next, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning.
 
 ```mathematica
 firstWinsBracket[b_, f_] := (
@@ -67,18 +78,18 @@ firstWinsBracket[b_, f_] := (
    );
 ```
 
-then we need a function that takes a sub-bracket and returns the four variants $\\{\\{i,j\\},\\{m,n\\}\\}, \\{\\{j,i\\},\\{m,n\\}\\}, \\{\\{m,n\\},\\{i,j\\}\\}$ and $\\{\\{n,m\\},\\{i,j\\}\\},$ corresponding to each team winning the sub-bracket:
+Next, we need a function that takes a sub-bracket and returns the four variants $\\{\\{i,j\\},\\{m,n\\}\\}, \\{\\{j,i\\},\\{m,n\\}\\}, \\{\\{m,n\\},\\{i,j\\}\\}$ and $\\{\\{n,m\\},\\{i,j\\}\\},$ corresponding to each team winning the sub-bracket:
 
 ```mathematica
-makeWinners[b_] := {
-      b
+makeWinners[b_] := 
+      { b
       , {Reverse@b[[1]], b[[2]]}
       , {b[[2]], b[[1]]}
       , {Reverse@b[[2]], b[[1]]}
       };
 ```
 
-finally, we need to form all $16$ sub-brackets, calculate the win probabilities, multiply them together, and scale by the number of ways to distribute them across the $4$ geographic sub-tournaments:
+Finally, we need to form all $16$ sub-brackets, calculate the win probabilities, multiply them together, and scale by the number of ways to distribute them across the $4$ geographic sub-tournaments:
 
 ```mathematica
 brackets = Flatten[makeWinners[#] & /@ tournament, 1];
@@ -88,14 +99,13 @@ pQuotaBracket[f_] := (
   pOverall = Fold[Times, winProbs];
   Return[(4!)^4 pOverall]
   )
-
 ```
 
-as the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
+As the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
 
 ![](/img/2023-03-26-tournament-prob-f.png){:width="550 px" class="image-centered"}
 
-at the empirical seed advantage, $f = 0.033,$ the probability of a quota bracket stands at a mere $8.53\times10^{-10}.$
+At the empirical seed advantage, $f = 0.033,$ the probability of a quota bracket stands at a mere $8.53\times10^{-10}.$
 
 <br>
 
