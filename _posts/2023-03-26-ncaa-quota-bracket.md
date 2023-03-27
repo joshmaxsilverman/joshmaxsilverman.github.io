@@ -67,7 +67,7 @@ firstWinsBracket[b_, f_] := (
    );
 ```
 
-then we need a function that takes a sub-bracket and returns the four variants $\{\{i,j\},\{m,n\}\}, \{\{j,i\},\{m,n\}\}, \{\{m,n\},\{i,j\}\}$ and $\{\{n,m\},\{i,j\}\},$ corresponding to each team winning the sub-bracket:
+then we need a function that takes a sub-bracket and returns the four variants $\\{\\{i,j\\},\\{m,n\\}\\}, \\{\\{j,i\\},\\{m,n\\}\\}, \\{\\{m,n\\},\\{i,j\\}\\}$ and $\\{\\{n,m\\},\\{i,j\\}\\},$ corresponding to each team winning the sub-bracket:
 
 ```mathematica
 makeWinners[
