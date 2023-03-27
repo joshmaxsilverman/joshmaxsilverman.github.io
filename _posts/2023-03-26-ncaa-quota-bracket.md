@@ -7,11 +7,11 @@ subtitle: I'll take one of each.
 tags: counting symmetry tournament
 ---
 
->**Question**:It feels like there’s more parity in college basketball’s March Madness than ever, with lower-seeded teams advancing further in the tournaments at the expense of the favorites. This year’s Sweet 16 on the men’s side consists of two 1 seeds, two 2 seeds, two 3 seeds, two 4 seeds, a 5 seed, a 6 seed, a 7 seed, an 8 seed, a 9 seed and a 15 seed. This got Jeremy wondering about the likelihood that the Sweet 16 consists of exactly one of each seed: one 1 seed, one 2 seed, etc., up to one 16 seed.
+>**Question**: It feels like there’s more parity in college basketball’s March Madness than ever, with lower-seeded teams advancing further in the tournaments at the expense of the favorites. This year’s Sweet $16$ on the men’s side consists of two $1$ seeds, two $2$ seeds, two $3$ seeds, two $4$ seeds, a $5$ seed, a $6$ seed, a $7$ seed, an $8$ seed, a $9$ seed and a $15$ seed. This got Jeremy wondering about the likelihood that the Sweet 16 consists of exactly one of each seed: one $1$ seed, one $2$ seed, etc., up to one $16$ seed.
 >
->Suppose each team is equally likely to win any given game. What are the chances that the Sweet 16 does indeed consist of one of each seed?
+>Suppose each team is equally likely to win any given game. What are the chances that the Sweet $16$ does indeed consist of one of each seed?
 >
->**Extra credit**: Looking at historical data on the men’s side, Jeremy estimates that the probability that seed A will defeat seed B is $\frac12 + 0.033 (B−A).$ Using these probabilities, what are the chances that the Sweet 16 consists of one of each seed?
+>**Extra credit**: Looking at historical data on the men’s side, Jeremy estimates that the probability that seed A will defeat seed B is $\frac12 + 0.033 (B−A).$ Using these probabilities, what are the chances that the Sweet $16$ consists of one of each seed?
 
 <!--more-->
 
