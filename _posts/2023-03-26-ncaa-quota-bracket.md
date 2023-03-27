@@ -57,7 +57,7 @@ when they're not evenly matched, we need to set up some accounting to handle all
 
 $$ P(i, j) = \frac12 + f(j-i). $$
 
-as the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
+first, we need a function that take a sub-bracket in the form $\{\{i,j\},\{m,n\}\}$ and calculates the probability of team $i$ winning.
 
 ```mathematica
 firstWinsBracket[b_, f_] := (
@@ -65,7 +65,11 @@ firstWinsBracket[b_, f_] := (
     (p[{b[[1]][[1]], b[[2]][[1]]}, f] p[b[[2]], f]
       + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f])
    );
+```
 
+then we need a function that takes a sub-bracket and returns the four variants $\{\{i,j\},\{m,n\}\}, \{\{j,i\},\{m,n\}\}, \{\{m,n\},\{i,j\}\}$ and $\{\{n,m\},\{i,j\}\},$ corresponding to each team winning the sub-bracket:
+
+```mathematica
 makeWinners[
    b_] := {
       b
@@ -73,7 +77,11 @@ makeWinners[
       , b[[1]]}
       , {Reverse@b[[2]], b[[1]]}
       };
+```
 
+finally, we need to form all $16$ sub-brackets, calculate the win probabilities, multiply them together, and scale by the number of ways to distribute them across the $4$ geographic sub-tournaments:
+
+```mathematica
 brackets = Flatten[makeWinners[#] & /@ tournament, 1];
 
 pQuotaBracket[f_] := (
@@ -83,6 +91,8 @@ pQuotaBracket[f_] := (
   )
 
 ```
+
+as the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
 
 ![](/img/2023-03-26-tournament-prob-f.png){:width="550 px" class="image-centered"}
 
