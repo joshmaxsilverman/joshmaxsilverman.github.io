@@ -96,5 +96,7 @@ as the advantage to the better team grows (to a maximum of $f = 1/30$), the like
 
 ![](/img/2023-03-26-tournament-prob-f.png){:width="550 px" class="image-centered"}
 
+at the empirical seed advantage, $f = 0.033,$ the probability of a quota bracket stands at a mere $8.53\times10^{-10}.$
+
 <br>
 
