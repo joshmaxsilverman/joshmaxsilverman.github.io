@@ -59,11 +59,11 @@ $$ P(i, j) = \frac12 + f(j-i). $$
 
 First, we need to represent the structure of the sub-brackets
 
+{% raw %}
 ```mathematica
-
 tournament = {{{1,16}, {9, 8}}, {{13, 4}, {12, 5}}, {{10, 7}, {15, 2}}, {{14, 3}, {11, 6}}};
-
 ```
+{% endraw %}
 
 Next, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning.
 
