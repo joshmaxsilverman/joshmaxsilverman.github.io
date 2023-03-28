@@ -76,9 +76,10 @@ Next, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,
 p[{a_, b_}, f_] := 1/2 + f (b - a);
 
 firstWinsBracket[b_, f_] := (
-   p[b[[1]], f]
+   pWin = p[b[[1]], f] *
     (p[{b[[1]][[1]], b[[2]][[1]]}, f] p[b[[2]], f]
-      + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f])
+      + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f]);
+   Return[pWin]
    );
 ```
 
@@ -86,7 +87,8 @@ Next, we need a function that takes a sub-bracket and returns the four variants 
 
 ```mathematica
 makeWinners[b_] := 
-      { b
+      { 
+        b
       , {Reverse@b[[1]], b[[2]]}
       , {b[[2]], b[[1]]}
       , {Reverse@b[[2]], b[[1]]}
