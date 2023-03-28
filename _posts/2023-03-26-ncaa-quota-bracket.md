@@ -61,7 +61,12 @@ First, we need to represent the structure of the sub-brackets
 
 <!-- {% raw %} -->
 ```mathematica
-tournament = {{{1,16}, {9, 8}}, {{13, 4}, {12, 5}}, {{10, 7}, {15, 2}}, {{14, 3}, {11, 6}}};
+tournament = {
+               {{1,16}, {9, 8}}
+             , {{13, 4}, {12, 5}}
+             , {{10, 7}, {15, 2}}
+             , {{14, 3}, {11, 6}}
+             };
 ```
 <!-- {% endraw %} -->
 
