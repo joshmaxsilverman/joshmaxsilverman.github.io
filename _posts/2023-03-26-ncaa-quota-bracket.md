@@ -43,7 +43,7 @@ We're interested in the case where one of each kind of seed makes the sweet sixt
 
 $$ P(\text{any given quota bracket}) = \prod\limits_{s=1}^{16} P_\text{sweet sixteen}(s). $$
 
-Since we have to pick one of each kind of seed, there are $4!$ ways to choose seeds $\{1,16,8,9\}$ and likewise for the other sub-brackets. 
+Since we have to pick one of each kind of seed, there are $4!$ ways to choose seeds $\\{1,16,8,9\\}$ and likewise for the other sub-brackets. 
 
 ![](/img/2023-03-26-tournament.jpg){:width="550 px" class="image-centered"}
 
