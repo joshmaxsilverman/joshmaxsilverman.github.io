@@ -98,8 +98,8 @@ brackets = Flatten[makeWinners[#] & /@ tournament, 1];
 
 pQuotaBracket[f_] := (
   winProbs = firstWinsBracket[#, f] & /@ brackets;
-  pOverall = Fold[Times, winProbs];
-  Return[(4!)^4 pOverall]
+  pOverall = (4!)^4 Fold[Times, winProbs];
+  Return[pOverall]
   )
 ```
 
