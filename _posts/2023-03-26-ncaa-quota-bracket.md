@@ -71,6 +71,8 @@ tournament = {
 Next, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning.
 
 ```mathematica
+p[{a_, b_}, f_] := 1/2 + f (b - a);
+
 firstWinsBracket[b_, f_] := (
    p[b[[1]], f]
     (p[{b[[1]][[1]], b[[2]][[1]]}, f] p[b[[2]], f]
