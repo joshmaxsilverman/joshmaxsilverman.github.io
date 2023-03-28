@@ -57,7 +57,7 @@ When they're not evenly matched, we need to set up some accounting to handle all
 
 $$ P(i, j) = \frac12 + f(j-i). $$
 
-First, we need to represent the structure of the sub-brackets
+First, we need to represent the structure of the sub-brackets:
 
 <!-- {% raw %} -->
 ```mathematica
@@ -70,7 +70,7 @@ tournament = {
 ```
 <!-- {% endraw %} -->
 
-Next, we need a function that take a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning.
+Next, we need a function that takes a sub-bracket in the form $\\{\\{i,j\\},\\{m,n\\}\\}$ and calculates the probability of team $i$ winning:
 
 ```mathematica
 p[{a_, b_}, f_] := 1/2 + f (b - a);
