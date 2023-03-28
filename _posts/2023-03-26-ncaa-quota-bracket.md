@@ -76,10 +76,9 @@ Next, we need a function that takes a sub-bracket in the form $\\{\\{i,j\\},\\{m
 p[{a_, b_}, f_] := 1/2 + f (b - a);
 
 firstWinsBracket[b_, f_] := (
-   pWin = p[b[[1]], f] *
+   p[b[[1]], f] *
     (p[{b[[1]][[1]], b[[2]][[1]]}, f] p[b[[2]], f]
-      + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f]);
-   Return[pWin]
+      + p[{b[[1]][[1]], b[[2]][[2]]}, f] p[Reverse@b[[2]], f])
    );
 ```
 
