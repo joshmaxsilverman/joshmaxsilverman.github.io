@@ -101,7 +101,7 @@ pQuotaBracket[f_] := (
   )
 ```
 
-As the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero:
+As the advantage to the better team grows (to a maximum of $f = 1/30$), the likelihood of a quota bracket drops to zero: 
 
 ![](/img/2023-03-26-tournament-prob-f.png){:width="550 px" class="image-centered"}
 
