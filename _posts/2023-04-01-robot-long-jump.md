@@ -21,7 +21,7 @@ tags:
 
 ## Solution
 
-<!-- the jumper's decision can't depend on anything but their current position since that's all the information they have.
+the jumper's decision can't depend on anything but their current position since that's all the information they have.
 
 so, each jumper's strategy takes the form
 - if current position $z$ is less than a threshold $t$, take another step
@@ -36,7 +36,6 @@ player $a$ wins if, eventually, they score higher than player $b.$ this can happ
 - both players don't score in the present round, and player $a$ goes on to win later, or
 - player $a$ scores in the present round, but player $b$ does not.
 - both players score in the present round and $s_a > s_b$,
-
 
 
 calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
@@ -105,7 +104,7 @@ working that out, we get
       (2-s) & (1+t) < s.
     \end{cases}
 $$ -->
- -->
+
 $$ P_\text{score}(s, t) = 
 <!--     \frac{1}{1-t} -->
 \begin{cases}
