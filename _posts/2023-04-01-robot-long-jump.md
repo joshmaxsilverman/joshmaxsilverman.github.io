@@ -38,7 +38,7 @@ player $a$ wins if, eventually, they score higher than player $b.$ this can happ
 - both players score in the present round and $s_a > s_b$,
 
 
-calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
+calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ $P_\text{score}(s, t),$ this means
 
 $$ 
   P(a\ \text{wins}\rvert t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}\rvert t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
@@ -82,15 +82,15 @@ we want the probability of getting zero from the start of the game (when $z=0$),
 $$ P_\text{zero}(t) = 1 +(t-1) e^t. $$
 
 
-## finding $P(s\rvert t)$
+## finding $P_\text{score}(s\rvert t)$
 
 to get a non-zero score, the player first has to enter the region $\left[t, 1\right].$ the overall probability of landing inside this region is just $(1-t)$ and is uniform within it. 
 
 say $x$ is the point where the player entered the region, and $\varepsilon$ is the size of their jump. they can jump to a point $s$ from as far away as $x=t$ or $(s-1),$ whichever is bigger. similarly, their jump can start as close as $x=1$ or $s$ itself, whichever is smaller.
 
-with $x$ established, the size of the jump is fixed to $(s-x)$ which means that the probability of scoring $s$ is equal to
+with $x$ established, the size of the jump is fixed to $(s-x)$ which means that the probability of scoring $s,$ given that they score, is equal to
 
-$$ P(s\rvert t) = \int\limits_{\max{t,(s-1)}}^{\min{s,1}} \hskip{-1em}\,dx \int\limits_0^1\,\hskip{-0.3em}d\varepsilon\, \delta(\varepsilon-(s-x)). $$
+$$ P(s\rvert t,\ \text{score}) = \int\limits_{\max{t,(s-1)}}^{\min{s,1}} \hskip{-1em}\,dx \int\limits_0^1\,\hskip{-0.3em}d\varepsilon\, \delta(\varepsilon-(s-x)). $$
 
 (here, $\delta()$ is the Dirac delta function)
 
@@ -105,7 +105,7 @@ working that out, we get
     \end{cases}
 $$ -->
 
-$$ P_\text{score}(s\rvert t) = 
+$$ P(s\rvert t,\ \text{score}) = 
      \frac{1}{1-t}
 \begin{cases}
     s-t & \text{if} & s < 1 \\
@@ -114,6 +114,8 @@ $$ P_\text{score}(s\rvert t) =
 \end{cases}
 $$
 
-ggg
+and 
+
+$$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $$
 
 <br>
