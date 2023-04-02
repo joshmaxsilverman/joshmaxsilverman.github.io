@@ -97,12 +97,13 @@ $$ P(s|t) = \int\limits_{\max\{t,s-1\}}^{\min\{s,1\}} \hskip{-1em}\,dx \int\limi
 
 working that out, we get
 
-$$ P(s, t) = \frac{1}{1-t}
-\begin{cases}
-    s-t & s < 1 \\
-    1-t & 1<s<1+t \\
-    2-s & 1+t < s.
-\end{cases}
+$$ 
+  P(s, t) = \frac{1}{1-t}
+    \begin{cases}
+      (s-t) & s < 1 \\
+      (1-t) & 1<s<(1+t) \\
+      (2-s) & (1+t) < s.
+    \end{cases}
 $$
 
 <br>
