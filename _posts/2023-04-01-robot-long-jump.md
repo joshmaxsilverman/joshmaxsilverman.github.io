@@ -140,5 +140,14 @@ $$
   \end{align}
 $$
 
+with this in hand, we can root find to learn the optimal threshold, 
+
+```mathematica
+root = FindRoot[(3 ta - E^ta (-1 + ta)^2 (2 + ta))/(
+  6 (2 + E^ta (-1 + ta)) (-1 + ta)), {tb, 4/10}, 
+  WorkingPrecision -> 9]
+  ```
+  
+  which gets $t_a \approx 0.416195355\ldots $
 
 <br>
