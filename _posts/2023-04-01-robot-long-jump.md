@@ -50,7 +50,7 @@ $$ P(b\ \text{wins}|t_a, t_b) = \dfrac{P_\text{zero}(t_a)(1-P_\text{zero}(t_b)) 
   \int\limits_{t_a}^2 \text{d}s_a\, \int\limits_{s_a}^{2} \text{d}s_b\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
 $$
 
-the chance to win, $P(b\ \text{wins}|t_a, t_b)$ depends on both their thresholds. 
+the chance to win, $P(b\ \text{wins}|t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane.
 
 strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins})$ has the greatest minimum with respect to $t_a.$ the same is true in the other direction. 
 
