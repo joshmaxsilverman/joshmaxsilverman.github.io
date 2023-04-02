@@ -23,19 +23,26 @@ tags:
 
 the jumper's decision can't depend on anything but their current position since that's all the information they have.
 
-strategy takes the form
+so, each jumper's strategy takes the form
 - if current position $z$ is less than a threshold $t$, take another step
 - if $z\geq t$, take the jump
 
+each player advances down the track, step by step, until they pass $t.$ the biggest $t$ that should be considered is $1,$ or else they'll always score zero. since the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
+
 player $b$ wins if, eventually, they score higher than player $a.$ this can happen if
 
- - both players score in the present round and $s_b > s_a$,
- - both players don't score in this around, and player $b$ goes on to win later, or
- - player $b$ scores in the present round, but player $a$ does not.
+- both players don't score in the present round, and player $b$ goes on to win later, or
+- player $b$ scores in the present round, but player $a$ does not.
+- both players score in the present round and $s_b > s_a$,
+
+
 
 calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
 
-$$ P(b\ \text{wins}|t_a, t_b) = .$$
+$$ 
+  P(b\ \text{wins}|t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(b\ \text{wins}|t_a, t_b) + P_\text{zero}(t_a)(1-P_\text{zero}(t_b)) + 
+  \int\limits_{t_a}^2\, \text{d}s_a \int\limits_{s_a}^{2}\, \text{d}s_b P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b).
+$$
 
 
 
