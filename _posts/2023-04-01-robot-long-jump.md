@@ -135,7 +135,8 @@ taking the derivative with respect to $t_a,$ then setting $t_a = t_b,$ we get th
 $$ 
   \begin{align}
     0 &= \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b} \\
-    &= (3 tb - E^tb (-1 + tb)^2 (2 + tb))/(6 (2 + E^tb (-1 + tb)) (-1 + tb))
+    &= \dfrac{3 t_a-e^{t_a} (1-t_a)^2 (t_a+2)}{6 \left(e^{t_a}
+   (t_a-1)+2\right) (t_a-1)}
   \end{align}
 $$
 
