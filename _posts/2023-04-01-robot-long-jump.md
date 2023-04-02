@@ -21,6 +21,22 @@ tags:
 
 ## Solution
 
+the jumper's decision can't depend on anything but their current position since that's all the information they have.
+
+strategy takes the form
+- if current position $z$ is less than a threshold $t$, take another step
+- if $z\geq t$, take the jump
+
+player $b$ wins if, eventually, they score higher than player $a.$ this can happen if
+
+ - both players score in the present round and $s_b > s_a$,
+ - both players don't score in this around, and player $b$ goes on to win later, or
+ - player $b$ scores in the present round, but player $a$ does not.
+
+calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
+
+$$ P(b\,\text{wins}|t_A, t_b) = .$$
+
 
 
 <br>
