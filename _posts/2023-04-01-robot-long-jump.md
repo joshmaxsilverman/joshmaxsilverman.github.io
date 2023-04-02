@@ -52,6 +52,8 @@ $$
 
 the chance to win, $P(b\ \text{wins}|t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane.
 
+![](/img/2023-04-01-ta-tb-surface.png){:width="500 px" class="image-centered"}
+
 strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins})$ has the greatest minimum with respect to $t_a.$ the same is true in the other direction. 
 
 the game is symmetric for both players, so both players will pick the same $t=t_a=t_b$ so it suffices to find $t_b$ where
