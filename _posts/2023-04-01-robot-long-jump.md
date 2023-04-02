@@ -99,11 +99,11 @@ working that out, we get
 
 $$ 
   P(s,t) = 
-    \\frac{1}{1-t} \begin{cases}
+    \\frac{1}{1-t} \\begin{cases}
       (s-t) & s < 1 \\
       (1-t) & 1<s<(1+t) \\
       (2-s) & (1+t) < s.
-    \end{cases}
+    \\end{cases}
 $$
 
 <br>
