@@ -58,7 +58,7 @@ strategically, player $a$ should set $t_a$ so that $P(a\ \text{wins})$ has the g
 
 the game is symmetric for both players, so both players will pick the same $t=t_a=t_b$ so it suffices to find $t_a$ where
 
-$$ 0 = \dfrac{\partial P(a\ \text{wins}|t_a,t_b)}{\partial t_a}\Biggr|_{t_a=t_b}. $$
+$$ 0 = \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b}. $$
 
 <!-- the game is symmetric for both players, so both players will pick the same $t=t_a=t_b.$ strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins}|t_a, t_b)$ is maximal with respect to $t_b,$ and minimal with respect to $t_a.$ -->
 
