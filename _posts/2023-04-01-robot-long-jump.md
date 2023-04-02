@@ -118,4 +118,14 @@ and
 
 $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $$
 
+## bringing it home
+
+putting it all together, the probability that $a$ wins is
+
+$$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{\text{ta}} (\text{ta}-1) \left(e^{\text{tb}} \left(-\text{ta}^3+\text{ta}^2-3
+   (\text{ta}-1) \text{tb}^2+2 (\text{ta}-1)^2 \text{tb}+4 \text{ta}+2
+   \text{tb}^3-6\right)+12\right)}{12 \left(\left(e^{\text{ta}} (\text{ta}-1)+1\right)
+   e^{\text{tb}} (\text{tb}-1)+e^{\text{ta}} (\text{ta}-1)\right)} 
+$$
+
 <br>
