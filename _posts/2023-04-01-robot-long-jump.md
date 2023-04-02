@@ -68,13 +68,23 @@ to calculate the optimal threshold, we have to find expressions for $P_\text{zer
 
 ## finding $P_\text{zero}(t)$
 
-we can can get a zero if we step beyond $1$ on our present turn, or step to $z^\prime < 1$ on our present turn, then go on to step beyond $1.$ 
+if we're at position $z,$ then we can can get a zero if we step beyond $1$ on our present turn (probability $z$), or step to $z^\prime < 1$ on our present turn, and go on to get a zero from there.
 
-so, if we're at position $z,$ the probability to get a zero is 
+$$ P_\text{zero}(z|t) = z + \int\limits_z^1\text{d}z^\prime P_\text{zero}(z^\prime|t). $$
 
-$$ P_\text{zero}(z|t) = 1-(1-z) + \int\limits_z^1\text{d}z^\prime P_\text{zero}(z^\prime|t). $$
+taking the derivative with respect to $z,$ this becomes 
+
+$$ P_\text{zero}^\prime(z|t) = 1 - P_\text{zero}(z|t), $$
+
+which, integrating from $0$ to $z$ gets $\log\tfrac{P_\text{zero}(z|t)-1}{P_\text{zero}(0|t)-1} = -z. $$
+
+we want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{t|t} = 1,$ so we get
+
+$$ P_\text{zero}(t) = 1 +(t-1) e^t. $$
+
 
 ## finding $P(s|t)$
+
 
 
 <br>
