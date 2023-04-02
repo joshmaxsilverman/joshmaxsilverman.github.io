@@ -63,7 +63,7 @@ $$ 0 = \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b}. $$
 
 <!-- the game is symmetric for both players, so both players will pick the same $t=t_a=t_b.$ strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins}|t_a, t_b)$ is maximal with respect to $t_b,$ and minimal with respect to $t_a.$ -->
 
-to calculate the optimal threshold, we have to find expressions for $P_\text{zero}(t)$ and $P(s|t).$
+to calculate the optimal threshold, we have to find expressions for $P_\text{zero}(t)$ and $P(s\rvert t).$
 
 ## finding $P_\text{zero}(t)$
 
