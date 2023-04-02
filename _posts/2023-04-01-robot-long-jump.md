@@ -106,7 +106,8 @@ working that out, we get
     \end{cases}
 $$ -->
 
-$$ P_\text{score}(s, t) = \frac{1}{1-t}
+$$ P_\text{score}(s, t) = 
+<!-- \frac{1}{1-t} -->
 \begin{cases}
     s-t & s < 1 \\
     1-t & 1<s<1+t \\
