@@ -1,9 +1,9 @@
 ---
 layout: post
-published: false
-title: 
-date: 2018/04/21
-subtitle:
+published: true
+title: Robot long jump
+date: 2023/04/01
+subtitle: ...
 tags:
 ---
 
