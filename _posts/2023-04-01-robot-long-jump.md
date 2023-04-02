@@ -75,7 +75,7 @@ taking the derivative with respect to $z,$ this becomes
 
 $$ P_\text{zero}^\prime(z\rvert t) = 1 - P_\text{zero}(z\rvert t), $$
 
-which, integrating from $0$ to $z$ gets $\log\tfrac{P_\text{zero}(z\rvert t)-1}{P_\text{zero}(0\rvert t)-1} = -z. $$
+which, integrating from $0$ to $z$ gets $\log\tfrac{P_\text{zero}(z\rvert t)-1}{P_\text{zero}(0\rvert t)-1} = -z. $
 
 we want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{zero}(t\rvert t) = 1,$ so we get
 
@@ -143,9 +143,10 @@ $$
 with this in hand, we can root find to learn the optimal threshold, 
 
 ```mathematica
-root = FindRoot[(3 ta - E^ta (-1 + ta)^2 (2 + ta))/(
-  6 (2 + E^ta (-1 + ta)) (-1 + ta)), {tb, 4/10}, 
-  WorkingPrecision -> 9]
+deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta))/(
+  6 (2 + E^ta (-1 + ta)) (-1 + ta))
+root = FindRoot[deriv, {tb, 4/10}, 
+  WorkingPrecision -> 30]
   ```
   
   which gets $t_a \approx 0.416195355\ldots $
