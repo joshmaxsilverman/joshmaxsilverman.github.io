@@ -21,7 +21,7 @@ tags:
 
 ## Solution
 
-the jumper's decision can't depend on anything but their current position since that's all the information they have.
+<!-- the jumper's decision can't depend on anything but their current position since that's all the information they have.
 
 so, each jumper's strategy takes the form
 - if current position $z$ is less than a threshold $t$, take another step
@@ -105,7 +105,7 @@ working that out, we get
       (2-s) & (1+t) < s.
     \end{cases}
 $$ -->
-
+ -->
 $$ P_\text{score}(s, t) = 
 <!--     \frac{1}{1-t} -->
 \begin{cases}
