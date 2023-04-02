@@ -29,6 +29,8 @@ so, each jumper's strategy takes the form
 
 each player advances down the track, step by step, until they pass $t.$ the biggest $t$ that should be considered is $1,$ or else they'll always score zero. since the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
 
+## strategy outline
+
 player $a$ wins if, eventually, they score higher than player $b.$ this can happen if
 
 - both players don't score in the present round, and player $a$ goes on to win later, or
@@ -40,7 +42,7 @@ player $a$ wins if, eventually, they score higher than player $b.$ this can happ
 calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
 
 $$ 
-  P(b\ \text{wins}|t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}|t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
+  P(a\ \text{wins}|t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}|t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_b|t_b)P_\text{score}(s_a|t_a),
 $$
 
@@ -56,12 +58,23 @@ the chance to win, $P(a\ \text{wins}|t_a, t_b),$ depends on both their threshold
 
 strategically, player $a$ should set $t_a$ so that $P(a\ \text{wins})$ has the greatest minimum with respect to $t_b.$ the same is true in the other direction. 
 
-the game is symmetric for both players, so both players will pick the same $t=t_a=t_b$ so it suffices to find $t_a$ where
+the game is symmetric for both players, so they'll pick the same $t=t_a=t_b$ and it suffices to find $t_a$ where
 
 $$ 0 = \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b}. $$
 
 <!-- the game is symmetric for both players, so both players will pick the same $t=t_a=t_b.$ strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins}|t_a, t_b)$ is maximal with respect to $t_b,$ and minimal with respect to $t_a.$ -->
 
+to calculate the optimal threshold, we have to find expressions for $P_\text{zero}(t)$ and $P(s|t).$
+
+## finding $P_\text{zero}(t)$
+
+we can can get a zero if we step beyond $1$ on our present turn, or step to $z^\prime < 1$ on our present turn, then go on to step beyond $1.$ 
+
+so, if we're at position $z,$ the probability to get a zero is 
+
+$$ P_\text{zero}(z|t) = 1-(1-z) + \int\limits_z^1\text{d}z^\prime P_\text{zero}(z^\prime|t). $$
+
+## finding $P(s|t)$
 
 
 <br>
