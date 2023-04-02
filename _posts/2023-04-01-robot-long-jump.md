@@ -85,7 +85,7 @@ $$ P_\text{zero}(t) = 1 +(t-1) e^t. $$
 
 ## finding $P(s|t)$
 
-to get a non-zero score, the player first has to enter the region $\left[t, 1\right].$ the overall probability of landing inside this region is just $(1-t)$ and is uniform within it. 
+<!-- to get a non-zero score, the player first has to enter the region $\left[t, 1\right].$ the overall probability of landing inside this region is just $(1-t)$ and is uniform within it. 
 
 say $x$ is the point where the player entered the region, and $\varepsilon$ is the size of their jump. they can jump to a point $s$ from as far away as $x=t$ or $(s-1),$ whichever is bigger. similarly, their jump can start as close as $x=1$ or $s$ itself, whichever is smaller.
 
@@ -95,7 +95,7 @@ $$ P(s|t) = \int\limits_{\max{t,(s-1)}}^{\min{s,1}} \hskip{-1em}\,dx \int\limits
 
 (here, $\delta()$ is the Dirac delta function)
 
-working that out, we get
+working that out, we get -->
 
 $$ 
   P(s, t) = \frac{1}{1-t}
