@@ -120,12 +120,14 @@ $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $
 
 ## bringing it home
 
-putting it all together, the probability that $a$ wins is
+putting it all together, the probability that $a$ wins, given the thresholds, is
 
 $$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{t_a} (t_a-1) \left(e^{t_b} \left(-t_a^3+t_a^2-3
    (t_a-1) t_b^2+2 (t_a-1)^2 t_b+4 t_a+2
    t_b^3-6\right)+12\right)}{12 \left(\left(e^{t_a} (t_a-1)+1\right)
-   e^{t_b} (t_b-1)+e^{t_a} (t_a-1)\right)} 
+   e^{t_b} (t_b-1)+e^{t_a} (t_a-1)\right)}.
 $$
+
+as expected, when $t_a=t_b,$ this expression is equal to $\frac12.$
 
 <br>
