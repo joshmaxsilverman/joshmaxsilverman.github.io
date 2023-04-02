@@ -93,13 +93,13 @@ with $x$ established, the size of the jump is fixed to $(s-x)$ which means that 
 
 $$ P(s|t) = \int\limits_{\max{t,(s-1)}}^{\min{s,1}} \hskip{-1em}\,dx \int\limits_0^1\,\hskip{-0.3em}d\varepsilon\, \delta(\varepsilon-(s-x)). $$
 
-<!-- (here, $\delta()$ is the Dirac delta function) -->
+(here, $\delta()$ is the Dirac delta function)
 
 working that out, we get
 
 $$ 
-  P(s,t) = \frac{1}{1-t}
-    \begin{cases}
+  P(s,t) = 
+    \frac{1}{1-t} \begin{cases}
       (s-t) & s < 1 \\
       (1-t) & 1<s<(1+t) \\
       (2-s) & (1+t) < s.
