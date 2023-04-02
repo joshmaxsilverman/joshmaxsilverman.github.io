@@ -91,7 +91,7 @@ say $x$ is the point where the player entered the region, and $\varepsilon$ is t
 
 with $x$ established, the size of the jump is fixed to $(s-x)$ which means that the probability of scoring $s$ is equal to
 
-$$ \int\limits_{\max{t,s-1}}^{\min{s,1}} \hskip{-1em}\,dx \int\limits_0^1\,\hskip{-0.3em}d\varepsilon\, \delta(\varepsilon-(s-x)). $$
+$$ \int\limits_{\max\{t,s-1\}}^{\min\{s,1\}} \hskip{-1em}\,dx \int\limits_0^1\,\hskip{-0.3em}d\varepsilon\, \delta(\varepsilon-(s-x)). $$
 
 (here, $\delta()$ is the Dirac delta function)
 
