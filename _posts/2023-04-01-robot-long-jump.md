@@ -47,7 +47,7 @@ $$
 or after solving for $P(b\ \text{wins})|t_a, t_b)$,
 
 $$ P(b\ \text{wins}|t_a, t_b) = \dfrac{P_\text{zero}(t_a)(1-P_\text{zero}(t_b)) + 
-  \int\limits_{t_a}^2 \text{d}s_a\, \int\limits_{s_a}^{2} \text{d}s_b\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
+  \int\limits_{t_a}^2 \text{d}s_a\, \dint\limits_{s_a}^{2} \text{d}s_b\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
 $$
 
 
