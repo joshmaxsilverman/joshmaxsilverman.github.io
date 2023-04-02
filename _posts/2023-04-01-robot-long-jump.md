@@ -41,17 +41,17 @@ player $a$ wins if, eventually, they score higher than player $b.$ this can happ
 calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
 
 $$ 
-  P(a\ \text{wins}\rvert t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}|t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
+  P(a\ \text{wins}\rvert t_a, t_b) = P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}\rvert t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_b|t_b)P_\text{score}(s_a|t_a),
 $$
 
 or after solving for $P(a\ \text{wins})|t_a, t_b)$,
 
-$$ P(a\ \text{wins}|t_a, t_b) = \dfrac{P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
+$$ P(a\ \text{wins}\rvert t_a, t_b) = \dfrac{P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) + 
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
 $$
 
-the chance to win, $P(a\ \text{wins}|t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane.
+the chance to win, $P(a\ \text{wins}\rvert t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane.
 
 ![](/img/2023-04-01-ta-tb-prob-surface.png){:width="500 px" class="image-centered"}
 
