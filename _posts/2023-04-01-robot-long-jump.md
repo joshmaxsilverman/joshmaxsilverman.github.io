@@ -108,9 +108,9 @@ $$ -->
 $$ P_\text{score}(s\rvert t) = 
      \frac{1}{1-t}
 \begin{cases}
-    s-t & s < 1 \\
-    1-t & 1<s<1+t \\
-    2-s & 1+t < s.
+    s-t & \text{if} & s < 1 \\
+    1-t & \text{if} & 1<s<1+t \\
+    2-s & \text{if} & 1+t < s.
 \end{cases}
 $$
 
