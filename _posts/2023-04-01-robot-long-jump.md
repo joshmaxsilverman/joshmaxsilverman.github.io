@@ -122,10 +122,10 @@ $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $
 
 putting it all together, the probability that $a$ wins is
 
-$$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{\text{ta}} (\text{ta}-1) \left(e^{\text{tb}} \left(-\text{ta}^3+\text{ta}^2-3
-   (\text{ta}-1) \text{tb}^2+2 (\text{ta}-1)^2 \text{tb}+4 \text{ta}+2
-   \text{tb}^3-6\right)+12\right)}{12 \left(\left(e^{\text{ta}} (\text{ta}-1)+1\right)
-   e^{\text{tb}} (\text{tb}-1)+e^{\text{ta}} (\text{ta}-1)\right)} 
+$$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{t_a} (t_a-1) \left(e^{t_b} \left(-t_a^3+t_a^2-3
+   (t_a-1) t_b^2+2 (t_a-1)^2 t_b+4 t_a+2
+   t_b^3-6\right)+12\right)}{12 \left(\left(e^{t_a} (t_a-1)+1\right)
+   e^{t_b} (t_b-1)+e^{t_a} (t_a-1)\right)} 
 $$
 
 <br>
