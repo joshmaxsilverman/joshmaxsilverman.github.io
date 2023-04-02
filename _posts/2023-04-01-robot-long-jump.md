@@ -77,7 +77,7 @@ $$ P_\text{zero}^\prime(z\rvert t) = 1 - P_\text{zero}(z\rvert t), $$
 
 which, integrating from $0$ to $z$ gets $\log\tfrac{P_\text{zero}(z\rvert t)-1}{P_\text{zero}(0\rvert t)-1} = -z. $$
 
-we want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{t\rvert t} = 1,$ so we get
+we want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{zero}(t\rvert t) = 1,$ so we get
 
 $$ P_\text{zero}(t) = 1 +(t-1) e^t. $$
 
