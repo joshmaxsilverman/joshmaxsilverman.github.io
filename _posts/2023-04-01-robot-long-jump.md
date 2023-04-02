@@ -130,4 +130,14 @@ $$
 
 as expected, when $t_a=t_b,$ this expression is equal to $\frac12.$
 
+taking the derivative with respect to $t_a,$ then setting $t_a = t_b,$ we get the relatively tidy condition
+
+$$ 
+  \begin{align}
+    \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b} &= (3 tb - E^tb (-1 + tb)^2 (2 + tb))/(6 (2 + E^tb (-1 + tb)) (-1 + tb)) \\
+    &= 0
+  \end{align}
+$$
+
+
 <br>
