@@ -35,7 +35,7 @@ player $b$ wins if, eventually, they score higher than player $a.$ this can happ
 
 calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ and given that they score $P_\text{score}(s, t),$ this means
 
-$$ P(b\,\text{wins}|t_A, t_b) = .$$
+$$ P(b\ \text{wins}|t_A, t_b) = .$$
 
 
 
