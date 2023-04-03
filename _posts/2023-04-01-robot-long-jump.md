@@ -42,9 +42,8 @@ calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and
 
 $$ 
   \begin{align}
-    P(a\ \text{wins}\rvert t_a, t_b) =& P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}\rvert t_a, t_b) \\
-    &+ P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) \\
-    &+ 
+    P(a\ \text{wins}\rvert t_a, t_b) =& P_\text{zero}(t_a)P_\text{zero}(t_b)P(a\ \text{wins}\rvert t_a, t_b) + P_\text{zero}(t_b)(1-P_\text{zero}(t_a)) \\
+    +& 
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_b|t_b)P_\text{score}(s_a|t_a),
   \end{align}
 $$
