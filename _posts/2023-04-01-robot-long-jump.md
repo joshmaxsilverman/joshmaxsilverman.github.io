@@ -155,9 +155,9 @@ deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta))/(6 (2 + E^ta (-1 + ta)) (-1 + ta));
 root = FindRoot[deriv, {tb, 4/10}, WorkingPrecision -> 30]
   ```
   
-which gets $t_a\text{opt} \approx 0.416195355\ldots $
+which gets $t_\text{opt} \approx 0.416195355\ldots $
 
-plugging $t__\text{opt}$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
+plugging $t_\text{opt}$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
 
 $$ P_\text{zero}(t_\text{opt}) \approx 0.114845886\ldots $$
 
