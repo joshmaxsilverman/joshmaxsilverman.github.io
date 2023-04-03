@@ -3,8 +3,8 @@ layout: post
 published: true
 title: Robot long jump
 date: 2023/04/01
-subtitle: ...
-tags:
+subtitle: Jump late, and long, but not too late.
+tags: stochastic-games strategy optimality 
 ---
 
 >**Question**: Great news! The variety of robotic competition continues to grow at breakneck pace! Most recently, head-to-head long jump contests have been all the rage.
