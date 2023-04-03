@@ -118,9 +118,10 @@ and
 
 $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $$
 
-plotting $P(s\rvert t,\ \text{score})$ against $s,$ we see that it forms a trapezoid, going up at $t,$ rising until $s=1,$ then staying flat before it goes down again at $s=2-t,$ before touching down at $2.$ 
+plotting $P(s\rvert t,\ \text{score})$ against $s,$ we see that it forms a trapezoid, going up at $t,$ rising until $s=1,$ then staying flat before it goes down again at $s=1+t,$ before touching down at $2.$ 
 
-![](/img/2023-04-01-score-prob.png){:width="500 px" class="image-centered"}
+![](/img/2023-04-01-score-probs.png){:width="500 px" class="image-centered"}
+
 
 ## bringing it home
 
@@ -163,7 +164,7 @@ the winning strategy was to pick the threshold $t_a$ that has the greatest minim
 
 we can check this by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b.$
 
-![](/img/2023-04-01-optimal-plots.png){:width="500 px" class="image-centered"}
+![](/img/2023-04-01-optimal-plot.png){:width="500 px" class="image-centered"}
 
 we see that any miscalibration by player $b$ raises player $a$'s win probability above $50\%.$ likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
 
