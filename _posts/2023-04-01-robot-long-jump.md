@@ -167,11 +167,11 @@ $$ P_\text{zero}(t_\text{opt}) \approx 0.114845886\ldots $$
 
 the winning strategy is to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
 
-we can check that this has been achieved by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b.$
+we can check that this has been achieved by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b:$
 
 ![](/img/2023-04-01-optimal-plot.png){:width="500 px" class="image-centered"}
 
-we see that any miscalibration by player $b$ raises player $a$'s win probability above $50\%.$ likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
+indeed, any miscalibration by player $b$ raises player $a$'s win probability above $50\%.$ likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
 
 
 <br>
