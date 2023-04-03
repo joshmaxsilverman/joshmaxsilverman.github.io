@@ -147,15 +147,13 @@ $$
 with this in hand, we can root find to learn the optimal threshold, 
 
 ```mathematica
-deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta))/(
-  6 (2 + E^ta (-1 + ta)) (-1 + ta))
-root = FindRoot[deriv, {tb, 4/10}, 
-  WorkingPrecision -> 30]
+deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta))/(6 (2 + E^ta (-1 + ta)) (-1 + ta));
+root = FindRoot[deriv, {tb, 4/10}, WorkingPrecision -> 30]
   ```
   
   which gets $t_a \approx 0.416195355\ldots $
 
-plugging $t_a$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5%$ of the time:
+plugging $t_a$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
 
 $$ P_\text{zero}(t_a^\text{opt}) \approx 0.114845886\ldots $$
 
@@ -167,7 +165,7 @@ we can check this by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a
 
 ![](/img/2023-04-01-optimal-plots.png){:width="500 px" class="image-centered"}
 
-we see that any miscalibration by player $b$ raises player $a$'s win probability above $50%.$ likewise, any miscalibration by player $a$ dips their win probability under $50%.$
+we see that any miscalibration by player $b$ raises player $a$'s win probability above $50\%.$ likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
 
 
 <br>
