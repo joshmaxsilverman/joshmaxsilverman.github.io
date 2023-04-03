@@ -118,9 +118,13 @@ and
 
 $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $$
 
+plotting $P(s\rvert t,\ \text{score})$ against $s,$ we see that it forms a trapezoid, going up at $t,$ rising until $s=1,$ then staying flat before it goes down again at $s=2-t,$ before touching down at $2.$ 
+
+![](/img/2023-04-01-score-prob.png){:width="500 px" class="image-centered"}
+
 ## bringing it home
 
-putting it all together, the probability that $a$ wins, given the thresholds, is
+with all these pieces in place, we can find the probability that $a$ wins, given the thresholds:
 
 $$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{t_a} (t_a-1) \left(e^{t_b} \left(-t_a^3+t_a^2-3
    (t_a-1) t_b^2+2 (t_a-1)^2 t_b+4 t_a+2
