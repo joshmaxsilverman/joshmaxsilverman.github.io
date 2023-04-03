@@ -155,4 +155,17 @@ root = FindRoot[deriv, {tb, 4/10},
   
   which gets $t_a \approx 0.416195355\ldots $
 
+plugging $t_a$ into $P_\text{zero}(t),$ we get
+
+$$ P_\text{zero}(t_a^\text{opt}) \approx 0.114845886\ldots $$
+
+### optimal behavior
+
+the winning strategy was to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
+
+!
+
+we can check this by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b$ we see that any miscalibration by player $b$ raises player $a$'s win probability above $50%.$ likewise, any miscalibration by player $a$ dips their win probability under $50%.$
+
+
 <br>
