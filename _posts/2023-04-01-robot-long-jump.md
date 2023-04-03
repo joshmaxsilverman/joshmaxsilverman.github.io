@@ -155,17 +155,17 @@ deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta))/(6 (2 + E^ta (-1 + ta)) (-1 + ta));
 root = FindRoot[deriv, {tb, 4/10}, WorkingPrecision -> 30]
   ```
   
-  which gets $t_a \approx 0.416195355\ldots $
+which gets $t_a\text{opt} \approx 0.416195355\ldots $
 
-plugging $t_a$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
+plugging $t__\text{opt}$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
 
-$$ P_\text{zero}(t_a^\text{opt}) \approx 0.114845886\ldots $$
+$$ P_\text{zero}(t_\text{opt}) \approx 0.114845886\ldots $$
 
 ### optimal behavior
 
-the winning strategy was to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
+the winning strategy is to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
 
-we can check this by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b.$
+we can check that this has been achieved by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b.$
 
 ![](/img/2023-04-01-optimal-plot.png){:width="500 px" class="image-centered"}
 
