@@ -146,7 +146,7 @@ $$
   \begin{align}
     0 &= \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b} \\
     &= \dfrac{3 t_a-e^{t_a} (1-t_a)^2 (t_a+2)}{6 \left(e^{t_a}
-   (t_a-1)+2\right) (t_a-1)}
+   (t_a-1)+2\right) (t_a-1)}.
   \end{align}
 $$
 
