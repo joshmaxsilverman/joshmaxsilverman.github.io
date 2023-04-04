@@ -17,7 +17,7 @@ tags: stochastic-games strategy optimality
 
 <!--more-->
 
-([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
+([Jane Street](https://www.janestreet.com/puzzles/robot-long-jump-index/))
 
 ## Solution
 
@@ -56,7 +56,7 @@ $$ P(a\ \text{wins}\rvert t_a, t_b) = \dfrac{P_\text{zero}(t_b)(1-P_\text{zero}(
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
 $$
 
-the chance to win, $P(a\ \text{wins}\rvert t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane.
+the chance to win, $P(a\ \text{wins}\rvert t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane. after calculating (see next sections) it looks like this:
 
 ![](/img/2023-04-01-ta-tb-prob-surface.png){:width="500 px" class="image-centered"}
 
