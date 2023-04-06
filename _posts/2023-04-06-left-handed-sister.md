@@ -68,16 +68,16 @@ $$
   P(\text{sister Mary, some guy}\rvert \text{family of}\ 2) = 2! p_\text{girl} p_\text{Mary} p_\text{boy}
 $$
 
-for a family of $3$-children, we can have $\{\text{boy}, \text{lefty sister}, \text{sister Mary}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
+for a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
 
 $$
-  P(\text{sister Mary, some guy}\rvert \text{family of}\ 3) = 3! p_\text{girl} p_\text{Mary} p_\text{boy} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 3) = 3! p_\text{boy}p_\text{girl}^2 p_\text{Mary} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
 $$
 
-for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{lefty sister}, \text{lefty sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{lefty sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{lefty sister}\},$ so
+for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\},$ so
 
 $$
-  P(\text{sister Mary, some guy}\rvert \text{family of}\ 4) = 4! p_\text{boy}p_\text{girl}^3 p_\text{Mary} p_\text{lefty} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}^2p_\text{Mary}
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 4) = 4! p_\text{boy}p_\text{girl}^3 p_\text{Mary} + 2\dfrac{4!}{2!}p_\text{boy}^2p_\text{girl}^2p_\text{Mary} + 3\dfrac{4!}{3!}p_\text{boy}^3p_\text{girl}p_\text{Mary}
 $$
 
 <br>
