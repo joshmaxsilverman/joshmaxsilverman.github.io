@@ -67,7 +67,7 @@ $$
 
 we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ one at a time.
 
-for ease of typing, we'll call $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ by its Christian name, $Z^{nm}.$
+for ease of typing, we'll call $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n)$ by its Christian name, $Z^{nm}.$
 
 for a family of $2$-children,
 
