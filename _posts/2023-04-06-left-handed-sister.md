@@ -100,4 +100,13 @@ $$
   \end{align}
 $$
 
+with these in hand, we can get $ P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) $ by
+
+$$
+ \begin{align}
+    &P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = 
+    &\dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}
+ \end{align}
+$$
+
 <br>
