@@ -128,4 +128,15 @@ $$
   \end{align}
 $$
 
+if there is one girl besides Mary, then the probability they're lefty is just $p_\text{lefty}:$
+
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls}) = p_\text{lefty} $$
+
+likewise
+
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls}) = p_\text{lefty} $$
+
+if there are $2$ girls besides Mary, either one or both of them can be a lefty
+
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls}) = 2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2 $$
 <br>
