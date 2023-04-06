@@ -117,4 +117,15 @@ $$ \begin{align}
   \end{align}
 $$
 
+the first term kills off most terms in the sum, since there can't be a lefty sister if the family only has $1$ girl. the surviving terms are just 
+
+$$
+  \begin{align}
+    &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
+    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})Z^{32} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})Z^{42} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})Z^{43}
+  \end{align}
+$$
+
 <br>
