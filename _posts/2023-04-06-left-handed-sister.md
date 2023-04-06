@@ -7,7 +7,18 @@ subtitle: Are you talking to some brother, or the brother?
 tags: bayes partition-function evidence
 ---
 
->Question
+>**Question**: Suppose you meet someone who looks like the brother of your friend Mary. You ask if he has a sister named Mary, and he says “Yes I do, but I don’t think I know you.”
+>
+>You remember that Mary has a sister who is left-handed, but you don’t remember her name. So you ask your new friend if he has another sister who is left-handed.
+>
+>If he does, how much evidence does that provide that he is the brother of your friend, rather than a random person who coincidentally has a sister named Mary and another sister who is left-handed? In other words, what is the Bayes factor of the left-handed sister?
+>
+>Let’s assume:
+>
+>   - Out of 100 families with children, 20 have one child, 30 have two children, 40 have three children, and 10 have four children.
+>   - All children are either boys or girls with equal probability, one girl in 10 is left-handed, and one girl in 100 is named Mary.
+>   - Name, sex, and handedness are independent, so every child has the same probability of being a girl, left-handed, or named Mary.
+>   - If the person you met had more than one sister named Mary, he would have said so, but he could have more than one sister who is left handed.
 
 <!--more-->
 
@@ -15,11 +26,13 @@ tags: bayes partition-function evidence
 
 ## Solution
 
-we want to know if the person we saw is some guy, or "the guy". the question is, how much should we increase our credence in "the guy" on the basis of hearing about his second sister.
+We want to know if the person we saw is some guy, or "the guy". 
 
-### background
+The question is, how much should we increase our credence in "the guy" on the basis of hearing about his second sister.
 
-before we hear, our relative belief is
+### Evidence and updating
+
+Before we hear about the left sister, our relative belief in "the guy" vs "some guy" is
 
 $$
   \dfrac{P(\text{the guy}\rvert \text{sister Mary})}{P(\text{some guy}\rvert \text{sister Mary})} =   \dfrac{P(\text{sister Mary}\rvert \text{the guy})}{P(\text{sister Mary}\rvert\text{some guy})} \dfrac{P(\text{the guy})}{P(\text{some guy})}
@@ -29,43 +42,43 @@ $$
 and after we hear about the lefty sister, it becomes
 
 $$
-  \dfrac{P(\text{the guy}\rvert \text{sister Mary, lefty sister})}{P(\text{some guy}\rvert \text{sister Mary, lefty sister})}
+  \dfrac{P(\text{the guy}\rvert \text{sister Mary, lefty sister})}{P(\text{some guy}\rvert \text{sister Mary, lefty sister})}.
 $$
 
-using bayes rule, this is equal to
+Using Bayes' rule, this is equal to
 
 $$
-  \dfrac{P(\text{sister Mary, lefty sister}\rvert\text{the guy})}{P(\text{sister Mary, lefty sister}\rvert\text{some guy})}\dfrac{P(\text{the guy})}{P(\text{some guy})}
+  \dfrac{P(\text{sister Mary, lefty sister}\rvert\text{the guy})}{P(\text{sister Mary, lefty sister}\rvert\text{some guy})}\dfrac{P(\text{the guy})}{P(\text{some guy})}.
 $$
 
-using bayes rule again, this becomes
+Using Bayes' rule again, this becomes
 
 $$
-  \dfrac{P(\text{lefty sister}\rvert\text{sister Mary, the guy})}{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}\dfrac{P(\text{sister Mary}\rvert\text{the guy})}{P(\text{sister Mary}\rvert\text{some guy})}\dfrac{P(\text{the guy})}{P(\text{some guy})}
+  \dfrac{P(\text{lefty sister}\rvert\text{sister Mary, the guy})}{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}\dfrac{P(\text{sister Mary}\rvert\text{the guy})}{P(\text{sister Mary}\rvert\text{some guy})}\dfrac{P(\text{the guy})}{P(\text{some guy})},
 $$
 
-which is just $P(\text{lefty sister}\rvert\text{sister Mary, the guy})/P(\text{lefty sister}\rvert\text{sister Mary, some guy})$ times our relative belief before hearing about the lefty sister. this update factor is called the "bayes factor" associated with the lefty sister.
+which is just $P(\text{lefty sister}\rvert\text{sister Mary, the guy})/P(\text{lefty sister}\rvert\text{sister Mary, some guy})$ times our relative belief before hearing about the lefty sister. This update factor is called the "Bayes factor" associated with the lefty sister.
 
-the numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator 
+The numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator:
 
 $$ \boxed{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}. $$
 
-### family first
+### Family first
 
-to calculate the probability of the "lefty sister", we need to know what kind of family "some guy" comes from. as we know, he could come from a $2$-, $3$-, or $4$-child family given that he has a "sister Mary", and can have anywhere from $1$ or all of his siblings be sisters. 
+To calculate the probability of the "lefty sister" given that our guy has a sister Mary, we need to know what kind of family "some guy" comes from. As we know, given that he has a "sister Mary" he could come from a $2$-, $3$-, or $4$-child family, and can have anywhere from $1$ to all of his siblings be sisters. 
 
-in other words, we can sum over the kind of family he comes from. this is convenient, because we know the distribution of family types, and we can easily calculate the probability to observe faimly members given the family they come from:
+In other words, we can sum over the kind of family he comes from. This is convenient, because we know the distribution of family types, and we can easily calculate the probability to observe faimly members given the family they come from:
 
 $$
   \begin{align}
     &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
-    &=\sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})
+    &=\sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}).
   \end{align}
 $$
 
-the first factor is straightforward, but not the second takes some gymnastics.
+The first factor is straightforward, but the second takes some gymnastics.
 
-it may come as a surprise, but we can use bayes rule to find it
+It may come as a surprise, but we can use Bayes' rule to do it:
 
 $$
   \begin{align}
@@ -74,15 +87,15 @@ $$
   \end{align}
 $$
 
-now, the tricky term is reexpressed in terms of simple forward terms.
+Now, the tricky term is reexpressed in terms of simple forward terms.
 
-### familial microstates
+### Familial microstates
 
-the terms $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ represent the probability weight of boys from families of size $n$, with $m$ girls in the population. this is easier to see if we read "sister Mary, some guy" as "some guy who has a sister Mary".
+The terms $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ represent the probability weight of boys from families of size $n$, with $m$ girls in the population. This is easier to see if we read "sister Mary, some guy" as the equivalent "spoke to some guy who has a sister Mary".
 
-we can calculate these terms one at a time.
+We can calculate these terms one at a time.
 
-for ease of typing, we'll call 
+For ease of typing, we'll call
 
 $$ 
   P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n) 
@@ -90,22 +103,24 @@ $$
 
 by its Christian name, $Z^{nm}.$
 
-for a family of $2$-children, we have two people. accounting for ordering, we get
+For a family with $2$-children, we have two people. Accounting for ordering, we get
 
 $$
   Z^{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
 $$
 
-for a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
+For a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
 
 $$
   \begin{align}
     Z^{32} &= 1\times 3! p_\text{boy} p_\text{Mary} (1-p_\text{Mary}) p_\text{girl}^2 \times P(\text{family of 3})\\
-    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{boy}^2 p_\text{Mary} p_\text{girl}\times P(\text{family of 3})
+    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{boy}^2 p_\text{Mary} p_\text{girl}\times P(\text{family of 3}).
   \end{align}
 $$
 
-for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\},$ so
+As we noted, the overall weight is proportional to the number of boys that the family contributes to the population of people we can run into.
+
+For a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\},$ so
 
 $$
   \begin{align}
@@ -115,26 +130,26 @@ $$
   \end{align}
 $$
 
-with these in hand, we can renormalize them to recover $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
+With these in hand, we can renormalize them to recover $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
     \tilde{Z}^{nm}&=P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-    =&\dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}
+    =&\dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}.
  \end{align}
 $$
 
-now we can return to the sum form of the thing we're interested in:
+Now we can return to the sum form of the thing we're interested in:
 
 $$ \begin{align}
   &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
-  &\sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})
+  &\sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}).
   \end{align}
 $$
 
-the first term kills off most terms in the sum, since there can't be a lefty sister if the family only has $1$ girl (who would have to be Mary). 
+The first term kills off most terms in the sum, since there can't be a lefty sister if the family only has $1$ girl (who would have to be Mary). 
 
-the surviving terms are just 
+The surviving terms are just 
 
 $$
   \begin{align}
@@ -145,23 +160,23 @@ $$
   \end{align}
 $$
 
-### left hand probability
+### Left hand probability
 
-if there is one girl besides Mary, then the probability they're lefty is just $p_\text{lefty}:$
+If there is one girl besides Mary, then the probability they're lefty is just $p_\text{lefty}:$
 
-$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls}) = p_\text{lefty} $$
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls}) = p_\text{lefty}. $$
 
-likewise
+Likewise,
 
-$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls}) = p_\text{lefty} $$
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls}) = p_\text{lefty}. $$
 
-if there are $2$ girls besides Mary, either one or both of them can be a lefty
+If there are $2$ girls besides Mary, either one or both of them can be a lefty
 
 $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls}) = 2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2 $$
 
-### the guy, or some guy?
+### The guy, or some guy?
 
-putting it all together, we get 
+Putting it all together, we get 
 
 $$
   \begin{align}
@@ -173,11 +188,11 @@ $$
    \end{align}
 $$
       
-so, after we hear about the left handed sister, we should have $1/P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \approx 17.8$ times as much belief that we're talking to "the guy".
+So, after we hear about the left handed sister, we should have $1/P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \approx 17.8$ times as much belief that we're talking to "the guy".
 
-if you'd like to customize the search for your friend's brother, the general form in terms of $p_\text{Lefty}$ and $p_\text{Mary}$ is the tidy expression is:
+If you'd like to customize the search for your friend's brother, the general form in terms of $p_\text{Lefty}$ and $p_\text{Mary}$ is the tidy expression is:
 
 $$ \dfrac{(p_\text{Lefty} (8 + p_\text{Lefty} (-1 + p_\text{Mary}) - 2 p_\text{Mary}) (1 - p_\text{Mary})}{
- 14 + (-8 + p_\text{Mary}) p_\text{Mary})} $$
+ 14 + (-8 + p_\text{Mary}) p_\text{Mary})}. $$
 
 <br>
