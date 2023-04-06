@@ -60,4 +60,12 @@ $$
   P(\text{family of}\ n\rvert\text{sister Mary, some guy}) = \dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n)P(\text{family of}\ n)}{\sum_n P(\text{sister Mary, some guy}\rvert \text{family of}\ n)P(\text{family of}\ n)}
 $$
 
+we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n)$ one at a time.
+
+for a family of $2$-children,
+
+$$
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 2) = 2! P(\text{girl})\times P(\text{named Mary})\times P(\text{boy})
+$$
+
 <br>
