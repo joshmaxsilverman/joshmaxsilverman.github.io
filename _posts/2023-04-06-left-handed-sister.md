@@ -44,7 +44,9 @@ $$
 
 which is just $P(\text{lefty sister}\rvert\text{sister Mary, the guy})/P(\text{lefty sister}\rvert\text{sister Mary, some guy})$ times our relative belief before hearing about the lefty sister. this update factor is called the "bayes factor" associated with the lefty sister.
 
-the numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator $P(\text{lefty sister}\rvert\text{sister Mary, some guy}).$
+the numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator 
+
+$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy}). $$
 
 to calculate the probability of the "lefty sister", we need to know what kind of family "some guy" comes from. as we know, he could come from a 2-, 3-, or 4-child family given that he has a "sister Mary". in other words
 
