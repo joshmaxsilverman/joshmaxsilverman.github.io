@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Left Handed Sister
+title: Left handed sister
 date: 2023/04/06
 subtitle: Are you talking to some brother, or the brother?
 tags: bayes partition-function evidence
