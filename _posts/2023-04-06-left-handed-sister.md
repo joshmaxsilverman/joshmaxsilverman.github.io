@@ -78,15 +78,15 @@ by its Christian name, $Z^{nm}.$
 for a family of $2$-children, we have two people. accounting for ordering, we get
 
 $$
-  Z^{21} = 2! p_\text{girl} p_\text{Mary} p_\text{boy}
+  Z^{21} = 2! p_\text{girl} p_\text{Mary} p_\text{boy}P(\text{family of 2})
 $$
 
 for a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
 
 $$
   \begin{align}
-    Z^{32} &= 1\times 3! p_\text{Mary} p_\text{boy}p_\text{girl}^2 \\
-    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}
+    Z^{32} &= 1\times 3! p_\text{Mary} p_\text{boy}p_\text{girl}^2 P(\text{family of 3})\\
+    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}P(\text{family of 3})
   \end{align}
 $$
 
@@ -94,9 +94,9 @@ for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \te
 
 $$
   \begin{align}
-    Z^{43} &= 1\times 4! p_\text{Mary} p_\text{boy}p_\text{girl}^3 \\
-    Z^{42} &= 2\times \dfrac{4!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}^2 \\
-    Z^{41} &= 3\times \dfrac{4!}{3!}p_\text{Mary} p_\text{boy}^3p_\text{girl}
+    Z^{43} &= 1\times 4! p_\text{Mary} p_\text{boy}p_\text{girl}^3 P(\text{family of 4})\\
+    Z^{42} &= 2\times \dfrac{4!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}^2 P(\text{family of 4})\\
+    Z^{41} &= 3\times \dfrac{4!}{3!}p_\text{Mary} p_\text{boy}^3p_\text{girl}P(\text{family of 4})
   \end{align}
 $$
 
