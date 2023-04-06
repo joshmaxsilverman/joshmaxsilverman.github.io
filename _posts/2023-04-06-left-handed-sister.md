@@ -59,7 +59,10 @@ the first factor is straightforward, but not the second.
 it may come as a surprise, but we can use bayes rule to find it
 
 $$
-  P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = \dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls})}{\sum_n P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls})}
+  \begin{align}
+  &P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = \\
+  &\dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls})}{\sum_n P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls})}
+  \end{align}
 $$
 
 we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n)$ one at a time.
