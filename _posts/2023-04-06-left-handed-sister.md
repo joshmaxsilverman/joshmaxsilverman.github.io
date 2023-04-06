@@ -190,9 +190,13 @@ $$
       
 So, after we hear about the left handed sister, we should update our relative belief by $1/P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \approx 17.8$ times in favor of the hypothesis that we're talking to "the guy".
 
-If you'd like to customize the search for your friend's brother, the general form in terms of $p_\text{Lefty}$ and $p_\text{Mary}$ is the tidy expression is:
+### For a good time
+
+If you are facing this problem in your own life, the general form in terms of $p_\text{Lefty}$ and $p_\text{Mary}$ is the tidy expression:
 
 $$ \dfrac{(p_\text{Lefty} (8 + p_\text{Lefty} (-1 + p_\text{Mary}) - 2 p_\text{Mary}) (1 - p_\text{Mary})}{
  14 + (-8 + p_\text{Mary}) p_\text{Mary})}. $$
+ 
+I hope it helps.
 
 <br>
