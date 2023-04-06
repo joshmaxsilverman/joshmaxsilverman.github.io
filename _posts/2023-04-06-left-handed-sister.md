@@ -109,4 +109,12 @@ $$
  \end{align}
 $$
 
+now we can return to the sum form
+
+$$ \begin{align}
+  &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) =
+  \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})
+  \end{align}
+$$
+
 <br>
