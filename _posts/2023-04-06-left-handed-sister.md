@@ -77,7 +77,7 @@ $$
 for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{lefty sister}, \text{lefty sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{lefty sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{lefty sister}\},$ so
 
 $$
-  P(\text{sister Mary, some guy}\rvert \text{family of}\ 4) = 4! p_\text{girl} p_\text{Mary} p_\text{boy} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 4) = 4! p_\text{boy}p_\text{girl}^3 p_\text{Mary} p_\text{lefty} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}^2p_\text{Mary}
 $$
 
 <br>
