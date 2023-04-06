@@ -109,7 +109,7 @@ $$
   Z^{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
 $$
 
-For a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
+For a family of $3$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}\\},$ so
 
 $$
   \begin{align}
@@ -120,7 +120,7 @@ $$
 
 As we noted, the overall weight is proportional to the number of boys that the family contributes to the population of people we can run into.
 
-For a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\},$ so
+For a family of $4$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\\},$ so
 
 $$
   \begin{align}
