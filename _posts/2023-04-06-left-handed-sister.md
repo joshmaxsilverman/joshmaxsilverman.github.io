@@ -52,5 +52,6 @@ $$
   P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \sum_n P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n)P(\text{family of}\ n\rvert\text{sister Mary, some guy})
 $$
 
+the first factor is straightforward, but not the second.
 
 <br>
