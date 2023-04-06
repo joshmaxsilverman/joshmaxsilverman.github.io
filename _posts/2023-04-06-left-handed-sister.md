@@ -139,4 +139,15 @@ $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{
 if there are $2$ girls besides Mary, either one or both of them can be a lefty
 
 $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls}) = 2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2 $$
+
+putting it all together, we get 
+
+$$
+  \begin{align}
+      &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
+      & \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
+      &= 1\times 3! p_\text{Mary} p_\text{boy}p_\text{girl}^2 p_\text{lefty} + 1\times 4! p_\text{Mary} p_\text{boy}p_\text{girl}^3\left(2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right) + 2\times \dfrac{4!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}^2 p_\text{lefty}
+   \end{align}
+$$
+      
 <br>
