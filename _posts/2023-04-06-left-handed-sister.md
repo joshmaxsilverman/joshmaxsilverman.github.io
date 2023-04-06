@@ -104,11 +104,11 @@ $$
   \end{align}
 $$
 
-with these in hand, we can get $P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
+with these in hand, we can get $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
-    &P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = 
+    &\tilde{Z}^{nm}=P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = 
     &\dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}
  \end{align}
 $$
@@ -126,9 +126,9 @@ the first term kills off most terms in the sum, since there can't be a lefty sis
 $$
   \begin{align}
     &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
-    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})Z^{32} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})Z^{42} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})Z^{43}
+    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})\tilde{Z}^{32} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})\tilde{Z}^{42} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\tilde{Z}^{43}
   \end{align}
 $$
 
@@ -150,7 +150,7 @@ $$
   \begin{align}
       &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
       &= \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-      &= Z^{32}p_\text{lefty} + Z^{43}\left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right] + Z^{42} p_\text{lefty}
+      &= \tilde{Z}^{32}p_\text{lefty} + \tilde{Z}^{43}\left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right] + \tilde{Z}^{42} p_\text{lefty}
    \end{align}
 $$
       
