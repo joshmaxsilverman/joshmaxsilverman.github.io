@@ -20,7 +20,8 @@ we want to know if the person we saw is some guy, or "the guy". the question is,
 before we hear, our relative belief is
 
 $$
-  \dfrac{P(\text{the guy}\rvert \text{sister Mary})}{P(\text{some guy}\rvert \text{sister Mary})}
+  \dfrac{P(\text{the guy}\rvert \text{sister Mary})}{P(\text{some guy}\rvert \text{sister Mary})} =   \dfrac{P(\text{sister Mary}\rvert \text{the guy})}{P(\text{sister Mary}\rvert\text{some guy})} \dfrac{P(\text{the guy})}{P(\text{some guy})}
+$$
 $$
 
 and after we hear about the lefty sister, it becomes
