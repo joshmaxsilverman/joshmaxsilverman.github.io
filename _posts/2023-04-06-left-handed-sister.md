@@ -65,7 +65,13 @@ we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n)$
 for a family of $2$-children,
 
 $$
-  P(\text{sister Mary, some guy}\rvert \text{family of}\ 2) = 2! P(\text{girl})\times P(\text{named Mary})\times P(\text{boy})
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 2) = 2! p_\text{girl} p_\text{Mary} p_\text{boy}
+$$
+
+for a family of $3$-children, we can have $\{\text{boy}, \text{lefty sister}, \text{sister Mary}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
+
+$$
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 3) = 3! p_\text{girl}\times p_\text{Mary}\times p_\text{boy} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
 $$
 
 <br>
