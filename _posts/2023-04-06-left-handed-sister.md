@@ -180,8 +180,7 @@ Putting it all together, we get
 
 $$
   \begin{align}
-      &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
-      &= p_\text{lefty}\widetilde{Z}_{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\widetilde{Z}_{43} + p_\text{lefty}\widetilde{Z}_{42} \\
+      P(\text{lefty sister}\rvert\text{sister Mary, some guy}) &= p_\text{lefty}\widetilde{Z}_{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\widetilde{Z}_{43} + p_\text{lefty}\widetilde{Z}_{42} \\
       &= \dfrac{780219}{13920100} \\
       &\approx 1/17.8
    \end{align}
