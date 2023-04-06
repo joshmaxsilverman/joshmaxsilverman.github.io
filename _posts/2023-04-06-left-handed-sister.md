@@ -1,17 +1,17 @@
 ---
 layout: post
-published: false
-title: 
-date: 2018/04/21
-subtitle:
-tags:
+published: true
+title: Left Handed Sister
+date: 2023/04/06
+subtitle: Are you talking to some brother, or the brother?
+tags: bayes partition-function evidence
 ---
 
 >Question
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([Probably Overthinking It](https://www.allendowney.com/blog/2021/07/23/the-left-handed-sister-problem/))
 
 ## Solution
 
