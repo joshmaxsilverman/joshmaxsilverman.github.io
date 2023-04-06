@@ -61,7 +61,7 @@ it may come as a surprise, but we can use bayes rule to find it
 $$
   \begin{align}
   &P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) = \\
-  &\dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n)}{\sum_n P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n)}
+  &\dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n)}{\sum_{m^\prime n^\prime} P(\text{sister Mary, some guy}\rvert \text{family of}\ n^\prime\ \text{with}\ m^\prime\ \text{girls})P(\ m^\prime\ \text{girls}\rvert \text{family of}\ n^\prime)P(\text{family of}\ n^\prime)}
   \end{align}
 $$
 
