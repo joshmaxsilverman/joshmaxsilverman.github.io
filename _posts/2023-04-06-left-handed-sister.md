@@ -46,4 +46,6 @@ which is just $P(\text{lefty sister}\rvert\text{sister Mary, the guy})/P(\text{l
 
 the numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator $P(\text{lefty sister}\rvert\text{sister Mary, some guy}).$
 
+
+
 <br>
