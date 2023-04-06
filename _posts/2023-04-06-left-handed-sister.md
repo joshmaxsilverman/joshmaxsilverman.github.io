@@ -17,6 +17,8 @@ tags:
 
 we want to know if the person we saw is some guy, or "the guy". the question is, how much should we increase our credence in "the guy" on the basis of hearing about his second sister.
 
+### background
+
 before we hear, our relative belief is
 
 $$
@@ -46,7 +48,9 @@ which is just $P(\text{lefty sister}\rvert\text{sister Mary, the guy})/P(\text{l
 
 the numerator is $1$ on account that "the guy" definitely has these two sisters, so we can turn our focus on the denominator 
 
-$$ P(\text{lefty sister}\rvert\text{sister Mary, some guy}). $$
+$$ \boxed{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}. $$
+
+### calculation
 
 to calculate the probability of the "lefty sister", we need to know what kind of family "some guy" comes from. as we know, he could come from a 2-, 3-, or 4-child family given that he has a "sister Mary". in other words
 
