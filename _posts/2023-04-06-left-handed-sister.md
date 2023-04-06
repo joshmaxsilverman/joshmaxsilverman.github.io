@@ -101,20 +101,20 @@ $$
   P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n) 
 $$ 
 
-by its Christian name, $Z^{nm}.$
+by its Christian name, $Z_{nm}.$
 
 For a family with $2$-children, we have two people. Accounting for ordering, we get
 
 $$
-  Z^{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
+  Z_{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
 $$
 
 For a family of $3$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}\\},$ so
 
 $$
   \begin{align}
-    Z^{32} &= 1\times 3! p_\text{boy} p_\text{Mary} (1-p_\text{Mary}) p_\text{girl}^2 \times P(\text{family of 3})\\
-    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{boy}^2 p_\text{Mary} p_\text{girl}\times P(\text{family of 3}).
+    Z_{32} &= 1\times 3! p_\text{boy} p_\text{Mary} (1-p_\text{Mary}) p_\text{girl}^2 \times P(\text{family of 3})\\
+    Z_{31} &= 2 \times \dfrac{3!}{2!}p_\text{boy}^2 p_\text{Mary} p_\text{girl}\times P(\text{family of 3}).
   \end{align}
 $$
 
@@ -124,18 +124,18 @@ For a family of $4$-children, we can have $\\{\text{boy}, \text{sister Mary}, \t
 
 $$
   \begin{align}
-    Z^{43} &= 1\times 4! p_\text{boy} p_\text{Mary}(1-p_\text{Mary})^2 p_\text{girl}^3 \times P(\text{family of 4})\\
-    Z^{42} &= 2\times \dfrac{4!}{2!} p_\text{boy}^2 p_\text{Mary}(1-p_\text{Mary}) p_\text{girl}^2 \times P(\text{family of 4})\\
-    Z^{41} &= 3\times \dfrac{4!}{3!} p_\text{boy}^3 p_\text{Mary} p_\text{girl}\times P(\text{family of 4})
+    Z_{43} &= 1\times 4! p_\text{boy} p_\text{Mary}(1-p_\text{Mary})^2 p_\text{girl}^3 \times P(\text{family of 4})\\
+    Z_{42} &= 2\times \dfrac{4!}{2!} p_\text{boy}^2 p_\text{Mary}(1-p_\text{Mary}) p_\text{girl}^2 \times P(\text{family of 4})\\
+    Z_{41} &= 3\times \dfrac{4!}{3!} p_\text{boy}^3 p_\text{Mary} p_\text{girl}\times P(\text{family of 4})
   \end{align}
 $$
 
-With these in hand, we can renormalize them to recover $\widetilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
+With these in hand, we can renormalize them to recover $\widetilde{Z}_{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
-    \widetilde{Z}^{nm} =& P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-    =& \dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}.
+    \widetilde{Z}_{nm} =& P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
+    =& \dfrac{Z_{nm}}{Z_{21} + Z_{31} + Z_{32} + Z_{41} + Z_{42} + Z_{43}}.
  \end{align}
 $$
 
@@ -154,9 +154,9 @@ The surviving terms are just
 $$
   \begin{align}
     &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
-    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})\widetilde{Z}^{32} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})\widetilde{Z}^{42} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\widetilde{Z}^{43}
+    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})\widetilde{Z}_{32} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})\widetilde{Z}_{42} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\widetilde{Z}_{43}
   \end{align}
 $$
 
@@ -182,7 +182,7 @@ $$
   \begin{align}
       &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
       &= \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-      &= p_\text{lefty}\widetilde{Z}^{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\widetilde{Z}^{43} + p_\text{lefty}\widetilde{Z}^{42} \\
+      &= p_\text{lefty}\widetilde{Z}_{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\widetilde{Z}_{43} + p_\text{lefty}\widetilde{Z}_{42} \\
       &= \dfrac{780219}{13920100} \\
       &\approx 1/17.8
    \end{align}
