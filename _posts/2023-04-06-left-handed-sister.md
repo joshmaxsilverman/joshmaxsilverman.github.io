@@ -71,7 +71,7 @@ $$
 for a family of $3$-children, we can have $\{\text{boy}, \text{lefty sister}, \text{sister Mary}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}\},$ so
 
 $$
-  P(\text{sister Mary, some guy}\rvert \text{family of}\ 3) = 3! p_\text{girl}\times p_\text{Mary}\times p_\text{boy} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+  P(\text{sister Mary, some guy}\rvert \text{family of}\ 3) = 3! p_\text{girl} p_\text{Mary} p_\text{boy} + 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
 $$
 
 <br>
