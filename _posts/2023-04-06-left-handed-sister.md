@@ -150,7 +150,7 @@ $$
   \begin{align}
       &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
       &= \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-      &= 1\times 3! p_\text{Mary} p_\text{boy}p_\text{girl}^2 p_\text{lefty} + 1\times 4! p_\text{Mary} p_\text{boy}p_\text{girl}^3\left(2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right) + 2\times \dfrac{4!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}^2 p_\text{lefty}
+      &= Z^{32}p_\text{lefty} + Z^{43}\left(2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right) + Z^{42} p_\text{lefty}
    \end{align}
 $$
       
