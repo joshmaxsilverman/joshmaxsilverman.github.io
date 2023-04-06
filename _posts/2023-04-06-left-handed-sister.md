@@ -69,7 +69,7 @@ we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ 
 
 for ease of typing, we'll call $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})P(\ m\ \text{girls}\rvert \text{family of}\ n)P(\text{family of}\ n)$ by its Christian name, $Z^{nm}.$
 
-for a family of $2$-children,
+for a family of $2$-children, we have two people. accounting for ordering, we get
 
 $$
   Z^{21} = 2! p_\text{girl} p_\text{Mary} p_\text{boy}
@@ -79,8 +79,8 @@ for a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \te
 
 $$
   \begin{align}
-    Z^{32} &= 3! p_\text{boy}p_\text{girl}^2 p_\text{Mary} \\
-    Z^{31} &= 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+    Z^{32} &= 1\times 3! p_\text{Mary} p_\text{boy}p_\text{girl}^2 \\
+    Z^{31} &= 2 \times \dfrac{3!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}
   \end{align}
 $$
 
@@ -88,9 +88,9 @@ for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \te
 
 $$
   \begin{align}
-    Z^{43} &= 4! p_\text{boy}p_\text{girl}^3 p_\text{Mary} \\
-    Z^{42} &= 2\dfrac{4!}{2!}p_\text{boy}^2p_\text{girl}^2p_\text{Mary} \\
-    Z^{41} &= 3\dfrac{4!}{3!}p_\text{boy}^3p_\text{girl}p_\text{Mary}
+    Z^{43} &= 1\times 4! p_\text{Mary} p_\text{boy}p_\text{girl}^3 \\
+    Z^{42} &= 2\times \dfrac{4!}{2!}p_\text{Mary} p_\text{boy}^2p_\text{girl}^2 \\
+    Z^{41} &= 3\times \dfrac{4!}{3!}p_\text{Mary} p_\text{boy}^3p_\text{girl}
   \end{align}
 $$
 
