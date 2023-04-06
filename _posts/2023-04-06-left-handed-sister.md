@@ -50,9 +50,11 @@ the numerator is $1$ on account that "the guy" definitely has these two sisters,
 
 $$ \boxed{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}. $$
 
-### calculation
+### family first
 
-to calculate the probability of the "lefty sister", we need to know what kind of family "some guy" comes from. as we know, he could come from a 2-, 3-, or 4-child family given that he has a "sister Mary". in other words
+to calculate the probability of the "lefty sister", we need to know what kind of family "some guy" comes from. as we know, he could come from a $2$-, $3$-, or $4$-child family given that he has a "sister Mary", and can have anywhere from $1$ or all of his siblings be sisters. 
+
+in other words, we can sum over the kind of family he comes from. this is convenient, because we know the distribution of family types, and we can easily calculate the probability to observe faimly members given the family they come from:
 
 $$
   \begin{align}
@@ -61,7 +63,7 @@ $$
   \end{align}
 $$
 
-the first factor is straightforward, but not the second.
+the first factor is straightforward, but not the second takes some gymnastics.
 
 it may come as a surprise, but we can use bayes rule to find it
 
@@ -72,7 +74,13 @@ $$
   \end{align}
 $$
 
-we can calculate the $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ one at a time.
+now, the tricky term is reexpressed in terms of simple forward terms.
+
+### familial microstates
+
+the terms $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ represent the probability weight of boys from families of size $n$, with $m$ girls in the population. this is easier to see if we read "sister Mary, some guy" as "some guy who has a sister Mary".
+
+we can calculate these terms one at a time.
 
 for ease of typing, we'll call 
 
@@ -107,7 +115,7 @@ $$
   \end{align}
 $$
 
-with these in hand, we can get $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
+with these in hand, we can renormalize them to recover $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
@@ -116,7 +124,7 @@ $$
  \end{align}
 $$
 
-now we can return to the sum form
+now we can return to the sum form of the thing we're interested in:
 
 $$ \begin{align}
   &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
@@ -124,7 +132,9 @@ $$ \begin{align}
   \end{align}
 $$
 
-the first term kills off most terms in the sum, since there can't be a lefty sister if the family only has $1$ girl. the surviving terms are just 
+the first term kills off most terms in the sum, since there can't be a lefty sister if the family only has $1$ girl (who would have to be Mary). 
+
+the surviving terms are just 
 
 $$
   \begin{align}
@@ -134,6 +144,8 @@ $$
     &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\tilde{Z}^{43}
   \end{align}
 $$
+
+### left hand probability
 
 if there is one girl besides Mary, then the probability they're lefty is just $p_\text{lefty}:$
 
@@ -146,6 +158,8 @@ $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{
 if there are $2$ girls besides Mary, either one or both of them can be a lefty
 
 $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls}) = 2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2 $$
+
+### the guy, or some guy?
 
 putting it all together, we get 
 
