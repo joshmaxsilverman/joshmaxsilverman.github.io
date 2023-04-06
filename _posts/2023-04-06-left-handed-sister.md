@@ -79,8 +79,9 @@ for a family of $3$-children, we can have $\{\text{boy}, \text{sister Mary}, \te
 
 $$
   \begin{align}
-  Z^{32} &= 3! p_\text{boy}p_\text{girl}^2 p_\text{Mary} \\
-  Z^{31} &= 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+    Z^{32} &= 3! p_\text{boy}p_\text{girl}^2 p_\text{Mary} \\
+    Z^{31} &= 2\dfrac{3!}{2!}p_\text{boy}^2p_\text{girl}p_\text{Mary}
+  \end{align}
 $$
 
 for a family of $4$-children, we can have $\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\}$ or $\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\},$ so
