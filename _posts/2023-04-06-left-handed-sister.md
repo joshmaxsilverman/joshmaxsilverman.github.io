@@ -65,9 +65,9 @@ $$ \boxed{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}. $$
 
 ### Family first
 
-To calculate the probability of the "lefty sister" given that our guy has a sister Mary, we need to know what kind of family "some guy" comes from. As we know, given that he has a "sister Mary" he could come from a $2$-, $3$-, or $4$-child family, and can have anywhere from $1$ to all of his siblings be sisters. 
+To calculate the probability of the "lefty sister" given that "some guy" has a sister Mary, we need to know what kind of family "some guy" comes from. As we know, given that he has a "sister Mary" he could come from a $2$-, $3$-, or $4$-child family, and can have anywhere from $1$ to all of his siblings be sisters. 
 
-In other words, we can sum over the kind of family he comes from. This is convenient, because we know the distribution of family types, and we can easily calculate the probability to observe faimly members given the family they come from:
+In other words, we can sum over the kind of family he comes from. This is convenient, because we know the distribution of family types, and we can calculate the probability to observe family members given the family they come from:
 
 $$
   \begin{align}
