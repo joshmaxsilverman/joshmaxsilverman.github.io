@@ -130,11 +130,11 @@ $$
   \end{align}
 $$
 
-With these in hand, we can renormalize them to recover $\tilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
+With these in hand, we can renormalize them to recover $\widetilde{Z}^{nm} = P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
-    \tilde{Z}^{nm} =& P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
+    \widetilde{Z}^{nm} =& P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
     =& \dfrac{Z^{nm}}{Z^{21} + Z^{31} + Z^{32} + Z^{41} + Z^{42} + Z^{43}}.
  \end{align}
 $$
@@ -154,9 +154,9 @@ The surviving terms are just
 $$
   \begin{align}
     &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) = \\
-    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})\tilde{Z}^{32} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})\tilde{Z}^{42} \\
-    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\tilde{Z}^{43}
+    &P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 3\ \text{with}\ 2\ \text{girls})\widetilde{Z}^{32} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 2\ \text{girls})\widetilde{Z}^{42} \\
+    &+ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls})\widetilde{Z}^{43}
   \end{align}
 $$
 
@@ -182,7 +182,7 @@ $$
   \begin{align}
       &P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \\
       &= \sum_{n,m} P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ n\ \text{with}\ m\ \text{girls})P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) \\
-      &= p_\text{lefty}\tilde{Z}^{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\tilde{Z}^{43} + p_\text{lefty}\tilde{Z}^{42} \\
+      &= p_\text{lefty}\widetilde{Z}^{32} + \left[2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2\right]\widetilde{Z}^{43} + p_\text{lefty}\widetilde{Z}^{42} \\
       &= \dfrac{780219}{13920100} \\
       &\approx 1/17.8
    \end{align}
