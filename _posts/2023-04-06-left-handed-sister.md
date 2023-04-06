@@ -54,4 +54,10 @@ $$
 
 the first factor is straightforward, but not the second.
 
+it may come as a surprise, but we can use bayes rule to find it
+
+$$
+  P(\text{family of}\ n\rvert\text{sister Mary, some guy}) = \dfrac{P(\text{sister Mary, some guy}\rvert \text{family of}\ n)P(\text{family of}\ n)}{\sum_n P(\text{sister Mary, some guy}\rvert \text{family of}\ n)P(\text{family of}\ n)}
+$$
+
 <br>
