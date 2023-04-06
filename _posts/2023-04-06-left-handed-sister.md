@@ -100,7 +100,7 @@ $$
   \end{align}
 $$
 
-with these in hand, we can get $ P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy}) $ by
+with these in hand, we can get $P(\text{family of}\ n\ \text{with}\ m\ \text{girls}\rvert\text{sister Mary, some guy})$ by
 
 $$
  \begin{align}
