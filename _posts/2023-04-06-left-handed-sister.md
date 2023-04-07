@@ -30,7 +30,7 @@ We want to know if the person we saw is some guy, or "the guy".
 
 The question is, how much should we increase our credence in "the guy" on the basis of hearing about his lefty sister.
 
-## Evidence and updating
+### Evidence and updating
 
 Before we hear about his lefty sister, our relative belief in "the guy" vs "some guy" is
 
@@ -63,7 +63,7 @@ The numerator is $1$ on account that "the guy" definitely has these two sisters,
 
 $$ \boxed{P(\text{lefty sister}\rvert\text{sister Mary, some guy})}. $$
 
-## Family first
+### Family first
 
 To calculate the probability of the lefty sister given that "some guy" has a sister named Mary, we need to know what kind of family "some guy" comes from. As we know, given that he has a sister Mary he could come from a $2$-, $3$-, or $4$-child family, and can have anywhere from $1$ to all of his siblings be sisters. 
 
@@ -89,7 +89,7 @@ $$
 
 Now, the tricky term is re-expressed in terms of simple forward terms and the known distribution of familiy sizes.
 
-## Familial microstates
+### Familial microstates
 
 The terms $P(\text{sister Mary, some guy}\rvert \text{family of}\ n\ \text{with}\ m\ \text{girls})$ represent the probability weight of boys from families of size $n$, with $m$ girls in the population. This is easier to see if we read "sister Mary, some guy" as the equivalent "spoke to some guy who has a sister Mary".
 
@@ -103,7 +103,7 @@ $$
 
 by its Christian name, $Z_{nm}.$
 
-### $2$- child families
+#### $2$- child families
 
 For a family with $2$-children, we have two people. Accounting for ordering, we get
 
@@ -111,7 +111,7 @@ $$
   Z_{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
 $$
 
-### $3$- child families
+#### $3$- child families
 
 For a family of $3$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}\\},$ so
 
@@ -124,7 +124,7 @@ $$
 
 As we noted, the overall weight is proportional to the number of boys that the family contributes to the population of people we can run into.
 
-### $4$- child families
+#### $4$- child families
 
 For a family of $4$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\\},$ so
 
@@ -166,7 +166,7 @@ $$
   \end{align}
 $$
 
-## Left hand probability
+### Left hand probability
 
 If there is a sister besides Mary, then the probability they're lefty is just $p_\text{lefty}:$
 
@@ -180,7 +180,7 @@ If there are $2$ girls besides Mary, then either one or both of them can be a le
 
 $$ P(\text{lefty sister}\rvert\text{sister Mary, some guy, family of}\ 4\ \text{with}\ 3\ \text{girls}) = 2p_\text{lefty}(1-p_\text{lefty}) + p_\text{lefty}^2 $$
 
-## "The guy", or "some guy"?
+### "The guy", or "some guy"?
 
 Putting it all together, we get 
 
@@ -196,7 +196,7 @@ $$
       
 So, after we hear about the left handed sister, we should update our relative belief by $1/P(\text{lefty sister}\rvert\text{sister Mary, some guy}) \approx 17.8$ times in favor of the hypothesis that we're talking to "the guy".
 
-## Next steps
+### Next steps
 
 If you're facing this problem in your own life, the general form in terms of $p_\text{Lefty}$ and $p_\text{Mary}$ is the tidy expression:
 
