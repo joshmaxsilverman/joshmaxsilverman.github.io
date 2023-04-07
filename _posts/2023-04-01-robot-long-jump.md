@@ -153,7 +153,7 @@ $$
 with this in hand, we can root find to learn the optimal threshold, 
 
 ```mathematica
-deriv = (3 ta - E^ta (-1 + ta)^2 (2 + ta));
+deriv = 3 ta - E^ta (-1 + ta)^2 (2 + ta);
 root = FindRoot[deriv, {tb, 4/10}, WorkingPrecision -> 30]
   ```
   
