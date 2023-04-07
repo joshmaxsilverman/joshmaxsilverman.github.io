@@ -103,7 +103,7 @@ $$
 
 by its Christian name, $Z_{nm}.$
 
-#### $2$- child families
+#### Two child families
 
 For a family with $2$-children, we have two people. Accounting for ordering, we get
 
@@ -111,7 +111,7 @@ $$
   Z_{21} = 1\times 2! p_\text{boy} p_\text{girl} p_\text{Mary} \times P(\text{family of 2})
 $$
 
-#### $3$- child families
+#### Three child families
 
 For a family of $3$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}\\},$ so
 
@@ -124,7 +124,7 @@ $$
 
 As we noted, the overall weight is proportional to the number of boys that the family contributes to the population of people we can run into.
 
-#### $4$- child families
+#### Four child families
 
 For a family of $4$-children, we can have $\\{\text{boy}, \text{sister Mary}, \text{sister}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{sister Mary}, \text{sister}\\}$ or $\\{\text{boy}, \text{boy}, \text{boy}, \text{sister}\\},$ so
 
