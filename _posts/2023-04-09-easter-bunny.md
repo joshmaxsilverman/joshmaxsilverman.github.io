@@ -21,38 +21,38 @@ tags: counting symmetry
 
 ## Solution
 
-if we weren't worried about rotational symmetry, then the answer would just be $\binom{12}{n},$ since that's how many ways there are to place $n$ objects in $12$ receptacles.
+If we weren't worried about rotational symmetry, then the answer would just be $\binom{12}{n},$ since that's how many ways there are to place $n$ objects in $12$ receptacles.
 
-since we are worried about rotations, we need to make sure we count only one member of each collection rotationally equivalent arrangement.
+But since we are worried about rotations, we need to make sure we count just one member from each each set of rotationally-equivalent arrangements.
 
-the first thing to notice is that an arrangement with different numbers of eggs on either side of the middle can't be rotationally equivalent to itself. this makes it easy to count cases with unequal numbers of eggs. 
+The first thing to notice is that an arrangement with different numbers of eggs on either side of the middle can't be rotationally equivalent to itself. This makes it straightforward to count cases with unequal numbers of eggs. 
 
-if there are $\ell$ eggs on the left, $r$ on the right, and $\ell \neq r,$ then there are $\binom{6}{\ell}\times\binom{6}{r}$ possible arrangements. 
+If there are $\ell$ eggs on the left, $r$ on the right, and $\ell \neq r,$ then there are $\binom{6}{\ell}\times\binom{6}{r}$ possible arrangements. 
 
-### odd total number
+### Odd total number
 
-so, for $5$ total eggs, the number of total arrangements is 
+So, for $5$ total eggs, the number of total arrangements is 
 
 $$ \Omega(5) = \binom{6}{5}\binom{6}{0} + \binom{6}{4}\binom{6}{1} + \binom{6}{3}\binom{6}{2} = 396. $$
 
-if we included terms with $\ell < r$ then we'd be counting the rotationally symmetric partners we want to exclude.
+If we included terms with $\ell < r$ then we'd be counting the rotationally symmetric partners we want to exclude.
 
-### even total number
+### Even total number
 
-when there are an even total number of eggs, it means that we have to include the case where $\ell = r.$ 
+When there are an even total number of eggs, we have to include the $\ell = r$ case. 
 
-if we naively multiply the number of left and right arrangements, we will have a two-fold mess on our hands.
+If we naively multiplied the number of arrangements for the left and right side of the carton, we would have a two-fold mess on our hands.
 
-there are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotationally symmetric self. these contribute one arrangement to the total. every other pairing has a rotationally symmetric duplicate represented in the product. these terms have to be downweighted by half to avoid double-counting.
+There are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotationally symmetric self. These contribute one arrangement to the total. Every other pairing has a rotationally symmetric duplicate represented in the product. These terms have to be downweighted by half to avoid double-counting.
 
-this means that the proper $\ell=r$ term is
+This means that we have to seperate these cases, downweight the second kind, and add them together. Carrying this out, the proper $\ell=r$ term is
 
 $$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \binom{6}{\frac12 n} = \frac12\left[\binom{6}{\frac12 n}^2 + \binom{6}{\frac12 n}\right]. $$
 
 
 ### altogether
 
-finally, for the cases beyond $n=6,$ the symmetry between holes and eggs means that $\Omega(n) = \Omega(12-n),$ and we don't have to calculate them.
+The last insight if that for $n \gt 6,$ the symmetry between holes and eggs means that $\Omega(n) = \Omega(12-n),$ and we don't have to calculate them. Putting it all together, we get:
 
 $$
   \begin{array}{c|c}
