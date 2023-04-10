@@ -33,7 +33,7 @@ if there are $\ell$ eggs on the left, $r$ on the right, and $\ell \neq r,$ then 
 
 so, for $5$ total eggs, the number of total arrangements is 
 
-$$ \Omega(5) = \binom{6}{5}\times\binom{6}{0} + \binom{6}{4}\times\binom{6}{1} + \binom{6}{3}\times\binom{6}{2} = 396. $$
+$$ \Omega(5) = \binom{6}{5}\binom{6}{0} + \binom{6}{4}\binom{6}{1} + \binom{6}{3}\binom{6}{2} = 396. $$
 
 if we included terms with $\ell < r$ then we'd be counting the rotationally symmetric partners we want to exclude.
 
@@ -47,7 +47,7 @@ there are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotati
 
 this means that the proper $\ell=r$ term is
 
-$$ \frac12\left[\binom{6}{\frac12 n}\binom{6}{\frac12 n} - \binom{6}{\frac12 n}\right] + \frac12\binom{6}{\frac12 n}. $$
+$$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \frac12\binom{6}{\frac12 n}. $$
 
 
 ### altogether
