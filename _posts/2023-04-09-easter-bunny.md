@@ -56,7 +56,7 @@ finally, for the cases beyond $n=6,$ the symmetry between holes and eggs means t
 
 $$
   \begin{array}{cc}
-     n & \Omega(n) \\
+     n & \Omega(n) \\ \hline
      1 & 6 \\
      2 & 36 \\
      3 & 110 \\
