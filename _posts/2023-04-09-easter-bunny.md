@@ -47,7 +47,7 @@ there are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotati
 
 this means that the proper $\ell=r$ term is
 
-$$ \frac12\left(\binom{6}{\frac12 n}\binom{\frac12 n} - \binom{6}{\frac12 n}\right) + \binom{6}{\frac12 n}. $$
+$$ \frac12\left[\binom{6}{\frac12 n}\binom{6}{\frac12 n} - \binom{6}{\frac12 n}\right] + \frac12\binom{6}{\frac12 n}. $$
 
 
 ### altogether
@@ -56,7 +56,7 @@ finally, for the cases beyond $n=6,$ the symmetry between holes and eggs means t
 
 $$
   \begin{array}{cc}
-     $n$ & \Omega(n) \\
+     n & \Omega(n) \\
      1 & 6 \\
      2 & 36 \\
      3 & 110 \\
