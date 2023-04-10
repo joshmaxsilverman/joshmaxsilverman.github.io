@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Hard choices for the Easter bunny
 date: 2023/04/09
-subtitle: Hoppity hop — which arrangement are you going to get?
+subtitle: Hoppity hop, which carton are you going to get?
 tags: counting symmetry 
 ---
 
@@ -55,7 +55,7 @@ $$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \binom{6}
 finally, for the cases beyond $n=6,$ the symmetry between holes and eggs means that $\Omega(n) = \Omega(12-n),$ and we don't have to calculate them.
 
 $$
-  \begin{array}{cc}
+  \begin{array}{c|c}
      n & \Omega(n) \\ \hline
      1 & 6 \\
      2 & 36 \\
