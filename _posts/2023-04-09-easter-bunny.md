@@ -41,9 +41,10 @@ If we included terms with $\ell < r$ then we'd be counting the rotationally symm
 
 When there are an even total number of eggs, we have to include the $\ell = r$ case. 
 
-If we naively multiplied the number of arrangements for the left and right side of the carton, we would have a two-fold mess on our hands.
+If we naively multiplied the number of arrangements for the left and right side of the carton, we would have a two-fold mess on our hands:
 
-There are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotationally symmetric self. These contribute one arrangement to the total. Every other pairing has a rotationally symmetric duplicate represented in the product. These terms have to be downweighted by half to avoid double-counting.
+- There are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotationally symmetric self. These contribute one arrangement to the total. 
+- Every other pairing has a rotationally symmetric duplicate represented in the product. These terms have to be downweighted by half to avoid double-counting.
 
 This means that we have to seperate these cases, downweight the second kind, and add them together. Carrying this out, the proper $\ell=r=\frac12 n$ term is
 
