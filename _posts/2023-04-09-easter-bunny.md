@@ -17,7 +17,7 @@ tags: counting symmetry
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-rescue-your-crew/))
 
 ## Solution
 
