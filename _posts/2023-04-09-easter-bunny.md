@@ -50,7 +50,7 @@ This means that we have to seperate these cases, downweight the second kind, and
 $$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \binom{6}{\frac12 n} = \frac12\left[\binom{6}{\frac12 n}^2 + \binom{6}{\frac12 n}\right]. $$
 
 
-### altogether
+### Altogether
 
 The last insight if that for $n \gt 6,$ the symmetry between holes and eggs means that $\Omega(n) = \Omega(12-n),$ and we don't have to calculate them. Putting it all together, we get:
 
