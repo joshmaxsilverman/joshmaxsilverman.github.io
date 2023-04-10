@@ -66,6 +66,8 @@ $$
   \end{array}
 $$
 
+Plotting it:
+
 ![](/img/2023-04-09-egg-arrangements.png){:width="450 px" class="image-centered"}
 
 <br>
