@@ -46,7 +46,7 @@ If we naively multiplied the number of arrangements for the left and right side 
 - There are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotationally symmetric self. These contribute one arrangement to the total. 
 - Every other pairing has a rotationally symmetric duplicate represented in the product. These terms have to be downweighted by half to avoid double-counting.
 
-This means that we have to seperate these cases, downweight the second kind, and add them together. Carrying this out, the proper $\ell=r=\frac12 n$ term is
+This means that we have to separate these cases, downweight the second kind, and add them together. Carrying this out, the proper $\ell=r=\frac12 n$ term is
 
 $$ \binom{6}{\frac12 n} + \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] = \frac12\left[\binom{6}{\frac12 n} + \binom{6}{\frac12 n}^2\right]. $$
 
