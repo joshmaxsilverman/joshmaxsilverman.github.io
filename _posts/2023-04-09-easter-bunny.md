@@ -47,7 +47,7 @@ there are $\binom{6}{\frac12n}$ cases where an arrangement pairs with its rotati
 
 this means that the proper $\ell=r$ term is
 
-$$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \frac12\binom{6}{\frac12 n}. $$
+$$ \frac12\left[\binom{6}{\frac12 n}^2 - \binom{6}{\frac12 n}\right] + \binom{6}{\frac12 n} = \frac12\left[\binom{6}{\frac12 n}^2 + \binom{6}{\frac12 n}\right]. $$
 
 
 ### altogether
