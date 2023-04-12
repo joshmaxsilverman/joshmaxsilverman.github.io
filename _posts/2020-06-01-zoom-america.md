@@ -123,7 +123,7 @@ $$
 
 Which matches the simulation
 
-![](/img/2020-05-29-data-sim.png){:width="500 px" class="image-centered"}
+![](/img/2023-04-12-theory-data-reexport.png){:width="500 px" class="image-centered"}
 
 
 ```python
