@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Save the world
 date: 2023/05/15
-subtitle: Good use Of polling or bad use of polling?
+subtitle: Good use of polling or bad use of polling?
 tags: approximation 
 ---
 
@@ -42,7 +42,7 @@ $$ \frac12 \binom{N}{2}(1-t)^2 t^{N-2} .$$
 carrying on, the probability that we find the person with the top number is 
 
 $$ \begin{align}
-  P(\text{find top}|t) &= \binom{N}{1}(1-t)t^{N-1} + \frac12 \binom{N}{2}(1-t)^2 t^N + \frac13 \binom{N}{3}(1-t)^3 t^{N-3} + \ldots \\
+  P(\text{find top}\rvert t) &= \binom{N}{1}(1-t)t^{N-1} + \frac12 \binom{N}{2}(1-t)^2 t^N + \frac13 \binom{N}{3}(1-t)^3 t^{N-3} + \ldots \\
   &= \sum\limits_j \frac{1}{j}\binom{N}{j}(1-t)^jt^{N-j}
 \end{align}$$
 
@@ -54,7 +54,7 @@ with $N$ large, we can make a couple of approximations.
 so, we can write the total probability as the friendlier
 
 $$
-  P(\text{find top}|t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
+  P(\text{find top}\rvert t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
 $$
 
 the series on the inside is nearly $\exp N(1-t)$ (but for the fractions $1/2, 1/3, \ldots,$) and with a little massaging, we can write the series in terms of it. 
@@ -66,17 +66,17 @@ $$
 e^{N(1-t)z} - 1 &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
 \frac{e^{N(1-t)z} - 1}{z}&= \frac{t^N}{z}\left[N(1-t) + \frac{1}{2!}N^2(1-t)^2z + \frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
 \int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
-\int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= P(\text{find top}|t)
+\int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= P(\text{find top}\rvert t)
 \end{align} 
 $$
 
 performing the integral, we get
 
-$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \gamma\right), $$
+$$ P(\text{find top}\rvert t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \gamma\right), $$
 
 where $\gamma$ is the Euler gamma constant.
 
-plotting $P(\text{find top}|t),$ we see a sharp peak near $t=1$ which we can find with binary search
+plotting $P(\text{find top}\rvert t),$ we see a sharp peak near $t=1$ which we can find with binary search
 
 ![](/img/2023-05-15-save-world-plot2.png){:width="450px" class="image-centered"}
 
@@ -85,6 +85,6 @@ P[t_, n_] := -t^n (EulerGamma + Gamma[0, n (-1 + t)] + Log[n (-1 + t)]);
 NMaximize[{P[t, 8*10^9], 1 - 10^-5 <= t <= 1}, t]
 ```
 
-which gives $t^* \approx 1-1.879\times10^{-10}$ and $P(\text{find top}|t^*) \approx 51.735%$
+which gives $t^* \approx 1-1.879\times10^{-10}$ and $P(\text{find top}\rvert t^*) \approx 51.735%$
 
 <br>
