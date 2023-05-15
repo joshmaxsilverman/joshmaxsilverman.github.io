@@ -60,10 +60,10 @@ the series on the inside is almost $\exp N(1-t)$ but for the fractions $1/2, 1/3
 
 $$ 
   \begin{align}
-\exp N(1-t)z &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
-\frac{\exp N(1-t)z}{z}&= \frac{t^N}{z}\left[N(1-t) + \frac{1}{2!}N^2(1-t)^2z + \frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
-\int\limits_0^1 dz\, \frac{\exp N(1-t)z}{z} &= \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
-\int\limits_0^1 dz\, \frac{\exp N(1-t)z}{z} &= P(\text{find top}|t)
+e^{N(1-t)z} - 1 &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
+\frac{e^{N(1-t)z} - 1}{z}&= \frac{t^N}{z}\left[N(1-t) + \frac{1}{2!}N^2(1-t)^2z + \frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
+\int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
+\int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= P(\text{find top}|t)
 \end{align} 
 $$
 
