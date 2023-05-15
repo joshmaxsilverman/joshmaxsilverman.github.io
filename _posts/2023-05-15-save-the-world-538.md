@@ -44,7 +44,7 @@ $$ \frac12 \binom{N}{2}(1-t)^2 t^{N-2} .$$
 carrying on, the probability that we find the person with the top number is 
 
 $$ \begin{align}
-  P(\text{find top}\rvert t) &= \binom{N}{1}(1-t)t^{N-1} + \frac12 \binom{N}{2}(1-t)^2 t^N + \frac13 \binom{N}{3}(1-t)^3 t^{N-3} + \ldots \\
+  P(\text{find top}\rvert t) &= \binom{N}{1}(1-t)t^{N-1} + \frac12 \binom{N}{2}(1-t)^2 t^{N-2} + \frac13 \binom{N}{3}(1-t)^3 t^{N-3} + \ldots \\
   &= \sum\limits_j \frac{1}{j}\binom{N}{j}(1-t)^jt^{N-j}
 \end{align}$$
 
