@@ -49,15 +49,17 @@ $$ \begin{align}
 with $N$ large, we can make a couple of approximations. 
 
 - the binomial factors $\binom{N}{j}$ become $\approx N^j/j!.$ 
-- we expect $t$ to be close to $1,$ so the factors $t^{N-j}$ become $N^j$ (for powers of $j$ where that doesn't hold, the $(1-t)^j$ will have already supressed the term).$
+- we expect $t$ to be close to $1,$ so the factors $t^{N-j}$ become $N^j$ (for powers of $j$ where that doesn't hold, the $(1-t)^j$ will have already supressed the term).
 
-so, we can write the total probability as
+so, we can write the total probability as the friendlier
 
 $$
   P(\text{find top}|t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
 $$
 
-the series on the inside is almost $\exp N(1-t)$ but for the fractions $1/2, 1/3, \ldots,$ and with a little massaging, we can write the series in terms of it. if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}|t).$
+the series on the inside is nearly $\exp N(1-t)$ (but for the fractions $1/2, 1/3, \ldots,$) and with a little massaging, we can write the series in terms of it. 
+
+if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}|t):$
 
 $$ 
   \begin{align}
@@ -70,9 +72,11 @@ $$
 
 performing the integral, we get
 
-$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \gamma\right). $$
+$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \gamma\right), $$
 
-plotting $P(\text{find top}|t),$ we see a sharp peak which we can find with binary search
+where $\gamma$ is the Euler gamma constant.
+
+plotting $P(\text{find top}|t),$ we see a sharp peak near $t=1$ which we can find with binary search
 
 ![](/img/2023-05-15-save-world-plot2.png){:width="450px" class="image-centered"}
 
