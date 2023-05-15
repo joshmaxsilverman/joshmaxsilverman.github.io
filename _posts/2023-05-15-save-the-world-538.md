@@ -53,17 +53,19 @@ first, the binomial factors $\binom{N}{j}$ become $\approx N^j/j!.$ second, we e
 so, we can write the total probability as
 
 $$
-  P(\text{find top}|t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots 
+  P(\text{find top}|t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
 $$
 
 the series on the inside is almost $\exp N(1-t)$ but for the fractions $1/2, 1/3, \ldots,$ and with a little massaging, we can write the series in terms of it. if we introduce a dummy variable $z,$ then divide by it, then integrate 
 
-$$ \begin{align}
-\exp N(1-t)z &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac13\frac{1}{3!}N^3(1-t)^3z^3 + \ldots \\
-\frac{\exp N(1-t)z}{z}&= \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots \\
-\int\limits_0^1 dz\, \frac{\exp N(1-t)z}{z} = \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots \\
+$$ 
+  \begin{align}
+\exp N(1-t)z &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac13\frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
+\frac{\exp N(1-t)z}{z}&= \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
+\int\limits_0^1 dz\, \frac{\exp N(1-t)z}{z} = \frac{t^N}{z}\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2z + \frac13\frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
 \int\limits_0^1 dz\, \frac{\exp N(1-t)z}{z} &= P(\text{find top}|t)
-\end{align} $$
+\end{align} 
+$$
 
 
 <br>
