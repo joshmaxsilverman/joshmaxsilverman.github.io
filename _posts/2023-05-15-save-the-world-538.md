@@ -1,9 +1,9 @@
 ---
 layout: post
-published: false
+published: true
 title: Save the world
 date: 2023/05/15
-subtitle: 
+subtitle: Good use Of polling or bad use of polling?
 tags: approximation 
 ---
 
@@ -19,7 +19,7 @@ tags: approximation
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight]([URL](https://fivethirtyeight.com/features/can-you-save-the-world/)))
 
 ## Solution
 
