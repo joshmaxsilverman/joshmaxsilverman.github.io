@@ -39,7 +39,7 @@ in this case, we are guaranteed to find the person with the top number.
 
 if there are two "yesses" then either one could be bigger than the other, and we have to choose at random between them, making the probability
 
-$$ \frac12 \tbinom{N}{2}(1-t)^2 t^{N-2} .$$
+$$ \frac12 \binom{N}{2}(1-t)^2 t^{N-2} .$$
 
 carrying on, the chance that we can identify the person with the top number is the sum of these probabilities
 
