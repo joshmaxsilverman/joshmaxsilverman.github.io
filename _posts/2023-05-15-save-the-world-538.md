@@ -73,4 +73,15 @@ $$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \
 
 plotting $P(\text{find top}|t),$ we see a sharp peak which we can find with binary search
 
+![](/img/2023-05-15-save-world-plot2.png){:width="450px" class="image-centered"}
+
+```mathematica
+P[t_, n_] := -t^
+    n (EulerGamma + Gamma[0, n (-1 + t)] + Log[n (-1 + t)]);
+NMaximize[{P[t, 8 10^8], 1 - 10^-5 <= t <= 1}, t, 
+ WorkingPrecision -> 15]
+```
+
+which gives $t^* \approx 1-1.879\times10^{-9}$ and $P(\text{find top}|t^*) \approx 51.735%$
+
 <br>
