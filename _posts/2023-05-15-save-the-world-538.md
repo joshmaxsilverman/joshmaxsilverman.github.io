@@ -69,6 +69,8 @@ $$
 
 performing the integral, we get
 
-$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \eulergamma\right). $$
+$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \gamma\right). $$
+
+plotting $P(\text{find top}|t),$ we see a sharp peak which we can find with binary search
 
 <br>
