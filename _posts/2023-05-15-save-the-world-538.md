@@ -37,18 +37,18 @@ $$ \binom{N}{1}(1-t)t^{N-1}. $$
 
 in this case, we are guaranteed to find the person with the top number.
 
-if there are two "yes" then either one could be bigger than the other, and we have to choose at random between them
+if there are two "yesses" then either one could be bigger than the other, and we have to choose at random between them, making the probability
 
 $$ \frac12 \binom{N}{2}(1-t)^2 t^{N-2} .$$
 
-carrying on, the probability that we find the person with the top number is 
+carrying on, the chance that we can identify the person with the top number is the sum of these probabilities
 
 $$ \begin{align}
   P(\text{find top}\rvert t) &= \binom{N}{1}(1-t)t^{N-1} + \frac12 \binom{N}{2}(1-t)^2 t^{N-2} + \frac13 \binom{N}{3}(1-t)^3 t^{N-3} + \ldots \\
   &= \sum\limits_j \frac{1}{j}\binom{N}{j}(1-t)^jt^{N-j}
 \end{align}$$
 
-with $N$ large, we can make a couple of approximations. 
+with $N$ large, we can make a few approximations:
 
 - the binomial factors $\binom{N}{j}$ become $\approx N^j/j!,$ 
 - we expect $t$ to be close to $1,$ so the factors $t^{N-j}$ become $\approx t^N,$ and 
