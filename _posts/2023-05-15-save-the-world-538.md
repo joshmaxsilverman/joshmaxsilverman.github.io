@@ -81,10 +81,8 @@ plotting $P(\text{find top}|t),$ we see a sharp peak near $t=1$ which we can fin
 ![](/img/2023-05-15-save-world-plot2.png){:width="450px" class="image-centered"}
 
 ```mathematica
-P[t_, n_] := -t^
-    n (EulerGamma + Gamma[0, n (-1 + t)] + Log[n (-1 + t)]);
-NMaximize[{P[t, 8*10^9], 1 - 10^-5 <= t <= 1}, t, 
- WorkingPrecision -> 15]
+P[t_, n_] := -t^n (EulerGamma + Gamma[0, n (-1 + t)] + Log[n (-1 + t)]);
+NMaximize[{P[t, 8*10^9], 1 - 10^-5 <= t <= 1}, t]
 ```
 
 which gives $t^* \approx 1-1.879\times10^{-10}$ and $P(\text{find top}|t^*) \approx 51.735%$
