@@ -25,7 +25,7 @@ tags: approximation
 
 with one question and no interaction between Earthlings, our question has to be about the size of the interviewees number, i.e. "Is your number bigger than $t$?"
 
-if we set $t$ too low, then we risk multiple people responding "yes", forcing us to pick at random between all those who did. but if we set $t$ too low (something much less than $1/(8\times10^9),$ we risk there being nobody able to answer "yes".
+if we set $t$ too low, then we risk multiple people responding "yes", forcing us to pick at random between all those who did. but if we set $t$ too high (something much less than $1/(8\times10^9),$ we risk there being nobody able to answer "yes".
 
 the chance that we can find the person with the top number is the sum of all these possibilities.
 
