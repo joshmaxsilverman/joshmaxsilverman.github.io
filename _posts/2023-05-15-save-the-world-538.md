@@ -48,8 +48,10 @@ $$ \begin{align}
 
 with $N$ large, we can make a couple of approximations. 
 
-- the binomial factors $\binom{N}{j}$ become $\approx N^j/j!.$ 
-- we expect $t$ to be close to $1,$ so the factors $t^{N-j}$ become $N^j$ (for powers of $j$ where that doesn't hold, the $(1-t)^j$ will have already supressed the term).
+- the binomial factors $\binom{N}{j}$ become $\approx N^j/j!$ 
+- we expect $t$ to be close to $1,$ so the factors $t^{N-j}$ become $\approx N^j$ 
+
+(for high powers of $j$ where the second one doesn't hold, the $(1-t)^j$ will have already supressed the term).
 
 so, we can write the total probability as the friendlier
 
