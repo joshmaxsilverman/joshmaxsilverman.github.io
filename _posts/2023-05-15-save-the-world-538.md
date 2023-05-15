@@ -59,7 +59,7 @@ $$
   P(\text{find top}\rvert t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
 $$
 
-the series on the inside is nearly $\exp N(1-t)$ (but for the fractions $1/2, 1/3, \ldots,$) and with a little massaging, we can write the series in terms of it. 
+the series on the inside is nearly $\exp N(1-t)$ (but for the fractions $\frac12, \frac13, \ldots,$) and with a little massaging, we can write the series in terms of it. 
 
 if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}\rvert t):$
 
