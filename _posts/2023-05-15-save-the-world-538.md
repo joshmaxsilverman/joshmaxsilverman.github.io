@@ -56,7 +56,7 @@ $$
   P(\text{find top}|t) = t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] 
 $$
 
-the series on the inside is almost $\exp N(1-t)$ but for the fractions $1/2, 1/3, \ldots,$ and with a little massaging, we can write the series in terms of it. if we introduce a dummy variable $z,$ then divide by it, then integrate 
+the series on the inside is almost $\exp N(1-t)$ but for the fractions $1/2, 1/3, \ldots,$ and with a little massaging, we can write the series in terms of it. if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}|t).$
 
 $$ 
   \begin{align}
@@ -67,5 +67,8 @@ e^{N(1-t)z} - 1 &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^
 \end{align} 
 $$
 
+performing the integral, we get
+
+$$ P(\text{find top}|t) = t^N\left(\log\frac{1}{N(1-t)} - \Gamma(0, -N(1-t)) - \eulergamma\right). $$
 
 <br>
