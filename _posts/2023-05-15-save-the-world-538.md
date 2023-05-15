@@ -71,7 +71,7 @@ $$
 e^{N(1-t)z} - 1 &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
 \frac{e^{N(1-t)z} - 1}{z}&= t^N\left[N(1-t) + \frac{1}{2!}N^2(1-t)^2z + \frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
 \int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] \\
-\int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= P(\text{find top}\rvert t)
+ &= P(\text{find top}\rvert t)
 \end{align} 
 $$
 
