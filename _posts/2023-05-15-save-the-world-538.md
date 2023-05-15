@@ -61,7 +61,7 @@ $$
 
 the series on the inside is nearly $\exp N(1-t)$ (but for the fractions $1/2, 1/3, \ldots,$) and with a little massaging, we can write the series in terms of it. 
 
-if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}|t):$
+if we introduce a dummy variable $z,$ then divide by it, then integrate it out, we get the original series for $P(\text{find top}\rvert t):$
 
 $$ 
   \begin{align}
