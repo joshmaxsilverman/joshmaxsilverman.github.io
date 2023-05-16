@@ -68,7 +68,7 @@ if we introduce a dummy variable $z,$ then divide by it, then integrate it out, 
 
 $$ 
   \begin{align}
-t^N \left(e^{N(1-t)z}\right) - 1 &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
+t^N \left(e^{N(1-t)z} - 1\right) &= t^N\left[N(1-t)z + \frac{1}{2!}N^2(1-t)^2z^2 + \frac{1}{3!}N^3(1-t)^3z^3 + \ldots\right] \\
 t^N \frac{e^{N(1-t)z} - 1}{z}&= t^N\left[N(1-t) + \frac{1}{2!}N^2(1-t)^2z + \frac{1}{3!}N^3(1-t)^3z^2 + \ldots\right] \\
 t^N \int\limits_0^1 dz\, \frac{e^{N(1-t)z} - 1}{z} &= t^N\left[N(1-t) + \frac12\frac{1}{2!}N^2(1-t)^2 + \frac13\frac{1}{3!}N^3(1-t)^3 + \ldots\right] \\
  &= P(\text{find top}\rvert t)
