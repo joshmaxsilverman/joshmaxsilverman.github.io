@@ -77,7 +77,7 @@ $$
 
 performing the integral, we get
 
-$$ P(\text{find top}\rvert t) = t^N\left(\log N(1-t) - \Gamma\left[0, -N(1-t)\right] - \gamma\right), $$
+$$ P(\text{find top}\rvert t) = t^N\left[\log N(1-t) - \Gamma\left[0, -N(1-t)\right] - \gamma\right], $$
 
 where $\gamma$ is the Euler gamma constant.
 
