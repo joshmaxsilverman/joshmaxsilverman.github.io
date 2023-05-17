@@ -19,7 +19,7 @@ tags: approximation
 
 <!--more-->
 
-([FiveThirtyEight]([URL](https://fivethirtyeight.com/features/can-you-save-the-world/)))
+([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-save-the-world/))
 
 ## Solution
 
