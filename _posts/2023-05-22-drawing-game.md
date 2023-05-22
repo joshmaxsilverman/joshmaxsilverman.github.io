@@ -67,7 +67,7 @@ plugging this in to the maximization, we get
 $$ 
 \begin{align}
   \Omega(h, 2, k) &= \max\{ \langle\text{cash in}\rangle_{h,2,k}, \langle\text{hedge}\rangle_{h,2,k} \} \\
-  &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, \ell-1, j), \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j)\} \\
+  &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, 2-1, j), \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, 2-1, j)\} \\
   &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h j, \frac{1}{h+k}\sum\limits_{j=1}^{h+k} j\} \\
   &= \max\{k + \frac{1}{h}\frac{h(h+1)}{2}, \frac{1}{h+k}\frac12(h+k+1)(h+k)\} \\
   &= \max\{k + \frac12(h+1), \frac12(h+k+1)\} \\
