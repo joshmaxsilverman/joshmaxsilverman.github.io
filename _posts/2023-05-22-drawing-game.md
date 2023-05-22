@@ -106,7 +106,9 @@ $$ \boxed{\Omega(1,\ell,1) = 2\times\left(\frac32\right)^{\ell-2}}, $$
 
 for $\ell \geq 2$ and $\Omega(1,1,1) = 2.$
 
-for a $100$ round game, we expect to win $2\times\left(\frac32\right)^{98} \approx \\$361,387,713,364,635,766.58$
+for a $100$ round game, we expect to win 
+
+$$ 2\times\left(\frac32\right)^{98} \approx \\$361,387,713,364,635,766.58 $$
 
 
 
