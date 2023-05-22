@@ -7,12 +7,16 @@ subtitle: When should you start dreaming of a brighter future?
 tags: expectation strategy
 ---
 
->**Question**:
+>**Question**: You start with just the number 1 written on a slip of paper in a hat. Initially, there are no other slips of paper in the hat. You will draw from the hat $100$ times, and each time you draw, you have a choice: If the number on the slip of paper you draw is $k,$ then you can either receive k dollars or add $k$ higher numbers to the hat.
+
+For example, if the hat were to contain slips with the numbers $1$ through $6$ and you drew a $4,$ you could either receive $\$4$ or receive no money but add four more slips numbered $7, 8, 9$ and $10$ into the hat. In either case, the slip with the number $4$ would then be returned to the hat.
+
+If you play this game perfectly — that is, to maximize the total amount of money you’ll receive after all $100$ rounds — how much money would you expect to receive on average?
 >
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([FiveThirtyEight](https://fivethirtyeight.com/features/how-much-money-can-you-pull-out-of-a-hat/))
 
 ## Solution
 
@@ -98,9 +102,13 @@ and we should hedge.
 
 from here on out, $(k+h+1)$ picks up one factor of $\frac32$ on each iteration, giving 
 
-$$ \Omega(1,\ell,1) = 2\times\left(\frac{32}\right)^{\ell-2}, $$
+$$ \Omega(1,\ell,1) = 2\times\left(\frac32\right)^{\ell-2}, $$
 
 for $\ell \geq 2$ and $\Omega(1,1,1) = 2.$
+
+for a $100$ round game, we expect to win $2\times\left(\frac32\right)^{98} \approx \$361,387,713,364,635,766.58$
+
+
 
 
 <br>
