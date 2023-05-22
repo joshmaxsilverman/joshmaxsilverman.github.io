@@ -32,9 +32,9 @@ $$ \frac12 \left(\frac{h+\frac12h}{h}\right)^{n-1} h = \frac12 \left(\frac32\rig
 
 since we expect to raise the highest number $h$ by $\frac12h$ on each draw, and the expected value of the cash in is half the highest number at the time of the draw.
 
-the hedging strategy wins out at $n=5.$
+the hedging strategy wins out at $n=5,$ and we expect the best outcome to scale like $\approx \left(\frac32\right)^\ell.$
 
-in the real game, this should be lower since the first turn doubles $h$ from $1$ to $2.$
+in the real game, this $n$ should be lower since the first turn doubles $h$ from $1$ to $2.$
 
 ### rigorous argument
 
@@ -46,6 +46,10 @@ $$ \langle\text{cash in}\rangle_{h,\ell,k} = k + \frac{1}{h}\sum\limits_{j=1}^h 
 
 if we hedge, then we get nothing immediately, but raise the value of $h$ to $(h+k)$ in the next game:
 
-$$ \langle\text{cash in}\rangle_{h,\ell,k} = \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j). $$
+$$ \langle\text{hedge}\rangle_{h,\ell,k} = \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j). $$
+
+so, 
+
+$$ \Omega(h,\ell,k) = \max\{ \langle\text{cash in}\rangle_{h,\ell,k}, \langle\text{hedge}\rangle_{h,\ell,k} \}. $$
 
 <br>
