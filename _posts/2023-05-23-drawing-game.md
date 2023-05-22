@@ -62,10 +62,45 @@ plugging this in to the maximization, we get
 
 $$ 
 \begin{align}
-  \Omega(h, 2, k) &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, \ell-1, j), \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j)\} \\
+  \Omega(h, 2, k) &= \max\{ \langle\text{cash in}\rangle_{h,2,k}, \langle\text{hedge}\rangle_{h,2,k} \}
+  &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, \ell-1, j), \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j)\} \\
   &= \max\{ k + \frac{1}{h}\sum\limits_{j=1}^h j, \frac{1}{h+k}\sum\limits_{j=1}^{h+k} j\} \\
-  &= \max\{k + \frac{1}{h}\frac{h(h+1)}{2}, \frac{1}{h+k}\frac12(h+k+1)(h+k)\}
+  &= \max\{k + \frac{1}{h}\frac{h(h+1)}{2}, \frac{1}{h+k}\frac12(h+k+1)(h+k)\} \\
+  &= \max\{k + \frac12(h+1), \frac12(h+k+1)\} \\
+  &= k + \frac12(h+1)
 \end{align}
 $$
+
+so, with $2$ turns left, we should take the cash out.
+
+going again, the decision is
+
+$$
+  \begin{align}
+    \Omega(h, 3, k) &= \max\{ \langle\text{cash in}\rangle_{h,3,k}, \langle\text{hedge}\rangle_{h,3,k} \} \\
+    &= \max \{k+h+1, \frac12 k + h+1\} \\
+    &= k+h+1
+  \end{align}
+$$
+
+and, with $3$ turns left, we should cash out.
+
+with $4$ turns left, the decision is
+
+$$
+  \begin{align}
+    \Omega(h, 4, k) &= \max\{ \langle\text{cash in}\rangle_{h,4,k}, \langle\text{hedge}\rangle_{h,4,k} \} \\
+    &= \max \{\frac12 k + \frac32(h+1), \frac32(k+h+1)\}
+  \end{align}
+$$
+
+and we should hedge. 
+
+from here on out, $(k+h+1)$ picks up one factor of $\frac32$ on each iteration, giving 
+
+$$ \Omega(1,\ell,1) = 2\times\left(\frac{32}\right)^{\ell-2}, $$
+
+for $\ell \geq 2$ and $\Omega(1,1,1) = 2.$
+
 
 <br>
