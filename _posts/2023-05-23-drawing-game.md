@@ -102,7 +102,7 @@ and we should hedge.
 
 from here on out, $(k+h+1)$ picks up one factor of $\frac32$ on each iteration, giving 
 
-$$ \Omega(1,\ell,1) = 2\times\left(\frac32\right)^{\ell-2}, $$
+$$ \boxed{\Omega(1,\ell,1) = 2\times\left(\frac32\right)^{\ell-2}}, $$
 
 for $\ell \geq 2$ and $\Omega(1,1,1) = 2.$
 
