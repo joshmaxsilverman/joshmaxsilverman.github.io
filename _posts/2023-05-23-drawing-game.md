@@ -42,10 +42,10 @@ let's call the expected value of our remaining turns $\Omega(h, \ell, k)$ where 
 
 if we cash in, then we immediately get $k$ and can expect to add the average value of all the games we can immediately move it, i.e. 
 
-$$ \left\text{cash in}\rangle_{h,\ell,k} = k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, \ell-1, j). $$
+$$ \langle\text{cash in}\rangle_{h,\ell,k} = k + \frac{1}{h}\sum\limits_{j=1}^h \Omega(h, \ell-1, j). $$
 
 if we hedge, then we get nothing immediately, but raise the value of $h$ to $(h+k)$ in the next game:
 
-$$ \left\text{cash in}\rangle_{h,\ell,k} = \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j). $$
+$$ \langle\text{cash in}\rangle_{h,\ell,k} = \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j). $$
 
 <br>
