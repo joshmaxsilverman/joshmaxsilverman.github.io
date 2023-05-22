@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Take a number
 date: 2023/05/23
-subtitle:
-tags:
+subtitle: When should you start dreaming of a brighter future?
+tags: expectation strategy
 ---
 
 >**Question**:
