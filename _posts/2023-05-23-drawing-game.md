@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Take a number
-date: 2023/05/23
+date: 2023/05/22
 subtitle: When should you stop dreaming of a brighter future?
 tags: expectation strategy
 ---
