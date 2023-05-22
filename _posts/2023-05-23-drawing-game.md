@@ -8,11 +8,11 @@ tags: expectation strategy
 ---
 
 >**Question**: You start with just the number 1 written on a slip of paper in a hat. Initially, there are no other slips of paper in the hat. You will draw from the hat $100$ times, and each time you draw, you have a choice: If the number on the slip of paper you draw is $k,$ then you can either receive $k$ dollars or add $k$ higher numbers to the hat.
-
-For example, if the hat were to contain slips with the numbers $1$ through $6$ and you drew a $4,$ you could either receive $\\$4$ or receive no money but add four more slips numbered $7, 8, 9$ and $10$ into the hat. In either case, the slip with the number $4$ would then be returned to the hat.
-
-If you play this game perfectly — that is, to maximize the total amount of money you’ll receive after all $100$ rounds — how much money would you expect to receive on average?
 >
+>For example, if the hat were to contain slips with the numbers $1$ through $6$ and you drew a $4,$ you could either receive $\\$4$ or receive no money but add four more slips numbered $7, 8, 9$ and $10$ into the hat. In either case, the slip with the number $4$ would then be returned to the hat.
+>
+>If you play this game perfectly — that is, to maximize the total amount of money you’ll receive after all $100$ rounds — how much money would you expect to receive on average?
+
 
 <!--more-->
 
