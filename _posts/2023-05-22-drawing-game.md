@@ -137,9 +137,16 @@ $$
   \end{align}
 $$
 
-According to the strategy, we should hedge $97$ times and then cash in three times. This will be a bit of an underestimate since $\lambda$ is the asymptotic limit of the growth rate of $h$. The first jump is a doubling, the second jump is the factor $7/4,$ and so on. Replacing the first two factors of $e^\lambda$ with these exact figures, we get
+According to the strategy, we should hedge $97$ times and then cash in three times. 
 
-$$ \Omega(1,100,1)_\text{median} \approx \frac32 \cdot 2\cdot \frac74 6^{95\lambda} = 4.54\times10^{16}. $$
+This will lead to an underestimate since $\lambda$ is the asymptotic limit of the growth rate of $h.$ The first jump is a doubling, the second jump is the factor $7/4,$ and so on, settling to $\lambda$ as $h$ grows. Replacing the first two factors of $e^\lambda$ with these more exact figures, we get an estimate of
+
+$$ 
+\begin{align}
+  \Omega(1,100,1)_\text{median} &\approx \frac32 \cdot 2\cdot \frac74 6^{95\lambda} \\
+  &= 4.54\times10^{16}. 
+\end{align}
+$$
 
 
 
