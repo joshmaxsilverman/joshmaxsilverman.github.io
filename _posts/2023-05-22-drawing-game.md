@@ -130,13 +130,16 @@ The average of $\log(1+x)$ is
 
 $$ 
   \begin{align}
-    \langle\log(1+x)\rangle &= \int\limits_0^1dx\,\log(1+x) \\
+    \lambda &= \langle\log(1+x)\rangle \\
+    &= \int\limits_0^1dx\,\log(1+x) \\
     &= \int\limits_1^2 dz\, \log z \\
     &= 2\log 2 -1.
   \end{align}
 $$
 
-According to the strategy, 
+According to the strategy, we should hedge $97$ times and then cash in three times. This will be a bit of an underestimate since $\lambda$ is the asymptotic limit of the growth rate of $h$. The first jump is a doubling, the second jump is the factor $7/4,$ and so on. Replacing the first two factors of $e^\lambda$ with these exact figures, we get
+
+$$ \Omega(1,100,1)_\text{median} \approx \frac32 \cdot 2\cdot \frac74 6^{95\lambda} = 4.54\times10^{16}. $$
 
 
 
