@@ -120,7 +120,7 @@ $$
    \begin{align}
   h_t &= h_0 (1+x_1)(1+x_2)\cdots(1+x_t) \\
       &= e^{\log(1+x_1) + \log(1+x_2) + \cdots + \log(1+x_t)}\\
-      &= e^{t\langle 1+x\rangle}
+      &= e^{t\langle \log(1+x)\rangle}
    \end{align}
 $$
 
