@@ -118,7 +118,7 @@ Knowing the strategy from above, we can model this using a random walk. For $t$ 
 
 $$ 
    \begin{align}
-  h_t &= h \cdot (1+x_1)(1+x_2)\cdots(1+x_t) \\
+  h_t &= h_0 \cdot (1+x_1)(1+x_2)\cdots(1+x_t) \\
       &= e^{\log(1+x_1) + \log(1+x_2) + \cdots + \log(1+x_t)}\\
       &= e^{t\langle 1+x\rangle}
    \end{align}
