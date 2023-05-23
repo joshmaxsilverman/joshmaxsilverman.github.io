@@ -139,7 +139,9 @@ $$
 
 According to the strategy, we should hedge $97$ times and then cash in three times. 
 
-This will lead to an underestimate since $\lambda$ is the asymptotic limit of the growth rate of $h.$ The first jump is a doubling, the second jump is the factor $7/4,$ and so on, settling to $\lambda$ as $h$ grows. Replacing the first two factors of $e^\lambda$ with these more exact figures, we get an estimate of
+This will lead to an underestimate since $\lambda$ is the asymptotic limit of the growth rate of $h.$ 
+
+The first jump is a doubling, the second jump is the factor $7/4,$ and so on, settling to $\lambda$ as $h$ grows. Replacing the first two factors of $e^\lambda$ with these more exact figures, we get an estimate of
 
 $$ 
 \begin{align}
