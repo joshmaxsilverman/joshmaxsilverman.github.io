@@ -58,7 +58,7 @@ $$ \Omega(h,\ell,k) = \max\{ \langle\text{cash in}\rangle_{h,\ell,k}, \langle\te
 
 which can be evaluated analytically. 
 
-When $\ell=1,$ we have just onw turn left and there is nothing we can do but take the money on the table
+When $\ell=1,$ we have just one turn left and there is nothing we can do but take the money on the table
 
 $$ \Omega(h, 1, k) = k. $$
 
