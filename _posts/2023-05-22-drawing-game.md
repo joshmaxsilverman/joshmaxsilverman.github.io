@@ -143,7 +143,7 @@ This will lead to an underestimate since $\lambda$ is the asymptotic limit of th
 
 $$ 
 \begin{align}
-  \Omega(1,100,1)_\text{median} &\approx \frac32 \cdot 2\cdot \frac74 6^{95\lambda} \\
+  \Omega(1,100,1)_\text{median} &\approx \frac32 \cdot 2\cdot \frac74 e^{95\lambda} \\
   &= 4.54\times10^{16}. 
 \end{align}
 $$
