@@ -52,7 +52,7 @@ If we hedge then we get nothing immediately but raise the value of $h$ to $(h+k)
 
 $$ \langle\text{hedge}\rangle_{h,\ell,k} = \frac{1}{h+k}\sum\limits_{j=1}^{h+k} \Omega(h+k, \ell-1, j). $$
 
-So, 
+So, our strategy
 
 $$ \Omega(h,\ell,k) = \max\{ \langle\text{cash in}\rangle_{h,\ell,k}, \langle\text{hedge}\rangle_{h,\ell,k} \}. $$
 
@@ -62,7 +62,7 @@ When $\ell=1,$ we have just one turn left and there is nothing we can do but tak
 
 $$ \Omega(h, 1, k) = k. $$
 
-Plugging this in to the maximization, we get 
+Plugging this in to the decision, we get 
 
 $$ 
 \begin{align}
