@@ -37,7 +37,6 @@ Before we hear about his lefty sister, our relative belief in "the guy" vs "some
 $$
   \dfrac{P(\text{the guy}\rvert \text{sister Mary})}{P(\text{some guy}\rvert \text{sister Mary})} =   \dfrac{P(\text{sister Mary}\rvert \text{the guy})}{P(\text{sister Mary}\rvert\text{some guy})} \dfrac{P(\text{the guy})}{P(\text{some guy})}
 $$
-$$
 
 and after we hear about the lefty sister, it becomes
 
