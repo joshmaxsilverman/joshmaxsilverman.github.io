@@ -30,4 +30,6 @@ $$
   \end{array}
 $$
 
+which splits the faces into two cycles $1 \rightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism $2$ sides.
+
 <br>
