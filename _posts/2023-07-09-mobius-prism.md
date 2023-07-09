@@ -37,11 +37,11 @@ immediately, this tells us that prisms with a prime number of sides cannot break
 
 for non-primes, the cycle will close when some number of twists brings us back to the first side. in other words, at the least common multiple of $N$ and the size of the twist $t.$
 
-so, for arbitrary $N$ and $t,$ each cycle will involve $\lcm(N,t)/t$ numbers. dividing the total number of numbers $N$ by this yields $Nt/\lcm(N,t)$ cycles for arbitrary $N$ and $t$.
+so, for arbitrary $N$ and $t,$ each cycle will involve $\text{lcm}(N,t)/t$ numbers. dividing the total number of numbers $N$ by this yields $Nt/\text{lcm}(N,t)$ cycles for arbitrary $N$ and $t$.
 
 the average number of "sides" for a given mobius prism is therefore
 
-$$ \langle \text{sides}\rangle = \frac1N \sum_t \frac{Nt}{\lcm(N,t)} = \sum_t \frac{t}{\lcm(N,t)}. $$
+$$ \langle \text{sides}\rangle = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \sum_t \frac{t}{\text{lcm}(N,t)}. $$
 
 as a final example, take an $N=15$ sided prism with a turn of $T=6.$ 
 
