@@ -15,8 +15,7 @@ tags:
 
 ## Solution
 
-the twist between the ends of the prism determines what prism face you end up on after one loop.
-
+the twist between the ends of the prism determines what prism face you end up on after one loop. 
 
 for example, with no twist you stay on the same face and, so, each face forms its own distinct side of the prism.
 
@@ -30,6 +29,20 @@ $$
   \end{array}
 $$
 
-which splits the faces into two cycles $1 \rightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism $2$ sides.
+which splits the faces into two cycles $1 \rightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
+
+each face maps to another, and this dynamics groups the faces into cycles. because of the inherent symmetry, all cycles have the same size. 
+
+immediately, this tells us that prisms with a prime number of sides cannot break into cycles. for such prisms, there are $N$ sides to the mobius strip for a twist of $0$ and $1$ side for any other twist.
+
+for non-primes, the cycle will close when some number of twists brings us back to the first side. in other words, at the least common multiple of $N$ and the size of the twist $t.$
+
+so, for arbitrary $N$ and $t,$ each cycle will involve $\lcm(N,t)/t$ numbers. dividing the total number of numbers $N$ by this yields $Nt/\lcm(N,t)$ cycles for arbitrary $N$ and $t$.
+
+the average number of "sides" for a given mobius prism is therefore
+
+$$ \langle \text{sides}\rangle = \frac1N \sum_t \frac{Nt}{\lcm(N,t)} = \sum_t \frac{t}{\lcm(N,t)}. $$
+
+as a final example, take an $N=15$ sided prism with a turn of $T=6.$ 
 
 <br>
