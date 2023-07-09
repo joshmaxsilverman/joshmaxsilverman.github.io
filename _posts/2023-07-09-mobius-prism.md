@@ -43,6 +43,6 @@ the average number of "sides" for a given mobius prism is therefore
 
 $$ \langle \text{sides}\rangle = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \sum_t \frac{t}{\text{lcm}(N,t)}. $$
 
-evaluating this from $N=1$ to $1000$ we get a max at $N=840$ where $\langle\text{sides}\rangle = \frac{195}{14} \approx 13.92857\ldots$
+evaluating this from $N=1$ to $1000$ we get a max at $N=840$ where $\langle\text{sides}\rangle = 195/14 \approx 13.92857\ldots$
 
 <br>
