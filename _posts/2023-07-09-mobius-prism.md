@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Twisted Balkanization 
+title: Twisted balkanization 
 date: 2023/07/09
 subtitle: How many different adventures does the Mobius prism have in store?
 tags: maps dynamics measurement
@@ -15,21 +15,25 @@ tags: maps dynamics measurement
 
 ## Solution
 
-the twist between the ends of the prism determines what prism face you end up on after one loop. 
+The twist between the caps of the prism determines which prism face you end up on after one loop. 
 
-for example, with no twist you stay on the same face and, so, each face forms its own distinct side of the prism.
+### No twist
 
-as another example, giving a hexagonal prism a twist of $2$ sets up the map
+For example, with no twist each face maps to itself and, so, forms its own distinct side of the Möbius prism.
+
+### Hexagon, with $t=2$
+
+As another example, giving a hexagonal prism a twist of $2$ sets up the map
 
 $$
   \begin{array}{c}
     123456 \\
-    \downarrow \\
+    \downarrow\downarrow\downarrow\downarrow\downarrow\downarrow \\
     345612
   \end{array}
 $$
 
-which splits the faces into two cycles $1 \rightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
+which splits the faces into two cycles $1 \right 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
 
 each face maps to another, and this dynamics groups the faces into cycles. because of the inherent symmetry, all cycles have the same size. 
 
