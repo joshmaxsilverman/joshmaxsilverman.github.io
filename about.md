@@ -6,7 +6,7 @@ title: About
 About me
 ===
 
-Solutions to various puzzles will accumulate here, centered around the weekly [538 Riddler Classic](https://fivethirtyeight.com/tag/the-riddler/). 
+Solutions to various puzzles will accumulate here, centered around the weekly [Fiddler on the proof](https://thefiddler.substack.com/) and the [Jane Street](https://www.janestreet.com/puzzles/current-puzzle/) monthly puzzle. 
 
 
 Credits
