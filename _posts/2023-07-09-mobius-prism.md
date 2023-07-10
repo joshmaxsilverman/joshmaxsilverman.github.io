@@ -33,7 +33,7 @@ $$
   \end{array}
 $$
 
-which splits the faces into two cycles $1 \right 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
+which splits the faces into two cycles $1 \shortrightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
 
 each face maps to another, and this dynamics groups the faces into cycles. because of the inherent symmetry, all cycles have the same size. 
 
