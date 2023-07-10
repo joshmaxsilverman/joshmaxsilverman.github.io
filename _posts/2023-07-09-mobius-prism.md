@@ -17,7 +17,7 @@ tags: maps dynamics measurement
 > - A four-quarter (or whole) twist, which results in four distinct faces
 > - A randomly twisted square prism will have, on average, $(1+2+1+4)/4$, or two distinct faces.
 >
->Among all whole number values of $N$ less than or equal to $1,000$, for which value of $N$ will a randomly twisted regular N-gon prism have the most distinct faces, on average?
+>Among all whole number values of $N$ less than or equal to $1,000$, for which value of $N$ will a randomly twisted regular $N$-gon prism have the most distinct faces, on average?
 
 <!--more-->
 
@@ -27,13 +27,15 @@ tags: maps dynamics measurement
 
 The twist between the caps of the prism determines which prism face you end up on after one loop. 
 
+**Note**: *Since the twist involves a shift by a discrete number of faces, we'll measure the twists by the size of the shift $t.$*
+
 ### No twist
 
-For example, with no twist each face maps to itself and, so, forms its own distinct side of the Möbius prism.
+For example, with no twist ($t=0$ each face maps to itself and, so, forms its own distinct side of the Möbius prism.
 
 ### Hexagon, with $t=2$
 
-As another example, giving a hexagonal prism a twist of $2$ sets up the map
+As another example, giving a hexagonal prism a twist $t=2$ sets up the map
 
 $$
   \begin{array}{c}
