@@ -67,6 +67,6 @@ $$ \langle \text{sides}\rangle_N = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \
 
 Evaluating this for numbers between $N=1$ and $1000,$ we find a maximum at $N=840,$ $\langle\text{sides}\rangle_{840} = 195/14 \approx 13.92857\ldots$ 
 
-Unsurprisingly, $840$ is a highly composite number, having more prime factors than any number smaller than it.
+Unsurprisingly, $840$ is a [highly composite number](https://en.wikipedia.org/wiki/Highly_composite_number), having more prime factors than any number smaller than it.
 
 <br>
