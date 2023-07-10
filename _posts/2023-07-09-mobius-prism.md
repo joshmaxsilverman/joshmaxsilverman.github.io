@@ -31,7 +31,7 @@ The twist between the caps of the prism determines which prism face you end up o
 
 ### No twist
 
-For example, with no twist ($t=0$) each face maps to itself and, so, forms its own distinct side of the Möbius prism.
+For example, with no twist ($t=0$) each face maps to itself and, so, forms its own distinct "side" of the Möbius prism.
 
 ### Hexagon, with $t=2$
 
@@ -61,7 +61,7 @@ $$ \frac{\text{lcm}(N,t)}{t} $$
 
 numbers. Dividing the total number of numbers $N$ by this yields $Nt/\text{lcm}(N,t)$ cycles.
 
-The average number of "sides" for a Möbius prism is therefore
+The average number of sides for a Möbius prism is therefore
 
 $$ \langle \text{sides}\rangle_N = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \sum_t \frac{t}{\text{lcm}(N,t)}. $$
 
