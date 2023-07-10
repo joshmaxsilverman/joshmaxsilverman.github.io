@@ -7,11 +7,21 @@ subtitle: How many different adventures does the Mobius prism have in store?
 tags: maps dynamics measurement
 ---
 
->Question
+>**Question**: Instead of a strip of paper, consider a three-dimensional prism whose bases are regular $N$-gons. I twist it and stretch it into a loop, before finally connecting the two bases. Suppose that my twist is by a random angle, such that the two bases are aligned when they are connected. I’m interested in how many distinct faces there are in the resulting “Möbius prism.”
+>
+>For example, let’s say the original figure is a square prism (i.e., $N = 4$). There are four kinds twists I can apply, all equally likely:
+>
+> - A one-quarter twist, which results in one distinct face
+> - A two-quarter (or one-half) twist, which results in two distinct faces
+> - A three-quarter twist, which results in one distinct face
+> - A four-quarter (or whole) twist, which results in four distinct faces
+> - A randomly twisted square prism will have, on average, $(1+2+1+4)/4$, or two distinct faces.
+>
+>Among all whole number values of $N$ less than or equal to $1,000$, for which value of $N$ will a randomly twisted regular N-gon prism have the most distinct faces, on average?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([The fiddler on the proof](https://thefiddler.substack.com/p/can-you-escape-the-infinite-loop))
 
 ## Solution
 
@@ -33,20 +43,28 @@ $$
   \end{array}
 $$
 
-which splits the faces into two cycles $1 \shortrightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2$ giving the prism two sides.
+which splits the faces into two cycles $1 \rightarrow 3 \rightarrow 5 \rightarrow 1$ and $2 \rightarrow 4 \rightarrow 6 \rightarrow 2,$ giving the prism two sides.
 
-each face maps to another, and this dynamics groups the faces into cycles. because of the inherent symmetry, all cycles have the same size. 
+### Cycles
 
-immediately, this tells us that prisms with a prime number of sides cannot break into cycles. for such prisms, there are $N$ sides to the mobius strip for a twist of $0$ and $1$ side for any other twist.
+Each face maps to another. This dynamic groups the faces into cycles. Because of the inherent symmetry, all of the cycles have the same size. 
 
-for non-primes, the cycle will close when some number of twists brings us back to the first side. in other words, at the least common multiple of $N$ and the size of the twist $t.$
+Immediately, this tells us that prisms with a prime number of sides can't break into cycles (since primes are not divisible$\ldots$). For prime prisms, there are $N$ sides to the Möbius prism for a twist of zero and $1$ side for any other twist.
 
-so, for arbitrary $N$ and $t,$ each cycle will involve $\text{lcm}(N,t)/t$ numbers. dividing the total number of numbers $N$ by this yields $Nt/\text{lcm}(N,t)$ cycles for arbitrary $N$ and $t$.
+For non-primes, the cycle will close when some number of twists brings us back to the first side. In other words, at the least common multiple of $N$ and the size of the twist $t.$
 
-the average number of "sides" for a given mobius prism is therefore
+So, for arbitrary $N$ and $t,$ each cycle will involve 
 
-$$ \langle \text{sides}\rangle = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \sum_t \frac{t}{\text{lcm}(N,t)}. $$
+$$ \frac{\text{lcm}(N,t)}{t} $$ 
 
-evaluating this from $N=1$ to $1000$ we get a max at $N=840$ where $\langle\text{sides}\rangle = 195/14 \approx 13.92857\ldots$
+numbers. Dividing the total number of numbers $N$ by this yields $Nt/\text{lcm}(N,t)$ cycles.
+
+The average number of "sides" for a Möbius prism is therefore
+
+$$ \langle \text{sides}\rangle_N = \frac1N \sum_t \frac{Nt}{\text{lcm}(N,t)} = \sum_t \frac{t}{\text{lcm}(N,t)}. $$
+
+Evaluating this for numbers between $N=1$ and $1000,$ we find a maximum at $N=840$ where $\langle\text{sides}\rangle = 195/14 \approx 13.92857\ldots$ 
+
+Unsurprisingly, $840$ is a highly composite number, having more prime factors than any number smaller than it.
 
 <br>
