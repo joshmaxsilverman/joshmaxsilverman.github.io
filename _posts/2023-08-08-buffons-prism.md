@@ -17,6 +17,10 @@ tags: probability geometry
 
 ## Solution
 
-ddd
+the rod forms the diagonal of a rectangular prism. the prism crosses cell boundaries when the rod does. 
+
+
+
+calling $\theta$ the angle from the $x$-axis and $phi$ the angle from the $z$-axis, 
 
 <br>
