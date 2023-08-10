@@ -21,6 +21,6 @@ the rod forms the diagonal of a rectangular prism. the prism crosses cell bounda
 
 
 
-calling $\theta$ the angle from the $x$-axis and $phi$ the angle from the $z$-axis, 
+calling $\theta$ the angle from the $x$-axis and $\phi$ the angle from the $z$-axis, 
 
 <br>
