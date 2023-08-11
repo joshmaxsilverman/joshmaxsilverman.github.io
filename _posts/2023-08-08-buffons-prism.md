@@ -26,6 +26,10 @@ P(\text{crosses only one face}) &= P(\text{crosses only top face}) \\
  &+ P(\text{crosses only side face}) + P(\text{crosses only back face}).
 \end{align}$$
 
+however, the three sub-probabilities are the same by symmetry, so 
+
+$$ P(\text{crosses only one face}) &= 3 P(\text{crosses only top face}).$$
+
 any given prism can be defined in terms of the rod length $\ell,$ the angle from the $x$-axis $\theta$ and the angle from the $z$-axis $\phi.$
 
 in these variables, the prisms width, depth, and height are
@@ -43,5 +47,17 @@ with those in hand, the prism has a limited volume of points that it can occupy 
 the prism will cross the top face of the unit cube whenever the $z$-coordinate is within $h$ of it. the probability of this occuring is equal to $P_\text{top} = h = \sin\theta.$ likewise, the probability that this doesn't happen is $1 - P_\text{top}.$
 
 the situation is the same for the other sides, and we have $P_\text{side} = w$ and $P_\text{back} = d.$
+
+with this, we can find the probability that any given prism crosses only the top face
+
+$$ P(\text{crosses only top face})_{\theta,\phi} = P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)). $$
+
+taking the expectation over all $\theta$ and $phi$ we get
+
+$$ P(\text{crosses only one face}) = \int\limits_{0}^{\frac12\pi}\text{d}\theta \int\limits_{0}^{\frac12\pi}\text{d}\phi P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)).$$
+
+the integral gets
+
+
 
 <br>
