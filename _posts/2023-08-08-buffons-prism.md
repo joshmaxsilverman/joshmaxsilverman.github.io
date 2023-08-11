@@ -23,7 +23,7 @@ the probability we are after is
 
 $$\begin{align}
 P(\text{one face only}) &= P(\text{top face only}) + P(\text{side face only}) \\ 
-&\, + P(\text{back face only}).
+&\ + P(\text{back face only}).
 \end{align}$$
 
 however, the three sub-probabilities are the same by symmetry, so 
