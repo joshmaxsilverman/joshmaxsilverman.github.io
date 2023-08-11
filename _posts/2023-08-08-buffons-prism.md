@@ -57,7 +57,7 @@ taking the expectation over all directions $(\theta, \phi)$ we get
 
 $$ \begin{align}
 P(\text{one face only}) &= \langle P(\text{one face only}) \rangle \\
-3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].
+&= 3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].
 \end{align}$$
 
 the integral gets us ...
