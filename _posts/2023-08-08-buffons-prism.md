@@ -54,10 +54,14 @@ $$ P(\text{crosses only top face})_{\theta,\phi} = P_\text{top}(\theta,\phi)(1-P
 
 taking the expectation over all directions $\left(\theta, \phi\right)$ we get
 
-$$ P(\text{crosses only one face}) = \oint \text{d}\Omega P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)).$$
+$$ P(\text{crosses only one face}) = 3\oint \text{d}\Omega\left[ P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].$$
 
-the integral gets us 
+the integral gets us ...
 
+solving for the maximum, we find $\ell_* = ....$
 
+plugging this into the expression for the probability of crossing a single side, we get $p_* = ...$
+
+or approximately ... and ...
 
 <br>
