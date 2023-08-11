@@ -22,13 +22,13 @@ the rod is an awkard object to picture geometrically. we can clean things up by 
 the probability we are after is
 
 $$\begin{align}
-P(\text{crosses only one face}) &= P(\text{crosses only top face}) \\
- &+ P(\text{crosses only side face}) + P(\text{crosses only back face}).
+P(\text{one face only}) &= P(\text{top face only}) \\
+ &+ P(\text{side face only}) + P(\text{back face only}).
 \end{align}$$
 
 however, the three sub-probabilities are the same by symmetry, so 
  
-$$ P(\text{crosses only one face}) = 3 P(\text{crosses only top face}).$$
+$$ P(\text{one face only}) = 3 P(\text{top face only}).$$
  
 any given prism can be defined in terms of the rod length $\ell,$ the angle from the $x$-axis $\theta$ and the angle from the $z$-axis $\phi.$
 
@@ -50,12 +50,15 @@ the situation is the same for the other sides, and we have $P_\text{side} = w$ a
 
 with this, we can find the probability that any given prism crosses only the top face
 
-$$ P(\text{crosses only top face})_{\theta,\phi} = P\_\text{top}(\theta,\phi) (1-P\_\text{side}(\theta,\phi))(1-P\_\text{back}(\theta,\phi)).
+$$ P(\text{top face only})_{\theta,\phi} = P\_\text{top}(\theta,\phi) (1-P\_\text{side}(\theta,\phi))(1-P\_\text{back}(\theta,\phi)).
 $$
 
 taking the expectation over all directions $(\theta, \phi)$ we get
 
-$$ P(\text{crosses only one face}) = 3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].$$
+$$ \begin{align}
+P(\text{one face only}) &= \langle P(\text{one face only}) \rangle \\
+3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].
+\end{align}$$
 
 the integral gets us ...
 
