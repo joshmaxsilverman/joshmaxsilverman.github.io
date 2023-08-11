@@ -32,7 +32,7 @@ $$ P(\text{one face only}) = 3 P(\text{top face only}).$$
  
 any given prism can be defined in terms of the rod length $\ell,$ the angle $\theta$ from the $x$-axis and the angle $\phi$ from the $z$-axis.
 
-in these variables, the prisms width, depth, and height are
+in these variables, the prism's width, depth, and height are
 
 $$
   \begin{align}
