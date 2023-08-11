@@ -44,7 +44,7 @@ $$
 
 with those in hand, the prism has a limited volume of points that it can occupy without crossing two faces of the unit cube.
 
-the prism will cross the top face of the unit cube whenever the $z$-coordinate is within $h$ of it. with $\ell \leq 1,$ the probability of this occuring is equal to $P_\text{top} = h = \sin\theta.$ likewise, the probability that this doesn't happen is $1 - P_\text{top}.$
+the prism will cross the top face of the unit cube whenever the $z$-coordinate is within $h$ of it. with $\ell \leq 1,$ the probability of this occuring is $P_\text{top} = h.$ likewise, the probability that this doesn't happen is $1 - P_\text{top}.$
 
 the situation is the same for the other sides, and we have $P_\text{side} = w$ and $P_\text{back} = d.$
 
