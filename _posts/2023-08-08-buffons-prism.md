@@ -54,7 +54,7 @@ $$ P(\text{crosses only top face})_{\theta,\phi} = P_\text{top}(\theta,\phi)(1-P
 
 taking the expectation over all $\theta$ and $phi$ we get
 
-$$ P(\text{crosses only one face}) = \int\limits_{0}^{\frac12\pi}\text{d}\theta \int\limits_{0}^{\frac12\pi}\text{d}\phi P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)).$$
+$$ P(\text{crosses only one face}) = \oint \text{d}\Omega\, i P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)).$$
 
 the integral gets
 
