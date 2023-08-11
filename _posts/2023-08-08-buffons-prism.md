@@ -68,4 +68,6 @@ plugging this into the expression for the probability of crossing a single side,
 
 or approximately ... and ...
 
+plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
+
 <br>
