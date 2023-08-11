@@ -27,7 +27,7 @@ P(\text{crosses only one face}) &= P(\text{crosses only top face}) \\
 \end{align}$$
 
 however, the three sub-probabilities are the same by symmetry, so 
-
+ 
 $$ P(\text{crosses only one face}) = 3 P(\text{crosses only top face}).$$
 
 any given prism can be defined in terms of the rod length $\ell,$ the angle from the $x$-axis $\theta$ and the angle from the $z$-axis $\phi.$
