@@ -17,10 +17,31 @@ tags: probability geometry
 
 ## Solution
 
-the rod forms the diagonal of a rectangular prism. the prism crosses cell boundaries when the rod does. 
+the rod is an awkard object to picture geometrically. we can clean things up by using the prism whose diagonal is the rod. the prism crosses cell boundaries whenever the rod does.
 
+the probability we are after is
 
+$$\begin{align}
+P(\text{crosses only one face}) &= P(\text{crosses only top face}) \\
+ &+ P(\text{crosses only side face}) + P(\text{crosses only back face}).
+\end{align}$$
 
-calling $\theta$ the angle from the $x$-axis and $\phi$ the angle from the $z$-axis, 
+any given prism can be defined in terms of the rod length $\ell,$ the angle from the $x$-axis $\theta$ and the angle from the $z$-axis $\phi.$
+
+in these variables, the prisms width, depth, and height are
+
+$$
+  \begin{align}
+    w &= \ell\cos\phi\cos\theta \\
+    d &= \ell\cos\phi\sin\theta \\
+    h &= \ell\sin\theta
+  \end{align}
+$$
+
+with those in hand, the prism has a limited volume of points that it can occupy without crossing two faces of the unit cube.
+
+the prism will cross the top face of the unit cube whenever the $z$-coordinate is within $h$ of it. the probability of this occuring is equal to $P_\text{top} = h = \sin\theta.$ likewise, the probability that this doesn't happen is $1 - P_\text{top}.$
+
+the situation is the same for the other sides, and we have $P_\text{side} = w$ and $P_\text{back} = d.$
 
 <br>
