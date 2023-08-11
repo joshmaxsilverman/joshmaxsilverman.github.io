@@ -52,7 +52,7 @@ with this, we can find the probability that any given prism crosses only the top
 
 $$ P(\text{crosses only top face})_{\theta,\phi} = P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)). $$
 
-taking the expectation over all directions $\left(\theta, \phi\right)$ we get
+taking the expectation over all directions $(\theta, \phi)$ we get
 
 $$ P(\text{crosses only one face}) = 3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].$$
 
