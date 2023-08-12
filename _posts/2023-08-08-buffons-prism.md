@@ -59,16 +59,13 @@ taking the expectation over all directions $(\theta, \phi)$ we get
 
 $$ \begin{align}
 P(\text{one face only}) &= \langle P(\text{one face only})\_{\theta,\phi} \rangle \\
-&= 3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right].
+&= 3\oint \text{d}\theta\text{d}\phi\sin\phi \left[P_\text{top}(\theta,\phi)(1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi))\right] \\
+&= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
 
-the integral gets us ...
+solving for the maximum, we find $\ell_* = \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \approx 0.7452572091\ldots$
 
-solving for the maximum, we find $\ell_* = ....$
-
-plugging this into the expression for the probability of crossing a single side, we get $p_* = ...$
-
-or approximately ... and ...
+plugging this into the expression for the probability of crossing a single side, we get $p_* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 64\right)}{243\pi}\approx 0.5095346021\ldots$
 
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
