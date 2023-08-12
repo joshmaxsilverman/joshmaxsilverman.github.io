@@ -59,7 +59,7 @@ taking the expectation over all directions $(\theta, \phi)$ we get
 
 $$ \begin{align}
 P(\text{one face only}) &= \langle P(\text{one face only})\_{\theta,\phi} \rangle \\
-&= 3\oint \text{d}\theta\text{d}\phi\sin\phi P(\text{top face only})_{\theta,\phi} \\
+&= 3\oint \text{d}\theta\text{d}\phi\sin\phi\, P(\text{top face only})_{\theta,\phi} \\
 &= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
 
