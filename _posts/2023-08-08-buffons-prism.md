@@ -63,9 +63,13 @@ P(\text{one face only}) &= \langle P(\text{one face only})\_{\theta,\phi} \rangl
 &= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
 
-solving for the maximum, we find $\ell_* = \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \approx 0.7452572091\ldots$
+solving for the maximum, we find 
 
-plugging this into the expression for the probability of crossing a single side, we get $p_* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 64\right)}{243\pi}\approx 0.5095346021\ldots$
+$$\ell_* = \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \approx 0.7452572091\ldots$$
+
+plugging this into the expression for the probability of crossing a single side, we get 
+
+$$p_* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 64\right)}{243\pi}\approx 0.5095346021\ldots$$
 
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
