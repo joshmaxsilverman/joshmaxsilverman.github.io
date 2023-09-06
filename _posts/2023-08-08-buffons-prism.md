@@ -80,4 +80,37 @@ plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreeme
 
 ![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
 
+```mathematica
+areAdjacent[end1_, end2_] := (
+  (*make vectors identifying the unit cube each end is in*)
+  
+  {cube1, cube2} = Floor@# & /@ {end1, end2};
+  gap = Norm[cube1 - cube2];
+  adjacent = Boole[gap == 1];
+  
+  Return[adjacent];
+  )
+
+randomDir[] := (
+  randPt = Table[RandomReal[{-1, 1}], 3];
+  length = Norm[randPt];
+  If[length <= 1
+   , Return[randPt/length]
+   , Return[randomDir[]]
+   ];
+  )
+
+trial[length_] := (
+  randPt1 = Table[RandomReal[], 3];
+  randDir = length randomDir[];
+  randPt2 = randPt1 + randDir;
+  adjacent = areAdjacent[randPt1, randPt2];
+  Return[adjacent]
+  )
+
+measure[n_, l_] := Mean[Table[trial[l], n]];
+
+dats = ParallelTable[{l, measure[1000000, l]}, {l, 0, 1, 0.05}];
+```
+
 <br>
