@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Buffon's prism
 date: 2023/08/08
 subtitle: Buffon's lattice
 tags: probability geometry
