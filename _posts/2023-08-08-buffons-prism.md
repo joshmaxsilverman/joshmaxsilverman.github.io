@@ -69,7 +69,7 @@ $$\ell_* = \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \approx
 
 plugging this into the expression for the probability of crossing a single side, we get 
 
-$$p_* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 64\right)}{243\pi}\approx 0.5095346021\ldots$$
+$$P(\text{one face only})^* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 64\right)}{243\pi}\approx 0.5095346021\ldots$$
 
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
