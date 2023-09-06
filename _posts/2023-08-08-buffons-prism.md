@@ -94,10 +94,10 @@ areAdjacent[end1_, end2_] := (
 randomDir[] := (
   randPt = Table[RandomReal[{-1, 1}], 3];
   length = Norm[randPt];
-  If[length <= 1
-   , Return[randPt/length]
-   , Return[randomDir[]]
-   ];
+  Return @ If[length <= 1
+    , randPt/length
+    , randomDir[]
+    ];
   )
 
 trial[length_] := (
