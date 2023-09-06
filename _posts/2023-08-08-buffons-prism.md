@@ -111,7 +111,7 @@ trial[length_] := (
   randPt2 = randPt1 + randDir;
   adjacent = areAdjacent[randPt1, randPt2];
 
-  Return[adjacent]
+  Return[adjacent];
   )
 
 measure[n_, l_] := Mean[Table[trial[l], n]];
