@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Buffon's prism
 date: 2023/08/08
-subtitle: Buffon's lattice
+subtitle: If you throw a rod into a jelly lattice, how long should it be to maximize the chance to cross one wall?
 tags: probability geometry
 ---
 
@@ -52,7 +52,7 @@ the situation is the same for the other sides, and we have $P_\text{side} = w$ a
 
 with this, we can find the probability that any given prism crosses only the top face
 
-$$ P(\text{top face only})_{\theta,\phi} = P\_\text{top}(\theta,\phi) (1-P\_\text{side}(\theta,\phi))(1-P\_\text{back}(\theta,\phi)).
+$$ P(\text{top face only})_{\theta,\phi} = P_\text{top}(\theta,\phi) (1-P_\text{side}(\theta,\phi))(1-P_\text{back}(\theta,\phi)).
 $$
 
 taking the expectation over all directions $(\theta, \phi)$ we get
