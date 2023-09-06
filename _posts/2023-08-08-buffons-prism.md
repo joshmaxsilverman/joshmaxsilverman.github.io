@@ -84,7 +84,7 @@ plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreeme
 areAdjacent[end1_, end2_] := (
   (* check whether two end points are in orthogonally adjacent cubes *)
   
-  {cube1, cube2} = Floor@# & /@ {end1, end2};
+  {cube1, cube2} = Floor[{end1, end2}];
   gap = Norm[cube1 - cube2];
   adjacent = Boole[gap == 1];
   
