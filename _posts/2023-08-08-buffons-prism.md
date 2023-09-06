@@ -26,7 +26,7 @@ P(\text{one face only}) &= P(\text{top face only}) + P(\text{side face only}) \\
 &\ + P(\text{back face only}).
 \end{align}$$
 
-however, the three sub-probabilities are the same by symmetry, so 
+but, by symmetry, these three sub-probabilities are the same, so 
  
 $$ P(\text{one face only}) = 3 P(\text{top face only}).$$
  
