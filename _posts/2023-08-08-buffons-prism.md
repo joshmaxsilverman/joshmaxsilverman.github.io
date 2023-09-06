@@ -82,7 +82,7 @@ plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreeme
 
 ```mathematica
 areAdjacent[end1_, end2_] := (
-  (*make vectors identifying the unit cube each end is in*)
+  (* check whether two end points are in orthogonally adjacent cubes *)
   
   {cube1, cube2} = Floor@# & /@ {end1, end2};
   gap = Norm[cube1 - cube2];
@@ -92,15 +92,17 @@ areAdjacent[end1_, end2_] := (
   )
 
 randomDir[] := (
+  (*pick a random direction from the surface of the unit sphere*)
   randPt = Table[RandomReal[{-1, 1}], 3];
   length = Norm[randPt];
-  Return @ If[length <= 1
+  Return@If[length <= 1
     , randPt/length
     , randomDir[]
     ];
   )
 
 trial[length_] := (
+  (*pick two random endpoints and test if they're adjacent *)
   randPt1 = Table[RandomReal[], 3];
   randDir = length randomDir[];
   randPt2 = randPt1 + randDir;
