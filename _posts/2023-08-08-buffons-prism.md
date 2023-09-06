@@ -17,7 +17,7 @@ tags: probability geometry
 
 ## Solution
 
-the rod is an awkard object to picture geometrically. we can clean things up by using the prism whose diagonal is the rod. the prism crosses cell boundaries whenever the rod does.
+the line segment is an awkard object to picture geometrically. we can clean things up by using a prism whose diagonal is the line segment. the prism crosses cell boundaries whenever the line segment does.
 
 the probability we are after is
 
@@ -30,7 +30,7 @@ but, by symmetry, these three sub-probabilities are the same, so
  
 $$ P(\text{one face only}) = 3 P(\text{top face only}).$$
  
-any given prism can be defined in terms of the rod length $\ell,$ the angle $\theta$ from the $x$-axis and the angle $\phi$ from the $z$-axis.
+any given prism can be defined in terms of the line segment length $\ell,$ the angle $\theta$ from the $x$-axis and the angle $\phi$ from the $z$-axis.
 
 in these variables, the prism's width, depth, and height are
 
