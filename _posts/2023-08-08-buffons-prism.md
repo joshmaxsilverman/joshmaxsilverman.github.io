@@ -52,7 +52,8 @@ the situation is the same for the other sides, and we have $P_\text{side} = w$ a
 
 with this, we can find the probability that any given prism crosses only the top face
 
-$$ P(\text{top face only})_{\theta,\phi,\ell} = P_\text{top}(\theta,\phi,\ell) (1-P_\text{side}(\theta,\phi,\ell))(1-P_\text{back}(\theta,\phi,\ell)).
+$$ 
+P(\text{top face only})_{\theta,\phi,\ell} = P_\text{top}(\theta,\phi,\ell) (1-P_\text{side}(\theta,\phi,\ell))(1-P_\text{back}(\theta,\phi,\ell)).
 $$
 
 taking the expectation over all directions $(\theta, \phi)$ we get
