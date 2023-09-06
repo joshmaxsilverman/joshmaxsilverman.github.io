@@ -107,8 +107,8 @@ randomDir[] := (
 trial[length_] := (
   (* pick two random endpoints and test if they're adjacent *)
 
-  randPt1 = Table[RandomReal[], 3];
   randDir = length randomDir[];
+  randPt1 = Table[RandomReal[], 3];
   randPt2 = randPt1 + randDir;
   adjacent = areAdjacent[randPt1, randPt2];
 
