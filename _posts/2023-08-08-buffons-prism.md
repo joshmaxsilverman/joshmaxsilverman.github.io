@@ -78,6 +78,6 @@ $$
 
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
-![](/img/2023-08-31-buffons-prism.png) {.width="450px" class="image-centered"}
+![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
 
 <br>
