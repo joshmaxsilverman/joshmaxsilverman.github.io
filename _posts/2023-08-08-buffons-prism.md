@@ -48,6 +48,8 @@ the prism will cross the top face of the unit cube whenever the $z$-coordinate i
 
 the situation is the same for the other sides, and we have $P_\text{side} = w$ and $P_\text{back} = d.$
 
+<!-- likewise, the probability that this doesn't happen is $1 - P_\text{top}.$ -->
+
 with this, we can find the probability that any given prism crosses only the top face
 
 $$ 
