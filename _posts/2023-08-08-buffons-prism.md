@@ -92,7 +92,7 @@ areAdjacent[end1_, end2_] := (
   )
 
 randomDir[] := (
-  (*pick a random direction from the surface of the unit sphere*)
+  (* pick a random direction from the surface of the unit sphere *)
 
   randPt = Table[RandomReal[{-1, 1}], 3];
   length = Norm[randPt];
@@ -104,7 +104,7 @@ randomDir[] := (
   )
 
 trial[length_] := (
-  (*pick two random endpoints and test if they're adjacent *)
+  (* pick two random endpoints and test if they're adjacent *)
 
   randPt1 = Table[RandomReal[], 3];
   randDir = length randomDir[];
