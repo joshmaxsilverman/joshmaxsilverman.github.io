@@ -73,4 +73,6 @@ $$p_* = \frac{\left(16-\sqrt{256-54\pi}\right)\left(27\pi + \sqrt{256-54\pi} - 6
 
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
+![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
+
 <br>
