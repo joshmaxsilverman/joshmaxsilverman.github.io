@@ -98,7 +98,7 @@ randomDir[] := (
   length = Norm[randPt];
 
   Return@If[length <= 1
-    , randPt/length
+    , randPt / length
     , randomDir[]
     ];
   )
