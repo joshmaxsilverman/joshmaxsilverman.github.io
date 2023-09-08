@@ -75,7 +75,12 @@ P(\text{one face only})(\ell) &= \langle P(\text{one face only}) \rangle_{\theta
 
 solving for the maximum, we find 
 
-$$\ell_* = \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \approx 0.7452572091\ldots$$
+$$
+ \begin{align}
+   \ell_* &= \frac29 \left(8 - \sqrt{\frac12\left(128-27\pi\right)}\right) \\
+   &\approx 0.7452572091\ldots
+ \end{align}
+$$
 
 plugging this into the expression for the probability of crossing a single side, we get 
 
