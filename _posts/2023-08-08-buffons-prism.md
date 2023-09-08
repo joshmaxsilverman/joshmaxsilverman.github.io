@@ -71,7 +71,7 @@ P(\text{one face only})(\ell) &= \langle P(\text{one face only}) \rangle_{\theta
 &= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
 
-### Maximimzing $P(\text{one face only})$
+### Maximimizing $P(\text{one face only})$
 
 solving for the maximum, we find 
 
