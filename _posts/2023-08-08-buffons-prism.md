@@ -17,8 +17,6 @@ tags: probability geometry
 
 ## Solution
 
-the line segment is an awkard object to picture geometrically. we can clean things up by using a prism whose diagonal is the line segment. the prism crosses cell boundaries whenever the line segment does.
-
 the probability we are after is
 
 $$\begin{align}
@@ -29,6 +27,10 @@ P(\text{one face only}) &= P(\text{top face only}) + P(\text{side face only}) \\
 but, by symmetry, these three sub-probabilities are the same, so 
  
 $$ P(\text{one face only}) = 3 P(\text{top face only}).$$
+
+### Prism geometry
+
+the line segment is an awkard object to picture geometrically. we can clean things up by using a prism whose diagonal is the line segment. the prism crosses cell boundaries whenever the line segment does.
  
 any given prism can be defined in terms of the line segment length $\ell,$ the angle $\theta$ from the $x$-axis and the angle $\phi$ from the $z$-axis.
 
@@ -42,7 +44,11 @@ $$
   \end{align}
 $$
 
-with those in hand, the prism has a limited volume of points that it can occupy without crossing two faces of the unit cube.
+so, for example, if the corner of the cube closest to the origin is within $(1-h)$ of the plane $z=1,$ then the prism will cross it. so, the probability that a randomly placed prism crosses $(z=1)$ is $(1-h)$ and the probability that it does cross it is $h.$ 
+
+with this observation in hand, we can quantify the limited volume of points the corner can occupy such that the prism crosses only one face.
+
+### Forming the probability
 
 the prism will cross the top face of the unit cube whenever the $z$-coordinate is within $h$ of it. with $\ell \leq 1,$ the probability of this occuring is $P_\text{top} = h.$ 
 
@@ -56,13 +62,15 @@ $$
 P(\text{top face only})_{\theta,\phi,\ell} = P_\text{top}(\theta,\phi,\ell) (1-P_\text{side}(\theta,\phi,\ell))(1-P_\text{back}(\theta,\phi,\ell)).
 $$
 
-taking the expectation over all directions $(\theta, \phi)$ we get
+averaging over all possible directions $(\theta, \phi)$ we get
 
 $$ \begin{align}
 P(\text{one face only})(\ell) &= \langle P(\text{one face only}) \rangle_{\theta,\phi} \\
 &= 3\int \text{d}\theta\,\text{d}\phi\,\sin\phi\, P(\text{top face only})_{\theta,\phi} \\
 &= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
+
+### Maximimzing $P(\text{one face only})$
 
 solving for the maximum, we find 
 
@@ -80,6 +88,8 @@ $$
 plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
 
 ![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
+
+the simulation is straightforward, we pick a random orientation for the line segment, we pick a random endpoint, and then we test if the cubes containing its endpoints are nearest neighbors in the lattice:
 
 ```mathematica
 areAdjacent[end1_, end2_] := (
