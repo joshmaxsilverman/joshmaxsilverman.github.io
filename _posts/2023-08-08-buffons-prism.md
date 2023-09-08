@@ -98,6 +98,21 @@ plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreeme
 the simulation is straightforward, we pick a random orientation for the line segment, we pick a random endpoint, and then we test if the cubes containing its endpoints are nearest neighbors in the lattice:
 
 ```mathematica
+trial[length_] := (
+  (* pick two random endpoints and test if they're adjacent *)
+
+  randDir = length randomDir[];
+  randPt1 = Table[RandomReal[], 3];
+  randPt2 = randPt1 + randDir;
+  adjacent = areAdjacent[randPt1, randPt2];
+
+  Return[adjacent];
+  )
+
+measure[n_, l_] := Mean[Table[trial[l], n]];
+
+dats = ParallelTable[{l, measure[1000000, l]}, {l, 0, 1, 0.05}];
+
 areAdjacent[end1_, end2_] := (
   (* check whether two end points are in orthogonally adjacent cubes *)
   
@@ -119,21 +134,6 @@ randomDir[] := (
     , randomDir[]
     ];
   )
-
-trial[length_] := (
-  (* pick two random endpoints and test if they're adjacent *)
-
-  randDir = length randomDir[];
-  randPt1 = Table[RandomReal[], 3];
-  randPt2 = randPt1 + randDir;
-  adjacent = areAdjacent[randPt1, randPt2];
-
-  Return[adjacent];
-  )
-
-measure[n_, l_] := Mean[Table[trial[l], n]];
-
-dats = ParallelTable[{l, measure[1000000, l]}, {l, 0, 1, 0.05}];
 ```
 
 <br>
