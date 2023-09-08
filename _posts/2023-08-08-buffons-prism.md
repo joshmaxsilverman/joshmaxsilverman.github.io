@@ -91,11 +91,14 @@ $$
 \end{align}
 $$
 
-plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
+### Checking
 
-![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
+we can check the result with simulation.
 
-the simulation is straightforward, we pick a random orientation for the line segment, we pick a random endpoint, and then we test if the cubes containing its endpoints are nearest neighbors in the lattice:
+the simulation is straightforward:
+- we pick a random orientation for the line segment,
+- then we pick a random endpoint, and
+- then we test if the cubes containing its endpoints are nearest neighbors in the lattice:
 
 ```mathematica
 trial[length_] := (
@@ -135,5 +138,9 @@ randomDir[] := (
     ];
   )
 ```
+
+plotting $P(\text{one face only})(\ell)$ against simulation, we see good agreement:
+
+![](/img/2023-08-31-buffons-prism.png) {:width="450px" class="image-centered"}
 
 <br>
