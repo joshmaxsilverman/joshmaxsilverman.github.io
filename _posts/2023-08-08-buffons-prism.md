@@ -66,7 +66,8 @@ averaging over all possible directions $(\theta, \phi)$ we get
 
 $$ \begin{align}
 P(\text{one face only})(\ell) &= \langle P(\text{one face only}) \rangle_{\theta,\phi} \\
-&= 3\int \text{d}\theta\,\text{d}\phi\,\sin\phi\, P(\text{top face only})_{\theta,\phi} \\
+&= 3\int \text{d}\Omega, P(\text{top face only})_{\theta,\phi} \\
+&= 3\int\limits_0^{\frac12\pi} \text{d}\theta\,\int\limits_0^{\frac12\pi}\text{d}\phi\,\sin\phi\, P(\text{top face only})_{\theta,\phi} \\
 &= \frac{\ell\left(3\ell^2 -16\ell + 6\pi\right)}{4\pi}.
 \end{align}$$
 
