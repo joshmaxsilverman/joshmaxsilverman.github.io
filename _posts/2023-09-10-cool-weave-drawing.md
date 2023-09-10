@@ -78,7 +78,7 @@ setting $y = (1-t)^2 = 1/2,$ we get $t_* = 1 - \sqrt{\frac12}.$
 
 this makes the area 
 
-$$ A = 4\left[x_* \cdot y_* + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}x\, y(x) $$
+$$ A = 4\left[x_* \cdot y_* + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}x\, y(x)\right] $$
 
 
 
