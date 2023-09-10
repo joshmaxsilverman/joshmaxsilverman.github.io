@@ -37,11 +37,11 @@ solving for $x$ in terms of $j$ gives $x = j(j+1)/N^2.$ taking the limit as $N$ 
 
 $$ x = t^2 $$
 
-we can also use this to get $y$ in terms of $j$ and get the frontier in parametric form:
+we can also use this to get $y$ in terms of $t$ 
 
-$$ y = (1-t)^2. $$
+$$ y = (1-t)^2, $$
 
-plotting this along side the lines, we see that it is the shape of the frontier:
+which gives us the frontier in parametric form. plotting this along side the lines, we see that it is the shape of the frontier:
 
 ![](/img/2023-09-10-final-plot.png){:width="450 px" class="image-centered"}
 
