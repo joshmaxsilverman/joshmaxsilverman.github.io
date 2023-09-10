@@ -31,7 +31,7 @@ each point on the frontier curve is the intersection of two consecutive lines:
 
 this occurs when $y_j(x) = y_{j+1}(x)$ or
 
-$$ \frac{(1-j/N)}{j/N}(x-j/N) = \frac{(1-(j+1)/N)}{(j+1)/N}(x-(j+1)/N). $$
+$$ \frac{1-j/N}{j/N}(x-j/N) = \frac{1-(j+1)/N}{(j+1)/N}\left[x-(j+1)/N\right]. $$
 
 solving for $x$ in terms of $j$ gives $x = j(j+1)/N^2.$ taking the limit as $N$ goes to infinity and letting $j/N = t$, we get
 
