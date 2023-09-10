@@ -53,7 +53,16 @@ if we take the square root of $x$ and $y,$ we see that $\sqrt{x} + \sqrt{y} = 1.
 
 since it's symmetric about the line $y=x,$ it may be helpful to look at it in the tilted coordinate system $(x+y, x-y).$
 
-going with this, $x+y = 2t^2 - 2t + 1$ while $x-y = 2t - 1.$ this revealts that $(x-y)^2$ is twice $(x+y)^2$ plus $\frac12.$
+going with this, we see that
+
+$$
+  \begin{align}
+    x+y &= 2t^2 - 2t + 1 \\ 
+    x-y &= 2t - 1.
+  \end{align}
+$$ 
+  
+this revealts that $(x-y)^2$ is twice $(x+y)^2$ plus $\frac12.$
 
 in other words, if we let $z =x+y$ and $w = x-y,$ we have
 
