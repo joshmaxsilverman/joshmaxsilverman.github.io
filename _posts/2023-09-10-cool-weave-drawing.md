@@ -78,7 +78,13 @@ setting $y = (1-t)^2 = 1/2,$ we get $t_* = 1 - \sqrt{\frac12}.$
 
 this makes the area 
 
-$$ A = 4\left[x_* \cdot y_* + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}x\, y(x)\right] $$
+$$ 
+  \begin{align}
+    A &= 4\left[x_* \cdot y_* + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}x\, y(x)\right] \\
+    &= 4\left[x(t_*)y(t_*) + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}t 2t\, (1-t)^2\right] \\
+    &= 4\left(\frac{1}{2} \left(1-\frac{1}{\sqrt{2}}\right)^2+\frac{1}{3}-\frac{1}{3 \sqrt{2}}\right)
+  \end{align}  
+$$
 
 
 
