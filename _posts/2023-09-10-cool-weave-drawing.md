@@ -72,7 +72,13 @@ which is an ordinary parabola in the tilted coordinate system.
 
 ### Finding the area
 
+by the symmetry of the construction we can focus on one section which consists of the rectangle from the origin to the point where $y = \frac12$ plus the area under the curve from that point to $x=\frac12.$
 
+setting $y = (1-t)^2 = 1/2,$ we get $t_* = 1 - \sqrt{\frac12}.$
+
+this makes the area 
+
+$$ A = 4\left[x_* \cdot y_* + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}x\, y(x) $$
 
 
 
