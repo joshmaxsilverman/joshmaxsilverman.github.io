@@ -49,7 +49,7 @@ which gives us the frontier in parametric form. plotting this along side the lin
 
 but what kind of shape is it?
 
-if we take the square root of $x$ and $y,$ we see that $\sqrt{x} + \sqrt{y} = 1.$ that's nice but it's not a common form.
+if we take the square root of $x$ and $y,$ we see that $\sqrt{x} + \sqrt{y} = 1.$ that's nice but is not a common form.
 
 since it's symmetric about the line $y=x,$ it may be helpful to look at it in the tilted coordinate system $(x+y, x-y).$
 
