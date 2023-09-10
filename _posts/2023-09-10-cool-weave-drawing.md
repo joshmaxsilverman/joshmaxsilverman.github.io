@@ -66,7 +66,7 @@ this revealts that $(x-y)^2$ is twice $(x+y)^2$ plus $\frac12.$
 
 in other words, if we let $z =x+y$ and $w = x-y,$ we have
 
-$$ z = \frac{1 + w^2}{2} $$
+$$ z = \frac{w^2 - 1}{2} $$
 
 which is an ordinary parabola in the tilted coordinate system.
 
