@@ -15,8 +15,8 @@ tags: geometry lines
 
 ## Solution
 
+![](/img/2023-09-10-plot-lines-start.png){:width="450 px" class="image-centered"}
 ![](/img/2023-09-10-plot-fade.png){:width="450 px" class="image-centered"}
-![](/img/2023-09-10-plot-lines.png){:width="450 px" class="image-centered"}
 ![](/img/2023-09-10-final-plot.png){:width="450 px" class="image-centered"}
 
 <br>
