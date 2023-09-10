@@ -87,7 +87,7 @@ $$
   \end{align}  
 $$
 
-making the white region approximately $43.79\%$ of the square.
+making the white region approximately $43.79%$ of the square.
 
 
 <br>
