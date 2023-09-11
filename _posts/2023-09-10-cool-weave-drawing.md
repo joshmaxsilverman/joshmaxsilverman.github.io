@@ -22,7 +22,7 @@ tags: geometry lines
 >Let’s quadruple the number of bands placed on the weaving loom. In addition to the band connecting $A_1$ and $B_1,$ you also place bands connecting $B_1$ and $C_1,$ $C_1$ and $D_1,$ and $D_1$ and $A_1.$ You do this for all the sets of hooks from $1$ through $N,$ so that a total of $4N$ bands have been placed.
 >
 >When $N$ is $100,$ here is what the loom looks like:
->>![](/img/2023-10-10-fiddler-plot-A.png){:width="450 px" class="image-centered"}
+>![](/img/2023-10-10-fiddler-plot-B.png){:width="450 px" class="image-centered"}
 >Similar to the mesh of the previous image, but now there are four sets of meshes, each formed by a pair of adjacent sides. In the middle is a white region that is not covered by any part of the four meshes.
 >
 >As $N$ increases, what fraction of the loom’s area lies between the four sets of bands? In other words, what fraction of the square above does the central white region make up?
