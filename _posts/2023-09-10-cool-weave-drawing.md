@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Cool weave curve
 date: 2023/09/10
 subtitle: What shape is the margin doodle?
