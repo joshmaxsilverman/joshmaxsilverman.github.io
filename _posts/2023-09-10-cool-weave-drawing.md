@@ -12,7 +12,9 @@ tags: geometry lines
 >Suppose a particular weaving loom has $N$ hooks on each side, evenly spaced from one corner to another (i.e., there are two hooks on the two corners and $(N−2)$ hooks between them). Let’s label the hooks along one side A1 through AN, the hooks on the next clockwise side $B_1$ through $B_N$ (with $A_N$ and $B_1$ denoting the same hook), the hooks on the third clockwise side $C_1$ through $C_N,$ and the hooks on the final side $D_1$ through $D_N.$
 >
 >Next, let’s use a whole bunch of elastic bands to connect hooks $A_1$ and $B_1,$ $A_2$ and $B_2,$ $A_3$ and $B_3,$ and so on, up to $A_N$ and $B_N.$ When $N$ is $100,$ here’s what the loom looks like:
+>
 >![](/img/2023-10-10-fiddler-plot-A.png){:width="450 px" class="image-centered"}
+>
 >A square is shown. Points along the left edge are connected to points along the bottom edge, forming a mesh of green lines. The top right intersections of the mesh trace out a curve.
 >
 >As $N$ increases, what is the shape of the curve formed by the edges of the bands? Your answer can be a single word or a mathematical equation.
@@ -22,7 +24,9 @@ tags: geometry lines
 >Let’s quadruple the number of bands placed on the weaving loom. In addition to the band connecting $A_1$ and $B_1,$ you also place bands connecting $B_1$ and $C_1,$ $C_1$ and $D_1,$ and $D_1$ and $A_1.$ You do this for all the sets of hooks from $1$ through $N,$ so that a total of $4N$ bands have been placed.
 >
 >When $N$ is $100,$ here is what the loom looks like:
+>
 >![](/img/2023-10-10-fiddler-plot-B.png){:width="450 px" class="image-centered"}
+>
 >Similar to the mesh of the previous image, but now there are four sets of meshes, each formed by a pair of adjacent sides. In the middle is a white region that is not covered by any part of the four meshes.
 >
 >As $N$ increases, what fraction of the loom’s area lies between the four sets of bands? In other words, what fraction of the square above does the central white region make up?
