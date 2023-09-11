@@ -12,7 +12,7 @@ tags: geometry lines
 >Suppose a particular weaving loom has $N$ hooks on each side, evenly spaced from one corner to another (i.e., there are two hooks on the two corners and $(N−2)$ hooks between them). Let’s label the hooks along one side A1 through AN, the hooks on the next clockwise side $B_1$ through $B_N$ (with $A_N$ and $B_1$ denoting the same hook), the hooks on the third clockwise side $C_1$ through $C_N,$ and the hooks on the final side $D_1$ through $D_N.$
 >
 >Next, let’s use a whole bunch of elastic bands to connect hooks $A_1$ and $B_1,$ $A_2$ and $B_2,$ $A_3$ and $B_3,$ and so on, up to $A_N$ and $B_N.$ When $N$ is $100,$ here’s what the loom looks like:
->![](/img/2023-10-10-fiddler-A.webp)
+>![](/img/2023-10-10-fiddler-A.png)
 >A square is shown. Points along the left edge are connected to points along the bottom edge, forming a mesh of green lines. The top right intersections of the mesh trace out a curve.
 >
 >As N increases, what is the shape of the curve formed by the edges of the bands? Your answer can be a single word or a mathematical equation.
