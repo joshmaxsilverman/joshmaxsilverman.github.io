@@ -94,22 +94,22 @@ which is an ordinary parabola in the tilted coordinate system.
 
 ### Finding the area
 
-By the symmetry of the construction we can focus on one section which consists of the rectangle from the origin to the point where $y = \frac12$ plus the area under the curve from that point to $x=\frac12.$
+By the symmetry of the construction we can focus on one of the four equivalent sections which consists of a rectangle from the origin to the point where $y = \frac12$ plus the area under the curve from that point to $x=\frac12.$
 
 Setting $y = (1-t)^2 = 1/2,$ we get $t_* = 1 - \sqrt{\frac12}.$
 
-This makes the area 
+This makes the total area covered by the threads
 
 $$ 
   \begin{align}
     A &= 4\left[x_* y_* + \int\limits_\text{left edge}^\text{right edge} \text{d}x\, y(x)\right] \\
     &= 4\left[x(t_*)y(t_*) + \int\limits_{t_*}^{\sqrt{1/2}} \text{d}t\, 2t\, (1-t)^2\right] \\
     &= 4\left[\frac{1}{2} \left(1-\frac{1}{\sqrt{2}}\right)^2+\frac{1}{3}-\frac{1}{3 \sqrt{2}}\right] \\
-    &\approx 0.562097\ldots,
+    &\approx 0.562097\ldots
   \end{align}  
 $$
 
-making the white region approximately $43.79\%$ of the square.
+Subtracting this area from the enclosing square, the white region occupies approximately $43.79\%$ of the square.
 
 
 <br>
