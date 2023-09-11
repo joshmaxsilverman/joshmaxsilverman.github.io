@@ -73,22 +73,22 @@ But what kind of shape is it?
 
 If we take the square root of $x$ and $y,$ we see that $\sqrt{x} + \sqrt{y} = 1.$ That's nice but is not a common form.
 
-Since it's symmetric about the line $y=x,$ it may be helpful to look at it in the tilted coordinate system $(x+y, x-y).$
+Since it's symmetric about the line $y=x,$ it may be helpful to look at it in the tilted coordinate system $(x-y, x+y).$
 
 Going along with this, we see that
 
 $$
   \begin{align}
-    x+y &= 2t^2 - 2t + 1 \\ 
-    x-y &= 2t - 1.
+    x-y &= 2t - 1 \\
+    x+y &= 2t^2 - 2t + 1. 
   \end{align}
 $$ 
   
 This reveals that $(x-y)^2$ is twice $(x+y)^2$ plus $\frac12.$
 
-In other words, if we let $z =x+y$ and $w = x-y,$ we have
+In other words, if we let $z = x+y$ and $w = x-y,$ we have
 
-$$ z = \frac{w^2 - 1}{2}, $$
+$$ w = \frac{z^2 + 1}{2}, $$
 
 which is an ordinary parabola in the tilted coordinate system.
 
