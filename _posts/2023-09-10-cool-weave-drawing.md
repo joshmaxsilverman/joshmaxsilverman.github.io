@@ -88,7 +88,7 @@ This reveals that $(x-y)^2$ is twice $(x+y)^2$ minus $1.$
 
 In other words, if we let $z = x+y$ and $w = x-y,$ we have
 
-$$ z = \frac{w^2 - 1}{2}, $$
+$$ z = \frac{w^2 + 1}{2}, $$
 
 which is an ordinary parabola in the tilted coordinate system.
 
