@@ -41,11 +41,11 @@ To get a picture of where the curve comes from, let's draw the construction with
 
 ![](/img/2023-09-10-plot-lines-fixed.png){:width="450 px" class="image-centered"}
 
-For example, the first line has the relationship $y = \frac{(1 - 1/N)}{1/N}(x-1/N).$
+For example, the first line has the relationship $y = \frac{(1 - 1/N)}{1/N}(1/N-x).$
 
 In general, the $j^\text{th}$ line is 
 
-$$ y_j = \frac{(1-j/N)}{j/N}(x-j/N). $$
+$$ y_j = \frac{(1-j/N)}{j/N}(j/N-x). $$
 
 Each point on the frontier curve is the intersection of two consecutive lines:
 
