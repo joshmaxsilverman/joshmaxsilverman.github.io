@@ -108,7 +108,7 @@ $$
 \begin{align}
 P(\text{domination}) &= 4\times 3\frac{g!\times g!}{(2 g)!} \\
  &\ -\left(4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right) \\
- &\ +\left(4\times3\times2\times1\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\times1\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right)
+ &\ +\left(4!\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right)
  \end{align}
 $$
 
@@ -153,7 +153,7 @@ which is $2\times10^{-5}$ by $g=3.$ in general, higher order terms that are simp
 
 with that said, the only changes we need to make to our four division expansion is to adjust the counting factors such as $4\times 3\times 2$ to $6\times5\times4.$
 
-we can plot the prediction against a simulation $\left(N=10^6\right).$ as expected, the ignorance of exotic contributions bites us for $g=2$ teams per division, but by $g=3$ the prediction is within $1%$ of the simulation.
+we can plot the prediction against a simulation $\left(N=10^6\right).$ as expected, the ignorance of exotic contributions bites us for $g=2$ teams per division, but by $g=3$ the prediction is within $1\%$ of the simulation.
 
 ![](/img/2023-09-17-6-division.png){:width="450 px" class="image-centered"}
 
