@@ -152,8 +152,6 @@ we can plot the prediction against a simulation. as expected, the ignorance of e
 
 ![](/img/2023-09-17-6-division.png){:width="450 px" class="image-centered"}
 
-6
-
 $$
 \begin{array}{c|c|c}
  g & \text{Simulation} & \text{Prediction} \\ \hline
