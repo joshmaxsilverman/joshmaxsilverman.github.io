@@ -19,11 +19,13 @@ when there are more than two divisions, we have the potential for multiple domin
 
 we can swap winning percentages amongst the teams in one division as many times as we like and the dominance relationships won't change. this tells us how to count.
 
+-- top level, a dominates b. this is a subgraph that can entail the other relationships. to uniquely count the instances where one or more dominance relationships is present, we need to carefully remove double counting.
+
 for example, suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
 
 first, we can assign the divisions $3\times 2\times 1$ ways. since $a$ and $b$ are on the same level, we can exchange their orders without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. altogether, there are $(3g)!$ to order the league, making the probability of two teams dominating a third equal to
 
-$$ 3\times2\times1\times{(2g)!\times g!}{(3g)!}. $$
+$$ 3\times2\times1\times\frac{(2g)!\times g!}{(3g)!}. $$
 
 this is just one term, and in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
 
