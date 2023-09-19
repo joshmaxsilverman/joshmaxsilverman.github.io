@@ -7,11 +7,14 @@ date: 2023/09/18
 tags: diagrams counting inclusion-exclusion
 ---
 
->Question
+>**Question**:
+>Among all six divisions in Fiddler League Baseball (with five teams per division), what is the probability that there exist two divisions such that every team in one division has a higher winning percentage than every team in another division?
+>
+>(Note that this includes cases where multiple divisions are better or worse than others, such as having two divisions that both have higher winning percentages than some third division.)
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/how-likely-is-a-lopsided-league))
 
 ## Solution
 
