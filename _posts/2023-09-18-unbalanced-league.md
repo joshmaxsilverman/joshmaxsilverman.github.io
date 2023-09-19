@@ -60,6 +60,8 @@ altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. there
 
 $$ P(\text{two teams dominate one}) = 3\times2\times1\times\frac{(2g)!\times g!}{(3g)!}\frac{1}{2!}. $$
 
+### Counting rules
+
 this is just one term, but it contains all the crucial ingredients:
 - for each layer with $m$ divisions, multiply by a factor of $(m\times g)!/m!,$ 
 - divide by the total number of orders, $(n\times g)!.$
