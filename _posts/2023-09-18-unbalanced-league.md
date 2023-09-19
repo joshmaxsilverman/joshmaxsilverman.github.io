@@ -46,7 +46,7 @@ similarly, if two teams are dominated by one team, but don't necessarily dominat
 
 this tells us all we need in order to find the probabilities.
 
-### Example: $a\ \text{dom}\ \{b, c\}$
+### Example: $a\ \text{dom}\ \\{b, c\\}$
 
 suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
 
