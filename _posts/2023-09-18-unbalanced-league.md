@@ -110,7 +110,7 @@ this expansion should be an exact solution for the case of four divisions. plott
 
 $$
 \begin{array}{c|c|c}
- g & \text{Simulation} & \text{Prediction} \\\\ \hline
+ g & \text{Simulation} & \text{Prediction} \\ \hline
  2 & 0.771508 & 0.77381 \\
  3 & 0.356963 & 0.357543 \\
  4 & 0.127776 & 0.127561 \\
@@ -153,7 +153,7 @@ we can plot the prediction against a simulation. as expected, the ignorance of e
 
 $$
 \begin{array}{c|c|c}
- g & \text{Simulation} & \text{Prediction} \\\\ \hline
+ g & \text{Simulation} & \text{Prediction} \\ \hline
  2 & 0.93066 & -0.0595238 \\
  3 & 0.575292 & 0.577435 \\
  4 & 0.246519 & 0.248482 \\
