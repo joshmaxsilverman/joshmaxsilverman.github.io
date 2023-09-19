@@ -21,7 +21,7 @@ taking a step back, we just saw that "A dominates B" is a relationship that can 
 
 to properly count the instances where one or more dominance relationships is present, we need to remove double counting.
 
-as a warm up, take the case of $3$ divisions. the probability of one or more dominance relationships is 
+take the case of $3$ divisions. the probability of one or more dominance relationships is 
 
 $$ \begin{align}
  P(\text{dominance}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{one dominations}) \\
@@ -60,15 +60,28 @@ $$ P(\text{two teams dominate one}) = 3\times2\times1\times\frac{(2g)!\times g!}
 
 this is just one term, but it contains all the crucial ingredients:
 - for each layer with $m$ divisions, multiply by a factor of $(m\times g)!/m!,$ 
-- multiply by the number of ways to name the divisions,
 - divide by the total number of orders, $(n\times g)!.$
+- - multiply by the number of ways to name the divisions,
   
 in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
 
 we can go one level at a time, focusing on the total number of dominance relationships ...
 
+## Four divisions
+
+we can use the case of four divisions to do our first calculation. 
+
+with four divisions, the fewest dominations we can have is zero, and the most is $6$ (if $a$ dominates $b$ dominates $c$ dominates $d,$ we have $3 + 2 + 1 = 6$ total dominations).
+
+from the top, there is only one drawing with one domination.
+
+for two, we can have $a$ and $b$ dominate $c$, $a$ dominate $b$ and $c$, or we can have $a$ dominate $b$ while $c$ dominates $d.$
+
+plumbing the depths of our imagination, we get the following expansion in drawings:
 
 ![](/img/2023-09-18-diagram-expansion.png){:width="450 px" class="imaged-centered"}
+
+
 
 $$ -4\ 3\ 2 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (2 g)!}{(2!)^2 (4 g)!}\right)-\left(\frac{2\ 3\ 4 (g! g!)}{2! ((2 g)! (2 g)!)}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}\right)+2\ 3\ 4 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{g! (2 g)! g!}{2! (4 g)!}+\frac{g! g! (2 g)!}{2! (4 g)!}\right)+\frac{3\ 4 (g! g!)}{(2 g)!}+\left(\frac{2\ 3\ 4 (g!)^3}{(3 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}\right)-\frac{4\ 3\ 2 (g!)^4}{(4 g)!} $$
 
