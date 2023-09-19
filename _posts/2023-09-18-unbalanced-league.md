@@ -25,8 +25,8 @@ as a warm up, take the case of $3$ divisions. the probability of one or more dom
 
 $$ \begin{align}
  P(\text{dominance}) &= P(\text{one division dominates another}) \\
-                     &\ - \left[P(\text{one division dominates two}) + P(\text{two divisions dominate one})\right] \\
-                     &\ + P(\text{one division dominates another, which dominates another}) 
+                     &\, - \left[P(\text{one division dominates two}) + P(\text{two divisions dominate one})\right] \\
+                     &\, + P(\text{one division dominates another, which dominates another}) 
 \end{align} $$
 
 ## How to count
