@@ -98,7 +98,7 @@ most of them follow the rules above in a straightforward way.
 
 for example, the first diagram in the third row has three divisions dominating another, the first layer contributes a $(3g)!/3!,$ the second layer contribues a $g!$ there are $4\times 3\times 2$ ways to label the divisions. making the expression $4\times3\times2\frac{(3g)!g!}{(4g)!}\frac{1}{3!}.$
 
-likewise, the third diagram in the third row has two divisions dominating two other divisions. each layer contributes a factor of $(2g)!/2!$ making the expression $4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}.$
+likewise, the third diagram in the fourth row has two divisions dominating two other divisions. each layer contributes a factor of $(2g)!/2!$ making the expression $4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}.$
 
 a few are more interesting like the third diagram in the second row. this has two independent copies of the very first diagram. each one contributes a factor $(g!)^2/(2g)!.$ there is no significance to the order of the two sub-drawings, so we divide by $2!,$ making the overall expression $4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}.$
 
@@ -109,7 +109,7 @@ $$
 P(\text{domination}) =\ \ &4\cdot 3\frac{(g!)^2}{(2 g)!} \\
  &-\left[4\cdot3\cdot2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4\cdot3\cdot2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left(\frac{g!}{(2 g)!}\right)^2\frac{1}{2!}\right] \\
  &+\left[4!\frac{g!\cdot (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)!\cdot g!}{(4 g)!}\frac{1}{3!} + 4\cdot3\cdot2\frac{\left(g!\right)^3}{(3 g)!}\right] \\
- &-4\cdot3\cdot2\cdot1\left[\frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + \frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + \frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right] \\
+ &-\left[4!\frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right] \\
  &+\left[\frac{(2g)!\cdot g!\cdot g!}{(4 g)!}\frac{1}{2!} + \frac{g!\cdot g!\cdot (2g)!}{(4 g)!}\frac{1}{2!} + \frac{g!\cdot (2g)!\cdot g!}{(4 g)!}\frac{1}{2!}\right] \\
  &-4\cdot3\cdot2\cdot1 \frac{(g!)^4}{(4g)!}
  \end{align}
