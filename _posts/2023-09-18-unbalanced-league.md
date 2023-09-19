@@ -148,7 +148,7 @@ which is $2\times10^{-5}$ by $g=3.$ in general, higher order terms that are simp
 
 with that said, the only changes we need to make to our four division expansion is to adjust the counting factors such as $4\times 3\times 2$ to $6\times5\times4.$
 
-we can plot the prediction against a simulation $\left(N=10^7\right).$ as expected, the ignorance of exotic contributions bites us for $g=2$ teams per division, but by $g=3$ the prediction is within $1%$ of the simulation.
+we can plot the prediction against a simulation $\left(N=10^6\right).$ as expected, the ignorance of exotic contributions bites us for $g=2$ teams per division, but by $g=3$ the prediction is within $1%$ of the simulation.
 
 ![](/img/2023-09-17-6-division.png){:width="450 px" class="image-centered"}
 
