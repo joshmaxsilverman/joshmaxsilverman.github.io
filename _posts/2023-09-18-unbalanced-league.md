@@ -13,6 +13,23 @@ date: 2023/09/18
 
 ## Solution
 
+in order for one division to dominate another, all teams in one need to be better than all the teams in another. 
+
+when there are more than two divisions, we have the potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship (e.g. $a_1 > c_1 > a_2 > b_1 > c_2 > b_2$).
+
+we can swap winning percentages amongst the teams in one division as many times as we like and the dominance relationships won't change. this tells us how to count.
+
+for example, suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
+
+first, we can assign the divisions $3\times 2\times 1$ ways. since $a$ and $b$ are on the same level, we can exchange their orders without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. altogether, there are $(3g)!$ to order the league, making the probability of two teams dominating a third equal to
+
+$$ 3\times2\times1\times{(2g)!\timesg!}{(3g)!}. $$
+
+this is just one term, and in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
+
+we can go one level at a time, focusing on the total number of dominance relationships ...
+
+
 ![](/img/2023-09-18-diagram-expansion.png){:width="450 px" class="imaged-centered"}
 
 $$ -4\ 3\ 2 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (2 g)!}{(2!)^2 (4 g)!}\right)-\left(\frac{2\ 3\ 4 (g! g!)}{2! ((2 g)! (2 g)!)}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}\right)+2\ 3\ 4 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{g! (2 g)! g!}{2! (4 g)!}+\frac{g! g! (2 g)!}{2! (4 g)!}\right)+\frac{3\ 4 (g! g!)}{(2 g)!}+\left(\frac{2\ 3\ 4 (g!)^3}{(3 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}\right)-\frac{4\ 3\ 2 (g!)^4}{(4 g)!} $$
