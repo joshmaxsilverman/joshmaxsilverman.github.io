@@ -12,6 +12,9 @@ date: 2023/09/18
 ([FiveThirtyEight](URL))
 
 ## Solution
+
+$$ -4\ 3\ 2 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (2 g)!}{(2!)^2 (4 g)!}\right)-\left(\frac{2\ 3\ 4 (g! g!)}{2! ((2 g)! (2 g)!)}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}\right)+2\ 3\ 4 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{g! (2 g)! g!}{2! (4 g)!}+\frac{g! g! (2 g)!}{2! (4 g)!}\right)+\frac{3\ 4 (g! g!)}{(2 g)!}+\left(\frac{2\ 3\ 4 (g!)^3}{(3 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}\right)-\frac{4\ 3\ 2 (g!)^4}{(4 g)!} $$
+
 4
 
 $$\left(
