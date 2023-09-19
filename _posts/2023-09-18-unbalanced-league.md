@@ -96,15 +96,19 @@ going through the rest of the drawings and doing the same, we generate the beaut
 $$ 
 \begin{align}
 P(\text{domination}) &= 4\times 3\frac{g!\cdot g!}{(2 g)!} \\
- &\ -\left(4\times3\times2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left(\frac{g!}{(2 g)!}\right)^2\frac{1}{2!}\right)
+ &\ -\left(4\times3\times2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right)
  \end{align}
 $$
 
+this expansion should be an exact solution for the case of four divisions. plotting it against an $N=10^7$ round simulation, we see good agreement:
+
+![](){:width="450 px" class="image-centered"}
+
 4
 
-$$\left(
-\begin{array}{ccc}
- 1 & 1. & 1. \\
+$$
+\begin{array}{c|c|c}
+ g & \text{Simulation} & \text{Prediction} \\ \hline
  2 & 0.771508 & 0.77381 \\
  3 & 0.356963 & 0.357543 \\
  4 & 0.127776 & 0.127561 \\
@@ -115,7 +119,7 @@ $$\left(
  9 & 0.0002418 & 0.000241776 \\
  10 & 0.0000636 & 0.0000641611 \\
 \end{array}
-\right)$$
+$$
 
 
 6
