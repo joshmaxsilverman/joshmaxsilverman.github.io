@@ -1,8 +1,9 @@
 ---
 layout: post
-published: false
+published: true
 title: Unbalanced league
 date: 2023/09/18
+keywords: diagrams counting inclusion-exclusion
 ---
 
 >Question
