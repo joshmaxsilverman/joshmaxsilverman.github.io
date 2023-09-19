@@ -2,8 +2,9 @@
 layout: post
 published: true
 title: Unbalanced league
+subtitle: How often will geography rob your team of a playoff berth?
 date: 2023/09/18
-keywords: diagrams counting inclusion-exclusion
+tags: diagrams counting inclusion-exclusion
 ---
 
 >Question
