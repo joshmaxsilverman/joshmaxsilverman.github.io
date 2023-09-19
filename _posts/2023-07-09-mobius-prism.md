@@ -21,7 +21,7 @@ tags: maps dynamics measurement
 
 <!--more-->
 
-([Fiddler on the proof](https://thefiddler.substack.com/p/can-you-escape-the-infinite-loop))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-escape-the-infinite-loop))
 
 ## Solution
 
