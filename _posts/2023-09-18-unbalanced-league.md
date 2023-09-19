@@ -108,7 +108,7 @@ this expansion should be an exact solution for the case of four divisions. plott
 
 $$
 \begin{array}{c|c|c}
- g & \text{Simulation} & \text{Prediction} \\ 
+ g & \text{Simulation} & \text{Prediction} \\ \\hline
  2 & 0.771508 & 0.77381 \\
  3 & 0.356963 & 0.357543 \\
  4 & 0.127776 & 0.127561 \\
