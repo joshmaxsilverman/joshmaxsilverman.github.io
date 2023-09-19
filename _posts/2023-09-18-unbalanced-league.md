@@ -23,7 +23,7 @@ for example, suppose there are three divisions, with $g$ teams per division and 
 
 first, we can assign the divisions $3\times 2\times 1$ ways. since $a$ and $b$ are on the same level, we can exchange their orders without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. altogether, there are $(3g)!$ to order the league, making the probability of two teams dominating a third equal to
 
-$$ 3\times2\times1\times{(2g)!\timesg!}{(3g)!}. $$
+$$ 3\times2\times1\times{(2g)!\times g!}{(3g)!}. $$
 
 this is just one term, and in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
 
