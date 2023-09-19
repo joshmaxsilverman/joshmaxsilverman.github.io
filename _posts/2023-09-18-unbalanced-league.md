@@ -107,7 +107,8 @@ going through the rest of the drawings and doing the same, we generate the beaut
 $$ 
 \begin{align}
 P(\text{domination}) &= 4\times 3\frac{g!\times g!}{(2 g)!} \\
- &\ -\left(4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right)
+ &\ -\left(4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right) \\
+ &\ +\left(4\times3\times2\times1\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\times1\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right)
  \end{align}
 $$
 
