@@ -135,7 +135,7 @@ of course, this argument does not hold when $g$ is one or two, and we should sti
 
 $$ \frac{(5g)!g!}{(6g)!}\frac{1}{5!} $$ 
 
-which is $2times10^{-5}$ by $g=3.$ in general, higher order terms that are simply extensions of lower order terms (like this five way "fan") make the greatest contributions, but even they are very rare.
+which is $2\times10^{-5}$ by $g=3.$ in general, higher order terms that are simply extensions of lower order terms (like this five way "fan") make the greatest contributions, but even they are very rare.
 
 with that said, we can plot the prediction against a simulation. as expected, the ignorance of exotic contributions bites us for $g=2$ but by $g=3$ the prediction is within $1%$ of the simulation.
 
