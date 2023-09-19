@@ -29,7 +29,7 @@ to properly count the instances where one or more dominance relationships is pre
 take the case of $3$ divisions. the probability of one or more dominance relationships is 
 
 $$ \begin{align}
- P(\text{dominance}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{one dominations}) \\
+ P(\text{dominance}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{three dominations}) \\
                      &= P(\text{one division dominates another}) \\
                      &\, - \left[P(\text{one division dominates two}) + P(\text{two divisions dominate one})\right] \\
                      &\, + P(\text{one division dominates another, which dominates another}) 
