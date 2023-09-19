@@ -87,7 +87,7 @@ most of them follow the rules above in a straightforward way.
 
 for example, the first diagram in the third row has three divisions dominating another, the first layer contributes a $(3g)!/3!,$ the second layer contribues a $g!$ there are $4\times 3\times 2$ ways to label the divisions. making the expression $4\times3\times2\frac{(3g)!g!}{(4g)!}\frac{1}{3!}.$
 
-likewise, the third diagram in the third row has two divisions dominating two other divisions. each layer contributes a factor of $(2g)!/2!$ making the expression $4!\left(\frac{(2g)!}{(4g)!(2!)^2}.$
+likewise, the third diagram in the third row has two divisions dominating two other divisions. each layer contributes a factor of $(2g)!/2!$ making the expression $4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}.$
 
 a few are more interesting like the third diagram in the second row. this has two independent copies of the very first diagram. each one contributes a factor $(g!)^2/(2g)!.$ there is no significance to the order of the two sub-drawings, so we divide by $2!,$ making the overall expression $4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}.$
 
