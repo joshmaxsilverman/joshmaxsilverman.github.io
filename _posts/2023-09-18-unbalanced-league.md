@@ -20,7 +20,11 @@ tags: diagrams counting inclusion-exclusion
 
 in order for one division to dominate another, all teams in one need to be better than all the teams in another. we can represent this in a drawing by drawing an arrow from $a$ to $b$.
 
-when there are more than two divisions, we have the potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship $\left(\text{e.g.}\,a_1 > c_1 > a_2 > b_1 > c_2 > b_2\right)$. we can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
+when there are more than two divisions, we have the potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship, e.g. 
+
+$$ a_1 > c_1 > a_2 > b_1 > c_2 > b_2. $$ 
+
+we can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
 
 taking a step back, we just saw that "A dominates B" is a relationship that can be embedded in more complicated relationships. this means that when we talk about "A dominating B" we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
 
