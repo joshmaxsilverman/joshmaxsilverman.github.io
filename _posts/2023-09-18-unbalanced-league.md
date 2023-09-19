@@ -106,7 +106,7 @@ going through the rest of the drawings and doing the same, we generate the beaut
 
 $$ 
 \begin{align}
-P(\text{domination}) =\ \ &4\cdot 3\frac{(g!)^2}{(2 g)!} \\
+P(\text{domination}|d=4) =\ \ &4\cdot 3\frac{(g!)^2}{(2 g)!} \\
  &-\left[4\cdot3\cdot2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4\cdot3\cdot2\frac{g!\cdot (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left(\frac{g!}{(2 g)!}\right)^2\frac{1}{2!}\right] \\
  &+\left[4!\frac{g!\cdot (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)!\cdot g!}{(4 g)!}\frac{1}{3!} + 4\cdot3\cdot2\frac{\left(g!\right)^3}{(3 g)!}\right] \\
  &-\left[4!\frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right] \\
