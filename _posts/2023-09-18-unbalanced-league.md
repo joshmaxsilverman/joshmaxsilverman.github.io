@@ -29,15 +29,26 @@ $$ \begin{align}
                      &\, + P(\text{one division dominates another, which dominates another}) 
 \end{align} $$
 
+in pictures:
+
+![](){:width="450 px" class="image-centered"}
+
+So, how do we find these probabilities?
+
 ## How to count
 
-we can swap the winning percentages between the teams in one division as many times as we like and the dominance relationships won't change. this tells us how to count.
+the key fact is that if we have a dominance relationship between two divisions, it means that the teams separate in non-interacting chunks. we can swap the winning percentages between the teams in one division as many times as we like and the dominance relationships won't change. 
 
-for example, suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
+similarly, if two teams are dominated by one team, but don't necessarily dominate each other, we can do swaps among all the teams in the dominated divisions without changing the dominance relationship.
 
-first, we can assign the divisions $3\times 2\times 1$ ways. since $a$ and $b$ are on the same level, we can exchange their orders without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. altogether, there are $(3g)!$ to order the league, making the probability of two teams dominating a third equal to
+this tells us all we need in order to find the probabilities.
 
-$$ 3\times2\times1\times\frac{(2g)!\times g!}{(3g)!}. $$
+### $a \text{dom} b, c$
+
+suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
+
+first, we can assign the division identities (e.g. East, Central, West) in $3\times 2\times 1$ ways. since $a$ and $b$ are on the same level in the drawing, we can exchange their orders without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. altogether, there are $(3g)!$ to order the teams in the league, so the probability of two teams dominating a third is
+$$ P(\text{two teams dominate one}) = 3\times2\times1\times\frac{(2g)!\times g!}{(3g)!}. $$
 
 this is just one term, and in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
 
