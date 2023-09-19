@@ -81,7 +81,9 @@ plumbing the depths of our imagination, we get the following expansion in drawin
 
 ![](/img/2023-09-18-diagram-expansion.png){:width="450 px" class="imaged-centered"}
 
+now, we just have to go term by term and convert these drawings into probabilities. 
 
+most of them follow the rules above in a straightforward way. for example, 
 
 $$ -4\ 3\ 2 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (g!)^3}{2! g! (4 g)!}+\frac{(2 g)! (2 g)!}{(2!)^2 (4 g)!}\right)-\left(\frac{2\ 3\ 4 (g! g!)}{2! ((2 g)! (2 g)!)}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}+\frac{2\ 3\ 4 (g! (2 g)!)}{2! (3 g)!}\right)+2\ 3\ 4 \left(\frac{(2 g)! g! g!}{2! (4 g)!}+\frac{g! (2 g)! g!}{2! (4 g)!}+\frac{g! g! (2 g)!}{2! (4 g)!}\right)+\frac{3\ 4 (g! g!)}{(2 g)!}+\left(\frac{2\ 3\ 4 (g!)^3}{(3 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}+\frac{2\ 3\ 4 (g! (3 g)!)}{3! (4 g)!}\right)-\frac{4\ 3\ 2 (g!)^4}{(4 g)!} $$
 
