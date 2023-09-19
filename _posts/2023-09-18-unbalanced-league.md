@@ -68,7 +68,7 @@ $$ P(\text{two teams dominate one}) = 3\times2\times1\times\frac{(2g)!\times g!}
 this is just one term, but it contains all the crucial ingredients:
 - for each layer with $m$ divisions, multiply by a factor of $(m\times g)!/m!,$ 
 - divide by the total number of orders, $(n\times g)!.$
-- - multiply by the number of ways to name the divisions,
+- multiply by the number of ways to name the divisions,
   
 in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
 
