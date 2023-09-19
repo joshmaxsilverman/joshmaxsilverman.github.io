@@ -83,7 +83,7 @@ for two, we can have $a$ and $b$ dominate $c$, $a$ dominate $b$ and $c$, or we c
 
 plumbing the depths of our imagination, we get the following expansion in drawings:
 
-![](/img/2023-09-18-diagram-expansion.png){:width="550 px" class="image-centered"}
+![](/img/2023-09-18-diagram-expansion.png){:width="650 px" class="image-centered"}
 
 now, we just have to go term by term and convert these drawings into probabilities. 
 
