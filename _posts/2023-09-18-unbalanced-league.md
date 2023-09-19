@@ -148,7 +148,6 @@ with that said, we can plot the prediction against a simulation. as expected, th
 $$
 \begin{array}{c|c|c}
  g & \text{Simulation} & \text{Prediction} \\\\ \\hline
- 1 & 1. & -50. \\
  2 & 0.93066 & -0.0595238 \\
  3 & 0.575292 & 0.577435 \\
  4 & 0.246519 & 0.248482 \\
