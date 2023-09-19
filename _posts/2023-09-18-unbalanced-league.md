@@ -36,7 +36,7 @@ $$ \begin{align}
  P(\text{dominance}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{three dominations}) \\
                      &= P(\text{one division dominates another}) \\
                      &\, - \left[P(\text{one division dominates two}) + P(\text{two divisions dominate one})\right] \\
-                     &\, + P(\text{one division dominates another, which dominates another}) 
+                     &\, + P(\text{one division dominates another, which dominates another})
 \end{align} $$
 
 in pictures:
@@ -108,7 +108,8 @@ $$
 \begin{align}
 P(\text{domination}) &= 4\times 3\frac{g!\times g!}{(2 g)!} \\
  &\ -\left(4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right) \\
- &\ +\left(4!\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right)
+ &\ +\left(4!\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right) \\
+ &= -4\times3\times2\times1\left( \frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right)
  \end{align}
 $$
 
