@@ -104,8 +104,6 @@ this expansion should be an exact solution for the case of four divisions. plott
 
 ![](){:width="450 px" class="image-centered"}
 
-4
-
 $$
 \begin{array}{c|c|c}
  g & \text{Simulation} & \text{Prediction} \\\\ \\hline
@@ -121,11 +119,33 @@ $$
 \end{array}
 $$
 
+## Six divisions
+
+in principle, we ought to generate a new expansion for $d = 6.$ however, it isn't necessary as inspection reveals. 
+
+already, our series is numerically dominated by the two and three division terms. this is because it's rare to achieve the sorts of orderings necessary to have higher order domination relationships. 
+
+to take an extreme example, the case of six dominations with four divisions amd three teams per division is only achieved if the winning percentages are ordered like 
+
+$$a,a,a,b,b,b,c,c,c,d,d,d.$$ 
+
+as we add more divisions to the mix, the chance of forming these sorts of intricate chunks is low.
+
+of course, this argument does not hold when $g$ is one or two, and we should still expect the exotic arrangements. the disappearance of these terms is determined by the value of the ordering factors. for example, a new term that has five teams getting dominated by one has a factor 
+
+$$ \frac{(5g)!g!}{(6g)!}\frac{1}{5!} $$ 
+
+which is $2times10^{-5}$ by $g=3.$ in general, higher order terms that are simply extensions of lower order terms (like this five way "fan") make the greatest contributions, but even they are very rare.
+
+with that said, we can plot the prediction against a simulation. as expected, the ignorance of exotic contributions bites us for $g=2$ but by $g=3$ the prediction is within $1%$ of the simulation.
+
+![](){:width="450 px" class="image-centered"}
 
 6
 
-$$\left(
-\begin{array}{ccc}
+$$
+\begin{array}{c|c|c}
+ g & \text{Simulation} & \text{Prediction} \\\\ \\hline
  1 & 1. & -50. \\
  2 & 0.93066 & -0.0595238 \\
  3 & 0.575292 & 0.577435 \\
@@ -137,6 +157,6 @@ $$\left(
  9 & 0.00062 & 0.000592692 \\
  10 & 0.000149 & 0.000158523 \\
 \end{array}
-\right)$$
+$$
 
 <br>
