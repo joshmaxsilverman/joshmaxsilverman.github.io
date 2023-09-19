@@ -26,7 +26,7 @@ $$ a_1 > c_1 > a_2 > b_1 > c_2 > b_2. $$
 
 we can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
 
-taking a step back, we just saw that "A dominates B" is a relationship that can be embedded in more complicated relationships. this means that when we talk about "A dominating B" we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
+taking a step back, we just saw thata two-division relationship like "A dominates B" can be embedded in a more complicated situation involving more than two divisions. this means that when we talk about "A dominating B" we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
 
 to properly count the instances where one or more dominance relationships is present, we need to remove double counting.
 
@@ -102,7 +102,7 @@ likewise, the third diagram in the fourth row has two divisions dominating two o
 
 a few are more interesting like the third diagram in the second row. this has two independent copies of the very first diagram. each one contributes a factor $(g!)^2/(2g)!.$ there is no significance to the order of the two sub-drawings, so we divide by $2!,$ making the overall expression $4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}.$
 
-going through the rest of the drawings and doing the same, we generate the beautiful expression
+going through the rest of the drawings and doing the same, we generate the beautiful, shimmering expression
 
 $$ 
 \begin{align}
