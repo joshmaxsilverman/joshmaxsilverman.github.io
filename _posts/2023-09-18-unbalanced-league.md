@@ -108,10 +108,10 @@ $$
 \begin{align}
 P(\text{domination}) = &4\times 3\frac{g!\times g!}{(2 g)!} \\
  &-\left(4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4\times3\times2\frac{g!\times (2 g)!}{(3 g)!}\frac{1}{2!} + 4!\left[\frac{g!}{(2 g)!}\right]^2\frac{1}{2!}\right) \\
- &\ +\left(4!\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right) \\
- &\ -4\times3\times2\times1\left( \frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right) \\
- &\ +\left(\frac{(2g)!\times g!\times g!}{(4 g)!}\frac{1}{2!} + \frac{g!\times g!\times (2g)!}{(4 g)!}\frac{1}{2!} + \frac{g!\times (2g)!\times g!}{(4 g)!}\frac{1}{2!}\right) \\
- &\ -4\times3\times2\times1 \frac{(g!)^4}{(4g)!}
+ &+\left(4!\frac{g!\times (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)\times!g!}{(4 g)!}\frac{1}{3!} + 4\times3\times2\frac{\left(g!\right)^3}{(3 g)!}\right) \\
+ &-4\times3\times2\times1\left( \frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + \frac{\left((g)!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right) \\
+ &+\left(\frac{(2g)!\times g!\times g!}{(4 g)!}\frac{1}{2!} + \frac{g!\times g!\times (2g)!}{(4 g)!}\frac{1}{2!} + \frac{g!\times (2g)!\times g!}{(4 g)!}\frac{1}{2!}\right) \\
+ &-4\times3\times2\times1 \frac{(g!)^4}{(4g)!}
  \end{align}
 $$
 
