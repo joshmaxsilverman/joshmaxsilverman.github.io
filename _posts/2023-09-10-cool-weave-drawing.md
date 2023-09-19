@@ -33,7 +33,7 @@ tags: geometry lines
 
 <!--more-->
 
-([FiveThirtyEight](https://thefiddler.substack.com/p/can-you-bob-and-weave))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-bob-and-weave))
 
 ## Solution
 
