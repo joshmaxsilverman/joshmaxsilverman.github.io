@@ -36,13 +36,13 @@ So, a two-division relationship like "A dominates B" can be embedded in more com
 
 So, to properly count the instances where one or more dominance relationships is present, we need to remove double counting.
 
-Take the case of $3$ divisions -- the probability of one or more dominance relationships is 
+Take the case of $3$ divisions: the probability of one or more dominance relationships is 
 
 $$ \begin{align}
  P(\text{one or more}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{three dominations}) \\
                      &= P(\text{one division dominates another}) \\
                      &\, - \left[P(\text{one division dominates two}) + P(\text{two divisions dominate one})\right] \\
-                     &\, + P(\text{one division dominates another, which dominates another})
+                     &\, + P(\text{one division dominates another, which dominates another}).
 \end{align} $$
 
 Or, in diagrams:
