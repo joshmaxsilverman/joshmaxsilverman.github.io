@@ -22,11 +22,13 @@ For one division to dominate another, all teams in one need to be better than al
 
 ![](/img/2023-09-20-a-to-b.png){:width="100 px" class="image-centered"}
 
-When there are more than two divisions, there is potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship (e.g. $a$ dominates $b$ but $c$ is neither dominated or dominant): 
+When there are more than two divisions, there is potential for multiple dominance relationships. We could have division $a$ dominate divisions $b$ and $c.$ 
 
-$$ a_1 > c_1 > a_2 > b_1 > c_2 > b_2. $$ 
+We could also have a third divison intermingle with two divisions that are in a dominance relationship (e.g. $a$ dominates $b$ but $c$ is neither dominated or dominant). Ordering biggest to smallest, one possible manifestation of this would be
 
-We can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
+$$ a_1 c_1 a_2 b_1 c_2 b_2. $$ 
+
+We can diagram both of these relationships, the first by drawing arrows from $a$ to $b$ and $c$ while the second is simply the original drawing again:
 
 ![](/img/2023-09-20-top-comparison.png){:width="250 px" class="image-centered"}
 
