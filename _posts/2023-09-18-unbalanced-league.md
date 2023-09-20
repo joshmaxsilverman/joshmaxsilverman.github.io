@@ -18,7 +18,7 @@ tags: diagrams counting inclusion-exclusion
 
 ## Solution
 
-in order for one division to dominate another, all teams in one need to be better than all the teams in another. we can represent this by drawing an arrow from $a$ to $b$.
+in order for one division to dominate another, all teams in one need to be better than all the teams in the other. we can represent this by drawing an arrow from $a$ to $b$.
 
 ![](/img/2023-09-20-a-to-b.png){:width="100 px" class="image-centered"}
 
