@@ -28,7 +28,7 @@ $$ a_1 > c_1 > a_2 > b_1 > c_2 > b_2. $$
 
 we can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
 
-![](/img/2023-09-20-top-comparison.png){:width="150 px" class="image-centered"}
+![](/img/2023-09-20-top-comparison.png){:width="250 px" class="image-centered"}
 
 taking a step back, we just saw thata two-division relationship like "A dominates B" can be embedded in a more complicated situation involving more than two divisions. this means that when we talk about "A dominating B" we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
 
@@ -94,7 +94,7 @@ for two, we can have $a$ and $b$ dominate $c$, $a$ dominate $b$ and $c$, or we c
 
 plumbing the depths of our imagination, we get the following expansion in drawings:
 
-![](2023-09-20-diagrams.png){:width="650 px" class="image-centered"}
+![](/img/2023-09-20-diagrams.png){:width="650 px" class="image-centered"}
 
 now, we just have to go term by term and convert these drawings into probabilities. 
 
