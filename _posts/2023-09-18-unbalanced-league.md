@@ -116,10 +116,6 @@ Likewise, the third diagram in the fourth row has two divisions dominating two o
 
 $$ 4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}. $$
 
-A few diagrams are more interesting, like the third diagram in the second row. This has two independent copies of the very first diagram and each contributes a factor $(g!)^2/(2g)!.$ Since there is no significance to the order of the two sub-drawings, we divide by $2!,$ making the overall expression 
-
-$$ 4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}. $$
-
 Going through the rest of the drawings and doing the same, we generate the beautiful, shimmering expression
 
 $$ 
