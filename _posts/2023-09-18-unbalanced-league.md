@@ -162,7 +162,7 @@ In principle, we ought to generate a new expansion for $d = 6,$ since more exoti
 
 Our series for four divisions is numerically dominated by the two- and three-division terms. This is because it's rare to achieve the sorts of orderings necessary to have the higher order domination relationships. To take an extreme example, the case of six dominations with four divisions amd three teams per division is only achieved if the winning percentages are ordered like 
 
-$$ a,a,a,b,b,b,c,c,c,d,d,d. $$ 
+$$ aaabbbcccddd. $$ 
 
 As we add more divisions to the mix, the chance of forming these sorts of intricate chunkings is low.
 
