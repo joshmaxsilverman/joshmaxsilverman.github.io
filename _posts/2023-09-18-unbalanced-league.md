@@ -18,23 +18,23 @@ tags: diagrams counting inclusion-exclusion
 
 ## Solution
 
-in order for one division to dominate another, all teams in one need to be better than all the teams in the other. we can represent this by drawing an arrow from $a$ to $b$.
+For one division to dominate another, all teams in one need to be better than all the teams in the other. We can represent this by drawing an arrow from $a$ to $b$:
 
 ![](/img/2023-09-20-a-to-b.png){:width="100 px" class="image-centered"}
 
-when there are more than two divisions, we have the potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship, e.g. 
+When there are more than two divisions, there is potential for multiple dominance relationships (e.g. division $a$ dominates divisions $b$ and $c$) or for the teams in a third divison to intermingle with two teams in a dominance relationship (e.g. $a$ dominates $b$ but $c$ is neither dominated or dominant): 
 
 $$ a_1 > c_1 > a_2 > b_1 > c_2 > b_2. $$ 
 
-we can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
+We can represent these similarly, the first by drawing arrows from $a$ to $b$ and $c$ while the second is just the original drawing again. 
 
 ![](/img/2023-09-20-top-comparison.png){:width="250 px" class="image-centered"}
 
-taking a step back, we just saw thata two-division relationship like "A dominates B" can be embedded in a more complicated situation involving more than two divisions. this means that when we talk about "A dominating B" we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
+So, a two-division relationship like "A dominates B" can be embedded in more complicated situations involving more than two divisions. This means that when we find the probability of "A dominates B", we are counting cases where that is the only dominance relationship, as well as every other situation where division "A" dominates division "B".
 
-to properly count the instances where one or more dominance relationships is present, we need to remove double counting.
+So, to properly count the instances where one or more dominance relationships is present, we need to remove double counting.
 
-take the case of $3$ divisions. the probability of one or more dominance relationships is 
+Take the case of $3$ divisions -- the probability of one or more dominance relationships is 
 
 $$ \begin{align}
  P(\text{one or more}) &= P(\text{one domination}) - P(\text{two dominations}) + P(\text{three dominations}) \\
@@ -43,70 +43,82 @@ $$ \begin{align}
                      &\, + P(\text{one division dominates another, which dominates another})
 \end{align} $$
 
-in pictures:
+Or, in diagrams:
 
 ![](/img/2023-09-20-three-expansion.png){:width="550 px" class="image-centered"}
 
-So, how do we find these probabilities?
-
 ## How to count
 
-the key fact is that if we have a dominance relationship between two divisions, it means that the teams separate in non-interacting chunks. we can swap the winning percentages between the teams in one division as many times as we like and the dominance relationships won't change. 
+How do we find these probabilities?
 
-similarly, if two teams are dominated by one team, but don't necessarily dominate each other, we can do swaps among all the teams in the dominated divisions without changing the dominance relationship.
+The key observation is that if we have a dominance relationship between two divisions, it means that their teams separate into non-interacting chunks, like
 
-this tells us all we need in order to find the probabilities.
+$$ a_1a_2|b_1b_2. $$
+
+If that's the case, then we can shuffle the winning percentages of the teams in each division and the dominance relationships won't change. 
+
+Similarly, if two teams are both dominated by the same team, but don't necessarily dominate each other, e.g. 
+
+$$ a_1a_2|b_1c_1c_2b_2, $$
+
+then we can do shuffle the teams on either side of the division without changing the dominance relationship.
+
+This tells us all we need in order to find the probabilities.
 
 ### Example: $a\ \text{dom}\ \\{b, c\\}$
 
-suppose there are three divisions, with $g$ teams per division and two divisions dominate a third. generically, $a$ and $b$ dominate $c.$
+Suppose there are three divisions where two divisions ($a$ and $b$) dominate a third ($c$) and there are $g$ teams per division. 
 
-first, we can assign the division identities (e.g. East, Central, West) in $3\times 2\times 1$ ways. 
+First, we can assign the division identities (e.g. East, Central, West) to the symbols $a,$ $b,$ and $c$ in $3\times 2\times 1$ ways. 
 
-since divisions $a$ and $b$ are on the same level in the drawing, we can shuffle their teams without changing the facts of the matter. similarly, we can shuffle the teams in division $c$ without changing anything either. 
+Since divisions $a$ and $b$ are on the same level in the drawing, we can shuffle their teams without changing the dominance relationship. Likewise, we can shuffle the teams in division $c$. 
 
-finally, there is no distinction between $a$ and $b$ (their order is arbitrary), so we divide by $2!$
+Finally, there is no distinction between $a$ and $b$ (their order is arbitrary), so we divide by $2!$
 
-altogether, this makes $3\times 2\times 1(2g)!g!$ ways to order the teams. there are $(3g)!$ total ways to order the teams in the league, so the probability of two teams dominating a third is
+Together, this makes $3\times 2\times 1(2g)!g!/2!$ ways to order the teams. Since there are $(3g)!$ total ways to order the teams in the league, the probability for two teams to dominate a third is
 
 $$ P(\text{two teams dominate one}) = 3\times2\times1\times\frac{(2g)!\times g!}{(3g)!}\frac{1}{2!}. $$
 
 ### Counting rules
 
-this is just one term, but it contains all the crucial ingredients:
-- for each layer with $m$ divisions, multiply by a factor of $(m\times g)!/m!,$ 
+That was just one term, but it contains all the crucial ingredients to find a diagram's probability:
+- for each layer with $m$ divisions, multiply by a factor of $(m\times g)!/m!,$ then 
+- multiply by the number of ways to name the divisions, then
 - divide by the total number of orders, $(n\times g)!.$
-- multiply by the number of ways to name the divisions,
   
-in general there are many possible dominance relationships. happily, we can enumerate them by drawing diagrams.
-
-we can go one level at a time, focusing on the total number of dominance relationships ...
+In general there are many possible dominance relationships. Happily, we can enumerate them by drawing diagrams.
 
 ## Four divisions
 
-we can use the case of four divisions to do our first calculation. 
+We can use the case of four divisions to do our first calculation. Following the insights about double counting above, we'll go one level at a time, grouping diagrams by the number of dominance relationships they contain.
 
-with four divisions, the fewest dominations we can have is zero, and the most is $6$ (if $a$ dominates $b$ dominates $c$ dominates $d,$ we have $3 + 2 + 1 = 6$ total dominations).
+With four divisions, the fewest dominations we can have is $0$, and the most is $6$ (if $a$ dominates $b$ dominates $c$ dominates $d,$ we have $3 + 2 + 1 = 6$ total dominations).
 
-from the top, there is only one drawing with one domination.
+To start, there is only one drawing with one domination.
 
-for two, we can have $a$ and $b$ dominate $c$, $a$ dominate $b$ and $c$, or we can have $a$ dominate $b$ while $c$ dominates $d.$
+For two dominations, there are three drawings: we can have $a$ and $b$ dominate $c$, $a$ dominate $b$ and $c$, or we can have $a$ dominate $b$ while $c$ dominates $d.$
 
-plumbing the depths of our imagination, we get the following expansion in drawings:
+Plumbing on to the depths of our imagination, we get the following expansion in drawings:
 
 ![](/img/2023-09-20-diagrams.png){:width="650 px" class="image-centered"}
 
-now, we just have to go term by term and convert these drawings into probabilities. 
+Now, we just have to go term by term and convert these drawings into probabilities. 
 
-most of them follow the rules above in a straightforward way. 
+Most of them follow the rules above in a straightforward way. 
 
-for example, the first diagram in the third row has three divisions dominating another, the first layer contributes a $(3g)!/3!,$ the second layer contribues a $g!$ there are $4\times 3\times 2$ ways to label the divisions. making the expression $4\times3\times2\frac{(3g)!g!}{(4g)!}\frac{1}{3!}.$
+For example, the first diagram in the third row has three divisions dominating another: the first layer contributes a factor of $(3g)!/3!,$ the second layer contribues a $g!,$ and there are $4\times 3\times 2$ ways to label the divisions, giving the probability
 
-likewise, the third diagram in the fourth row has two divisions dominating two other divisions. each layer contributes a factor of $(2g)!/2!$ making the expression $4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}.$
+$$ 4\times3\times2\frac{(3g)!g!}{(4g)!}\frac{1}{3!}. $$
 
-a few are more interesting like the third diagram in the second row. this has two independent copies of the very first diagram. each one contributes a factor $(g!)^2/(2g)!.$ there is no significance to the order of the two sub-drawings, so we divide by $2!,$ making the overall expression $4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}.$
+Likewise, the third diagram in the fourth row has two divisions dominating two other divisions. Each layer contributes a factor of $(2g)!/2!$ making the expression 
 
-going through the rest of the drawings and doing the same, we generate the beautiful, shimmering expression
+$$ 4!\left(\frac{(2g)!}{2!}\right)^2\frac{1}{(4g)!}. $$
+
+A few diagrams are more interesting, like the third diagram in the second row. This has two independent copies of the very first diagram and each contributes a factor $(g!)^2/(2g)!.$ Since there is no significance to the order of the two sub-drawings, we divide by $2!,$ making the overall expression 
+
+$$ 4!\frac{(g!)^2}{(2g)!}\frac{(g!)^2}{(2g)!}\frac{1}{2!}. $$
+
+Going through the rest of the drawings and doing the same, we generate the beautiful, shimmering expression
 
 $$ 
 \begin{align}
@@ -115,11 +127,13 @@ P(\text{one or more}|d=4) =\ \ &4\cdot 3\frac{(g!)^2}{(2 g)!} \\
  &+\left[4!\frac{g!\cdot (3 g)!}{(4 g)!}\frac{1}{3!} + 4!\frac{(3 g)!\cdot g!}{(4 g)!}\frac{1}{3!} + 4\cdot3\cdot2\frac{\left(g!\right)^3}{(3 g)!}\right] \\
  &-\left[4!\frac{\left((2g)!\right)^2}{(4 g)!}\frac{1}{(2!)^2} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} + 4!\frac{\left(g!\right)^3}{(4 g)!}\frac{(2g)!}{g!}\frac{1}{2!} \right] \\
  &+\left[4!\frac{(2g)!\cdot g!\cdot g!}{(4 g)!}\frac{1}{2!} + 4!\frac{g!\cdot g!\cdot (2g)!}{(4 g)!}\frac{1}{2!} + 4!\frac{g!\cdot (2g)!\cdot g!}{(4 g)!}\frac{1}{2!}\right] \\
- &-4! \frac{(g!)^4}{(4g)!}
+ &-4! \frac{(g!)^4}{(4g)!},
  \end{align}
 $$
 
-this expansion should be an exact solution for the case of four divisions. plotting it against an $N=10^7$ round simulation, we see good agreement:
+which should be an exact solution for the case of four divisions. 
+
+Plotting it against an $N=10^7$ round simulation, we see good agreement:
 
 ![](/img/2023-09-17-4-division.png){:width="450 px" class="image-centered"}
 
@@ -138,29 +152,29 @@ $$
 \end{array}
 $$
 
+On to the main event.
+
 ## Six divisions
 
-in principle, we ought to generate a new expansion for $d = 6,$ since more exotic arrangements are possible. however, it isn't necessary as inspection reveals. 
+In principle, we ought to generate a new expansion for $d = 6,$ since more exotic arrangements are possible. However, it isn't necessary as inspection reveals. 
 
-our series for four divisions is numerically dominated by the two and three division terms. this is because it's rare to achieve the sorts of orderings necessary to have the higher order domination relationships. 
+Our series for four divisions is numerically dominated by the two- and three-division terms. This is because it's rare to achieve the sorts of orderings necessary to have the higher order domination relationships. To take an extreme example, the case of six dominations with four divisions amd three teams per division is only achieved if the winning percentages are ordered like 
 
-to take an extreme example, the case of six dominations with four divisions amd three teams per division is only achieved if the winning percentages are ordered like 
+$$ a,a,a,b,b,b,c,c,c,d,d,d. $$ 
 
-$$a,a,a,b,b,b,c,c,c,d,d,d.$$ 
+As we add more divisions to the mix, the chance of forming these sorts of intricate chunkings is low.
 
-as we add more divisions to the mix, the chance of forming these sorts of intricate chunkings is low.
+This argument does not hold when $g$ is one or two, and we should still expect the exotic arrangements to contribute there. 
 
-this argument does not hold when $g$ is one or two, and we should still expect the exotic arrangements. the disappearance of these terms is determined by the value of the ordering factors. 
+The disappearance of these terms is determined by the value of the ordering factors. For example, one new term corresponds to five divisons getting dominated by one, and has a factor 
 
-for example, a new term that has five teams getting dominated by one has a factor 
+$$ \frac{(5g)!\cdot g!}{(6g)!}\frac{1}{5!}. $$ 
 
-$$ \frac{(5g)!\cdot g!}{(6g)!}\frac{1}{5!} $$ 
+Quickly, this plummets to orders of magnitude below the overall probability. By $g=3$ its value is $2\times10^{-5}$ while the probability is still on the order $1$. In general, higher order terms that are simply extensions of lower order terms (like this five way "fan") make the greatest contributions, and even they are rare.
 
-which is $2\times10^{-5}$ by $g=3.$ in general, higher order terms that are simply extensions of lower order terms (like this five way "fan") make the greatest contributions, but even they are very rare.
+With that said, the only change we need to make to our four division expansion is to adjust the counting factors such as $4\times 3\times 2$ to $6\times5\times4.$
 
-with that said, the only changes we need to make to our four division expansion is to adjust the counting factors such as $4\times 3\times 2$ to $6\times5\times4.$
-
-we can plot the prediction against a simulation $\left(N=10^6\right).$ as expected, the ignorance of exotic contributions bites us for $g=2$ teams per division, but by $g=3$ the prediction is within $1\%$ of the simulation.
+Plotting the prediction against an $N=10^6$ round simulation we see that the ignorance of exotic contributions bites us for $g=2$ teams per division, as expected, but by $g=3$ the prediction is within $1\%$ of the simulation.
 
 ![](/img/2023-09-17-6-division.png){:width="450 px" class="image-centered"}
 
