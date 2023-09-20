@@ -45,7 +45,7 @@ $$ \begin{align}
 
 Or, in diagrams:
 
-![](/img/2023-09-20-three-expansion.png){:width="550 px" class="image-centered"}
+![](/img/2023-09-20-three-expansion.png){:width="650 px" class="image-centered"}
 
 ## How to count
 
