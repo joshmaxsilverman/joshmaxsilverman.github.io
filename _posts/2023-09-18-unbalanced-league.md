@@ -18,7 +18,7 @@ tags: diagrams counting inclusion-exclusion
 
 ## Solution
 
-in order for one division to dominate another, all teams in one need to be better than all the teams in another. we can represent this in a drawing by drawing an arrow from $a$ to $b$.
+in order for one division to dominate another, all teams in one need to be better than all the teams in another. we can represent this by drawing an arrow from $a$ to $b$.
 
 ![](/img/2023-09-20-a-to-b.png){:width="100 px" class="image-centered"}
 
@@ -45,7 +45,7 @@ $$ \begin{align}
 
 in pictures:
 
-![](){:width="450 px" class="image-centered"}
+![](/img/2023-09-20-three-expansion.png){:width="550 px" class="image-centered"}
 
 So, how do we find these probabilities?
 
