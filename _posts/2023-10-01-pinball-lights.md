@@ -31,8 +31,8 @@ bypassing the explicit probability distribution, we can relate the expected wait
 
 $$ 
 \begin{align}
-  T_j &= \dfrac{j}{N}(1 + T_{j-1})  + (1-\dfrac{j}{N})(1+T_{j+1}) \\
-      &= 1 + \dfrac{j}{N}T_{j-1}  + (1-\dfrac{j}{N})T_{j+1}
+  T_j &= \dfrac{j}{N}\left(1 + T_{j-1}\right)  + \left(1-\dfrac{j}{N}\right)\left(1+T_{j+1}\right) \\
+      &= 1 + \dfrac{j}{N}T_{j-1}  + \left(1-\dfrac{j}{N}\right)T_{j+1}
 \end{align}
 $$
 
