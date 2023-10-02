@@ -23,11 +23,13 @@ tags: master-equation
 
 ## Solution
 
-let's think about the pinball machine as a series of states corresponding to the number of lit lights.
+Let's think about the pinball machine as a series of states corresponding to the number of lit lights:
 
-each time we shoot a ball, we move from state to state. if there are $j$ lights turned on, then we have probability $j/N$ to move down, and probability $(1-j/N)$ to move up.
+$$ \text{none} \leftrightarrow 1 \leftrightarrow 2 \leftrightarrow 1 \ldots \leftrightarrow N. $$
 
-bypassing the explicit probability distribution, we can relate the expected waiting time from state $j$ to the expected waiting time from states $(j-1)$ and state $(j+1)$:
+Each time we shoot a ball, we move from state to state. If there are $j$ lights turned on, then we have probability $j/N$ to move down, and probability $(1-j/N)$ to move up.
+
+Bypassing the explicit probability distribution, we can relate the expected waiting time from state $j$ to the expected waiting time from states $(j-1)$ and state $(j+1)$:
 
 $$ 
 \begin{align}
@@ -36,16 +38,29 @@ $$
 \end{align}
 $$
 
-by construction, this reflects the impossibility for state $j=0$ to move down (to $j=-1$) or for state $j=N$ to move up. also, by definition, $T_N = 0,$  since all the lights are lit.
+By construction, this reflects the impossibility for state $j=0$ to move down (to $j=-1$) or for state $j=N$ to move up. Also, by definition, $T_N = 0,$  since all the lights are lit.
 
-we can solve the system of equations for each value of $N$ and plot the ratio of consecutive waiting times as a function of $j.$ evidently, the ratio is minimized at $j=6$ where 
+We can solve the system of equations for each value of $N$ and plot the ratio of consecutive waiting times as a function of $j.$ 
+
+![](/img/2023-10-01-pinball-plot.png){:width="450 px" class="image-centered"}
+
+Evidently, the ratio is minimized at $j=6$ where 
 
 $$ \dfrac{T_7}{T_6} = \frac{151}{78}, $$
 
 which is about $2.5\%$ under the asymptotic value $2.$
 
-![](/img/2023-10-01-pinball-plot.png){:width="450 px" class="image-centered"}
+```mathematica
+makeEq[j_, NN_] := (
+  T[j] == 1 + j/NN T[j - 1] + (1 - j/NN) T[j + 1]
+  )
 
-
+solveSystem[NN_] := (
+  (* make equations, set T[NN] to zero *)
+  eqns = Table[makeEq[j, NN], {j, 0, NN - 1}] /. {T[NN] -> 0};
+  (* solve the system *)
+  sol = Solve[eqns, Table[T[i], {i, 0, NN - 1}]];
+  Return[First[T[0] /. sol]]
+  )
 
 <br>
