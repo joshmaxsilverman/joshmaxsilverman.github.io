@@ -25,7 +25,7 @@ tags: master-equation
 
 Let's think about the pinball machine as a series of states corresponding to the number of lit lights:
 
-$$ \text{none} \xleftrightarrow 1 \xleftrightarrow 2 \xleftrightarrow \ldots \leftrightarrow \text{all}. $$
+$$ \text{none} \longleftrightarrow 1 \longleftrightarrow 2 \longleftrightarrow \ldots \longleftrightarrow \text{all}. $$
 
 Each time we shoot a ball, we move from state to state. If there are $j$ lights turned on, then we have probability $j/N$ to move down, and probability $(1-j/N)$ to move up.
 
