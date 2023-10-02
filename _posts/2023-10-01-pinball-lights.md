@@ -65,5 +65,6 @@ solveSystem[NN_] := (
   (* return *)
   Return[First[T[0] /. sol]]
   )
+```
 
 <br>
