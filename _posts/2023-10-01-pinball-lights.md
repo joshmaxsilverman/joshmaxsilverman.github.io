@@ -58,8 +58,11 @@ makeEq[j_, NN_] := (
 solveSystem[NN_] := (
   (* make equations, set T[NN] to zero *)
   eqns = Table[makeEq[j, NN], {j, 0, NN - 1}] /. {T[NN] -> 0};
+
   (* solve the system *)
   sol = Solve[eqns, Table[T[i], {i, 0, NN - 1}]];
+
+  (* return *)
   Return[First[T[0] /. sol]]
   )
 
