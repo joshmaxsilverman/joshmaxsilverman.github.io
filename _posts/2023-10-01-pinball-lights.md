@@ -7,11 +7,19 @@ subtitle: How many shots does it take to turn the lights on?
 tags: master-equation
 ---
 
->**Question**:
+>**Question**: You’re playing a game of pinball that includes four lanes, each of which is initially unlit. Every time you flip the pinball, it passes through exactly one of the four lanes (chosen at random) and toggles that lane’s state. So if that lane is unlit, it becomes lit after the ball passes through. But if the lane is lit, it becomes unlit after the ball passes through.
+>
+>On average, how many times will you have to flip the pinball until all four lanes are lit?
+>
+>**Extra credit**: Instead of four lanes, now suppose your pinball game has $N$ lanes. And let’s say that $T_N$ represents the average number of pinball flips it takes until all $N$ lanes are lit up.
+>
+>Now, each time you increase the number of lanes by one, you find that it takes you approximately twice as long to light up all the lanes. In other words, $T_{N+1}$ seems to be about double $T_N.$ 
+>
+>But upon closer examination, you find that it’s not quite double. Moreover, there’s a particular value of N where the ratio $T_{N+1}/T_N$ is at a minimum. What is this value of $N$?
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([The Fiddler](https://thefiddler.substack.com/p/can-you-light-up-the-pinball-machine))
 
 ## Solution
 
