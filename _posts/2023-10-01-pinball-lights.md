@@ -40,7 +40,7 @@ $$
 
 By construction, this reflects the impossibility for state $j=0$ to move down (to $j=-1$) or for state $j=N$ to move up. Also, by definition, $T_N = 0,$  since all the lights are lit.
 
-We can solve the system of equations for each value of $N$ and plot the ratio of consecutive waiting times as a function of $j.$ 
+We can solve the system of equations for each value of $N$ and plot the ratio of consecutive waiting times as a function of $j:$ 
 
 ![](/img/2023-10-01-pinball-plot.png){:width="450 px" class="image-centered"}
 
