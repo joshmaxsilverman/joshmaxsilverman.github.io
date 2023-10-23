@@ -44,7 +44,7 @@ for example, for the case of 3 steps, we can have the cars remain in place the w
 
 this has probability 
 
-$$1 - \frac{14}\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(1/2\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128}$$
+$$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(1/2\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128}$$
 
 of escape.
 
@@ -60,11 +60,11 @@ in general, if the dyck path takes up $2d$ steps of the path, then the sideways 
 
 the number of dyck paths of length $2d$ is given by the catalan numbers, $D_{2d} = C_d = \frac{1}{d+1}\binom{2d}{d}$.
 
-now, because sideways and up/down moves distinct probabilities, we need to account for likelihood of each category of path. with $(t-2d)$ sideways moves and $2d$ up/down moves, plus the obligatory final down move, the probability is $\left(1/4\right)^{1+2d}\left(1/2\right)^{t-2d}.$
+now, because sideways and up/down moves distinct probabilities, we need to account for likelihood of each category of path. with $(t-2d)$ sideways moves and $2d$ up/down moves, plus the obligatory final down move, the probability is $\left(\frac14\right)^{1+2d}\left(\frac12\right)^{t-2d}.$
 
 which makes the probability of ending in $t$ steps 
 
-$$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\floor{t/2}} D_{2d} \binom{t}{2d} \left(1/4\right)^{2d+1}\left(1/2\right)^{t-2d}. $$
+$$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\text{floor{\left(t/2\right)} D_{2d} \binom{t}{2d} \left(1/4\right)^{2d+1}\left(1/2\right)^{t-2d}. $$
 
 which comes to 
 
@@ -80,6 +80,6 @@ $P(\text{escape in}\,N\text{steps}) = 2\frac{\Gamma(\frac52 + N}}{\sqrt{\pi}\Gam
 
 evaluations of the gamma function are approximately related by $\Gamma(x + a) \approx \Gamma(x)x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + N\right)^{-\frac12}.$ 
 
-integrating the $\cdf$ from $0$ to an upper bound $N$ is proportional to $\sqrt{N}.$ evidently, there is no mean, as the simulation suggested.
+integrating the $\text{cdf}$ from $0$ to an upper bound $N$ is proportional to $\sqrt{N}.$ evidently, there is no mean, as the simulation suggested.
 
 <br>
