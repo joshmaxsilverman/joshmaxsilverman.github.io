@@ -76,9 +76,9 @@ $$ P(\text{caught before step}\, N) = \sum_{t=0}^N P(\text{ends in}\, t\,\text{s
 
 which makes the cumulative probability of escape by step $N$
 
-$$ P(\text{escape in}\,N\text{steps}) = 2\frac{\Gamma(\frac52 + N}}{\sqrt{\pi}\Gamma[3+N]}. $$
+$$ P(\text{escape in}\,N\text{steps}) = 2\frac{\Gamma[\frac52 + N]}{\sqrt{\pi}\Gamma[3+N]}. $$
 
-evaluations of the gamma function are approximately related by $\Gamma(x + a) \approx \Gamma(x)x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + N\right)^{-\frac12}.$ 
+evaluations of the gamma function are approximately related by $\Gamma[x + a] \approx \Gamma[x]x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + N\right)^{-\frac12}.$ 
 
 integrating the $\text{cdf}$ from $0$ to an upper bound $N$ is proportional to $\sqrt{N}.$ evidently, there is no mean, as the simulation suggested.
 
