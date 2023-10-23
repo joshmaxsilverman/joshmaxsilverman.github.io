@@ -80,7 +80,7 @@ The number of Dyck paths of length $2d$ is given by the catalan numbers, $D_{2d}
 
 Now, because sideways and up/down moves distinct probabilities, we need to account for likelihood of each category of path. With $(t-2d)$ sideways moves and $2d$ up/down moves, plus the obligatory final down move, the probability is $\left(\frac14\right)^{1+2d}\left(\frac12\right)^{t-2d}.$
 
-Which makes the probability of ending in $t$ steps:
+Which makes the probability of ending in exactly $t$ steps:
 
 $$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\text{floor}\left(t/2\right)} D_{2d} \binom{t}{2d} \left(\frac14\right)^{2d+1}\left(\frac12\right)^{t-2d}, $$
 
