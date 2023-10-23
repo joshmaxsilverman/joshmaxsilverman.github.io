@@ -50,7 +50,20 @@ of escape.
 
 ## Extra credit
 
-simulating the system, a curious thing happens: increasing the length of the simulation increases the expected number of steps. usually, we'd expect longer runs to bring the estimate closer to its true value. 
+simulating the system, a curious thing happens: increasing the length of the simulation increases the expected number of steps. 
+
+$$
+\begin{array}
+  N & \langle N_\text{catch}
+  10^0 & 3.0 \\ \hline
+  10^1 & 11.6 \\ \hline
+  10^2 & 126.15 \\ \hline
+  10^3 & 687.133 \\ \hline
+  10^4 & 10572.4711
+\end{array}
+$$
+
+usually, we'd expect longer runs to bring the estimate closer to its true value. 
 
 what could this mean? it's a tell tale sign that the distribution is fat tailed, and has no true value! as we run the simulation for longer and longer, there is a greater likelihood that the process accesses deeper into the tail, pulling the average up. the longer we sample for, the greater the average, on average.
 
