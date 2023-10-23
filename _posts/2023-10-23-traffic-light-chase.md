@@ -68,7 +68,7 @@ $$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\text{floor}\left(t/2\right
 
 which comes to 
 
-$$ \frac{\Gamma(\frac32 + t}}{\sqrt{\pi}\Gamma[3+t]}. $$
+$$ \frac{\Gamma[\frac32 + t]}{\sqrt{\pi}\Gamma[3+t]}. $$
 
 now, what we are after is the probability of ending the chase by step $N$ or sooner, which is just
 
