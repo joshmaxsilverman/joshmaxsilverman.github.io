@@ -43,9 +43,15 @@ In principle, our paths can be anything from a pure Dyck path (all up and down m
 
 ### An example by hand
 
-For example, for the case of 3 steps, we can have the cars remain in place the whole time, or we can have them move up then stay in place then move back down. 
+For example, for the case of $3$ steps, we can have the cars 
 
-This has probability 
+- meet at the first possible opportunity,
+- spend one lights at the same distance before coming together,
+- spend two lights at the same distance before coming together,
+- spend three lights at the same distance before coming together, or
+- have them move apart, then move back down with one light spent at the same distance (with three possible orders for the neutral light). 
+
+This has total probability 
 
 $$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(\frac12\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128} = 0.4921875$$
 
