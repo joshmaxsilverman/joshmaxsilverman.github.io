@@ -95,6 +95,6 @@ as expected, evaluating $1-P(\text{escape in}\,T\text{steps})$ at $T=3$ gives us
 
 evaluations of the gamma function are approximately related by $\Gamma[x + a] \approx \Gamma[x]x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + T\right)^{-\frac12}.$ 
 
-integrating the $\text{cdf}$ from $0$ to an upper bound $N$ is proportional to $\sqrt{T}.$ evidently, there is no mean, as the simulation suggested.
+integrating the cumulative distribution from $0$ to an upper bound $T$ is proportional to $\sqrt{T}.$ evidently, there is no mean, as the simulation suggested.
 
 <br>
