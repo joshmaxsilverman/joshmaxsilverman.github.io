@@ -72,7 +72,7 @@ $$ \frac{\Gamma[\frac32 + t]}{\sqrt{\pi}\Gamma[3+t]}. $$
 
 now, what we are after is the probability of ending the chase by step $N$ or sooner, which is just
 
-$$ P(\text{caught before step}\, N) = \sum_{t=0}^N P(\text{ends in}\, t\,\text{steps}) = 1-2\frac{\Gamma(\frac52 + N}}{\sqrt{\pi}\Gamma[3+N]} $$
+$$ P(\text{caught before step}\, N) = \sum_{t=0}^N P(\text{ends in}\, t\,\text{steps}) = 1-2\frac{\Gamma[\frac52 + N]}{\sqrt{\pi}\Gamma[3+N]} $$
 
 which makes the cumulative probability of escape by step $N$
 
