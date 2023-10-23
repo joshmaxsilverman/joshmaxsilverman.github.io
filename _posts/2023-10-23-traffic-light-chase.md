@@ -98,7 +98,7 @@ $$ P(\text{escape in}\,T\text{steps}) = 2\frac{\Gamma\left(\frac52 + T\right)}{\
 
 As expected, evaluating $1-P(\text{escape in}\,T\text{steps})$ at $T=3$ gives us $63/128.$
 
-Evaluations of the $\Gammma$-function are approximately related by $\Gamma\left(x + a\right) \approx \Gamma\left(x\right)x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + T\right)^{-\frac12}.$ 
+Evaluations of the $\Gamma$-function are approximately related by $\Gamma\left(x + a\right) \approx \Gamma\left(x\right)x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + T\right)^{-\frac12}.$ 
 
 Integrating the cumulative distribution from $0$ to an upper bound $T$ is proportional to $\sqrt{T}.$ Evidently, there is no mean, as the simulation suggested.
 
