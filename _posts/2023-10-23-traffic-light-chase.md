@@ -3,7 +3,7 @@ layout: post
 published: false
 title: Traffic light chase
 date: 2023/10/23
-subtitle: 
+subtitle: How long until you meet your menacing assailant?
 tags: counting convolution
 ---
 
