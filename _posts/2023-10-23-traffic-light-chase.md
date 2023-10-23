@@ -34,7 +34,7 @@ for simplicity, we're going to change the convention so that the first step happ
 
 here is one such path:
 
-![image of gap over time](/img/2023-10-23-dyck-path.png)
+![image of gap over time](/img/2023-10-23-dyck-path.png){:width="450 px" class="image-centered"}
 
 if we remove the parts where the cars maintain the same relative position, this is just a dyck path -- a path that goes from the bottom left corner to the top right corner of a square lattice without moving under the diagonal. 
 
