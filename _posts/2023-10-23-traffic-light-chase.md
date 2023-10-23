@@ -54,7 +54,7 @@ simulating the system, a curious thing happens: increasing the length of the sim
 
 $$
 \begin{array}{c|c}
-  N & \langle N_\text{catch} \\ \hline
+  N & \langle T_\text{catch}\rangle \\ \hline
   10^0 & 3.0 \\ 
   10^1 & 11.6 \\ 
   10^2 & 126.15 \\ 
@@ -83,18 +83,18 @@ which comes to
 
 $$ \frac{\Gamma[\frac32 + t]}{\sqrt{\pi}\Gamma[3+t]}. $$
 
-now, what we are after is the probability of ending the chase by step $N$ or sooner, which is just
+now, what we are after is the probability of ending the chase by step $T$ or sooner, which is just
 
-$$ P(\text{caught before step}\, N) = \sum_{t=0}^N P(\text{ends in}\, t\,\text{steps}) = 1-2\frac{\Gamma[\frac52 + N]}{\sqrt{\pi}\Gamma[3+N]} $$
+$$ P(\text{caught before step}\, T) = \sum_{t=0}^T P(\text{ends in}\, t\,\text{steps}) = 1-2\frac{\Gamma[\frac52 + T]}{\sqrt{\pi}\Gamma[3+T]} $$
 
 which makes the cumulative probability of escape by step $N$
 
-$$ P(\text{escape in}\,N\text{steps}) = 2\frac{\Gamma[\frac52 + N]}{\sqrt{\pi}\Gamma[3+N]}. $$
+$$ P(\text{escape in}\,T\text{steps}) = 2\frac{\Gamma[\frac52 + T]}{\sqrt{\pi}\Gamma[3+T]}. $$
 
-as expected, evaluating $1-P(\text{escape in}\,N\text{steps})$ at $N=3$ gives us $63/128.$
+as expected, evaluating $1-P(\text{escape in}\,T\text{steps})$ at $T=3$ gives us $63/128.$
 
-evaluations of the gamma function are approximately related by $\Gamma[x + a] \approx \Gamma[x]x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + N\right)^{-\frac12}.$ 
+evaluations of the gamma function are approximately related by $\Gamma[x + a] \approx \Gamma[x]x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + T\right)^{-\frac12}.$ 
 
-integrating the $\text{cdf}$ from $0$ to an upper bound $N$ is proportional to $\sqrt{N}.$ evidently, there is no mean, as the simulation suggested.
+integrating the $\text{cdf}$ from $0$ to an upper bound $N$ is proportional to $\sqrt{T}.$ evidently, there is no mean, as the simulation suggested.
 
 <br>
