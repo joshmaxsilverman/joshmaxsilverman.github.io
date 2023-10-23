@@ -64,7 +64,7 @@ now, because sideways and up/down moves distinct probabilities, we need to accou
 
 which makes the probability of ending in $t$ steps 
 
-$$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\text{floor{\left(t/2\right)} D_{2d} \binom{t}{2d} \left(1/4\right)^{2d+1}\left(1/2\right)^{t-2d}. $$
+$$ P(\text{ends in}\, t\,\text{steps}) = \sum_{d=0}^{\text{floor}\left(t/2\right)} D_{2d} \binom{t}{2d} \left(\frac14\right)^{2d+1}\left(\frac12\right)^{t-2d}. $$
 
 which comes to 
 
