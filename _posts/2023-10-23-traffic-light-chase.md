@@ -47,7 +47,7 @@ For example, for the case of 3 steps, we can have the cars remain in place the w
 
 This has probability 
 
-$$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(1/2\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128} \approx 0.4921875$$
+$$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(\frac12\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128} = 0.4921875$$
 
 of escape.
 
