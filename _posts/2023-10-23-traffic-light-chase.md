@@ -16,7 +16,7 @@ tags: counting convolution
 >Every time that you come to an intersection, there’s a 50 percent chance the light is green, in which case you coast right on through. But there’s also a 50 percent chance the light is red, in which case it takes exactly one minute for the light to turn green again. These same probabilities govern your pursuer—at each intersection, they have a 50 percent chance of encountering a green light and a 50 percent chance of encountering a red light and having to wait one minute, entirely independent of whatever you might have encountered at that same intersection.
 >
 >Including the light at which you are now stopped, there are five traffic lights between you and the city limit, as illustrated below. That means there are six lights for your pursuer.
->![](/img/2023-10-23-traffic-chase-diagram.png){:width="450 px" class="image-centered"} 
+>![](/img/2023-10-23-traffic-chase-diagram.png.PNG){:width="450 px" class="image-centered"} 
 >
 >You are displayed as being five stop lights west of the city limit. Your pursuer is six stop lights west of the city limit.
 >How likely is it that you’ll make it past the city limit without being caught?
