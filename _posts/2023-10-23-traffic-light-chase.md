@@ -94,7 +94,7 @@ $$ P(\text{caught before step}\, T) = \sum_{t=0}^T P(\text{ends in}\, t\,\text{s
 
 which makes the cumulative probability of escape by step $N$
 
-$$ P(\text{escape in}\,T\text{steps}) = 2\frac{\Gamma\left(\frac52 + T\right)}{\sqrt{\pi}\Gamma\left(3+T\right)}. $$
+$$ P(\text{escape in}\,T\text{steps or less}) = 2\frac{\Gamma\left(\frac52 + T\right)}{\sqrt{\pi}\Gamma\left(3+T\right)}. $$
 
 As expected, evaluating $1-P(\text{escape in}\,T\text{steps})$ at $T=3$ gives us $63/128.$
 
