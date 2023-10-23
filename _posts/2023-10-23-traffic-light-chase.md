@@ -53,12 +53,12 @@ of escape.
 simulating the system, a curious thing happens: increasing the length of the simulation increases the expected number of steps. 
 
 $$
-\begin{array}
-  N & \langle N_\text{catch}
-  10^0 & 3.0 \\ \hline
-  10^1 & 11.6 \\ \hline
-  10^2 & 126.15 \\ \hline
-  10^3 & 687.133 \\ \hline
+\begin{array}{c|c}
+  N & \langle N_\text{catch} \\ \hline
+  10^0 & 3.0 \\ 
+  10^1 & 11.6 \\ 
+  10^2 & 126.15 \\ 
+  10^3 & 687.133 \\ 
   10^4 & 10572.4711
 \end{array}
 $$
