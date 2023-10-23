@@ -44,7 +44,7 @@ for example, for the case of 3 steps, we can have the cars remain in place the w
 
 this has probability 
 
-$$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(1/2\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128}$$
+$$ 1 - \frac14\left[1 + \frac12 + \left(\left(\frac12\right)^2 + \left(\frac14\right)^2\right) + \left(\left(1/2\right)^3 + 3\times\frac12\times\left(\frac14\right)^2\right)\right] = \frac{63}{128} \approx 0.4921875$$
 
 of escape.
 
@@ -90,6 +90,8 @@ $$ P(\text{caught before step}\, N) = \sum_{t=0}^N P(\text{ends in}\, t\,\text{s
 which makes the cumulative probability of escape by step $N$
 
 $$ P(\text{escape in}\,N\text{steps}) = 2\frac{\Gamma[\frac52 + N]}{\sqrt{\pi}\Gamma[3+N]}. $$
+
+as expected, evaluating $1-P(\text{escape in}\,N\text{steps})$ at $N=3$ gives us $63/128.$
 
 evaluations of the gamma function are approximately related by $\Gamma[x + a] \approx \Gamma[x]x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + N\right)^{-\frac12}.$ 
 
