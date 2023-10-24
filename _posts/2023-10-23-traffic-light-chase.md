@@ -106,7 +106,7 @@ which makes the cumulative probability of escape by step $T$
 
 $$ P(\text{escape in}\,T\,\text{steps or less}) = 2\frac{\Gamma\left(\frac52 + T\right)}{\sqrt{\pi}\Gamma\left(3+T\right)}. $$
 
-As expected, evaluating $1-P(\text{escape in}\,T\,\text{steps or less})$ at $T=3$ ($5$ in the original convention) gives us $63/128.$
+As expected, evaluating $P(\text{escape in}\,T\,\text{steps or less})$ at $T=3$ ($5$ in the original convention) gives us $63/128.$
 
 Evaluations of the $\Gamma$-function are approximately related by $\Gamma\left(x + a\right) \approx \Gamma\left(x\right)x^a$ which means the right side of the cumulative distribution scales as $\left(\frac52 + T\right)^{-\frac12}.$ 
 
