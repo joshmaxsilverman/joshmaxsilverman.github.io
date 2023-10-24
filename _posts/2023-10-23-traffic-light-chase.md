@@ -31,7 +31,7 @@ Taken together, the lead and chase car can either move further apart (green ligh
 
 If the two cars are going to meet for the first time at step $T$ then, the two cars can do anything in between the first and last step so long as they don't occupy the same position. 
 
-For simplicity, we're going to change the convention so that the first step happens after the first dual green light, and the last step is just before the cars come together.
+For simplicity, we're going to change the convention so that the first step happens after the first dual green light, and the final step is just before the cars come together. These moves are obligatory and, so, don't vary as we consider all possible paths.
 
 Here is one such path:
 
