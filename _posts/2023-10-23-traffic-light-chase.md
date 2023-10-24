@@ -27,9 +27,9 @@ tags: counting convolution
 
 ## Solution
 
-Taken together, the lead and chase car can either move further apart (green light for lead car, red light for chase car), move together (red light for lead car, green light for chase car) or remain the same distance apart (same light color for both cars).
+Taken together, the lead and chase car can either move further apart (green light for lead car, red light for chase car), move closer together (red light for lead car, green light for chase car) or remain the same distance apart (same light color for both cars).
 
-If the two cars are going to meet for the first time at step $N$ then, the two cars can do anything in between the first and last step so long as they don't occupy the same position. 
+If the two cars are going to meet for the first time at step $T$ then, the two cars can do anything in between the first and last step so long as they don't occupy the same position. 
 
 For simplicity, we're going to change the convention so that the first step happens after the first dual green light, and the last step is just before the cars come together.
 
@@ -39,11 +39,11 @@ Here is one such path:
 
 {:.caption}
 
-Graph thoughtfully remade by Goh Pi Han with Comic Sans MS.
+An example Dyck path, interspersed with stationary moments. Figure thoughtfully prepared by Goh Pi Han with Comic Sans MS.
 
-If we remove the sections where the cars maintain the same relative position, this is just a [Dyck path](https://mathworld.wolfram.com/DyckPath.html) -- a path that goes from the bottom left corner to the top right corner of a square lattice without moving under the diagonal. 
+If we remove the stationary moments where the cars maintain the same relative position, this is just a [Dyck path](https://mathworld.wolfram.com/DyckPath.html) -- a path that goes from the bottom left corner to the top right corner of a square lattice without moving under the diagonal. 
 
-In principle, our paths can be anything from a pure Dyck path (all up and down moves) to purely staying in place. 
+In principle, our paths can be anything from a pure Dyck path (all up and down moves) to purely staying in place, followed by coming together at the last moment. 
 
 ### An example by hand
 
@@ -82,13 +82,13 @@ What does this mean? It's a telltale sign that the distribution is fat tailed, a
 
 ### Finding the distribution
 
-In general, if the Dyck path takes up $2d$ steps of the path, then the sideways steps will take up $(t - 2d)$ steps. 
+In general, if the Dyck path takes up $2d$ steps of the path, then the stationary moments will take up $(t - 2d)$ steps. 
 
-The number of such paths would then be the number of Dyck paths of length $2d$ plus the number of ways to insert $(t-2d)$ diagonal steps between $2d$ Dyck steps. This is just $2d(2d+1)\cdots t/(t-2d)!$ which is $t!/((t-2d)!(2d)!) = \binom{t}{2d}.$
+The number of such paths is then be the number of Dyck paths of length $2d$ plus the number of ways to insert $(t-2d)$ diagonal steps between $2d$ Dyck steps. This is just $(2d+1)\cdot(2d+2)\cdots t/(t-2d)!$ which is $t!/((t-2d)!(2d)!) = \binom{t}{2d}.$
 
-The number of Dyck paths of length $2d$ is given by the catalan numbers, $D_{2d} = C_d = \frac{1}{d+1}\binom{2d}{d}$.
+The number of Dyck paths of length $2d$ is given by the Catalan numbers, $D_{2d} = C_d = \frac{1}{d+1}\binom{2d}{d}$.
 
-Now, because sideways and up/down moves distinct probabilities, we need to account for likelihood of each category of path. With $(t-2d)$ sideways moves and $2d$ up/down moves, plus the obligatory final down move, the probability is $\left(\frac14\right)^{1+2d}\left(\frac12\right)^{t-2d}.$
+Now, because stationary and up/down moves have distinct probabilities, we need to account for likelihood of each category of path. With $(t-2d)$ sideways moves and $2d$ up/down moves, plus the obligatory final down move, the probability is $\left(\frac14\right)^{2d+1}\left(\frac12\right)^{t-2d}.$
 
 Which makes the probability of ending in exactly $t$ steps:
 
@@ -98,11 +98,11 @@ which comes to
 
 $$ \frac{\Gamma\left(\frac32 + t\right)}{\sqrt{\pi}\Gamma\left(3+t\right)}. $$
 
-Now, what we are after is the probability of ending the chase by step $T$ or sooner, which is just
+Now, what we are after is the probability of ending the chase by step $T$ or sooner, which is
 
 $$ P(\text{caught before step}\, T) = \sum_{t=0}^T P(\text{ends in}\, t\,\text{steps}) = 1-2\frac{\Gamma\left(\frac52 + T\right)}{\sqrt{\pi}\Gamma\left(3+T\right)}, $$
 
-which makes the cumulative probability of escape by step $N$
+which makes the cumulative probability of escape by step $T$
 
 $$ P(\text{escape in}\,T\,\text{steps or less}) = 2\frac{\Gamma\left(\frac52 + T\right)}{\sqrt{\pi}\Gamma\left(3+T\right)}. $$
 
