@@ -37,7 +37,9 @@ Here is one such path:
 
 ![image of gap over time](/img/2023-10-23-gap-plot-xkcd.PNG){:width="450 px" class="image-centered"}
 
-{:.caption="Image thoughtfully remade by Goh Pi Han"}
+{:.caption}
+
+Graph thoughtfully remade by Goh Pi Han with Comic Sans MS.
 
 If we remove the sections where the cars maintain the same relative position, this is just a [Dyck path](https://mathworld.wolfram.com/DyckPath.html) -- a path that goes from the bottom left corner to the top right corner of a square lattice without moving under the diagonal. 
 
