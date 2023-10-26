@@ -47,7 +47,7 @@ In principle, our paths can be anything from a pure Dyck path (all up and down m
 
 ### An example by hand
 
-For example, for the case of $3$ steps, we can have the cars 
+For the case of $3$ steps, we can have the cars 
 
 - meet at the first possible opportunity,
 - spend one light at the same distance before coming together,
