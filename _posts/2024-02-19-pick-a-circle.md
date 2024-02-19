@@ -23,7 +23,7 @@ there are two ways to go, methodical, and symmetric.
 
 instead of thinking in terms of the two points, we can describe the problem in terms of their center and separation. 
 
-for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. each of these centers then has an annulus of area $2\pi r$ around it. 
+for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. each of these centers then has an annulus of area $2\pi r\\text{d}r$ around it. 
 
 we are just counting phase space, so we can add up all such centers and radii and be done. 
 
