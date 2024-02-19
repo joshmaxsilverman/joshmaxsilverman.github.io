@@ -21,14 +21,16 @@ there are two ways to go, methodical, and symmetric.
 
 ### symmetric
 
-instead of thinking in terms of the two points, we can describe the problem in terms of their center and separation. 
+instead of thinking in terms of the two points in $4-$space, we can describe the problem in terms of their center and separation in the plane. 
 
-for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. each of these centers then has an annulus of area $(2\pi r)\text{d}r$ around it. 
+how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. 
 
-we are just counting phase space, so we can add up all such centers and radii and be done. 
+each point on the circle represents a pair (the point, and the point across from it on the circle). the number of such pairs is the annulus of area $(2\pi r)\text{d}r$ around the center. 
 
-the one thing we need to be careful about is the unit area in either set of coordinates. 
+since we are just counting phase space, we can add over all such centers and radii. 
 
-the length of the separation is twice the radius
+but we need to be careful about the unit area in either set of coordinates. 
+
+the length of the separation is twice the radius 
 
 <br>
