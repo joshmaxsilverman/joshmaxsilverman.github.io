@@ -17,6 +17,8 @@ tags: d
 
 we want to calculate the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square. 
 
+$$ \int dx_1 \int dy_1 \int dx_2 \int dy_2 \mathbb{I}(\text{diameter forms circle contained in the unit square}. $$
+
 there are two ways to go, methodical, and symmetric.
 
 ### symmetric
