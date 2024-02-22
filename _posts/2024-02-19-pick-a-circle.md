@@ -77,7 +77,7 @@ one way to see this is to place two points a distance $d$ apart with the left ha
 so the probability is
 
 $$ \begin{align}
-  P(\text{diameter $\ell$}) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-\ell\cos\theta)(1-\ell\sin\theta) \\
+  P(\text{radius $r$}) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-\ell\cos\theta)(1-\ell\sin\theta) \\
   &= 8r(\pi -4(2-r)r). 
 \end{align} $$
 
