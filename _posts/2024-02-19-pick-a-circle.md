@@ -42,7 +42,7 @@ but we need to be careful about the unit area in either set of coordinates. in m
 
 taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
 
-taking cross products, we get $dA = d\vec{x}_c\times d_\vec{x}_r ,$ which gives us 
+taking cross products, we get $dA,$ which gives us 
 
 $$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
