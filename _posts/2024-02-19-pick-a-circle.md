@@ -62,4 +62,8 @@ another way to go is probability. the probability that a random pair of points m
 
 $$ P(\text{diameter forms an interior circle}) = \int d\ell\, P(\text{diameter forms an interior circle of diameter $\ell$}). $$
 
+we can break this up into two simpler distributions:
+
+$$ P(\text{diameter forms an interior circle| diameter $\ell$)\cdot P(\text{diameter $\ell$}) $$
+
 <br>
