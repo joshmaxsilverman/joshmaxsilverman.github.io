@@ -54,4 +54,12 @@ integrating this over all valid radii, we get
 
 $$ 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 = \frac{\pi}{6}$$
 
+### systematic
+
+this approach is nice apart from the unit area changing under our feet. 
+
+another way to go is probability. the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle.
+
+$$ P(\text{random points form the diameter of an interior circle}) = \int dr\, P(\text{random points form the diameter of an interior circle of radius $r$}). $$
+
 <br>
