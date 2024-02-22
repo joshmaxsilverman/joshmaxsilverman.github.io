@@ -29,7 +29,7 @@ $$ \begin{align}
   x_c &= \frac12\left(x_1 + x_2\right) \\
   y_c &= \frac12\left(y_1 + y_2\right) \\
   x_r &= \frac12\left(x_1 - x_2\right) \\
-  y_r &= \frac12\left(y_1 - x_2\right)
+  y_r &= \frac12\left(y_1 - y_2\right)
 \end{align} $$
 
 how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. 
