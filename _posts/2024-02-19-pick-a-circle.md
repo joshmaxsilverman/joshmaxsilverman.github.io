@@ -64,7 +64,7 @@ $$ P(\text{diameter forms an interior circle}) = \int d\ell\, P(\text{diameter f
 
 we can break this up into two simpler distributions:
 
-$$ P(\text{diameter forms an interior circle}\rvert\text{diameter $\ell$})\cdot P(\text{diameter $\ell$}) $$
+$$ P(\text{diameter forms an interior circle}\rvert\text{diameter $\ell$}) \cdot P(\text{diameter $\ell$}) $$
 
 let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. the probability of getting diamter $\ell$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $\ell.$ 
 
