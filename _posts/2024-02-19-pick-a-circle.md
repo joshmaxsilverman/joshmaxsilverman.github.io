@@ -60,6 +60,6 @@ this approach is nice apart from the unit area changing under our feet.
 
 another way to go is probability. the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle.
 
-$$ P(\text{random points form the diameter of an interior circle}) = \int dr\, P(\text{random points form the diameter of an interior circle of radius $r$}). $$
+$$ P(\text{diameter forms an interior circle}) = \int d\ell\, P(\text{diameter forms an interior circle of diameter $\ell$}). $$
 
 <br>
