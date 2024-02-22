@@ -38,8 +38,22 @@ each point on the circle represents a pair (the point, and the point across from
 
 since we are just counting phase space, we can add over all such centers and radii. 
 
-but we need to be careful about the unit area in either set of coordinates. 
+but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
-the length of the separation is twice the radius 
+taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$
+
+taking cross products, we get $dA^\prime = \lvert d\vec{x}_c\cross d_\vec{x}_r\rvert = \lvert\frac14\left(d\vec{x}_1\cross d\vec{x}_2 + d\vec{x}_1\cross d\vec{x}_2\right)\rvert = \frac{dx_1dx_2}{2},$ which gives us $dx_c\,dx_r = \frac12dx_1\,dx_2. $$ 
+
+with this, we can finish the expression for the amount of phase space contributed by circle of diameter $2r:$
+
+$$ dr\,4\times 2\pi r(1-2r)^2. $$
+
+integrating this over all valid radii, we get 
+
+$$ 8\pi\int\limits_0^\frac{1}{2}dr r(1-2r)^2 $$
+
+which by simple $u$-sub is 
+
+$$ 4\pi \frac{(1-2r)^3}{3}\rvert\limits_0^\frac{1}{2} = \frac{\pi}{6} $$
 
 <br>
