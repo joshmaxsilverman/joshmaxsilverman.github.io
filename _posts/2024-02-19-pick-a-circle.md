@@ -70,4 +70,12 @@ let's do the second piece first. since we pick the points randomly, we can treat
 
 $$ P(\text{diameter $\ell$}) = \int d\theta\, P(\text{$x_1-x_2 = \ell\cos\theta$})P(\text{$y_1-y_2 = \ell\sin\theta$}). $$
 
+the probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
+
+one way to see this is to place two points a distance $d$ apart with the left hand one at the origin. there is $(1-d)$ worth of open space to slide them through before the right hand point hits $1.$ lastly, we can swap the order of the points.
+
+so the probability is
+
+$$ P(\text{diameter $\ell$}) = 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-\ell\cos\theta)(1-\ell\sin\theta) = 8r(\pi -4(2-r)r) . $$
+
 <br>
