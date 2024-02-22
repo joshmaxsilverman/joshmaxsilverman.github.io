@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Pick a circle
 date: 2024/02/19
 subtitle:
 tags: d
