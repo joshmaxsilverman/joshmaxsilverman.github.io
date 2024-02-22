@@ -52,10 +52,6 @@ $$ dr\,4\times 2\pi r(1-2r)^2. $$
 
 integrating this over all valid radii, we get 
 
-$$ 8\pi\int\limits_0^\frac{1}{2}\,dr r(1-2r)^2 $$
-
-which by simple $u$-sub is 
-
-$$ 4\pi \frac{(1-2r)^3}{3}\rvert_0^\frac{1}{2} = \frac{\pi}{6} $$
+$$ 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 = \frac{\pi}{6}$$
 
 <br>
