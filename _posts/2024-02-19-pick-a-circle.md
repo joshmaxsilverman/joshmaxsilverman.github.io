@@ -64,6 +64,6 @@ $$ P(\text{diameter forms an interior circle}) = \int d\ell\, P(\text{diameter f
 
 we can break this up into two simpler distributions:
 
-$$ P(\text{diameter forms an interior circle| diameter $\ell$)\cdot P(\text{diameter $\ell$}) $$
+$$ P(\text{diameter forms an interior circle}\rvert\text{diameter $\ell$})\cdot P(\text{diameter $\ell$}) $$
 
 <br>
