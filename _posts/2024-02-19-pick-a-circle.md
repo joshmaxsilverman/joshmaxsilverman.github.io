@@ -40,7 +40,7 @@ since we are just counting phase space, we can add over all such centers and rad
 
 but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
-taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$
+taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
 
 taking cross products, we get $dA^\prime = \lvert d\vec{x}_c\times d_\vec{x}_r\rvert = \lvert\frac14\left(d\vec{x}_1\times d\vec{x}_2 + d\vec{x}_1\times d\vec{x}_2\right)\rvert = \frac{dx_1dx_2}{2},$ which gives us 
 
