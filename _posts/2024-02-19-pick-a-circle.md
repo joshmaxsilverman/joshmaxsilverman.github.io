@@ -44,7 +44,7 @@ taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2
 
 taking cross products, we get $dA^\prime = \lvert d\vec{x}_c\times d_\vec{x}_r\rvert = \lvert\frac14\left(d\vec{x}_1\times d\vec{x}_2 + d\vec{x}_1\times d\vec{x}_2\right)\rvert = \frac{dx_1dx_2}{2},$ which gives us 
 
-$$dx_c\,dx_r = \frac12dx_1\,dx_2. $$
+$$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
 with this, we can finish the expression for the amount of phase space contributed by circle of diameter $2r:$
 
