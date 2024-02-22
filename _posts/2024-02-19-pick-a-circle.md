@@ -66,4 +66,8 @@ we can break this up into two simpler distributions:
 
 $$ P(\text{diameter forms an interior circle}\rvert\text{diameter $\ell$})\cdot P(\text{diameter $\ell$}) $$
 
+let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. the probability of getting diamter $\ell$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $\ell.$ 
+
+$$ P(\text{diameter $\ell$) = \int d\theta\, P(\text{$x_1-x_2 = \ell\cos\theta$})P(\text{$y_1-y_2 = \ell\sin\theta$}). $$
+
 <br>
