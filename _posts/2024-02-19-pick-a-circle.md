@@ -67,15 +67,15 @@ this approach is nice apart from the unit area changing under our feet.
 
 another way to go is probability. the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle.
 
-$$ P(\text{diameter forms an interior circle}) = \int d\ell\, P(\text{diameter forms an interior circle of diameter $\ell$}). $$
+$$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an interior circle of radius $r$}). $$
 
 we can break this up into two simpler distributions:
 
-$$ P(\text{diameter forms an interior circle}\rvert\text{diameter $\ell$}) \cdot P(\text{diameter $\ell$}) $$
+$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) \cdot P(\text{radius $r$}) $$
 
-let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. the probability of getting diamter $\ell$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $\ell.$ 
+let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. the probability of getting radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
-$$ P(\text{diameter $\ell$}) = \int d\theta\, P(\text{$x_1-x_2 = \ell\cos\theta$})P(\text{$y_1-y_2 = \ell\sin\theta$}). $$
+$$ P(\text{radius $r$}) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
 
 the probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
 
@@ -84,8 +84,39 @@ one way to see this is to place two points a distance $d$ apart with the left ha
 so the probability is
 
 $$ \begin{align}
-  P(\text{radius $r$}) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-\ell\cos\theta)(1-\ell\sin\theta) \\
+  P(\text{radius $r$}) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-2r\cos\theta)(1-2r\sin\theta) \\
   &= 8r(\pi -4(2-r)r). 
 \end{align} $$
+
+the next piece is straightforward in concept, but tricky to calculate. if we randomly place the center of the circle at coordinates $(x_c,y_c),$ what is the probability that it forms an interior circle.
+
+first of all, the center can't be within a radius of the square's boundary. this means that the probability is $0$ inside the semi-circles of radius $r$ around each corner.
+
+likewise, if the center is more than a radius away from the boundary, the circle will definitely be interior, so the probability is $1$ inside the central $(1-2r)$ by $(1-2r)$ square. 
+
+drawing what we've figured out so far, we have:
+
+[drawing]
+
+the tricky regions are the area under the semi-circle boundary, and the rectangular protuberance. 
+
+the idea is, in each region, to calculate the fraction of possible orientations that lead to the circle being interior: $\theta_\text{valid}/\theta_\text{possible}.$
+
+**rectangular protuberance**
+
+in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$ this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcin\frac{1-x_c}{r}.$ since the angle is chosen at random, the probability that the circle is interior is just 
+
+$$\begin{align} 
+  P_\text{curve}(\text{interior circle})(x_c) &= 2\theta/\pi \\
+  &= \frac{1}{\pi}\arcsin\frac{1-x_c}{R}
+\end{align} $$
+
+adding up over all possible values of $x_c,$ the probability of a circle whose center is under the curve being interior is
+
+$$ P_\text{curve}(\text{interior circle}) = (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{1}{\pi}\arcsin\frac{1-x_c}{r} = \frac{(\pi-2)r(1-2r)}{2\pi}. $$
+
+**under the curve**
+
+the region under the curve
 
 <br>
