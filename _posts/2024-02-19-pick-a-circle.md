@@ -38,6 +38,8 @@ each point on the circle represents a pair (the point, and the point across from
 
 since we are just counting phase space, we can add over all such centers and radii. 
 
+$$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
+
 but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
 taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
@@ -46,17 +48,22 @@ taking cross products, we get $dA = \lvert d\vec{x}_c\times d\vec{x}_r\rvert = \
 
 $$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
-with this, we can finish the expression for the amount of phase space contributed by circle of diameter $2r:$
+with this, we can finish the expression for the volume of phase space contributed by circles of diameter $2r:$
 
 $$ dr\,4\times 2\pi r(1-2r)^2. $$
 
 integrating this over all valid radii, we get 
 
-$$ 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 = \frac{\pi}{6}$$
-
-### systematic
+$$ \begin{align}
+  P(\text{interior circle}) &= 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 \\
+                            &= 8\pi \int)\limits_0^{\frac12}dr\, \frac12\left[(1-2r)^2 - (1-2r)^3\right] \\
+                            &= 2\pi \int)\limits_0^1 du\, \left[(1-u)^2 - (1-u)^3\right] \\
+                            &= \frac{\pi}{6}
+\end{align} $$
 
 this approach is nice apart from the unit area changing under our feet. 
+
+### systematic
 
 another way to go is probability. the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle.
 
