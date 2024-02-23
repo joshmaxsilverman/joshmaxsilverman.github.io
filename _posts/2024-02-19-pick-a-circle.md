@@ -56,8 +56,8 @@ integrating this over all valid radii, we get
 
 $$ \begin{align}
   P(\text{interior circle}) &= 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 \\
-                            &= 8\pi \int)\limits_0^{\frac12}dr\, \frac12\left[(1-2r)^2 - (1-2r)^3\right] \\
-                            &= 2\pi \int)\limits_0^1 du\, \left[(1-u)^2 - (1-u)^3\right] \\
+                            &= 8\pi \int\limits_0^{\frac12}dr\, \frac12\left[(1-2r)^2 - (1-2r)^3\right] \\
+                            &= 2\pi \int\limits_0^1 du\, \left[(1-u)^2 - (1-u)^3\right] \\
                             &= \frac{\pi}{6}
 \end{align} $$
 
