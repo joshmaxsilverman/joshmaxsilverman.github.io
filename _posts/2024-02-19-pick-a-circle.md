@@ -139,5 +139,9 @@ $$
   \end{align} 
 $$
   
+so, the probability that a randomly placed circle of diameter $2r$ is just
+
+$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P_\text{square}(\text{interior circle})}{P_\text{square}(\text{interior circle}) + 4P_\text{rect}(\text{interior circle}) + 4P_\text{curve}(\text{interior circle})}. $$
+
 
 <br>
