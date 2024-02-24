@@ -108,15 +108,15 @@ in the rectangular protuberance, we have an interior circle so long as $x_c$ is 
 
 $$\begin{align} 
   P_\text{curve}(\text{interior circle}\rvert x_c) &= 2\theta/\pi \\
-  &= \frac{1}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
+  &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
 \end{align} $$
 
 adding up over all possible values of $x_c,$ the probability of a circle whose center is under the curve being interior is
 
 $$ \begin{align}
   P_\text{curve}(\text{interior circle}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{curve}(\text{interior circle}\rvert x_c)  \\
-  &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{1}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
-  &= \frac{(\pi-2)r(1-2r)}{2\pi}. 
+  &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
+  &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
 
 **under the curve**
