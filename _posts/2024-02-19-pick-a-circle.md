@@ -121,6 +121,23 @@ $$ \begin{align}
 
 **under the curve**
 
-the region under the curve
+when the center is in the region under the curve, the top and side of the square have distinct extreme angles. at the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ likewise, at the top we have $(1-y_c) = r\cos\theta_\text{top}.$ 
+
+looking at the angles, this means that the diameter can wiggle through the angle $(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$ 
+
+if we push the diameter through the wall so that one end is in the corner, there is a second band of feasible angles. drawing the diagram, this has the same constraints we just went through. so the total feasible angle is just $2(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$
+
+solving the equations, this gives
+
+$$ P_\text{curve}(\text{interior circle}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
+
+summing over $(x_c,y_c)$ gets us
+
+$$ 
+  \begin{align}
+    P_\text{curve}(\text{interior circle}) &= \int\limits_{1-r}{1}dx_c\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} dy_c P_\text{curve}(\text{interior circle}\lvert x_c,y_c) \\
+  \end{align} 
+$$
+  
 
 <br>
