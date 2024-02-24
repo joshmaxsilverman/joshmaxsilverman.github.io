@@ -135,7 +135,7 @@ summing over $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P_\text{curve}(\text{interior}) &= \int\limits_{1-r}^1 dx_c\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} dy_c\, P_\text{curve}(\text{interior}\lvert x_c,y_c) \\
+    P_\text{curve}(\text{interior}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.5em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} dy_c\, P_\text{curve}(\text{interior}\lvert x_c,y_c) \\
   \end{align} 
 $$
   
