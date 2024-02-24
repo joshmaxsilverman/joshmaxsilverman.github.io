@@ -107,14 +107,14 @@ the idea is, in each region, to calculate the fraction of possible orientations 
 in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$ this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
 
 $$\begin{align} 
-  P_\text{curve}(\text{interior circle}\rvert x_c) &= 2\theta/\pi \\
+  P_\text{rect}(\text{interior circle}\rvert x_c) &= 2\theta/\pi \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
 \end{align} $$
 
-adding up over all possible values of $x_c,$ the probability of a circle whose center is under the curve being interior is
+adding up over all possible values of $x_c,$ the probability of a circle whose center is in the rectangle being interior is
 
 $$ \begin{align}
-  P_\text{curve}(\text{interior circle}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{curve}(\text{interior circle}\rvert x_c)  \\
+  P_\text{rect}(\text{interior circle}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{interior circle}\rvert x_c)  \\
   &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
