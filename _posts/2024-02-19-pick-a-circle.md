@@ -15,11 +15,13 @@ tags: d
 
 ## Solution
 
-we want to calculate the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square. 
+there are two ways to go. 
+
+we can either measure the volume of coordinate space devoted to interior circles, or find the probability that the points are separated by distance $d$ and the probability that a diameter of the length forms an interior circle, and then add it all up.
+
+either way, we end up finding the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square:
 
 $$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms circle contained in the unit square}). $$
-
-there are two ways to go, methodical, and symmetric. 
 
 ### symmetric
 
