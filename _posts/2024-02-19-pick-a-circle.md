@@ -107,14 +107,14 @@ the idea is, in each region, to calculate the fraction of possible orientations 
 in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$ this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
 
 $$\begin{align} 
-  P_\text{rect}(\text{interior circle}\rvert x_c) &= 2\theta/\pi \\
+  P_\text{rect}(\text{interior}\rvert x_c) &= 2\theta/\pi \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
 \end{align} $$
 
 adding up over all possible values of $x_c,$ the probability of a circle whose center is in the rectangle being interior is
 
 $$ \begin{align}
-  P_\text{rect}(\text{interior circle}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{interior circle}\rvert x_c)  \\
+  P_\text{rect}(\text{interior}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{interior}\rvert x_c)  \\
   &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
@@ -129,19 +129,19 @@ if we push the diameter through the wall so that one end is in the corner, there
 
 solving the equations, this gives
 
-$$ P_\text{curve}(\text{interior circle}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
+$$ P_\text{curve}(\text{interior}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
 
 summing over $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P_\text{curve}(\text{interior circle}) &= \int\limits_{1-r}^1 dx_c\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} dy_c\, P_\text{curve}(\text{interior circle}\lvert x_c,y_c) \\
+    P_\text{curve}(\text{interior}) &= \int\limits_{1-r}^1 dx_c\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} dy_c\, P_\text{curve}(\text{interior}\lvert x_c,y_c) \\
   \end{align} 
 $$
   
 so, the probability that a randomly placed circle of diameter $2r$ is just
 
-$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P_\text{square}(\text{interior circle})}{P_\text{square}(\text{interior circle}) + 4P_\text{rect}(\text{interior circle}) + 4P_\text{curve}(\text{interior circle})}. $$
+$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P_\text{square}(\text{interior})}{P_\text{square}(\text{interior}) + 4P_\text{rect}(\text{interior}) + 4P_\text{curve}(\text{interior})}. $$
 
 
 <br>
