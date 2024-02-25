@@ -104,6 +104,10 @@ the tricky regions are the area under the semi-circle boundary, and the rectangu
 
 the idea is, in each region, to calculate the fraction of possible orientations that lead to the circle being interior: $\theta_\text{valid}/\theta_\text{possible}.$
 
+which each of these in hand, the probably that a circle of radius $r$ is interior is just
+
+$$ P(\text{points form an interior circle}\rvert\text{radius $r$}) = \frac{P_\text{square}(\text{interior})}{P_\text{square}(\text{interior}) + 4P_\text{rect}(\text{interior}) + 4P_\text{curve}(\text{interior})}. $$
+
 **rectangular protuberance**
 
 in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$ this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
