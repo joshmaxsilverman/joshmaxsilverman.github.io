@@ -15,15 +15,16 @@ tags: d
 
 ## Solution
 
-there are two ways to go. 
+there are two ways to go. we can either measure the volume of coordinate space devoted to interior circles, or go after the probability directly.
 
-we can either measure the volume of coordinate space devoted to interior circles, or find the probability that the points are separated by distance $d$ and the probability that a diameter of the length forms an interior circle, and then add it all up.
 
-either way, we end up finding the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square:
+### measurement
 
-$$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms circle contained in the unit square}). $$
+what we want to measure is 
 
-### symmetric
+$$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms circle contained in the unit square}), $$
+
+the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square.
 
 instead of thinking in terms of the two points in $4-$space, we can describe the problem in terms of their center and separation in the plane:
 
@@ -65,13 +66,13 @@ $$ \begin{align}
 
 this approach is nice apart from the unit area changing under our feet. 
 
-### systematic
+### probability
 
-another way to go is probability. the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle.
+the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle
 
 $$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an interior circle of radius $r$}). $$
 
-we can break this up into two simpler distributions:
+we can break this up into two simpler distributions, the probability that two points are separated by distance $2r$ times the probability that a diameter of length $2r$ forms an interior circle, and then add it all up:
 
 $$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) \cdot P(\text{radius $r$}) $$
 
