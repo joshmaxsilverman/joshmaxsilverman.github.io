@@ -80,7 +80,7 @@ $$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an
 
 we can break this up into two simpler distributions, the probability that two points are separated by distance $2r$ times the probability that a diameter of length $2r$ forms an interior circle, and then add it all up:
 
-$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) \cdot P(\text{radius $r$}) $$
+$$ P(\text{points form an interior circle}\rvert\text{radius $r$}) \cdot P(\text{radius $r$}) $$
 
 let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
 
