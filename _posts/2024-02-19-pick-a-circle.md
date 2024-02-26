@@ -76,7 +76,7 @@ this approach is nice apart from the unit area changing under our feet.
 
 the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle
 
-$$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an interior circle}\rvert\,\text{radius $r$}). $$
+$$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an interior circle of radius $r$}). $$
 
 we can break this up into two simpler distributions, the probability that two points are separated by distance $2r$ times the probability that a diameter of length $2r$ forms an interior circle, and then add it all up:
 
