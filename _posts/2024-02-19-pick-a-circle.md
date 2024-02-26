@@ -92,7 +92,7 @@ $$ P(\text{radius $r$}) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\t
 
 the probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
 
-one way to see this is to place two points a distance $d$ apart with the left hand one at the origin. there is $(1-d)$ worth of open space to slide them through before the right hand point hits $1.$ lastly, we can swap the order of the points.
+one way to see this is to place two points a distance $d$ apart on a line with the left hand one starting out at the origin. there is $(1-d)$ worth of open space to slide them through before the right hand point hits $1.$ the $2$ reflects that we can swap the order of the points.
 
 so the probability is
 
