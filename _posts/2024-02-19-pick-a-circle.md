@@ -25,7 +25,7 @@ $$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms inte
 
 the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to interior circles (diameters whose circle is contained in the unit square).
 
-instead of thinking in terms of the two points in $4-$space, we can describe the problem in terms of their center and separation in the plane:
+instead of thinking in terms of the two points in $4$-space, we can describe the problem in terms of their center and separation in the plane:
 
 $$ \begin{align}
   x_c &= \frac12\left(x_1 + x_2\right) \\
