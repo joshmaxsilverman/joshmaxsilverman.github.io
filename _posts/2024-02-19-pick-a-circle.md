@@ -37,13 +37,19 @@ $$ \begin{align}
 
 how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. 
 
+[ drawing of the (1-2r) by (1-2r) square with a few radius r circle drawn at particular points ]
+
 each point on the circle represents a pair (the point, and the point across from it on the circle). the number of such pairs is the annulus of area $(2\pi r)\text{d}r$ around the center. 
 
 since we are just counting phase space, we can add over all such centers and radii. 
 
 $$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
 
-but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
+but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ 
+
+[ drawing of the two grids overlaid ]
+
+we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
 taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
 
@@ -76,7 +82,11 @@ we can break this up into two simpler distributions, the probability that two po
 
 $$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) \cdot P(\text{radius $r$}) $$
 
-let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. the probability of getting radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
+let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
+
+[ drawing of two points separated by components 2r cos theta and 2r sin theta ]
+
+the probability of getting radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
 $$ P(\text{radius $r$}) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
 
@@ -99,7 +109,7 @@ likewise, if the center is more than a radius away from the boundary, the circle
 
 drawing what we've figured out so far, we have:
 
-[drawing]
+[ drawing of the three kinds of region ]
 
 the tricky regions are the area under the semi-circle boundary, and the rectangular protuberance. 
 
@@ -111,7 +121,11 @@ $$ P(\text{points form an interior circle}\rvert\text{radius $r$}) = \frac{P_\te
 
 **rectangular protuberance**
 
-in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$ this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
+in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$
+
+[ drawing of the situation in the rectangular protuberance ]
+
+this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
 
 $$\begin{align} 
   P_\text{rect}(\text{interior}\rvert x_c) &= 2\theta/\pi \\
@@ -130,9 +144,13 @@ $$ \begin{align}
 
 when the center is in the region under the curve, the top and side of the square have distinct extreme angles. at the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ likewise, at the top we have $(1-y_c) = r\cos\theta_\text{top}.$ 
 
+[ drawing of the situation under the curve ]
+
 looking at the angles, this means that the diameter can wiggle through the angle $(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$ 
 
 if we push the diameter through the wall so that one end is in the corner, there is a second band of feasible angles. drawing the diagram, this has the same constraints we just went through. so the total feasible angle is just $2(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$
+
+[ drawing of the second situation ]
 
 solving the equations, this gives
 
