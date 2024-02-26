@@ -25,7 +25,7 @@ $$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms inte
 
 the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to interior circles (diameters whose circle is contained in the unit square).
 
-instead of thinking in terms of the two points in $4$-space, we can describe the problem in terms of their center and separation in the plane:
+instead of thinking in terms of the two points in $4$-space, we can describe the problem in terms of the center and radius of the circle:
 
 $$ \begin{align}
   x_c &= \frac12\left(x_1 + x_2\right) \\
@@ -34,7 +34,7 @@ $$ \begin{align}
   y_r &= \frac12\left(y_1 - y_2\right)
 \end{align} $$
 
-how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the square. 
+how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the unit square. 
 
 [ drawing of the (1-2r) by (1-2r) square with a few radius r circle drawn at particular points ]
 
