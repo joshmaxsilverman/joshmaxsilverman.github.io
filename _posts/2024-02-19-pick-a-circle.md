@@ -117,7 +117,7 @@ the idea is, in each region, to calculate the fraction of possible orientations 
 
 which each of these in hand, the probably that a circle of radius $r$ is interior is just
 
-$$ P(\text{interior}\rvert\text{radius $r$}) = \frac{P_\text{square}(\text{interior}\rvert r)}{P_\text{square}(\text{interior}\rvert r) + 4P_\text{rect}(\text{interior}\rvert r) + 4P_\text{curve}(\text{interior}\rvert r)}. $$
+$$ P(\text{interior}\rvert\text{radius $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
 
 **rectangular protuberance**
 
