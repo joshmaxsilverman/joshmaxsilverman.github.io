@@ -17,12 +17,11 @@ tags: d
 
 there are two ways to go. we can either measure the volume of coordinate space devoted to interior circles, or go after the probability directly.
 
-
 ### measurement
 
 what we want to measure is 
 
-$$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms circle contained in the unit square}), $$
+$$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms interior circle}\rvert x_1,x_2,y_1,y_2), $$
 
 the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to circles with diameters contained in the square.
 
