@@ -117,25 +117,25 @@ the idea is, in each region, to calculate the fraction of possible orientations 
 
 which each of these in hand, the probably that a circle of radius $r$ is interior is just
 
-$$ P(\text{interior}\rvert\text{radius $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
+$$ P(\text{interior circle}\rvert\text{radius $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
 
 **rectangular protuberance**
 
-in the rectangular protuberance, we have an interior circle so long as $x_c$ is further from the wall than $r\sin\theta.$
+in the rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
 
 [ drawing of the situation in the rectangular protuberance ]
 
-this defines a range of angles $(-\theta,\theta)$, between which the circle won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the circle is interior is just 
+this defines a range of angles $(-\theta,\theta)$, between which the diameter won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the diameter is valid is just 
 
 $$\begin{align} 
-  P_\text{rect}(\text{interior}\rvert x_c) &= 2\theta/\pi \\
+  P_\text{rect}(\text{valid}\rvert x_c) &= 2\theta/\pi \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
 \end{align} $$
 
-adding up over all possible values of $x_c,$ the probability of a circle whose center is in the rectangle being interior is
+adding up over all possible values of $x_c,$ the probability of a diameter whose center is in the rectangle being valid is
 
 $$ \begin{align}
-  P_\text{rect}(\text{interior}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{interior}\rvert x_c)  \\
+  P_\text{rect}(\text{valid}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
   &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
@@ -154,17 +154,17 @@ if we push the diameter through the wall so that one end is in the corner, there
 
 solving the equations, this gives
 
-$$ P_\text{curve}(\text{interior}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
+$$ P_\text{curve}(\text{valid}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
 
 summing over $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P_\text{curve}(\text{interior}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{interior}\lvert x_c,y_c) \\
+    P_\text{curve}(\text{valid}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
   \end{align} 
 $$
   
-so, the probability that a randomly placed circle of diameter $2r$ is just
+so, the probability that a randomly placed diameter $2r$ forms an interior circle is just
 
 $$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P_\text{square}(\text{interior})}{P_\text{square}(\text{interior}) + 4P_\text{rect}(\text{interior}) + 4P_\text{curve}(\text{interior})}. $$
 
