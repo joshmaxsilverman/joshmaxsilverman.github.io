@@ -165,7 +165,7 @@ $$
   
 so, the probability that a randomly placed diameter $2r$ forms an interior circle is just
 
-$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P_\text{square}(\text{interior})}{P_\text{square}(\text{interior}) + 4P_\text{rect}(\text{interior}) + 4P_\text{curve}(\text{interior})}. $$
+$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
 
 
 <br>
