@@ -159,7 +159,8 @@ summing over $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P_\text{curve}(\text{valid}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
+    P_\text{curve}(\text{valid}) &= \frac{1}{\pi}\int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
+    &= \frac{(\pi-3)r^2}{2\pi}
   \end{align} 
 $$
   
