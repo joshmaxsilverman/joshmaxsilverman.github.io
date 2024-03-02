@@ -132,7 +132,7 @@ We know that $P(\text{valid}\rvert \text{square}, r) = 1,$ but we need to find $
 
 These probabilities are equal to the fraction of possible orientations in each region that lead to valid diameters: 
 
-$$ P = \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
+$$ P(\text{valid}) = \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
 
 Which these in hand, the probably that a circle of radius $r$ is interior is just
 
