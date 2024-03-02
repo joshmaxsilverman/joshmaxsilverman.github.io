@@ -199,7 +199,7 @@ $$ P(\text{interior}\rvert r) = \frac{\pi(1-2r)^2}{\pi - 4r(2-r)}. $$
 So, we have
 
 $$ \begin{align} 
-  P(\text{interior}\rvert r)P(r) &= \frac{\pi(1-2r)^2}{\pi - 4r(2-r)} 8r\left[\pi - 4r(2-r)\right] \\
+  P(\text{interior}\rvert r)P(r) &= \frac{\pi(1-2r)^2}{\pi - 4r(2-r)} \cdot 8r\left(\pi - 4r(2-r)\right) \\
   &= 8\pi r(1-2r)^2
   \end{align}
 $$
