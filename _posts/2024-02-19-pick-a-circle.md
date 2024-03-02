@@ -95,7 +95,7 @@ Let's do the second piece first. Since we pick the points randomly, we can treat
 
 The probability to get radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
-$$ P(\text{radius $r$}) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
+$$ P(r) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
 
 The probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
 
