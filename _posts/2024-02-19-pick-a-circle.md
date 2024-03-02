@@ -126,7 +126,7 @@ We can also have valid centers inside the four $r\times(1-r)$ rectangles around 
 
 Drawing what we've figured out so far, we have:
 
-
+[ drawing of the three kinds of region ]
 
 We know that $P(\text{interior}\rvert r)_\text{square} = 1,$ but we need to find $P(\text{interior}\rvert r)_\text{curve}$ and $P(\text{interior}\rvert r)_\text{rectangle}.$ 
 
