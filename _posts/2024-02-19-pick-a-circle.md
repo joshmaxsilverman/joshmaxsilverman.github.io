@@ -206,6 +206,12 @@ $$
 
 which is the same expression we found from the measurement argument. 
 
-So, the probability is again $P(\text{exterior}) = 1-P(\text{interior}) = 1 - \pi/6.$
+So, the probability is again 
+
+$$ \begin{align}
+    P(\text{exterior}) &= 1-P(\text{interior}) \\
+                       &= 1 - \pi/6.
+   \end{align}
+$$
 
 <br>
