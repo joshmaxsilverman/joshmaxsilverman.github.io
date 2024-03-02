@@ -116,13 +116,13 @@ The next piece is straightforward in concept, but tricky to calculate.
 
 If we randomly place the center of the circle at coordinates $(x_c,y_c),$ what is the probability that it forms an interior circle?
 
-As before, the circle will be interior if its center is more than one radius from the boundary. This means that the only circles with their center inside the $(1-2r)$ by $(1-2r)$ sub-square are interior. 
+As before, the circle will be interior if its center is more than one radius from the boundary. This means that the only circles with their center inside the $(1-2r)\times (1-2r)$ sub-square are interior. 
 
 These are the only diameters that form interior circles. However, there are other diameters to consider.
 
 First of all, no center can be within a radius of the square's boundary. This means that there are no valid centers inside the semi-circles of radius $r$ around each corner. But we can have valid centers "under" these semi-circles.
 
-We can also have valid centers inside the four $r$ by $(1-r)$ rectangles around the central square.
+We can also have valid centers inside the four $r\times(1-r)$ rectangles around the central square.
 
 Drawing what we've figured out so far, we have:
 
