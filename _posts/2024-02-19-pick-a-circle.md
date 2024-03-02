@@ -17,7 +17,7 @@ tags: conditional-probability transformations
 
 There are two ways to go after this problem. We can measure the volume of coordinate space devoted to interior circles, or we can go after the probability directly.
 
-### Measurement
+## Measurement
 
 In the first approach, what we want to measure is 
 
@@ -75,7 +75,7 @@ $$ 1 - \frac{\pi}{6}. $$
 
 This approach is nice apart from the unit area changing under our feet. 
 
-### Probability
+## Probability
 
 Let's write the probability that a random pair of points makes an interior circle as
 
