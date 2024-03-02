@@ -219,5 +219,12 @@ What do we get for all this detailed work, beyond a testament to the self-consis
 Forming a heatmap from the expressions above, and building the same from a $N = 10^8$ round simulation, we find:
 
 
+![](/img/2024-03-02-Pvalid-density-plot.png){:width="400px" class="image-centered"}
+
+{:.caption}
+
+The empirical and analytical distributions, computed for $r=0.4.$
+
+
 
 <br>
