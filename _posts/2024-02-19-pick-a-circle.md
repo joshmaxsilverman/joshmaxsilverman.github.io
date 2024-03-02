@@ -130,14 +130,15 @@ Drawing what we've figured out so far, we have:
 
 We know that $P(\text{valid}\rvert \text{square}, r) = 1,$ but we need to find $P(\text{valid}\rvert \text{curve}, r)$ and $P(\text{valid}\rvert \text{rectangle}, r).$ 
 
+These probabilities are equal to the fraction of possible orientations in each region that lead to valid diameters: 
 
-the idea is, in each region, to calculate the fraction of possible orientations that lead to the circle being interior: $\theta_\text{valid}/\theta_\text{possible}.$
+$$ P = \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
 
-which each of these in hand, the probably that a circle of radius $r$ is interior is just
+Which these in hand, the probably that a circle of radius $r$ is interior is just
 
-$$ P(\text{interior circle}\rvert\text{radius $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
+$$ P(\text{interior}\rvert r) = \frac{P(\text{valid}\rvert \text{square}, r)}{P(\text{valid}\rvert \text{square}, r) + 4P(\text{valid}\rvert \text{rectangle}, r) + 4P(\text{valid}\rvert \text{curve}, r)}. $$
 
-**rectangular protuberance**
+**Rectangular protuberance**
 
 in the rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
 
