@@ -175,7 +175,7 @@ If we rotate the diameter so that one end is in the corner, there is a second ba
 
 So, the total feasible angle is 
 
-$$  \theta_\text{curve}^\text{feasible} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$
+$$  \theta_\text{curve} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$
 
 [ drawing of the second situation ]
 
