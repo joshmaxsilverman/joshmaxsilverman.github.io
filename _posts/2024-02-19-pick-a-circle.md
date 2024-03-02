@@ -149,8 +149,8 @@ Inside the right rectangular protuberance, we have a valid diameter so long as $
 This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
 $$\begin{align} 
-  P_\text{rect}(\text{valid}\rvert x_c) &= 2\theta/\pi \\
-  &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
+  P_\text{rect}(\text{valid}\rvert x_c) &= \frac{2\theta}{\pi} \\
+  &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right)
 \end{align} $$
 
 Adding up over all possible values of $x_c,$ the probability of a valid diameter in the rectangle is
