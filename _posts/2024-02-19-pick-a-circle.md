@@ -204,6 +204,8 @@ $$ \begin{align}
   \end{align}
 $$
 
-which is the same expression we found from the measurement argument and, so, the probability is again $P(\text{exterior}) = 1-P(\text{interior}) = 1 - \pi/6.$
+which is the same expression we found from the measurement argument. 
+
+So, the probability is again $P(\text{exterior}) = 1-P(\text{interior}) = 1 - \pi/6.$
 
 <br>
