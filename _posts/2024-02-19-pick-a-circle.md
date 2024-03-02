@@ -128,7 +128,7 @@ Drawing what we've figured out so far, we have:
 
 [ drawing of the three kinds of region ]
 
-We know that $P(\text{interior}\rvert r)_\text{square} = 1,$ but we need to find $P(\text{interior}\rvert r)_\text{curve}$ and $P(\text{interior}\rvert r)_\text{rectangle}.$ 
+We know that $P(\text{valid}\rvert r, \text{square}) = 1,$ but we need to find $P(\text{valid}\rvert r, \text{curve})$ and $P(\text{valid}\rvert , \text{rectangle}).$ 
 
 
 the idea is, in each region, to calculate the fraction of possible orientations that lead to the circle being interior: $\theta_\text{valid}/\theta_\text{possible}.$
