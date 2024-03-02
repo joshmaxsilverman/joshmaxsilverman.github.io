@@ -15,52 +15,52 @@ tags: d
 
 ## Solution
 
-there are two ways to go. we can either measure the volume of coordinate space devoted to interior circles, or go after the probability directly.
+There are two ways to go after this problem. We can measure the volume of coordinate space devoted to interior circles, or we can go after the probability directly.
 
-### measurement
+### Measurement
 
-what we want to measure is 
+In the first approach, what we want to measure is 
 
 $$ \int dx_1 \int dy_1 \int dx_2 \int dy_2\ \mathbb{I}(\text{diameter forms interior circle}\rvert x_1,x_2,y_1,y_2), $$
 
 the volume of $(x_1,y_1,x_2,y_2)$-space that contributes to interior circles (diameters whose circle is contained in the unit square).
 
-instead of thinking in terms of the two points in $4$-space, we can describe the problem in terms of the center and radius of the circle:
+Instead of thinking in terms of the two points in $4$-space, we can think about the problem in terms of the center and radius of the resulting circle:
 
 $$ \begin{align}
   x_c &= \frac12\left(x_1 + x_2\right) \\
   y_c &= \frac12\left(y_1 + y_2\right) \\
   x_r &= \frac12\left(x_1 - x_2\right) \\
-  y_r &= \frac12\left(y_1 - y_2\right)
+  y_r &= \frac12\left(y_1 - y_2\right).
 \end{align} $$
 
-how many positions can the center take? for a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ square inside the unit square. 
+How many positions can the center take? For a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ sub-square inside the unit square. 
 
 [ drawing of the (1-2r) by (1-2r) square with a few radius r circle drawn at particular points ]
 
-each point on the circle represents a pair (the point, and the point across from it on the circle). the number of such pairs is the annulus of area $(2\pi r)\text{d}r$ around the center. 
+Each point on the circle represents a pair (the point itself, and the point across from it on the same circle). The number of such pairs is proportional to the annulus of area $(2\pi r)\text{d}r$ about the center. 
 
-since we are just counting phase space, we can add over all such centers and radii. 
+Since we're just counting phase space, we can sum over all such centers and radii:
 
 $$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
 
-but we need to be careful about the unit area in either set of coordinates. in moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ 
+But we need to be careful about the unit area in the new coordinates. In moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ 
 
 [ drawing of the two grids overlaid ]
 
-we can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
+We can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
-taking the derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
+Taking a derivative, we get $d\vec{x}_c = \frac12\left(d\vec{x}_1 + d\vec{x}_2\right)$ which has magnitude $\frac12\sqrt{dx_1^2 + dx_2^2} = \frac{1}{\sqrt{2}}dx_1.$ 
 
-taking cross products, we get $dA = \lvert d\vec{x}_c\times d\vec{x}_r\rvert = \lvert\frac14\left(d\vec{x}_1\times d\vec{x}_2 + d\vec{x}_2\times d\vec{x}_1\right)\rvert = \frac{dx_1dx_2}{2},$ which gives us 
+Taking cross products, we get $dA = \lvert d\vec{x}_c\times d\vec{x}_r\rvert = \lvert\frac14\left(d\vec{x}_1\times d\vec{x}_2 + d\vec{x}_2\times d\vec{x}_1\right)\rvert = \frac{dx_1dx_2}{2},$ which gives us 
 
 $$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
-with this, we can finish the expression for the volume of phase space contributed by circles of diameter $2r:$
+So, $dx_1\,dx_2\,dy_1\,dy_2 = 4dx_c\,dx_r\,dy_c\,dy_r.$ With this, we can finish the expression for the volume of phase space contributed by circles of diameter $2r:$
 
 $$ dr\,4\times 2\pi r(1-2r)^2. $$
 
-integrating this over all valid radii, we get 
+Integrating over all valid radii, we get 
 
 $$ \begin{align}
   P(\text{interior circle}) &= 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 \\
@@ -69,48 +69,68 @@ $$ \begin{align}
                             &= \frac{\pi}{6}
 \end{align} $$
 
-this approach is nice apart from the unit area changing under our feet. 
+And the probability that a random such circle overlaps the outside is 
 
-### probability
+$$ 1 - \frac{\pi}{6}. $$
 
-the probability that a random pair of points makes an interior circle is the sum over all possible radii $r$ that a pair of points make a circle of radius $r$ that's an interior circle
+This approach is nice apart from the unit area changing under our feet. 
 
-$$ P(\text{points forms an interior circle}) = \int dr\, P(\text{points forms an interior circle of radius $r$}). $$
+### Probability
 
-we can break this up into two simpler distributions, the probability that two points are separated by distance $2r$ times the probability that a diameter of length $2r$ forms an interior circle, and then add it all up:
+Let's write the probability that a random pair of points makes an interior circle as
 
-$$ P(\text{points form an interior circle}\rvert\text{radius $r$}) \cdot P(\text{radius $r$}) $$
+$$ P(\text{interior}). $$
 
-let's do the second piece first. since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
+This is hard, but we can condition on the circles radius.
+
+$$ P(\text{interior}) = \int dr\, P(\text{interior}\rvert r)P(r). $$
+
+This gives us two new distributions to find, the probability that a random circle of radius $r$ is interior, and the probability that a random circle has radius $r.$
+
+### Finding $P(r)$
+
+Let's do the second piece first. Since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
 
 [ drawing of two points separated by components 2r cos theta and 2r sin theta ]
 
-the probability of getting radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
+The probability to get radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
 $$ P(\text{radius $r$}) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
 
-the probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
+The probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
 
-one way to see this is to place two points a distance $d$ apart on a line with the left hand one starting out at the origin. there is $(1-d)$ worth of open space to slide them through before the right hand point hits $1.$ the $2$ reflects that we can swap the order of the points.
+To see this, let's place two points a distance $d$ apart on a line with the left hand one starting out at the origin. There is $(1-d)$ worth of open space to slide them before the right hand point hits $1.$ Since we can swap the order of the points and get another valid arrangement, we get a factor of $2.$
 
-so the probability is
+[ diagram of this situation ]
+
+Now, the angle of the diameter is random, so we have to average over it. Putting this all together, $P(r)$ is
 
 $$ \begin{align}
-  P(\text{radius $r$}) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-2r\cos\theta)(1-2r\sin\theta) \\
+  P($r$) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-2r\cos\theta)(1-2r\sin\theta) \\
   &= 8r(\pi -4(2-r)r). 
 \end{align} $$
 
-the next piece is straightforward in concept, but tricky to calculate. if we randomly place the center of the circle at coordinates $(x_c,y_c),$ what is the probability that it forms an interior circle.
+### Finding $P(\text{interior}\rvert r)
 
-first of all, the center can't be within a radius of the square's boundary. this means that the probability is $0$ inside the semi-circles of radius $r$ around each corner.
+The next piece is straightforward in concept, but tricky to calculate. 
 
-likewise, if the center is more than a radius away from the boundary, the circle will definitely be interior, so the probability is $1$ inside the central $(1-2r)$ by $(1-2r)$ square. 
+If we randomly place the center of the circle at coordinates $(x_c,y_c),$ what is the probability that it forms an interior circle?
 
-drawing what we've figured out so far, we have:
+As before, the circle will be interior if its center is more than one radius from the boundary. This means that the only circles with their center inside the $(1-2r)$ by $(1-2r)$ sub-square are interior. 
+
+These are the only diameters that form interior circles. However, there are other diameters to consider.
+
+First of all, no center can be within a radius of the square's boundary. This means that there are no valid centers inside the semi-circles of radius $r$ around each corner. But we can have valid centers "under" these semi-circles.
+
+We can also have valid centers inside the four $r$ by $(1-r)$ rectangles around the central square.
+
+Drawing what we've figured out so far, we have:
 
 [ drawing of the three kinds of region ]
 
-the tricky regions are the area under the semi-circle boundary, and the rectangular protuberance. 
+We know that $P(\text{interior}|r)_\text{square} = 1,$ but we need to find $P(\text{interior}|r)_\text{curve}$ and $P(\text{interior}|r)_\text{rectangle}.$
+
+---
 
 the idea is, in each region, to calculate the fraction of possible orientations that lead to the circle being interior: $\theta_\text{valid}/\theta_\text{possible}.$
 
