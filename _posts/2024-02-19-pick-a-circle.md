@@ -106,7 +106,7 @@ To see this, let's place two points a distance $d$ apart on a line with the left
 Now, the angle of the diameter is random, so we have to average over it. Putting this all together, $P(r)$ is
 
 $$ \begin{align}
-  P($r$) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-2r\cos\theta)(1-2r\sin\theta) \\
+  P(r) &= 4\int\limits_0^{\frac12\pi} d\theta\, 4(1-2r\cos\theta)(1-2r\sin\theta) \\
   &= 8r(\pi -4(2-r)r). 
 \end{align} $$
 
