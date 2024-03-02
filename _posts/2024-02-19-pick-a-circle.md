@@ -140,18 +140,20 @@ $$ P(\text{interior}\rvert r) = \frac{P(\text{valid}\rvert \text{square}, r)}{P(
 
 **Rectangular protuberance**
 
-in the rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
+The four protuberances are symmetric, and we'll consider the right one for the purpose of this calculation. 
+
+Inside the right rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
 
 [ drawing of the situation in the rectangular protuberance ]
 
-this defines a range of angles $(-\theta,\theta)$, between which the diameter won't cross the wall. solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ since the angle is chosen at random, the probability that the diameter is valid is just 
+This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
 $$\begin{align} 
   P_\text{rect}(\text{valid}\rvert x_c) &= 2\theta/\pi \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{R}\right)
 \end{align} $$
 
-adding up over all possible values of $x_c,$ the probability of a diameter whose center is in the rectangle being valid is
+Adding up over all possible values of $x_c,$ the probability of a valid diameter in the rectangle is
 
 $$ \begin{align}
   P_\text{rect}(\text{valid}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
@@ -159,23 +161,29 @@ $$ \begin{align}
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
 
-**under the curve**
+**Under the curve**
 
-when the center is in the region under the curve, the top and side of the square have distinct extreme angles. at the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ likewise, at the top we have $(1-y_c) = r\cos\theta_\text{top}.$ 
+When the center is in the region under the curve, the top and side of the square have distinct extreme angles. At the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ Likewise, at the top it can tilt until we have $(1-y_c) = r\cos\theta_\text{top}.$ 
 
 [ drawing of the situation under the curve ]
 
-looking at the angles, this means that the diameter can wiggle through the angle $(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$ 
+The angle the diameter can wiggle through is what's left over: 
 
-if we push the diameter through the wall so that one end is in the corner, there is a second band of feasible angles. drawing the diagram, this has the same constraints we just went through. so the total feasible angle is just $2(\frac12\pi - \theta_\text{right} - \theta_\text{top}).$
+$$ (\frac12\pi - \theta_\text{right} - \theta_\text{top}). $$ 
+
+If we rotate the diameter so that one end is in the corner, there is a second band of feasible angles. Drawing the diagram, this has the same constraints we just went through. 
+
+So, the total feasible angle is 
+
+$$ 2(\frac12\pi - \theta_\text{right} - \theta_\text{top}). $$
 
 [ drawing of the second situation ]
 
-solving the equations, this gives
+Solving the equations, this gives
 
 $$ P_\text{curve}(\text{valid}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
 
-summing over $(x_c,y_c)$ gets us
+Summing over all possible $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
@@ -184,9 +192,18 @@ $$
   \end{align} 
 $$
   
-so, the probability that a randomly placed diameter $2r$ forms an interior circle is just
+With these expressions in hand, we can plug them into the expression for $P(\text{interior}\rvert r),$ and after some simplification, get
 
-$$ P(\text{points form an interior circle}\rvert\text{diameter $r$}) = \frac{P(\text{square}\rvert r)}{P(\text{square}\rvert r) + 4P(\text{rectangle}\rvert r) + 4P(\text{curve}\rvert r)}. $$
+$$ P(\text{interior}\rvert r) = \frac{\pi(1-2r)^2}{\pi - 4r(2-r)}. $$
 
+So, we have
+
+$$ \begin{align} 
+  P(\text{interior}\rvert r)P(r) &= \frac{\pi(1-2r)^2}{\pi - 4r(2-r)} 8r\left[\pi - 4r(2-r)\right] \\
+  &= 8\pi r(1-2r)^2
+  \end{align}
+$$
+
+which is the same expression we found from the measurement argument and, so, the probability is again $P(\text{exterior}) = 1-P(\text{interior}) = 1 - \pi/6.$
 
 <br>
