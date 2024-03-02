@@ -169,13 +169,13 @@ When the center is in the region under the curve, the top and side of the square
 
 The angle the diameter can wiggle through is what's left over: 
 
-$$ (\frac12\pi - \theta_\text{right} - \theta_\text{top}). $$ 
+$$ \left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$ 
 
 If we rotate the diameter so that one end is in the corner, there is a second band of feasible angles. Drawing the diagram, this has the same constraints we just went through. 
 
 So, the total feasible angle is 
 
-$$ 2(\frac12\pi - \theta_\text{right} - \theta_\text{top}). $$
+$$  \theta_\text{curve}^\text{feasible} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$
 
 [ drawing of the second situation ]
 
