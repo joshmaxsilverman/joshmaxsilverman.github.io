@@ -71,7 +71,7 @@ $$ \begin{align}
 
 And the probability that a random such circle overlaps the outside is 
 
-$$ 1 - \frac{\pi}{6}. $$
+$$ P(\text{overlap}) = 1 - \frac{\pi}{6}. $$
 
 This approach is nice apart from the unit area changing under our feet. 
 
@@ -209,7 +209,7 @@ which is the same expression we found from the measurement argument.
 So, the probability is again 
 
 $$ \begin{align}
-    P(\text{exterior}) &= 1-P(\text{interior}) \\
+    P(\text{overlap}) &= 1-P(\text{interior}) \\
                        &= 1 - \pi/6.
    \end{align}
 $$
