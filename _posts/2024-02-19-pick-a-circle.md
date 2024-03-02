@@ -11,7 +11,7 @@ tags: conditional-probability transformations
 
 <!--more-->
 
-([Jane Street]([URL](https://www.janestreet.com/puzzles/some-off-square-index/)))
+([Jane Street](https://www.janestreet.com/puzzles/some-off-square-index/))
 
 ## Solution
 
