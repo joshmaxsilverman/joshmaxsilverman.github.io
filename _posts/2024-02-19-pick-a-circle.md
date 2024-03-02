@@ -110,7 +110,7 @@ $$ \begin{align}
   &= 8r(\pi -4(2-r)r). 
 \end{align} $$
 
-### Finding $P(\text{interior}\rvert r)
+### Finding $P(\text{interior}\rvert r)$
 
 The next piece is straightforward in concept, but tricky to calculate. 
 
