@@ -151,7 +151,7 @@ The four protuberances are symmetric, and we'll consider the right one for the p
 Inside the right rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
 
 <!--[ drawing of the situation in the rectangular protuberance ]-->
-![](/img/2024-03-02-rectangular-protuberance.png){:width="450 px" class="image-centered"}
+![](/img/2024-03-02-rectangular-protuberance.png){:width="350 px" class="image-centered"}
 
 This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
@@ -173,7 +173,7 @@ $$ \begin{align}
 When the center is in the region under the curve, the top and side of the square have distinct extreme angles. At the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ Likewise, at the top it can tilt until we have $(1-y_c) = r\cos\theta_\text{top}.$ 
 
 <!--[ drawing of the situation under the curve ]-->
-![](/img/2024-03-02-curve-diagram-1.png){:width="450 px" class="image-centered"}
+![](/img/2024-03-02-curve-diagram-1.png){:width="350 px" class="image-centered"}
 
 The angle the diameter can wiggle through is what's left over: 
 
@@ -186,7 +186,7 @@ So, the total feasible angle is
 $$  \theta_\text{curve} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$
 
 <!--[ drawing of the second situation ]-->
-![](/img/2024-03-02-curve-diagram-2.png){:width="450 px" class="image-centered"}
+![](/img/2024-03-02-curve-diagram-2.png){:width="350 px" class="image-centered"}
 
 Solving the equations, this gives
 
