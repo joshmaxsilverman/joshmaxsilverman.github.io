@@ -48,7 +48,8 @@ $$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
 
 But we need to be careful about the unit area in the new coordinates. In moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ 
 
-[ drawing of the two grids overlaid ]
+<!--[ drawing of the two grids overlaid ]-->
+![](/img/2024-03-02-tilted-grid.png){:width="450 px" class="image-centered"}
 
 We can see this by calculating the magnitude of e.g. $d\vec{x}_c$ or by calculating the area element $dA = dx_1\,dx_2$ in terms of $dx_c$ and $dx_r.$
 
@@ -93,7 +94,8 @@ This gives us two new distributions to find, the probability that a random circl
 
 Let's do the second piece first. Since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
 
-[ drawing of two points separated by components 2r cos theta and 2r sin theta ]
+<!--[ drawing of two points separated by components 2r cos theta and 2r sin theta ]-->
+![](/img/2024-03-02-diameter-components.png){:width="450 px" class="image-centered"}
 
 The probability to get radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
@@ -103,7 +105,7 @@ The probability that two random unit variables are separated by a distance $d$ i
 
 To see this, let's place two points a distance $d$ apart on a line with the left hand one starting out at the origin. There is $(1-d)$ worth of open space to slide them before the right hand point hits $1.$ Since we can swap the order of the points and get another valid arrangement, we get a factor of $2.$
 
-[ diagram of this situation ]
+<!--[ diagram of this situation ]-->
 
 Now, the angle of the diameter is random, so we have to average over it. Putting this all together, $P(r)$ is
 
@@ -128,7 +130,9 @@ We can also have valid centers inside the four $r\times(1-r)$ rectangles around 
 
 Drawing what we've figured out so far, we have:
 
-[ drawing of the three kinds of region ]
+<!--[ drawing of the three kinds of region ]-->
+![](/img/2024-03-02-region-drawing.png){:width="450 px" class="image-centered"}
+
 
 We know that $P(\text{valid}\rvert \text{square}, r) = 1,$ but we need to find $P(\text{valid}\rvert \text{curve}, r)$ and $P(\text{valid}\rvert \text{rectangle}, r).$ 
 
@@ -146,7 +150,8 @@ The four protuberances are symmetric, and we'll consider the right one for the p
 
 Inside the right rectangular protuberance, we have a valid diameter so long as $x_c$ is further from the wall than $r\sin\theta.$
 
-[ drawing of the situation in the rectangular protuberance ]
+<!--[ drawing of the situation in the rectangular protuberance ]-->
+![](/img/2024-03-02-rectangular-protuberance.png){:width="450 px" class="image-centered"}
 
 This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
@@ -167,7 +172,8 @@ $$ \begin{align}
 
 When the center is in the region under the curve, the top and side of the square have distinct extreme angles. At the right wall, the diameter can tilt until $(1-x_c) = r\cos\theta_\text{right}.$ Likewise, at the top it can tilt until we have $(1-y_c) = r\cos\theta_\text{top}.$ 
 
-[ drawing of the situation under the curve ]
+<!--[ drawing of the situation under the curve ]-->
+![](/img/2024-03-02-curve-diagram-1.png){:width="450 px" class="image-centered"}
 
 The angle the diameter can wiggle through is what's left over: 
 
@@ -179,7 +185,8 @@ So, the total feasible angle is
 
 $$  \theta_\text{curve} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\text{top}\right). $$
 
-[ drawing of the second situation ]
+<!--[ drawing of the second situation ]-->
+![](/img/2024-03-02-curve-diagram-2.png){:width="450 px" class="image-centered"}
 
 Solving the equations, this gives
 
