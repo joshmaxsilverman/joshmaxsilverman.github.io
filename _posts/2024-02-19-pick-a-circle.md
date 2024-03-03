@@ -37,7 +37,7 @@ $$ \begin{align}
 
 How many positions can the center take? For a circle of radius $r,$ the center can occupy any position inside the $(1-2r)$ by $(1-2r)$ sub-square inside the unit square. 
 
-<-- [ drawing of the (1-2r) by (1-2r) square with a few radius r circle drawn at particular points ] -->
+<!-- [ drawing of the (1-2r) by (1-2r) square with a few radius r circle drawn at particular points ] -->
 ![](/img/2024-03-03-square-with-circles.png){:width="450 px" class="image-centered"}
 
 Each point on the circle represents a pair (the point itself, and the point across from it on the same circle). The number of such pairs is proportional to the annulus of area $(2\pi r)\text{d}r$ about the center. 
