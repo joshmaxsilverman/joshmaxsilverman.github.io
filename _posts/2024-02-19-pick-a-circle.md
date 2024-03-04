@@ -137,7 +137,7 @@ The probability that a valid diameter forms an interior circle is just the proba
 
 $$ P(\text{interior}\rvert r) = \frac{P(\text{square}\rvert \text{valid}, r)}{P(\text{square}\rvert \text{valid}, r) + 4P(\text{curve}\rvert \text{valid}, r) + 4P(\text{rectangle}\rvert \text{valid}, r)}. $$
 
-Easier to calculate is the probability that a diameter is valid given that it's in a particular region. For example, we can rewrite $P(\text{square}\rvert\text{valid}, r)$ like
+Easier to calculate is the probability that a diameter is valid inside a particular region. For example, we can rewrite $P(\text{square}\rvert\text{valid}, r)$ like
 
 $$ P(\text{square}\rvert\text{valid}, r) = \frac{P(\text{square, valid}\rvert r)}{P(\text{valid}\rvert r)}. $$
 
