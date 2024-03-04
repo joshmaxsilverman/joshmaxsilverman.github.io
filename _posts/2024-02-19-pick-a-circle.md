@@ -84,7 +84,7 @@ Let's write the probability that a random pair of points makes an interior circl
 
 $$ P(\text{interior}). $$
 
-This is hard, but we can condition on the circles radius.
+This is hard, but we can condition on the circle's radius.
 
 $$ P(\text{interior}) = \int dr\, P(\text{interior}\rvert r)P(r). $$
 
@@ -116,7 +116,7 @@ $$ \begin{align}
 
 ### Finding $P(\text{interior}\rvert r)$
 
-The next piece is straightforward in concept, but tricky to calculate. 
+This piece is straightforward in concept, but tricky to calculate. 
 
 If we randomly place the center of the circle at coordinates $(x_c,y_c),$ what is the probability that it forms an interior circle?
 
@@ -124,9 +124,9 @@ As before, the circle will be interior if its center is more than one radius fro
 
 These are the only diameters that form interior circles. However, there are other diameters to consider.
 
-First of all, no center can be within a radius of the square's boundary. This means that there are no valid centers inside the semi-circles of radius $r$ around each corner. But we can have valid centers "under" these semi-circles.
+First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circlar curves of radius $r$ around each corner can form interior circles. But we can have centers "under" these curves form interior circles.
 
-We can also have valid centers inside the four $r\times(1-r)$ rectangles around the central square.
+We can also have centers form interior circles inside the four $r\times(1-r)$ rectangles around the central square.
 
 Drawing what we've figured out so far, we have:
 
@@ -134,7 +134,7 @@ Drawing what we've figured out so far, we have:
 ![](/img/2024-03-02-region-drawing.png){:width="450 px" class="image-centered"}
 
 
-We know that $P(\text{valid}\rvert \text{square}, r) = 1,$ but we need to find $P(\text{valid}\rvert \text{curve}, r)$ and $P(\text{valid}\rvert \text{rectangle}, r).$ 
+We know that $P(\text{interior}\rvert \text{square}, r) = 1,$ but we need to find $P(\text{valid}\rvert \text{curve}, r)$ and $P(\text{valid}\rvert \text{rectangle}, r).$ 
 
 These probabilities are equal to the fraction of possible orientations in each region that lead to valid diameters: 
 
