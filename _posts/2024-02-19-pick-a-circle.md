@@ -147,9 +147,9 @@ $$ P(\text{interior}\rvert r) = \frac{P(\text{square, valid} \rvert r)}{P(\text{
 
 We know that $P(\text{square, valid}\rvert r) = (1-2r)^2,$ but we need to find $P(\text{curve, valid}\rvert r)$ and $P(\text{rectangle, valid}\rvert r).$ 
 
-These probabilities are equal to the fraction of possible orientations in each region that lead to valid diameters: 
+These probabilities are equal to the fraction of possible orientations that lead to valid diameters in each region: 
 
-$$ P(\text{valid}) = \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
+$$ \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
 
 <!-- Which these in hand, the probably that a circle of radius $r$ is interior is just
 
