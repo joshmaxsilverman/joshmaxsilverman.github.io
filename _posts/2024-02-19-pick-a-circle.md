@@ -69,10 +69,10 @@ $$ \begin{align}
   P(\text{interior circle}) &= 8\pi\int\limits_0^\frac{1}{2}dr\, r(1-2r)^2 \\
                             &= 8\pi \int\limits_0^{\frac12}dr\, \frac12\left[(1-2r)^2 - (1-2r)(1-2r)^2\right] \\
                             &= 2\pi \int\limits_0^1 du\, \left[(1-u)^2 - (1-u)^3\right] \\
-                            &= \frac{\pi}{6}
+                            &= \frac{\pi}{6},
 \end{align} $$
 
-And the probability that a random such circle overlaps the outside is 
+and the probability that a random such circle overlaps the outside is 
 
 $$ P(\text{overlap}) = 1 - \frac{\pi}{6}. $$
 
@@ -92,7 +92,7 @@ This gives us two new distributions to find, the probability that a random circl
 
 ### Finding $P(r)$
 
-Let's do the second piece first. Since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. 
+Let's do the second piece first. 
 
 <!--[ drawing of two points separated by components 2r cos theta and 2r sin theta ]-->
 ![](/img/2024-03-02-diameter-components.png){:width="450 px" class="image-centered"}
@@ -101,9 +101,9 @@ The probability to get radius $r$ is the probability that the $x$ and $y$ compon
 
 $$ P(r) = \int d\theta\, P(\text{$x_1-x_2 = 2r \cos\theta$})P(\text{$y_1-y_2 = 2r \sin\theta$}). $$
 
-The probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
+Since we pick the points randomly, we can treat the $x$ and $y$ coordinates independently. The probability that two random unit variables are separated by a distance $d$ is just $2(1-d).$ 
 
-To see this, let's place two points a distance $d$ apart on a line with the left hand one starting out at the origin. There is $(1-d)$ worth of open space to slide them before the right hand point hits $1.$ Since we can swap the order of the points and get another valid arrangement, we get a factor of $2.$
+To see this, we can place two points a distance $d$ apart on a line with the left hand point starting out at the origin. There is $(1-d)$ worth of open space to slide them before the right hand point hits $1.$ Since we can swap the order of the points and get another valid arrangement, we get a factor of $2.$
 
 <!--[ diagram of this situation ]-->
 
@@ -122,18 +122,18 @@ If we randomly place the center of the circle at coordinates $(x_c,y_c),$ what i
 
 As before, the circle will be interior if its center is more than one radius from the boundary. This means that the only circles with their center inside the $(1-2r)\times (1-2r)$ sub-square are interior. 
 
-These are the only diameters that form interior circles. However, there are other diameters to consider.
+These are the only diameters that form interior circles. However, there are other valid diameters to consider.
 
-First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circlar curves of radius $r$ around each corner can form interior circles. But we can have centers "under" these curves form interior circles.
+First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circlar curves of radius $r$ around each corner can form valid diameters (or interior circles). But we can have centers "under" these curves form valid diameters.
 
-We can also have centers form interior circles inside the four $r\times(1-r)$ rectangles around the central square.
+We can also have centers form valid diameters inside the four $r\times(1-r)$ rectangles around the central square.
 
 Drawing what we've figured out so far, we have:
 
 <!--[ drawing of the three kinds of region ]-->
 ![](/img/2024-03-02-region-drawing.png){:width="450 px" class="image-centered"}
 
-The probability that a valid diameter forms an interior circle is just the probability that the diameter's center is inside the square:
+The probability that a valid diameter forms an interior circle is just the probability that a valid diameter's center is inside the square:
 
 $$ P(\text{interior}\rvert r) = \frac{P(\text{square}\rvert \text{valid}, r)}{P(\text{square}\rvert \text{valid}, r) + 4P(\text{curve}\rvert \text{valid}, r) + 4P(\text{rectangle}\rvert \text{valid}, r)}. $$
 
