@@ -95,7 +95,7 @@ This gives us two new distributions to find, the probability that a random circl
 Let's do the second piece first. 
 
 <!--[ drawing of two points separated by components 2r cos theta and 2r sin theta ]-->
-![](/img/2024-03-02-diameter-components.png){:width="450 px" class="image-centered"}
+![](/img/2024-03-02-diameter-components.png){:width="350 px" class="image-centered"}
 
 The probability to get radius $r$ is the probability that the $x$ and $y$ components of the diameter form a vector of magnitude $2r.$ 
 
