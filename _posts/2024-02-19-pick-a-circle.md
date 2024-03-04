@@ -230,7 +230,7 @@ So, the probability is again
 
 $$ \begin{align}
     P(\text{overlap}) &= 1-P(\text{interior}) \\
-                       &= 1 - \pi/6.
+                       &= 1 - \frac{\pi}{6}.
    \end{align}
 $$
 
