@@ -133,21 +133,27 @@ Drawing what we've figured out so far, we have:
 <!--[ drawing of the three kinds of region ]-->
 ![](/img/2024-03-02-region-drawing.png){:width="450 px" class="image-centered"}
 
-The probability that a valid diameter forms an interior circle is then just the probability that the diameter's center is inside the square:
+The probability that a valid diameter forms an interior circle is just the probability that the diameter's center is inside the square:
 
 $$ P(\text{interior}\rvert r) = \frac{P(\text{square}\rvert \text{valid}, r)}{P(\text{square}\rvert \text{valid}, r) + 4P(\text{curve}\rvert \text{valid}, r) + 4P(\text{rectangle}\rvert \text{valid}, r)}. $$
 
-lllll
+Easier to calculate is the probability that a diameter is valid given that it's in a particular region. For example, we can rewrite $P(\text{square}\rvert\text{valid}, r)$ like
 
-We know that $P(\text{interior}\rvert \text{square}, r) = 1,$ but we need to find $P(\text{valid}\rvert \text{curve}, r)$ and $P(\text{valid}\rvert \text{rectangle}, r).$ 
+$$ P(\text{square}\rvert\text{valid}, r) = \frac{P(\text{valid, square}\rvert r)}{P(\text{valid}\rvert r)}. $$
+
+With this, the probability of an interior circle becomes
+
+$$ P(\text{interior}\rvert r) = \frac{P(\text{square, valid} \rvert r)}{P(\text{square, valid} \rvert r) + 4P(\text{curve, valid} \rvert r) + 4P(\text{rectangle, valid} \rvert r)}. $$
+
+We know that $P(\text{square, valid}\rvert r) = (1-2r)^2,$ but we need to find $P(\text{curve, valid}\rvert r)$ and $P(\text{rectangle, valid}\rvert r).$ 
 
 These probabilities are equal to the fraction of possible orientations in each region that lead to valid diameters: 
 
 $$ P(\text{valid}) = \frac{\theta_\text{valid}}{\theta_\text{possible}}. $$
 
-Which these in hand, the probably that a circle of radius $r$ is interior is just
+<!-- Which these in hand, the probably that a circle of radius $r$ is interior is just
 
-$$ P(\text{interior}\rvert r) = \frac{P(\text{valid}\rvert \text{square}, r)}{P(\text{valid}\rvert \text{square}, r) + 4P(\text{valid}\rvert \text{rectangle}, r) + 4P(\text{valid}\rvert \text{curve}, r)}. $$
+$$ P(\text{interior}\rvert r) = \frac{P(\text{valid}\rvert \text{square}, r)}{P(\text{valid}\rvert \text{square}, r) + 4P(\text{valid}\rvert \text{rectangle}, r) + 4P(\text{valid}\rvert \text{curve}, r)}. $$ -->
 
 **Rectangular protuberance**
 
@@ -161,14 +167,14 @@ Inside the right rectangular protuberance, we have a valid diameter so long as $
 This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
 $$\begin{align} 
-  P_\text{rect}(\text{valid}\rvert x_c) &= \frac{2\theta}{\pi} \\
+  P(\text{rectangle, valid}\rvert x_c) &= \frac{2\theta}{\pi} \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right)
 \end{align} $$
 
 Adding up over all possible values of $x_c,$ the probability of a valid diameter in the rectangle is
 
 $$ \begin{align}
-  P_\text{rect}(\text{valid}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
+  P(\text{rectangle, valid}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
   &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
@@ -195,13 +201,13 @@ $$  \theta_\text{curve} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\tex
 
 Solving the equations, this gives
 
-$$ P_\text{curve}(\text{valid}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
+$$ P(\text{curve, valid}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
 
 Summing over all possible $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P_\text{curve}(\text{valid}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
+    P(\text{curve, valid}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
     &= \frac{(\pi-3)r^2}{2\pi}
   \end{align} 
 $$
