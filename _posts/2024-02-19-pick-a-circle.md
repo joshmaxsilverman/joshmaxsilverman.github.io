@@ -167,14 +167,14 @@ Inside the right rectangular protuberance, we have a valid diameter so long as $
 This defines a range of angles $(-\theta,\theta)$ that the diameter can have without crossing the wall. Solving $r\sin\theta = 1-x_c$ gives us $2\theta = 2\arcsin\left(\frac{1-x_c}{r}\right).$ Since the angle is chosen at random, the probability of a valid diameter is just 
 
 $$\begin{align} 
-  P(\text{rectangle, valid}\rvert x_c) &= \frac{2\theta}{\pi} \\
+  P(\text{rectangle, valid}\rvert x_c, y_c, r) &= \frac{2\theta}{\pi} \\
   &= \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right)
 \end{align} $$
 
-Adding up over all possible values of $x_c,$ the probability of a valid diameter in the rectangle is
+Adding up over all possible values of $x_c$ and $y_c,$ the probability of a valid diameter in the rectangle is
 
 $$ \begin{align}
-  P(\text{rectangle, valid}) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
+  P(\text{rectangle, valid}\rvert r) &= (1-2r)\int\limits_{1-r}^1 dx_c\, P_\text{rect}(\text{valid}\rvert x_c)  \\
   &= (1-2r)\int\limits_{1-r}^1 dx_c\, \frac{2}{\pi}\arcsin\left(\frac{1-x_c}{r}\right) \\
   &= \frac{(\pi-2)r(1-2r)}{\pi}. 
 \end{align} $$
@@ -201,13 +201,13 @@ $$  \theta_\text{curve} =  2\left(\frac12\pi - \theta_\text{right} - \theta_\tex
 
 Solving the equations, this gives
 
-$$ P(\text{curve, valid}\lvert x_c,y_c) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
+$$ P(\text{curve, valid}\rvert x_c,y_c, r) = \frac{1}{\pi}\left(\frac12\pi - \arccos\frac{1-x_c}{r} - \arccos\frac{1-y_c}{r}\right). $$
 
 Summing over all possible $(x_c,y_c)$ gets us
 
 $$ 
   \begin{align}
-    P(\text{curve, valid}) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
+    P(\text{curve, valid}\rvert r) &= \int\limits_{1-r}^1 dx_c\hskip{-0.65em}\int\limits_{1-r}^{1-\sqrt{r^2 - (x-1)^2}} \hskip{-0.7em}dy_c\, P_\text{curve}(\text{valid}\lvert x_c,y_c) \\
     &= \frac{(\pi-3)r^2}{2\pi}
   \end{align} 
 $$
