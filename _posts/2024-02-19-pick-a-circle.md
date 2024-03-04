@@ -139,7 +139,7 @@ $$ P(\text{interior}\rvert r) = \frac{P(\text{square}\rvert \text{valid}, r)}{P(
 
 Easier to calculate is the probability that a diameter is valid given that it's in a particular region. For example, we can rewrite $P(\text{square}\rvert\text{valid}, r)$ like
 
-$$ P(\text{square}\rvert\text{valid}, r) = \frac{P(\text{valid, square}\rvert r)}{P(\text{valid}\rvert r)}. $$
+$$ P(\text{square}\rvert\text{valid}, r) = \frac{P(\text{square, valid}\rvert r)}{P(\text{valid}\rvert r)}. $$
 
 With this, the probability of an interior circle becomes
 
