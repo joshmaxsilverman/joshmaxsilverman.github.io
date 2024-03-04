@@ -61,7 +61,7 @@ $$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
 So, $dx_1\,dx_2\,dy_1\,dy_2 = 4dx_c\,dx_r\,dy_c\,dy_r.$ With this, we can finish the expression for the volume of phase space contributed by circles of diameter $2r:$
 
-$$ dr 8\pi r(1-2r)^2. $$
+$$ dr\, 8\pi r(1-2r)^2. $$
 
 Integrating over all valid radii, we get 
 
