@@ -46,7 +46,7 @@ Since we're just counting phase space, we can sum over all such centers and radi
 
 $$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
 
-But we need to be careful about the unit area in the new coordinates. In moving to the (center, separation) coordinate system, we stretch out each unit vector by a factor of $\sqrt{2}.$ 
+But we need to be careful about the unit area in the new coordinates. In moving to the (center, separation) coordinate system, we shrink each unit vector by a factor of $1/\sqrt{2}.$ 
 
 <!--[ drawing of the two grids overlaid ]-->
 ![](/img/2024-03-02-tilted-grid.png){:width="450 px" class="image-centered"}
