@@ -42,7 +42,7 @@ How many positions can the center take? For a circle of radius $r,$ the center c
 
 Each point on the circle represents a pair (the point itself, and the point across from it on the same circle). The number of such pairs is proportional to the annulus of area $(2\pi r)\text{d}r$ about the center. 
 
-Since we're just counting phase space, we can sum over all such centers and radii:
+Since we're just counting coordinate space, we can sum over all such centers and radii:
 
 $$ P(\text{interior circle}) \propto \int dr\, 2\pi r(1-2r)^2. $$
 
@@ -59,7 +59,7 @@ Taking cross products, we get $dA = \lvert d\vec{x}_c\times d\vec{x}_r\rvert = \
 
 $$ dx_c\,dx_r = \frac12dx_1\,dx_2. $$
 
-So, $dx_1\,dx_2\,dy_1\,dy_2 = 4dx_c\,dx_r\,dy_c\,dy_r.$ With this, we can finish the expression for the volume of phase space contributed by circles of diameter $2r:$
+So, $dx_1\,dx_2\,dy_1\,dy_2 = 4dx_c\,dx_r\,dy_c\,dy_r.$ With this, we can finish the expression for the volume of coordinate space contributed by circles of diameter $2r:$
 
 $$ dr\, 8\pi r(1-2r)^2. $$
 
