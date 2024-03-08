@@ -124,7 +124,7 @@ As before, the circle will be interior if its center is more than one radius fro
 
 These are the only diameters that form interior circles. However, there are other valid diameters to consider.
 
-First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circlar curves of radius $r$ around each corner can form valid diameters (or interior circles). But we can have centers "under" these curves form valid diameters.
+First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circular curves of radius $r$ around each corner can form valid diameters (or interior circles). But we can have centers "under" these curves form valid diameters.
 
 We can also have centers form valid diameters inside the four $r\times(1-r)$ rectangles around the central square.
 
