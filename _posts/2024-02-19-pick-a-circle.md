@@ -126,7 +126,7 @@ These are the only diameters that form interior circles. However, there are othe
 
 First of all, no center can be within a radius of the square's boundary. This means that no centers inside the semi-circular curves of radius $r$ around each corner can form valid diameters (or interior circles). But we can have centers "under" these curves form valid diameters.
 
-We can also have centers form valid diameters inside the four $r\times(1-r)$ rectangles around the central square.
+We can also have centers form valid diameters inside the four $r\times(1-2r)$ rectangles around the central square.
 
 Drawing what we've figured out so far, we have:
 
