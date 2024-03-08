@@ -133,7 +133,7 @@ Drawing what we've figured out so far, we have:
 <!--[ drawing of the three kinds of region ]-->
 ![](/img/2024-03-02-region-drawing.png){:width="450 px" class="image-centered"}
 
-The probability that a valid diameter forms an interior circle is just the probability that a valid diameter's center is inside the square:
+The probability that a valid diameter forms an interior circle is just the probability that a valid diameter's center is inside the central $(1-2r)\times (1-2r)$ square:
 
 $$ P(\text{interior}\rvert r) = \frac{P(\text{square}\rvert \text{valid}, r)}{P(\text{square}\rvert \text{valid}, r) + 4P(\text{curve}\rvert \text{valid}, r) + 4P(\text{rectangle}\rvert \text{valid}, r)}. $$
 
