@@ -234,7 +234,7 @@ $$ \begin{align}
    \end{align}
 $$
 
-What do we get for all this detailed work, beyond a testament to the self-consistency of our universe? We get detailed predictions for the probability distribution of the diameter's center, that can be compared to the empirical record.
+What do we get for all this detailed work, beyond a testament to the self-consistency of our universe? We get detailed predictions for the probability distribution of the diameter's center that can be compared to the empirical record.
 
 Forming a heatmap from the expressions above, and building the same from a $N = 10^8$ round simulation, we find:
 
