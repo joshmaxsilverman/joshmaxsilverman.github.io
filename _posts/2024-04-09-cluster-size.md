@@ -103,8 +103,8 @@ given our work above, we can cavalierly choose $s^\*=4,$ and the expected cluste
 
 $$ 
 	\begin{align}
-		\langle s\rangle &= \frac{\sum_{s=0}^\infty s P(s)}{\sum_{s=0}^\infty P(s)} \\
-		&\approx \frac{P(1) + 2P(2) + 3P(3) + P(4)\left(4 + 5\gamma + 6\gamma^2 + \ldots\right)}{P(1) + P(2) + P(3) + P(4)\left(1 + \gamma + \gamma^2 + \ldots\right)} \\
+		\langle s\rangle &= \dfrac{\sum\limits_{s=0}^\infty s P(s)}{\sum\limits_{s=0}^\infty P(s)} \\
+		&\approx \dfrac{P(1) + 2P(2) + 3P(3) + P(4)\left(4 + 5\gamma + 6\gamma^2 + \ldots\right)}{P(1) + P(2) + P(3) + P(4)\left(1 + \gamma + \gamma^2 + \ldots\right)} \\
 		&\approx 3.198\ldots
 	\end{align}
 $$
