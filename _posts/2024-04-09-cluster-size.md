@@ -53,7 +53,7 @@ $$ P(4) = 2q^4(1-q)^6 + 5q^4(1-q)^4 + 4q^4(1-q)^5. $$
 
 if we draw out each collection of configurations, and how they lead to the next collection, we can see that a lot of mixing is going on. apart from the pipes, there are not really cleanly separable lineages. 
 
-![](/img/2024-04-09-cluster-configurations.png){: width="450 px" class="image-centered"}
+![](/img/2024-04-09-cluster-configurations-flow.png){: width="450 px" class="image-centered"}
 
 this makes it reasonable to think that each generation leads to the next as a conglomerate. in a loose sense, the collections of clusters of size $s$ forms a surface in "shape space" and the next generation of clusters of size $(s+1)$ is formed by branching off that surface area. 
 
