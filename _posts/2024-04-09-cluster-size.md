@@ -90,9 +90,9 @@ which is only true if the expression in $\gamma$ is equal to $1.$ solving $\disp
 
 ### Expected cluster size
 
-under our assumption, the likelihoods for large clusters follow a power law with relative factor $\gamma.$ so, we can calculate exact probabilities up to some cluster size $s^*$ and replace all further terms with $\gamma P(s^*),$ $\gamma^2 P(s^*)$ and so on.
+under our assumption, the likelihoods for large clusters follow a power law with relative factor $\gamma.$ so, we can calculate exact probabilities up to some cluster size $s^\*$ and replace all further terms with $\gamma P(s^\*),$ $\gamma^2 P(s^\*)$ and so on.
 
-given our work above the expected cluster size becomes
+given our work above, we can cavalierly choose $s^\*=4,$ the expected cluster size becomes
 
 $$ 
 	\begin{align}
@@ -102,5 +102,6 @@ $$
 	\end{align}
 $$
 
+which matches the simulation.
 
 <br>
