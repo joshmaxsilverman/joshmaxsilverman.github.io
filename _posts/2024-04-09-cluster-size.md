@@ -1,13 +1,20 @@
 ---
 layout: post
 published: true
-title: Clustered expectations
+title: Paint by number
 date: 2024/04/09
-subtitle: 
+subtitle: Cluster your expectations
 tags: approximation 
 ---
 
->Question
+>**Question**: Once again, I’m painting an infinitely long strip of canvas, broken up into adjacent $1$ cm-by-$1$ cm squares. Squares are randomly and independently numbered $0$ or $1.$ But this time, the strip itself is $2$ cm wide.
+>
+>Squares are considered adjacent if they share a common edge. So squares can be horizontally or vertically adjacent, but not diagonally adjacent.
+>
+>Once I’m done painting, there will again be many “clusters” of contiguous red and blue squares. The example below contains $20$ total squares and nine clusters, which means the average size of a cluster here is approximately $2.22$ squares.
+>
+>Once I’m done painting, what will be the average size of each red or blue cluster?
+>![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F079ab505-66c7-427b-ad6a-a2cf6a1794a6_1600x384.png)
 
 <!--more-->
 
@@ -45,6 +52,8 @@ $$ P(4) = 2q^4(1-q)^6 + 5q^4(1-q)^4 + 4q^4(1-q)^5. $$
 ### How's it growing?
 
 if we draw out each collection of configurations, and how they lead to the next collection, we can see that a lot of mixing is going on. apart from the pipes, there are not really cleanly separable lineages. 
+
+![](/img/2024-04-09-cluster-configurations.png){: width="450 px" class="image-centered"}
 
 this makes it reasonable to think that each generation leads to the next as a conglomerate. in a loose sense, the collections of clusters of size $s$ forms a surface in "shape space" and the next generation of clusters of size $(s+1)$ is formed by branching off that surface area. 
 
