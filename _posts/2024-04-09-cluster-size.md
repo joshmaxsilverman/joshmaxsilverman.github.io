@@ -68,24 +68,31 @@ it seems like these numbers are settling down to a value near $0.72,$ in support
 in this spirit, let's write down a model relating the probability of size $s$ clusters to the probability of size $(s-1)$ clusters. we'll envision a growth process where we build clusters left to right, laying down dominoes one at a time. the dominoes can either be both red, red on top and blue on bottom, or blue on top and red on bottom and we'll track which domino each cluster ends in.
 
 if we have a cluster of size $s$ ending in ${\square \atop \blacksquare}$ it could be built either from a $(s-1)$-sized cluster ending in ${\square\atop\blacksquare}$ or ${\blacksquare\atop\blacksquare}$ and each additional domino has probability $\frac14$ to be drawn:
-$$P\left(s, {\square \atop \blacksquare}\right) = \frac14P\left(s-1, {\square \atop \blacksquare}\right) + \frac14 P\left(s-1, {\blacksquare \atop \blacksquare}\right).$$    because the top and bottom row are symmetric, the same equation governs clusters ending in ${\blacksquare\atop\square}:$
+
+$$P\left(s, {\square \atop \blacksquare}\right) = \frac14P\left(s-1, {\square \atop \blacksquare}\right) + \frac14 P\left(s-1, {\blacksquare \atop \blacksquare}\right).$$    
+
+because the top and bottom row are symmetric, the same equation governs clusters ending in ${\blacksquare\atop\square}:$
 
 $$P\left(s, {\blacksquare \atop \square}\right) = \frac14P\left(s-1, {\blacksquare \atop \square}\right) + \frac14 P\left(s-1, {\blacksquare \atop \blacksquare}\right).$$
 
 if a cluster ends in ${\blacksquare\atop\blacksquare}$ it could have come from a cluster ending in ${\blacksquare\atop\blacksquare}$, ${\square\atop\blacksquare}$, or ${\blacksquare\atop\square},$ which would have had size $(s-2)$ so
 
 $$P\left(s, {\blacksquare \atop \blacksquare}\right) = \frac14P\left(s-2, {\blacksquare \atop \square}\right) + \frac14P\left(s-2, {\blacksquare \atop \blacksquare}\right) + \frac14 P\left(s-2, {\blacksquare \atop \blacksquare}\right).$$
+
 now, by our assumption, the probability of a cluster of size $s$ is some constant factor times the probability of a cluster of size $(s-1)$ or $P(s)=\gamma P(s-1).$ plugging this into the first equation, we get 
 
 $$P\left(s, {\square \atop \blacksquare}\right) = \frac1{4\gamma}P\left(s, {\square \atop \blacksquare}\right) + \frac1{4\gamma} P\left(s, {\blacksquare \atop \blacksquare}\right)$$
+
 which we can solve to get
 
 $$ P\left(s, {\square \atop \blacksquare}\right) = \dfrac{1}{4\gamma-1}P\left(s, {\blacksquare \atop \blacksquare}\right). $$
+
 with the same kind of relationship for $P\left(s,{\blacksquare\atop\square}\right).$
 
 we can plug both of these into the equation for $P(s,{\blacksquare\atop\blacksquare})$ to get
 
 $$ P\left(s,{\blacksquare\atop\blacksquare}\right) = \left(\frac1{2\gamma^2}\frac{1}{4\gamma-1} + \frac1{4\gamma^2}\right)P\left(s,{\blacksquare\atop\blacksquare}\right) $$
+
 which is only true if the expression in $\gamma$ is equal to $1.$ solving $\displaystyle\frac1{2\gamma^2}\frac{1}{4\gamma-1} + \frac1{4\gamma^2} - 1 = 0$ we find a single real root at $\gamma \approx 0.71878\ldots$
 
 ### Expected cluster size
