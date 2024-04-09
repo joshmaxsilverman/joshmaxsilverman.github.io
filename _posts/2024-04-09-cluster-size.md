@@ -99,12 +99,12 @@ which is only true if the expression in $\gamma$ is equal to $1.$ solving $\disp
 
 under our assumption, the likelihoods for large clusters follow a power law with relative factor $\gamma.$ so, we can calculate exact probabilities up to some cluster size $s^\*$ and replace all further terms with $\gamma P(s^\*),$ $\gamma^2 P(s^\*)$ and so on.
 
-given our work above, we can cavalierly choose $s^\*=4,$ the expected cluster size becomes
+given our work above, we can cavalierly choose $s^\*=4,$ and the expected cluster size becomes
 
 $$ 
 	\begin{align}
-		\langle s\rangle &= \sum_{s=0}^\infty s P(s) \\
-		&\approx P(1) + 2P(2) + 3P(3) + P(4)\left(4 + 5\gamma + 6\gamma^2 + \ldots\right) \\
+		\langle s\rangle &= \frac{\sum_{s=0}^\infty s P(s)}{\sum_{s=0}^\infty P(s)} \\
+		&\approx \frac{P(1) + 2P(2) + 3P(3) + P(4)\left(4 + 5\gamma + 6\gamma^2 + \ldots\right)}{P(1) + P(2) + P(3) + P(4)\left(1 + \gamma + \gamma^2 + \ldots\right)} \\
 		&\approx 3.198\ldots
 	\end{align}
 $$
