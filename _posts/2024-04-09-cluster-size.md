@@ -28,7 +28,7 @@ To make a cluster with $s$ tiles, we need all $s$ of those tiles to be one color
 
 Given these configurations, finding their probability is straightforward. However, getting the configurations is not and, so, will spoil an exact calculation.
 
-The big idea of this solution is to find the configurations for the first few cluster sizes, and observe how successive generations are formed from earlier ones. This justifies a simplifying assumption, that for large cluster sizes $s,$ the probabilities start to follow a geometric series. With this assumption, we'll build a model that gets the ratio of subsequent probabilities and with this approximate probability distribution, we'll calculate the average cluster size.
+The big idea of this solution is to find the configurations for the first few cluster sizes, and observe how successive generations are formed from earlier ones. This motivates a simplifying assumption, that for large cluster sizes $s,$ the probabilities start to follow a geometric series. With this assumption, we'll build a model that gets the ratio of subsequent probabilities and with this approximate probability distribution, we'll calculate the average cluster size.
 
 ### Configuration inspection
 
