@@ -1,4 +1,19 @@
+---
+layout: post
+published: true
+title: Clustered expectations
+date: 2024/04/09
+subtitle: 
+tags: approximation 
+---
 
+>Question
+
+<!--more-->
+
+([FiveThirtyEight](URL))
+
+## Solution
 
 ### Outline
 
@@ -32,6 +47,8 @@ $$ P(4) = 2q^4(1-q)^6 + 5q^4(1-q)^4 + 4q^4(1-q)^5. $$
 if we draw out each collection of configurations, and how they lead to the next collection, we can see that a lot of mixing is going on. apart from the pipes, there are not really cleanly separable lineages. 
 
 this makes it reasonable to think that each generation leads to the next as a conglomerate. in a loose sense, the collections of clusters of size $s$ forms a surface in "shape space" and the next generation of clusters of size $(s+1)$ is formed by branching off that surface area. 
+
+further, there isn't a strong reason to expect the decay between steps to depend strongly on $s$ since the extension of an $(s-1)$ cluster into an $s$-cluster depends on local, single site attachments.
 
 if we plug the value of $q$ into the expression above, they become $P_2 = \frac38 P_1,$ $P_3 = \frac56 P_2,$ and $P_3 = \frac34 P_4.$ these ratios are approximately $0.38,$ $0.83,$ and $0.75.$ if we carry out the next few, we get $0.69,$ $0.73,$ $0.71,$ and $0.72.$ 
 
@@ -75,3 +92,6 @@ $$
 		&\approx 3.198\ldots
 	\end{align}
 $$
+
+
+<br>
