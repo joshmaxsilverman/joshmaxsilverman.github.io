@@ -78,7 +78,7 @@ $$P\left(s, {\blacksquare \atop \square}\right) = \frac14P\left(s-1, {\blacksqua
 
 If a cluster ends in ${\blacksquare\atop\blacksquare}$ it could have come from a cluster ending in ${\blacksquare\atop\blacksquare}$, ${\square\atop\blacksquare}$, or ${\blacksquare\atop\square},$ which would have had size $(s-2)$ so
 
-$$P\left(s, {\blacksquare \atop \blacksquare}\right) = \frac14P\left(s-2, {\blacksquare \atop \square}\right) + \frac14P\left(s-2, {\blacksquare \atop \blacksquare}\right) + \frac14 P\left(s-2, {\blacksquare \atop \blacksquare}\right).$$
+$$P\left(s, {\blacksquare \atop \blacksquare}\right) = \frac14P\left(s-2, {\blacksquare \atop \square}\right) + \frac14P\left(s-2, {\square \atop \blacksquare}\right) + \frac14 P\left(s-2, {\blacksquare \atop \blacksquare}\right).$$
 
 Now, by our assumption, the probability of a cluster of size $s$ is some constant factor times the probability of a cluster of size $(s-1)$ or $P(s)=\gamma P(s-1).$ Plugging this into the first equation, we get 
 
