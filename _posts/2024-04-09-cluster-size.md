@@ -18,7 +18,7 @@ tags: approximation
 
 <!--more-->
 
-([FiveThirtyEight](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-paint-by-number))
 
 ## Solution
 
