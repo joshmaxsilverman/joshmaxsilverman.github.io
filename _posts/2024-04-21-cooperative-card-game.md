@@ -93,7 +93,7 @@ def P(s, d):
 ```
 
 
-We can also use this to approximate the infinite limit, evaluating for an $N=10000$ deck gets $P(0, 10^4) \approx 0.60652$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
+We can also use this to approximate the infinite limit, evaluating for an $N=10^4$ pair deck gets $P(0, 10^4) \approx 0.60652$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
 
 
 
