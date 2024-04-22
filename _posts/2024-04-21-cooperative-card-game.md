@@ -20,7 +20,7 @@ tags: approximation recursion mean-field
 
 ## Solution
 
-First, study the large deck limit with a mean-field approach, and then we'll find the exact probability for two $52$ card decks by recursion.
+First, we'll find the large deck limit with a mean-field approach, and then we'll calculate the exact probability for two $52$ card decks by recursion.
 
 ### Large deck limit
 
@@ -32,9 +32,9 @@ $$ \left(1 - \frac{1}{2N-1}\right). $$
 
 The probability that there is no collision on the second pair is likewise $(2N-4)/(2N-3)$ which can be written as 
 
-$$ \left(1 - \frac{1}{2N-3}\right). $$
+$$ \left(1 - \frac{1}{2N-3}\right), $$
 
-and so on. As $N$ gets large, all $N$ of these factors are approximately $(1-1/2N)$ and so the overall probability to win becomes
+and so on. As $N$ gets large, all $N$ of these factors are approximately $(1-1/2N)$ and, so, the overall probability to win becomes
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
@@ -42,11 +42,13 @@ which approaches $ 1/\sqrt{e} $ in the limit.
 
 ### $52$ card decks
 
-We can find the exact probability through recursion. 
+We can find the exact probability for $N$-card decks through recursion. 
 
 Call a "type" any of the $N=52$ cards in the deck and call $P(s,d)$ the probability that the game has no collisions given that, in the remaining cards, there are $s$ types where one of the two cards has been drawn and $d$ types where neither of the cards have been drawn.
 
-If we are in state $(s,d)$ we form the next pair from
+For example, after the first draw, a game that didn't have a collision would be in state $(s=2,d=50),$ and a game that had a collision would be in state $(s=0,d=51).$
+
+If we are in state $(s,d)$ in a game that hasn't ended, we can form the next game-continuing pair from
 
 - two singlets, moving to state $(s-2, d),$ or from
 - a singlet and a doublet, moving to state $(s, d-1)$ (one singlet goes away, but one is formed from the doublet), or from
