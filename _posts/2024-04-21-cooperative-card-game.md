@@ -56,7 +56,7 @@ if we are in state $(s,d)$ we can either form the next pair from
 
 so, the probability that the $(s,d)$ game results in no collisions is 
 
-$$ P(s,d) = \frac{s(s-1)}{(2d+s)(2d+s-1)}P(s-2,d) + \frac{sd}{(2d+s)(2d+s-1)}P(s,d-1) + \frac{2d(2d-1)}{(2d+s)(2d+s-1)}P(s+2,d-2). $$
+$$ P(s,d) = \frac{s(s-1)}{(2d+s)(2d+s-1)}P(s-2,d) + \frac{sd}{(2d+s)(2d+s-1)}P(s,d-1) + \frac{2d(2d-2)}{(2d+s)(2d+s-1)}P(s+2,d-2). $$
 
 running this recursion in python, we get 
 
