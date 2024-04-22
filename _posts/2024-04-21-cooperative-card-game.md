@@ -22,7 +22,7 @@ tags: approximation recursion mean-field
 
 First, study the large deck limit with a mean-field approach, and then we'll find the exact probability for two $52$ card decks by recursion.
 
-### large deck limit
+### Large deck limit
 
 As the deck gets large the probability $P(\text{no collisions})$ tends to $1/\sqrt{e}\approx 0.60653\ldots$
 
