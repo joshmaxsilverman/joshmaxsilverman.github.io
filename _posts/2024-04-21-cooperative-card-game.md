@@ -1,10 +1,10 @@
 ---
 layout: post
 published: false
-title: 
-date: 2018/04/21
-subtitle:
-tags:
+title: Card collisions
+date: 2024/04/21
+subtitle: What's the chance no card sees its own reflection?
+tags: approximation recursion mean-field
 ---
 
 >**Question:** You and your friend both have standard decks of $52$ cards. First, you combine them into a single deck with $104$ cards, and you thoroughly shuffle it. Then, you randomly split this back into two decks with $52$ cards each—one for you, and one for your friend.
@@ -69,9 +69,9 @@ $$
 we can also try to approximate the infinite limit, evaluating for an $N=10000$ deck gets $P(0, 10^4) \approx 0.60652$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
 
 ```python
-from functools import lru_cache
 import sys
 sys.setrecursionlimit(10 ** 6)
+from functools import lru_cache
 from fractions import Fraction as F
 
 @lru_cache(maxsize=10 ** 7)
