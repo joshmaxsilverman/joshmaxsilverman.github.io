@@ -26,7 +26,7 @@ first, we'll analyze the large deck limit, then we'll find the exact probability
 
 as the deck gets large the probability $P(\text{no collisions})$ will tend to $1/\sqrt{e}\approx 0.60653\ldots$
 
-to see this, let's build the game one pair of draws at a time. if there are $N$ cards in each deck, the probability that the first pair collides is $(2N-2)/(2N-1)$ which can be written as
+to see this, let's build the game one pair of draws at a time. with $N$ cards in each deck, the probability that the first pair doesn't collide is $(2N-2)/(2N-1)$ which can be written as
 
 $$ \left(1 - \frac{1}{2N-1}\right). $$
 
@@ -40,11 +40,57 @@ $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
 which goes to 
 
-$$ \frac{1}{\sqrt{e}}. $$
+$$ 1/\sqrt{e}. $$
 
 ### $52$ card decks
 
+we can find the exact probability through recursion. 
 
+call a "type" any of the $N=52$ cards in the deck and call $P(s,d)$ the probability that the game has no collisions given that there are currently $s$ types where one of the two cards has been drawn and $d$ types where neither of the cards have been drawn.
+
+if we are in state $(s,d)$ we can either form the next pair from
+
+- two singlets, moving to state $(s-2, d)$
+- a singlet and a doublet, moving to state $(s, d-1)$ (one singlet goes away, but one is formed from the doublet)
+- two doublets, moving to state $(s+2, d-2)$
+
+so, the probability that the $(s,d)$ game results in no collisions is 
+
+$$ P(s,d) = \frac{s(s-1)}{(2d+s)(2d+s-1)}P(s-2,d) + \frac{sd}{(2d+s)(2d+s-1)}P(s,d-1) + \frac{2d(2d-1)}{(2d+s)(2d+s-1)}P(s+2,d-2). $$
+
+running this recursion in python, we get 
+
+$$ \begin{align}
+    P(0,52) &= \frac{335561727225862936774353972738829595013743745454800896090990716254443717947031552}{555926557447585078813889409645210912590669690718980253197612210789777133544921875} \\
+    &\approx 0.60361\ldots 
+  \end{align} 
+$$
+
+we can also try to approximate the infinite limit, evaluating for an $N=10000$ deck gets $P(0, 10^4) \approx 0.60652$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
+
+```python
+from functools import lru_cache
+import sys
+sys.setrecursionlimit(10 ** 6)
+from fractions import Fraction as F
+
+@lru_cache(maxsize=10 ** 7)
+def P(s, d):
+
+  denom = (2 * d + s) * (2 * d + s - 1)
+  
+  if s < 0 or d < 0:
+    return 0
+  
+  if s == 0 and d == 0:
+    return 1
+  
+  else:
+    return F( s * (s - 1) * P(s - 2, d) \
+             + 2 * s * (2 * d) * P(s, d - 1) \
+             + (2 * d) * (2 * d - 2) * P(s + 2, d - 2) \
+           , denom )
+```
 
 
 <br>
