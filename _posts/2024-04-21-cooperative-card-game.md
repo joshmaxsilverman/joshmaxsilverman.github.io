@@ -74,11 +74,11 @@ $$
 
 ```python
 import sys
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10 ** 10)
 from functools import lru_cache
 from fractions import Fraction as F
 
-@lru_cache(maxsize=10 ** 7)
+@lru_cache(maxsize=10 ** 10)
 def P(s, d):
 
   denom = (2 * d + s) * (2 * d + s - 1)
