@@ -38,11 +38,7 @@ and so on. As $N$ gets large, all $N$ of these factors are approximately $(1-1/2
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
-which approaches 
-
-$$ 1/\sqrt{e} $$
-
-in the limit.
+which approaches $ 1/\sqrt{e} $ in the limit.
 
 ### $52$ card decks
 
