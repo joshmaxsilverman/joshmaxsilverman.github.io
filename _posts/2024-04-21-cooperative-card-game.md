@@ -38,7 +38,9 @@ and so on. as $N$ goes to infinity, all $N$ of these factors are approximately $
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
-which goes to $$ \frac{1}{\sqrt{e}}. $$
+which goes to 
+
+$$ \frac{1}{\sqrt{e}}. $$
 
 ### $52$ card decks
 
