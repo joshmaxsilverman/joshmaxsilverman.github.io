@@ -26,13 +26,13 @@ First, we'll find the large deck limit with a mean-field approach, and then we'l
 
 As the decks gets large the probability $P(\text{no collisions})$ tends to $1/\sqrt{e}\approx 0.60653\ldots$
 
-To see this, let's build a game one pair of draws at a time. To start, we have two $N$-card decks shuffled to form one $2N$-card deck. 
+To see this, let's build a game one pair of draws at a time. To start, we have two $N$-card decks shuffled to form one $2N$-card deck and each card has a twin. 
 
 With finite decks, the rounds have correlations. An early collisionless round raises the chance that a later round will be too (since the early round leaves twinless cards in the deck). Likewise, early collisions beget later ones.
 
-So, to properly treat finite games, we need to track the evolution of all possible chains (as we'll do in the next section).
+So, to properly treat finite games, we need to track the evolution of chains of draws (as we'll do in the next section).
 
-In infinite decks, things are different. Each round leaves the abundance of twinless cards unchanged. The probability that a newly drawn card has appeared before is always $0\%,$ which means that rounds are independent in the infinite game.
+With infinite decks, things are different. Each round leaves the abundance of twinless cards unchanged — the probability that a newly drawn card has appeared in a previous round is always $0\%.$ This means that rounds are independent in the infinite game. So, we can write down a naive model where the rounds are independent and scale it up to big $N.$
 
 The probability that any given round has a collision is $1/(2N-1)$ so the expected number of collisions in a game is $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
 
