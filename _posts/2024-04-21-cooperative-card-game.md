@@ -24,17 +24,21 @@ First, we'll find the large deck limit with a mean-field approach, and then we'l
 
 ### Large deck limit
 
-As the deck gets large the probability $P(\text{no collisions})$ tends to $1/\sqrt{e}\approx 0.60653\ldots$
+As the decks gets large the probability $P(\text{no collisions})$ tends to $1/\sqrt{e}\approx 0.60653\ldots$
 
-To see this, let's build a game one pair of draws at a time. With $N$ cards in each deck, the probability that the first pair doesn't collide is $(2N-2)/(2N-1)$ which can be written as
+To see this, let's build a game one pair of draws at a time. To start, we have two $N$-card decks shuffled to form one $2N$-card deck. 
 
-$$ \left(1 - \frac{1}{2N-1}\right). $$
+With finite decks, the rounds have correlations. An early collisionless round raises the chance that a later round will be too (since the early round leaves twinless cards in the deck). Likewise, early collisions beget later ones.
 
-The probability that there is no collision on the second pair is likewise $(2N-4)/(2N-3)$ which can be written as 
+So, to properly treat finite games, we need to track the evolution of all possible chains (as we'll do in the next section).
 
-$$ \left(1 - \frac{1}{2N-3}\right), $$
+In infinite decks, things are different. Each round leaves the abundance of twinless cards unchanged. The probability that a newly drawn card has appeared before is always $0\%,$ which means that rounds are independent in the infinite game.
 
-and so on. As $N$ gets large, all $N$ of these factors are approximately $(1-1/2N)$ and, so, the overall probability to win becomes
+The probability that any given round has a collision is $1/(2N-1)$ so the expected number of collisions in a game is $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
+
+That means that the chance of a collision in a given round is $1/2N$ and the chance of no collision is $(1-1/2N).$
+
+Since the game has $N$ rounds, the probability to win the game is just
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
