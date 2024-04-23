@@ -48,7 +48,7 @@ which approaches $ 1/\sqrt{e} $ in the limit.
 
 We can find the exact probability for $N$-card decks through recursion. 
 
-Call a "type" any of the $N=52$ cards in the deck and call $P(s,d)$ the probability that the game has no collisions given that, in the remaining cards, there are $s$ types where one of the two cards has been drawn and $d$ types where neither of the cards have been drawn.
+Call a "type" any of the $N=52$ cards in the deck and call $P(s,d)$ the probability that the game has no collisions given that, in the remaining cards, there are $s$ types where one of the twin cards has been drawn and $d$ types where neither of the cards have been drawn.
 
 For example, after the first draw, a game that didn't have a collision would be in state $(s=2,d=50),$ and a game that had a collision would be in state $(s=0,d=51).$
 
