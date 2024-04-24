@@ -34,15 +34,15 @@ So, to properly treat finite games, we need to track the evolution of chains of 
 
 With infinite decks, the probability that a newly drawn card has appeared in a previous round is zero. This means that the rounds are independent. So, to model the infinite game, we can model a finite game with independent rounds and scale it to big $N.$
 
-By linearity of expectation, the probability a given round has a collision is $1/(2N-1).$ Remarkably, the expected number of collisions in a game is then $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
-
-The chance of no collision in a round is $(1-1/(2N-1))$ which tends to $(1-1/2N).$
+By linearity of expectation, the probability a given round has a collision is $1/(2N-1).$ So, the chance of no collision in a round is $(1-1/(2N-1))$ which tends to $(1-1/2N).$
 
 Since the game has $N$ rounds, the probability to win the game is just
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
 which approaches $1/\sqrt{e}$ in the limit.
+
+Remarkably, the expected number of collisions in a game is then $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
 
 ### $52$ card decks
 
