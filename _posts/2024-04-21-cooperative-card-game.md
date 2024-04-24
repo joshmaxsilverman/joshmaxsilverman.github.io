@@ -42,7 +42,7 @@ Since the game has $N$ rounds, the probability to win the game is just
 
 $$ P(\text{no collisions}) \approx \left(1-\frac{1}{2N}\right)^N $$
 
-which approaches $ 1/\sqrt{e} $ in the limit.
+which approaches $\dfrac{1}{\sqrt{e}}$ in the limit.
 
 ### $52$ card decks
 
