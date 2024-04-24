@@ -71,7 +71,7 @@ $$
 Running this recursion, we get 
 
 $$ \begin{align}
-    P(0,52) &= \frac{335561727225862936774353972738829595013743745454800896090990716254443717947031552}{555926557447585078813889409645210912590669690718980253197612210789777133544921875} \\
+    P(0,52) &= \tfrac{335561727225862936774353972738829595013743745454800896090990716254443717947031552}{555926557447585078813889409645210912590669690718980253197612210789777133544921875} \\
     &\approx 0.60361\ldots 
   \end{align} 
 $$
@@ -101,7 +101,7 @@ def P(s, d):
 ```
 
 
-We can also use this to approximate the infinite limit, evaluating for an $N=10^4$ pair deck gets $P(0, 10^4) \approx 0.60652$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
+We can also use this to approximate the infinite limit. Evaluating for an $N=10^4$ pair deck gets $P(0, 10^4) \approx 0.60652\ldots$ which is very close to $1/\sqrt{e}\approx 0.60653\ldots $
 
 
 
