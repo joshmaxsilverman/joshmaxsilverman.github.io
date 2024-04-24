@@ -32,7 +32,7 @@ With finite decks, the rounds have correlations. An early collisionless round ra
 
 So, to properly treat finite games, we need to track the evolution of chains of draws (as we'll do in the next section).
 
-With infinite decks, the probability that a newly drawn card has appeared in a previous round is zero. This means that the rounds are independent. So, to model the infinite game, we can a finite game with independent rounds and scale it to big $N.$
+With infinite decks, the probability that a newly drawn card has appeared in a previous round is zero. This means that the rounds are independent. So, to model the infinite game, we can model a finite game with independent rounds and scale it to big $N.$
 
 By linearity of expectation, the probability a given round has a collision is $1/(2N-1).$ Remarkably, the expected number of collisions in a game is then $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
 
