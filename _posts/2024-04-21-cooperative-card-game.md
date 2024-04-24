@@ -32,11 +32,11 @@ With finite decks, the rounds have correlations. An early collisionless round ra
 
 So, to properly treat finite games, we need to track the evolution of chains of draws (as we'll do in the next section).
 
-With infinite decks, things are different. Each round leaves the abundance of twinless cards unchanged — the probability that a newly drawn card has appeared in a previous round is always $0\%.$ This means that rounds are independent in the infinite game. So, we can build a model for the finite game where rounds are independent and scale it to big $N.$
+With infinite decks, the probability that a newly drawn card has appeared in a previous round is zero. This means that the rounds are independent. So, to model the infinite game, we can a finite game with independent rounds and scale it to big $N.$
 
-The probability that any given round has a collision is $1/(2N-1)$ so the expected number of collisions in a game is $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
+By linearity of expectation, the probability a given round has a collision is $1/(2N-1).$ Remarkably, the expected number of collisions in a game is then $N\times1/(2N-1)$ which tends to $1/2$ for big $N$. 
 
-That means that the chance of a collision in any given round is $1/2N$ and the chance of no collision is $(1-1/2N).$
+The chance of no collision in a round is $(1-1/(2N-1))$ which tends to $(1-1/2N).$
 
 Since the game has $N$ rounds, the probability to win the game is just
 
@@ -48,7 +48,7 @@ which approaches $1/\sqrt{e}$ in the limit.
 
 We can find the exact probability for $N$-card decks through recursion. 
 
-Call a "type" any of the $N=52$ cards in the deck and call $P(s,d)$ the probability that the game has no collisions given that, in the remaining cards, there are $s$ types where one of the twin cards has been drawn and $d$ types where neither of the cards have been drawn.
+Call a "type" any of the $N=52$ cards in the standard deck and call $P(s,d)$ the probability that the game has no collisions given that, in the remaining cards, there are $s$ types where one of the twin cards has been drawn and $d$ types where neither of the cards have been drawn.
 
 For example, after the first draw, a game that didn't have a collision would be in state $(s=2,d=50),$ and a game that had a collision would be in state $(s=0,d=51).$
 
