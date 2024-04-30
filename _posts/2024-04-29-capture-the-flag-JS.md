@@ -30,7 +30,7 @@ with this context, we can outline aaron and erin's planning.
 
 ### planning
 
-- for each value of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ aaron can calculate the probability that he wins a round. after averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r).$ averaging this over all values of $r$ after this he will know his expected winning percentage given a value for $\ell_E$
+- for each value of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ aaron can calculate the probability that he wins a round. after averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r).$ averaging this over all values of $r$ after this he will know his expected winning percentage given a value for $\ell_e$
 - knowing this, erin can calculate the same and minimize it with respect to $\ell_e$
 - all together, this ensures that aaron will do the best he can, given that erin is minimizing him perfectly. if either one of them deviates from the resulting $\ell_e$ and $\ell_a(r),$ the other will do even better.
 
