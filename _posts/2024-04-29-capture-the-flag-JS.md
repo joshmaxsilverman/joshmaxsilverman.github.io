@@ -81,7 +81,7 @@ the first half is just $\frac14\ell_e^2.$ the second half is more complicated, a
 
 so 
 
-$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r \frac{1}{\pi}\sec^{-1} \frac{r}{\sqrt{\ell_e(2r-\ell_e)}}. $$
+$$ P(\text{Aaron wins}\rvert \ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r P(\text{Aaron wins}\rvert r, \ell_e). $$
 
 thankfully for erin, we can minimize this numerically.
 
