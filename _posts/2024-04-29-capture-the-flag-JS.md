@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Capture the Flag
 subtitle: How often can you win when you have a number and they have an arrow?
 tags: geometry game-theory expectation
@@ -56,5 +56,52 @@ $$
     &= \frac{1}{\pi}\arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
   \end{align}
 $$
+
+with this, we can find aaron's optimal value of $\ell_a(r).$ setting the derivative with respect to $\ell_a(r,)$ equal to zero and solving for $\ell_a(r),$ we get
+
+$$ \ell_a(r) = \sqrt{\ell_e(2r-\ell_e)}. $$
+
+this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this makes sense since if $\ell_e$ is more than $2r$ from the origin, aaron doesn't have to muck about with moving, he will be closer to the target if he just stays put at the origin.
+
+< plot of l_a(r) vs r for several values of l_e >
+
+so, aaron's probability to win given $r$ is
+
+$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\arcsec \frac{r}{\sqrt{\ell_e(2r-\ell_e)}}. $$
+
+all that's left is to average it over all possible radii. the probability of a given radius is the area of the annulus of radius $r$ relative to the area of the circle, $2\pi r\, dr/\pi = 2r\,dr.$
+
+this gets us 
+
+$$ P(\text{Aaron wins}\rvert \ell_e) = \int\limits_0^1\,dr 2r P(\text{Aaron wins}\rvert r,\ell_e) $$
+
+now, when $2r<\ell_e$ aaron is guaranteed to win, so we can split up the integral to the interval from $r=0$ to $\frac12\ell_e$ and the interval from $\frac12\ell_e$ to $1.$
+
+the first half is just $\frac14\ell_e^2.$ the second half is more complicated, and i couldn't find an analytic expression for it. 
+
+so 
+
+$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r P(\text{Aaron wins}\rvert r,\ell_e). $$
+
+thankfully for erin, we can minimize this numerically.
+
+<plot of numerical result>
+
+### finding $\ell_e^*$
+
+in complete possession of all this information, erin calculates the same expression and is now tasked with optimizing. a practical person, she chooses interval halving.
+
+```mathematica
+policy[le_] := 
+  le^2/4 + 
+   NIntegrate[ArcCos[Sqrt[-le (le - 2 r)]/r]/π 2 r, {r, le/2, 1}];
+FindMinimum[policy[le], {le, 0.5}]
+{0.1661864864740085199460374511368681039851926960842942958672125424901\
+0065334172239, {le -> 
+   0.50130699421275306976228988957319879985763547355821149107985261064\
+716190275921967}}
+```
+
+so, the best aaron can manage is to win $\approx 16.619\%$ of the time.
 
 <br>
