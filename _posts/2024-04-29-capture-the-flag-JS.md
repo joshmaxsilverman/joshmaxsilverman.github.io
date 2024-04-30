@@ -67,7 +67,7 @@ this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this mak
 
 so, aaron's probability to win given $r$ is
 
-$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\cos^{-1} \frac{\sqrt{\ell_e(2r-\ell_e)}{r}}. $$
+$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\cos^{-1} \frac{\sqrt{\ell_e(2r-\ell_e)}}{r}. $$
 
 all that's left is to average it over all possible radii. the probability of a given radius is the area of the annulus of radius $r$ relative to the area of the circle, $2\pi r\, dr/\pi = 2r\,dr.$
 
