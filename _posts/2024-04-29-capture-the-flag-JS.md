@@ -51,7 +51,7 @@ $$ \theta_+ = \arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}. $$
 aaron will win whenever $-\theta_+ < \theta < \theta_+,$ so the probability he wins is just 
 
 $$ 
-  \begin{algn} 
+  \begin{align} 
     P(\text{Aaron wins}\rvert r,\ell_e) &= \frac{2\theta_+}{2\pi} \\
     &= \frac{1}{\pi}\arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
   \end{align}
