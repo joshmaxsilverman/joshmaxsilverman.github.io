@@ -93,7 +93,7 @@ in complete possession of all this information, erin calculates the same express
 
 ```mathematica
 policy[le_] := 
-  le^2/4 + NIntegrate[ArcCos[Sqrt[-le (le - 2 r)]/r]/π 2 r, {r, le/2, 1}];
+  le^2/4 + NIntegrate[ArcCos[Sqrt[le (2r - le)] / r]/π 2 r, {r, le/2, 1}];
 
 FindMinimum[policy[le], {le, 0.5}]
 
