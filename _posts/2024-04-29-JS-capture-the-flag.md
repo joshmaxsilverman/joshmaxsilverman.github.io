@@ -92,10 +92,10 @@ thankfully for erin, we can minimize this numerically.
 in complete possession of all this information, erin calculates the same expression and is now tasked with optimizing. a practical person, she chooses interval halving.
 
 ```mathematica
-policy[le_] := 
+aaronWinProb[le_] := 
   le^2/4 + NIntegrate[2 r ArcCos[Sqrt[le (2r - le)] / r]/π, {r, le/2, 1}];
 
-FindMinimum[policy[le], {le, 0.5}]
+FindMinimum[aaronWinProb[le], {le, 0.5}]
 
 ```
 
