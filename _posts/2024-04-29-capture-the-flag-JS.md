@@ -42,6 +42,6 @@ still, for any given $(r, \ell_e)$ there will be a range of target angles $\thet
 
 aaron is closer to the target when erin's squared distance minus aaron's squared distance is positive:
 
-$$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a)r_\cos\theta\right)
+$$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a)r_\cos\theta\right) > 0 $$
 
 <br>
