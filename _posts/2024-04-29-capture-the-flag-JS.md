@@ -42,6 +42,19 @@ still, for any given $(r, \ell_e)$ there will be a range of target angles $\thet
 
 aaron is closer to the target when erin's squared distance minus aaron's squared distance is positive:
 
-$$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a(r)\cos\theta\right) > 0 $$
+$$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a(r)\cos\theta\right) > 0. $$
+
+we can solve for the $\theta$ where this switches from positive to negative and get 
+
+$$ \theta_+ = \arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}. $$
+
+aaron will win whenever $-\theta_+ < \theta < \theta_+,$ so the probability he wins is just 
+
+$$ 
+  \begin{algn} 
+    P(\text{Aaron wins}\rvert r,\ell_e) &= \frac{2\theta_+}{2\pi} \\
+    &= \frac{1}{\pi}\arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
+  \end{align}
+$$
 
 <br>
