@@ -17,7 +17,7 @@ date: 2022/07/26
 
 <!--more-->
 
-([Jane Street]([URL](https://www.janestreet.com/puzzles/current-puzzle/)))
+([Jane Street](https://www.janestreet.com/puzzles/andys-morning-stroll-index/))
 
 ## Solution
 
