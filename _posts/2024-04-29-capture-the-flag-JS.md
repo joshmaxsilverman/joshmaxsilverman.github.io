@@ -46,14 +46,14 @@ $$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a(r)\cos\theta\r
 
 we can solve for the $\theta$ where this switches from positive to negative and get 
 
-$$ \theta_+ = \arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}. $$
+$$ \theta_+ = \cos^{-1} \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}. $$
 
 aaron will win whenever $-\theta_+ < \theta < \theta_+,$ so the probability he wins is just 
 
 $$ 
   \begin{align} 
     P(\text{Aaron wins}\rvert r,\ell_e) &= \frac{2\theta_+}{2\pi} \\
-    &= \frac{1}{\pi}\arccos \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
+    &= \frac{1}{\pi}\cos^{-1} \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
   \end{align}
 $$
 
@@ -67,7 +67,7 @@ this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this mak
 
 so, aaron's probability to win given $r$ is
 
-$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\arcsec \frac{r}{\sqrt{\ell_e(2r-\ell_e)}}. $$
+$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\sec^{-1} \frac{r}{\sqrt{\ell_e(2r-\ell_e)}}. $$
 
 all that's left is to average it over all possible radii. the probability of a given radius is the area of the annulus of radius $r$ relative to the area of the circle, $2\pi r\, dr/\pi = 2r\,dr.$
 
@@ -81,7 +81,7 @@ the first half is just $\frac14\ell_e^2.$ the second half is more complicated, a
 
 so 
 
-$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r P(\text{Aaron wins}\rvert r,\ell_e). $$
+$$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r \frac{1}{\pi}\sec^{-1} \frac{r}{\sqrt{\ell_e(2r-\ell_e)}}. $$
 
 thankfully for erin, we can minimize this numerically.
 
