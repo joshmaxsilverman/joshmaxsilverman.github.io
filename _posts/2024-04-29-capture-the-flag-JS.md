@@ -103,6 +103,6 @@ FindMinimum[policy[le], {le, 0.5}]
 716190275921967}}
 ```
 
-so, the best aaron can manage is to win $\approx 16.619\%$ of the time.
+so, the best aaron can manage is to win $\approx 16.619\%$ of the time and erin's optimal distance is $\ell_e^* \approx 0.50131.$
 
 <br>
