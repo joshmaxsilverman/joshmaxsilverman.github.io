@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Capture the Flag
 subtitle: How often can you win when you have a number and they have an arrow?
 tags: geometry game-theory expectation
