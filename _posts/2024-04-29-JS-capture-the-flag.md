@@ -18,7 +18,7 @@ date: 2024/05/01
 >During the preliminaries it was discovered that Erin is programmed to play a fixed distance along the detected angle $\theta.$ Assuming otherwise optimal play by both robots, can you determine the probability that Aaron will win? 
 <!--more-->
 
-([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
+([Jane Street](https://www.janestreet.com/puzzles/robot-capture-the-flag-index/))
 
 ## Solution
 
