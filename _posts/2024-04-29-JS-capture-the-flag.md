@@ -63,7 +63,7 @@ $$ \ell_a(r) = \sqrt{\ell_e(2r-\ell_e)}. $$
 
 this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this makes sense since if $\ell_e$ is more than $2r$ from the origin, aaron doesn't have to muck about with moving, he will be closer to the target if he just stays put at the origin.
 
-![](/img/2024-05-02-leplot.gif)
+![](/img/2024-05-02-leplot.gif){:width = "450 px" class = "image-centered" }
 
 so, aaron's probability to win given $r$ is
 
@@ -85,7 +85,7 @@ $$ P(\text{Aaron wins}\rvert \ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\el
 
 thankfully for erin, we can minimize this numerically.
 
-<plot of numerical result>
+![](/img/2024-05-02-P_aaron.png){:width = "450 px" class = "image-centered" }
 
 ### finding $\ell_e^*$
 
@@ -99,6 +99,6 @@ FindMinimum[aaronWinProb[le], {le, 0.5}]
 
 ```
 
-so, the best aaron can manage is to win $\approx XXX\%$ of the time and erin's optimal distance is $\ell_e^* \approx YYY.$
+so, the best aaron can manage is to win $\approx 16.61864864740\%$ of the time and erin's optimal distance is $\ell_e^* \approx 0.50130699421.$
 
 <br>
