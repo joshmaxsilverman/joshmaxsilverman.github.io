@@ -73,7 +73,7 @@ All that's left is to average it over all possible radii. The probability of a g
 
 This gets us 
 
-$$ P(\text{Aaron wins}\rvert \ell_e) = \int\limits_0^1\,dr 2r P(\text{Aaron wins}\rvert r,\ell_e) $$
+$$ P(\text{Aaron wins}\rvert \ell_e) = \int\limits_0^1\,dr\, 2r\, P(\text{Aaron wins}\rvert r,\ell_e) $$
 
 Now, when $2r<\ell_e$ Aaron is guaranteed to win, so we can split up the integral to the interval from $r=0$ to $\frac12\ell_e$ and the interval from $\frac12\ell_e$ to $1.$
 
@@ -81,7 +81,7 @@ The first half is just $\frac14\ell_e^2.$ The second half is more complicated, a
 
 So 
 
-$$ P(\text{Aaron wins}\rvert \ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r P(\text{Aaron wins}\rvert r, \ell_e). $$
+$$ P(\text{Aaron wins}\rvert \ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr\, 2r\, P(\text{Aaron wins}\rvert r, \ell_e). $$
 
 ![](/img/2024-05-02-P_aaron.png){:width = "450 px" class = "image-centered" }
 
