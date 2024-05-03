@@ -63,7 +63,7 @@ $$ \ell_a(r) = \sqrt{\ell_e(2r-\ell_e)}. $$
 
 this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this makes sense since if $\ell_e$ is more than $2r$ from the origin, aaron doesn't have to muck about with moving, he will be closer to the target if he just stays put at the origin.
 
-< plot of l_a(r) vs r for several values of l_e >
+![](/img/2024-05-02-leplot.gif)
 
 so, aaron's probability to win given $r$ is
 
