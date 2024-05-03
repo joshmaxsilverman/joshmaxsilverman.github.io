@@ -22,74 +22,74 @@ date: 2024/05/01
 
 ## Solution
 
-though aaron can move however he likes, not having any angular information, anything he does will be averaged over all angles relative to the target. so, his strategy must be to move a given distance from the center. knowing the radius of the target, he can pick the best value $\ell_a(r)$ for each value of $r.$
+Though Aaron can move however he likes, not having any angular information, anything he does will be averaged over all angles relative to the target. So, his strategy must be to move a given distance from the center. Knowing the radius of the target, he can pick the best value $\ell_a(r)$ for each value of $r.$
 
-so, without losing generality, we can put aaron at radius $\ell_a(r)$ along $\theta=0$ and erin will be at distance $\ell_e$ at the angle of the target, $\theta_T.$
+So, without losing generality, we can put Aaron at radius $\ell_a(r)$ along $\theta=0$ and Erin will be at distance $\ell_e$ at the angle of the target, $\theta_T.$
 
-with this context, we can outline aaron and erin's planning.
+With this context, we can outline Aaron and Erin's planning.
 
-### planning
+### Planning
 
-- for each value of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ aaron can calculate the probability that he wins a round. after averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r).$ averaging this over all values of $r$ after this he will know his expected winning percentage given a value for $\ell_e$
-- knowing this, erin can calculate the same and minimize it with respect to $\ell_e$
-- all together, this ensures that aaron will do the best he can, given that erin is minimizing him perfectly. if either one of them deviates from the resulting $\ell_e$ and $\ell_a(r),$ the other will do even better.
+- For each value of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ Aaron can calculate the probability that he wins a round. After averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r).$ Averaging this over all values of $r$ after this he will know his expected winning percentage given a value for $\ell_e$
+- Knowing all this, Erin can calculate the same and minimize it with respect to $\ell_e,$ (which Aaron can and will also do).
+- All together, this ensures that Aaron will do the best he can, given that Erin is minimizing him perfectly. If either one of them deviates from the resulting $\ell_e$ and $\ell_a(r),$ the other will do even better.
 
-in general, erin has the advantage since she at least moves in the direction of the target, even if she passes it. if aaron chooses to move, there is a $50\%$ chance that he furthers himself from it, and even still, he will still be at a disadvantage.
+In general, Erin has the advantage since she at least moves in the direction of the target, even if she passes it. If Aaron chooses to move, there is a $50\%$ chance that he furthers himself from it.
 
-### finding $P(\text{Aaron wins}\rvert r,\ell_e)$
+### Finding $P(\text{Aaron wins}\rvert r,\ell_e)$
 
-still, for any given $(r, \ell_e)$ there will be a range of target angles $\theta$ such that aaron ends up closer to it.
+Still, for any given $(r, \ell_e)$ there will be a range of target angles $\theta$ such that Aaron ends up closer to it.
 
-aaron is closer to the target when erin's squared distance minus aaron's squared distance is positive:
+Aaron is closer to the target when Erin's squared distance minus Aaron's squared distance is positive:
 
 $$ \left(\ell_e - r\right)^2 - \left(\ell_a(r)^2 + r^2 - 2r\ell_a(r)\cos\theta\right) > 0. $$
 
-we can solve for the $\theta$ where this switches from positive to negative and get 
+We can solve for the $\theta$ where this switches from positive to negative and get 
 
 $$ \theta_+ = \cos^{-1} \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}. $$
 
-aaron will win whenever $-\theta_+ < \theta < \theta_+,$ so the probability he wins is just 
+Aaron will win whenever $-\theta_+ < \theta < \theta_+,$ so the probability he wins is just 
 
 $$ 
   \begin{align} 
     P(\text{Aaron wins}\rvert r,\ell_e) &= \frac{2\theta_+}{2\pi} \\
-    &= \frac{1}{\pi}\cos^{-1} \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}
+    &= \frac{1}{\pi}\cos^{-1} \frac{2r\ell_e - \ell_e^2 + \ell_a(r)^2}{2\ell_a(r)r}.
   \end{align}
 $$
 
-with this, we can find aaron's optimal value of $\ell_a(r).$ setting the derivative with respect to $\ell_a(r,)$ equal to zero and solving for $\ell_a(r),$ we get
+With this, we can find Aaron's optimal value of $\ell_a(r).$ Setting the derivative with respect to $\ell_a(r,)$ equal to zero and solving for $\ell_a(r),$ we get
 
 $$ \ell_a(r) = \sqrt{\ell_e(2r-\ell_e)}. $$
 
-this is the optimal policy for aaron, and it is zero for $\ell_e > 2r.$ this makes sense since if $\ell_e$ is more than $2r$ from the origin, aaron doesn't have to muck about with moving, he will be closer to the target if he just stays put at the origin.
+This is the optimal policy for Aaron, and it is zero for $\ell_e > 2r.$ This makes sense since if $\ell_e$ is more than $2r$ from the origin, Aaron doesn't have to muck about with moving, he will be closer to the target if he just stays put at the origin.
 
 ![](/img/2024-05-02-leplot.gif){:width = "450 px" class = "image-centered" }
 
-so, aaron's probability to win given $r$ is
+So, Aaron's probability to win given $r$ is
 
 $$ P(\text{Aaron wins}\rvert r,\ell_e) = \frac{1}{\pi}\cos^{-1} \frac{\sqrt{\ell_e(2r-\ell_e)}}{r}. $$
 
-all that's left is to average it over all possible radii. the probability of a given radius is the area of the annulus of radius $r$ relative to the area of the circle, $2\pi r\, dr/\pi = 2r\,dr.$
+All that's left is to average it over all possible radii. The probability of a given radius is the area of the annulus of radius $r$ relative to the area of the circle, $2\pi r\, dr/\pi = 2r\,dr.$
 
-this gets us 
+This gets us 
 
 $$ P(\text{Aaron wins}\rvert \ell_e) = \int\limits_0^1\,dr 2r P(\text{Aaron wins}\rvert r,\ell_e) $$
 
-now, when $2r<\ell_e$ aaron is guaranteed to win, so we can split up the integral to the interval from $r=0$ to $\frac12\ell_e$ and the interval from $\frac12\ell_e$ to $1.$
+Now, when $2r<\ell_e$ Aaron is guaranteed to win, so we can split up the integral to the interval from $r=0$ to $\frac12\ell_e$ and the interval from $\frac12\ell_e$ to $1.$
 
-the first half is just $\frac14\ell_e^2.$ the second half is more complicated, and i couldn't find an analytic expression for it. 
+The first half is just $\frac14\ell_e^2.$ The second half is more complicated, and I couldn't find an analytic expression for it. 
 
-so 
+So 
 
 $$ P(\text{Aaron wins}\rvert \ell_e) = \frac14\ell_e^2 + \int\limits_{\frac12\ell_e}^1\,dr 2r P(\text{Aaron wins}\rvert r, \ell_e). $$
 
-thankfully for erin, we can minimize this numerically.
-
 ![](/img/2024-05-02-P_aaron.png){:width = "450 px" class = "image-centered" }
 
-### finding $\ell_e^*$
+### Finding $\ell_e^*$
 
-in complete possession of all this information, erin calculates the same expression and is now tasked with optimizing. a practical person, she chooses interval halving.
+In complete possession of all the same information, Erin also calculates the expression and is now tasked with optimizing it. Thankfully, it can be done numerically.
+
+A practical person, she chooses interval halving.
 
 ```mathematica
 aaronWinProb[le_] := 
@@ -99,6 +99,6 @@ FindMinimum[aaronWinProb[le], {le, 0.5}]
 
 ```
 
-so, the best aaron can manage is to win $\approx 16.61864864740\%$ of the time and erin's optimal distance is $\ell_e^* \approx 0.50130699421.$
+So, the best Aaron can manage is to win $\approx 16.61864864740\%$ of the time and Erin's optimal distance is $\ell_e^* \approx 0.50130699421.$
 
 <br>
