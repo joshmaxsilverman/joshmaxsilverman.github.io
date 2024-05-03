@@ -24,7 +24,7 @@ date: 2024/05/01
 
 Though Aaron can move however he likes, not having any angular information, anything he does will be averaged over all angles relative to the target. So, his strategy must be to move a given distance from the center. Knowing the radius of the target, he can pick the best value $\ell_a(r)$ for each value of $r.$
 
-So, without losing generality, we can put Aaron at radius $\ell_a(r)$ along $\theta=0$ and Erin will be at distance $\ell_e$ at the angle of the target, $\theta_T.$
+So, without losing generality, we can put Aaron at radius $\ell_a(r)$ along $\theta=0$ and Erin will be at distance $\ell_e$ at the angle of the target, $\theta.$
 
 With this context, we can outline Aaron and Erin's planning.
 
