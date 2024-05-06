@@ -25,7 +25,7 @@ tags: information-theory trees
 
 In the $25$ person race, we want to find the three fastest people. 
 
-It isn't possible to find the three fastest people without racing all of the sprinters since we can't rank someone in the absence of information. Since each race takes $10$ people, we can't fit $25$ sprinters in less than $3$ races. So, $3$ should be the absolute minimum number of races we can hope to use.
+It isn't possible to find the three fastest people without racing all of the sprinters since we can't rank someone in the absence of information. Since each race takes $10$ people, we can't fit $25$ sprinters in less than $3$ races. So, $3$ is the absolute minimum number of races we can hope to use.
 
 Happily, this threshold can be saturated.
 
