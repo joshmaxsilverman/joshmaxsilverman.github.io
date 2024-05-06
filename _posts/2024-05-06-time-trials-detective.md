@@ -55,11 +55,11 @@ Since we haven't touched runners $C$ and $D,$ or $E$ and $F,$ we can pair them o
 
 Now, running these three races has destroyed the symmetry between those who won their race and those who lost their race. However, there is still symmetry amongst the winners and losers. For argument's sake, say $A,$ $C,$ and $D$ won their races while $B,$ $D,$ and $F$ lost theirs. If we pair $A$ and $C$ in a race, we can eliminate another half of all orders, leaving $45$ orders.
 
-After this question, we will be left with a situation that looks like
+After this question, we will be left with the "4 questions" scenario below:
 
-< A faster than C, A faster than B, D faster than B >
+![](/img/2024-05-06-sprinters-diagram.png){:width="450 px" class="image-centered"}
 
-We don't know if C or B is faster. If we are lucky, B is faster than C. But if it's reversed, we will need another measurement to fully order $\{A,B,C,D\}.$
+We don't know if $C$ or $B$ is faster. If we are lucky, $B$ is faster than $C.$ But if it's reversed, we will need another measurement to fully order $\{A,B,C,D\}.$
 
 Now, we have to place $E$ and $F$ in this ordering. We have no information about where $E$ is relative to the others, so we can go position by position (there are $5$ positions). Call the number of races it takes to place $E$ $x.$ That means there will be $(5-x)$ positions left for $F$ by the time $E$ is placed. So, the worst case for placing $E$ and $F$ is $5$ additional races. 
 
@@ -75,7 +75,7 @@ So, let's split them into two groups of $3$ and $3$. To order one of these group
 
 Now, with two ordered lists say $\{A,B,C\}$ and $\{D,E,F\}$, we can merge them.
 
-Call the final list $L.$ Now, race the sprinters at the top of either list and put the winner into $L.$ Now, keep doing that until one of the lists is empty. The worst case is when lists flip flop winners. The most this can happen is $6-1=5$ times.
+Call the final list $L.$ Now, race the sprinters at the top of either list and put the winner into $L.$ Now, keep doing that until one of the lists is empty. The worst case is when lists the flip flop winners. The most this can happen is $6-1=5$ times.
 
 So, the number of races in the worst case scenario is $6 + 5 = 11.$
 
