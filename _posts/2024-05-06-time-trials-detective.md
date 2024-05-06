@@ -96,7 +96,6 @@ A against B
 C against D
 E against F
 A against C
-E against F
 B against F
 B against C
 B against E
