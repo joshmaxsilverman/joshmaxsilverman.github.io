@@ -47,7 +47,7 @@ At the outset, the possible orderings are fully symmetric with respect to the ru
 
 Since we haven't touched runners $C$ and $D,$ or $E$ and $F,$ we can pair them off and remove half of all outstanding possibilities again each time. This brings us down to $90$ orders. $3$ bits down!
 
-Now, running these three races has destroyed the symmetry between those who won the races and those who lost. However, there is still symmetry amongst the winners and losers. For argument's sake, say $A,$ $C,$ and $D$ won their races while $B,$ $D,$ and $F$ lost theirs. So, if we pair $A$ and $C$ in a race, we can eliminate another half of all orders, leaving $45.$
+Now, running these three races has destroyed the symmetry between those who won the races and those who lost. However, there is still symmetry amongst the winners and losers. For argument's sake, say $A,$ $C,$ and $D$ won their races while $B,$ $D,$ and $F$ lost theirs. So, if we pair $A$ and $C$ in a race, we can eliminate another half of all orders, leaving $45$ orders.
 
 Now, there are no symmetric choices left. Since $A$ and $C$ were winners, this race gives us information about $B$ and $D.$ If, e.g., $A$ beats $C,$ then it tells us $A$ can beat $D.$
 
