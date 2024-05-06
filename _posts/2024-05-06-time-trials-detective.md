@@ -59,7 +59,7 @@ After this question, we will be left with the "4 questions" scenario below:
 
 ![](/img/2024-05-06-sprinters-diagram.png){:width="550 px" class="image-centered"}
 
-We don't know if $C$ or $B$ is faster. If we are lucky, $B$ is faster than $C.$ But if it's reversed, we will need another measurement to fully order $\{A,B,C,D\}.$
+We don't know if $C$ or $B$ is faster. If we are lucky, $B$ is faster than $C.$ But if it's reversed, we will need another measurement to fully order $\\{A,B,C,D\\}.$
 
 Now, we have to place $E$ and $F$ in this ordering. We have no information about where $E$ is relative to the others, so we can go position by position (there are $5$ positions). Call the number of races it takes to place $E$ $x.$ That means there will be $(5-x)$ positions left for $F$ by the time $E$ is placed. So, the worst case for placing $E$ and $F$ is $5$ additional races. 
 
@@ -73,7 +73,7 @@ Suppose there is a fastest way to sort $N$ sprinters. Whatever it is, it must be
 
 So, let's split them into two groups of $3$ and $3$. To order one of these groups, in the worst case, we need races between all three. So, it will take $3+3=6$ races to sort these two sub-groups.
 
-Now, with two ordered lists say $\{A,B,C\}$ and $\{D,E,F\}$, we can merge them.
+Now, with two ordered lists say $\\{A,B,C\\}$ and $\\{D,E,F\\}$, we can merge them.
 
 Call the final list $L.$ Now, race the sprinters at the top of either list and put the winner into $L.$ Now, keep doing that until one of the lists is empty. The worst case is when lists the flip flop winners. The most this can happen is $6-1=5$ times.
 
