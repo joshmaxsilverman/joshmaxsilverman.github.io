@@ -41,7 +41,7 @@ Before we start, it pays to think about the information we seek.
 
 There are $6! = 720$ possible orderings of the six runners which is $\log_2 6! \approx 9.49$ bits of information.
 
-If each race we ran halved the number of possibilities (a perfect "binary question"), it would yield $1$ bit. So, without considering the constraints on our race design, we should expect to need $10$ races at the very least.
+If each race we ran halved the number of possibilities (a perfect "binary question"), it would yield $\log_2 2 = 1$ bit. So, without considering the constraints on our race design, we should expect to need $10$ races at the very least.
 
 At the outset, the possible orderings are fully symmetric with respect to the runners. So, pick any two runners, say $A$ and $B$ and race them against each other. The result of this race will either have $A$ or $B$ winning. Since, at this stage, the orderings are symmetric with regard to $A$ and $B,$ this will remove half of all possibilities, leaving $360$ orders. $1$ bit down, $\approx 8.49$ to go!
 
