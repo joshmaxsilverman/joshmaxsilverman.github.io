@@ -57,7 +57,7 @@ Now, running these three races has destroyed the symmetry between those who won 
 
 After this question, we will be left with the "4 questions" scenario below:
 
-![](/img/2024-05-06-sprinters-diagram.png){:width="450 px" class="image-centered"}
+![](/img/2024-05-06-sprinters-diagram.png){:width="550 px" class="image-centered"}
 
 We don't know if $C$ or $B$ is faster. If we are lucky, $B$ is faster than $C.$ But if it's reversed, we will need another measurement to fully order $\{A,B,C,D\}.$
 
