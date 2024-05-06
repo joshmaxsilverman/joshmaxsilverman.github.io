@@ -67,22 +67,25 @@ def x_before_y(x, y, lst):
 
 new_orders = deepcopy(orders)
 
-count = 0
 while len(new_orders) > 1:
-  count += 1
+
   trial_race = dict()
   current_length = len(new_orders)
 
   for x in 'ABCDEF':
     for y in 'ABCDEF':
+
       if x == y:
         pass
+
       else:
         remaining = len([ o for o in new_orders if x_before_y(x, y, o) ])
         trial_race[(x, y)] = abs(current_length/2 - remaining)
+
   best_race = min(trial_race, key=trial_race.get)
   best_x, best_y = best_race
   new_orders = [ o for o in new_orders if x_before_y(best_x, best_y, 0) ]
+
   fprint(f'{best_x} against {best_y}')
 ```
 
