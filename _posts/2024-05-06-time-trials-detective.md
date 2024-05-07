@@ -23,7 +23,7 @@ tags: information-theory trees
 
 **Note**: this has two major modifications from the first version of this post. 
 - The standard credit solution gave the insight for a $3$ race approach, but did not carefully implement it. The correct structure is now given.
-- The extra credit approach ignored pathway dependence and so, missed out on one removable race.
+- The extra credit approach ignored pathway dependence and, so, missed out on one removable race.
 
 ## Standard credit
 
