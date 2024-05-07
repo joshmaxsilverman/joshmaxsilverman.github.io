@@ -105,13 +105,13 @@ def find_depth(orders):
 
 ```
 
-Now, this approach is greedy and it does not consider the possibility that e.g. sub-optimally dividing the possibilities at stage $n$ sets us up better overall sub-division at a subsequent level of the recursion. So, we should only believe our result if it matches the theoretical minimum from above, $\lceil \log_2 n!\rceil.$
+Now, this approach is greedy and it does not consider the possibility that e.g. sub-optimally dividing the possibilities at stage $n$ sets us up better overall sub-division at a subsequent level of the recursion. So, we should only believe our result if it matches the theoretical minimum from above, $\lceil \log_2 N!\rceil.$
 
-For $n=1$ to $7,$ it does and we get
+For $N=1$ to $7,$ it does and we get
 
 $$ 
   \begin{array}{c|c}
-    N & \text{depth}(N) \\\\ \\\\hline
+    N & \text{depth}(N) \\ \hline
     1 & 0 \\
     2 & 1 \\
     3 & 3 \\
