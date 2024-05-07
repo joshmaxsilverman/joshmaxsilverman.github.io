@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Capture the Flag
+title: Capture the flag
 subtitle: How often can you win when you have a number and they have an arrow?
 tags: geometry game-theory expectation
 date: 2024/05/01
