@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Pick a circle any circle
+title: Pick a circle, any circle
 date: 2024/02/19
 subtitle: What chance is there, for a circle inside a square?
 tags: conditional-probability transformations
