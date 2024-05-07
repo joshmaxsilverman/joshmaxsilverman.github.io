@@ -35,13 +35,14 @@ Happily, this threshold can be saturated.
 
 - First, we can race any $10$ of the sprinters to identify the top three ouf of them $A_1, A_2,$ and $A_3.$
 - Next, pick any $9$ of the un-raced sprinters and race them with the third fastest sprinter from the first race.
-  - If $A_2$ comes in the top two, race $A_1,A_2,$ and $A_3$ and the fastest of the new runners, $B_1,$ against the $6$ remaining unraced sprinters.
+  - If $A_2$ wins, race $A_1, A_2, A_3$ and the fastest of the new runners, $B_1,$ against the $6$ unraced runners.
+  - If $A_2$ comes in second, race $A_1,A_2,$ and the fastest of the new runners, $B_1,$ against the $6$ remaining unraced sprinters.
   - If $A_2$ comes in third, race $A_1, A_2$ and the winners of race two, $B_1$ and $B_2$ against the $6$ unraced sprinters.
-  - If $A_2$ places outside the top three, race $A_1,B_1,$ and $B_2$ against the unraced sprinters. 
+  - If $A_2$ places outside the top three, race $A_1,B_1,$ and $B_2$ against the $6$ unraced sprinters. 
 
-The top three finishers of the third race will be the three fastest sprinters.
+The top three finishers of the third race will be the three fastest sprinters overall.
 
-Big thanks to Emilie Mitchell and Dave Moran for pointing out my oversight.
+Big thanks to Emilie Mitchell (and Dave Moran) for pointing out the earlier oversight.
 
 ## Extra credit
 
@@ -63,11 +64,67 @@ From here, we can't make any easy binary divisions, and we have to find the race
 
 To find the shallowest worst-case sequence of races, we can search over all possible races to run, and log the number of remaining possibilities for the two possible outcomes. From these, we can pick the one that gets the two numbers as close as possible. This will give us the best race to run, between sprinters $s_1$ and $s_2$.
 
-This will give us two lists $L_1$ and $L_2,$ corresponding to the possibilities that remain if $s_1$ or $s_2$ wins.
+This will give us two lists $L_{s_1}$ and $L_{s_2},$ corresponding to the possibilities that remain if $s_1$ or $s_2$ wins.
 
-From here, we can return $1 + \max(\text{depth}(L_1), \text{depth}(L_2))$ so the problem is defined recursively like
+From here, we can return $1 + \max(\text{depth}(L_{s_1}), \text{depth}(L_{s_2}))$ so the problem is defined recursively like
 
-$$ \text{depth}(L) = 1 + \min_{\lvert\lvert L_1\rvert - \lvert L_2\rvert\rvert}\max\\{\text{depth}(L_1),\\text{depth}(L_2)\\}. $$
+$$ \text{depth}(L) = 1 + \min_{\lvert\lvert L_{s_1}\rvert - \lvert L_{s_2}\rvert\rvert}\max\\{\text{depth}(L_{s_1}),\\text{depth}(L_{s_2})\\}. $$
+
+Coding this up, we have 
+
+```python
+import math
+from itertools import permutations, combinations
+import string
+letters = string.ascii_uppercase
+
+n = 6
+sprinters = letters[:n]
+orders = set(permutations(sprinters))
+pairs = set(combinations(sprinters, 2))
+
+def find_depth(orders):
+
+    if len(orders) == 1:
+        return 0
+
+    races = dict()
+
+    for p in pairs:
+        x, y = p
+        remaining = len([ o for o in orders if o.index(x) < o.index(y) ])
+        races[p] = abs(len(orders) / 2 - remaining)
+
+    best_race = min(races, key=races.get)
+    best_x, best_y = best_race
+
+    orders_x = set(o for o in orders if o.index(best_x) < o.index(best_y))
+    orders_y = orders.difference(orders_x)
+
+    return 1 + max(find_depth(orders_x), find_depth(orders_y))
+
+```
+
+Now, this approach is greedy and it does not consider the possibility that e.g. sub-optimally dividing the possibilities at stage $n$ sets us up better overall sub-division at a subsequent level of the recursion. So, we should only believe our result if it matches the theoretical minimum from above, $\lceil \log_2 n!\rceil.$
+
+For $n=1$ to $7,$ it does and we get
+
+$$ 
+  \begin{array}{c|c} \\
+    N & \text{depth}(N) \\ \hline
+    1 & 0 \\
+    2 & 1 \\
+    3 & 3 \\
+    4 & 5 \\
+    5 & 7 \\
+    6 & 10 \\
+    7 & 13.
+  \end{array} 
+$$
+
+Sadly, for $N=8,$ the greedy approach no longer saturates the bound. 
+
+Thanks to Tom Keith for pointing out the issue with the original approach.
 
 
 <br>
