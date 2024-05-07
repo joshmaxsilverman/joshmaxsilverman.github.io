@@ -111,7 +111,7 @@ For $n=1$ to $7,$ it does and we get
 
 $$ 
   \begin{array}{c|c}
-    N & \text{depth}(N) \\ \\hline
+    N & \text{depth}(N) \\\\ \\\\hline
     1 & 0 \\
     2 & 1 \\
     3 & 3 \\
