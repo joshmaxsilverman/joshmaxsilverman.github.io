@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You Beat the Heats?
+title: Can you beat the heats?
 date: 2024/05/06
 subtitle: A good old racetrack whodunit.
 tags: information-theory trees
