@@ -62,7 +62,13 @@ Now, running these three races has removed the symmetry between those who won th
 
 From here, we can't make any easy binary divisions, and we have to find the races that come as close as possible to dividing the field. The best race to run will depend on the information we have at our disposal. 
 
-To find the shallowest worst-case sequence of races, we can search over all possible races to run, and log the number of remaining possibilities for the two possible outcomes. From these, we can pick the one that gets the two numbers as close as possible. This will give us the best race to run, between sprinters $s_1$ and $s_2$.
+Finding the best set of measurements is not straightforward. However, since we know the theoretical minimum, we can make a wild simplifying assumption and see if what it produces matches the minimum. If it does, then we are good!
+
+The assumption we make is that, at each stage, we should seek to remove as close to half the remaining possibilities as possible. 
+
+This can go wrong if, for instance, dividing the field close to evenly at one stage forces us to make an unbalanced decision later in the process, while making a slightly less balanced split earlier on would have led to more balanced splits later on. Hopefully that doesn't happen!
+
+So, to find the shallowest worst-case sequence of races, we can search over all possible races to run, and log the number of remaining possibilities for the two possible outcomes. From these, we can pick the one that gets the two numbers as close as possible. This will give us the best race to run, between sprinters $s_1$ and $s_2$.
 
 This will give us two lists $L_{s_1}$ and $L_{s_2},$ corresponding to the possibilities that remain if $s_1$ or $s_2$ wins.
 
@@ -105,7 +111,7 @@ def find_depth(orders):
 
 ```
 
-Now, this approach is greedy and it does not consider the possibility that e.g. sub-optimally dividing the possibilities at stage $n$ sets us up better overall sub-division at a subsequent level of the recursion. So, we should only believe our result if it matches the theoretical minimum from above, $\lceil \log_2 N!\rceil.$
+Like we said above, this has no guarantee to be optimal, and we should only believe the result if it matches the theoretical minimum, $\lceil \log_2 N!\rceil.$
 
 For $N=1$ to $7,$ it does and we get
 
@@ -122,7 +128,7 @@ $$
   \end{array} 
 $$
 
-Sadly, for $N=8,$ the greedy approach no longer saturates the bound. 
+Sadly, by $N=8$ the greedy approach no longer saturates the bound. 
 
 Thanks to Tom Keith for pointing out the issue with the original approach.
 
