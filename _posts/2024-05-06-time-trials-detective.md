@@ -115,7 +115,7 @@ Like we said above, this has no guarantee to be optimal, and we should only beli
 For $N=1$ to $7,$ it does and we get
 
 $$ 
-  \begin{array}{c|c}
+  \begin{array}{c|c|c}
     N & \text{depth}(N) & \lceil \log_2 N! \rceil \\ \hline
     1 & 0 & 0\\
     2 & 1 & 1 \\
