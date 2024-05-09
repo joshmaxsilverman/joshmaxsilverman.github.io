@@ -79,7 +79,6 @@ $$ \text{depth}(L) = 1 + \min_{\lvert\lvert L_{s_1}\rvert - \lvert L_{s_2}\rvert
 Coding this up, we have 
 
 ```python
-import math
 from itertools import permutations, combinations
 import string
 letters = string.ascii_uppercase
@@ -117,14 +116,16 @@ For $N=1$ to $7,$ it does and we get
 
 $$ 
   \begin{array}{c|c}
-    N & \text{depth}(N) \\ \hline
-    1 & 0 \\
-    2 & 1 \\
-    3 & 3 \\
-    4 & 5 \\
-    5 & 7 \\
-    6 & 10 \\
-    7 & 13
+    N & \text{depth}(N) & \lceil \log_2 N! \rceil \\ \hline
+    1 & 0 & 0\\
+    2 & 1 & 1 \\
+    3 & 3 & 3 \\
+    4 & 5 & 5 \\
+    5 & 7 & 7 \\
+    6 & 10 & 10 \\
+    7 & 13 & 13 \\
+    8 & 17 & 16 \\
+    9 & 20 & 19
   \end{array} 
 $$
 
