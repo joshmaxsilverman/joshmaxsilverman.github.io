@@ -116,7 +116,7 @@ For $N=1$ to $7,$ it does and we get
 
 $$ 
   \begin{array}{c|c|c}
-    N & \text{depth}(N) & \lceil \log_2 N! \rceil \\ \hline
+    N & \text{depth}(N) & \lceil \log_2 N! \rceil \\\\ \hline
     1 & 0 & 0 \\
     2 & 1 & 1 \\
     3 & 3 & 3 \\
