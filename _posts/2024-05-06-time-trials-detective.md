@@ -72,7 +72,7 @@ So, to find the shallowest worst-case sequence of races, we can search over all 
 
 This will give us two lists $L_{s_1}$ and $L_{s_2},$ corresponding to the possibilities that remain if $s_1$ or $s_2$ wins.
 
-From here, we can return $1 + \max(\text{depth}(L_{s_1}), \text{depth}(L_{s_2}))$ so the problem is defined recursively like
+From here, we can return $1 + \max(\text{depth}(L_{s_1}), \text{depth}(L_{s_2}))$ so the problem is defined recursively like:
 
 $$ \text{depth}(L) = 1 + \min_{\lvert\lvert L_{s_1}\rvert - \lvert L_{s_2}\rvert\rvert}\max\left(\text{depth}(L_{s_1}),\text{depth}(L_{s_2})\right). $$
 
