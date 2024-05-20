@@ -66,12 +66,12 @@ Altogether the new area makes $2ab\frac{dr}{r} + O(r^2)$ and we get
 $$ 
   \begin{align}
     \frac{dA}{dr} &= P \\
-    \frac{2ab\frac{dr}{r}}{dr} &= 2(a+b) \\
+    \frac{2ab}{dr}\frac{dr}{r} &= 2(a+b) \\
     \frac{ab}{a+b} &= r
   \end{align}
 $$
 
-Ts that good enough?
+Is that good enough?
 
 ### Geometry 2
 
