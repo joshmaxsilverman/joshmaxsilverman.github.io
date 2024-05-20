@@ -41,7 +41,7 @@ One way to go is playing with the definition directly.
 
 Call the aspect ratio $a/b$ of the rectangle $\gamma,$ then the area is $A = \gamma a^2$ and the perimeter is $P=2a(1+\gamma).$
 
-So, $dA = 2\gamma a$ and 
+So, $dA = 2\gamma a\, da$ and 
 
 $$ \begin{align} dr &\equiv \frac{dA}{P} \\ &= \frac{\gamma}{1+\gamma} da. \end{align} $$
 
