@@ -81,7 +81,7 @@ One way to re-interpret it is the typical perpendicular distance from the center
 
 In fact that's what our definition does — it asks for a "typical" radius relating new area to existing perimeter.
 
-We can find the "typical" perpendicular distance by taking the average of perpendicular distance weighted by the length of its frontier.
+We can find the "typical" perpendicular distance by taking the average of the perpendicular over the frontier.
 
 For upward expansion, the perpendicular distance is $\frac12 a$ with frontier length $b,$ and for sideways expansion it is perpendicular distance $\frac12b$ with frontier length $a$:
 
