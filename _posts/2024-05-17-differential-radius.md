@@ -81,7 +81,7 @@ Let's take a step back and find the real solution. What is a radius?
 
 One way to re-interpret it is the typical perpendicular distance from the center of expansion to the frontier of expansion.
 
-Indeed that's what our definition does — it asks for a "typical" radius relating new area to existing perimeter.
+In fact that's what our definition does — it asks for a "typical" radius relating new area to existing perimeter.
 
 We can find the "typical" perpendicular distance by taking the average of perpendicular distance weighted by the length of its frontier.
 
