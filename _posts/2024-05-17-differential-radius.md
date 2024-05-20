@@ -45,9 +45,7 @@ So, $dA = 2\gamma a\, da$ and
 
 $$ \begin{align} dr &\equiv \frac{dA}{P} \\ &= \frac{\gamma}{1+\gamma} da. \end{align} $$
 
-Since $\gamma$ is a constant, this means $r = a\frac{\gamma}{1+\gamma} + \text{const.}$ 
-
-Multiplying through by $a$ we get 
+Since $\gamma$ is a constant, this means $r = a\frac{\gamma}{1+\gamma} + \text{const.}$ or 
 
 $$ r = \frac{ab}{a+b} + \text{const.} $$
 
