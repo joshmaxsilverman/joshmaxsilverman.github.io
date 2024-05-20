@@ -37,7 +37,7 @@ But let's get there by regulation techniques.
 
 ### Analysis
 
-Another way to go is playing with the definition directly.
+One way to go is playing with the definition directly.
 
 Call the aspect ratio $a/b$ of the rectangle $\gamma,$ then the area is $A = \gamma a^2$ and the perimeter is $P=2a(1+\gamma).$
 
