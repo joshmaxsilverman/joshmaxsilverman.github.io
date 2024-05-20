@@ -57,7 +57,7 @@ Area is created by exposed boundary stretching outward.
 
 We don't know what $r$ is, but let's extend it by $dr.$ If we do, then all linear dimensions will increase by the same ratio. The top makes new area $a\frac{dr}{r}b$ and the side makes new area $b\frac{dr}{r}a.$ 
 
-The corner also makes new area but it is second order in $dr$ and goes to zero in the liit $dr \rightarrow 0.$
+The corner also makes new area but it is second order in $dr$ and goes to zero in the limit $dr \rightarrow 0.$
 
 Altogether the new area makes $2ab\frac{dr}{r} + O(r^2)$ and we get
 
