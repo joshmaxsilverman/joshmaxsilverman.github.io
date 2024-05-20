@@ -27,7 +27,7 @@ When the height or width goes to zero, then the area is zero and increasing the 
 
 When the height or width dominates the other, but neither vanishes, then the increase in area should not depend on the length of the long side. So, when $a\gg b,$ the differential radius should be proportional to $b$ (and $a$ in the other limit).
 
-When neither $a=b,$ the rectangle is a square and we should recover $r=\frac12 a.$ 
+When $a=b,$ the rectangle is a square and we should recover $r=\frac12 a.$ 
 
 Already we could try to apply street-fighting mathematics. On the basis of our observations, the result must be proportional to $a$ and $b$ and thresholded by either one relative to the other. This basically narrows us down to
 
