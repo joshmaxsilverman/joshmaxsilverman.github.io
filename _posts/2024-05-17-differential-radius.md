@@ -43,7 +43,7 @@ Call the aspect ratio $a/b$ of the rectangle $\gamma,$ then the area is $A = \ga
 
 So, $dA = 2\gamma a$ and 
 
-$$ dr \equiv \frac{dA}{P} \frac{\gamma}{1+\gamma} da. $$
+$$ \begin{align} dr &\equiv \frac{dA}{P} \\ &= \frac{\gamma}{1+\gamma} da. \end{align} $$
 
 Since $\gamma$ is a constant, this means $r = a\frac{\gamma}{1+\gamma} + \text{const.}$ 
 
