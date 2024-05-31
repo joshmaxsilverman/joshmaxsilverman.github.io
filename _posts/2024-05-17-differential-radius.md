@@ -7,7 +7,7 @@ subtitle: What would the world look like if you could only see squares?
 tags: scaling geometry
 ---
 
->**Question**: One of my favorite facts about circles is the relationship between their area and their circumference. For a circle with radius $r,$ its area is $\pi r^2$ and its circumference is $2\pi r.$ What’s neat here (or rather, one thing that’s neat here) is that if you take the derivative of the area formula with respect to $r,$ you get the circumference formula! In other words, $d(\pi r^2)/dr = 2\pi r.$ Amazing, right?
+>**Question**: One of my favorite facts about circles is the relationship between their area and their circumference. For a circle with radius $r,$ its area is $\pi r^2$ and its circumference is $2\pi r.$ What’s neat here (or rather, one thing that’s neat here) is that if you take the derivative of the area formula with respect to $r,$ you get the circumference formula! In other words, $d(\pi r^2)/dr = 2\pi r.$ Amazing, right? 
 >
 >(For those of you who are accustomed to using tau rather than pi, this still works. The area of a circle is $\tau r^2/2$ and its circumference is $\tau r.$ Once again, $d(\tau r^2/2)/dr = \tau r.$)
 >
