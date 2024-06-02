@@ -37,7 +37,7 @@ $$ f(1\rvert\hat{x}) = \hat{x}(1-\hat{x}) + f(\hat{x}\rvert\hat{y}) + f(1-\hat{x
 
 At this point it's tempting to dive into cases, or recurse the equation, but we can learn a lot by thinking about the problem at different scales.
 
-If we halve the length of the original stick $\ell,$ then we get the same problem scaled down by a factor of $2.$ this means the scale of all subsequent products of lengths drops by $1/2^2$
+If we halve the length of the original stick $\ell,$ then we get the same problem scaled down by a factor of $2.$ This means the scale of all subsequent products of lengths drops by $1/2^2$
 
 In general, if we scale the stick by $\gamma$ the sum of products will scale by $\gamma^2$ and so: 
 
