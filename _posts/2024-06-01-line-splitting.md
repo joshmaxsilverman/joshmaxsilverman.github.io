@@ -17,7 +17,7 @@ tags:
 
 it is tempting to dive into cases, or recurse the equation, but we can learn a lot by thinking about the problem at different scales.
 
-if we halve the length of the original stick $\ell,$ then we end up with the same problem scaled down by a factor of $2.$ this means that the scale of all subsequent products of lengths drops by $1/2^2/$
+if we halve the length of the original stick $\ell,$ then we end up with the same problem scaled down by a factor of $2.$ this means that the scale of all subsequent products of lengths drops by $1/2^2$
 
 in general, if we scale the stick by $\gamma$ the sum of products will scale by $\gamma^2:$ 
 
@@ -25,7 +25,7 @@ $$ f(\gamma\ell) = \gamma^2 f(\ell). $$
 
 plugging this in, the original recursion becomes
 
-$$ f(1|x) = x(1-x) + \left[x^2 + (1-x)^2\right]f(1|x). $$
+$$ f(1) = \hat{x}(1-\hat{x}) + \left[\hat{x}^2 + (1-\hat{x})^2\right]f(1). $$
 
 giving the value of $f$ given the random value $x.$ 
 
