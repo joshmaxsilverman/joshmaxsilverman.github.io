@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Interview line splitting
 date: 2024/06/01
-subtitle:
-tags:
+subtitle: What is the sum of the products of endless division?
+tags: scaling recursion
 ---
 
 >Question
