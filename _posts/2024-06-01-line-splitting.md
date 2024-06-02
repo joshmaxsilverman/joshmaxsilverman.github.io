@@ -33,17 +33,22 @@ $$ f(\gamma\ell) = \gamma^2 f(\ell). $$
 
 plugging this in, the original recursion becomes
 
-$$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \left[\hat{x}^2 + (1-\hat{x})^2\right]f(1|\hat{x}). $$
+$$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \hat{x}^2 f(1|\hat{y}) + (1-\hat{x})^2 f(1|\hat{z}). $$
 
-giving the value of $f$ given the random value $x.$ 
+averaging over $\hat{y}$ and $\hat{z}$ this becomes
 
-averaging over $x,$ this becomes
+$$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \left[ \hat{x}^2 + (1-\hat{x})^2 \right]f(1), $$
+
+and averaging over $x,$ it becomes
 
 $$ \begin{align}
-  f(1)\int\limits_0^1 \text{d}x\, \left[1 - x^2 - (1-x)^2\right] &= \int\limits_0^1\text{d}x x(1-x) \\
-  f(1) &= \frac{\frac12 - \frac13}{1 - \frac23} \\
+  f(1) &= \int\limits_0^1\text{d}\hat{x}\, \hat{x}(1-\hat{x}) + f(1) \int\limits_0^1\text{d}\hat{x}\, \left(\hat{x}^2 + (1-\hat{x})^2\right) \\
+  &= \frac12 - \frac13 + f(1) \frac{2}{3} \\
+&= \frac{\frac12 - \frac13}{1 - \frac23} \\
   &= \frac12
 \end{align} $$
+
+## Extra credit
 
 the extra credit can be handled similarly. given the triple product, we get $f(\gamma \ell) = \gamma^3 f(\ell)$ instead of the quadratic.
 
