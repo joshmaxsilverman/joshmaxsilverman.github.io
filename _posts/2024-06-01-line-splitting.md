@@ -55,7 +55,7 @@ the extra credit can be handled similarly. given the triple product, we get $f(\
 working as before, we get
 
 $$ \begin{align}
-  f(1) &= f(a + b) + f(1 - a) + f(1 - b) - f(a) - f(b) - f(1 - a - b) \\
+  f(1|\hat{a}\hat{b}) &= \hat{a}\hat{b}(1-\hat{a}-\hat{b}) + f(\hat{a} + \hat{b}) + f(1 - \hat{a}) + f(1 - \hat{b}) - f(\hat{a}) - f(\hat{b}) - f(1 - \hat{a} - \hat{b}) \\
   &= ab(1-a-b) + \left[(a+b)^2 + (1-a)^2 + (1-b)^2 - a^3 - b^3 - (1-a-b)^3\right] f(1)
 \end{align} $$
 
