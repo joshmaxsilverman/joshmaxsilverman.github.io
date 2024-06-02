@@ -63,7 +63,10 @@ $$ \begin{align}
 
 The extra credit poses the similar relationship
 
-$$ f(1)= ab(1-a-b) + f(a+b) + f(1-b) + f(1-a) - f(a) - f(b) f(1-a-b). $$
+$$ \begin{align}
+  f(1)= ab(1-a-b) &+ f(a+b) + f(1-b) + f(1-a) \\
+                  &- f(a) - f(b) - f(1-a-b). 
+\end{align} $$
 
 This can be handled similarly. Since the product now involves three lengths, we get cubic scaling $g(\gamma \ell) = \gamma^3 g(\ell)$ instead of quadratic.
 
