@@ -43,7 +43,7 @@ In general, if we scale the stick by $\gamma$ the sum of products will scale by 
 
 $$ f(\gamma\ell) = \gamma^2 f(\ell). $$
 
-Plugging this in, the original recursion becomes
+Plugging this in, the original relationship becomes
 
 $$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \hat{x}^2 f(1|\hat{y}) + (1-\hat{x})^2 f(1|\hat{z}). $$
 
