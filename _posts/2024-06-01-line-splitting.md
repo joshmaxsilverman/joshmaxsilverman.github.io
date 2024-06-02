@@ -62,6 +62,11 @@ $$ \begin{align}
 taking expectations over $a$ (ranges from $0$ to $1$) and $b$ (ranges from $0$ to $1-a$) 
 
 $$ \begin{align}
+f(1) &= \langle\hat{a}\hat{b}(1-\hat{a}-\hat{b})\rangle_{a,b} + f(1)\langle(\hat{a}+\hat{b})^3 + (1-\hat{a})^3 + (1-\hat{b})^3 - \hat{a}^3 - \hat{b}^3 - (1-\hat{a}-\hat{b})^3\rangle_{a,b} \\
+\frac12 f(1) &= \frac{1}{120} + \frac{9}{20}f(1)
+\end{align} $$
+
+$$ \begin{align}
 \int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}\, f(1|\hat{a}\hat{b})P(\hat{a},\hat{b}) &= \int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}\hat{a}\hat{b}(1-\hat{a}-\hat{b}) + f(1)\int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}\, \left[(\hat{a}+\hat{b})^3 + (1-\hat{a})^3 + (1-\hat{b})^3 - \hat{a}^3 - \hat{b}^3 - (1-\hat{a}-\hat{b})^3\right] \\
 \frac12 f(1) &= \frac{1}{120} + \frac{9}{20}f(1)
 \end{align} $$
