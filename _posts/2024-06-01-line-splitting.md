@@ -33,7 +33,7 @@ where the $\hat{x}$ indicates we're dealing with a random variable.
 
 Really, this will give us one sample of $f(1),$ so we should write $f(1)$ as $f(1\rvert\hat{x})$ and likewise introduce the random variables $\hat{y}$ and $\hat{z}$ on which the other evaluations of $f$ will depend: 
 
-$$ f(1\rvert\hat{x}) = \hat{x}(1-\hat{x}) + f(\hat{x}\rvert\hat{y}) + f(1-\hat{x}\rvert\hat{z}) $$
+$$ f(1\rvert\hat{x},\hat{y},\hat{z}) = \hat{x}(1-\hat{x}) + f(\hat{x}\rvert\hat{y}) + f(1-\hat{x}\rvert\hat{z}) $$
 
 At this point it's tempting to dive into cases, or recurse the equation, but we can learn a lot by thinking about the problem at different scales.
 
@@ -45,7 +45,7 @@ $$ f(\gamma\ell) = \gamma^2 f(\ell). $$
 
 Plugging this in, the original relationship becomes
 
-$$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \hat{x}^2 f(1|\hat{y}) + (1-\hat{x})^2 f(1|\hat{z}). $$
+$$ f(1|\hat{x},\hat{y},\hat{z}) = \hat{x}(1-\hat{x}) + \hat{x}^2 f(1|\hat{y}) + (1-\hat{x})^2 f(1|\hat{z}). $$
 
 Averaging over $\hat{y}$ and $\hat{z}$ this becomes
 
