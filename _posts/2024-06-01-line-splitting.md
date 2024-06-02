@@ -10,7 +10,7 @@ tags: scaling recursion
 >**Question**: Starting with a line segment of length 1, randomly split it somewhere along its length into two parts. Compute the product of these two lengths. Then take each of the two resulting segments and repeat the process. That is, for each one, randomly split it somewhere along its length into two parts and compute the product. Then do this for all four resulting segments, then the eight after that, and the 16 after that, and so on.
 >
 > After doing this (forever), you add up all the products you computed throughout. On average, what value would you expect this sum to approach?
-> ---
+>
 >Another way to describe this week’s Fiddler is with a recursive function $f,$ defined by $f(L) = ab + f(a) + f(b).$ Here, $a$ and $b$ are random values between $0$ and $L,$ such that $a + b = L.$ The question asked above is this: On average, what value does $f(1)$ approach?
 >
 >For Extra Credit, we’ll be splitting segments into three parts rather than two. So let’s define a new function $g(L).$ But wait! We don’t have $g(L) = abc + g(a) + g(b) + g(c),$ like you might have expected.
