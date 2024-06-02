@@ -7,7 +7,7 @@ subtitle: What is the sum of the products of endless division?
 tags: scaling recursion
 ---
 
->**Question**: Starting with a line segment of length 1, randomly split it somewhere along its length into two parts. Compute the product of these two lengths. Then take each of the two resulting segments and repeat the process. That is, for each one, randomly split it somewhere along its length into two parts and compute the product. Then do this for all four resulting segments, then the eight after that, and the 16 after that, and so on.
+>**Question**: Starting with a line segment of length $1,$ randomly split it somewhere along its length into two parts. Compute the product of these two lengths. Then take each of the two resulting segments and repeat the process. That is, for each one, randomly split it somewhere along its length into two parts and compute the product. Then do this for all four resulting segments, then the eight after that, and the 16 after that, and so on.
 >
 > After doing this (forever), you add up all the products you computed throughout. On average, what value would you expect this sum to approach?
 >
@@ -30,13 +30,13 @@ $$ f(1) = \hat{x}(1-\hat{x}) + f(\hat{x}) + f(1-\hat{x}) $$
 
 where the $\hat{x}$ indicates we're dealing with a random variable. 
 
-Really, this will give us one sample of $f(1),$ so we should write $f(1)$ as $f(1\rvert\hat{x})$ and likewise introduce the random variables $\hat{y}$ and $\hat{z}$ on which the other evaluations of $f$ will depend: 
+Really, this will give us one sample of $f(1),$ so we should write $f(1)$ as $f(1\rvert\hat{x})$ and likewise acknowledge the random variables $\hat{y}$ and $\hat{z}$ the other evaluations of $f$ will introduce: 
 
 $$ f(1\rvert\hat{x},\hat{y},\hat{z}) = \hat{x}(1-\hat{x}) + f(\hat{x}\rvert\hat{y}) + f(1-\hat{x}\rvert\hat{z}) $$
 
 At this point it's tempting to dive into cases, or recurse the equation, but we can learn a lot by thinking about the problem at different scales.
 
-If we halve the length of the original stick $\ell,$ then we get the same problem scaled down by a factor of $2.$ This means the scale of all subsequent products of lengths drops by $1/2^2$
+If we halve the length of the original stick $\ell,$ then we get the same problem with all lengths scaled down by a factor of $2.$ This means the scale of all subsequent products of lengths drops by $1/2^2$
 
 In general, if we scale the stick by $\gamma$ the sum of products will scale by $\gamma^2$ and so: 
 
@@ -61,7 +61,11 @@ $$ \begin{align}
 
 ## Extra credit
 
-The extra credit can be handled similarly. given the triple product, we get $g(\gamma \ell) = \gamma^3 g(\ell)$ instead of the quadratic.
+The extra credit poses the similar relationship
+
+$$ f(1)= ab(1-a-b) + f(a+b) + f(1-b) + f(1-a) - f(a) - f(b) f(1-a-b). $$
+
+This can be handled similarly. Since the product now involves three lengths, we get cubic scaling $g(\gamma \ell) = \gamma^3 g(\ell)$ instead of quadratic.
 
 Working as before, we get
 
