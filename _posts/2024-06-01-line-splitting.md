@@ -19,7 +19,7 @@ replacing $a$ and $b$ with $x$ and $(1-x),$ the equation reads
 
 $$ f(1) = \hat{x}(1-\hat{x}) + f(\hat{x}) + f(1-\hat{x}) $$
 
-where the $\hat{x}$ indicates we're dealing with a random variable. really, this will give us one sample of $f(1),$ so we should write $f(1)$ as $f(1|\hat{x})$ and likewise introduce the ranom variable $\hat{y}$ and $\hat{z}$ on which the other evaluations of $f$ will depend: 
+where the $\hat{x}$ indicates we're dealing with a random variable. really, this will give us one sample of $f(1),$ so we should write $f(1)$ as $f(1|\hat{x})$ and likewise introduce the random variables $\hat{y}$ and $\hat{z}$ on which the other evaluations of $f$ will depend: 
 
 $$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + f(\hat{x}|\hat{y}) + f(1-\hat{x}|\hat{z}) $$
 
