@@ -68,7 +68,7 @@ f(1) &= \frac{1}{60} + \frac{9}{10}f(1)
 
 where $\langle X \rangle_{a,b}$ means
 
-$$ \frac{\int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}\, X}{\int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}}. $$
+$$ \dfrac{\int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}\, X}{\int\limits_0^1\text{d}\hat{a}\int\limits_0^{1-a}\text{d}\hat{b}}. $$
 
 so, 
 $$ f(1) = \frac16. $$
