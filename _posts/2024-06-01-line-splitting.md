@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: 
+title: Interview line splitting
 date: 2024/06/01
 subtitle:
 tags:
@@ -11,23 +11,25 @@ tags:
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-ace-the-technical-interview))
 
 ## Solution
 
-we can learn a lot by thinking about the problem at different scales.
+it is tempting to dive into cases, or recurse the equation, but we can learn a lot by thinking about the problem at different scales.
 
-if we halve the length of our stick $\ell$ then both pieces are scaled by half as well. 
+if we halve the length of the original stick $\ell,$ then we end up with the same problem scaled down by a factor of $2.$ this means that the scale of all subsequent products of lengths drops by $1/2^2/$
 
-this scales the first product by $1/4$ and results in two games starting with lengths half as long as the unscaled game. this makes their product scale by $1/4$ too.
+in general, if we scale the stick by $\gamma$ the sum of products will scale by $\gamma^2:$ 
 
-in general, if we scale the stick by $\gamma$ then we should find that $f(\gamma\ell) = \gamma^2 f(\ell).$
+$$ f(\gamma\ell) = \gamma^2 f(\ell). $$
 
-using this, the original recursion becomes
+plugging this in, the original recursion becomes
 
-$$ f(1) = x(1-x) + \left[x^2 + (1-x)^2\right]f(1). $$
+$$ f(1|x) = x(1-x) + \left[x^2 + (1-x)^2\right]f(1|x). $$
 
-taking expectation with regard to $x,$ this becomes
+giving the value of $f$ given the random value $x.$ 
+
+averaging over $x,$ this becomes
 
 $$ \begin{align}
   f(1)\int\limits_0^1 \text{d}x\, \left[1 - x^2 - (1-x)^2\right] &= \int\limits_0^1\text{d}x x(1-x) \\
