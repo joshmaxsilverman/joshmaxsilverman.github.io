@@ -13,8 +13,7 @@ tags: scaling recursion
 >
 >Another way to describe this week’s Fiddler is with a recursive function $f,$ defined by $f(L) = ab + f(a) + f(b).$ Here, $a$ and $b$ are random values between $0$ and $L,$ such that $a + b = L.$ The question asked above is this: On average, what value does $f(1)$ approach?
 >
->For Extra Credit, we’ll be splitting segments into three parts rather than two. So let’s define a new function $g(L).$ But wait! We don’t have $g(L) = abc + g(a) + g(b) + g(c),$ like you might have expected.
->
+>For **Extra Credit**, we’ll be splitting segments into three parts rather than two. So let’s define a new function $g(L).$ But wait! We don’t have $g(L) = abc + g(a) + g(b) + g(c),$ like you might have expected.
 >Instead, I’d like to introduce a slightly messier recursive definition: $g(L) = abc + g(a+b) + g(a+c) + g(b+c) − g(a) − g(b) − g(c).$ Here, $a, b,$ and $c$ are random values between $0$ and $L$ such that $a + b + c = L.$
 >
 >On average, what value does $g(1)$ approach?
@@ -51,13 +50,13 @@ Averaging over $\hat{y}$ and $\hat{z}$ this becomes
 
 $$ f(1|\hat{x}) = \hat{x}(1-\hat{x}) + \left[ \hat{x}^2 + (1-\hat{x})^2 \right]f(1), $$
 
-and averaging over $x,$ it becomes
+and taking expectation over $\hat{x},$ it becomes
 
 $$ \begin{align}
   f(1) &= \int\limits_0^1\text{d}\hat{x}\, \hat{x}(1-\hat{x}) + f(1) \int\limits_0^1\text{d}\hat{x}\, \left(\hat{x}^2 + (1-\hat{x})^2\right) \\
   &= \frac12 - \frac13 + f(1) \frac{2}{3} \\
 &= \frac{\frac12 - \frac13}{1 - \frac23} \\
-  &= \frac12
+  &= \frac12.
 \end{align} $$
 
 ## Extra credit
@@ -75,7 +74,7 @@ Taking expectations over $a$ (ranges from $0$ to $1$) and $b$ (ranges from $0$ t
 
 $$ \begin{align}
 g(1) &= \langle\hat{a}\hat{b}(1-\hat{a}-\hat{b})\rangle_{a,b} + g(1)\langle(\hat{a}+\hat{b})^3 + (1-\hat{a})^3 + (1-\hat{b})^3 - \hat{a}^3 - \hat{b}^3 - (1-\hat{a}-\hat{b})^3\rangle_{a,b} \\
-g(1) &= \frac{1}{60} + \frac{9}{10}g(1)
+g(1) &= \frac{1}{60} + \frac{9}{10}g(1),
 \end{align} $$
 
 where $\langle X \rangle_{a,b}$ means
