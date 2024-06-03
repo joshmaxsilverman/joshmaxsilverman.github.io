@@ -11,10 +11,10 @@ tags: scaling recursion
 >
 > After doing this (forever), you add up all the products you computed throughout. On average, what value would you expect this sum to approach?
 >
->Another way to describe this week’s Fiddler is with a recursive function $f,$ defined by $f(L) = ab + f(a) + f(b).$ Here, $a$ and $b$ are random values between $0$ and $L,$ such that $a + b = L.$ The question asked above is this: On average, what value does $f(1)$ approach?
+>Another way to describe this week’s Fiddler is with a recursive function $f,$ defined by $f(\ell) = ab + f(a) + f(b).$ Here, $a$ and $b$ are random values between $0$ and $\ell,$ such that $a + b = \ell.$ The question asked above is this: On average, what value does $f(1)$ approach?
 >
->For **Extra Credit**, we’ll be splitting segments into three parts rather than two. So let’s define a new function $g(L).$ But wait! We don’t have $g(L) = abc + g(a) + g(b) + g(c),$ like you might have expected.
->Instead, I’d like to introduce a slightly messier recursive definition: $g(L) = abc + g(a+b) + g(a+c) + g(b+c) − g(a) − g(b) − g(c).$ Here, $a, b,$ and $c$ are random values between $0$ and $L$ such that $a + b + c = L.$
+>For **Extra Credit**, we’ll be splitting segments into three parts rather than two. So let’s define a new function $g(\ell).$ But wait! We don’t have $g(\ell) = abc + g(a) + g(b) + g(c),$ like you might have expected.
+>Instead, I’d like to introduce a slightly messier recursive definition: $g(\ell) = abc + g(a+b) + g(a+c) + g(b+c) − g(a) − g(b) − g(c).$ Here, $a, b,$ and $c$ are random values between $0$ and $\ell$ such that $a + b + c = \ell.$
 >
 >On average, what value does $g(1)$ approach?
 
