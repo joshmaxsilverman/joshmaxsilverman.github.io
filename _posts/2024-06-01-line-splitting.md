@@ -81,7 +81,7 @@ Taking expectations over $a$ (ranges from $0$ to $1$) and $b$ (ranges from $0$ t
 
 $$ \begin{align}
 g(1) &= \langle\hat{a}\hat{b}(1-\hat{a}-\hat{b})\rangle_{a,b} + \langle(\hat{a}+\hat{b})^3 + (1-\hat{a})^3 + (1-\hat{b})^3 - \hat{a}^3 - \hat{b}^3 - (1-\hat{a}-\hat{b})^3\rangle_{a,b} g(1) \\
-g(1) &= \frac{1}{60} + \frac{9}{10}g(1),
+g(1) &= \frac{1}{60} + \frac{9}{10}\,g(1),
 \end{align} $$
 
 where $\langle X \rangle_{a,b}$ means
