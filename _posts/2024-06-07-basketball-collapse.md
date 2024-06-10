@@ -49,7 +49,9 @@ So, we modify our equation
 
 $$ P_\text{collapse} = \sum_i P_\text{first passage}(\text{start} \rightarrow S_i) P(S_i\rightarrow\text{lose}). $$
 
-We can find the first passage probability to a state $S_i \in \mathcal{S}$ by finding the unconditional probability to arrive there, and then subtracting off the probability of going there by way of any earlier point $S_j \in \mathcal{S}.$ The probability of going to $S_i$ via $S_j$ is just $P_\text{first passage}(\text{start} \rightarrow S_j) P(S_j \rightarrow S_i,$ so we get the recursive relationship
+We can find the first passage probability to a state $S_i \in \mathcal{S}$ by finding the unconditional probability to arrive there, and then subtracting off the probability of going there by way of any earlier point $S_j \in \mathcal{S}.$ 
+
+The probability of going to $S_i$ via $S_j$ is just $P_\text{first passage}(\text{start} \rightarrow S_j) P(S_j \rightarrow S_i,$ so we get the recursive relationship
 
 $$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j\lt i} P_\text{first passage}(S_j)P(S_j \rightarrow S_i). $$
 
