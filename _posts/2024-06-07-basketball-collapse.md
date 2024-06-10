@@ -71,7 +71,7 @@ $$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \e
 
 The probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
 
-$$ P((w_1,\ell_1)\rightarrow (w_2,\ell_2)) = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1} $$
+$$ P\left[\left(w_1,\ell_1\right)\rightarrow \left(w_2,\ell_2\right)\right] = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1} $$
 
 The last piece we need is the actual set of points $\mathcal{S}.$ We could do this by scanning all $(w,\ell)$ and testing whether the formula for $P_\text{los}$ is less than $1 - 0.9 = 0.1,$ then find the lowermost points of the set, however this is quadratic in $N.$ We can be a little bit smarter by starting at $(w,\ell) = (0,0)$ and increasing $w$ until $P_\text{lose}(w,\ell) \lt 0.1.$ we then increase $\ell$ by $1$ and again increase $w$ until $P(w,\ell+1)$ \lt 0.1$ and so on and so forth.
 
