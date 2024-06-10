@@ -17,7 +17,7 @@ tags:
 
 we are interested in collapses:
 
-$$ \text{start tied} \rightarrow \text{get to 90% chance to win} \rightarrow \text{lose} $$
+$$ \text{start tied} \rightarrow \text{get to 90\% chance to win} \rightarrow \text{lose} $$
 
 the probability of winning a game is a function of the outcome of the possessions that already happened, and the number of possessions that remain. intuitively, to get a $90%$ win probability early in the game requires a bigger lead than later in the game. 
 
