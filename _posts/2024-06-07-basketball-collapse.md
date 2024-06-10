@@ -37,7 +37,7 @@ The probability of winning a game is a function of the possessions that already 
 
 The set of game states with $P_\text{win} \geq 90\%$ form a region in $(w,\ell)-$ space where $w$ is the number of possessions the team has won and $\ell$ is the number they've lost. The boundary of this region forms a set of boundary points $\mathcal{S}.$
 
-<sketch of 90\% region>
+![](/img/2024-06-07-high-P-set.png){:width="450px" class="image-centered"}
 
 If we can find the probability of arriving at each point $S_i$ in $\mathcal{S},$ $P(\text{start} \rightarrow S_i)$ and the probability to lose after getting there $P(S_i\rightarrow\text{lose})$ then we can find the overall probability of seeing a team collapse:
 
@@ -59,9 +59,9 @@ Now, to reach a state $(w,\ell)$ and end up losing, the team needs to finish the
 
 We can visualize the end game like so: 
 
-<sketch of win condition>
+![](/img/2024-06-07-P-lose.png){:width="450px" class="image-centered"}
 
-Tinishing anywhere on the green segment is a win, and anything on the red a loss. 
+Finishing anywhere on the green segment is a win, and anything on the red a loss. 
 
 If the game is at point $(w,\ell)$ we need to count how many ways there are to end up on the red segment:
 
