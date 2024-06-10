@@ -152,6 +152,6 @@ If we condition on the news that the team had a $90\%$ chance to win (i.e. they 
 P_collapse_after_news = P_collapse / sum( P_fp(Si) for Si in S_frontier )
 ```
 
-which gets about $P_\text{collapse after news} = 0.073762116\ldots$
+which gets about $P_\text{collapse after news} \approx 0.073762116\ldots$
 
 <br>
