@@ -111,8 +111,10 @@ w = 0
 S_frontier = []
 
 for l in range(0, N // 2 + 1):
+
   while P_to_lose((w, l), N) > 0.1:
     w += 1
+
   S_frontier += [(w,l)]
 ```
 
@@ -120,14 +122,17 @@ With the frontier in hand, we can calculate the first passage probabilities:
 
 ```python
 def tuple_minus(a, b):
+
   return (a[0] - b[0], a[1] - b[1])
 
 @lru_cache(maxsize=None)
 def P_fp(Si):
-  return P_transit(Si) - sum(
-                              P_fp(Sj) * P_transit(tuple_minus(Si, Sj))
-                              for Sj in S_frontier if Sj[0] < Si[0]
-                            )
+
+  P_repeat_visit = sum(
+                        P_fp(Sj) * P_transit(tuple_minus(Si, Sj))
+                        for Sj in S_frontier if Sj[0] < Si[0]
+                      )
+  return P_transit(Si) - P_repeat_visit
 ```
 
 And finally, calculate the probability of witnessing a collapse:
