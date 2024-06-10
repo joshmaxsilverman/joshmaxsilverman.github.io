@@ -60,16 +60,20 @@ the last piece we need is the actual set of points $\mathcal{S}.$ we could simpl
 we can implement this in Python to find the boundary:
 
 ```python
+# FIND THE POINTS OF S
+from scipy.special import comb as binom
+from functools import lru_cache
+
 @lru_cache(maxsize=None)
 def P_transit(Si):
-  l, w = Si
+  w,l = Si
 
   return 1 / 2.0 ** (w + l) * binom(w + l, w, exact=True)
   
 
 @lru_cache(maxsize=None)
 def P_to_lose(Si, N):
-    l, w = Si
+    w,l = Si
     P = 0
 
     # HAVE TO LOSE AT LEAST (floor(N/2) + 1 - l) MORE TIMES
@@ -78,10 +82,18 @@ def P_to_lose(Si, N):
 
     for losses in range(min_losses, max_losses + 1):
         wins = N - (w + l) - losses
-        S_temp = (losses, wins)
+        S_temp = (wins, losses)
         P += P_transit_fast(S_temp)
 
     return P
+
+w = 0
+S_frontier = []
+
+for l in range(0, N//2 + 1):
+  while P_to_lose((w, l), N) > 0.1:
+    w += 1
+  S_frontier += [(w,l)]
 ```
 
 
