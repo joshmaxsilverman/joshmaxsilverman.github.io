@@ -83,6 +83,8 @@ We can implement this in Python to find the boundary like so:
 from scipy.special import comb as binom
 from functools import lru_cache
 
+N = 101
+
 @lru_cache(maxsize=None)
 def P_transit(Si):
   w,l = Si
