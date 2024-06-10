@@ -57,7 +57,7 @@ $$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j\lt i} 
 
 The base case is the number of ways to get to the first point of the boundary $S_1,$ for which the sum term is zero. 
 
-Now, to reach a state $(w,\ell)$ and end up losing, the team needs to finish the game with $\lfloor \frac12 N\rfloor + 1$ losses, which means that we need at least $\lfloor \frac12 N\rfloor + 1 - \ell$ losses from here on out. If they lose more, that's great, and they can lose up to $N - (w + \ell)$ additional possessions.
+To start from state $(w,\ell)$ and end up losing, the team needs to finish the game with $\lfloor \frac12 N\rfloor + 1$ total losses, which means that we need at least $\lfloor \frac12 N\rfloor + 1 - \ell$ additional losses from here on out. If they lose more, that's great, and they can lose up to $N - (w + \ell)$ additional possessions.
 
 We can visualize the end game like so: 
 
