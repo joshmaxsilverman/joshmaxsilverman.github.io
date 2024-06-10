@@ -53,7 +53,7 @@ We can find the first passage probability to a state $S_i \in \mathcal{S}$ by fi
 
 The probability of going to $S_i$ via $S_j$ is just $P_\text{first passage}(\text{start} \rightarrow S_j) P(S_j \rightarrow S_i),$ so we get the recursive relationship
 
-$$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j\lt i} P_\text{first passage}(\text{start} \rightarrow S_j)P(S_j \rightarrow S_i). $$
+$$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j < i} P_\text{first passage}(\text{start} \rightarrow S_j)P(S_j \rightarrow S_i). $$
 
 The base case is the number of ways to get to the first point of the boundary $S_1,$ for which the sum term is zero. 
 
