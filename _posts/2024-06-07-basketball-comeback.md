@@ -49,7 +49,7 @@ we can visualize the end game like so, finishing anywhere on the green segment i
 
 if we are at point $(w,\ell)$ we need to count how many ways there are to end up on the red segment:
 
-$$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P\left[(w,\ell)\rightarrow (N-(\ell+\ell^\prime), \ell+\ell^\prime)\right]. $$
+$$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P\left[(w,\ell)\rightarrow (N-(\ell+\ell^\prime), \ell+\ell^\prime)\right]. $$ 
 
 the probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
 
