@@ -35,7 +35,7 @@ $$ \text{start tied} \rightarrow \text{get to 90% chance to win} \rightarrow \te
 
 The probability of winning a game is a function of the possessions that already happened, and the number of possessions that remain. Intuitively, to get a $90\%$ win probability early in the game requires a bigger lead than later in the game. 
 
-The set of game states with $P_\text{win} \geq 90\%$ form a region in $(w,\ell)-$ space where $w$ is the number of possessions the team has won and $\ell$ is the number they've lost. The boundary of this region forms a set of boundary points $\mathcal{S}.$
+The set of game states with $P_\text{win} \geq 90\%$ form a region in $(w,\ell)$-space where $w$ is the number of possessions the team has won and $\ell$ is the number they've lost. The boundary of this region forms a set of boundary points $\mathcal{S}.$
 
 ![](/img/2024-06-07-high-P-set.png){:width="450px" class="image-centered"}
 
