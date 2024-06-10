@@ -77,7 +77,7 @@ def P_to_lose(Si, N):
     P = 0
 
     # HAVE TO LOSE AT LEAST (floor(N/2) + 1 - l) MORE TIMES
-    min_losses = N//2 + 1 - l
+    min_losses = N // 2 + 1 - l
     max_losses = N - (w + l)
 
     for losses in range(min_losses, max_losses + 1):
@@ -96,7 +96,31 @@ for l in range(0, N//2 + 1):
   S_frontier += [(w,l)]
 ```
 
+with the frontier in hand, we can calculate the first passage probabilities:
 
+```python
+def tup_minus(a, b):
+  return (a[0] - b[0], a[1] - b[1])
+
+@lru_cache(maxsize=None)
+def P_fp(Si):
+
+  if Si == S_frontier[0]:
+    return 1 / 2 ** Si[1]
+
+  return P_transit(Si) - sum(
+                              P_fp(Sj) * P_transit_fast(tup_minus(Si, Sj))
+                              for Sj in S_frontier if Sj[0] < Si[0]
+                            )
+```
+
+and finally, calculat the probability of collapse:
+
+```python
+P_collapse = sum(P_fp(Si) * P_to_lose(Si, N) for Si in S_frontier)
+```
+
+which comes to $0.039818127\ldots$
 
 
 <br>
