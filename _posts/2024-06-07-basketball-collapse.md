@@ -139,7 +139,7 @@ def P_fp(Si):
 And finally, calculate the probability of witnessing a collapse:
 
 ```python
-P_collapse = sum(P_fp(Si) * P_to_lose(Si, N) for Si in S_frontier)
+P_collapse = sum( P_fp(Si) * P_to_lose(Si, N) for Si in S_frontier )
 ```
 
 which comes to about $P_\text{collapse} \approx 0.039818127\ldots$
