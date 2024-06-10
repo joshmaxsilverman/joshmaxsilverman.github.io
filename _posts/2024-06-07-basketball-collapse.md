@@ -110,7 +110,7 @@ def P_to_lose(Si, N):
 w = 0
 S_frontier = []
 
-for l in range(0, N//2 + 1):
+for l in range(0, N // 2 + 1):
   while P_to_lose((w, l), N) > 0.1:
     w += 1
   S_frontier += [(w,l)]
