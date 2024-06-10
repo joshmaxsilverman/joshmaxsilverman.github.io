@@ -141,7 +141,7 @@ which comes to about $P_\text{collapse} \approx 0.039818127\ldots$
 If we condition on the news that the team had a $90\%$ chance to win (i.e. they reached $\mathcal{S}$ at some point), then we get 
 
 ```python
-sum( P_fp(Si) * P_to_lose(Si, N) for Si in S_frontier ) / sum( P_fp(Si) for Si in S_frontier )
+P_collapse_after_news = P_collapse / sum( P_fp(Si) for Si in S_frontier )
 ```
 
 which gets about $P_\text{collapse after news} = 0.073762116\ldots$
