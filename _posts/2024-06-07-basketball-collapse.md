@@ -132,6 +132,7 @@ def P_fp(Si):
                         P_fp(Sj) * P_transit(tuple_minus(Si, Sj))
                         for Sj in S_frontier if Sj[0] < Si[0]
                       )
+
   return P_transit(Si) - P_repeat_visit
 ```
 
