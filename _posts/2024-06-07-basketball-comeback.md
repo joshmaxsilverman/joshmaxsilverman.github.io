@@ -17,7 +17,7 @@ tags:
 
 we are interested in collapses:
 
-$$ \text{start tied} \rightarrow \text{get to 90\% chance to win} \rightarrow \text{lose} $$
+$$ \text{start tied} \rightarrow \text{get to 90% chance to win} \rightarrow \text{lose} $$
 
 the probability of winning a game is a function of the outcome of the possessions that already happened, and the number of possessions that remain. intuitively, to get a $90\%$ win probability early in the game requires a bigger lead than later in the game. 
 
@@ -29,7 +29,7 @@ if we can find the probability of arriving at each point $S_i$ in $\mathcal{S},$
 
 $$ P_\text{collapse} = \sum_i P(\text{start} \rightarrow S_i) P(S_i\rightarrow\text{lose}). $$
 
-to avoid double counting, $$P(\text{start}\rightarrow S_i)$ should be first passage probabilities to the set $\mathcal{S}.$ in other words, it is the probability that the game reaches the state $S_i$ and that it hasn't been to another point in $\mathcal{S}$ before. were we to include second visitations, that would mean that a game could reach the $\geq 90\%$ region, then leave it, then come back, then collapse, and it would count twice toward being a collapse. 
+to avoid double counting, $P(\text{start}\rightarrow S_i)$ should be first passage probabilities to the set $\mathcal{S}.$ in other words, it is the probability that the game reaches the state $S_i$ and that it hasn't been to another point in $\mathcal{S}$ before. were we to include second visitations, that would mean that a game could reach the $\geq 90\%$ region, then leave it, then come back, then collapse, and it would count twice toward being a collapse. 
 
 so, we modify our equation 
 
@@ -51,7 +51,7 @@ if we are at point $(w,\ell)$ we need to count how many ways there are to end up
 
 $$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P\left[(w,\ell)\rightarrow (N-(\ell+\ell^\prime), \ell+\ell^\prime)\right]. $$
 
-now, the probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is just the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
+the probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
 
 $$ P((w_1,\ell_1)\rightarrow (w_2,\ell_2)) = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1} $$
 
