@@ -57,7 +57,7 @@ $$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j < i} P
 
 The base case is the number of ways to get to the first point of the boundary $S_1,$ for which the sum term is zero. 
 
-To start from state $(w,\ell)$ and end up losing, the team needs to finish the game with $\lfloor \frac12 N\rfloor + 1$ total losses, which means that we need at least $\lfloor \frac12 N\rfloor + 1 - \ell$ additional losses from here on out. If they lose more, that's great, and they can lose up to $N - (w + \ell)$ additional possessions.
+To lose a game, the team needs to finish the game with $\lfloor \frac12 N\rfloor + 1$ total losses. So, to lose the game from state $(w,\ell)$ the team need at least $\lfloor \frac12 N\rfloor + 1 - \ell$ additional losses from here on out. If they lose more, that's great, and they can lose up to $N - (w + \ell)$ additional possessions.
 
 We can visualize the end game like so: 
 
@@ -152,6 +152,6 @@ If we condition on the news that the team had a $90\%$ chance to win (i.e. they 
 P_collapse_after_news = P_collapse / sum( P_fp(Si) for Si in S_frontier )
 ```
 
-which gets about $P_\text{collapse after news} \approx 0.073762116\ldots$
+which is about $P_\text{collapse after news} \approx 0.073762116\ldots$
 
 <br>
