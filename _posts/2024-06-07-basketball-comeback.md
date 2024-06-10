@@ -53,7 +53,7 @@ $$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \e
 
 now, the probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is just the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
 
-$$ P((w_1,\ell_1)\rightarrow (w_2,\ell_2)) = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1}} $$
+$$ P((w_1,\ell_1)\rightarrow (w_2,\ell_2)) = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1} $$
 
 
 
