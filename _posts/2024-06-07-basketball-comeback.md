@@ -55,6 +55,36 @@ the probability of moving from a point $(w_1,\ell_1)$ to point $(w_2,\ell_2)$ is
 
 $$ P((w_1,\ell_1)\rightarrow (w_2,\ell_2)) = \frac{1}{2^{w_2+\ell_2-w_1-\ell_1}}\binom{w_2+\ell_2-w_1-\ell_2}{w_2-w_1} $$
 
+the last piece we need is the actual set of points $\mathcal{S}.$ we could simply do this by scanning all $(w,\ell)$ and testing whether the formula for $P_\text{los}$ is less than $1 - 0.9 = 0.1,$ then find the lowermost points of the set, however this is quadratic in $N.$ we can be a little bit smarter by starting at $(w,\ell) = (0,0)$ and increasing $w$ until $P_\text{lose}(w,\ell) \lt 0.1.$ we then increase $\ell$ by $1$ and again increase $w$ until $P(w,\ell+1)$ \lt 0.1$ and so on and so forth.
+
+we can implement this in Python to find the boundary:
+
+```python
+@lru_cache(maxsize=None)
+def P_transit(Si):
+  l, w = Si
+
+  return 1 / 2.0 ** (w + l) * binom(w + l, w, exact=True)
+  
+
+@lru_cache(maxsize=None)
+def P_to_lose(Si, N):
+    l, w = Si
+    P = 0
+
+    # HAVE TO LOSE AT LEAST (floor(N/2) + 1 - l) MORE TIMES
+    min_losses = N//2 + 1 - l
+    max_losses = N - (w + l)
+
+    for losses in range(min_losses, max_losses + 1):
+        wins = N - (w + l) - losses
+        S_temp = (losses, wins)
+        P += P_transit_fast(S_temp)
+
+    return P
+```
+
+
 
 
 <br>
