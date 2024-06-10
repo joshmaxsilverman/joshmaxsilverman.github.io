@@ -27,4 +27,10 @@ if we can find the probability of arriving at each point $S_i$ in $\mathcal{S},$
 
 $$ P_\text{collapse} = \sum_i P(\text{start} \rightarrow S_i) P(S_i\rightarrow\text{lose}). $$
 
+to avoid double counting, $$P(\text{start}\rightarrow S_i)$ should be first passage probabilities to the set $\mathcal{S}.$ in other words, it is the probability that the game reaches the state $S_i$ and that it hasn't been to another point in $\mathcal{S}$ before. were we to include second visitations, that would mean that a game could reach the $\geq 90\%$ region, then leave it, then come back, then collapse, and it would count twice toward being a collapse. 
+
+so, we modify our equation 
+
+$$ P_\text{collapse} = \sum_i P_\text{first passage}(\text{start} \rightarrow S_i) P(S_i\rightarrow\text{lose}). $$
+
 <br>
