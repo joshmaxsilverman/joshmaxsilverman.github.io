@@ -37,4 +37,10 @@ we can find the first passage probability to a state $S_i \in \mathcal{S}$ by fi
 
 $$ P_\text{first passage}(S_i) = P(\text{start}\rightarrow S_i) - \sum_{j\lt i} P_\text{first passage}(S_j)P(S_j \rightarrow S_i). $$
 
+now, to reach a state $(w,\ell)$ and end up losing, we need to finish the game with $\lfloor \frac12 N\rfloor + 1$ losses, which means that we need at least $\lfloor \frac12 N\rfloor + 1 - \ell$ losses from here on out. if we lose more, that's great, and we can lose up to $N - (w + \ell)$ additional possessions.
+
+we can visualize the end game like so, finishing anywhere on the green segment is a win, and anything on the red a loss. if we are at point $(w,\ell)$ we need to count how many ways there are to end up on the red segment:
+
+$$ P_\text{lose}(w,\ell) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P((w,\ell)\rightarrow (N-(\ell+\ell^\prime), \ell+\ell^\prime). $$
+
 <br>
