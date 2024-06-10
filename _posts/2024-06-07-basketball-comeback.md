@@ -33,4 +33,6 @@ so, we modify our equation
 
 $$ P_\text{collapse} = \sum_i P_\text{first passage}(\text{start} \rightarrow S_i) P(S_i\rightarrow\text{lose}). $$
 
+we can find the first passage probability to a state $S_i \elem \mathcal{S}$ by finding the unconditional probability to arrive there, and then subtract off the probability of going there by way of an earlier point $S_j \elem \mathcal{S}.$ the probability of going to $S_i$ through $S_j$ is just $P_\text{first passage}(\text{start} \rightarrow S_j) P(S_j \rightarrow S_i.$
+
 <br>
