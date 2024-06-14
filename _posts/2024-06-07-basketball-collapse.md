@@ -112,7 +112,7 @@ def P_to_lose(Si, N):
 w = 0
 S_frontier = []
 
-for l in range(0, N // 2 + 1):
+for l in range(0, N // 2):
 
   while P_to_lose((w, l), N) > 0.1:
     w += 1
@@ -152,6 +152,6 @@ If we condition on the news that the team had a $90\%$ chance to win (i.e. they 
 P_collapse_after_news = P_collapse / sum( P_fp(Si) for Si in S_frontier )
 ```
 
-which is about $P_\text{collapse after news} \approx 0.073762116\ldots$
+which is about $P_\text{collapse after news} \approx 0.07741987677639166\ldots$
 
 <br>
