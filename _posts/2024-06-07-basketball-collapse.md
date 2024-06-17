@@ -75,7 +75,7 @@ $$ P\left[\left(w_1,\ell_1\right)\rightarrow \left(w_2,\ell_2\right)\right] = \f
 
 The last piece we need is the actual set of points $\mathcal{S}.$ We could find it by scanning all $(w,\ell)$ and testing whether the formula for $P_\text{los}$ is less than $1 - 0.9 = 0.1,$ then find the lowermost points of the set, however this is quadratic in $N.$ 
 
-We can be a little bit smarter by starting at $(w,\ell) = (0,0)$ and increasing $w$ until $P_\text{lose}(w,\ell) \lt 0.1.$ We then increase $\ell$ by $1$ and again increase $w$ until $P(w,\ell+1) \lt 0.1$ and so on and so forth.
+We can be a little bit smarter by starting at $(w, \ell) = (0,0)$ and increasing $w$ until $P_\text{lose}(w,\ell) \lt 0.1.$ We then increase $\ell$ by $1$ and again increase $w$ until $P(w,\ell+1) \lt 0.1$ and so on and so forth.
 
 We can implement this in Python to find the boundary like so:
 
