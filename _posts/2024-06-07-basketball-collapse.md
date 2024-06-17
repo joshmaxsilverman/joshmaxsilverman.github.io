@@ -87,14 +87,14 @@ N = 101
 
 @lru_cache(maxsize=None)
 def P_transit(Si):
-  w,l = Si
+  l,w = Si
 
   return 1 / 2.0 ** (w + l) * binom(w + l, w, exact=True)
   
 
 @lru_cache(maxsize=None)
 def P_to_lose(Si, N):
-    w,l = Si
+    l,w = Si
     P = 0
 
     # HAVE TO LOSE AT LEAST (floor(N/2) + 1 - l) MORE TIMES
@@ -114,10 +114,10 @@ S_frontier = []
 
 for l in range(0, N // 2):
 
-  while P_to_lose((w, l), N) > 0.1:
+  while P_to_lose((l, w), N) > 0.1:
     w += 1
 
-  S_frontier += [(w,l)]
+  S_frontier += [(l, w)]
 ```
 
 With the frontier in hand, we can calculate the first passage probabilities:
