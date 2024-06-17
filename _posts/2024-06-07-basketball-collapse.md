@@ -67,7 +67,7 @@ Finishing anywhere on the green segment is a win, and anything on the red a loss
 
 If the game is at point $(\ell, w)$ we need to count how many ways there are to end up on the red segment:
 
-$$ P_\text{lose}(\ell, w) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P\left[(\ell, w)\rightarrow (N-(\ell+\ell^\prime), \ell+\ell^\prime)\right]. $$ 
+$$ P_\text{lose}(\ell, w) = \sum_{\ell^\prime = \lfloor \frac12 N\rfloor + 1 - \ell}^{N-(w+\ell)} P\left[(\ell, w)\rightarrow (\ell+\ell^\prime, N-(\ell+\ell^\prime))\right]. $$ 
 
 The probability of moving from a point $(\ell_1, w_1)$ to point $(\ell_2, w_2)$ is the number of ways to order $(w_2-w_1)$ wins and $(\ell_2-\ell_1)$ losses, times the probability of choosing any one of those orders:
 
