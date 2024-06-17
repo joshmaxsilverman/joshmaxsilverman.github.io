@@ -87,14 +87,14 @@ N = 101
 
 @lru_cache(maxsize=None)
 def P_transit(Si):
-  l,w = Si
+  l, w = Si
 
   return 1 / 2.0 ** (w + l) * binom(w + l, w, exact=True)
   
 
 @lru_cache(maxsize=None)
 def P_to_lose(Si, N):
-    l,w = Si
+    l, w = Si
     P = 0
 
     # HAVE TO LOSE AT LEAST (floor(N/2) + 1 - l) MORE TIMES
