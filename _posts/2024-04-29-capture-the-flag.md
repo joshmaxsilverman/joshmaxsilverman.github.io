@@ -22,7 +22,7 @@ date: 2024/05/01
 
 ## Solution
 
-Though Aaron can move however he likes, not having any angular information, anything he does will be averaged over all angles relative to the target. So, his strategy must be to move a given distance from the center. Knowing the radius of the target, he can pick the best value $\ell_a(r)$ for each value of $r.$
+Though Aaron can move however he likes, without access to angular information, anything he does will be averaged over all angles relative to the target. So, his strategy must be to move an optimal distance from the center, given $r.$ Knowing the radius of the target, he can pick the best value $\ell_a(r)$ for each value of $r.$
 
 So, without losing generality, we can put Aaron at radius $\ell_a(r)$ along $\theta=0$ and Erin will be at distance $\ell_e$ at the angle of the target, $\theta.$
 
@@ -30,7 +30,8 @@ With this context, we can outline Aaron and Erin's planning.
 
 ### Planning
 
-- For each value of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ Aaron can calculate the probability that he wins a round. After averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r).$ Averaging this over all values of $r$ after this he will know his expected winning percentage given a value for $\ell_e$
+- For any values of $r$, $\theta,$ $\ell_e,$ and $\ell_a(r)$ Aaron can calculate the probability that he wins a round.
+- After averaging this probability over $\theta$ (because he doesn't know it), he can pick the optimal value for $\ell_a(r),$ and calculate his expected winning percentage given a value for $\ell_e$
 - Knowing all this, Erin can calculate the same and minimize it with respect to $\ell_e,$ (which Aaron can and will also do).
 - All together, this ensures that Aaron will do the best he can, given that Erin is minimizing him perfectly. If either one of them deviates from the resulting $\ell_e$ and $\ell_a(r),$ the other will do even better.
 
