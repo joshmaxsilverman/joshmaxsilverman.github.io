@@ -47,7 +47,7 @@ $$ Z_\text{win} = 2\left(s^2 \frac{5}{16} + s^3 \frac{1}{8} + s^4 \frac{5}{16}\r
 
 Likewise, the possibilities for the score gap of a loser are $Z_\text{win}$ with $s$ mapped to $1/s:$
 
-$$ Z_\text{lose} = 2\left(\frac{1}{s^2} \frac{5}{16} + \frac{1}{s^3} \frac{1}{8} + \frac{1}{s^4} \frac{5}{16}\right) $$
+$$ Z_\text{loss} = 2\left(\frac{1}{s^2} \frac{5}{16} + \frac{1}{s^3} \frac{1}{8} + \frac{1}{s^4} \frac{5}{16}\right) $$
 
 Playoff games are similar, except the range for the score gap goes from $7$ down to $2,$ with the same logic determining the counting:
 
