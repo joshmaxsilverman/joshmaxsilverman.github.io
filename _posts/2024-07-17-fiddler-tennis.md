@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Lose to win
 date: 2024/07/17
-subtitle:
-tags:
+subtitle: Can you lose the points while winning the match?
+tags: partition-functions counting
 ---
 
 >**Question**:Consider a three-set tennis match. To win the match, you must win at least two of the three sets. To win a set, you must win a certain number of games. To win a game, you must win a certain number of points. For those who are unfamiliar with tennis, I’ll go into a little more detail.
