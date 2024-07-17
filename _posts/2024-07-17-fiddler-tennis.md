@@ -102,7 +102,13 @@ $$ Z_\text{match win} = \frac{1}{2!}Z_\text{set win}^2 + \frac{1}{2!}Z_\text{set
 
 Expanding this expression, the coefficient on $s^j$ is the probability that the winner ends the match with a score gap of $j.$ To find the probability of winning the match while losing a majority of the points, we can simply select the terms with negative powers:
 
-$$ P(\text{win match while losing on points}) = \sum_{j<0} \left[z^j\right]Z_\text{match win} = \tfrac{366382889151794439050218364931384718435785359829}{5846006549323611672814739330865132078623730171904} \approx 0.06267233642 $$
+$$ 
+  \begin{align}
+    P(\text{win match while losing on points}) &= \sum_{j<0} \left[z^j\right]Z_\text{match win} \\
+      &= \tfrac{366382889151794439050218364931384718435785359829}{5846006549323611672814739330865132078623730171904} \\
+      &\approx 0.06267233642 
+  \end{align}
+$$
 
 where $\left[z^j\right]Z$ means to take the coefficient of the $z^j$ term in the series $Z.$
 
