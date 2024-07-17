@@ -64,6 +64,8 @@ $$
 
 with similar partition functions formed from them given by $Z_\text{playoff win}.$
 
+Since each partition function keeps track of the probabilities for independent alternatives, the partition function for two subsequent events is just the product of the individual partition functions.
+
 ### Sets
 
 A set is awarded to the first player to win $6$ games, winning by at least $2$ games. 
@@ -92,11 +94,15 @@ and $Z_\text{set loss}$ is found by replacing $s$ with $1/s$ in $Z_\text{set win
 
 ### Match
 
-With all the legwork out of the way, the match is straightforward. A match can be won by winning the first two games in a row, or by losing either of the first two sets, followed by winning the third set, so
+With all the legwork out of the way, the match is straightforward. 
+
+A match can be won by winning the first two games in a row, or by losing either of the first two sets, followed by winning the third set, so
 
 $$ Z_\text{match win} = \frac{1}{2!}Z_\text{set win}^2 + \frac{1}{2!}Z_\text{set win}^2 Z_\text{set loss}. $$
 
+Expanding this expression, the coefficient on $s^j$ is the probability that the winner ends the match with a score gap of $j.$ To find the probability of winning the match while losing a majority of the points, we can simply select the terms with negative powers:
 
+$$ P(\text{win match while losing on points}) = \sum_{j<0} Z_\text{match win}[j] = \tfrac{366382889151794439050218364931384718435785359829}{5846006549323611672814739330865132078623730171904} \approx 0.06267233642 $$
 
 <br>
 
