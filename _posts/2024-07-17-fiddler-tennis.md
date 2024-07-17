@@ -7,11 +7,19 @@ subtitle:
 tags:
 ---
 
->Question
+>**Question**:Consider a three-set tennis match. To win the match, you must win at least two of the three sets. To win a set, you must win a certain number of games. To win a game, you must win a certain number of points. For those who are unfamiliar with tennis, I’ll go into a little more detail.
+>
+>A game is won by the first player who scores four points. However, the winner must “win by two.” So if both players have three points, they keep going until one player has two more points than their opponent, at which point the player with more points wins the game.
+>
+>A set is won by the first player to win six games within the set. However, if both players have exactly five games each, then they play exactly two more games. If one player wins both of them, that player wins the set. If each player wins one of these games, so that they now have six games apiece, they proceed to a tiebreak.
+>
+>A tiebreak is essentially a game that goes to seven points rather than four. The first to seven points wins, and players must win by two.
+>
+>Assume a three-set tennis match features two players who are evenly matched, so that each player has a $50$ percent chance of winning any given point. Also, points are independent, so the outcome of one point doesn’t affect the probability of who wins subsequent points.
+>
+>How likely is it that one of the players loses a majority of the points in a match while winning the match itself? (Here, I mean a strict majority, i.e., more than $50$ percent of the points.)
 
-<!--more-->
-
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-fail-to-lose-the-tennis-match))
 
 ## Solution
 
