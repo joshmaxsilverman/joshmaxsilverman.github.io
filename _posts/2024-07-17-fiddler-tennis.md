@@ -35,9 +35,9 @@ This means that the probability distribution for games looks like
 
 $$ 
   \begin{align}
-    P_g(s = 4) &= \frac{1}{2^4} = \frac{1}{16} \\
-    P_g(s = 3) &= \binom{4}{1}\frac{1}{2^5} = \frac18 \\
-    P_g(s = 2) &= \frac12 - \frac{1}{2^4} - \binom{4}{1}\frac{1}{2^5} = \frac{5}{16}.
+    P_g(4) &= \frac{1}{2^4} = \frac{1}{16} \\
+    P_g(3) &= \binom{4}{1}\frac{1}{2^5} = \frac18 \\
+    P_g(2) &= \frac12 - \frac{1}{2^4} - \binom{4}{1}\frac{1}{2^5} = \frac{5}{16}.
   \end{align}
 $$
 
@@ -45,12 +45,12 @@ Playoff games are similar, except the range for the score gap goes from $7$ down
 
 $$
   \begin{align}
-    P_g(s = 7) &= \frac{1}{2^7} \\
-    P_g(s = 8) &= \binom{7}{1} \frac{1}{2^8} \\
-    P_g(s = 9) &= \binom{8}{2} \frac{1}{2^9} \\
-    P_g(s = 10) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
-    P_g(s = 12) &= \binom{10}{5}\binom{2}{1} \frac{1}{2^{12}} \\ 
-    P_g(s = 13) &= \binom{10}{5} \frac{1}{2^{13}} \\ 
+    P_g(7) &= \frac{1}{2^7} \\
+    P_g(8) &= \binom{7}{1} \frac{1}{2^8} \\
+    P_g(9) &= \binom{8}{2} \frac{1}{2^9} \\
+    P_g(10) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
+    P_g(12) &= \binom{10}{5}\binom{2}{1} \frac{1}{2^{12}} \\ 
+    P_g(13) &= \binom{10}{5} \frac{1}{2^{13}} \\ 
   \end{align}
 $$
 
