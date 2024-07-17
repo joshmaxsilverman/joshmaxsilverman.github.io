@@ -86,9 +86,15 @@ $$ \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}.
 
 Putting this all together, the partition function for all possible winning sets is
 
-$$ \widetilde{Z} j_\text{win} = Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}. $$
+$$ Z\text{set win} = Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}. $$
 
+and $Z_\text{set loss}$ is found by replacing $s$ with $1/s$ in $Z_\text{set win}.$
 
+### Match
+
+With all the legwork out of the way, the match is straightforward. A match can be won by winning the first two games in a row, or by losing either of the first two sets, followed by winning the third set, so
+
+$$ Z_\text{match win} = \frac{1}{2!}Z_\text{set win}^2 + \frac{1}{2!}Z_\text{set win}^2 Z_\text{set loss}. $$
 
 
 
