@@ -70,7 +70,7 @@ $$
   \end{align}
 $$
 
-with similar partition functions formed from them given by $Z_\text{playoff win}.$
+with similar partition functions $Z_\text{playoff win}$ and $Z_\text{playoff loss}$ formed from them. 
 
 Since each partition function keeps track of the probabilities for independent alternatives, the partition function for two subsequent events is just the product of the individual partition functions.
 
@@ -112,13 +112,13 @@ Expanding this expression, the coefficient on $s^j$ is the probability that the 
 
 $$ 
   \begin{align}
-    P(\text{win match while losing on points}) &= \sum_{j<0} \left[z^j\right]Z_\text{match win} \\
+    P(\text{win match while losing on points}) &= \sum_{j<0} \left[s^j\right]Z_\text{match win} \\
       &= \tfrac{366382889151794439050218364931384718435785359829}{5846006549323611672814739330865132078623730171904} \\
       &\approx 0.06267233642 
   \end{align}
 $$
 
-where $\left[z^j\right]Z$ means to take the coefficient of the $z^j$ term in the series $Z.$
+where $\left[s^j\right]Z$ means to take the coefficient of the $s^j$ term in the series $Z.$
 
 Plotting the full set of coefficients, we get the full probability distribution of score gaps for the winning players: 
 
