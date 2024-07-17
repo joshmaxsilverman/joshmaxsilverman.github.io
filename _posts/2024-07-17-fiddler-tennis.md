@@ -120,7 +120,7 @@ $$
 
 where $\left[z^j\right]Z$ means to take the coefficient of the $z^j$ term in the series $Z.$
 
-Plotting the full set of coefficients, we get the full probability distribution of score gaps for the winning players:
+Plotting the full set of coefficients, we get the full probability distribution of score gaps for the winning players: 
 
 ![](/img/2024-07-17-score-gap-plot.png){:width="450 px" class="image-centered"}
 
