@@ -86,7 +86,7 @@ $$ \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}.
 
 Putting this all together, the partition function for all possible winning sets is
 
-$$ Z_\text{set win} = \small 2\left[Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}\right]. $$
+$$ Z_\text{set win} = \smaller 2\left[Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}\right]. $$
 
 and $Z_\text{set loss}$ is found by replacing $s$ with $1/s$ in $Z_\text{set win}.$
 
