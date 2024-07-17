@@ -43,11 +43,11 @@ $$
 
 From these we can form the partition functions, where we attach the probability for a score gap of $j$ to a term $s^j:$
 
-$$ Z_\text{win} = \left(s^2 \frac{5}{16} + s^3 \frac{1}{8} + s^4 \frac{5}{16}\right) $$
+$$ Z_\text{win} = 2\left(s^2 \frac{5}{16} + s^3 \frac{1}{8} + s^4 \frac{5}{16}\right) $$
 
 Likewise, the possibilities for the score gap of a loser are $Z_\text{win}$ with $s$ mapped to $1/s:$
 
-$$ Z_\text{lose} = \left(\frac{1}{s^2} \frac{5}{16} + \frac{1}{s^3} \frac{1}{8} + \frac{1}{s^4} \frac{5}{16}\right) $$
+$$ Z_\text{lose} = 2\left(\frac{1}{s^2} \frac{5}{16} + \frac{1}{s^3} \frac{1}{8} + \frac{1}{s^4} \frac{5}{16}\right) $$
 
 Playoff games are similar, except the range for the score gap goes from $7$ down to $2,$ with the same logic determining the counting:
 
@@ -86,7 +86,7 @@ $$ \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}.
 
 Putting this all together, the partition function for all possible winning sets is
 
-$$ Z\text{set win} = Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}. $$
+$$ Z\text{set win} = 2\left(Z_\text{win}^6 + \binom{6}{1}Z_\text{win}^6Z_\text{loss} + \binom{7}{2}Z_\text{win}^6Z_\text{loss}^2 + \binom{8}{3}Z_\text{win}^6Z_\text{loss}^3 + \binom{9}{4}Z_\text{win}^6Z_\text{loss}^4 + \binom{10}{5} Z_\text{win}^7 Z_\text{loss}^5 + \binom{10}{5}\binom{2}{1}Z_\text{win}^6 Z_\text{loss}^6 Z_\text{playoff win}\right). $$
 
 and $Z_\text{set loss}$ is found by replacing $s$ with $1/s$ in $Z_\text{set win}.$
 
