@@ -41,18 +41,32 @@ $$
   \end{align}
 $$
 
+From these we can form the polynomial, where we attach the probability for a score gap of $j$ to a term $s^j:$
+
+$$ Z_\text{win} = \left(s^2 \frac{5}{16} + s^3 \frac{1}{8} + s^4 \frac{5}{16}\right) $$
+
+Likewise, the possibilities for the score gap of a loser are $Z_\text{win}$ with $s$ mapped to $1/s:$
+
+$$ Z_\text{lose} = \left(\frac{1}{s^2} \frac{5}{16} + \frac{1}{s^3} \frac{1}{8} + \frac{1}{s^4} \frac{5}{16}\right) $$
+
 Playoff games are similar, except the range for the score gap goes from $7$ down to $2,$ with the same logic determining the counting:
 
 $$
   \begin{align}
-    P^*_g(7) &= \frac{1}{2^7} \\
-    P^*_g(8) &= \binom{7}{1} \frac{1}{2^8} \\
-    P^*_g(9) &= \binom{8}{2} \frac{1}{2^9} \\
-    P^*_g(10) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
-    P^*_g(12) &= \binom{10}{5}\binom{2}{1} \frac{1}{2^{12}} \\ 
-    P^*_g(13) &= \binom{10}{5} \frac{1}{2^{13}} \\ 
+    P_g(7) &= \frac{1}{2^7} \\
+    P_g(8) &= \binom{7}{1} \frac{1}{2^8} \\
+    P_g(9) &= \binom{8}{2} \frac{1}{2^9} \\
+    P_g(10) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
+    P_g(12) &= \binom{10}{5}\binom{2}{1} \frac{1}{2^{12}} \\ 
+    P_g(13) &= \binom{10}{5} \frac{1}{2^{13}} \\ 
   \end{align}
 $$
+
+with similar polynomials formed from them.
+
+### Sets
+
+
 
 
 <br>
