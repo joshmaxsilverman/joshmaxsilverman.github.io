@@ -17,7 +17,7 @@ tags:
 
 To solve this, we're going to directly build the probability distribution for the winner's score gap.
 
-To do that, we're going to use series to keep track of the probabilities of all possible outcomes for each class of event. 
+To do that, we're going to use partition functions to keep track of the probabilities of all possible outcomes for each class of event. 
 
 Before we start, let's summarize the $\text{game}\rightarrow\text{set}\rightarrow\text{match}$ scheme of tennis. 
 
@@ -41,7 +41,7 @@ $$
   \end{align}
 $$
 
-From these we can form the polynomial, where we attach the probability for a score gap of $j$ to a term $s^j:$
+From these we can form the partition functions, where we attach the probability for a score gap of $j$ to a term $s^j:$
 
 $$ Z_\text{win} = \left(s^2 \frac{5}{16} + s^3 \frac{1}{8} + s^4 \frac{5}{16}\right) $$
 
@@ -54,18 +54,31 @@ Playoff games are similar, except the range for the score gap goes from $7$ down
 $$
   \begin{align}
     P_g(7) &= \frac{1}{2^7} \\
-    P_g(8) &= \binom{7}{1} \frac{1}{2^8} \\
-    P_g(9) &= \binom{8}{2} \frac{1}{2^9} \\
-    P_g(10) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
-    P_g(12) &= \binom{10}{5}\binom{2}{1} \frac{1}{2^{12}} \\ 
-    P_g(13) &= \binom{10}{5} \frac{1}{2^{13}} \\ 
+    P_g(6) &= \binom{7}{1} \frac{1}{2^8} \\
+    P_g(5) &= \binom{8}{2} \frac{1}{2^9} \\
+    P_g(4) &= \binom{9}{3} \frac{1}{2^{10}} \\ 
+    P_g(3) &= \binom{10}{4}\frac{1}{2^{11}} \\ 
+    P_g(2) &= \frac12 - \sum_j P_g(j)
   \end{align}
 $$
 
-with similar polynomials formed from them.
+with similar partition functions formed from them.
 
 ### Sets
 
+A set is awarded to the first player to win $6$ games, winning by at least $2$ games. 
+
+Keeping track of sets according to the number of games won and lost by the winner, $(w,\ell),$ this gives us sets $(6,0),(6,1),(6,2),(6,3)$ and $(6,4)$ for which there are $\binom{w+\ell-1}{\ell}$ ways to order the wins and losses.
+
+The partition functions representing these outcomes is given by 
+
+$$ \binom{w+\ell-1}{\ell}Z_\text{win}^wZ_\text{loss}^\ell. $$
+
+If a set gets to $(5,5)$ then it goes to a two game playoff. 
+
+If the same player wins both games, then they win the set. This outcome has $\binom{10}{5}$ possible orders.
+
+The other possibiltiy is that the players split the two playoff games, and the game goes into a one game playoff. 
 
 
 
