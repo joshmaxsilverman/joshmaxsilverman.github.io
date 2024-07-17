@@ -19,7 +19,7 @@ To solve this, we're going to directly build the probability distribution for th
 
 To do that, we're going to use partition functions to keep track of the probabilities of all possible outcomes for each class of event. 
 
-Before we start, let's summarize the $\text{game}\rightarrow\text{set}\rightarrow\text{match}$ scheme of tennis. 
+Before we start, let's summarize the $\text{GAME}\rightarrow\text{SET}\rightarrow\text{MATCH}$ scheme of tennis. 
 
 At the base level we have games, which are played to $4$ (or $7$ for a special kind of playoff game) and are one by getting the balance of the points. We then have sets which are won by getting a balance of the game. Finally, we have matches which are won by getting a balance of the games. 
 
