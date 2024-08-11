@@ -39,14 +39,14 @@ So, the area corresponding to the multiplicative scheme making a difference are 
 
 The lower triangle has base $(d_1 - d_2)$ and height $d_2$ while the upper triangle has base $(10 - d_1 + d_2 - 10\frac{d_2}{d_1})$ and height $(10-d_1).$
 
-The cases for $d_2 > d_1$ are symmetric, so we can just double the area found here 
+$$ P(\text{winner changes}\rvert d_1,d_2) = \frac{1}{10^2}\left[\frac12(d_1-d_2)d_2 + \frac12(10-d_1)\left(10-(d_1-d_2)-\frac{d_2}{d_1}10\right)\right] $$
 
-$$ P(\text{winner changes}) = 2\frac{1}{10^2}\left[\frac12(d_1-d_2)d_2 + \frac12(10-d_1)\left(10-(d_1-d_2)-\frac{d_2}{d_1}10\right)\right] $$
+which comes to $23/600$ for $(d_1,d_2) = (6,5).$
 
-which comes to $577/600$ for $(d_1,d_2) = (6,5).$
+To find the overall probability of the winner changing, we can integrate over all $d_1$ and $d_2$. The cases for $d_2 > d_1$ are symmetric, so we can just
+integrate over $10 > d_1 > d_2$:
 
-and integrate over all $10 > d_1 > d_2$ to find the probability that the multiplicative scoring makes a difference. 
-
+$$ P(\text{winner changes}) = \int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2 P(\text{winner changes}\rvert d_1,d_2) = \frac{1}{12}. $$
 
 
 <br>
