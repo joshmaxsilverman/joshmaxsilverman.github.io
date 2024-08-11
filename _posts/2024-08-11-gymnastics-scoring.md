@@ -39,4 +39,8 @@ So, the area corresponding to the multiplicative scheme making a difference are 
 
 The lower triangle has base $(d_1 - d_2)$ and height $d_2$ while the upper triangle has base $(10 - d_1 + d_2 - 10\frac{d_2}{d_1})$ and height $(10-d_1).$
 
+The cases for $d_2 > d_1$ are symmetric, so we can just double the area found here and integrate over all $10 > d_1 > d_2$ to find the probability that the multiplicative scoring makes a difference. 
+
+
+
 <br>
