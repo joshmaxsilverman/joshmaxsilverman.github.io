@@ -46,7 +46,12 @@ which comes to $23/600$ for $(d_1,d_2) = (6,5).$
 To find the overall probability of the winner changing, we can integrate over all $d_1$ and $d_2$. The cases for $d_2 > d_1$ are symmetric, so we can just
 integrate over $10 > d_1 > d_2$:
 
-$$ P(\text{winner changes}) = \int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2 P(\text{winner changes}\rvert d_1,d_2) = \frac{1}{12}. $$
+$$ 
+   \begin{align} 
+    P(\text{winner changes}) &= \int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2\, P(\text{winner changes}\rvert d_1,d_2) \\
+    &= \frac{1}{12}.
+   \end{align}
+$$
 
 
 <br>
