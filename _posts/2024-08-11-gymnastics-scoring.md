@@ -39,7 +39,12 @@ So, the area corresponding to the multiplicative scheme making a difference are 
 
 The lower triangle has base $(d_1 - d_2)$ and height $d_2$ while the upper triangle has base $(10 - d_1 + d_2 - 10\frac{d_2}{d_1})$ and height $(10-d_1).$
 
-$$ P(\text{winner changes}\rvert d_1,d_2) = \frac{1}{10^2}\left[\frac12(d_1-d_2)d_2 + \frac12(10-d_1)\left(10-(d_1-d_2)-\frac{d_2}{d_1}10\right)\right] $$
+$$ 
+   \begin{align}
+      P(\text{winner changes}\rvert d_1,d_2) &= \frac{1}{10^2}\left[\frac12(d_1-d_2)d_2 + \frac12(10-d_1)\left(10-(d_1-d_2)-\frac{d_2}{d_1}10\right)\right] \\
+      &= 
+   \end{align}
+$$
 
 which comes to $23/600$ for $(d_1,d_2) = (6,5).$
 
