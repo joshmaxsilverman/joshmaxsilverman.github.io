@@ -31,11 +31,13 @@ $$ e_1 d_1 < e_2 d_2. $$
 
 We can solve either of these for $e_1$ in terms of $e_2$ and the difficulty scores, giving $e_1 + (d_1 - d_2) > e_2 $ and $ e_2 > \frac{d_1}{d_2} e_1 $ which gives us upper and lower bounds on $e_2.$ 
 
+![](/img/2024-08-11-gymnastics-multiplicative-scoring.png){:width="450px" class="image-centered"}
+
 The first one is a line of slope $1$ that leaves the $e_2$-axis from intercept $(d_1 - d_2)$ while the second is a line from the origin with slope $d_1/d_2.$ So, the two bounds approach each other, and form a wedge in $(e_1,e_2)$ space corresponding to Player 1 winning the additive scoring and Player 2 under multiplicative. 
 
 The lines converge at $e_1 = d_2,$ then cross. For $e_1 > d_2,$ the lines bound another wedge region that corresponds to Player 2 winning under additive scoring and Player 1 under multiplicative. 
 
-So, the area corresponding to the multiplicative scheme making a difference are the two triangles in the diagram above. 
+So, the area corresponding to the multiplicative scheme making a difference are the two purple triangles in the diagram above. 
 
 The lower triangle has base $(d_1 - d_2)$ and height $d_2$ while the upper triangle has base $(10 - d_1 + d_2 - 10\frac{d_2}{d_1})$ and height $(10-d_1).$
 
