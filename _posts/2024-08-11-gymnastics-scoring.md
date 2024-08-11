@@ -46,7 +46,7 @@ $$
    \end{align}
 $$
 
-which comes to $23/600$ for $(d_1,d_2) = (6,5).$
+which comes to $\frac{23}{600}$ for $(d_1,d_2) = (6,5).$
 
 To find the overall probability of the winner changing, we can integrate over all $d_1$ and $d_2$. The cases for $d_2 > d_1$ are symmetric, so we can just
 integrate over $10 > d_1 > d_2$:
