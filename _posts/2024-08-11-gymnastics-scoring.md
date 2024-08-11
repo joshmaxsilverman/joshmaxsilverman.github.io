@@ -31,7 +31,7 @@ $$ e_1 d_1 < e_2 d_2. $$
 
 We can solve either of these for $e_1$ in terms of $e_2$ and the difficulty scores, giving $e_1 + (d_1 - d_2) > e_2 $ and $ e_2 > \frac{d_1}{d_2} e_1 $ which gives us upper and lower bounds on $e_2.$ 
 
-![](/img/2024-08-11-gymnastics-multiplicative-scoring.png){:width="450px" class="image-centered"}
+![](/img/2024-08-11-gymnastics-multiplicative-scoring-labeled.png){:width="450px" class="image-centered"}
 
 The first one is a line of slope $1$ that leaves the $e_2$-axis from intercept $(d_1 - d_2)$ while the second is a line from the origin with slope $d_1/d_2.$ So, the two bounds approach each other, and form a wedge in $(e_1,e_2)$ space corresponding to Player 1 winning the additive scoring and Player 2 under multiplicative. 
 
