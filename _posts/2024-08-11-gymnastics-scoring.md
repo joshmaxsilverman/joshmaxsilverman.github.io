@@ -79,7 +79,7 @@ To find the overall probability of the winner changing, we can average over all 
 $$ 
    
    \begin{align} 
-    P(\text{winner changes}) &= \dfrac{displaystyle\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2\, P(\text{winner changes}\rvert d_1,d_2)}{displaystyle\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2} \\
+    P(\text{winner changes}) &= \dfrac{\displaystyle\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2\, P(\text{winner changes}\rvert d_1,d_2)}{\displaystyle\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2} \\
     &= \frac{1}{12}.
    \end{align}
 $$
