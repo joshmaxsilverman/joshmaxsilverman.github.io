@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Judging gymnastics judging
+title: Judging judging
 date: 2024/08/11
 subtitle: How often are we penalizing our bravest gymnasts?
 tags: geometry
