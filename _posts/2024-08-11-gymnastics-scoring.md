@@ -39,6 +39,8 @@ Let's take up the mantle of this alternative scoring system and see how often it
 
 For the two systems to come up with different results, we'd need either player to win in either system. 
 
+### Setting up the calculation
+
 Let's say Player 1 wins in the additive scheme and Player 2 in the multiplicative one, then 
 
 $$ e_1 + d_1 > e_2 + d_2, $$
@@ -47,7 +49,9 @@ and
 
 $$ e_1 d_1 < e_2 d_2. $$
 
-We can solve either of these for $e_1$ in terms of $e_2$ and the difficulty scores, giving $e_1 + (d_1 - d_2) > e_2 $ and $ e_2 > \frac{d_1}{d_2} e_1 $ which gives us upper and lower bounds on $e_2.$ 
+We can solve either of these for $e_1$ in terms of $e_2$ and the difficulty scores, giving $e_1 + (d_1 - d_2) > e_2 $ and $ e_2 > e_1 d_1/d_2 $ which gives us upper and lower bounds on $e_2.$ 
+
+### Geometry
 
 ![](/img/2024-08-11-gymnastics-multiplicative-scoring-labeled.png){:width="450px" class="image-centered"}
 
@@ -68,11 +72,13 @@ $$
 
 which comes to $\frac{23}{600}$ for $(d_1,d_2) = (6,5).$
 
+### Averaging
+
 To find the overall probability of the winner changing, we can average over all possible $d_1$ and $d_2$. The cases for $d_2 > d_1$ and $d_1 > d_2$ are symmetric, so we can just average over $10 > d_1 > d_2$:
 
 $$ 
    \begin{align} 
-    P(\text{winner changes}) &= \frac{\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2\, P(\text{winner changes}\rvert d_1,d_2)}{\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2} \\
+    P(\text{winner changes}) &= \dfrac{\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2\, P(\text{winner changes}\rvert d_1,d_2)}{\int\limits_0^{10} \text{d}d_1\int\limits_0^{d_1} \text{d}d_2} \\
     &= \frac{1}{12}.
    \end{align}
 $$
