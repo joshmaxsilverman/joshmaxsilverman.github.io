@@ -66,7 +66,7 @@ The lower triangle has base $(d_1 - d_2)$ and height $d_2$ while the upper trian
 $$ 
    \begin{align}
       P(\text{winner changes}\rvert d_1,d_2) &= \frac{1}{10^2}\left[\frac12(d_1-d_2)d_2 + \frac12(10-d_1)\left(10-(d_1-d_2)-\frac{d_2}{d_1}10\right)\right] \\
-      &= \frac{(d_1-d_2)(d_1d_2 + (d_1-10)^2}{200d_1}
+      &= \frac{(d_1-d_2)\left(d_1d_2 + (d_1-10)^2\right)}{200d_1}
    \end{align}
 $$
 
