@@ -50,7 +50,7 @@ we could evaluate this, but it will bring error functions into our lives. since 
 
 $$ P(\text{agree}\rvert U) \approx \mathcal{N}_U(\mu, \sigma^2) $$
 
-then, the total probability of agreement is just the weighted average
+the total probability of agreement is just the weighted average over all numbers of roundups $U$
 
 $$ P(\text{agree}) = \int\text{d}U\, P(\text{agree}\rvert U) P(U). $$
 
