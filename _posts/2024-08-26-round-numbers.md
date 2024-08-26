@@ -28,7 +28,7 @@ also, each random variable has an expected variance of
 $$
   \begin{align}
     \sigma^2 &= \langle x - \langle x\rangle\rangle^2 \\
-             &= 2\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac1/4\right)^2 \\
+             &= 2\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2 \\
              &= \frac{1}{48}
   \end{align}
 $$
