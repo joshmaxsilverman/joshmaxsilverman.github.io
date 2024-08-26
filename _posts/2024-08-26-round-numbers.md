@@ -15,9 +15,13 @@ tags:
 
 ## Solution
 
-the rounded sum will equal the sum of the rounded numbers when the sum lands in a unit band around the number of rounded numbers.
+The rounded sum will equal the sum of the rounded numbers when the sum lands in a unit band around the number of rounded numbers.
 
-say we take a sum of fifty numbers and $35$ of them are in $\left(\frac12, 1\right).$ then we can say that round has $U=35$ numbers that are rounded up, and $N-U = 15$ that are rounded down. the round of the sum would equal the sum of the rounded numbers if $\sum_j x_j$ falls between $35-\frac12$ and $35+\frac12.$
+### Setting up variables
+
+Say we take a sum of fifty numbers and $35$ of them are in $\left(\frac12, 1\right).$ Then we can say that round has $U=35$ numbers that are rounded up, and $N-U = 15$ that are rounded down. the round of the sum would equal the sum of the rounded numbers if $\sum_j x_j$ falls between $35-\frac12$ and $35+\frac12.$
+
+### Random walk
 
 as we accumulate more numbers, the jaggedness of the individual unit variables dies off and the sum resembles a random walk.
 
