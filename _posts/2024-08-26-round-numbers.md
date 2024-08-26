@@ -58,9 +58,9 @@ the probability of $U$ roundups is the binomial distribution
 
 $$ P(U) = \frac{1}{2^N}\binom{N}{U}. $$
 
-happily, $P(U)$ is easily approximated with another normal distribution, $\mathcal{N}_U(\frac12 N, \frac14 N),$ so the probability of agreement is
+happily, $P(U)$ is easily approximated with another normal distribution, $\mathcal{N}_U\left(\frac12 N, \frac14 N\right),$ so the probability of agreement is
 
-$$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U(\mu, \sigma^2) \mathcal{N}_U(\frac12 N, \frac14 N), $$
+$$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U\left(\mu, \sigma^2\right) \mathcal{N}_U\left(\frac12 N, \frac14 N\right), $$
 
 which comes out to
 
