@@ -44,19 +44,29 @@ this means we can model the entire sum as a normal variable with mean $\mu$ and 
 
 then, the probability that the roundings agree for a given $U$ is 
 
-$$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, N_x(\mu, \sigma^2) $$
+$$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, \mathcal{N}_x(\mu, \sigma^2) $$
+
+we could evaluate this, but it will bring error functions into our lives. since $U-\frac12$ and $U+\frac12$ are close, we can approximate this as simple the value of the integrand at $U$ times the interval's unit width, so:
+
+$$ P(\text{agree}\rvert U) \approx \mathcal{N}_U(\mu, \sigma^2) $$
 
 then, the total probability of agreement is just the weighted average
 
 $$ P(\text{agree}) = \int\text{d}U\, P(\text{agree}\rvert U) P(U). $$
 
-the probability of $U$ roundups is just the binomial distribution
+the probability of $U$ roundups is the binomial distribution
 
 $$ P(U) = \frac{1}{2^N}\binom{N}{U}. $$
 
-we could evaluate this, but it will bring error functions into our lives. since $U-\frac12$ and $U+\frac12$ are close, we can approximate this as simple the value of the integrand at $U$ times the interval's unit width, so:
+happily, $P(U)$ is easily approximated with another normal distribution, $\mathcal{N}_U(\frac12 N, \frac14 N),$ so the probability of agreement is
 
-$$ P(\text{agree}\rvert U) \approx N_U(\mu, \sigma^2) $$
+$$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U(\mu, \sigma^2) \mathcal{N}_U(\frac12 N, \frac14 N), $$
+
+which comes out to
+
+$$ P(\text{agree}) = \sqrt{\frac{160}{25\pi N}}. $$
+
+
 
 
 
