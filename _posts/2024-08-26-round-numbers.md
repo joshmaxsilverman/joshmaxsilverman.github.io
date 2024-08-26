@@ -46,4 +46,10 @@ then, the probability that the roundings agree for a given $U$ is
 
 $$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, N_x(\mu, \sigma^2) $$
 
+we could evaluate this, but it will bring error functions into our lives. since $U-\frac12$ and $U+\frac12$ are close, we can approximate this as simple the value of the integrand at $U$ times the interval's unit width, so:
+
+$$ P(\text{agree}\rvert U) \approx N_U(\mu, \sigma^2) $$
+
+
+
 <br>
