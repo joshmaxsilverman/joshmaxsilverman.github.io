@@ -21,7 +21,14 @@ say we take a sum of fifty numbers and $35$ of them are in $\left(\frac12, 1\rig
 
 as we accumulate more numbers, the jaggedness of the individual unit variables dies off and the sum resembles a random walk.
 
-if a number is rounded up then it has mean $\frac34$ and if a number is rounded down its mean is $\frac14.$ so, if we have $U$ roundups, the expected mean of the sum is $\mu_U \frac14(N-U) + \frac34U = \frac14N + \frac12U.$
+if a number is rounded up then it has mean $\frac34$ and if a number is rounded down its mean is $\frac14.$ so, if we have $U$ roundups, the expected mean of the sum is 
+
+$$ 
+  \begin{align}
+    \mu_U &= \frac14(N-U) + \frac34U \\
+    &= \frac14N + \frac12U.
+  \end{align}
+$$
 
 also, each random variable has an expected variance of 
 
