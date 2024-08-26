@@ -34,7 +34,7 @@ also, each random variable has an expected variance of
 
 $$
   \begin{align}
-    \sigma^2 &= \langle x - \langle x\rangle\rangle^2 \\
+    \sigma^2_U &= \langle x - \langle x\rangle\rangle^2 \\
              &= 2\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2 \\
              &= \frac{1}{48}
   \end{align}
@@ -60,7 +60,7 @@ $$ P(U) = \frac{1}{2^N}\binom{N}{U}. $$
 
 happily, $P(U)$ is easily approximated with another normal distribution, $\mathcal{N}_U\left(\frac12 N, \frac14 N\right),$ so the probability of agreement is
 
-$$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U\left(\mu_U, \sigma^2\right) \mathcal{N}_U\left(\frac12 N, \frac14 N\right), $$
+$$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U\left(\mu_U, \sigma^2_U\right) \mathcal{N}_U\left(\frac12 N, \frac14 N\right), $$
 
 which comes out to
 
