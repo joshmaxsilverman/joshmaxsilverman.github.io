@@ -40,11 +40,11 @@ $$
   \end{align}
 $$
 
-this means we can model the entire sum as a normal variable with mean $\mu$ and variance $\sigma^2.$
+this means we can model the entire sum as a normal variable with mean $\mu_U$ and variance $\sigma^2_U.$
 
 then, the probability that the roundings agree for a given $U$ is 
 
-$$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, \mathcal{N}_x(\mu, \sigma^2) $$
+$$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, \mathcal{N}_x(\mu_U, \sigma^2_U) $$
 
 we could evaluate this, but it will bring error functions into our lives. since $\left(U-\frac12\right)$ and $\left(U+\frac12\right)$ are close, we can approximate this as simply the value of the integrand at $U$ times the interval's unit width, so:
 
