@@ -62,7 +62,7 @@ $$
   \end{align}
 $$
 
-This means the walk's destination becomes a normal variable with mean $\mu_U$ and variance $\sigma^2_U.$
+This means the walker's destination becomes a normal variable with mean $\mu_U$ and variance $\sigma^2_U.$
 
 The two kinds of roundings agree if the walker terminates between $(U-\frac12)$ and $(U+\frac12).$ So the probability of agreement for a given $U$ is
 
