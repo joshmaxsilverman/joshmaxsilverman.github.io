@@ -33,15 +33,17 @@ But it helps to think about this problem from a more physical perspective.
 
 Suppose we take a sum of fifty random uniform variables and $35$ of them turn out to be in $\left(\frac12, 1\right).$ 
 
-Then we can say $U=35$ numbers have rounded up, and $(N-U) = 15$ have rounded down. The round of the sum equals the sum of the rounded numbers if $\sum_j x_j$ falls between $(35-\frac12)$ and $(35+\frac12).$
+Then we can say $U=35$ numbers have rounded up, and $D = (N-U) = 15$ have rounded down. The round of the sum equals the sum of the rounded numbers if $\sum_j x_j$ falls between $(35-\frac12)$ and $(35+\frac12).$
 
-We can think of each $U$ step as a big step, and each of the $(N-U)$ steps as small ones. Then the sum is a walk that randomly alternates between big and small steps.
+We can think of each $U$ step as a big step, and each of the $D = (N-U)$ steps as small ones. Then the sum is a walk that randomly alternates between big and small steps.
+
+The question becomes, if all we know are the kinds of steps taken ($U$ and $D$), how often can we locate the walker to within $1$ of their actual position?
+
+### Many steps
 
 As we accumulate more and more steps, the jaggedness of the individual unit variables dies off, the central limit theorem takes hold, and the sum becomes normally distributed.
 
-Big steps have mean $\frac34$ and small steps have mean $\frac14.$ 
-
-So, if we have $U$ roundups, the expected mean of the sum is 
+Big steps have mean $\frac34$ and small steps have mean $\frac14,$ so, if we have $U$ roundups, the expected position of the walker is
 
 $$ 
   \begin{align}
@@ -56,13 +58,13 @@ $$
   \begin{align}
     \sigma^2_U &= \langle x - \langle x\rangle\rangle^2 \\
              &= 2\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2 \\
-             &= \frac{1}{48}
+             &= \frac{1}{48}.
   \end{align}
 $$
 
-This means the entire sum becomes a normal variable with mean $\mu_U$ and variance $\sigma^2_U.$
+This means the walk's destination becomes a normal variable with mean $\mu_U$ and variance $\sigma^2_U.$
 
-The two roundings agree if the walk ends up between $(U-\frac12)$ and $(U+\frac12).$ So the probability of agreement for a given $U$ is
+The two kinds of roundings agree if the walker terminates between $(U-\frac12)$ and $(U+\frac12).$ So the probability of agreement for a given $U$ is
 
 $$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, \mathcal{N}_x(\mu_U, \sigma^2_U) $$
 
