@@ -94,5 +94,25 @@ Plotting it against a simulation, we see good agreement as $N$ grows:
 
 ![](/img/2024-08-26-round-fiddler.png){:width="450 px" class="image-centered"}
 
+While the integral is fun to work out by hand, this `sympy` will also do the trick:
+
+```python
+from sympy import *
+init_printing(use_unicode=False)
+
+x, k, u, n = symbols(('x', 'k', 'u', 'n'), positive=True)
+
+mean_walk, var_walk = Rational('1/4') * n + Rational('1/2') * u, Rational('1/48') * n
+mean_U, var_U = Rational('1/2') * n, Rational('1/4') * n
+
+fun = 1/sqrt(2 * pi * var_walk) * 1/sqrt(2 * pi * var_U) * \
+      integrate(
+        exp(-(u-mean_walk) ** 2 / (2 * var_walk)) * \
+        exp(-(u-mean_U) ** 2 / (2 * var_U))
+        ,(u, -oo, +oo)
+      )
+
+simplify(fun.subs({n:n}))
+```
 
 <br>
