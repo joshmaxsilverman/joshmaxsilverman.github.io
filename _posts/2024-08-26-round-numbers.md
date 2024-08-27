@@ -37,7 +37,7 @@ Then we can say $U=35$ numbers have rounded up, and $D = (N-U) = 15$ have rounde
 
 We can think of each $U$ step as a big step, and each of the $D = (N-U)$ steps as small ones. Then the sum is a walk that randomly alternates between big and small steps.
 
-The question becomes, if all we know are the kinds of steps taken ($U$ and $D$), how often can we locate the walker to within $1$ of their actual position?
+In this picture, the original question is equivalent to this more practical one: if all we know are the kinds of steps taken ($U$ and $D$), how often can we locate the walker to within $1$ of their actual position?
 
 ### Many steps
 
