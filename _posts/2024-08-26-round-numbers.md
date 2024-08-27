@@ -31,7 +31,7 @@ But it helps to think about this problem from a more physical perspective.
 
 ### Physical intuition
 
-Suppose we take a sum of fifty random uniform variables and $35$ of them turn out to be in $\left(\frac12, 1\right).$ 
+Suppose we take a sum of fifty random uniform variables $x_j$ and $35$ of them turn out to be in $\left(\frac12, 1\right).$ 
 
 Then we can say $U=35$ numbers have rounded up, and $D = (N-U) = 15$ have rounded down. The round of the sum equals the sum of the rounded numbers if $\sum_j x_j$ falls between $(35-\frac12)$ and $(35+\frac12).$
 
