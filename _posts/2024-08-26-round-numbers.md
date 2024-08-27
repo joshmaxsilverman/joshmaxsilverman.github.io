@@ -57,7 +57,7 @@ Also, each step has an expected variance of
 $$
   \begin{align}
     \sigma^2_U &= N \langle x - \langle x\rangle\rangle^2 \\
-             &= N 2\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2 \\
+             &= N\frac{\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2}{2} \\
              &= \frac{1}{48}N.
   \end{align}
 $$
