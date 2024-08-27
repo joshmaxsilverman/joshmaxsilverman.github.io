@@ -13,7 +13,7 @@ tags: random-walks approximation
 >
 >How likely is it that rounding then adding gives you the same result as adding then rounding?
 >
->To be more precise, suppose you randomly, uniformly, and independently pick two real numbers between 0 and 1. What is the probability that rounding the two numbers and then adding gives you the same result as adding the two numbers and then rounding?
+>To be more precise, suppose you randomly, uniformly, and independently pick two real numbers between $0$ and $1.$ What is the probability that rounding the two numbers and then adding gives you the same result as adding the two numbers and then rounding?
 >
 >Instead of picking two numbers from the interval between $0$ and $1,$ suppose you randomly and independently pick $N$ numbers.
 >
