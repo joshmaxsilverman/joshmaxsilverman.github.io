@@ -70,7 +70,7 @@ $$ P(\text{agree}\rvert U) = \int\limits_{U-\frac12}^{U+\frac12}\text{d}x\, \mat
 
 We could evaluate this, but it will bring error functions into our lives. Since $\left(U-\frac12\right)$ and $\left(U+\frac12\right)$ are close, we can approximate this as simply the value of the integrand at $U$ times the interval's unit width:
 
-$$ P(\text{agree}\rvert U) \approx \mathcal{N}_U(\mu, \sigma^2) $$
+$$ P(\text{agree}\rvert U) \approx \mathcal{N}_U(\mu_U, \sigma^2_U) $$
 
 ### Weighted average
 
