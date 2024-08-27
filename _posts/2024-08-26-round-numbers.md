@@ -72,8 +72,9 @@ which comes out to
 
 $$ P(\text{agree}) = \sqrt{\frac{6}{\pi N}}. $$
 
+plotting it against a simulation, we see good agreement as $N$ grows:
 
-
+![](/img/2024-08-26-round-fiddler.png){:width="450 px" class="image-centered"}
 
 
 <br>
