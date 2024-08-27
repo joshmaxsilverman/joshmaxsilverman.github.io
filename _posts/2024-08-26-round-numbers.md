@@ -88,7 +88,7 @@ $$ P(\text{agree}) = \int\limits_0^N\text{d}U\, \mathcal{N}_U\left(\mu_U, \sigma
 
 which comes out to
 
-$$ P(\text{agree}) = \sqrt{\frac{6}{\pi N}}. $$
+$$ P(\text{agree}) \approx \sqrt{\frac{6}{\pi N}}. $$
 
 Plotting it against a simulation, we see good agreement as $N$ grows:
 
