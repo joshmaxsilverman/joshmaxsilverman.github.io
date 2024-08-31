@@ -21,9 +21,7 @@ tags:
 
 To get started, let's analyze Aaron and Beren's positions. 
 
-Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if at any level, they have a $B$ to choose. 
-
-So, if Aaron is to win, there has to be a path from the beginning to infinity that alternates between $\{AA, AB, BA\}$ on Aaron turns and $AA$ on Beren turns.
+Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if at any level, they have a $B$ to choose. So, if Aaron is to win, there has to be a path from the beginning to infinity that alternates between $\{AA, AB, BA\}$ on Aaron turns and $AA$ on Beren turns.
 
 
 
