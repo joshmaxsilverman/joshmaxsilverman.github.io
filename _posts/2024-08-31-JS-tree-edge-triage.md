@@ -45,7 +45,7 @@ In general, $p$ and $P_\infty$ are related through
 
 $$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
 
-This outcome is very interesting. Clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, remniscient of first order phase transitions in physics. 
+This outcome is interesting — clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, remniscient of first order phase transitions in physics. 
 
 ![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
 
