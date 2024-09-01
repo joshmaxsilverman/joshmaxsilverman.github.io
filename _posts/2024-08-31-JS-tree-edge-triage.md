@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Tree-edge triage
 date: 2024/09/01
 subtitle: Can you taunt your friend forever?
