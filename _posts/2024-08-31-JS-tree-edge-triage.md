@@ -35,11 +35,19 @@ $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
 Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get 
 
-$$ 1 - 8/9P_\infty $$
+$$ 0 = 1 - 8/9P_\infty $$
 
 which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}. $
 
-This outcome is interesting. The game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance. But naively we might expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to having an $8/9$ chance to win the game, remniscient of first order phase transitions in physics. Another interesting thing is that the lowest winning probability is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
+In general, $p$ and $P_\infty$ are related through
+
+$$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
+
+This outcome is very interesting. Clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, remniscient of first order phase transitions in physics. 
+
+![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
+
+Another interesting thing is that the lowest winning probability is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
 
 
