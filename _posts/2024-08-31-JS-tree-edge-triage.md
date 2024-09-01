@@ -1,10 +1,10 @@
 ---
 layout: post
 published: false
-title: Tree edge triage
-date: 2018/04/21
-subtitle:
-tags:
+title: Tree-edge triage
+date: 2024/09/01
+subtitle: Can you taunt your friend forever?
+tags: recursion phase-transitions game-theory jane-street
 ---
 
 >**Question**: Aaron and Beren are playing a game on an infinite complete binary tree. At the beginning of the game, every edge of the tree is independently labeled $A$ with probability $p$ and $B$ otherwise. Both players are able to inspect all of these labels. Then, starting with Aaron at the root of the tree, the players alternate turns moving a shared token down the tree (each turn the active player selects from the two descendants of the current node and moves the token along the edge to that node). If the token ever traverses an edge labeled $B,$ Beren wins the game. Otherwise2, Aaron wins.
