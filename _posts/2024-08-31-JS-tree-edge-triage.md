@@ -35,7 +35,7 @@ $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
 Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get 
 
-$$ 1 - \frac{8}{9P_\infty} $$
+$$ 1 - 8/9P_\infty $$
 
 which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{\frac{27}{32}}. $$ 
 
