@@ -33,7 +33,7 @@ We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solu
 
 $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
-Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = \frac23.$ Plugging this in to the equation, we get 
+Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get 
 
 $$ 1 - \frac{8}{9P_\infty} $$
 
