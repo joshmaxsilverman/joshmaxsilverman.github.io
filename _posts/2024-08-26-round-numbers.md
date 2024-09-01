@@ -52,11 +52,12 @@ $$
   \end{align}
 $$
 
-Also, each step has an expected variance of 
+Also, the walker's position has an expected variance of 
 
 $$
   \begin{align}
-    \sigma^2_U &= N \langle x - \langle x\rangle\rangle^2 \\
+    \sigma^2_U &= N\sigma^2_\text{step} \\
+             &= N \langle x - \langle x\rangle\rangle^2 \\
              &= 2N\int\limits_0^{\frac12}\text{d}x\, \left(x - \frac14\right)^2 \\
              &= \frac{1}{48}N.
   \end{align}
