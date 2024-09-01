@@ -33,7 +33,9 @@ We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solu
 
 $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
-This is a quadratic equation in $p^3$ so it will have real roots when $4P_\infty^2 -  4P_\infty^3 \geq 0$
+
+
+<!-- This is a quadratic equation in $p^3$ so it will have real roots when $4P_\infty^2 -  4P_\infty^3 \geq 0$ -->
 
 <!-- So, the chance Aaron can keep the game going forever is the sum of the probabilities that
 
