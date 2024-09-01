@@ -23,7 +23,7 @@ tags: recursion phase-transitions game-theory jane-street
 
 To get started, let's analyze Aaron and Beren's positions. 
 
-Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if, at any level, she has a $B$-edge to choose. So, if Aaron is to win, there has to be at least one path from the beginning to infinity that alternates between $\{AA, AB, BA\}$ on the Aaron turns and $AA$ on the Beren turns.
+Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if, at any level, she has a $B$-edge to choose. So, if Aaron is to win, there has to be at least one path from the beginning to infinity that alternates between $\\{AA, AB, BA\\}$ on the Aaron turns and $AA$ on the Beren turns.
 
 Whenever Beren finishes a turn, we get the original situation back. This means we can count ahead by two steps, and coarse grain over the rest of the turns.
 
