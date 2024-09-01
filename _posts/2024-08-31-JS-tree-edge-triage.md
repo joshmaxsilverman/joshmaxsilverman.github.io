@@ -49,7 +49,7 @@ This outcome is very interesting. Clearly, the game favors Beren, so $p$ needs t
 
 ![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
 
-Another interesting thing is that the lowest winning probability is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
+Another interesting thing is that the lowest probability to win is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
 
 
