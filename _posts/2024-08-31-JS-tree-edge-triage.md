@@ -27,7 +27,11 @@ Both can somehow inspect the entire tree, so there's no mystery about what they'
 
 Whenever Beren finishes a turn, we get the original situation back. This means we can count ahead by two steps, and coarse grain over the rest of the turns.
 
-Aaron can keep the game going forever if at least one of the branches he sees is infinite. So, the probability of an infinite game is the probability that one or the other leads to an infinite branch minus the probability that both do:
+Aaron can keep the game going forever if at least one of the branches he sees is infinite. 
+
+![](/img/2024-09-01-tree-triage-diagram.png){:width="450 px" class="image-centered"}
+
+So, the probability of an infinite game is the probability that one or the other leads to an infinite branch minus the probability that both do:
 
 $$ P_\infty = 2p^3 P_\infty^2 - p^6 P_\infty^4. $$
 
@@ -45,9 +49,11 @@ In general, $p$ and $P_\infty$ are related through
 
 $$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
 
-This outcome is interesting — clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, reminiscent of first order phase transitions in physics. 
+This outcome is interesting — clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$
 
 ![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
+
+Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, reminiscent of first order phase transitions in physics. 
 
 Another interesting thing is that the lowest probability to win is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
