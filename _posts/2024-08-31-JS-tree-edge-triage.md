@@ -37,7 +37,7 @@ Taking the implicit derivative shows that the minimum value of $p$ happens when 
 
 $$ 1 - 8/9P_\infty $$
 
-which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{\frac{27}{32}}. $$ 
+which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}. $$ 
 
 
 
