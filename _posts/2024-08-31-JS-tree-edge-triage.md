@@ -37,7 +37,9 @@ Taking the implicit derivative shows that the minimum value of $p$ happens when 
 
 $$ 1 - 8/9P_\infty $$
 
-which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}. $$ 
+which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}. $
+
+This outcome is interesting. The game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance. But naively we might expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$ Instead, Aaron goes from having no chance at all, to having an $8/9$ chance to win the game, remniscient of first order phase transitions in physics. Another interesting thing is that the lowest winning probability is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
 
 
