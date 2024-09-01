@@ -33,6 +33,16 @@ We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solu
 
 $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
+Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = \frac23.$ Plugging this in to the equation, we get 
+
+$$ 1 - \frac{8}{9P_\infty} $$
+
+which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{\frac{27}{32}}. $$ 
+
+
+
+<!-- $$ dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP (3p^6 P_\infty^2 - 2p^3) = 0 $$ -->
+
 
 
 <!-- This is a quadratic equation in $p^3$ so it will have real roots when $4P_\infty^2 -  4P_\infty^3 \geq 0$ -->
