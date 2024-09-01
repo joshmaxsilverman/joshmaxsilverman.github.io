@@ -29,9 +29,11 @@ Aaron can keep the game going forever if at least one of the branches he sees is
 
 $$ P_\infty = 2p^3 P_\infty^2 - p^6 P_\infty^4. $$
 
-We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solution) to get
+We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solution) and rearrange to get
 
-$$ 1 = 2p^3 P_\infty - p^6 P_\infty^3. $$
+$$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
+
+This is a quadratic equation in $p^3$ so it will have real roots when $4P_\infty^2 -  4P_\infty^3 \geq 0$
 
 <!-- So, the chance Aaron can keep the game going forever is the sum of the probabilities that
 
