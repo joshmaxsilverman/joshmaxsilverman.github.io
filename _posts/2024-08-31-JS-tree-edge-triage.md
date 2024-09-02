@@ -45,7 +45,7 @@ $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
 Taking the implicit derivative 
 
-$$ 0 = dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP (3p^6 P_\infty^2 - 2p^3) $$
+$$ 0 = dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP_\infty (3p^6 P_\infty^2 - 2p^3) $$
 
 shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get $ {\min(P_\infty) = 8/9} $ and, so, the minimum value of $p$ is $\min(p) = {\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}.} $
 
