@@ -23,9 +23,13 @@ tags: recursion phase-transitions game-theory jane-street
 
 To get started, let's analyze Aaron and Beren's positions. 
 
+### Strategy
+
 Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if, at any level, she has a $B$-edge to choose. So, if Aaron is to win, there has to be at least one path from the beginning to infinity that alternates between $\\{AA, AB, BA\\}$ on the Aaron turns and $AA$ on the Beren turns.
 
 Whenever Beren finishes a turn, we get the original situation back. This means we can count ahead by two steps, and coarse grain over the rest of the turns.
+
+### Calculation
 
 Aaron can keep the game going forever if at least one of the branches he sees is infinite. 
 
@@ -39,21 +43,19 @@ We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solu
 
 $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
-Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get 
-
-$$ 0 = 1 - 8/9P_\infty $$
-
-which shows that the minimum value of $P_\infty$ is $8/9$ and, so, the minimum value of $p$ is $\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}. $
+Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get $ {\min(P_\infty) = 8/9} $ and, so, the minimum value of $p$ is ${\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}.} $
 
 In general, $p$ and $P_\infty$ are related through
 
-$$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
+$$ \min(p) = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
+
+### Conclusions
 
 This outcome is interesting — clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $p_\text{min}$ that grows as $p$ approaches $1.$
 
 ![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
 
-Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game, reminiscent of first order phase transitions in physics. 
+Instead, Aaron goes from having no chance at all, to suddenly having an $8/9$ chance to win the game as $p$ crosses $\min(p),$ reminiscent of first order phase transitions in physics. 
 
 Another interesting thing is that the lowest probability to win is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
