@@ -49,8 +49,8 @@ Taking the implicit derivative shows that the minimum value of $p$ happens when 
 
 $$
   \begin{align}
-    \min(p) &= {\sqrt[3]{2/3 P_\infty^2} \\
-            &= \sqrt[3]{27/32}.}
+    \min(p) &= \sqrt[3]{2/3 P_\infty^2} \\
+            &= \sqrt[3]{27/32}.
   \end{align}
 $$
 
