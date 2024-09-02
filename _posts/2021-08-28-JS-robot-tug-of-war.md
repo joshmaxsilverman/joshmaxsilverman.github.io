@@ -3,6 +3,7 @@ layout: post
 published: true
 title: Robot Tug of War
 date: 2021/09/01
+tags: recursion jane-street
 ---
 
 >**Question**: The Robot Weightlifting World Championship was such a huge success that the organizers have hired you to help design its sequel: a Robot Tug-of-War Competition!
