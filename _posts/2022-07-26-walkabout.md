@@ -29,9 +29,9 @@ We want to know if he'll have an exceptional experience in the kitchen. Since th
 
 ### Soccer ball by symmetry
 
-On the soccer ball, suppose we let Andy to wander indefinitely. How often would we expect him to be on a given position? The answer, in the fullness of time, is simply $1/n^\text{th}$ of the time. 
+On the soccer ball, suppose we let Andy to wander indefinitely. How often would we expect him to be on a given position? Since all positions on the ball are equivalent, the answer is simply $1$ out of $n$ of the time. 
 
-It might seem like this is too cute, since Andy isn't indefinitely wandering, but starting from a definite position. However, any subsequence in the infinite wander from $i$ back to $i$ is a valid morning stroll.
+It may seem like this is too cute, since Andy isn't indefinitely wandering but starting from a definite position. However, any subsequence in the infinite wander from $i$ back to $i$ is a valid morning stroll.
 
 Still, we can calculate explicitly to verify that expected time to return is indeed $20$ steps.
 
