@@ -43,7 +43,7 @@ $$
   \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)\setminus\boldsymbol{0}} \langle T_j\rangle.
 $$
 
-To get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. Taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups (A, B, C, and D). The top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
+To get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. Taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups ($A,$ $B,$ $C,$ and $D$). The top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
 
 ![](/img/2022-07-26-vertex-labels-save.png){:width="400 px" class="image-centered"}
 
