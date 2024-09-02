@@ -29,7 +29,7 @@ Both can somehow inspect the entire tree, so there's no mystery about what they'
 
 Whenever Beren finishes a turn, we get the original situation back. This means we can count ahead by two steps, and coarse grain over the rest of the turns.
 
-### Calculation
+### Analysis
 
 Aaron can keep the game going forever if at least one of the branches he sees is infinite. 
 
@@ -43,7 +43,11 @@ We can divide through by $P_\infty$ (eliminating the trivial $P_\infty = 0$ solu
 
 $$ 0 = p^6 P_\infty^3 - 2p^3 P_\infty + 1. $$
 
-Taking the implicit derivative shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get $ {\min(P_\infty) = 8/9} $ and, so, the minimum value of $p$ is $\min(p) = {\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}.} $
+Taking the implicit derivative 
+
+$$ 0 = dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP (3p^6 P_\infty^2 - 2p^3) $$
+
+shows that the minimum value of $p$ happens when $p^3 P_\infty^2 = 2/3.$ Plugging this in to the equation, we get $ {\min(P_\infty) = 8/9} $ and, so, the minimum value of $p$ is $\min(p) = {\sqrt[3]{2/3 P_\infty^2} = \sqrt[3]{27/32}.} $
 
 In general, $p$ and $P_\infty$ are related through
 
@@ -61,11 +65,7 @@ Another interesting thing is that the lowest probability to win is $8/9,$ a simp
 
 
 
-<!-- $$ dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP (3p^6 P_\infty^2 - 2p^3) = 0 $$ -->
 
-
-
-<!-- This is a quadratic equation in $p^3$ so it will have real roots when $4P_\infty^2 -  4P_\infty^3 \geq 0$ -->
 
 <!-- So, the chance Aaron can keep the game going forever is the sum of the probabilities that
 
