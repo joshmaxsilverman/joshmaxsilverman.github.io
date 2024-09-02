@@ -21,26 +21,26 @@ tags: stochastic-games strategy optimality
 
 ## Solution
 
-the jumper's decision can't depend on anything but their current position since that's all the information they have.
+A jumper's decision can't depend on anything but their current position since that's all the information they have.
 
-so, each jumper's strategy takes the form
+So, each jumper's strategy takes the form:
 - if current position $z$ is less than a threshold $t$, take another step
 - if $z\geq t$, take the jump
 
-each player advances down the track, step by step, until they pass $t.$ the biggest $t$ that should be considered is $1,$ or else they'll always score zero. 
+Each player advances down the track, step by step, until they pass $t.$ The biggest $t$ that should be considered is $1,$ or else they'll always score zero. 
 
-since the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
+Necause the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
 
-## strategy outline
+### Strategy outline
 
-player $a$ wins if, eventually, they score higher than player $b.$ this can happen if
+Player $a$ wins if, eventually, they score higher than player $b.$ This can happen if
 
 - both players don't score in the present round, and player $a$ goes on to win later, or
-- player $a$ scores in the present round, but player $b$ does not.
-- both players score in the present round and $s_a > s_b$,
+- player $a$ scores in the present round, but player $b$ does not, or
+- both players score in the present round and $s_a > s_b.$
 
 
-calling the probability to not score with threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ given that they use threshold $t$ $P_\text{score}(s, t),$ this means
+Calling the probability to not score using threshold $t$, $P_\text{zero}(t),$ and the probability of getting score $s$ using threshold $t$ $P_\text{score}(s, t),$ this means
 
 $$ 
   \begin{align}
@@ -56,50 +56,49 @@ $$ P(a\ \text{wins}\rvert t_a, t_b) = \dfrac{P_\text{zero}(t_b)(1-P_\text{zero}(
   \int\limits_{t_b}^2 \text{d}s_b\, \int\limits_{s_b}^{2} \text{d}s_a\, P_\text{score}(s_a|t_a)P_\text{score}(s_b|t_b)}{1 - P_\text{zero}(t_a)P_\text{zero}(t_b)}.
 $$
 
-the chance to win, $P(a\ \text{wins}\rvert t_a, t_b),$ depends on both their thresholds. we can think of it as a surface above the $t_a\times t_b$ plane. after calculating (see next sections) it looks like this:
+The chance to win, $P(a\ \text{wins}\rvert t_a, t_b),$ depends on both jumper's thresholds. We can think of it as a surface above the $t_a\times t_b$ plane. After calculating (see next section) it looks like this:
 
 ![](/img/2023-04-01-ta-tb-prob-surface.png){:width="500 px" class="image-centered"}
 
-strategically, player $a$ should set $t_a$ so that $P(a\ \text{wins})$ has the greatest minimum with respect to $t_b.$ the same is true in the other direction. 
+Strategically, player $a$ should set $t_a$ so that $P(a\ \text{wins})$ has the greatest minimum with respect to $t_b.$ The same is true in the other direction. 
 
-the game is symmetric for both players, so they'll pick the same $t=t_a=t_b$ and it suffices to find $t_a$ where
+The game is symmetric for both players, so they'll pick the same $t=t_a=t_b$ and it suffices to find $t_a$ where
 
 $$ 0 = \dfrac{\partial P(a\ \text{wins})}{\partial t_a}\Biggr|_{t_a=t_b}. $$
 
 <!-- the game is symmetric for both players, so both players will pick the same $t=t_a=t_b.$ strategically, player $b$ should set $t_b$ so that $P(b\ \text{wins}|t_a, t_b)$ is maximal with respect to $t_b,$ and minimal with respect to $t_a.$ -->
 
-to calculate the optimal threshold, we have to find expressions for $P_\text{zero}(t)$ and $P(s\rvert t).$
+To calculate the optimal threshold, we have to find expressions for $P_\text{zero}(t)$ and $P(s\rvert t).$
 
-## finding $P_\text{zero}(t)$
+### Finding $P_\text{zero}(t)$
 
-if we're at position $z,$ then we can can get a zero if we step beyond $1$ on our present turn (probability $z$), or step to $z^\prime < 1$ on our present turn, and go on to get a zero from there.
+If we're at position $z,$ then we can can get a zero if we step beyond $1$ on our present turn (probability $z$), or step to $z^\prime < 1$ on our present turn, and go on to get a zero from there.
 
 $$ P_\text{zero}(z\rvert t) = z + \int\limits_z^{t^-}\text{d}z^\prime P_\text{zero}(z^\prime\rvert t). $$
 
-taking the derivative with respect to $z,$ this becomes 
+Taking the derivative with respect to $z,$ this becomes 
 
 $$ P_\text{zero}^\prime(z\rvert t) = 1 - P_\text{zero}(z\rvert t), $$
 
 which, integrating from $0$ to $z$ gets $\log\tfrac{P_\text{zero}(z\rvert t)-1}{P_\text{zero}(0\rvert t)-1} = -z. $
 
-we want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{zero}(t^-\rvert t) = t,$ so we get
+We want the probability of getting zero from the start of the game (when $z=0$), and we know that $P_\text{zero}(t^-\rvert t) = t,$ so we get
 
 $$ P_\text{zero}(t) = 1 +(t-1) e^t. $$
 
+### Finding $P_\text{score}(s\rvert t)$
 
-## finding $P_\text{score}(s\rvert t)$
+To get a non-zero score, a player first has to enter the region $\left[t, 1\right].$ The overall probability of landing inside this region is just $(1-t)$ and is uniform within it. 
 
-to get a non-zero score, the player first has to enter the region $\left[t, 1\right].$ the overall probability of landing inside this region is just $(1-t)$ and is uniform within it. 
+Suppose $x$ is the point where the player entered the region, and $\varepsilon$ is the size of their jump. Then they can jump to a point $s$ from as far away as $x=t$ or $(s-1),$ whichever is bigger. Similarly, their jump can start from as close as $x=1$ or $s$ itself, whichever is smaller.
 
-say $x$ is the point where the player entered the region, and $\varepsilon$ is the size of their jump. they can jump to a point $s$ from as far away as $x=t$ or $(s-1),$ whichever is bigger. similarly, their jump can start as close as $x=1$ or $s$ itself, whichever is smaller.
-
-with $x$ established, the size of the jump is fixed to $(s-x)$ which means that the probability of scoring $s,$ given that they score, is equal to
+With $x$ established, the size of the jump is fixed to $(s-x)$ which means that the probability of scoring $s,$ given that they score, is equal to
 
 $$ P(s\rvert t,\ \text{score}) = \dfrac{1}{1-t} \int\limits_{\max{t,(s-1)}}^{\min{s,1}} \hskip{-1em}\,\text{d}x \int\limits_0^1\,\hskip{-0.3em}\text{d}\varepsilon\, \delta(\varepsilon-(s-x)). $$
 
-(here, $\delta()$ is the Dirac delta function)
+(here, $\delta$ is the Dirac delta function)
 
-working that out, we get
+Working that out, we get
 
 <!-- $$ 
   P(s\rvert t) = 
@@ -123,14 +122,14 @@ and
 
 $$P_\text{score}(s\rvert t) = P(s\rvert t,\ \text{score})(1-P_\text{zero}(t)). $$
 
-plotting $P(s\rvert t,\ \text{score})$ against $s,$ we see that it forms a trapezoid, going up at $t,$ rising until $s=1,$ then staying flat before it goes down again at $s=1+t,$ before touching down at $2.$ 
+Plotting $P(s\rvert t,\ \text{score})$ against $s,$ we see that it forms a trapezoid, going up at $t,$ rising until $s=1,$ then staying flat before it goes down again at $s=1+t,$ before touching down at $2.$ 
 
 ![](/img/2023-04-01-score-probs.png){:width="500 px" class="image-centered"}
 
 
-## bringing it home
+### Bringing it home
 
-with all these pieces in place, we can find the probability that $a$ wins, given the thresholds:
+With all these pieces in place, we can find the probability that $a$ wins, given the thresholds:
 
 $$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{t_a} (t_a-1) \left(e^{t_b} \left(-t_a^3+t_a^2-3
    (t_a-1) t_b^2+2 (t_a-1)^2 t_b+4 t_a+2
@@ -138,9 +137,9 @@ $$ P(a\ \text{wins}\rvert t_a, t_b) = \frac{e^{t_a} (t_a-1) \left(e^{t_b} \left(
    e^{t_b} (t_b-1)+e^{t_a} (t_a-1)\right)}.
 $$
 
-as expected, when $t_a=t_b,$ this expression is equal to $\frac12.$
+As expected, when $t_a=t_b,$ this expression is equal to $\frac12.$
 
-taking the derivative with respect to $t_a,$ then setting $t_a = t_b,$ we get the relatively tidy condition
+Taking the derivative with respect to $t_a,$ then setting $t_a = t_b,$ we get the relatively tidy condition
 
 $$ 
   \begin{align}
@@ -150,7 +149,7 @@ $$
   \end{align}
 $$
 
-with this in hand, we can root find to learn the optimal threshold, 
+With this in hand, we can root find to learn the optimal threshold, 
 
 ```mathematica
 deriv = 3 ta - E^ta (-1 + ta)^2 (2 + ta);
@@ -159,19 +158,18 @@ root = FindRoot[deriv, {tb, 4/10}, WorkingPrecision -> 30]
   
 which gets $t_\text{opt} \approx 0.416195355\ldots $
 
-plugging $t_\text{opt}$ into $P_\text{zero}(t),$ optimal play zeros out about $11.5\%$ of the time:
+Plugging $t_\text{opt}$ into $P_\text{zero}(t),$ optimal play will zero out about $11.5\%$ of the time:
 
 $$ P_\text{zero}(t_\text{opt}) \approx 0.114845886\ldots $$
 
-### optimal behavior
+### Optimal behavior
 
-the winning strategy is to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
+The signature of the optimal strategy is to pick the threshold $t_a$ that has the greatest minimum given the value of $t_b$. 
 
-we can check that this has been achieved by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b:$
+We can check that this has been achieved by plotting $P(a\ \text{wins}\rvert t_a, t_b)$ as we vary $t_a$ and $t_b:$
 
 ![](/img/2023-04-01-optimal-plot.png){:width="500 px" class="image-centered"}
 
-indeed, any miscalibration by player $b$ raises player $a$'s win probability above $50\%.$ likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
-
+Indeed, any miscalibration by player $b$ raises player $a$'s win probability above $50\%$ and, likewise, any miscalibration by player $a$ dips their win probability under $50\%.$
 
 <br>
