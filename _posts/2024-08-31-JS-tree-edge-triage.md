@@ -31,11 +31,13 @@ Whenever Beren finishes a turn, we get the original situation back. This means w
 
 ### Analysis
 
-Aaron can keep the game going forever if at least one of the branches he sees is infinite: 
+Aaron can keep the game going forever if at least one of the branches he sees is infinite. 
+
+So, the probability of an infinite game is the probability that one or the other leads to an infinite branch minus the probability that both do:
 
 ![](/img/2024-09-01-tree-triage-diagram.png){:width="450 px" class="image-centered"}
 
-So, the probability of an infinite game is the probability that one or the other leads to an infinite branch minus the probability that both do:
+or, in math:
 
 $$ P_\infty = 2p^3 P_\infty^2 - p^6 P_\infty^4. $$
 
