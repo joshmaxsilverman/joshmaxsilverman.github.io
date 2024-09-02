@@ -4,7 +4,7 @@ published: true
 title: Buffon's prism
 date: 2023/08/08
 subtitle: If you throw a rod into a jelly lattice, what is the chance it crosses just one wall?
-tags: probability geometry
+tags: probability geometry jane-street
 ---
 
 >**Question**: Consider 3-space (i.e. $\mathbb{R}^3$) partitioned into a grid of unit cubes with faces defined by the planes of all points with at least one integer coordinate. For a fixed positive real number $\ell$, a random line segment of length $\ell$ (chosen uniformly in location and orientation) is placed in this cubic lattice.
