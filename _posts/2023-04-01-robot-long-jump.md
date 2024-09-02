@@ -29,7 +29,7 @@ So, each jumper's strategy takes the form:
 
 Each player advances down the track, step by step, until they pass $t.$ The biggest $t$ that should be considered is $1,$ or else they'll always score zero. 
 
-Necause the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
+Because the steps are uniform draws from zero to $1,$ the greatest realizable score, regardless of $t,$ is $2$ (the first step can land at $z=1$, and a jump of $1$ from there would land at $2$).
 
 ### Strategy outline
 
