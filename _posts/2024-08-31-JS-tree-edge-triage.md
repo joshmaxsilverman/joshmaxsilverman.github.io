@@ -49,7 +49,7 @@ Taking the implicit derivative shows that $p$ is minimal when $p^3 P_\infty^2 = 
 
 $$
   \begin{align}
-    \min(p) &= \sqrt[3]{2/3 P_\infty^2} \\
+    \min(p) &= \sqrt[3]{2/3 \min(P_\infty)^2} \\
             &= \sqrt[3]{27/32}.
   \end{align}
 $$
