@@ -21,7 +21,7 @@ tags: recursion phase-transitions game-theory jane-street
 
 ## Solution
 
-To get started, let's analyze Aaron and Beren's positions. 
+To get started, let's look at Aaron and Beren's positions. 
 
 ### Strategy
 
@@ -56,8 +56,6 @@ $$
 
 <!-- $$ 0 = dp (6p^5 P_\infty^3 - 6p^2 P_\infty) + dP_\infty (3p^6 P_\infty^2 - 2p^3) $$ -->
 
-
-
 In general, $p$ and $P_\infty$ are related through
 
 $$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
@@ -72,17 +70,11 @@ Instead Aaron goes from having no chance at all to suddenly having an $8/9$ chan
 
 Another interesting thing is that the lowest probability to win is $8/9,$ a simple fraction that doesn't appear to have a simple justification.
 
-
-
-
-
 <!-- So, the chance Aaron can keep the game going forever is the sum of the probabilities that
 
 - Aaron sees $AA$, and at least one of them has two $A$ children with infinite branches,
 - Aaron sees $AB$ or $BA$, and both of $A$'s children are $A$ with infinite branches.
 
 The probability of the first case is $(2p^4 P_\infty2 - p^6 P_\infty^4)$ and the second is $2p^3(1-p)P_\infty^2.÷$ -->
-
-
 
 <br>
