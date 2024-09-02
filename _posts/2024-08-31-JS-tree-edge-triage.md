@@ -31,7 +31,7 @@ Whenever Beren finishes a turn, we get the original situation back. This means w
 
 ### Analysis
 
-Aaron can keep the game going forever if at least one of the branches he sees is infinite. 
+Aaron can keep the game going forever if at least one of the branches he sees is infinite: 
 
 ![](/img/2024-09-01-tree-triage-diagram.png){:width="450 px" class="image-centered"}
 
