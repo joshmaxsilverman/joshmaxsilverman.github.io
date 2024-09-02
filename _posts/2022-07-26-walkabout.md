@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Morning walkabout
 subtitle: Will the friendly ant have an unusual experience?
-tags: recursion counting waiting-time coarse-graining
+tags: recursion counting waiting-time coarse-graining jane-street
 date: 2022/07/26
 ---
 
@@ -21,25 +21,33 @@ date: 2022/07/26
 
 ## Solution
 
-andy walks in two kinds of places, the finite surface of the soccer ball and the (infinite?) kitchen floor.
+Andy walks in two kinds of places, the finite surface of the soccer ball and the infinite kitchen floor.
 
-on the ball, he can only walk so far into the forest before he starts to walk out. but on the kitchen floor, his walks are much more likely to range up in length. the further he gets, the more likely he is to get further. 
+On the ball, he can only walk so far into the forest before he starts to walk out. But on the kitchen floor, his walks are much more likely to range up in length. The further he gets, the more likely he is to get further. 
 
-we want to know if he'll have an exceptional experience in the kitchen. since this depends on knowing the expected walk on his soccer ball, we'll start there.
+We want to know if he'll have an exceptional experience in the kitchen. Since this depends on knowing the expected walk on his soccer ball, we'll start there.
 
-# soccer ball
+### Soccer ball by symmetry
 
-whenever andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in $\sigma(i),$ the neighborhood of $i,$ which has an expected number of additional tiles $\langle T_j\rangle$ before it returns to the origin for the first time. putting this to symbols gets the harmonic relationship
+On the soccer ball, suppose we let Andy to wander indefinitely. How often would we expect him to be on a given position? The answer, in the fullness of time, is simply $1/n^\text{th}$ of the time. 
+
+It might seem like this is too cute, since Andy isn't indefinitely wandering, but starting from a definite position. However, any subsequence in the infinite wander from $i$ back to $i$ is a valid morning stroll.
+
+Still, we can calculate explicitly to verify that expected time to return is indeed $20$ steps.
+
+### Soccer ball by calculation
+
+Whenever Andy takes a step, he has a $\frac13$ chance to move onto some neighboring tile $j$ in $\sigma(i),$ the neighborhood of $i,$ which has an expected number of additional tiles $\langle T_j\rangle$ before it returns to the origin for the first time. Putting this to symbols gets the harmonic relationship
 
 $$
   \langle T_i\rangle = 1 + \frac13\sum\limits_{j\in\sigma(i)\setminus\boldsymbol{0}} \langle T_j\rangle.
 $$
 
-to get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups (A, B, C, and D). the top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
+To get rolling, we just have to encode the neighbor relationships of the white tiles on the ball. Taking its vitals, we see that the $20$ white tiles can be arranged into $4$ groups (A, B, C, and D). The top and bottom groups form connected rings while the middle two undulate, connecting to members of the other ring, and the top or bottom, but not amongst themselves.
 
 ![](/img/2022-07-26-vertex-labels-save.png){:width="400 px" class="image-centered"}
 
-putting this to a graph, we can generate the system of expectation equations like
+Putting this to a graph, we can generate the system of expectation equations like
 
 ```mathematica
 edges = {A1 <-> A2, A2 <-> A3, A3 <-> A4, A4 <-> A5, A5 <-> A1, 
@@ -64,37 +72,37 @@ sols = First@Solve[system, VertexList[g]]
 >  D1 -> 32, D2 -> 34, D3 -> 35, D4 -> 34, D5 -> 32}
 ```
 
-putting these back on the ball, we see that the expected waiting time increases as we move away from the starting point, up until a maximum at the furthest point, $D_3.$ as expected, the expected waiting time at each of $A_1$'s neighbors is $1$ less than $T(A_1).$
+Putting these back on the ball, we see that the expected waiting time increases as we move away from the starting point, up until a maximum at the furthest point, $D_3.$ As expected, the expected waiting time at each of $A_1$'s neighbors is $1$ less than $T(A_1).$
 
 ![](/img/2022-07-26-vertex-labels-sols.png){:width="400 px" class="image-centered"}
 
-so, we'll be finding the probability that his kitchen walk goes longer than $\langle T\rangle_\text{soccer} = 20.$
+So, we'll be finding the probability that his kitchen walk goes longer than $\langle T\rangle_\text{soccer} = 20.$
 
-# kitchen constitutional
+### Kitchen constitutional
 
-in the kitchen, the lattice is bigger and it pays to be smart before diving in.
+In the kitchen, the lattice is bigger and it pays to be smart before diving in.
 
-if andy starts from the marked tile, then his first options are to take a unit step — i.e. $\left(\cos\theta,\sin\theta\right)$ — in one of the directions $\\{\frac{\pi}{6}, \frac{5\pi}{6}, -\frac{3\pi}{2}\\}.$ on the second step, his options are these reflected about the $x$-axis: $\\{-\frac{\pi}{6}, -\frac{5\pi}{6}, \frac{3\pi}{2}\\}.$
+If Andy starts from the marked tile, then his first options are to take a unit step — i.e. $\left(\cos\theta,\sin\theta\right)$ — in one of the directions $\\{\frac{\pi}{6}, \frac{5\pi}{6}, -\frac{3\pi}{2}\\}.$ On the second step, his options are the same, but reflected about the $x$-axis: $\\{-\frac{\pi}{6}, -\frac{5\pi}{6}, \frac{3\pi}{2}\\}.$
 
-since andy's walks return to the origin, they'll have an even number of steps. this means that we can focus on tiles that are an even number of steps from the origin and ignore the others.
+Since Andy's walks return to the origin, they'll have an even number of steps. This means we can focus on tiles that are an even number of steps from the origin and ignore the others.
 
-any $n$ step path on the reduced lattice is a path of length $2n$ on the original, and therefore has probability $1/3^{2n}$ of occurring. if we can count the number of $n$ step paths on the reduced lattice $\omega(n)$, then we will inherit the distribution of path lengths $p(n) = \omega(n)/3^{2n}.$
+Any $n$ step path on the reduced lattice is a path of length $2n$ on the original, and therefore has probability $1/3^{2n}$ of occurring. If we can count the number of $n$ step paths on the reduced lattice $\omega(n)$, then we will inherit the distribution of path lengths $p(n) = \omega(n)/3^{2n}.$
 
-## count them up
+### Count them up
 
-we can count paths with a simple observation. if there is an $(n-1)$ step path to any of my neighbors, then there is an $n$ step path to me. in other words:
+We can count paths with a simple observation: if there is an $(n-1)$ step path to any of my neighbors, then there is an $n$ step path to me. In other words:
 
 $$
-  \omega_i^n = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_j^{n-1}
+  \omega_i^n = \sum\limits_{j\in\sigma(i)\setminus \boldsymbol{0}} \omega_j^{n-1}.
 $$
 
-the number of $n$ tile paths to me is the sum of $(n-1)$ paths to each of my neighbors. we only want to count first returns to the origin, so we don't count the origin when it happens to be a neighbor.
+The number of $n$-tile paths to me is the sum of $(n-1)$ paths to each of my neighbors. We only want to count first returns to the origin, so we don't count the origin when it happens to be a neighbor.
 
-with this recursion, we can count $\omega_\boldsymbol{0}^n,$ but we need the base case — the path counts after the first step. 
+With this recursion, we can count $\omega_\boldsymbol{0}^n,$ but we need the base case — the path counts after the first step. 
 
-on the reduced lattice we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. there are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
+On the reduced lattice, we have $9$ possible moves, formed by all possible pairs of first and second moves on the original lattice. There are $3$ ways to stay put (move in any of the $3$ first move directions followed immediately by the reverse) and $1$ way each to move in each of the $6$ directions on the reduced lattice.
 
-now, we have everything we need.
+Now, we have everything we need, so let's code it up:
 
 ```mathematica
 (* form first moves on the original lattice *)
@@ -123,11 +131,11 @@ Do[ω[twoStepMoves[[i]], 1] += 1, {i, 1, Length@twoStepMoves}];
    )
 ```
 
-the recursive result has good agreement with a $10^7$ round simulation:
+The result has good agreement with a $10^7$ round simulation:
 
 ![](/img/2022-07-31-ant-hexagon-plot.png){:width="450 px" class="image-centered"}
 
-with this in hand, we can find the chance that Andy has an unusually long walk during his kitchen sojourn:
+With this in hand, we can find the chance that Andy has an unusually long walk during his kitchen sojourn:
 
 $$
   \begin{align}
