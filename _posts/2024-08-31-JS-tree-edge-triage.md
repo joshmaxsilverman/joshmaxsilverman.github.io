@@ -25,9 +25,9 @@ To get started, let's look at Aaron and Beren's positions.
 
 ### Strategy
 
-Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if, at any level, she has a $B$-edge to choose. So, if Aaron is to win, there has to be at least one path from the beginning to infinity that alternates between one of $\\{AA, AB, BA\\}$ on the Aaron turns and $AA$ on the Beren turns.
+Both can somehow inspect the entire tree, so there's no mystery about what they'll find in any sub-tree. Beren will win if, at any level, she has a $B$-edge to choose. So, if Aaron is to win, there needs to be at least one path from the beginning to infinity that alternates between one of $\\{AA, AB, BA\\}$ on the Aaron turns and $AA$ on the Beren turns.
 
-Whenever Beren finishes a turn, we get the original situation back. This means we can count ahead by two steps, and coarse grain over the rest of the turns.
+Whenever Beren finishes a turn, we get the original situation back. This means we can look ahead by two steps, and coarse grain over the rest of the turns.
 
 ### Analysis
 
@@ -64,7 +64,7 @@ $$ p = \sqrt[3]{\frac{1}{P_\infty + \sqrt{P_\infty^2(1-P_\infty)}}}. $$
 
 ### Conclusions
 
-This outcome is interesting — clearly, the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $\min(p)$ that grows as $p$ approaches $1.$
+This outcome is interesting — clearly, the structure of the game favors Beren, so $p$ needs to be pretty high for Aaron to have a chance at all. But we might naively expect Aaron to start with a small chance at $\min(p)$ that grows as $p$ approaches $1.$
 
 ![](/img/2024-08-31-tree-edge-triage-JS.png){:width="450 px" class="image-centered"}
 
