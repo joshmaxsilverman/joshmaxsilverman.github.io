@@ -25,7 +25,7 @@ tags: random-walks approximation
 
 ## Solution
 
-The problem is to see how often the sum of the rounds will equal the round of the sums. Put plainly, this will hold when the sum lands in a unit band around the number of rounded numbers.
+The problem is to see how often the sum of the rounds will equal the round of the sums. Put plainly, this will hold when the sum lands in a unit band around the number of rounded up numbers.
 
 But it helps to think about this problem from a more physical perspective. 
 
@@ -35,7 +35,7 @@ Suppose we take a sum of fifty random uniform variables $x_j$ and $35$ of them t
 
 Then we can say $U=35$ numbers have rounded up, and $D = (N-U) = 15$ have rounded down. The round of the sum equals the sum of the rounded numbers if $\sum_j x_j$ falls between $(35-\frac12)$ and $(35+\frac12).$
 
-We can think of each $U$ step as a big step, and each of the $D = (N-U)$ steps as small ones. Then the sum is a walk that randomly alternates between big and small steps.
+We can think of each $U$ step as a big step, and each of the $D = (N-U)$ steps as small ones. Then the sum is a walk that randomly switches between big and small steps.
 
 In this picture, the original question is equivalent to this more practical one: if all we know are the kinds of steps taken ($U$ and $D$), how often can we locate the walker to within $1$ of their actual position?
 
@@ -75,7 +75,7 @@ $$ P(\text{agree}\rvert U) \approx \mathcal{N}_U(\mu_U, \sigma^2_U) $$
 
 ### Weighted average
 
-The total probability of agreement is just the weighted average over all numbers of roundups $U$
+The total probability of agreement is just the weighted average over all possible numbers of roundups $U$
 
 $$ P(\text{agree}) = \int\text{d}U\, P(\text{agree}\rvert U) P(U). $$
 
