@@ -69,7 +69,7 @@ def S(n):
     if n <= 2:
         return 1
     else:
-        return 1 + 1 / n * 2 * sum( S(i) for i in range(1, n-1) )
+        return 1 + 2 / n * sum( S(i) for i in range(1, n-1) )
 ```
 
 <!-- This works but, since it's a recursive function, it's much faster if we remember earlier evaluations:
