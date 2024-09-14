@@ -62,16 +62,17 @@ So, on average, $5 - 37/15 \approx 2.53$ swimmers willl be left crying on the si
 We can code this up (in Python) like
 
 ```python
+from functools import lru_cache
+
+@lru_cache(maxsize=10000)
 def S(n):
-    if n == 0:
-        return 0
-    elif n == 1 or n == 2:
+    if n <= 2:
         return 1
     else:
-        return (1 + 1/n * (2 * sum(S(i) for i in range(n-1))))
+        return 1 + 1 / n * 2 * sum( S(i) for i in range(1, n-1) )
 ```
 
-This works but, since it's a recursive function, it's much faster if we remember earlier evaluations:
+<!-- This works but, since it's a recursive function, it's much faster if we remember earlier evaluations:
 
 ```python
 from collections import defaultdict
@@ -92,6 +93,7 @@ def memoized_S(n):
         memo[n] = S(n)
     return S(n)
 ```
+-->
 
 Calculating `S(5)` we get $2.4\bar{6}$ in agreement with the calculation of $37/15$. Taking it to the next level, we find crushing linearity.
 
@@ -208,4 +210,4 @@ working in the limit where $n$ is large, we can pull the $(n-k+1)$ out in front
 
 $$\left[x^n\right]G(x) \approx n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k-1}}{k!} = \frac12 n \sum\limits_{k=1}^n \frac{\left(-2\right)^{k}}{k!} = n\left(\frac12 - \frac{e^{-2}}{2}\right)$$
 
-which shows, at last, that the slope of the graph is $\left(1-e^{-2}\right)/2 \approx 43.2$ As a check, we calculate `S(100) = 43.53023...`, not bad.
+which shows, at last, that the slope of the graph is $\left(1-e^{-2}\right)/2 \approx 0.43233235838169365$ As a check, we calculate `S(100) - S(99) = 0.4323323583816858...`, not bad.
