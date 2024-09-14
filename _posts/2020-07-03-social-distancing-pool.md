@@ -64,7 +64,7 @@ We can code this up (in Python) like
 ```python
 from functools import lru_cache
 
-@lru_cache(maxsize=10000)
+@lru_cache(maxsize=10_000)
 def S(n):
     if n <= 2:
         return 1
