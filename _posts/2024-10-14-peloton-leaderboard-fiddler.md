@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
-title: 
-date: 2018/04/21
-subtitle:
-tags:
+published: true
+title: Peloton leaderboard
+date: 2024/10/14
+subtitle: How great will you be if you're average in the middle? 
+tags: statistics 
 ---
 
 >**Question**:
