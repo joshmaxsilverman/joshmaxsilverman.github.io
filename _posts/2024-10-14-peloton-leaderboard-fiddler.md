@@ -52,9 +52,13 @@ $$
     P(\text{rider has energy expenditure }\geq E) &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\, \int\limits_{E/t}^{W_\text{max}}\text{d}W \\
     &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\,\left(W_\text{max} - E/t\right) \\
     &= \frac{1}{W_\text{max}T_\text{max}}\left(W_\text{max}T_\text{max} - E\log(T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right) \\
-    &= \left(1 - \frac{E}{E_\text{max}}\right) + \frac{E}{E_\text{max}}\log\frac{E}{E_\text{max}}  
+    &= \left(1 - \frac{E}{E_\text{max}}\right) + \frac{E}{E_\text{max}}\log\frac{E}{E_\text{max}} \\
   \end{align}
 $$
+
+This is transcendental, so we can numerically solve for the total energy expenditure $E$ that brings this probability to $\frac12$, which yields $E_\text{1/2} = 1120.1\ \text{W}.$ Since this is the energy expenditure halfway through the riders run, we double it and plug it back in to find $P(2240.1\ \text{kJ} \leq 2 * E_\text{1/2}) = 0.258797$
+
+So, just over $25\%$ of riders will be ahead of this rider at the end of their run.
 
 <br>
 
