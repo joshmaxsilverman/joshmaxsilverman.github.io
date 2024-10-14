@@ -51,8 +51,8 @@ $$
   \begin{align}
     P(\text{rider has energy expenditure }\geq E) &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\, \int\limits_{E/t}^{W_\text{max}}\text{d}W \\
     &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\,\left(W_\text{max} - E/t\right) \\
-    &= \left(W_\text{max}T_\text{max} - E\log(T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right)
-    &= E_\text{max} - E - E\log\frac{E}{E_\text{max}}  
+    &= \left(W_\text{max}T_\text{max} - E\log(T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right) \\
+    &= \left(E_\text{max} - E\right) - E\log\frac{E}{E_\text{max}}  
   \end{align}
 $$
 
