@@ -60,7 +60,7 @@ This is transcendental, so we can numerically solve for the total energy expendi
 
 So, just over $25\%$ of riders will be ahead of this rider at the end of their run.
 
-![](/img/2024-10-14-energy-expenditure-peloton.png){:width="450 px" class="image-centered"}
+![](/img/2024-10-14-energy-expenditure-peloton.png){:width="400 px" class="image-centered"}
 
 <br>
 
