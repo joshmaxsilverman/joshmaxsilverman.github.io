@@ -45,7 +45,7 @@ We can do this by finding the relative volume of riders with energy greater than
 
 Suppose a rider started at time $t$ and has total energy expenditure greater than or equal to $E.$ That means their power is at least $E/t$ and at most $W_\text{max} = 200\ \text{W}.$ Likewise, such a rider can start their ride as long as $T_\text{max} = 30\ \text{min}$ ago and as short as $E/W_\text{max}\,\text{min}$ ago.
 
-As each rider's power and start time is uniformly random, we can find $P(\text{rider has energy expenditure $\geq E)$ by integrating over these bounds:
+As each rider's power and start time is uniformly random, we can find $P(\text{rider has energy expenditure }\geq E)$ by integrating over these bounds:
 
 $$ 
   \begin{align}
