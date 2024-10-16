@@ -58,7 +58,9 @@ $$
 
 where $W_\text{max}T_\text{max} = E_\text{max}.$
 
-This is transcendental, so we can numerically solve for the total energy expenditure $E$ that brings this probability to $\frac12$, which yields $E_\text{1/2} = 1120.1\ \text{kJ}.$ Since this is the energy expenditure halfway through the riders run, we double it and plug it back in to find $P(2240.2\ \text{kJ} \geq 2 E_\text{1/2}) = 0.258797$
+This is transcendental, so we can numerically solve for the total energy expenditure $E$ that brings this probability to $\frac12$, which yields $E_\text{1/2} = 1120.1\ \text{kJ}.$ 
+
+Since this is the energy expenditure halfway through the riders run, we double it and plug it back in to find $P(2240.2\ \text{kJ} \geq 2 E_\text{1/2}) \approx 25.9\%$
 
 So, just over $25\%$ of riders will be ahead of this rider at the end of their run.
 
