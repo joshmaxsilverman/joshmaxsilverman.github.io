@@ -51,7 +51,6 @@ $$
   \begin{align}
     P(\text{rider has energy expenditure }\geq E) &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\, \int\limits_{E/t}^{W_\text{max}}\text{d}W \\
     &= \frac{1}{W_\text{max}T_\text{max}} \int\limits_{E/W_\text{max}}^{T_\text{max}}\text{d}t\,\left(W_\text{max} - E/t\right) \\
-    <!-- &= \frac{1}{W_\text{max}T_\text{max}}\left[\left(W_\text{max}T_\text{max} - E\log T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right)\right] \\ -->
     &= \left(1 - \frac{E}{E_\text{max}}\right) + \frac{E}{E_\text{max}}\log\frac{E}{E_\text{max}}
   \end{align}
 $$
@@ -67,4 +66,6 @@ So, just over $25\%$ of riders will be ahead of this rider at the end of their r
 ![](/img/2024-10-16-energy-expenditure-peloton.png){:width="400 px" class="image-centered"}
 
 <br>
+
+<!-- &= \frac{1}{W_\text{max}T_\text{max}}\left[\left(W_\text{max}T_\text{max} - E\log T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right)\right] \\ -->
 
