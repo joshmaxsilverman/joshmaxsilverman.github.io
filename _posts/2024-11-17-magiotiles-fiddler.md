@@ -46,7 +46,7 @@ This is stability: a configuration is stable if the tiles resist small movements
 
 The reason a configuration is stable is that, compared to all its neighboring configurations, the N and S magnet heads are as close together as possible while keeping the Ns and the Ns, and the Ss and the Ss as separated as possible. 
 
-To find alternate configurations, we have to be able to specify them. If we keep one tile fixed, and slide the other, then we can specify a configuration by the displacement of its center of mass \v, and its rotation about its center of mass $\theta.$
+To find alternate configurations, we have to be able to specify them. If we keep one tile fixed, and slide the other, then we can specify a configuration by the displacement of its center of mass $\v$, and its rotation about its center of mass $\theta.$
 
 The interaction between tiles is the sum of the interactions between the magnets on either tile. 
 
