@@ -44,6 +44,8 @@ To explore other configurations, we just need to translate and rotate one tile w
 
 But to find alternate configurations, we have to be able to specify them. We can specify a configuration by the displacement of the sliding tile's center of mass $\mathbf{r} = \left(x,y\right)$, and its rotation about its center of mass $\theta.$
 
+### Setting up the tiles
+
 Given the arrangement of magnets we figured out in the first past, their orientations are
 
 ```mathematica
@@ -60,6 +62,8 @@ locs[z_]:= {
 ```
 
 where $z$ keeps track of the vertical separation between the planes of the two tiles.
+
+### Rotations and translations
 
 As we said above, sliding the tile around amounts to spinning, and translating all the coordinates of the tile:
 
@@ -89,6 +93,8 @@ where the $o$ are the orientations we defined above, and the $\ell$ are the loca
       ];
 ```
 
+### Exploring configuration space
+
 With all this out of the way, we have the two tiles' interaction energy $E$ parameterized in terms of $x$, $y$, and $\theta$: $E(x,y,\theta).$ This forms a landscape of energies where the depressions in the landscape correspond to the stable arrangements we're trying to find. 
 
 So, to find them we can just follow the gradient, i.e. start at a random initial position $(x,y,\theta)$ and then take small steps in the direction of steepest descent:
@@ -99,13 +105,17 @@ $$
 
 Since there are multiple minima, we'll have to run gradient descent many times, from random starting positions, until we're pretty sure we've found them all (the common ones at least).
 
-Doing this, we find the four confgurations below. 
+### Behold the configurations
+
+Doing this, we find the four confgurations below:
 
 ![](/img/2024-11-17-grid-no-offset.png){:width="450 px" class="image-centered"}
 
 The first is the original ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile, until the red side is just past the purple diagonal. This places two pairs of magnets in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there is an arrangement that is basically the second had we stopped sliding the red tile early. This also places two monopoles in close proximity, but loses the long distance attractive interactions of the first two, yielding an overall energy of $-9.34$.
 
 As it happens, these closely match the stable arrangements you find by sliding two magnatiles in real life. It is really neat how well the model works given the monopole approximation.
+
+### Meet the real number two
 
 However, with real magnatiles you'll also find that there is an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed our model cannot find it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between the magnets when placed side by side. To accomodate this configuration, we made a second model where the monopoles are pushed in by a small amount from the sides. 
 
