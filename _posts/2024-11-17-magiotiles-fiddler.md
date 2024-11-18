@@ -97,10 +97,10 @@ where the $o$ are the orientations we defined above, and the $\ell$ are the loca
 
 With all this out of the way, we have the two tiles' interaction energy $E$ parameterized in terms of $x$, $y$, and $\theta$: $E(x,y,\theta).$ This forms a landscape of energies where the depressions in the landscape correspond to the stable arrangements we're trying to find. 
 
-So, to find them we can just follow the gradient, i.e. start at a random initial position $(x,y,\theta)$ and then step in the direction of steepest descent:
+So, to find them we can just follow the gradient, i.e. start at a random initial position $(x,y,\theta)$ and then take small steps in the direction of steepest descent:
 
 $$
-   (x, y, \theta)_t = (x, y, \theta)_{t-1} - \nabla E(x, y, \theta).
+   (x, y, \theta)_t = (x, y, \theta)_{t-1} - \eta \nabla E(x, y, \theta).
 $$
 
 <br>
