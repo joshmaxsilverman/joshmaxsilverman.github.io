@@ -82,7 +82,7 @@ rotAndTransLocs[x_, y_, theta_, locs_]:=(
 
 The interaction between tiles is the sum of the interactions between the magnets on either tile. 
 
-$$ E = \sum\limits_{i,j\in\\{A\,\ldots,H\\}} \frac{o_io_j}{\ell_{ij}} $$
+$$ E = \sum\limits_{i,j\in\{A\,\ldots,H\}} \frac{o_io_j}{\ell_{ij}} $$
 
 where the $o$ are the orientations we defined above, and the $\ell$ are the locations we defined above:
 
