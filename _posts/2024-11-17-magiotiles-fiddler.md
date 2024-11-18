@@ -46,11 +46,11 @@ tags: symmetry optimization
 
 ## Solution
 
-## Orientation
-
 The seemingly magic behavior of the tiles tell us a lot about how magnets A-H must be oriented. Because they are impervious to rotations, the orientations of A, C, E, and G are the same, as are B, D, F, and H. This symmetry means we can focus on the interactions on one side. How are A and B oriented?
 
 Imagine we stack two tiles so that A is atop A and B is atop B. This is an attractive interaction so it must place N with S. This rules out horizontal arrangements for the magnets. Suppose magnet A was arranged with S on the left and N on the right. Then A on the bottom would have to have the opposite arrangement to A on top, a contradiction.
+
+### Orientation
 
 So, the orientation of the magnets must be vertical. Suppose we arrange A so that N points up and S down. Now, since the interaction is unchanged when we flip one of them, magnet B must have the opposite orientation to magnet A. Putting it altogether, each tiles' magnets are arranged like so:
 
