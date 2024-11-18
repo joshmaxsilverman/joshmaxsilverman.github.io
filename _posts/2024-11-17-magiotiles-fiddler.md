@@ -67,10 +67,32 @@ locs[z_]:= {
 
 where $z$ keeps track of the vertical separation between the planes of the two tiles.
 
+As we said above, sliding the tile around amounts to spinning, and translating all the coordinates of the tile:
+
+```mathematica
+rotAndTransLocs[x_, y_, theta_, locs_]:=(
+   COM = {0.5, 0.5, 0};
+   locsCOM = Table[locs[[j]] - COM, {j, 1, 8}];
+   locsCOMRot = RotationMatrix[theta, {0, 0, 1}].locsCOM[[j]], {j, 1, 8}];
+   locsRot = Table[locsCOMRot[[j]] + COM, {j, 1, 8}];
+   locsRotTrans = Table[locsRot[[j]] + {x, y, 0}, {j, 1, 8}];
+   Return[locsRotTrans];
+)
+```
+
 The interaction between tiles is the sum of the interactions between the magnets on either tile. 
 
-$$ E = \sum\limits_{i,j\in\\{A\,\ldots,H\\}} \frac{q_iq_j}{d_{ij}} $$
+$$ E = \sum\limits_{i,j\in\\{A\,\ldots,H\\}} \frac{o_io_j}{\ell_{ij}} $$
 
+where the $o$ are the orientations we defined above, and the $\ell$ are the locations we defined above:
 
+```mathematica
+   rtl = rotAndTransLocs[x, y, theta, locs[-0.05]
+    E = Sum[
+         ors[[i]] * ors[[j]] / Norm[locs[0.05][[i]] - rtl[[j]]]
+         , {i, 1, 8}
+         , {j, 1, 8}
+      ];
+```
 
 <br>
