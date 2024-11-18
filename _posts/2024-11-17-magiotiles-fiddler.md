@@ -7,7 +7,23 @@ subtitle: How to defy the laws of physics in service of age 3+ entertainment.
 tags: symmetry optimization
 ---
 
->**Question**: 
+>**Question**: My kids love Magna-Tiles. After some time playing around with them myself, I began to appreciate how they always seem to stick together, regardless of how they are rotated—a property I wouldn’t typically associate with magnets.
+>
+>Every magnet has a north pole and a south pole. If you have two magnets and put their two north poles together, they repel. But rotate one of the magnets, and now you have a north pole near a south pole, so they’ll attract.
+>
+>But Magna-Tiles are somehow impervious to rotation. Put one square tile on top of another, as shown in the photo below, and they stick together very well. Rotate one of the squares 90 degrees, they still stick. Flip one over, they still stick.
+>
+>The tiles even stick together (though not as strongly) when placed side by side. Again, rotating or flipping a tile results in the same attraction.
+>
+>Clearly, the eight magnets embedded along each square’s perimeter must be very cleverly oriented.
+>
+>Consider the diagram below, which shows eight magnets along a square tile’s perimeter, labeled A through H in a counterclockwise manner. The tile lies in the x-y plane, and the z-axis is coming out of the screen toward you.
+>
+>![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8d559f1-75fa-4177-8d6a-ee2cd0c694c7_1296x880.png){:width="350 px" class="image-centered"}
+>
+>Given the square tiles’ imperviousness to rotation, what must the orientation of these eight magnets be? For each tile, you should describe the direction from its south pole to its north pole. (More than one answer is possible here.)
+
+
 <!--more-->
 
 ([Fiddler on the Proof](URL))
