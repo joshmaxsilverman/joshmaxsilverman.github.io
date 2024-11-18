@@ -40,6 +40,6 @@ So, the magnets are oriented like
 
 The interaction between tiles is the sum of the interactions between the magnets on either tile. 
 
-$$ E = \sum\limits_{i\elem\{A\,ldots,H\}}\sum\limits_{j\elem\{A\,ldots,H\}} \frac{q_iq_j}{d_{ij}} $$
+$$ E = \sum\limits_{i\in\{A\,ldots,H\}}\sum\limits_{j\in\{A\,ldots,H\}} \frac{q_iq_j}{d_{ij}} $$
 
 <br>
