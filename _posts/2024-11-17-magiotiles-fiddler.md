@@ -100,7 +100,7 @@ where $z$ keeps track of the vertical separation between the planes of the two t
 As we said above, sliding the tile around amounts to spinning, and translating all the coordinates of the tile:
 
 ```mathematica
-rotAndTransLocs[x_, y_, theta_, locs_]:=(
+locsRotAndTrans[x_, y_, theta_, locs_]:=(
    COM = {0.5, 0.5, 0};
    locsCOM = Table[locs[[j]] - COM, {j, 1, 8}];
    locsCOMRot = RotationMatrix[theta, {0, 0, 1}].locsCOM[[j]], {j, 1, 8}];
@@ -117,9 +117,9 @@ $$ E = \sum\limits_{i,j\in\{A\,\ldots,H\}} \frac{o_io_j}{\ell_{ij}} $$
 where the $o$ are the orientations we defined above, and the $\ell$ are the locations we defined above:
 
 ```mathematica
-   rtl = rotAndTransLocs[x, y, theta, locs[-0.05]];
+   locsRT = rotAndTransLocs[x, y, theta, locs[-0.05]];
     E = Sum[
-         ors[[i]] * ors[[j]] / Norm[locs[0.05][[i]] - rtl[[j]]]
+         ors[[i]] * ors[[j]] / Norm[locs[0.05][[i]] - locsRT[[j]]]
          , {i, 1, 8}
          , {j, 1, 8}
       ];
