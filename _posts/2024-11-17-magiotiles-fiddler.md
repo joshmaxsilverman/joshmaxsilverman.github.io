@@ -101,7 +101,7 @@ Since there are multiple minima, we'll have to run gradient descent many times, 
 
 Doing this, we find the four confgurations below. 
 
-![]('/img/2024-11-17-grid-no-offset.png'){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-grid-no-offset.png){:width="450 px" class="image-centered"}
 
 The first is the original ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile, until the red side is just past the purple diagonal. This places two pairs of magnets in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there is an arrangement that is basically the second had we stopped sliding the red tile early. This also places two monopoles in close proximity, but loses the long distance attractive interactions of the first two, yielding an overall energy of $-9.34$.
 
@@ -111,10 +111,10 @@ However, with real magnatiles you'll also find that there is an even more stable
 
 When this is done, we find the original stable arrangements with approximately the same energies
 
-![]('/img/2024-11-17-grid-offset-2.png'){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-grid-offset-2.png){:width="450 px" class="image-centered"}
 
 but we can also quantify the stability of the side by side arrangement, which jumps into second place with $E = -25.xx$:
 
-![]('/img/2024-11-17-grid-offset-side.png'){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-grid-offset-side.png){:width="450 px" class="image-centered"}
 
 <br>
