@@ -38,8 +38,20 @@ So, the magnets are oriented like
 
 ## Stable attachments
 
+Two magnatiles snap tightly together when they're perfectly overlapped.
+
+But if you push them out of this configuration, and slide one tile over the other, you feel attraction to a few other configurations. Likewise, if you try to slide them out of these configurations you'll feel resistance.
+
+This is stability: a configuration is stable if the tiles resist small movements away from it.
+
+The reason a configuration is stable is that, compared to all its neighboring configurations, the N and S magnet heads are as close together as possible while keeping the Ns and the Ns, and the Ss and the Ss as separated as possible. 
+
+To find alternate configurations, we have to be able to specify them. If we keep one tile fixed, and slide the other, then we can specify a configuration by the displacement of its center of mass \v, and its rotation about its center of mass $\theta.$
+
 The interaction between tiles is the sum of the interactions between the magnets on either tile. 
 
 $$ E = \sum\limits_{i,j\in\\{A\,\ldots,H\\}} \frac{q_iq_j}{d_{ij}} $$
+
+
 
 <br>
