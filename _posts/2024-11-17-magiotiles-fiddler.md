@@ -101,12 +101,20 @@ Since there are multiple minima, we'll have to run gradient descent many times, 
 
 Doing this, we find the four confgurations below. 
 
+![]('/img/2024-11-17-grid-no-offset.png'){:width="450 px" class="image-centered"}
+
 The first is the original ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile, until the red side is just past the purple diagonal. This places two pairs of magnets in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there is an arrangement that is basically the second had we stopped sliding the red tile early. This also places two monopoles in close proximity, but loses the long distance attractive interactions of the first two, yielding an overall energy of $-9.34$.
 
 As it happens, these closely match the stable arrangements you find by sliding two magnatiles in real life. It is really neat how well the model works given the monopole approximation.
 
 However, with real magnatiles you'll also find that there is an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed our model cannot find it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between the magnets when placed side by side. To accomodate this configuration, we made a second model where the monopoles are pushed in by a small amount from the sides. 
 
-When this is done, we find the original stable arrangements with approximately the same energies, but we can also quantify the stability of the side by side arrangement, which jumps into second place with $E = -25.xx$.
+When this is done, we find the original stable arrangements with approximately the same energies
+
+![]('/img/2024-11-17-grid-offset-2.png'){:width="450 px" class="image-centered"}
+
+but we can also quantify the stability of the side by side arrangement, which jumps into second place with $E = -25.xx$:
+
+![]('/img/2024-11-17-grid-offset-side.png'){:width="450 px" class="image-centered"}
 
 <br>
