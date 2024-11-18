@@ -160,3 +160,4 @@ but we can also quantify the stability of the side by side arrangement, which ju
 ![](/img/2024-11-17-grid-offset-side.png){:width="300 px" class="image-centered"}
 
 <br>
+ 
