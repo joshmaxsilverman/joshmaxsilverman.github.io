@@ -1,9 +1,9 @@
 ---
 layout: post
-published: false
+published: true
 title: Stable tiles
 date: 2024/11/17
-subtitle: How to defy the laws of physics in service of 3+ entertainment.
+subtitle: How to defy the laws of physics in service of age 3+ entertainment.
 tags: symmetry optimization
 ---
 
