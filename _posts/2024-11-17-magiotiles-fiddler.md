@@ -115,6 +115,6 @@ When this is done, we find the original stable arrangements with approximately t
 
 but we can also quantify the stability of the side by side arrangement, which jumps into second place with $E = -25.xx$:
 
-![](/img/2024-11-17-grid-offset-side.png){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-grid-offset-side.png){:width="300 px" class="image-centered"}
 
 <br>
