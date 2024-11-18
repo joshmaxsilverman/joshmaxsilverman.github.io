@@ -48,7 +48,7 @@ The reason a configuration is stable is that, compared to all its neighboring co
 
 To explore other configurations, we just need to translate and rotate one tile while keeping the other one fixed.
 
-But to find alternate configurations, we have to be able to specify them. We can specify a configuration by the displacement of the sliding tile's center of mass $\vec{r} = \left(x,y\right)$, and its rotation about its center of mass $\theta.$
+But to find alternate configurations, we have to be able to specify them. We can specify a configuration by the displacement of the sliding tile's center of mass $\mathbf{r} = \left(x,y\right)$, and its rotation about its center of mass $\theta.$
 
 Given the arrangement of magnets we figured out in the first past, their orientations are
 
