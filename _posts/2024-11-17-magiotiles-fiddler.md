@@ -117,9 +117,9 @@ As it happens, these closely match the stable arrangements you find by sliding t
 
 ### Meet the real number two
 
-However, with real magnatiles you'll also find that there is an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed our model cannot find it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between the magnets when placed side by side. To accomodate this configuration, we made a second model where the monopoles are pushed in by a small amount from the sides. 
+With real magnatiles you'll also find that there is an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed our model cannot find it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between the magnets when placed side by side. To accomodate this configuration, we made a second model where the monopoles are pushed in by a small amount ($\delta = 0.03$) from the edge. 
 
-When this is done, we find the original stable arrangements with approximately the same energies
+When this is done, we find the original stable arrangements with approximately the same energies:
 
 ![](/img/2024-11-17-grid-offset-2.png){:width="450 px" class="image-centered"}
 
