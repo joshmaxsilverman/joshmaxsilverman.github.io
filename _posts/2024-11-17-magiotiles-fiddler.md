@@ -102,10 +102,10 @@ As we said above, sliding the tile around amounts to spinning, and translating a
 ```mathematica
 locsRotAndTrans[x_, y_, theta_, locs_]:=(
    COM = {0.5, 0.5, 0};
-   locsCOM = Table[locs[[j]] - COM, {j, 1, 8}];
-   locsCOMRot = RotationMatrix[theta, {0, 0, 1}].locsCOM[[j]], {j, 1, 8}];
-   locsRot = Table[locsCOMRot[[j]] + COM, {j, 1, 8}];
-   locsRotTrans = Table[locsRot[[j]] + {x, y, 0}, {j, 1, 8}];
+   locsCOM = Table[(locs[[j]] - COM), {j, 1, 8}];
+   locsCOMRot = Table[RotationMatrix[theta, {0, 0, 1}].locsCOM[[j]], {j, 1, 8}];
+   locsRot = Table[(locsCOMRot[[j]] + COM), {j, 1, 8}];
+   locsRotTrans = Table[(locsRot[[j]] + {x, y, 0}), {j, 1, 8}];
    Return[locsRotTrans];
 )
 ```
