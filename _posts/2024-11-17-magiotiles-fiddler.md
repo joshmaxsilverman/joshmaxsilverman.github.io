@@ -103,4 +103,10 @@ $$
    (x, y, \theta)_t = (x, y, \theta)_{t-1} - \eta \nabla E(x, y, \theta).
 $$
 
+Since there are multiple minima, we'll have to run gradient descent many times, from random starting positions, until we're pretty sure we've found them all (the common ones at least).
+
+Doing this, we find the four confgurations below. 
+
+The first is the original ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile, until the red side is just past the purple diagonal. This places two pairs of magnets in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there is an arrangement that is basically the second had we stopped sliding the red tile early. This also places two monopoles in close proximity, but loses the long distance attractive interactions of the first two.
+
 <br>
