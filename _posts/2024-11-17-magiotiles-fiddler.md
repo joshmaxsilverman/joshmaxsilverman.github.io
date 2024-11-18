@@ -100,7 +100,7 @@ With all this out of the way, we have the two tiles' interaction energy $E$ para
 So, to find them we can just follow the gradient, i.e. start at a random initial position $(x,y,\theta)$ and then take small steps in the direction of steepest descent:
 
 $$
-   (x, y, \theta)_t = (x, y, \theta)_{t-1} - \eta \nabla E(x, y, \theta).
+   \left(x, y, \theta\right)_t = \left(x, y, \theta\right)_{t-1} - \eta \nabla E(x, y, \theta).
 $$
 
 Since there are multiple minima, we'll have to run gradient descent many times, from random starting positions, until we're pretty sure we've found them all (the common ones at least).
