@@ -46,21 +46,23 @@ tags: symmetry optimization
 
 ## Solution
 
-The seemingly magic behavior of the tiles tell us a lot about how magnets A-H must be oriented. Because they are impervious to rotations, the orientations of A, C, E, and G are the same, as are B, D, F, and H. This symmetry means we can focus on the interactions on one side. How are A and B oriented?
+The seemingly magic behavior of the tiles tells us a lot about how magnets A-H must be oriented. Because they're impervious to rotations, magnets A, C, E, and G must have the same orientation, as must B, D, F, and H. This means we can focus on the orientations of one side. 
 
-Imagine we stack two tiles so that A is atop A and B is atop B. This is an attractive interaction so it must place N with S. This rules out horizontal arrangements for the magnets. Suppose magnet A was arranged with S on the left and N on the right. Then A on the bottom would have to have the opposite arrangement to A on top, a contradiction.
+Imagine we stack two tiles so that A is atop A and B is atop B. This is an attractive arrangement and so must place N with S. This rules out horizontal orientations. Suppose magnet A was arranged with S on the left and N on the right. Then magnet A on the bottom would need to have the opposite arrangement to A on top, a contradiction.
 
 ![](/img/2024-11-16-tile-flip.png){:width="450 px" class="image-centered"}
 
 ### Orientation
 
-So, the orientation of the magnets must be vertical. Suppose we arrange A so that N points up and S down. Now, since the interaction is unchanged when we flip one of them, magnet B must have the opposite orientation to magnet A. 
+So, the orientation must be vertically oriented. Suppose we orient magnet A so that N points up and S down. Then, since the interaction is unchanged when we flip one of the tiles, magnet B must have the opposite orientation to magnet A. 
 
 ![](/img/2024-11-16-tile-fields.png){:width="450 px" class="image-centered"}
 
-Putting it altogether, each tiles' magnets are arranged like so:
+Putting it all together, each tile's magnets are oriented like so:
 
 ![](/img/2024-11-17-tile-orientation-diagram.png){:width="350 px" class="image-centered"}
+
+where U/D means the magnet's north/south end is up.
 
 ## Stable attachments
 
