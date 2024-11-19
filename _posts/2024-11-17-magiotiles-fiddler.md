@@ -129,7 +129,8 @@ where the $o_i$ are the orientations we defined above, and $\ell_{ij}$ is the di
 
 ```mathematica
    locsRT = rotAndTransLocs[x, y, theta, locs[-0.05]];
-    E = Sum[
+   interaction =
+      Sum[
          ors[[i]] * ors[[j]] / Norm[locs[0.05][[i]] - locsRT[[j]]]
          , {i, 1, 8}
          , {j, 1, 8}
