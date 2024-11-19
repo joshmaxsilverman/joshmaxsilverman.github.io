@@ -155,7 +155,7 @@ If, instead, we hold $\theta$ fixed at $\pi/4$ and vary the center of mass, we s
 However, these are snapshots at specific values of $\theta$, mere projections of the full space. In general, we can find the stable configurations by following the gradient downhill — start at a random initial position $(x_0, y_0, \theta_0)$ and then take small steps in the direction of steepest descent:
 
 $$
-   \left(x, y, \theta\right)_t = \left(x, y, \theta\right)_{t-1} - \eta \nabla E(x, y, \theta).
+   \langle x, y, \theta\rangle_t = \langle x, y, \theta\rangle_{t-1} - \eta \nabla E(x, y, \theta).
 $$
 
 Since there are multiple minima, we'll have to run gradient descent many times, from random starting positions, until we're pretty sure we've found them all (the common ones at least).
