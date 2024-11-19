@@ -60,7 +60,7 @@ So, the orientation of the magnets must be vertical. Suppose we arrange A so tha
 
 Putting it altogether, each tiles' magnets are arranged like so:
 
-![](/img/2024-11-17-tile-orientation-diagram.png){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-tile-orientation-diagram.png){:width="350 px" class="image-centered"}
 
 ## Stable attachments
 
@@ -108,7 +108,7 @@ locsRotAndTrans[x_, y_, theta_, locs_]:=(
                , {j, 1, 8}];
 
    locsCOMRot = Table[
-                  RotationMatrix[theta, {0, 0, 1}].locsCOM[[j]]
+                  RotationMatrix[theta, {0, 0, 1}] . locsCOM[[j]]
                   , {j, 1, 8}];
 
    locsRot = Table[
