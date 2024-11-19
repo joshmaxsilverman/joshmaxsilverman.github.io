@@ -42,7 +42,7 @@ tags: symmetry optimization
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-figure-out-how-magna-tiles))
 
 ## Solution
 
