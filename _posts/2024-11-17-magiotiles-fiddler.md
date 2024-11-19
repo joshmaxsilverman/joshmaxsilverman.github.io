@@ -164,13 +164,13 @@ Carrying this out, we find the four confgurations below:
 
 ![](/img/2024-11-17-grid-no-offset.png){:width="450 px" class="image-centered"}
 
-The first is the ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile until the side of the red tile is just past the purple diagonal. This places two pairs of like-monopoles in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there is an arrangement that's basically the second had we stopped sliding the red tile early. This configuration also places two monopoles in close proximity, but loses the stabilizing long distance attractive interactions of the first two, yielding an overall energy of $-9.34$.
+The first is the ultra stable configuration with energy $-54.27$. The second features the red tile pushing a side across the corner of the purple tile until it's just past the purple diagonal. This places two pairs of opposite monopoles in close proximity for an overall energy of $-13.31$. This is followed closely in third place by an arrangment where adjacent sides overlap so that two monopoles are also in close proximity with overall energy $-12.74$. Finally, there's an arrangement that's essentially the second had we stopped sliding the red tile early. This configuration places two opposite monopoles in close proximity, but loses the stabilizing long distance attractive interactions of the first two, yielding an overall energy of $-9.34$.
 
 As it happens, these closely match the stable arrangements you find by sliding two magnatiles in real life. It is really neat how well the model works given the monopole approximation.
 
 ### Meet the real number two
 
-With real magnatiles you'll find that there's an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed, our model cannot find it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between them when placed side by side. To accomodate this configuration, we made a modified model where the monopoles are pushed in by a small amount ($\delta = 0.03$) from the edge. 
+With real magnatiles you'll also find that there's an even more stable arrangement formed by placing two magnatiles side by side. However, as constructed, our model cannot find or quantify it. The first reason is that our model stipulates the $z$-separation of the tile to be nonzero. The second is that our model puts the monopoles directly at the edge which means there'd be zero distance between them when the tiles are placed side by side. To accomodate this configuration, we made a modified model where the monopoles are pushed in by a small amount ($\delta = 0.03$) from the edge. 
 
 When this is done, we find the original stable arrangements with approximately the same energies:
 
