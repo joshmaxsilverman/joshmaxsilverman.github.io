@@ -50,17 +50,17 @@ The seemingly magic behavior of the tiles tell us a lot about how magnets A-H mu
 
 Imagine we stack two tiles so that A is atop A and B is atop B. This is an attractive interaction so it must place N with S. This rules out horizontal arrangements for the magnets. Suppose magnet A was arranged with S on the left and N on the right. Then A on the bottom would have to have the opposite arrangement to A on top, a contradiction.
 
+![](/img/2024-11-16-tile-flip.png){:width="450 px" class="image-centered"}
+
 ### Orientation
 
-So, the orientation of the magnets must be vertical. Suppose we arrange A so that N points up and S down. Now, since the interaction is unchanged when we flip one of them, magnet B must have the opposite orientation to magnet A. Putting it altogether, each tiles' magnets are arranged like so:
+So, the orientation of the magnets must be vertical. Suppose we arrange A so that N points up and S down. Now, since the interaction is unchanged when we flip one of them, magnet B must have the opposite orientation to magnet A. 
 
-```
-   U — D
-  D     U
-  |     |
-  U     D
-   D — U
-```
+![](/img/2024-11-16-tile-fields.png){:width="450 px" class="image-centered"}
+
+Putting it altogether, each tiles' magnets are arranged like so:
+
+![](/img/2024-11-17-tile-orientation-diagram.png){:width="450 px" class="image-centered"}
 
 ## Stable attachments
 
