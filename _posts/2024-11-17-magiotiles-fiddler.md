@@ -104,7 +104,7 @@ locsRotAndTrans[x_, y_, theta_, locs_]:=(
    COM = {0.5, 0.5, 0};
 
    locsCOM = Table[
-               (locs[[j]] - COM)
+               locs[[j]] - COM
                , {j, 1, 8}];
 
    locsCOMRot = Table[
@@ -112,11 +112,11 @@ locsRotAndTrans[x_, y_, theta_, locs_]:=(
                   , {j, 1, 8}];
 
    locsRot = Table[
-               (locsCOMRot[[j]] + COM)
+               locsCOMRot[[j]] + COM
                , {j, 1, 8}];
 
    locsRotTrans = Table[
-                     (locsRot[[j]] + {x, y, 0})
+                     locsRot[[j]] + {x, y, 0}
                      , {j, 1, 8}];
 
    Return[locsRotTrans];
