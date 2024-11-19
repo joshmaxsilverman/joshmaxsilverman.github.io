@@ -129,7 +129,19 @@ where the $o$ are the orientations we defined above, and the $\ell$ are the loca
 
 With all this out of the way, we have the two tiles' interaction energy $E$ parameterized in terms of $x$, $y$, and $\theta$: $E(x,y,\theta).$ This forms a landscape of energies where the depressions in the landscape correspond to the stable arrangements we're trying to find. 
 
-So, to find them we can just follow the gradient, i.e. start at a random initial position $(x,y,\theta)$ and then take small steps in the direction of steepest descent:
+For example, if we hold $\theta$ fixed at zero and vary the position of the second tile's center of mass, the energy landscape look like
+
+![](/img/2024-11-18-surface-blue-a.png){:width="450 px" class="image-centered"}
+
+The deep well in the middle is the configuration where the two tiles overlap exactly, and it's surrounded by shallower wells that correspond to lesser stable states.
+
+If, instead, we hold $\theta$ fixed at $\frac14\pi$ and vary the center of mass, we see a huge repulsive peak at the center that's surrounded by shallow wells 
+
+![](/img/2024-11-18-surface-blue-b.png){:width="450 px" class="image-centered"}
+
+However, these are snapshots at specific values of $\theta$, mere projections of the full space.
+
+In general, we can find the stable configurations by following the gradient downhill — start at a random initial position $(x_0, y_0, \theta_0)$ and then take small steps in the direction of steepest descent:
 
 $$
    \left(x, y, \theta\right)_t = \left(x, y, \theta\right)_{t-1} - \eta \nabla E(x, y, \theta).
@@ -153,7 +165,7 @@ With real magnatiles you'll also find that there is an even more stable arrangem
 
 When this is done, we find the original stable arrangements with approximately the same energies:
 
-![](/img/2024-11-17-grid-offset-2.png){:width="450 px" class="image-centered"}
+![](/img/2024-11-17-grid-offset.png){:width="450 px" class="image-centered"}
 
 but we can also quantify the stability of the side by side arrangement, which jumps into second place with $E = -25.57$:
 
