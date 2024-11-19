@@ -54,7 +54,7 @@ Imagine we stack two tiles so that A is atop A and B is atop B. This is an attra
 
 ### Orientation
 
-So, the orientation must be vertically oriented. Suppose we orient magnet A so that N points up and S down. Then, since the interaction is unchanged when we flip one of the tiles, magnet B must have the opposite orientation to magnet A. 
+So, the magnets must be vertically oriented. Suppose we orient magnet A so that N points up and S down. Since the interaction is unchanged when we flip one of the tiles, magnet B must have the opposite orientation to magnet A. 
 
 ![](/img/2024-11-16-tile-fields.png){:width="450 px" class="image-centered"}
 
@@ -70,17 +70,13 @@ Two magnatiles snap tightly together when they're perfectly overlapped.
 
 But if you push them out of this configuration, and slide one tile over the other, you feel attraction to a few other configurations. Likewise, if you try to slide them out of these configurations you'll feel resistance.
 
-This is stability: a configuration is stable if the tiles resist small movements away from it.
+This is stability. A configuration is stable if the tiles resist small movements away from it. The reason a configuration is stable is that, compared to all its neighboring configurations, the attractive N-S magnet head pairs are as close together as possible while the repulsive N-N and S-S magnet head pairs are as separated as possible. 
 
-The reason a configuration is stable is that, compared to all its neighboring configurations, the N and S magnet heads are as close together as possible while keeping the Ns and the Ns, and the Ss and the Ss as separated as possible. 
-
-To explore other configurations, we just need to translate and rotate one tile while keeping the other one fixed.
-
-But to find alternate configurations, we have to be able to specify them. We can specify a configuration by the displacement of the sliding tile's center of mass $\mathbf{r} = \left(x,y\right)$, and its rotation about its center of mass $\theta.$
+To explore other configurations, we just need to translate and rotate one tile while keeping the other one fixed. But to find alternate configurations, we need to be able to specify them. We can specify a configuration by the displacement of the sliding tile's center of mass $\mathbf{r} = \left(x,y\right)$, and its rotation about its center of mass $\theta.$
 
 ### Setting up the tiles
 
-Given the arrangement of magnets we figured out in the first past, their orientations are
+Given the arrangement of magnets we figured out above, their orientations are
 
 ```mathematica
 ors = {1, -1, 1, -1, 1, -1, 1, -1};
@@ -99,7 +95,7 @@ where $z$ keeps track of the vertical separation between the planes of the two t
 
 ### Rotations and translations
 
-As we said above, sliding the tile around amounts to spinning, and translating all the coordinates of the tile:
+As we said above, sliding the tile around amounts to spinning and translating all the coordinates of the tile:
 
 ```mathematica
 locsRotAndTrans[x_, y_, theta_, locs_]:=(
@@ -125,11 +121,11 @@ locsRotAndTrans[x_, y_, theta_, locs_]:=(
 )
 ```
 
-The interaction between tiles is the sum of the interactions between the magnets on either tile. 
+The interaction between two tiles is the sum of the interactions between the component magnets on either tile. 
 
 $$ E = \sum\limits_{i,j\in\{A\,\ldots,H\}} \frac{o_io_j}{\ell_{ij}} $$
 
-where the $o$ are the orientations we defined above, and the $\ell$ are the locations we defined above:
+where the $o_i$ are the orientations we defined above, and $\ell_{ij}$ is the displacement between the tile locations we defined above:
 
 ```mathematica
    locsRT = rotAndTransLocs[x, y, theta, locs[-0.05]];
@@ -142,21 +138,19 @@ where the $o$ are the orientations we defined above, and the $\ell$ are the loca
 
 ### Exploring configuration space
 
-With all this out of the way, we have the two tiles' interaction energy $E$ parameterized in terms of $x$, $y$, and $\theta$: $E(x,y,\theta).$ This forms a landscape of energies where the depressions in the landscape correspond to the stable arrangements we're trying to find. 
+Doing all that gets us the two tile's interaction energy $E$ parameterized in terms of $x$, $y$, and $\theta$: $E(x,y,\theta).$ This forms a landscape of energies where depressions in the landscape correspond to the stable arrangements we're trying to find. 
 
-For example, if we hold $\theta$ fixed at zero and vary the position of the second tile's center of mass, the energy landscape look like
+For example, if we hold $\theta$ fixed at zero and vary the position of the second tile's center of mass, the energy landscape looks like
 
 ![](/img/2024-11-18-surface-blue-a.png){:width="450 px" class="image-centered"}
 
-The deep well in the middle is the configuration where the two tiles overlap exactly, and it's surrounded by shallower wells that correspond to lesser stable states.
+The deep well in the middle is the configuration where the tiles overlap exactly, and it's surrounded by shallower wells that correspond to lesser stable states.
 
-If, instead, we hold $\theta$ fixed at $\pi/4$ and vary the center of mass, we see a huge repulsive peak at the center that's surrounded by shallow wells 
+If, instead, we hold $\theta$ fixed at $\pi/4$ and vary the center of mass, we see a repulsive peak in the center that's surrounded by shallow wells 
 
 ![](/img/2024-11-18-surface-blue-b.png){:width="450 px" class="image-centered"}
 
-However, these are snapshots at specific values of $\theta$, mere projections of the full space.
-
-In general, we can find the stable configurations by following the gradient downhill — start at a random initial position $(x_0, y_0, \theta_0)$ and then take small steps in the direction of steepest descent:
+However, these are snapshots at specific values of $\theta$, mere projections of the full space. In general, we can find the stable configurations by following the gradient downhill — start at a random initial position $(x_0, y_0, \theta_0)$ and then take small steps in the direction of steepest descent:
 
 $$
    \left(x, y, \theta\right)_t = \left(x, y, \theta\right)_{t-1} - \eta \nabla E(x, y, \theta).
@@ -166,7 +160,7 @@ Since there are multiple minima, we'll have to run gradient descent many times, 
 
 ### Behold the configurations
 
-Doing this, we find the four confgurations below:
+Carrying this out, we find the four confgurations below:
 
 ![](/img/2024-11-17-grid-no-offset.png){:width="450 px" class="image-centered"}
 
