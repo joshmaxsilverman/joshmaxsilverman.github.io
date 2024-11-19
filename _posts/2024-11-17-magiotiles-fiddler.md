@@ -135,7 +135,7 @@ For example, if we hold $\theta$ fixed at zero and vary the position of the seco
 
 The deep well in the middle is the configuration where the two tiles overlap exactly, and it's surrounded by shallower wells that correspond to lesser stable states.
 
-If, instead, we hold $\theta$ fixed at $\frac14\pi$ and vary the center of mass, we see a huge repulsive peak at the center that's surrounded by shallow wells 
+If, instead, we hold $\theta$ fixed at $\pi/4$ and vary the center of mass, we see a huge repulsive peak at the center that's surrounded by shallow wells 
 
 ![](/img/2024-11-18-surface-blue-b.png){:width="450 px" class="image-centered"}
 
