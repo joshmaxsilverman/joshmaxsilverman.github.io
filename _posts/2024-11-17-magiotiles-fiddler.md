@@ -85,10 +85,11 @@ ors = { 1, -1, 1, -1, 1, -1, 1, -1 };
 and their locations on the tile are given by
 
 ```mathematica
-locs[z_]:= {
-     {0.25, 1, z}, {0.75, 1, z}, {1, 0.75, z}, {1, 0.25, z}
-   , {0,75, 0, z}, {0.25, 0, z}, {0, 0.25, z}, {0, 0.75, z}
-};
+locs[z_]:=
+     {
+       {0.25, 1, z}, {0.75, 1, z}, {1, 0.75, z}, {1, 0.25, z}
+     , {0,75, 0, z}, {0.25, 0, z}, {0, 0.25, z}, {0, 0.75, z}
+     };
 ```
 
 where $z$ keeps track of the vertical separation between the planes of the two tiles.
