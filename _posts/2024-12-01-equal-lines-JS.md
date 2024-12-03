@@ -37,7 +37,8 @@ So the condition for such a point of equidistance to exist is
 
 $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1)^2 + y_b^2 $$
 
-This describes two quarter circles centered on either corner, with their mutual overlap removed, so the probability is equal to:
+This describes two quarter circles centered on either corner, with their mutual overlap removed. 
+The two regions are quarter circle of radius $x_b^2 + y_b^2$ and $(x_b-1)^2 + y_b^2$ so the probability is equal to:
 
 $$ P_\text{equidistance} = 8\left[\frac14\pi\left(x_b^2 + y_b^2\right) + \frac14\pi\left((1-x_b)^2 + y_b^2\right) - 2\times\text{area overlap}\right] $$
 
