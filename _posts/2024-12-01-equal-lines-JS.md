@@ -31,11 +31,11 @@ So the condition for such a point of equidistance to exist is
 - $d(\text{left corner}, b) < d(\text{left corner},r)$ **AND**
 - $d(\text{right corner},b) > d(\text{right corner},r)$ 
 
-or vice versa. This is just:
+(or vice versa). This is just:
 
 $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1)^2 + y_b^2 $$
 
-This describes two quarter circles centered on either corner, with their mutual overlap removed.
+This describes two quarter circles centered on either corner, with their mutual overlap removed. The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell) = \frac12\;eft(r_\ell + r_r\right).$
 
 what are the horizontal bounds of the circular segments?
 
