@@ -48,7 +48,9 @@ $$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\
 Reflecting the area of overlap across the $x$-axis, we can see that it is a union of two circuluar segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle.
 
 The area of the left segment is then 
-$$ \pi4\theta^2 r^2 - \frac12 \ell_\text{intersect}r\cos\theta, $$ 
+
+$$ \pi 4\theta^2 r^2 - \frac12 \ell_\text{intersect}r\cos\theta, $$ 
+
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
 The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell\right) = \frac12\left(r_\ell + r_r\right).$
