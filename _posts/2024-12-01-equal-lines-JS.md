@@ -45,7 +45,7 @@ $$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\
 
 ### Area of overlap
 
-Reflecting the area of overlap across the $x$-axis, we can see that it is a union of two circuluar segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle.
+Reflecting the area of overlap across the $x$-axis, we can see it's a union of two circular segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle.
 
 The area of the left segment is then 
 
