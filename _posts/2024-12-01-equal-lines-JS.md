@@ -49,7 +49,7 @@ Reflecting the area of overlap across the $x$-axis, we can see that it is a unio
 
 The area of the left segment is then 
 
-$$ \pi 4\theta^2 r^2 - \frac12 \ell_\text{intersect}r\cos\theta, $$ 
+$$ \pi 4\theta^2 r^2 - \ell_\text{intersect}r\cos\theta, $$ 
 
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
