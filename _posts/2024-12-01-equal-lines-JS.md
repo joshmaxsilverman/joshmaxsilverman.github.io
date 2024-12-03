@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Jane Street](https://www.janestreet.com/puzzles/beside-the-point-index/))
 
 ## Solution
 
