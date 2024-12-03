@@ -44,6 +44,8 @@ $$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + y_b^2 + (1-x_b)^2 +
 
 ### Area of overlap
 
+Reflecting the area of overlap across the $x$-axis, we can see that it is a union of two circuluar segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle.
+
 The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell\right) = \frac12\left(r_\ell + r_r\right).$
 
 what are the horizontal bounds of the circular segments?
