@@ -35,7 +35,11 @@ So the condition for such a point of equidistance to exist is
 
 $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1)^2 + y_b^2 $$
 
-This describes two quarter circles centered on either corner, with their mutual overlap removed. The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell\right) = \frac12\left(r_\ell + r_r\right).$
+This describes two quarter circles centered on either corner, with their mutual overlap removed, so the probability is equal to:
+
+$$ <eqn> $$
+
+The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell\right) = \frac12\left(r_\ell + r_r\right).$
 
 what are the horizontal bounds of the circular segments?
 
