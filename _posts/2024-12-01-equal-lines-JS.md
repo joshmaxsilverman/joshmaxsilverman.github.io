@@ -44,13 +44,15 @@ $$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\
 
 Reflecting the area of overlap across the $x$-axis, we can see it's a union of two circular segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle.
 
+The circles overlap at $x = x_b$
+
 The area of the left segment is then 
 
-$$ \frac12\left(2\theta r^2 - \ell_\text{intersect}r\sin\theta\right), $$ 
+$$ \frac12\left(2\theta r^2 - x_b y_b\right), $$ 
 
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
-The circles overlap at $x = x_b$
+
 
 what are the horizontal bounds of the circular segments?
 
