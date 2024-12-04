@@ -38,7 +38,7 @@ $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1
 This describes two quarter circles centered on either corner, with their mutual overlap removed. 
 The radii are $r_\ell = x_b^2 + y_b^2$ and $r_r = (1-x_b)^2 + y_b^2$ so the total probability is equal to:
 
-$$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area overlap}\right) $$
+$$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area of overlap}\right) $$
 
 ### Area of overlap
 
