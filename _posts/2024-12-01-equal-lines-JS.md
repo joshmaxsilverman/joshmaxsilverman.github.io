@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: Line of equidistance
+published: true
+title: Lines of equidistance
 date: 2024/12/01
 subtitle: What's the chance that two random points in the square are equidistant from some random point on the side that's closest to one of them?
 tags: geometry distance intermediate-value-theorem
