@@ -46,7 +46,7 @@ Reflecting the area of overlap across the $x$-axis, we can see it's a union of t
 
 The area of the left segment is then 
 
-$$ 2\theta r^2 - \ell_\text{intersect}r\sin\theta, $$ 
+$$ \frac12\left(2\theta r^2 - \ell_\text{intersect}r\sin\theta\right), $$ 
 
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
