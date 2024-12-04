@@ -18,7 +18,7 @@ tags: geometry distance intermediate-value-theorem
 First let's set some conventions:
 
 - call the blue point $b$ and the red point $r$,
-- take the side closest to $b$ to be the bottom of the square,
+- take the side closest to $b$ to be the bottom of the square, and
 - take the blue point to fall inside the square's lower left octant.
 
 To figure out the conditions for the point of equidistance to exist, let's do a thought experiment where we find it empirically. 
