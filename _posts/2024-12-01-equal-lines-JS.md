@@ -48,7 +48,7 @@ The circles overlap at $x = x_b$
 
 The area of the left segment is then 
 
-$$ \frac12\left(2\theta r^2 - x_b y_b\right), $$ 
+$$ \frac12\left(2\theta r_b^2 - x_b y_b\right), $$ 
 
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
