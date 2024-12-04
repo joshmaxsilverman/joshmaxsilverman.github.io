@@ -1,10 +1,10 @@
 ---
 layout: post
 published: false
-title: 
-date: 2018/04/21
-subtitle: geometry distance intermediate-value-theorem
-tags:
+title: Line of equidistance
+date: 2024/12/01
+subtitle: What's the chance that two random points in the square are equidistant from some random point on the side that's closest to one of them?
+tags: geometry distance intermediate-value-theorem
 ---
 
 >**Question**: Two random points, one red and one blue, are chosen uniformly and independently from the interior of a square. What is the probability that there exists a point on the side of the square closest to the blue point that is equidistant to both the blue point and the red point?
