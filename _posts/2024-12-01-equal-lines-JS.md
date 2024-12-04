@@ -38,7 +38,7 @@ $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1
 This describes two quarter circles centered on either corner, with their mutual overlap removed. 
 The radii are $r_\ell = x_b^2 + y_b^2$ and $r_r = (x_b-1)^2 + y_b^2$ so the total probability is equal to:
 
-$$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area overlap} $$
+$$ P_\text{equidistance} = 8\left(\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area overlap}\right) $$
 
 ### Area of overlap
 
@@ -48,15 +48,15 @@ The circles overlap at $x = x_b$
 
 The area of the left segment is then 
 
-$$ \frac12\left(2\theta r_\ell^2 - x_b y_b\right). $$ 
+$$ \frac12\left(\theta r_\ell^2 - x_b y_b\right). $$ 
 
+Putting it together with the same analysis for the right segment, we get the area of the overlap
 
+$$ \frac12\left(\theta r_\ell^2 - x_b y_b\right) + \frac12\left(\theta r_\r^2 - (1-x_b) y_b\right) $$ 
 
-what are the horizontal bounds of the circular segments?
+and the total probability that a random red point has a line of equidistance with the blue point is 
 
-(1-radius of right circle, intersection of the two circles, radius of left circle)
-
-the radius of the left is $x_b^2+y_b^2$, the radius of the right is $(x_b - 1)^2 + y_b^2$.
+$$ P_\text{equidistance} = 8\left(\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - \left[\frac12\left(\theta r_\ell^2 - x_b y_b\right) + \frac12\left(\theta r_\r^2 - (1-x_b) y_b\right)\right]\right). $$
 
 
 
