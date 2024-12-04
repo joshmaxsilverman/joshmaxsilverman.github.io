@@ -43,7 +43,7 @@ This describes two quarter circles centered on either corner, with their mutual 
 
 The radii are $r_\ell^2 = x_b^2 + y_b^2$ and $r_r^2 = (1-x_b)^2 + y_b^2$ so the total probability is equal to:
 
-$$ \frac{P_\text{equidistance}(x_b, y_b)}{8} = \frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area of overlap} $$
+$$ \frac{P_\text{equidistance}(x_b, y_b)}{8} = \frac{\pi}{4}\left(x_b^2 + (1-x_b)^2 + 2y_b^2\right) - 2\times\text{area of overlap} $$
 
 ### Area of overlap
 
