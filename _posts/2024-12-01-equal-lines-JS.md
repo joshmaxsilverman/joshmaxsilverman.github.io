@@ -52,7 +52,7 @@ $$ \frac12\left(\theta r_\ell^2 - x_b y_b\right). $$
 
 Putting it together with the same analysis for the right segment, we get the area of the overlap
 
-$$ \frac12\left(\theta r_\ell^2 - x_b y_b\right) + \frac12\left(\theta r_\r^2 - (1-x_b) y_b\right) $$ 
+$$ \frac12\left(\theta r_\ell^2 - x_b y_b\right) + \frac12\left(\theta r_r^2 - (1-x_b) y_b\right) $$ 
 
 and the total probability that a random red point has a line of equidistance with the blue point is 
 
