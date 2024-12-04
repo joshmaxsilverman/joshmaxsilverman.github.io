@@ -60,7 +60,13 @@ $$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[{r_\ell}^2 + r_r^
 
 Now, we just have to average over all possible locations for the blue point in the lower left quadrant, which we can account for taking $y_b$ from $0$ to $x_b,$ and $x_b$ from zero to $\frac12$:
 
-$$ P_\text{equidistance} = \int\limits_0^\frac{1}{2} \text{d}x_b \int\limits_0^{x_b}\text{d}y_b\, P_\text{equidistance}(x_b, y_b) = \frac{1+2\pi-\log 4}{12} \approx 0.491408 \ldots $$
+$$ 
+  \begin{align}
+    P_\text{equidistance} &= \int\limits_0^\frac{1}{2} \text{d}x_b \int\limits_0^{x_b}\text{d}y_b\, P_\text{equidistance}(x_b, y_b) \\
+                          &= \frac{1+2\pi-\log 4}{12} \\
+                          &\approx 0.491408 \ldots 
+   \end{align} 
+$$
 
 
 <br>
