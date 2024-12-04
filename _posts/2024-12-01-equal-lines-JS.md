@@ -50,7 +50,7 @@ $$ 2\theta r^2 - \ell_\text{intersect}r\sin\theta, $$
 
 where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
 
-The circles overlap at $x = r_\ell + \frac12\left(r_r - r_\ell\right) = \frac12\left(r_\ell + r_r\right).$
+The circles overlap at $x = x_b$
 
 what are the horizontal bounds of the circular segments?
 
