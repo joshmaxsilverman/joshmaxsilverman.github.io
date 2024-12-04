@@ -47,7 +47,7 @@ $$ \frac{P_\text{equidistance}(x_b, y_b)}{8} = \frac{\pi}{4}\left[x_b^2 + (1-x_b
 
 ### Area of overlap
 
-Reflecting the area of overlap across the $x$-axis, we can see it's a union of two circular segments. We can find each of their areas by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle. 
+Reflecting the area of overlap across the $x$-axis, we can see it's a union of two circular segments. We can find the area of each one by taking the area of the circular wedge that envelops it and subtracting the area of the missing isosceles triangle. 
 
 The circles overlap at $x = x_b$ so the area of the left segment is $\frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right).$ Putting it together with the same analysis for the right segment, we get the area of the overlap
 
