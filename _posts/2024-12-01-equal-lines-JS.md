@@ -57,7 +57,7 @@ $$ \text{area of overlap} = \frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right) +
 
 $$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[{r_\ell}^2 + r_r^2\right] - \left[\frac12\left(\theta_\ell {r_\ell}^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right)\right]\right). $$ -->
 
-Now, we just have to average over all possible locations for the blue point in the lower left quadrant, which we can do by taking $y_b$ from $0$ to $x_b,$ and $x_b$ from zero to $\frac12$:
+Now, we just have to average over all possible locations for the blue point in the lower left quadrant, which we can do by taking $y_b$ from zero to $x_b,$ and $x_b$ from zero to $\frac12$:
 
 $$ 
   \begin{align}
