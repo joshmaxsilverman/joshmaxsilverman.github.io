@@ -36,7 +36,7 @@ $$ d(\text{left corner}, b) < d(\text{left corner},r)\, \mathbf{XOR}\,  d(\text{
 $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1)^2 + y_b^2. $$ -->
 
 This describes two quarter circles centered on either corner, with their mutual overlap removed. 
-The radii are $x_b^2 + y_b^2$ and $(x_b-1)^2 + y_b^2$ so the total probability is equal to:
+The radii are $r_\ell = x_b^2 + y_b^2$ and $r_r = (x_b-1)^2 + y_b^2$ so the total probability is equal to:
 
 $$ P_\text{equidistance} = 8\times\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area overlap} $$
 
@@ -48,9 +48,7 @@ The circles overlap at $x = x_b$
 
 The area of the left segment is then 
 
-$$ \frac12\left(2\theta r_b^2 - x_b y_b\right), $$ 
-
-where $r$ is the circle's radius, $\theta$ is the angle subtended by the segment, and $\ell_\text{intersect}$ is the $x$-position where the segment begin.
+$$ \frac12\left(2\theta r_\ell^2 - x_b y_b\right). $$ 
 
 
 
