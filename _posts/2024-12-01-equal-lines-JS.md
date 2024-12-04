@@ -56,7 +56,7 @@ $$ \frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right) + \frac12\left(\theta_r r_
 
 and the total probability that a random red point has a line of equidistance with the blue point is 
 
-$$ P_\text{equidistance} = 8\left(\frac{\pi}{4}\left[r_\ell^2 + r_r^2\right] - \left[\frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right) + \frac12\left(\theta_r_r_r^2 - (1-x_b) y_b\right)\right]\right). $$
+$$ P_\text{equidistance} = 8\left(\frac{\pi}{4}\left[{r_\ell}^2 + r_r^2\right] - \left[\frac12\left(\theta_\ell {r_\ell}^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right)\right]\right). $$
 
 
 
