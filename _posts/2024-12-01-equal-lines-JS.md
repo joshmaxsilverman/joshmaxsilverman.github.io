@@ -25,9 +25,7 @@ To figure out the conditions for the point of equidistance to exist, let's do a 
 
 ### Conditions for solution
 
-Pick a random point $z$ on the bottom edge. If $z$ isn't equidistant from $b$ and $r$ then we need to shift it toward one of the corners. As long as one of the corners is closer to $b$ and the other is closer to $r$, this scheme will find the point. Why? The intermediate value theorem. 
-
-If both corners are closer to $b$ or both are closer to $r$ then all points on the line are closer to one of the points than the other. In this case, moving the point $z$ is hopeless since the point of equidistance doesn't exist.
+Pick a random point $z$ on the bottom edge. If $z$ isn't equidistant from $b$ and $r$ then we need to shift it toward one of the corners. As long as one of the corners is closer to $b$ and the other is closer to $r$, this scheme will find the point. Why? The intermediate value theorem. If both corners are closer to $b$ or both are closer to $r$ then all points on the line are closer to one of the points than the other. In this case, moving the point $z$ is hopeless since the point of equidistance doesn't exist.
 
 So the condition for such a point of equidistance to exist is 
 
