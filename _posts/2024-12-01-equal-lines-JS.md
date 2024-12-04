@@ -36,7 +36,7 @@ $$ d(\text{left corner}, b) < d(\text{left corner},r)\, \mathbf{XOR}\,  d(\text{
 $$ x_r^2 + y_r^2 < x_b^2 + y_b^2 \,\,\mathbf{XOR}\,\, (x_r-1)^2 + y_r^2 < (x_b-1)^2 + y_b^2. $$ -->
 
 This describes two quarter circles centered on either corner, with their mutual overlap removed. 
-The radii are $r_\ell = x_b^2 + y_b^2$ and $r_r = (x_b-1)^2 + y_b^2$ so the total probability is equal to:
+The radii are $r_\ell = x_b^2 + y_b^2$ and $r_r = (1-x_b)^2 + y_b^2$ so the total probability is equal to:
 
 $$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[x_b^2 + (1-x_b)^2 + 2y_b^2\right] - 2\times\text{area overlap}\right) $$
 
@@ -52,11 +52,11 @@ $$ \frac12\left(\theta r_\ell^2 - x_b y_b\right). $$
 
 Putting it together with the same analysis for the right segment, we get the area of the overlap
 
-$$ \frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right) $$ 
+$$ \text{area of overlap} = \frac12\left(\theta_\ell r_\ell^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right). $$ 
 
-and the total probability that a random red point has a line of equidistance with the blue point is 
+<!-- and the total probability that a random red point has a line of equidistance with the blue point is 
 
-$$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[{r_\ell}^2 + r_r^2\right] - \left[\frac12\left(\theta_\ell {r_\ell}^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right)\right]\right). $$
+$$ P_\text{equidistance}(x_b, y_b) = 8\left(\frac{\pi}{4}\left[{r_\ell}^2 + r_r^2\right] - \left[\frac12\left(\theta_\ell {r_\ell}^2 - x_b y_b\right) + \frac12\left(\theta_r r_r^2 - (1-x_b) y_b\right)\right]\right). $$ -->
 
 Now, we just have to average over all possible locations for the blue point in the lower left quadrant, which we can account for taking $y_b$ from $0$ to $x_b,$ and $x_b$ from zero to $\frac12$:
 
