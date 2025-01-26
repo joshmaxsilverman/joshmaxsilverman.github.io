@@ -25,7 +25,7 @@ for example, from pad $2$, with equal probability, we can step directly to pad $
 
 $$ P_2 = \frac12 + \frac12 P_3, $$
 
-where $P_j$ is the probability that we reach pad $1$ from pad $j$.
+where $P_j$ is the probability that we reach pad $1$ from pad $j$. if we start on pad $1$, we're already there, so $P_1 = 1.$
 
 on lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
@@ -58,5 +58,19 @@ $$ P_{j} - P_{j+1} = \frac1{j-1}\left(P_{j-1} - P_j\right). $$
 this recurses down to the base case $j=2$:
 
 $$ P_j - P_{j+1} = \frac{1}{(j-1)!}(P_1 - P_2). $$
+
+this is convenient, because $P_1 = (P_1 - P_2) + (P_2 - P_3) + (P_3 - P_4) + \ldots $, and so
+
+$$ 
+  \begin{align}
+    P_1 &= \sum_{j=2}^\infty \frac{1}{(j-1)!}(P_1 - P_2) \\
+        &= (P_1 - P_2) \sum_{j=2}^\infty \frac1{(j-1)!} \\
+        &= e(P_1 - P_2).
+  \end{align}
+$$
+
+again, if we start on pad $1$, we're already there, so $P_1 = 1$ and we get 
+
+$$ P_2 = \frac{e-1}{e}. $$
 
 <br>
