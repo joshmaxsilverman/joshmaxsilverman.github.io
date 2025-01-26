@@ -41,9 +41,12 @@ $$
   \end{align}
 $$
 
-and so on.
+and so on. since every lilypad is like this, let's analyze the general lilypad equation
+
+$$ P_j = \frac1j P_{j-1} + \left(1-\frac1j\right) P_{j+1}. $$
 
 
-when we're on lilypad $2$, we can either step to the left with probability $\frac12$, reaching lilypad $1$ and staying there happily ever after, or we can step to pad $3$ on the right. 
+
+
 
 <br>
