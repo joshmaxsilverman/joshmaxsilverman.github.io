@@ -51,6 +51,12 @@ this connects three lilypads at a time, forward and backward, which is tough to 
 
 $$ \frac1j P_j + (1-\frac1j)P_j = \frac1j P_{j-1} + \left(1-\frac1j\right) P_{j+1} $$ 
 
+which simplifies to
 
+$$ P_{j} - P_{j+1} = \frac1{j-1}\left(P_{j-1} - P_j\right). $$
+
+this recurses down to the base case $j=2$:
+
+$$ P_j - P_{j+1} = \frac{1}{(j-1)!}(P_1 - P_2). $$
 
 <br>
