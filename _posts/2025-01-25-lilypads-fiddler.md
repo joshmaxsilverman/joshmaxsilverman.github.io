@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Can you hop to the lily pad?
-date: 2024/01/25
+date: 2025/01/25
 subtitle: The further you go, the harder it gets.
 tags: master-equation recursion
 ---
@@ -39,7 +39,7 @@ $$
     P_5 &= \frac15 P_4 + \left(1-\frac15\right) P_6 \\
     P_6 &= \frac16 P_5 + \left(1-\frac16\right) P_7 \\
     P_7 &= \frac17 P_6 + \left(1-\frac17\right) P_8 \\
-      &\vdots
+      \vdots
   \end{align}
 $$
 
