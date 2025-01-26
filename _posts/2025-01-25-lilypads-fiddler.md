@@ -21,9 +21,11 @@ tags: master-equation recursion
 
 on any given lilypad, we can step to the left or to the right. so, the probability that we reach pad $1$ is always equal to the probability we step to the left and go on to reach pad $1$ plus the probability we step to the right and go on to reach pad $1$. 
 
-for example, from pad $2$, with equal probability, we can step directly to pad $1$, ending the quest, or we can step to pad $3$. if $P_j$ is the probability that we reach pad $1$ from pad $j$, we can write this as the equation
+for example, from pad $2$, with equal probability, we can step directly to pad $1$, ending the quest, or we can step to pad $3$. we can write this as the equation
 
-$$ P_2 = \frac12 + \frac12 P_3. $$
+$$ P_2 = \frac12 + \frac12 P_3, $$
+
+where $P_j$ is the probability that we reach pad $1$ from pad $j$.
 
 on lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
@@ -41,11 +43,13 @@ $$
   \end{align}
 $$
 
-and so on. since every lilypad is like this, let's analyze the general lilypad equation
+and so on. every lilypad is like this, so we can write and analyze a general lilypad equation:
 
 $$ P_j = \frac1j P_{j-1} + \left(1-\frac1j\right) P_{j+1}. $$
 
+this connects three lilypads at a time, forward and backward, which is tough to solve directly for $P_j$. however, we might be able to massage it into an equation relating the two consecutive gaps (between $P_j$ and $P_{j-1}$, and between $P_{j+1} and $P_j$). if we rewrite the left hand side as $\frac1j P_j + (1-\frac1j)P_j,$ we get
 
+$$ \frac1j P_j + (1-\frac1j)P_j = \frac1j P_{j-1} + \left(1-\frac1j\right) P_{j+1} $$ 
 
 
 
