@@ -27,16 +27,16 @@ $$ P_2 = \frac12 + \frac12 P_3. $$
 
 on lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
-$$ P_3 = \frac13 P_2 + (1-\frac13\right) P_4. $$
+$$ P_3 = \frac13 P_2 + \left(1-\frac13\right) P_4. $$
 
 writing out the next few lilypads, we have the equations
 
 $$
   \begin{align}
-    P_4 &= \frac14 P_3 + (1-\frac14\right) P_5 \\
-    P_5 &= \frac15 P_4 + (1-\frac15\right) P_6 \\
-    P_6 &= \frac16 P_5 + (1-\frac16\right) P_7 \\
-    P_7 &= \frac17 P_6 + (1-\frac17\right) P_8 \\
+    P_4 &= \frac14 P_3 + \left(1-\frac14\right) P_5 \\
+    P_5 &= \frac15 P_4 + \left(1-\frac15\right) P_6 \\
+    P_6 &= \frac16 P_5 + \left(1-\frac16\right) P_7 \\
+    P_7 &= \frac17 P_6 + \left(1-\frac17\right) P_8 \\
       &\vdots
   \end{align}
 $$
