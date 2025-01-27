@@ -11,7 +11,7 @@ tags: master-equation recursion
 >
 >Whenever you are on pad $k$, you will hop to pad $(k−1)$ with probability $1/k$, and you will hop to pad $(k+1)$ with probability $(k−1)/k$.
 >
->Now, what is the probability that you will ultimately make it to pad $1$?
+>What is the probability that you will ultimately make it to pad $1$?
 
 <!--more-->
 
