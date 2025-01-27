@@ -31,7 +31,7 @@ On lilypad $3$, we can step left with probability $\frac13$ or right with probab
 
 $$ P_3 = \frac13 P_2 + \left(1-\frac13\right) P_4. $$
 
-If we hop from pad $2$ to pad $3$ then jump left twice to pad $1$, that happens with probability $\frac12\cdot\frac13\cdot\frac12 = \frac1{12},$ which shows that $P_2$ is at least $\frac12 + \frac1{12} = \frac{7}{12}.$
+If we hop from pad $2$ to pad $3$ then jump left twice to pad $1$, that happens with probability $\frac12\cdot\frac13\cdot\frac12 = \frac1{12},$ which shows that $P_2$ is at least $\frac12 + \frac1{12} = \frac{7}{12} \approx 0.583$
 
 ### Generalizing
 
