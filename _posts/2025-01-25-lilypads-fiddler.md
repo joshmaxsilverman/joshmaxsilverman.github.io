@@ -83,8 +83,8 @@ $$
 
 Again, if we start on pad $1$, we're already there, so $P_1 = 1$ and we get 
 
-$$ \boxed{P_2 = \frac{e-1}{e} \approx 0.63212056}. $$
+$$ \boxed{P_2 = \frac{e-1}{e} \approx 0.632}. $$
 
-While long trajectories are possibly in principle, $92%$ of the probability mass is contributed by the two shortest paths to pad $1$.
+While long trajectories are possibly in principle, $92\%$ of the probability mass is contributed by the two shortest paths to pad $1$.
 
 <br>
