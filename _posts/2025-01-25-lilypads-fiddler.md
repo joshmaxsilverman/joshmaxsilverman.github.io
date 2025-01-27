@@ -7,7 +7,7 @@ subtitle: The further you go, the harder it gets.
 tags: master-equation recursion
 ---
 
->**Question**: You are a frog in a pond that has infinitely many lily pads, which are numbered “1,” “2,” “3,” etc in a row. You are currently on pad $2$, and your goal is to make it to pad $1$, which you would happily stay on forever.
+>**Question**: You are a frog in a pond that has infinitely many lily pads, which are numbered “$1$,” “$2$,” “$3$,” etc in a row. You are currently on pad $2$, and your goal is to make it to pad $1$, which you would happily stay on forever.
 >
 >Whenever you are on pad $k$, you will hop to pad $(k−1)$ with probability $1/k$, and you will hop to pad $(k+1)$ with probability $(k−1)/k$.
 >
