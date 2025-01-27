@@ -25,7 +25,7 @@ Starting from pad $2$ we can step with equal probability directly to pad $1$, en
 
 $$ P_2 = \frac12 + \frac12 P_3, $$
 
-where $P_j$ is the probability that we reach pad $1$ from pad $j$. If we start on pad $1$, we're already there, so $P_1 = 1.$ 
+where $P_j$ is the probability that we __eventually__ reach pad $1$ from pad $j$. If we start on pad $1$, we're already there, so $P_1 = 1.$ 
 
 On lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
