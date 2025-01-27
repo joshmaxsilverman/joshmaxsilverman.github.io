@@ -67,15 +67,14 @@ and we can recurses down to the base case $j=2$:
 
 $$ P_j - P_{j+1} = \frac{1}{(j-1)!}(P_1 - P_2). $$
 
-From this we can find $P_2$. Because the probabilities $P_j$ go to zero for large $j$, we can find $P_1$ by telescoping 
+From this we can find $P_2$. 
 
-$$P_1 = (P_1 - P_2) + (P_2 - P_3) + (P_3 - P_4) + \ldots, $$ 
-
-and so
+Because the probabilities $P_j$ go to zero for large $j$, $P_1$ is equal to the telescoping series
 
 $$ 
   \begin{align}
-    P_1 &= \sum_{j=2}^\infty \frac{1}{(j-1)!}(P_1 - P_2) \\
+    P_1 &= (P_1 - P_2) + (P_2 - P_3) + (P_3 - P_4) + \ldots \\
+    &= \sum_{j=2}^\infty \frac{1}{(j-1)!}(P_1 - P_2) \\
         &= (P_1 - P_2) \sum_{j=2}^\infty \frac1{(j-1)!} \\
         &= e(P_1 - P_2).
   \end{align}
