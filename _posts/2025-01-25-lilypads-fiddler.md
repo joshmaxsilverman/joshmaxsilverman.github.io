@@ -27,11 +27,11 @@ $$ P_2 = \frac12 + \frac12 P_3, $$
 
 where $P_j$ is the probability that we __eventually__ reach pad $1$ from pad $j$. If we start on pad $1$, we're already there, so $P_1 = 1.$ 
 
-On lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
+From lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
 $$ P_3 = \frac13 P_2 + \left(1-\frac13\right) P_4. $$
 
-If we hop from pad $2$ to pad $3$ then jump left twice to pad $1$, that happens with probability $\frac12\cdot\frac13\cdot\frac12 = \frac1{12},$ which shows that $P_2$ is at least $\frac12 + \frac1{12} = \frac{7}{12} \approx 0.583$
+If we hop from pad $2$ to pad $3$ then jump left twice to pad $1$, that happens with probability $\frac12\cdot\frac13\cdot\frac12 = \frac1{12},$ which shows that $P_2$ is at least $\frac12 + \frac1{12} = \frac{7}{12} \approx 0.583.$
 
 ### Generalizing
 
@@ -84,6 +84,6 @@ Again, if we start on pad $1$, we're already there, so $P_1 = 1$ and we get
 
 $$ \boxed{P_2 = \frac{e-1}{e} \approx 0.632}. $$
 
-While long trajectories are possibly in principle, $92\%$ of the probability mass is contributed by the two shortest paths to pad $1$.
+While long trajectories are possible in principle, $92\%$ of the probability mass is contributed by the two shortest paths to pad $1$.
 
 <br>
