@@ -67,7 +67,11 @@ This recurses down to the base case $j=2$:
 
 $$ P_j - P_{j+1} = \frac{1}{(j-1)!}(P_1 - P_2). $$
 
-This is convenient, because $P_1 = (P_1 - P_2) + (P_2 - P_3) + (P_3 - P_4) + \ldots $, and so
+From this we can find $P_2$. Because the probabilities $P_j$ go to zero for large $j$, we can find $P_1$ by telescoping 
+
+$$P_1 = (P_1 - P_2) + (P_2 - P_3) + (P_3 - P_4) + \ldots, $$ 
+
+and so
 
 $$ 
   \begin{align}
