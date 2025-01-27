@@ -15,17 +15,17 @@ tags: master-equation recursion
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-hop-to-the-lily-pad))
 
 ## Solution
 
-On any given lilypad, we can step to the left or to the right. So, the probability that we reach pad $1$ is always equal to the probability we step to the left and go on to reach pad $1$ plus the probability we step to the right and go on to reach pad $1$. 
+On any given lilypad, we can step to the left or to the right. So, the probability we reach pad $1$ is always equal to the probability we step to the left and go on to reach pad $1$ plus the probability we step to the right and go on to reach pad $1$. 
 
-For example, from pad $2$ we can step with equal probability directly to pad $1$, ending the quest, or to pad $3$. We can write this as the equation
+Starting from pad $2$ we can step with equal probability directly to pad $1$, ending the quest, or to pad $3$. We can write this as the equation
 
 $$ P_2 = \frac12 + \frac12 P_3, $$
 
-where $P_j$ is the probability that we reach pad $1$ from pad $j$. If we start on pad $1$, we're already there, so $P_1 = 1.$ 
+where $P_j$ is the probability that we reach pad $1$ from pad $j$. If we start on pad $1$, we're already there, so $P_1 = 1.$ This shows that $P_2$ is at least $\frac12 + \frac12\frac13\frac12 = \fr
 
 On lilypad $3$, we can step left with probability $\frac13$ or right with probability $(1-\frac13)$, giving
 
