@@ -61,9 +61,9 @@ $$ \frac1j P_j + (1-\frac1j)P_j = \frac1j P_{j-1} + \left(1-\frac1j\right) P_{j+
 
 which simplifies to
 
-$$ P_{j} - P_{j+1} = \frac1{j-1}\left(P_{j-1} - P_j\right). $$
+$$ P_{j} - P_{j+1} = \frac1{j-1}\left(P_{j-1} - P_j\right), $$
 
-This recurses down to the base case $j=2$:
+and we can recurses down to the base case $j=2$:
 
 $$ P_j - P_{j+1} = \frac{1}{(j-1)!}(P_1 - P_2). $$
 
