@@ -15,7 +15,7 @@ tags: spherical-geometry vectors
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-spin-the-graph))
 
 ## Solution
 
