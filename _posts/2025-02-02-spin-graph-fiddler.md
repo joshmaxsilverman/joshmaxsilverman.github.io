@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Can You Spin the Graph?
 date: 2025/02/02
 subtitle: If you tumble your function is it still a function?
