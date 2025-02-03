@@ -29,14 +29,14 @@ the $4$ faces have the surface normals
 
 $$
   \begin{align}
-    \vec{n}_1 &= (+1, +1, +1) \\
-    \vec{n}_2 &= (-1, +1, +1) \\
-    \vec{n}_3 &= (+1, -1, +1) \\
-    \vec{n}_4 &= (-1, -1, +1)
+    \mathbf{n}_1 &= (+1, +1, +1) \\
+    \mathbf{n}_2 &= (-1, +1, +1) \\
+    \mathbf{n}_3 &= (+1, -1, +1) \\
+    \mathbf{n}_4 &= (-1, -1, +1)
   \end{align}
 $$
 
-if we pick a random direction $\vec{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\vec{n}$ is just $\vec{n}\dot\vec{v}.$ taking the dot product of $\vec{v}$ with the normal of each face, we get four equations:
+if we pick a random direction $\mathbf{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\mathbf{n}$ is just $\mathbf{n}\dot\mathbf{v}.$ taking the dot product of $\vec{v}$ with the normal of each face, we get four equations:
 
 $$
   \begin{align}
@@ -60,8 +60,5 @@ $$ \mathbf{v} = (\cos\theta\cos\phi, \cos\theta\sin\phi, \sin\theta). $$
 in this representation, the inequality is 
 
 $$ \frac{\sin\theta}{\lvert cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
-
-
-mathematically, this means that the dot product of the arrow (the surface normal) with the vertical direction
 
 <br>
