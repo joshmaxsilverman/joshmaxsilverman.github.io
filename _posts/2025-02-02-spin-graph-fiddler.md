@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You Spin the Graph?
+title: Can you spin the graph?
 date: 2025/02/02
 subtitle: If you tumble your function is it still a function?
 tags: spherical-geometry vectors
