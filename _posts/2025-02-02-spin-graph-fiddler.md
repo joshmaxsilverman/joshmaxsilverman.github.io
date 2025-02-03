@@ -29,7 +29,7 @@ Luckily, our surface ${z = \lvert x\rvert + \lvert y\rvert}$ is just the union o
 
 ### Changing our perspective
 
-Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${f(x,y) = \lvert x\rvert + \lvert y\rvert.}$
+Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${z = \lvert x\rvert + \lvert y\rvert.}$
 
 The $4$ faces have the surface normals
 
