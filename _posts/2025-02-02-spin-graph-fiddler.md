@@ -63,7 +63,7 @@ $$ \frac{\sin\theta}{\lvert \cos\theta\rvert} > \lvert\cos\phi\rvert + \lvert\si
 
 This identifies the set of $(\theta,\phi)$, and it consists of two four-cornered patches:
 
-[image of the clover]
+![](/img/2025-02-02-spherical-plot-save.png){:width="450 px" class="image-centered"}
 
 Exploiting the symmetry, we can use just one octant of the sphere and drop the absolute value signs. Taking $\theta$ and $\phi$ to be between $0$ and $\frac12\pi$ the condition simplifies to
 
