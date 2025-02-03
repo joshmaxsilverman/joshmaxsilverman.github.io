@@ -61,4 +61,22 @@ in this representation, the inequality is
 
 $$ \frac{\sin\theta}{\lvert cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
 
+if we operate with $\theta$ and $\phi$ in $(0, \frac12\pi)$ we can drop the absolute value signs and simplfy the condition to 
+
+$$ \theta > \arctan\left(\cos\phi + \sin\phi\right). $$
+
+this identifies the set of $(\theta,\phi)$, and it consists of two four-leaf clover-esque patches:
+
+[image of the clover]
+
+to find the relative area of the patches to the sphere, we can add the points in this set. exploiting the symmetry, we can use just one octant of the sphere to get the job done:
+
+$$ 
+  \begin{align}
+    P(\text{tumble is a function}) &= \frac{\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_{\arctan\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} d\Omega}{\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_0^{\frac12\pi} d\Omega} \\
+    &= \frac2\pi\left(\frac\pi2 - 2\arcsin\frac1{\sqrt{3}}\right) \\
+    &= 0.2163
+  \end{align}
+$$
+
 <br>
