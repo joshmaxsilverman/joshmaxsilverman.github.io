@@ -36,7 +36,7 @@ $$
   \end{align}
 $$
 
-if we pick a random direction $\mathbf{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\mathbf{n}$ is just $\mathbf{n}\dot\mathbf{v}.$ taking the dot product of $\mathbf{v}$ with the normal of each face, we get four equations:
+if we pick a random direction $\mathbf{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\mathbf{n}$ is just $\\mathbf{n}\dot\mathbf{v}.$ taking the dot product of $\mathbf{v}$ with the normal of each face, we get four equations:
 
 $$
   \begin{align}
