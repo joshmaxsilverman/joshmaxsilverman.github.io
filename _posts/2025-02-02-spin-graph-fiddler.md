@@ -19,6 +19,49 @@ tags: spherical-geometry vectors
 
 ## Solution
 
+if a function is a function, then it can't flip over. this means that the direction the surface faces needs to always point up or down. 
 
+for example, this curve, which is not a function sees the arrow switch from pointing overall up, to overall down. more concretely, the $z$ component of the surface normal switches from positive to negative.
+
+instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. this is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${f(x,y) = \lvert x\rvert + \lvert y\rvert.$
+
+the $4$ faces have the surface normals
+
+$$
+  \begin{align}
+    \vec{n}_1 &= (+1, +1, +1) \\
+    \vec{n}_2 &= (-1, +1, +1) \\
+    \vec{n}_3 &= (+1, -1, +1) \\
+    \vec{n}_4 &= (-1, -1, +1)
+  \end{align}
+$$
+
+if we pick a random direction $\vec{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\vec{n}$ is just $\vec{n}\dot\vec{v}.$ taking the dot product of $\vec{v}$ with the normal of each face, we get four equations:
+
+$$
+  \begin{align}
+    v_z &> v_x + v_y \\
+    v_z &> -v_x + v_y \\
+    v_z &> v_x - v_y \\
+    v_z &> -v_x - v_y \\
+  \end{align}
+$$
+
+since all of these equations have to hold, they reduce to 
+
+$$ v_z > \lvert v_x\rvert + \lvert v_y\rvert. $$
+
+if we draw $\mathbf{v}$ at random from the surface of the unit sphere, what is the chance this holds? we have to find the subset of $(\theta,\phi)$ that satisfy the equation.
+
+writing $\mathbf{v}$ in spherical coordinates, we can see
+
+$$ \mathbf{v} = (\cos\theta\cos\phi, \cos\theta\sin\phi, \sin\theta). $$
+
+in this representation, the inequality is 
+
+$$ \frac{\sin\theta}{\lvert cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
+
+
+mathematically, this means that the dot product of the arrow (the surface normal) with the vertical direction
 
 <br>
