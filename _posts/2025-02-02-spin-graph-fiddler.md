@@ -76,7 +76,7 @@ To find the area of the patches relative to the sphere, we can add the points in
 $$ 
   \begin{align}
     P(\text{tumble is a function}) &= \dfrac{\displaystyle \int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_{\tan^{-1}\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} \hspace{-2em} \cos\theta\,\text{d}\theta}{\displaystyle\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_0^{\frac12\pi} \cos\theta\,\text{d}\theta} \\
-    &= \dfrac2\pi\left(\frac\pi2 - 2\arcsin\frac1{\sqrt{3}}\right) \\
+    &= \dfrac2\pi\left(\frac\pi2 - 2\sin^{-1}\frac1{\sqrt{3}}\right) \\
     &\approx 0.2163
   \end{align}
 $$
