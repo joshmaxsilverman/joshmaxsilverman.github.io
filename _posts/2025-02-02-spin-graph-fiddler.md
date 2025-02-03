@@ -59,7 +59,7 @@ $$ \mathbf{v} = (\cos\theta\cos\phi, \cos\theta\sin\phi, \sin\theta). $$
 
 in this representation, the inequality is 
 
-$$ \frac{\sin\theta}{\lvert \cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
+$$ \frac{\sin\theta}{\lvert \cos\theta\rvert} > \lvert\cos\phi\rvert + \lvert\sin\phi\rvert. $$
 
 this identifies the set of $(\theta,\phi)$, and it consists of two four-leaf clover-esque patches:
 
