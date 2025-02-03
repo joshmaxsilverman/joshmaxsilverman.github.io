@@ -61,7 +61,7 @@ in this representation, the inequality is
 
 $$ \frac{\sin\theta}{\lvert \cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
 
-if we operate with $\theta$ and $\phi$ in $(0, \frac12\pi)$ we can drop the absolute value signs and simplfy the condition to 
+exploiting the symmetry, we can use just one octant of the sphere to get the job done and drop the absolute value signs. taking $\theta$ and $\phi$ to be between $0$ and $\frac12\pi$ the condition simplifies to
 
 $$ \theta > \arctan\left(\cos\phi + \sin\phi\right). $$
 
@@ -69,7 +69,7 @@ this identifies the set of $(\theta,\phi)$, and it consists of two four-leaf clo
 
 [image of the clover]
 
-to find the relative area of the patches to the sphere, we can add the points in this set. exploiting the symmetry, we can use just one octant of the sphere to get the job done:
+to find the area of the clover patches relative to the sphere, we can add the points in this set. 
 
 $$ 
   \begin{align}
