@@ -25,7 +25,7 @@ If a function is a function, then it can't flip over. This means that the direct
 
 More concretely, the $z$ component of the surface normal switches from positive to negative. This gives us an unambiguous condition to test if our tumbled surface is a function. 
 
-Luckily, our surface ${z = lvert x\rvert + \lvert y\rvert}$ is just the union of $4$ planes, so we can just inspect $4$ normal vectors.
+Luckily, our surface ${z = \lvert x\rvert + \lvert y\rvert}$ is just the union of $4$ planes, so we can just inspect $4$ normal vectors.
 
 ### Changing our perspective
 
