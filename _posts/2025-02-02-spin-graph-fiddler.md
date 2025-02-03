@@ -23,7 +23,7 @@ if a function is a function, then it can't flip over. this means that the direct
 
 for example, this curve, which is not a function sees the arrow switch from pointing overall up, to overall down. more concretely, the $z$ component of the surface normal switches from positive to negative.
 
-instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. this is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${f(x,y) = \lvert x\rvert + \lvert y\rvert.$
+instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. this is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${f(x,y) = \lvert x\rvert + \lvert y\rvert}.$
 
 the $4$ faces have the surface normals
 
