@@ -69,13 +69,13 @@ This identifies the set of $(\theta,\phi)$, and it consists of two four-cornered
 
 Exploiting the symmetry, we can use just one octant of the sphere and drop the absolute value signs. Taking $\theta$ and $\phi$ to be between $0$ and $\frac12\pi$ the condition simplifies to
 
-$$ \theta > \arctan\left(\cos\phi + \sin\phi\right). $$
+$$ \theta > \tan^{-1}\left(\cos\phi + \sin\phi\right). $$
 
 To find the area of the patches relative to the sphere, we can add the points in this set. Integrating the differential surface area patch $\text{d}\Omega = \cos\theta\,\text{d}\theta\,\text{d}\phi$, we get:
 
 $$ 
   \begin{align}
-    P(\text{tumble is a function}) &= \dfrac{\displaystyle \int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_{\arctan\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} \hspace{-2em} \cos\theta\,\text{d}\theta}{\displaystyle\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_0^{\frac12\pi} \cos\theta\,\text{d}\theta} \\
+    P(\text{tumble is a function}) &= \dfrac{\displaystyle \int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_{\tan^{-1}\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} \hspace{-2em} \cos\theta\,\text{d}\theta}{\displaystyle\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_0^{\frac12\pi} \cos\theta\,\text{d}\theta} \\
     &= \dfrac2\pi\left(\frac\pi2 - 2\arcsin\frac1{\sqrt{3}}\right) \\
     &\approx 0.2163
   \end{align}
