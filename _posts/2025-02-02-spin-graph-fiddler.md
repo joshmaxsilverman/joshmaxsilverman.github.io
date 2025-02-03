@@ -25,11 +25,11 @@ If a function is a function, then it can't flip over. This means that the direct
 
 More concretely, the $z$ component of the surface normal switches from positive to negative. This gives us an unambiguous condition to test if our tumbled surface is a function. 
 
-Luckily, the surface is just the union of $4$ planes, so we can just inspect $4$ normal vectors.
+Luckily, our surface ${z = lvert x\rvert + \lvert y\rvert}$ is just the union of $4$ planes, so we can just inspect $4$ normal vectors.
 
 ### Changing our perspective
 
-Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface $f(x,y) = \lvert x\rvert + \lvert y\rvert.$
+Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface ${f(x,y) = \lvert x\rvert + \lvert y\rvert.}$
 
 The $4$ faces have the surface normals
 
@@ -42,7 +42,7 @@ $$
   \end{align}
 $$
 
-If we pick a random direction $\mathbf{v} = (v_x, v_y, v_z)$ for the new vertical, then the vertical component of a vector $\mathbf{n}$ in the new coordinates is just $\mathbf{n}\cdot\mathbf{v}.$ Taking the dot product of $\mathbf{v}$ with the normal of each face, we get four equations:
+If we pick a random direction ${\mathbf{v} = (v_x, v_y, v_z)}$ for the new vertical, then the vertical component of a vector $\mathbf{n}$ in the new coordinates is just ${\mathbf{n}\cdot\mathbf{v}.}$ Taking the dot product of $\mathbf{v}$ with the normal of each face, we get four equations:
 
 $$
   \begin{align}
