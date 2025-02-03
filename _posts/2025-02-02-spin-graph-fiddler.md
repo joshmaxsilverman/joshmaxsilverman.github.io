@@ -59,7 +59,7 @@ $$ \mathbf{v} = (\cos\theta\cos\phi, \cos\theta\sin\phi, \sin\theta). $$
 
 in this representation, the inequality is 
 
-$$ \frac{\sin\theta}{\lvert cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
+$$ \frac{\sin\theta}{\lvert \cos\theta\rvert} > \lvert\cos\phi + \sin\phi\rvert. $$
 
 if we operate with $\theta$ and $\phi$ in $(0, \frac12\pi)$ we can drop the absolute value signs and simplfy the condition to 
 
