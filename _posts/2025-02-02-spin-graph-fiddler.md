@@ -73,7 +73,7 @@ to find the area of the clover patches relative to the sphere, we can add the po
 
 $$ 
   \begin{align}
-    P(\text{tumble is a function}) &= \dfrac{\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_{\arctan\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} d\Omega}{\int\limits_0^{\frac12\pi}\text{d}\phi\, \int\limits_0^{\frac12\pi} d\Omega} \\
+    P(\text{tumble is a function}) &= \dfrac{\dint\limits_0^{\frac12\pi}\text{d}\phi\, \dint\limits_{\arctan\left(\cos\phi + \sin\phi\right)}^{\frac12\pi} d\Omega}{\dint\limits_0^{\frac12\pi}\text{d}\phi\, \dint\limits_0^{\frac12\pi} d\Omega} \\
     &= \dfrac2\pi\left(\frac\pi2 - 2\arcsin\frac1{\sqrt{3}}\right) \\
     &= 0.2163
   \end{align}
