@@ -19,9 +19,11 @@ tags: spherical-geometry vectors
 
 ## Solution
 
-If a function is a function, then it can't flip over. This means that the direction the surface faces needs to always point up or always point down. 
+If a function is a function, then it can't flip over. This means that the direction the surface faces needs to always point up or always point down. For example, this curve, which is not a function sees the blue arrow switch from pointing overall up, to overall down:
 
-For example, this curve, which is not a function sees the arrow switch from pointing overall up, to overall down. More concretely, the $z$ component of the surface normal switches from positive to negative.
+![](/img/2025-02-02-function-condition.png){:width="450 px" class="image-centered"}
+
+More concretely, the $z$ component of the surface normal switches from positive to negative.
 
 Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface $f(x,y) = \lvert x\rvert + \lvert y\rvert.$
 
@@ -47,11 +49,11 @@ $$
   \end{align}
 $$
 
-Since all of these equations have to hold at once, they reduce to 
+Since all these equations have to hold at once, they reduce to 
 
 $$ v_z > \lvert v_x\rvert + \lvert v_y\rvert. $$
 
-What we want to know is, if we draw $\mathbf{v}$ at random from the surface of the unit sphere, what is the chance this holds? To answer that we have to find the subset of $(\theta,\phi)$ that satisfy the equation.
+What we want to know is, if we draw $\mathbf{v}$ at random from the surface of the unit sphere, what is the chance this condition holds? To answer that we have to find the subset of $(\theta,\phi)$ that satisfy it.
 
 Writing $\mathbf{v}$ in spherical coordinates, we can see
 
@@ -69,7 +71,7 @@ Exploiting the symmetry, we can use just one octant of the sphere and drop the a
 
 $$ \theta > \arctan\left(\cos\phi + \sin\phi\right). $$
 
-To find the area of the clover patches relative to the sphere, we can add the points in this set. Integrating the differential surface area patch $\text{d}\Omega = \cos\theta\text{d}\theta\text{d}\phi$, we get:
+To find the area of the patches relative to the sphere, we can add the points in this set. Integrating the differential surface area patch $\text{d}\Omega = \cos\theta\text{d}\theta\text{d}\phi$, we get:
 
 $$ 
   \begin{align}
