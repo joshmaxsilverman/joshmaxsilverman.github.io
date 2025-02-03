@@ -19,11 +19,15 @@ tags: spherical-geometry vectors
 
 ## Solution
 
-If a function is a function, then it can't flip over. This means that the direction the surface faces needs to always point up or always point down. For example, this curve, which is not a function sees the blue arrow switch from pointing overall up, to overall down:
+If a function is a function, then it can't flip over. This means that the direction the surface faces needs to always point up or always point down. For example, this curve, which is not a function, sees the blue arrow switch from pointing overall up to overall down:
 
 ![](/img/2025-02-02-function-condition.png){:width="450 px" class="image-centered"}
 
-More concretely, the $z$ component of the surface normal switches from positive to negative.
+More concretely, the $z$ component of the surface normal switches from positive to negative. This gives us an unambiguous condition to test if our tumbled surface is a function. 
+
+Luckily, the surface is just the union of $4$ planes, so we can just inspect $4$ normal vectors.
+
+### Changing our perspective
 
 Instead of tumbling the surface to find a random new orientation, we can equivalently pick a random new direction for the vertical. This is more convenient since it means we can keep constant coordinates for the $4$ faces of the surface $f(x,y) = \lvert x\rvert + \lvert y\rvert.$
 
@@ -52,6 +56,8 @@ $$
 Since all these equations have to hold at once, they reduce to 
 
 $$ v_z > \lvert v_x\rvert + \lvert v_y\rvert. $$
+
+### Finding the subset
 
 What we want to know is, if we draw $\mathbf{v}$ at random from the surface of the unit sphere, what is the chance this condition holds? To answer that we have to find the subset of $(\theta,\phi)$ that satisfy it.
 
