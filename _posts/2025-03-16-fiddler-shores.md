@@ -73,7 +73,7 @@ Plotting this, we see that the probability is highest for small distances, and g
 
 With the $\text{pdf}$ in hand, we can find the expectation value by integration
 
-$$ \langle d\rangle  = \int\limits_0^{\frac12}\text{d}d d\, P(d) = \frac12 - \frac{4}{9\pi}. $$
+$$ \langle d\rangle  = \int\limits_0^{\frac12}\text{d}d\, d\, P(d) = \frac12 - \frac{4}{9\pi}. $$
 
 We can also find the median by binary search. The $\text{cdf}$ of $P(d)$ is $\int\limits_0^d\text{d}d^\prime P(d^\prime)$ which equals $\frac12$ when $d\approx 0.1742619734.$ 
 
