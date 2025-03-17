@@ -36,6 +36,8 @@ $$
   \end{align}
 $$
 
+<diagram>
+
 The probability that diametric beach is closer is just the area under this curve relative to the entire semicircle:
 
 $$ P(\text{diametric}) = \frac{2}{\pi}\int\limits_{-1}^1\frac12(1 - x^2) = \frac{4}{3\pi}.$$
@@ -44,14 +46,14 @@ To find the average area, we could take the weighted average of $(1-r)$ in the u
 
 ### Probability density
 
-In the diametric region, the probability that we're $y$ away from the beach is proportional to the length of the horizontal strip between the points where the curve equals $y,$ i.e.
+In the diametric region, the probability that we're $y$ away from the beach is proportional to the length of the horizontal strip between the points where the curve equals $y,$ the blue dashed line in the diagram:
 
 $$\begin{align}
   P(y) &\propto \sqrt{\frac12 - y} \\
   &= 3\sqrt{2}\sqrt{\frac12 - y}.
 \end{align}$$
 
-In the semicircular region, the probability that we're at radius $r$ (e.g. at distance $(1-r)$ from the beach) is proportional to the length of the circular arc between the points where the curve is $r$ away from the origin. This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get $\theta = \arcsin((1-r)/r)$ and
+In the semicircular region, the probability that we're at radius $r$ (e.g. at distance $(1-r)$ from the beach) is proportional to the length of the circular arc between the points where the curve is $r$ away from the origin (i.e. the salmon dashed curve in the diagram). This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get $\theta = \arcsin((1-r)/r)$ and
 
 $$\begin{align}
   P(r) &\propto r(\pi - 2\arcsin\frac{1-r}{r}) \\
@@ -65,9 +67,16 @@ $$\begin{align}
   &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{1-d}{d}\right)\left(1-\frac{4}{3\pi}\right)
 \end{align}$$
 
+<pdf>
+
 Plotting this, we see that the probability is highest for small distances, and goes to zero by $d = \frac12.$ In the semi-circular region, there is a bit more probability at the shore than in the diametric region. This makes sense because the boundary is relatively flat near diametric beach, while the boundary curves up towards the arcs of constant distance for semicircular beach.
 
+With the pdf in hand, we can find the expectation value by integration
 
+$$ \langle d\rangle  = \int\limits_0^{\frac12}\text{d}d d\, P(d) = \frac12 - \frac{4}{9\pi}. $$
 
+We can also find the median by binary search. The cdf of $P(d)$ is $\int\limits_0^d\text{d}d^\prime P(d^\prime)$ which equals $\frac12$ when $d\approx 0.1742619734.$ 
+
+<cdf>
 
 <br>
