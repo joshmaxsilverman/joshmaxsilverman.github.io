@@ -42,7 +42,7 @@ The probability that diametric beach is closer is just the area under this curve
 
 $$ P(\text{diametric}) = \frac{2}{\pi}\int\limits_{-1}^1\frac12(1 - x^2) = \frac{4}{3\pi}.$$
 
-To find the average distance, we could find the average of $(1-r)$ in the upper region, of $y$ in the lower region, and take the weighted sum. Instead we're going to get the probability density function of $r$ so that we can find the median, which is truer to the plight of the everyman's beach outing.
+To find the average distance, we could find the average of $(1-r)$ in the upper region, of $y$ in the lower region, and take the weighted sum. Instead we're going to get the probability density function of $r$ so that we can find the median, which is truer to the plight of the everyman, as beach outings go.
 
 ### Probability density
 
