@@ -40,7 +40,28 @@ The probability that diametric beach is closer is just the area under this curve
 
 $$ P(\text{diametric}) = \frac{2}{\pi}\int\limits_{-1}^1\frac12(1 - x^2) = \frac{4}{3\pi}.$$
 
-To find the average area, we could take the weighted average of $(1-r)$ in the upper region, and of $y$ in the lower region. However, we are going to get the probability density function of $r$ so that we can go for the median.
+To find the average area, we could take the weighted average of $(1-r)$ in the upper region, and of $y$ in the lower region. But instead we're going to get the probability density function of $r$ so that we can find the median.
+
+### Probability density
+
+In the diametric region, the probability that we're $y$ away from the beach is proportional to the length of the horizontal strip between the points where the curve equals $y,$ i.e.
+
+$$\begin{align}
+  P(y) &\propto \sqrt{\frac12 - x^2} \\
+  &= 3\sqrt{2}\sqrt{\frac12 - x^2}.
+\end{align}$$
+
+In the semicircular region, the probability that we're at radius $r$ (e.g. at distance $(1-r)$ from the beach) is proportional to the length of the circular arc between the points where the curve is $r$ away from the origin. This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get $\theta = \arcsin((1-r)/r)$ and
+
+$$\begin{align}
+  P(r) &\propto r(\pi - 2\arcsin\frac{1-r}{r}) \\
+  &= \frac{6}{3\pi-4}r\left(\pi-2\arcsin\frac{r}{1-r}\right). 
+\end{align}$$
+
+We can turn these into a pdf for the distance $d$ like so
+
+$$\begin{align}
+  P(d\,\text{away}) &= P(d\,\text{away}|\text{in diametric})P(\text{in diametric}) + P(d\,\text{away}|\text{in semicircular})P(\text{in semicircular}) \\
 
 
 <br>
