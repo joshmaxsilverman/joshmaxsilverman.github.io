@@ -40,7 +40,7 @@ $$
 
 The probability that diametric beach is closer is just the area under this curve relative to the entire semicircle:
 
-$$ P(\text{diametric}) = \frac{2}{\pi}\int\limits_{-1}^1\frac12(1 - x^2) = \frac{4}{3\pi}.$$
+$$ P(\text{diametric}) = \frac{2}{\pi}\int\limits_{-1}^1\text{d}x\, \frac12(1 - x^2) = \frac{4}{3\pi}.$$
 
 To find the average distance, we could find the average of $(1-r)$ in the upper region, of $y$ in the lower region, and take the weighted sum. Instead we're going to get the probability density function of $r$ so that we can find the median, which is truer to the plight of the everyman, as beach outings go.
 
@@ -65,7 +65,7 @@ We can turn these into a $\text{pdf}$ for the distance $d$ like so
 
 $$\begin{align}
   P(d\,\text{away}) &= P(d\,\text{away}|\text{diametric})P(\text{diametric}) + P(d\,\text{away}|\text{semicircular})P(\text{semicircular}) \\
-  &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{1-d}{d}\right)\left(1-\frac{4}{3\pi}\right)
+  &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{d}{1-d}\right)\left(1-\frac{4}{3\pi}\right)
 \end{align}$$
 
 ![](/img/2025-03-16-fiddler-shores-pdf.png){:width="450px" class="image-centered"}
