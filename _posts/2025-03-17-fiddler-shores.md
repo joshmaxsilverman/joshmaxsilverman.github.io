@@ -65,5 +65,9 @@ $$\begin{align}
   &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{1-d}{d}\right)\left(1-\frac{4}{3\pi}\right)
 \end{align}$$
 
+Plotting this, we see that the probability is highest for small distances, and goes to zero by $d = \frac12.$ In the semi-circular region, there is a bit more probability at the shore than in the diametric region. This makes sense because the boundary is relatively flat near diametric beach, while the boundary curves up towards the arcs of constant distance for semicircular beach.
+
+
+
 
 <br>
