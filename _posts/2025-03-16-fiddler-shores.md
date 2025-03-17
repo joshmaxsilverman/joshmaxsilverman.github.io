@@ -58,7 +58,7 @@ In the semicircular region, the probability that we're at radius $r$ (i.e. at di
 $$\begin{align}
   P(r) &\propto 2r\left(\pi/2-\theta(r)\right) \\
   &\propto r(\pi - 2\arcsin\frac{1-r}{r}) \\
-  &= \frac{6}{3\pi-4}r\left(\pi-2\arcsin\frac{r}{1-r}\right). 
+  &= \frac{6}{3\pi-4}r\left(\pi-2\arcsin\frac{1-r}{r}\right). 
 \end{align}$$
 
 We can turn these into a $\text{pdf}$ for the distance $d$ like so
