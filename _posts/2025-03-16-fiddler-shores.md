@@ -32,7 +32,7 @@ $$
     y &= 1 - \sqrt{x^2 + y^2} \\
     (y-1)^2 &= x^2 + y^2 \\
     1 - 2y &= x^2 \\
-    y = \frac12\left(1 - x^2\right)
+    y &= \frac12\left(1 - x^2\right)
   \end{align}
 $$
 
@@ -76,7 +76,7 @@ With the $\text{pdf}$ in hand, we can find the expectation value by integration
 
 $$ \begin{align}
   \langle d\rangle  &= \int\limits_0^{\frac12}\text{d}d\, d\, P(d) \\
-  &= \frac12 - \frac{4}{9\pi}\\
+  &= \frac13 - \frac{4}{9\pi}\\
   &= 0.1918622728.
   \end{align}$$
 
