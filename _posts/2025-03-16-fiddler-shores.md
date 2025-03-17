@@ -15,7 +15,7 @@ tags: geometry pdf cdf conditional-probability
 >
 >Again, you are picking a random point on the island for a picnic. On average, what will be the expected shortest distance to shore?
 >
->>**Extra Extra Credit**: what is the median shortest distance to the shore?
+>**Extra Extra Credit**: what is the median shortest distance to the shore?
 
 <!--more-->
 
