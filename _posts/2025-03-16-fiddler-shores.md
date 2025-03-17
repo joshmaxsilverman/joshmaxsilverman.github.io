@@ -7,7 +7,7 @@ subtitle: If you wake up in a random spot on a semi-circular island, how far is 
 tags: geometry pdf cdf conditional-probability 
 ---
 
->**Question**: You are planning a picnic on the remote tropical island of 𝜋-land. The island’s shape is a perfect semi-disk with two beaches: Semicircular Beach (along the northern semicircular edge of the disk) and Diametric Beach (along the southern diameter of the disk).
+>**Question**: you are planning a picnic on the remote tropical island of 𝜋-land. The island’s shape is a perfect semi-disk with two beaches: Semicircular Beach (along the northern semicircular edge of the disk) and Diametric Beach (along the southern diameter of the disk).
 >
 >If you pick a random spot on 𝜋-land for your picnic, what is the probability that it will be closer to Diametric Beach than to Semicircular Beach? 
 >
