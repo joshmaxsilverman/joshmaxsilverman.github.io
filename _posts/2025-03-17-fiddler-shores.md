@@ -47,8 +47,8 @@ To find the average area, we could take the weighted average of $(1-r)$ in the u
 In the diametric region, the probability that we're $y$ away from the beach is proportional to the length of the horizontal strip between the points where the curve equals $y,$ i.e.
 
 $$\begin{align}
-  P(y) &\propto \sqrt{\frac12 - x^2} \\
-  &= 3\sqrt{2}\sqrt{\frac12 - x^2}.
+  P(y) &\propto \sqrt{\frac12 - y} \\
+  &= 3\sqrt{2}\sqrt{\frac12 - y}.
 \end{align}$$
 
 In the semicircular region, the probability that we're at radius $r$ (e.g. at distance $(1-r)$ from the beach) is proportional to the length of the circular arc between the points where the curve is $r$ away from the origin. This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get $\theta = \arcsin((1-r)/r)$ and
@@ -62,6 +62,8 @@ We can turn these into a pdf for the distance $d$ like so
 
 $$\begin{align}
   P(d\,\text{away}) &= P(d\,\text{away}|\text{in diametric})P(\text{in diametric}) + P(d\,\text{away}|\text{in semicircular})P(\text{in semicircular}) \\
+  &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{1-d}{d}\right)\left(1-\frac{4}{3\pi}\right)
+\end{align}$$
 
 
 <br>
