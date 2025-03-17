@@ -63,7 +63,7 @@ $$\begin{align}
 We can turn these into a $\text{pdf}$ for the distance $d$ like so
 
 $$\begin{align}
-  P(d\,\text{away}) &= P(d\,\text{away}|\text{in diametric})P(\text{in diametric}) + P(d\,\text{away}|\text{in semicircular})P(\text{in semicircular}) \\
+  P(d\,\text{away}) &= P(d\,\text{away}|\text{diametric})P(\text{diametric}) + P(d\,\text{away}|\text{semicircular})P(\text{semicircular}) \\
   &= 3\sqrt{2}\sqrt{\frac12 - d}\frac{4}{3\pi} + \frac{6}{3\pi-4}(1-d)\left(\pi-2\arcsin\frac{1-d}{d}\right)\left(1-\frac{4}{3\pi}\right)
 \end{align}$$
 
