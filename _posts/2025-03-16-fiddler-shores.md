@@ -46,7 +46,7 @@ To find the average distance, we could find the average of $(1-r)$ in the upper 
 
 ### Probability density
 
-In the diametric region, the probability that we're $y^*$ away from the beach is proportional to the length of the horizontal strip between the points where the curve crosses $y=t^{\*}$ (the blue dashed line in the diagram):
+In the diametric region, the probability that we're $y^*$ away from the beach is proportional to the length of the horizontal strip between the points where the curve crosses $y=y^{\*}$ (the blue dashed line in the diagram):
 
 $$\begin{align}
   P(y) &\propto \sqrt{\frac12 - y} \\
