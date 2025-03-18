@@ -59,7 +59,7 @@ This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get ${\thet
 
 $$\begin{align}
   P(r) &\propto 2r\left(\pi/2-\theta(r)\right) \\
-  &\propto r(\pi - 2\arcsin\frac{1-r}{r}) \\
+  &\propto r\left(\pi - 2\arcsin\frac{1-r}{r}\right) \\
   &= \frac{6}{3\pi-4}r\left(\pi-2\arcsin\frac{1-r}{r}\right). 
 \end{align}$$
 
