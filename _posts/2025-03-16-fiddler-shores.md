@@ -80,7 +80,7 @@ $$ \begin{align}
   &= 0.1918622728.
   \end{align}$$
 
-We can also find the median by binary search. The $\text{cdf}$ of $P(d)$ is $\int\limits_0^d\text{d}d^\prime P(d^\prime)$ which equals $\frac12$ when $d\approx 0.1742619734.$ 
+We can also find the median by binary search. The $\text{cdf}$ of $P(d)$ is $\int\limits_0^d\text{d}d^\prime P(d^\prime)$ which equals $\frac12$ when $d\approx 0.1742619757.$ 
 
 ![](/img/2025-03-16-fiddler-shores-cdf.png){:width="450px" class="image-centered"}
 
