@@ -55,7 +55,7 @@ $$\begin{align}
 
 In the semicircular region, the probability that we're at radius $r$ (i.e. at distance $(1-r)$ from the beach) is proportional to the length of the circular arc between the points where the curve is $r$ away from the origin (the salmon dashed curve in the diagram). 
 
-This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get $\theta = \arcsin(\frac{1-r}{r})$ and
+This occurs when $r\sin\theta = 1 - r.$ Solving this for $\theta$ we get ${\theta = \arcsin\frac{1-r}{r}}$ and
 
 $$\begin{align}
   P(r) &\propto 2r\left(\pi/2-\theta(r)\right) \\
