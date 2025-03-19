@@ -45,7 +45,7 @@ $$
   \begin{align}
     P_g(4) &= \frac{1}{2^4} = \frac{1}{16} \\
     P_g(3) &= \binom{4}{1}\frac{1}{2^5} = \frac18 \\
-    P_g(2) &= \frac12 - \frac{1}{2^4} - \binom{4}{1}\frac{1}{2^5} = \frac{5}{16}.
+    P_g(2) &= \frac12 P_g(3) - P_g(4) = \frac{5}{16}.
   \end{align}
 $$
 
