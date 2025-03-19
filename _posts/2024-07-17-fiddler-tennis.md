@@ -29,7 +29,7 @@ To do that, we're going to use partition functions to keep track of the probabil
 
 Before we start, let's summarize the $\text{GAME}\rightarrow\text{SET}\rightarrow\text{MATCH}$ scheme of tennis. 
 
-At the base level we have games, which are played to $4$ (or $7$ for a special kind of playoff game) and are one by getting the balance of the points. We then have sets which are won by getting a balance of the game. Finally, we have matches which are won by getting a balance of the games. 
+At the base level we have games, which are played to $4$ (or $7$ for a special kind of playoff game) and are won by getting the balance of the points. We then have sets which are won by getting a balance of the game. Finally, we have matches which are won by getting a balance of the games. 
 
 Games can be modeled independently of sets, sets are modeled in terms of games, and matches in terms of sets.
 
