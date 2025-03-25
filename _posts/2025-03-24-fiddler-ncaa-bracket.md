@@ -109,7 +109,7 @@ for r in range(d):
 and check inspect the value of $P\left[1,0\right].$ We get
 
 $$
-\begin{array}{c|c}
+\begin{array}{|c|c|} \hline
 d & P\left[1,0\right] \\ \hline
 1  & 0.6666666666666666  \\
 2  & 0.56 \\
@@ -125,7 +125,7 @@ d & P\left[1,0\right] \\ \hline
 12 & 0.5154313229728604 \\
 13 & 0.5154313454474818 \\
 14 & 0.5154313637871086 \\
-15 & 0.5154313716456237
+15 & 0.5154313716456237 \\ \hline
 \end{array}
 $$
 
