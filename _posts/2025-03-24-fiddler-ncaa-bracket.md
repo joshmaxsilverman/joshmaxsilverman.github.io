@@ -31,17 +31,17 @@ This puzzle brings up a practical question for any Duke fan — what is the prob
 
 The main insight we need to answer this question is that the probability a team makes it to round $(k+1)$ is equal to the probability they beat their opponent in round $k$ times the probability that they and their opponent make it to round $k$, summed over all of their potential round-$k$ opponents.
 
-Looking at the tree structure of the tournament, their potential opponents in round $k$ are all the teams in the opposing subtree at level $k$. If our team of interest is team $j$, and their opponents are indexed by $i$ then this gives us
+Looking at the tree structure of the tournament, the potential opponents in round $k$ are all the teams in the opposing subtree at level $k$. If our team of interest is team $j$, and their opponents are indexed by $i$ then this gives us
 
 $$ P(j\,\text{makes level}\, k+1) = P(j\,\text{makes level}\,k)\sum_{i\in\text{opp leaf}} P(i\,\text{makes level}\, k)P(j\,\text{beats}\, i). $$
 
-with the chance anyone makes it to the first level being $1$.
+with the chance any given team makes it to the first level being $1$.
 
-All we have left to do is to implement and evaluate this relationship.
+All we have to do is to implement and evaluate this relationship.
 
 ## Making the bracket
 
-First, we need to build the playoff bracket which we can do by following the prescription in the problem. Starting at the top, we descend the tree, and assume the best possible teams are facing off at each level. 
+First, we need to build the playoff bracket which we can do by following the prescription of the problem. Starting at the top, we descend the tree, and assume the best possible teams are facing off at each level. 
 
 Taking a $4$-team bracket for example, at the zeroth level we assume team $1$ has won the tournament. At the first level, we assume team $1$ is playing team $2^1 + 1 - 1 = 2.$ At the second level, on the left side of the tree, we assume team $1$ is playing team $2^2+1-1 = 4$ and that, on the right, team $2$ is playing team $2^2 - 2 = 3.$ 
 
