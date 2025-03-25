@@ -67,7 +67,7 @@ def Pbeat(j, i):
     return i / (j + i)
 ```
 
-Now, we have to implement the recursion from above. Starting at the bottom of the tree, we set the probability of a team making it to the first level to $1$
+Starting at the bottom of the tree, we set the probability of a team making it to the lowest level to $1$
 
 ```python
 P = defaultdict(lambda: 0.0)
@@ -75,9 +75,7 @@ for j in range(1, 2 ** d+1):
     P[(j, d)] = 1.0
 ```
 
-Next, we implement the main relationship. We find the probability that team $j$ makes it to level $k$ by adding over all ways they can get there and store the result in a dictionary $P\left[j, k\right]$.
-
-If we are at the leaves of the tree, then we tabulate the probability of each team making it to the next level of the tree (by looping over all possible matchups), and return the concatenation of the two subtrees. Otherwise we descend the tree:
+Next, we implement the recursion relationship. We found the probability that team $j$ makes it to level $k$ is the sum over all ways they can get there. If we are at the leaves of the tree, then we tabulate the probability of each team making it to the next level of the tree (by looping over all possible matchups), and return the concatenation of the two subtrees. Otherwise we descend the tree. We store the result in a dictionary $P\left[j, k\right]$.
 
 ```python
 def calc(b, k):
