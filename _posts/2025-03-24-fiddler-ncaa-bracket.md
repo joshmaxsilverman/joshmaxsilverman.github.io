@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Infinite March madness
 date: 2025/03/24
-subtitle:
-tags:
+subtitle: How often will Duke get to the final four when there are $2^k$ teams?
+tags: recursion trees
 ---
 
 >**Question**:
