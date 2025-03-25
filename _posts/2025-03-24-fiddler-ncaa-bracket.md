@@ -82,6 +82,8 @@ def calc(b, k):
 finally we loop over the rounds of the tournament
 
 ```python
+b = bracket(1, 1, d)
+
 for r in range(d):
   b = calc(b, 1)
 ```
