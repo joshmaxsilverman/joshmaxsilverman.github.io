@@ -7,7 +7,19 @@ subtitle: How often will Duke get to the final four when there are $2^k$ teams?
 tags: recursion trees
 ---
 
->**Question**:
+>**Question**: March Madness—the NCAA basketball tournament—is here!
+>
+>The single-elimination tournament consists of $64$ teams spread across four regions, each with teams seeded $1$ through $16.$ (In recent years, additional teams beyond the $64$ have been added, but you needn’t worry about these teams for this week’s puzzle.)
+>
+>Suppose in any matchup between teams with seeds $M$ and $N,$ the $M$-seed wins with probability $N/(M+N),$ while the $N$-seed wins with probability $M/(M+N).$ For example, if a $3$-seed plays a $5$-seed, then the $3$-seed wins with probability $5/8,$ while the $5$-seed wins with probability $3/8.$
+>
+>In one of the brackets, the top four seeds remain (i.e., the $1$-seed, the $2$-seed, the $3$-seed, and the $4$-seed). If case you’re not familiar with how such brackets work, at this point the $1$-seed and $4$-seed face off, as do the $2$-seed and $3$-seed. The winners then play each other.
+>
+>Instead of $16$ teams in a region, now suppose there are $2^k$ teams, where $k$ is a very large integer.
+>
+>The teams are seeded $1$ through $2^k$, and play in a traditional seeded tournament format. That is, in the first round, the sum of opponents’ seeds is $2^k+1.$ If the stronger team always advances, then the sum of opponents’ seeds in the second round is $2^{k−1}+1$, and so on. Of course, stronger teams may not always advance, but this convention tells you which seeds can play which other seeds in each round.
+>
+>For any such region with $2^k$ teams, what is the probability that the $1$-seed emerges victorious from the region?
 
 <!--more-->
 
@@ -15,19 +27,23 @@ tags: recursion trees
 
 ## Solution
 
-the chance player j makes it to level k+1 is the chance they make it to level k times the sum of the chance player i makes it to level k, times the chance they beat player i, over all players i in the other subtree:
+The main insight to solve this puzzle is that the probability a team makes it to round $(k+1)$ is equal to the probability they beat their opponent in round $k$ times the probability that they and their opponent make it to round $k$, summed over all of their potential round-$k$ opponents.
+
+Looking at the tree structure of the tournament, their potential opponents in round $k$ are all the teams in the opposing subtree at level $k$. If our team of interest is team $j$, and their opponents are indexed by $i$ then this gives us
 
 $$ P(j\,\text{makes level}\, k+1) = P(j\,\text{makes level}\,k)\sum_{i\in\text{opp leaf}} P(i\,\text{makes level}\, k)P(j\,\text{beats}\, i). $$
 
 with the chance anyone makes it to the first level being $1$.
 
+All we have left to do is to implement and evaluate this relationship.
+
 ## Making the bracket
 
-first, we need to build the playoff bracket. to do this, we can follow the prescription in the problem. as we descend the tree, we always assume the best possible teams are facing off. 
+First, we need to build the playoff bracket which we can do by following the prescription in the problem. Starting at the top, we descend the tree, and assume the best possible teams are facing off at each level. 
 
-taking a $4$-team bracket for example, at the zeroth level we assume team $1$ has won the tournament. at the first level, we assume team $1$ is playing team $2^1 + 1 - 1 = 2.$ at the second level, on the left side of the tree, we assume team $1$ is playing team $2^2+1-1 = 4$, and on the right, team $2$ is playing team $2^2 - 2 = 3.$ 
+Taking a $4$-team bracket for example, at the zeroth level we assume team $1$ has won the tournament. At the first level, we assume team $1$ is playing team $2^1 + 1 - 1 = 2.$ At the second level, on the left side of the tree, we assume team $1$ is playing team $2^2+1-1 = 4$ and that, on the right, team $2$ is playing team $2^2 - 2 = 3.$ 
 
-we can implement this algorithm in Python:
+Implementing this, we get:
 
 ```python
 def bracket(j, k, d):
@@ -37,21 +53,21 @@ def bracket(j, k, d):
         return (bracket(j, k + 1, d) , bracket(2 ** k + 1 - j, k + 1, d))
 ```
 
-running it for a $16$-team bracket, we get the expected result
+To check, we run it for a $16$-team bracket and get the expected result:
 
 ```
 (((((1,), (16,)), ((8,), (9,))), (((4,), (13,)), ((5,), (12,)))),
  ((((2,), (15,)), ((7,), (10,))), (((3,), (14,)), ((6,), (11,)))))
 ```
 
-likewise, the probability that team $j$ beats team $i$ is 
+The probability that team $j$ beats team $i$ is 
 
 ```python
 def Pbeat(j, i):
   return i / (j + i)
 ```
 
-now, we have to implement the definition of probability from above. starting at the bottom of the tree, we set the probability of any team making it to the first level to $1$
+Now, we have to implement the recursion from above. Starting at the bottom of the tree, we set the probability of a team making it to the first level to $1$
 
 ```python
 P = defaultdict(lambda: 0.0)
@@ -59,9 +75,9 @@ for j in range(1, 2 ** d+1):
   P[(j, d)] = 1.0
 ```
 
-next, we implement the main recursion. we have to find the probability that team $j$ makes it to level $k$ by adding over all ways team $j$ can get to level $k$, and store the result in a dictionary $P\left[j, k\right]$.
+Next, we implement the main relationship. We find the probability that team $j$ makes it to level $k$ by adding over all ways they can get there and store the result in a dictionary $P\left[j, k\right]$.
 
-in the same pass, we join adjacent leaves of the tree so that we can calculate the next level of ascent. 
+In the same pass, we concatenate opposing leaves of the tree so that we can calculate the next level of the recursion. 
 
 ```python
 def calc(b, k):
@@ -79,7 +95,7 @@ def calc(b, k):
     return (calc(b[0], k+1), calc(b[1], k+1))
 ```
 
-finally we loop over the rounds of the tournament
+Finally we loop over the rounds of the tournament
 
 ```python
 b = bracket(1, 1, d)
@@ -88,7 +104,7 @@ for r in range(d):
   b = calc(b, 1)
 ```
 
-which results in
+and check inspect the value of $P\left[1,0\right].$ We get
 
 $$
 \begin{array}{c|c}
@@ -111,6 +127,6 @@ d & P\left[1,0\right] \\ \hline
 \end{array}
 $$
 
-this suggests that the probability of the top-seed winning their region stabilizes somewhere around $\approx 0.515431.$
+This suggests that the probability of the top-seed winning their region stabilizes somewhere around $\approx 0.515431.$
 
 <br>
