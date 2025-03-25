@@ -106,7 +106,9 @@ for r in range(d):
   b = calc(b, 1)
 ```
 
-and check inspect the value of $P\left[1,0\right].$ We get
+and inspect the value of $P\left[1,0\right].$ 
+
+We get
 
 $$
 \begin{array}{|c|c|} \hline
