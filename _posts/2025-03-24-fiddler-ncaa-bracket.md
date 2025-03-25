@@ -33,7 +33,7 @@ The main insight we need to answer this question is that the probability a team 
 
 Looking at the tree structure of the tournament, the potential opponents in round $k$ are all the teams in the opposing subtree at level $k$. If our team of interest is team $j$, and their opponents are indexed by $i$ then this gives us
 
-$$ P(j\,\text{makes level}\, k+1) = P(j\,\text{makes level}\,k)\sum_{i\in\text{opp leaf}} P(i\,\text{makes level}\, k)P(j\,\text{beats}\, i). $$
+$$ P(j\,\text{makes level}\, k+1) = P(j\,\text{makes level}\,k)\sum_{i\in\text{opp subtree}} P(i\,\text{makes level}\, k)P(j\,\text{beats}\, i). $$
 
 with the chance any given team makes it to the first level being $1$.
 
