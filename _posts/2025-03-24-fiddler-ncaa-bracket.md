@@ -90,6 +90,7 @@ for r in range(d):
 
 which results in
 
+$$
 \begin{array}{c|c}
 d & \text{P(1\,\text{wins})} \\ \hline
 1  & 0.6666666666666666  \\
@@ -108,6 +109,7 @@ d & \text{P(1\,\text{wins})} \\ \hline
 14 & 0.5154313637871086 \\
 15 & 0.5154313716456237
 \end{array}
+$$
 
 this suggests that the probability of the top-seed winning their region stabilizes somewhere around $\approx 0.515431.$
 
