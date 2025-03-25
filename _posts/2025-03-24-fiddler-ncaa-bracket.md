@@ -92,7 +92,7 @@ which results in
 
 $$
 \begin{array}{c|c}
-d & \text{P(1\,\\text{wins})} \\ \hline
+d & \text{P(1\\,\text{wins})} \\ \hline
 1  & 0.6666666666666666  \\
 2  & 0.56 \\
 3  & 0.5279401592158792 \\
