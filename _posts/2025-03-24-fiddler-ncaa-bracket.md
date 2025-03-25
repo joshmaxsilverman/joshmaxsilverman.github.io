@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Infinite March madness
 date: 2025/03/24
-subtitle: How often will the $1$-seed make the final four when there are $2^k$ teams in their region?
+subtitle: How often will the $1$-seed make the final four when there are $\left(2^d-1\right)$ worse teams in their region?
 tags: recursion trees
 ---
 
