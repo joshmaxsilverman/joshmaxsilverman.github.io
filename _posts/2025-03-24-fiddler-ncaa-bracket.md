@@ -111,8 +111,8 @@ and check inspect the value of $P\left[1,0\right].$ We get
 $$
 \begin{array}{|c|c|} \hline
 d & P\left[1,0\right] \\ \hline
-1  & 0.6666666666666666  \\
-2  & 0.56 \\
+1  & 2/3  \\
+2  & 14/25 \\
 3  & 0.5279401592158792 \\
 4  & 0.5192183551301611 \\
 5  & 0.5166943992619705 \\
