@@ -79,7 +79,7 @@ for j in range(1, 2 ** d+1):
 
 Next, we implement the main relationship. We find the probability that team $j$ makes it to level $k$ by adding over all ways they can get there and store the result in a dictionary $P\left[j, k\right]$.
 
-In the same pass, we concatenate opposing leaves of the tree so that we can calculate the next level of the recursion. 
+If we are at the leaves of the tree, then we tabulate the probability of each team making it to the next level of the tree (by looping over all possible matchups), and return the concatenation of the two subtrees. Otherwise we descend the tree:
 
 ```python
 def calc(b, k):
