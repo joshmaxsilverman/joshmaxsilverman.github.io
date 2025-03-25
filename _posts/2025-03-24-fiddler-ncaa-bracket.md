@@ -23,7 +23,7 @@ tags: recursion trees
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-play-the-favorite))
 
 ## Solution
 
@@ -66,7 +66,7 @@ The probability that team $j$ beats team $i$ is
 
 ```python
 def Pbeat(j, i):
-  return i / (j + i)
+    return i / (j + i)
 ```
 
 Now, we have to implement the recursion from above. Starting at the bottom of the tree, we set the probability of a team making it to the first level to $1$
@@ -74,7 +74,7 @@ Now, we have to implement the recursion from above. Starting at the bottom of th
 ```python
 P = defaultdict(lambda: 0.0)
 for j in range(1, 2 ** d+1):
-  P[(j, d)] = 1.0
+    P[(j, d)] = 1.0
 ```
 
 Next, we implement the main relationship. We find the probability that team $j$ makes it to level $k$ by adding over all ways they can get there and store the result in a dictionary $P\left[j, k\right]$.
@@ -83,18 +83,18 @@ If we are at the leaves of the tree, then we tabulate the probability of each te
 
 ```python
 def calc(b, k):
-  if type(b[0][0]) is int:
-    left, right = b
+    if type(b[0][0]) is int:
+        left, right = b
 
-    for j in left:
-      for i in right:
-        P[(j,k-1)] += Pbeat(j, i) * P[(i, k)] * P[(j, k)]
-        P[(i,k-1)] += Pbeat(i, j) * P[(j, k)] * P[(i, k)]
+        for j in left:
+            for i in right:
+                P[(j,k-1)] += Pbeat(j, i) * P[(i, k)] * P[(j, k)]
+                P[(i,k-1)] += Pbeat(i, j) * P[(j, k)] * P[(i, k)]
     
-    return left + right
+        return left + right
   
-  else:
-    return (calc(b[0], k+1), calc(b[1], k+1))
+    else:
+        return (calc(b[0], k+1), calc(b[1], k+1))
 ```
 
 Finally we loop over the rounds of the tournament
@@ -103,7 +103,7 @@ Finally we loop over the rounds of the tournament
 b = bracket(1, 1, d)
 
 for r in range(d):
-  b = calc(b, 1)
+    b = calc(b, 1)
 ```
 
 and inspect the value of $P\left[1,0\right].$ 
