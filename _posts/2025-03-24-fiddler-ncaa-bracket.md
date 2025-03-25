@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Infinite March madness
 date: 2025/03/24
-subtitle: How often will Duke get to the final four when there are $2^k$ teams?
+subtitle: How often will the $1$-seed make the final four when there are $2^k$ teams in their region?
 tags: recursion trees
 ---
 
@@ -27,7 +27,9 @@ tags: recursion trees
 
 ## Solution
 
-The main insight to solve this puzzle is that the probability a team makes it to round $(k+1)$ is equal to the probability they beat their opponent in round $k$ times the probability that they and their opponent make it to round $k$, summed over all of their potential round-$k$ opponents.
+This puzzle brings up a practical question for any Duke fan — what is the probability we make the final four when there are $2^k$ worse teams in the way?
+
+The main insight we need to answer this question is that the probability a team makes it to round $(k+1)$ is equal to the probability they beat their opponent in round $k$ times the probability that they and their opponent make it to round $k$, summed over all of their potential round-$k$ opponents.
 
 Looking at the tree structure of the tournament, their potential opponents in round $k$ are all the teams in the opposing subtree at level $k$. If our team of interest is team $j$, and their opponents are indexed by $i$ then this gives us
 
