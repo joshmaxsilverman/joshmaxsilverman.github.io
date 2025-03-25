@@ -131,6 +131,6 @@ d & P\left[1,0\right] \\ \hline
 \end{array}
 $$
 
-This suggests that the probability of the top-seed winning their region stabilizes somewhere around $\approx 0.515431.$
+This suggests that the probability of the $1$-seed winning their region stabilizes somewhere around $\approx 0.515431.$
 
 <br>
