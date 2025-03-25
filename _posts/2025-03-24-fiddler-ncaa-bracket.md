@@ -15,11 +15,11 @@ tags: recursion trees
 >
 >In one of the brackets, the top four seeds remain (i.e., the $1$-seed, the $2$-seed, the $3$-seed, and the $4$-seed). If case you’re not familiar with how such brackets work, at this point the $1$-seed and $4$-seed face off, as do the $2$-seed and $3$-seed. The winners then play each other.
 >
->Instead of $16$ teams in a region, now suppose there are $2^k$ teams, where $k$ is a very large integer.
+>Instead of $16$ teams in a region, now suppose there are $2^d$ teams, where $d$ is a very large integer.
 >
->The teams are seeded $1$ through $2^k$, and play in a traditional seeded tournament format. That is, in the first round, the sum of opponents’ seeds is $2^k+1.$ If the stronger team always advances, then the sum of opponents’ seeds in the second round is $2^{k−1}+1$, and so on. Of course, stronger teams may not always advance, but this convention tells you which seeds can play which other seeds in each round.
+>The teams are seeded $1$ through $2^d$, and play in a traditional seeded tournament format. That is, in the first round, the sum of opponents’ seeds is $2^d+1.$ If the stronger team always advances, then the sum of opponents’ seeds in the second round is $2^{d−1}+1$, and so on. Of course, stronger teams may not always advance, but this convention tells you which seeds can play which other seeds in each round.
 >
->For any such region with $2^k$ teams, what is the probability that the $1$-seed emerges victorious from the region?
+>For any such region with $2^d$ teams, what is the probability that the $1$-seed emerges victorious from the region?
 
 <!--more-->
 
@@ -27,7 +27,7 @@ tags: recursion trees
 
 ## Solution
 
-This puzzle brings up a practical question for any Duke fan — what is the probability we make the final four when there are $2^k$ worse teams in the way?
+This puzzle brings up a practical question for any Duke fan — what is the probability we make the final four when there are $(2^d-1)$ worse teams in the way?
 
 The main insight we need to answer this question is that the probability a team makes it to round $(k+1)$ is equal to the probability they beat their opponent in round $k$ times the probability that they and their opponent make it to round $k$, summed over all of their potential round-$k$ opponents.
 
