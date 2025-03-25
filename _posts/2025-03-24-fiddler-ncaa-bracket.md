@@ -19,4 +19,8 @@ the chance player j makes it to level k+1 is the chance they make it to level k 
 
 $$ P(j\,\text{makes it to level}\, k) = \sum_i P(i\,\text{makes it to}\, k)P(j\,\text{beats}\, i). $$
 
+with the chance anyone makes it to the first level being $1$.
+
+
+
 <br>
