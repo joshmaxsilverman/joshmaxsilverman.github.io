@@ -56,7 +56,7 @@ def V(score_A, score_B):
 ```
 
 $$
-\begin{array}{c|c} 
+\begin{array}{|c|c|} 
  \text{Target score} & V(1,0) \\ \hline
  1 & 1 \\
  2 & \frac12 \\
@@ -72,7 +72,7 @@ $$
  12 & \frac12 \\
  13 & \frac{1255}{2048} \\
  14 & \frac12 \\
- 15 & \frac{2477}{4096}
+ 15 & \frac{2477}{4096} \hline
 \end{array}
 $$
 
