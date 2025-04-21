@@ -56,7 +56,7 @@ def V(score_A, score_B):
 ```
 
 $$
-\begin{array}{|c|c|} 
+\begin{array}{|c|c|} \hline
  \text{Target score} & V(1,0) \\ \hline
  1 & 1 \\
  2 & \frac12 \\
