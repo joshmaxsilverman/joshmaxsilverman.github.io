@@ -39,13 +39,16 @@ def V(score_A, score_B):
   accept = 1/2 * (V(score_A + 2, score_B) + V(score_A, score_B + 2))
   normal = 1/2 * (V(score_A + 1, score_B) + V(score_A, score_B + 1))
 
-  if min(B_rejects, accept) > normal and max(A_rejects, accept) < normal:
+  A_throws = min(B_rejects, accept) > normal
+  B_throws = max(A_rejects, accept) < normal
+
+  if A_throws and B_throws :
     return accept
 
-  if min(B_rejects, accept) > normal:
+  if A_throws:
     return min(B_rejects, accept)
   
-  if max(A_rejects, accept) < normal:
+  if B_throws:
     return max(A_rejects, accept)
   
   else:
@@ -56,20 +59,20 @@ $$
 \begin{array}{c|c} 
  \text{Target score} & V(1,0) \\ \hline
  1 & 1 \\
- 2 & 1/2 \\
- 3 & 3/4 \\
- 4 & 1/2 \\
- 5 & 11/16 \\
- 6 & 1/2 \\
- 7 & 21/32 \\
- 8 & 1/2 \\
- 9 & 163/256 \\
- 10 & 1/2 \\
- 11 & 319/512 \\
- 12 & 1/2 \\
- 13 & 1255/2048 \\
- 14 & 1/2 \\
- 15 & 2477/4096
+ 2 & \frac12 \\
+ 3 & \frac34 \\
+ 4 & \frac12 \\
+ 5 & \frac{11}{16} \\
+ 6 & \frac12 \\
+ 7 & \frac{21}{32} \\
+ 8 & \frac12 \\
+ 9 & \frac{163}{256} \\
+ 10 & \frac12 \\
+ 11 & \frac{319}{512} \\
+ 12 & \frac12 \\
+ 13 & \frac{1255}{2048} \\
+ 14 & \frac12 \\
+ 15 & \frac{2477}{4096}
 \end{array}
 $$
 
