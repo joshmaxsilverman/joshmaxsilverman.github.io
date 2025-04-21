@@ -28,10 +28,10 @@ putting this logic to code, we have
 ```python
 def V(score_A, score_B):
   
-  if score_A == TARGET_SCORE:
+  if score_A >= TARGET_SCORE:
     return 1
   
-  if score_B == TARGET_SCORE:
+  if score_B >= TARGET_SCORE:
     return 0
 
   B_rejects = V(score_A + 1, score_B)
