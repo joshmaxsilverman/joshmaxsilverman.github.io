@@ -61,8 +61,7 @@ def V(score_A, score_B):
   if B_throws:
     return max(A_rejects, accept)
 
-  else:
-    return normal
+  return normal
 
 ```
 
