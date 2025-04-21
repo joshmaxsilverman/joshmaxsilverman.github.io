@@ -66,13 +66,7 @@ def V(score_A, score_B):
 
 ```
 
-Running the function shows that a $1$-pt advantage to start the game gives a $3/4 = 75\%$ chance to win when the target score if $3$, and a $11/16 = 68.75\%$ chance to win when the target is $5.$ As the target score grows, the initial advantage is less consequential. Curiously, when the target score is even, there is no advantage. The reason is essentially that the person leading and the person trailing require the same number of $2$-pt shots to make it to the target. 
-
-With a score gap of $1$, the up player is not incentivized to throw the hammer. If they don't, the worst that can happen is the game ends up tied. If they do, the other player will accept the hammer, since they don't want the certain chance to fall into a deeper hole. 
-
-On the other hand, the down player will elect to throw the hammer since it either ties them or puts them ahead. The lead player will accept.
-
-This means that with a $1$-pt gap, the lead and trail player are locked into a series of $2$-pt games which means they have the same number of holes to win to win the game and, so, the odds are even.
+Running the function shows that a $1$-pt advantage to start the game gives a $3/4 = 75\%$ chance to win when the target score if $3$, and a $11/16 = 68.75\%$ chance to win when the target is $5.$ As the target score grows, the initial advantage is less consequential. 
 
 The results for setting the target score up to $15$ are:
 
@@ -96,3 +90,11 @@ $$
  15 & \frac{2477}{4096} \approx 60.5\% \\ \hline
 \end{array}
 $$
+
+Curiously, when the target score is even, there is no advantage. The reason is essentially that the person leading and the person trailing require the same number of $2$-pt shots to make it to the target. 
+
+With a score gap of $1$, the up player is not incentivized to throw the hammer. If they don't, the worst that can happen is the game ends up tied. If they do, the other player will accept the hammer, since they don't want the certain chance to fall into a deeper hole. 
+
+On the other hand, the down player will elect to throw the hammer since it either ties them or puts them ahead. The lead player will accept.
+
+This means that with a $1$-pt gap, the lead and trail player are locked into a series of $2$-pt games which means they have the same number of holes to win to win the game and, so, the odds are even.
