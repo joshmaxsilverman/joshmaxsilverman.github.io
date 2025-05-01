@@ -15,4 +15,6 @@ tags:
 
 ## Solution
 
+![](/img/2025-04-30-JS-zero-or-one-tree.png){:width="450-px" class="image-centered"}
+
 <br>
