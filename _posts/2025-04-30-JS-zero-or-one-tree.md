@@ -20,7 +20,7 @@ $$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
 $$ P_\text{zero} = 
   \begin{cases} 
     0 & p < \frac12 \\ 
-    \frac{2p-1}{p} & p \geq \frac12 
+    \dfrac{2p-1}{p} & p \geq \frac12 
   \end{cases} 
 $$
 
