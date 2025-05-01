@@ -17,7 +17,12 @@ tags:
 
 $$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
 
-$$ P_\text{zero} = \begin{cases} 0 & p < \frac12 \\ \frac{2p-1}{p} & p \geq \frac12 \end{cases} $$
+$$ P_\text{zero} = 
+  \begin{cases} 
+    0 & p < \frac12 \\ 
+    \frac{2p-1}{p} & p \geq \frac12 
+  \end{cases} 
+$$
 
 $$ P_\text{either} = 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} + (1-p)P^2_\text{zero}) $$
 
