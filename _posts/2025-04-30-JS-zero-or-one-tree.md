@@ -15,6 +15,10 @@ tags:
 
 ## Solution
 
+$$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
+
+$$ P_\text{either} = 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} + (1-p)P^2_\text{zero}) $$
+
 $$ 
   \begin{align}
     p_{1/2} &= \frac{1}{9} \left(10-\frac{4\ 2^{2/3}}{\sqrt[3]{9 \sqrt{57}-67}}+\sqrt[3]{2 \left(9 \sqrt{57}-67\right)}\right) \\ 
