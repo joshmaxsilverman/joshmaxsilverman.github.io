@@ -66,7 +66,7 @@ as with the extra credit, we can find the value of the endgame by comparing the 
 
 $$ 
   \begin{align}
-    \text{endgame}(r) &= \frac1r \left(1 + \text{endgame}(r)\right) + \left(1-\frac1r\right)\text{endgame}(r-1) \\
+    \text{endgame}(r) &= \frac1r \left(1 + \text{endgame}(r-1)\right) + \left(1-\frac1r\right)\text{endgame}(r-1) \\
                       &= \frac1r + \text{endgame}(r-1)
   \end{align}
 $$
