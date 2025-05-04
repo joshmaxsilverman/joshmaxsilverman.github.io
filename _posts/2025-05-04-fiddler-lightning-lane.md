@@ -71,7 +71,7 @@ $$
   \end{align}
 $$
 
-and $\text{endgame}(r) = 1/r + \frac1{r-1} + \ldots + \frac12 + 1 = H_r. $
+and $\text{endgame}(r) = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
 so, 
 
