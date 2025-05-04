@@ -73,6 +73,10 @@ $$
 
 and $\text{endgame}(r) = 1/r + \frac1{r-1} + \ldots + \frac12 + 1 = H_r. $
 
+so, 
+
+$$\langle \text{rides} \rangle = \sum_(r=3)^12 \frac{\binom{r - 1}{2}}{\binom{12}{3}}\left(H_{12 - r} + 3\right) = 118361/27720 $$
+
 
 
 
