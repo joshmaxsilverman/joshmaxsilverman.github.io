@@ -46,7 +46,8 @@ $$
          &= \frac3N + \frac3{N-1} + R(N-2) \\
          &= 3\left(\frac1N + \frac1{N-1} + \ldots + \frac14 + \frac14\right) + R(3) \\
          &= 3\left(H_{12} - \frac13 - \frac12 - 1\right) + 3 \\
-         &= 3H_{12} - \frac52
+         &= 3H_{12} - \frac52 \\
+         &\approx 6.80963
   \end{align}
 $$
 
