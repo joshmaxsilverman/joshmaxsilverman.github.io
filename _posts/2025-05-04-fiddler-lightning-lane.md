@@ -38,7 +38,7 @@ $$
 
 so, adding an $N^\text{th}$ timeslot adds $3/N$ extra rides in expectation.
 
-following the recursion down, we get
+following the recursion down, [we get](https://www.wolframalpha.com/input?i=3+harmonicnumber%2812%29+-+5%2F2)
 
 $$ 
   \begin{align}
