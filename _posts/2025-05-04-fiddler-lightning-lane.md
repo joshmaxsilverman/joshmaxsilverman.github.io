@@ -54,24 +54,24 @@ the standard problem is actually more complicated. whereas in the extra credit, 
 
 ### Standard credit
 
-after you take your first ride, you're playing a new game where you have $r$ remaining timeslots, and you continue drawing from the remainder until you reach the final timeslot. let's call this the endgame. the number of time slots $r$ in the endgame is determined by the highest time slot you got in your original allotment of $3$ random timeslots. 
+after you take your first ride, you're playing a new game where you have $r$ remaining timeslots, and you continue drawing from the remainder until you reach the final timeslot — let's call this the endgame, with value $E(r)$. the number of time slots $r$ in the endgame is determined by the highest time slot you got in your original allotment of $3$ random timeslots. 
 
 the probability that your largest time slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3}.$
 
 so, the expected number of rides is
 
-$$ \langle\text{rides}\rangle = \sum_{r=1}^{N}\left(3 + \text{endgame}(N-r)\right)P(r). $$
+$$ R(N) = \sum_{r=1}^{N}\left(3 + E(N-r)\right)P(r). $$
 
 as with the extra credit, we can find the value of the endgame by comparing the situation with $r$ remaining to the one with $(r-1)$ remaining:
 
 $$ 
   \begin{align}
-    \text{endgame}(r) &= \frac1r \left(1 + \text{endgame}(r-1)\right) + \left(1-\frac1r\right)\text{endgame}(r-1) \\
-                      &= \frac1r + \text{endgame}(r-1)
+    E(r) &= \frac1r \left(1 + E(r-1)\right) + \left(1-\frac1r\right)E(r-1) \\
+                      &= \frac1r + E(r-1)
   \end{align}
 $$
 
-and $\text{endgame}(r) = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
+and $E(r) = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
 so, 
 
