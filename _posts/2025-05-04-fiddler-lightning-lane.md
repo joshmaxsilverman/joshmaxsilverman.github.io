@@ -73,7 +73,7 @@ $$
 
 and $E(r) = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
-so, 
+so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
 
 $$\langle \text{rides} \rangle = \sum_{r=3}^{12} \dfrac{\binom{r - 1}{2}}{\binom{12}{3}}\left(H_{12 - r} + 3\right) = 118361/27720 $$
 
