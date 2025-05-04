@@ -29,8 +29,8 @@ call $R(N)$ the number of rides we expect with $N$ timeslots, the above argues
 
 $$ 
   \begin{align}
-    R(N) &= \frac3n (1 + R(N-1)) + (1-\frac3n)R(N-1) \\
-         &= R(N-1) + \frac3n.
+    R(N) &= \frac3n \left(1 + R(N-1)\right) + \left(1-\frac3N\right)R(N-1) \\
+         &= R(N-1) + \frac3N.
   \end{align} 
 $$
 
