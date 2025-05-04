@@ -60,7 +60,7 @@ the probability that your largest time slot in the original draw is $r$ is $P(r)
 
 so, the expected number of rides is
 
-$$ R(N) = \sum_{r=1}^{N}\left(3 + E(N-r)\right)P(r). $$
+$$ R(N) = \sum_{r=3}^{N}\left(3 + E(N-r)\right)P(r). $$
 
 as with the extra credit, we can find the value of the endgame by comparing the situation with $r$ remaining to the one with $(r-1)$ remaining:
 
