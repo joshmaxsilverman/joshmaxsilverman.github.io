@@ -23,7 +23,7 @@ after the initial selections are made, the rider is equally likely to add any of
 
 consider the set of all possible schedules given $N$ total time slots and pick one at random. 
 
-if you did not pick the first timeslot (probability $(1-3/N)$)), then you are in a situation you could have been in with $(N-1)$ time slots. but, if you did pick the first timeslot (probability $3/N$) you now have an extra ride since after you finish your first ride, you will be in a valid situation from R(n-1).
+if you did not pick the first timeslot (probability $(1-3/N)$), then you are in a situation you could have been in with $(N-1)$ time slots. but, if you did pick the first timeslot (probability $3/N$) you now have an extra ride since after you finish your first ride, you will be in a valid situation from R(n-1).
 
 for example, take $N=6$ and an initial schedule $(2,4,6).$ this is a situation we could have been in with $N=5$ time slots, since we have effectively wasted the first time slot by not picking it. by contrast, if our initial schedule is $(1,4,6)$, then after the first ride we will draw another time slot at random (either $2$, $3$, or $5$), giving schedules $(2,4,6)$, $(3,4,6)$ or $(4,5,6)$ plus one ride already completed.
 
