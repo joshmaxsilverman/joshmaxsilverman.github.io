@@ -79,7 +79,9 @@ so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7
 $$\langle \text{rides} \rangle = \sum_{r=3}^{12} \dfrac{\binom{r - 1}{2}}{\binom{12}{3}}\left(H_{12 - r} + 3\right) = 118361/27720 $$
 
 
+![](2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
+![](2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
 
 
