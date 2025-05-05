@@ -33,19 +33,21 @@ tags: recursion
 
 ## Solution
 
-we're going to start backward and deal with the extra credit first.
+This week, the extra credit is actually simpler so we'll solve it first.
 
 ### Extra credit
 
-after the initial selections are made, the rider is equally likely to add any of the remaining time slots to their schedule, even if it starts before one of their currently scheduled rides.
+The day starts off with the random assignment of three time slots out of the $12$ available. After we finish the first ride, we are randomly assigned another random time slot out of the ones yet to occur.
 
-consider the set of all possible schedules given $N$ total time slots, $\mathcal{S}_N$, and pick one at random. 
+After initial selections are made, the rider is equally likely to add any of the remaining time slots to their schedule, even if it starts before one of their currently scheduled rides. This means that after the first ride, we are in the same position as we were before: in possession of a three-ride schedule with some number of free time slots available for further assignment. This lets us relate expectations.
 
-if you didn't pick the first time slot (probability $(1-3/N)$), then you're in a situation you could have been in with $(N-1)$ time slots. but, if you did pick the first timeslot (probability $3/N$) you now have an extra ride since after you finish your first ride, you will be in a valid situation from $\mathcal{S}_{N-1}.$
+Let's consider the set of all possible initial schedules given $N$ total time slots, $\mathcal{S}_N$, and pick one schedule from it at random. 
 
-for example, take $N=6$ and an initial schedule $(2,4,6).$ this is a situation we could have been in with $N=5$ time slots, since we have effectively wasted the first time slot by not picking it. by contrast, if our initial schedule is $(1,4,6)$, then after the first ride we will draw another time slot at random (either $2$, $3$, or $5$), giving schedules $(2,4,6)$, $(3,4,6)$ or $(4,5,6)$ plus one ride already completed.
+If the schedule we pick doesn't use the first time slot (probability $(1-3/N)$), then we're in a situation we could start out in with $(N-1)$ time slots, i.e. the schedule is in $\mathcal{S}_{N-1}$. If the schedule we picked does use the first timeslot (probability $3/N$) then once we take the first ride, we will have a schedule that's in $\mathcal{S}_{N-1}.$
 
-call $R_N$ the number of rides we expect with $N$ timeslots, the above argues
+For example, take $N=6$ and an initial schedule $(2,4,6).$ This is a situation we could have been in with $N=5$ time slots. Since we have effectively wasted the first time slot by not picking it, we can map the labels $2\rightarrow 1, 4\rightarrow 3,$ and $6\rightarrow 5$ to get $(1,3,5)$ a bone fide schedule in $\mathcal{S}_{N-1}.$ By contrast, if our initial schedule is $(1,4,6)$, then after the first ride we will draw another time slot at random (either $2$, $3$, or $5$), giving schedules $(2,4,6)$, $(3,4,6)$ or $(4,5,6)$ plus one completed ride.
+
+If we call $R_N$ the number of rides we expect with $N$ timeslots, the above argument becomews
 
 $$ 
   \begin{align}
@@ -54,9 +56,7 @@ $$
   \end{align} 
 $$
 
-so, adding an $N^\text{th}$ timeslot adds $3/N$ extra rides in expectation.
-
-following the recursion down, [we get](https://www.wolframalpha.com/input?i=3+harmonicnumber%2812%29+-+5%2F2)
+So, adding an $N^\text{th}$ timeslot to the system adds $3/N$ extra rides in expectation. Following the recursion down, [we get](https://www.wolframalpha.com/input?i=3+harmonicnumber%2812%29+-+5%2F2)
 
 $$ 
   \begin{align}
@@ -78,23 +78,25 @@ $$
   \end{align}
 $$
 
-plotting the calculation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement:
+Plotting the calculation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement:
 
 ![](/img/2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
-the standard problem is actually more complicated. whereas in the extra credit, we keep playing the same game with fewer time slots, the standard credit transitions you between fundamentally different games.
+The standard problem is actually more complicated. Whereas in the extra credit, the first time slot in our schedule determines the number of remaining time slots, the standard credit conditions this on the maximum time slot in our schedule.
+
+<!-- we keep playing the same game with fewer time slots, the standard credit transitions you between fundamentally different games. -->
 
 ### Standard credit
 
-after you take your first ride, you're playing a new game where you have $r$ remaining timeslots, and you continue drawing from the remainder until you reach the final timeslot — let's call this the endgame, with value $E_r$. the number of time slots $r$ in the endgame is determined by the highest time slot you got in your original allotment of $3$ random timeslots. 
+After we take our first ride, we're playing a new game where we have $r$ remaining timeslots, and we continue drawing from the remainder until we reach the final timeslot. Let's call this second phase the endgame, and expected number of rides we get from it $E_r$. The number of time slots $r$ in the endgame is determined by the latest time slot we got in our original allotment of $3$ random timeslots. 
 
-the probability that your largest time slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3}.$
+The probability that our latest txime slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3},$ that's because we know the third time slot is at $r$ (probability $1$) and there are $\binom{r-1}{2}$ ways to pick $2$ slots less than $r.$
 
-so, the expected number of rides is
+So, the expected number of rides is
 
 $$ R_N = \sum_{r=3}^{N}\left(3 + E_{N-r}\right)P(r). $$
 
-as with the extra credit, we can find the value of the endgame by comparing the situation with $r$ remaining to the one with $(r-1)$ remaining:
+As with the extra credit, we can find the value of the endgame by comparing the endgame with $r$ remaining time slots to the one with $(r-1)$ remaining time slots:
 
 $$ 
   \begin{align}
@@ -105,15 +107,16 @@ $$
 
 and $E_r = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
-so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
+So the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
 
-$$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\right) $$
+$$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\right), $$
 
 which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
-plotting the series summation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
+
+Plotting the series summation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
-
+The gains from additional time slots take a while to accumuate. While we're guaranteed $3$ in the $N=3$ time slot scenario, by $N=70$ time slots the expected number of rides is just under $6,$ meaning about half the value is still from the initial allotment.
 
 <br>
