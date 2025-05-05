@@ -7,7 +7,7 @@ subtitle: What's the chance the somebody comes across just zero or one labels on
 tags: recursion trees
 ---
 
->**Question**: For a fixed $p,$ independently label the nodes of an infinite complete binary tree $0$ with probability $p,$ and $1$ otherwise. For what $p$ is there exactly a $1/2$ probability that there exists an infinite path down the tree that sums to at most $1$ (that is, all nodes visited, with the possible exception of one, will be labeled $0$)?
+>**Question**: For a fixed $p,$ independently label the nodes of an infinite complete binary tree $0$ with probability $p,$ and $1$ otherwise. For what $p$ is there exactly a $1/2$ probability that there exists an infinite path down the tree that sums to at most $1$ $($that is, all nodes visited, with the possible exception of one, will be labeled $0)?$
 
 <!--more-->
 
