@@ -15,11 +15,11 @@ tags: recursion trees
 
 ## Solution
 
-to access a path with at most one label placed, it either must be the case that:
+To access a path with at most one label placed, it either must be the case that:
 - the current node is labelless and goes on to a path with at most one label placed, or
 - the current node is labelled and goes on to a path with no labels placed.
 
-calling the probability of a zero-label path $P_\text{zero},$ and the probability of a path with at most one label $P_\text{either},$ we can capture this with the following equation:
+Calling the probability of a zero-label path $P_\text{zero},$ and the probability of a path with at most one label $P_\text{either},$ we can capture this with the following equation:
 
 $$ 
   \begin{align}
@@ -28,11 +28,11 @@ $$
   \end{align}
 $$
 
-we can find the probability of a zero-label path with the same kind of analysis:
+We can find the probability of a zero-label path with the same kind of analysis:
 
-$$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
+$$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero}. $$
 
-which is solved by
+This is solved by
 
 $$ P_\text{zero} = 
   \begin{cases} 
@@ -41,12 +41,12 @@ $$ P_\text{zero} =
   \end{cases} 
 $$
 
-this is zero until $p=\frac12$ and then it shoots up, approaching $1$ as $p$ approaches $1.$ plugging this solution into the first equation, we can solve it for $P_\text{either}$:
+So, $P_\text{zero}$ is zero until $p=\frac12$ after which it shoots up, approaching $1$ as $p$ approaches $1.$ Plugging this solution into the first equation, we can solve it for $P_\text{either}$:
 
 
-$$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p} $$
+$$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p}. $$
 
-plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac12$:
+Plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac12$:
 
 $$ 
   \begin{align}
@@ -55,7 +55,7 @@ $$
   \end{align} 
 $$
 
-plotting $P_\text{either}$ alongside $P_\text{zero},$ we see similar thresholding behavior with a much steeper rise after $p=\frac12$:
+Plotting $P_\text{either}$ alongside $P_\text{zero},$ we see similar thresholding behavior with a much steeper rise after $p=\frac12$:
 
 ![](/img/2025-04-30-JS-zero-or-one-tree.png){:width="450-px" class="image-centered"}
 
