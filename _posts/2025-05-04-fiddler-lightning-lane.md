@@ -60,7 +60,7 @@ $$
   \end{align}
 $$
 
-plotting the calculation alongside an $N=10^6$ trial simulation, there is good agreement:
+plotting the calculation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement:
 
 ![](/img/2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
@@ -92,7 +92,7 @@ so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7
 $$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\right) $$
 
 which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
-plotting the series alongside an $N=10^6$ trial simulation, there is good also agreement.
+plotting the series summation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
