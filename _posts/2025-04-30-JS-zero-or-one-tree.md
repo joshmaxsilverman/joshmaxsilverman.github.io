@@ -51,7 +51,7 @@ plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac{1/2}$
 $$ 
   \begin{align}
     p_{1/2} &= \dfrac{1}{9} \left(10-\dfrac{4\ 2^{2/3}}{\sqrt[3]{9 \sqrt{57}-67}}+\sqrt[3]{2 \left(9 \sqrt{57}-67\right)}\right) \\ 
-                &\approx 0.5306035754 
+            &\approx 0.5306035754 
   \end{align} 
 $$
 
