@@ -46,7 +46,7 @@ this is zero until $p=\frac12$ and then it shoots up, approaching $1$ as $p$ app
 
 $$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p} $$
 
-plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac{1/2}$:
+plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac12$:
 
 $$ 
   \begin{align}
