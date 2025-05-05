@@ -1,9 +1,9 @@
 ---
 layout: post
 published: true
-title: Lightning lanes
+title: How many rides can you reserve?
 date: 2025/05/04
-subtitle: 
+subtitle: How many rides will you get if you throw Mickey a little money on the side?
 tags: recursion
 ---
 
@@ -11,7 +11,7 @@ tags: recursion
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/how-many-rides-can-you-reserve))
 
 ## Solution
 
@@ -44,12 +44,23 @@ $$
   \begin{align}
     R_N &= \frac3N + R_{N-1} \\
          &= \frac3N + \frac3{N-1} + R_{N-2} \\
-         &= 3\left(\frac1N + \frac1{N-1} + \ldots + \frac14 + \frac14\right) + R(3) \\
-         &= 3\left(H_{12} - \frac13 - \frac12 - 1\right) + 3 \\
-         &= 3H_{12} - \frac52 \\
-         &\approx 6.80963
+         &= 3\left(\frac1N + \frac1{N-1} + \ldots + \frac15 + \frac14\right) + R(3) \\
+         &= 3\left(H_{N} - \frac13 - \frac12 - 1\right) + 3 \\
+         &= 3H_{N} - \frac52 \\
   \end{align}
 $$
+
+which for $N=12$ is equal to 
+
+$$
+  \begin{align}
+    R_{12} &= 3H_{12} - 5/2 \\
+           &= \frac{62921}{9240} \\
+           &\approx 6.80963
+  \end{align}
+$$
+
+plotting the calculation alongside an $N=10^6$ trial simulation, there is good agreement:
 
 ![](/img/2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
@@ -79,6 +90,8 @@ and $E_r = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
 
 $$\langle \text{rides} \rangle = \sum_{r=3}^{12} \dfrac{\binom{r - 1}{2}}{\binom{12}{3}}\left(H_{12 - r} + 3\right) = 118361/27720 $$
+
+plotting the series alongside an $N=10^6$ trial simulation, there is good also agreement.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
