@@ -43,7 +43,7 @@ After initial selections are made, the rider is equally likely to add any of the
 
 Let's consider the set of all possible initial schedules given $N$ total time slots, $\mathcal{S}_N$, and pick one schedule from it at random. 
 
-If the schedule we pick doesn't use the first time slot (probability $(1-3/N)$), then we're in a situation we could start out in with $(N-1)$ time slots, i.e. the schedule is in $\mathcal{S}_{N-1}$. If the schedule we picked does use the first timeslot (probability $3/N$) then once we take the first ride, we will have a schedule that's in $\mathcal{S}_{N-1}.$
+If the schedule we pick doesn't use the first time slot (probability $(1-3/N)$), then we're in a situation we could start out in with $(N-1)$ time slots, i.e. the schedule is in $\mathcal{S}\_{N-1}$. If the schedule we picked does use the first timeslot (probability $3/N$) then once we take the first ride, we will have a schedule that's in $\mathcal{S}_{N-1}.$
 
 For example, take $N=6$ and an initial schedule $(2,4,6).$ This is a situation we could have been in with $N=5$ time slots. Since we have effectively wasted the first time slot by not picking it, we can map the labels $2\rightarrow 1, 4\rightarrow 3,$ and $6\rightarrow 5$ to get $(1,3,5)$ a bone fide schedule in $\mathcal{S}_{N-1}.$ By contrast, if our initial schedule is $(1,4,6)$, then after the first ride we will draw another time slot at random (either $2$, $3$, or $5$), giving schedules $(2,4,6)$, $(3,4,6)$ or $(4,5,6)$ plus one completed ride.
 
