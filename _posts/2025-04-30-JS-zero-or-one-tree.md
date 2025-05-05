@@ -15,6 +15,8 @@ tags:
 
 ## Solution
 
+to 
+
 $$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
 
 $$ P_\text{zero} = 
@@ -24,7 +26,7 @@ $$ P_\text{zero} =
   \end{cases} 
 $$
 
-$$ P_\text{either} = 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} + (1-p)P^2_\text{zero}) $$
+$$ P_\text{either} = P(\text{at least one 0) + P(\text{at least one 1) = 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} - (1-p)P^2_\text{zero}) $$
 
 $$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p} $$
 
