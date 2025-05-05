@@ -7,7 +7,25 @@ subtitle: How many rides will you get if you throw Mickey a little money on the 
 tags: recursion
 ---
 
->**Question**:
+>**Question**: I was recently a guest at Disney World, which has a new system called “Lightning Lane” for reserving rides in advance—for a fee, of course.
+>
+>By purchasing “Lightning Lane Multi Pass,” you can reserve three of the many rides in a park, with each ride occurring at a different hourlong time slot. For simplicity, suppose the park you’re visiting (let’s say it’s Magic Kingdom) has 12 such time slots, from 9 a.m. to 9 p.m. So if you have the 3 p.m. time slot for a ride, then you can skip the “standby lane” and board the much shorter “Lightning Lane” at any point between 3 and 4 p.m. Assume you can complete at most one ride within each hourlong time slot.
+>
+>Once you have completed the first ride on your Multi Pass, you can reserve a fourth ride at any time slot after your third ride. This way, you always have at most three reservations. Similarly, after you have completed your second ride, you can reserve a fifth ride at any time slot after your fourth, and so on, up until you are assigned a ride at the 8 p.m. (to 9 p.m.) time slot. That will be your final ride of the day.
+>
+>Magic Kingdom happens to be very busy at the moment, and so each ride is randomly assigned a valid time slot when you request it. The first three rides of the day are equally likely to be in any of the 12 time slots, whereas subsequent rides are equally likely to occur in any slot after your currently latest scheduled ride.
+>
+>On average, how many rides can you expect to “Lightning Lane” your way through today at Magic Kingdom?
+>
+> **Extra Credit**
+>
+>If you’re a Disney aficionado, then you know that week’s Fiddler is in fact an oversimplification of how Lightning Lane actually works. Let’s make things a little more realistic.
+>
+>This time around, after you complete the first ride on your Multi Pass, you can reserve a fourth ride at any time slot after your first completed ride (rather than after your third ride). Similarly, after you have completed your second ride, you can reserve a fifth ride at any time slot after your second completed ride, and so on, until there are no available time slots remaining.
+>
+>As before, the first three rides of the day are equally likely to be in any of the 12 time slots, whereas subsequent rides are equally likely to occur in any remaining available slots for the day.
+>
+>On average, how many rides can you expect to “Lightning Lane” your way through today at Magic Kingdom?
 
 <!--more-->
 
