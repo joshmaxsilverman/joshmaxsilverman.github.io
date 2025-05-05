@@ -56,7 +56,7 @@ $$
   \begin{align}
     R_{12} &= 3H_{12} - 5/2 \\
            &= \frac{62921}{9240} \\
-           &\approx 6.80963
+           &\approx 6.80963\,\text{rides}
   \end{align}
 $$
 
@@ -89,8 +89,9 @@ and $E_r = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
 so the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
 
-$$\langle \text{rides} \rangle = \sum_{r=3}^{12} \dfrac{\binom{r - 1}{2}}{\binom{12}{3}}\left(H_{12 - r} + 3\right) = 118361/27720 $$
+$$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\right) $$
 
+which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
 plotting the series alongside an $N=10^6$ trial simulation, there is good also agreement.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
