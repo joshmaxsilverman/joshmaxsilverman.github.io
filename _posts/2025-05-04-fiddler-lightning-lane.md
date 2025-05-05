@@ -48,7 +48,7 @@ Let's consider the set of all possible initial schedules given $N$ total time sl
 
 For example, take $N=6$ and an initial schedule $(2,4,6).$ This is a situation we could have been in with $N=5$ time slots. Since we have effectively wasted the first time slot by not picking it, we can map the labels $2\rightarrow 1, 4\rightarrow 3,$ and $6\rightarrow 5$ to get $(1,3,5),$ a bona fide schedule in $\mathcal{S}_{N-1}.$ By contrast, if our initial schedule is $(1,4,6)$, then after the first ride we will draw another time slot at random (either $2$, $3$, or $5$), giving schedules $(2,4,6)$, $(3,4,6)$ or $(4,5,6)$ plus one completed ride.
 
-If we call $R_N$ the number of rides we expect with $N$ timeslots, the above argument becomews
+If we call $R_N$ the number of rides we expect with $N$ timeslots, the above argument becomes
 
 $$ 
   \begin{align}
@@ -63,7 +63,7 @@ $$
   \begin{align}
     R_N &= \frac3N + R_{N-1} \\
          &= \frac3N + \frac3{N-1} + R_{N-2} \\
-         &= 3\left(\frac1N + \frac1{N-1} + \ldots + \frac15 + \frac14\right) + R(3) \\
+         &= 3\left(\frac1N + \frac1{N-1} + \ldots + \frac15 + \frac14\right) + R_3 \\
          &= 3\left(H_{N} - \frac13 - \frac12 - 1\right) + 3 \\
          &= 3H_{N} - \frac52 \\
   \end{align}
@@ -89,9 +89,9 @@ The standard problem is actually more complicated. Whereas in the extra credit, 
 
 ### Standard credit
 
-After we take our first ride, we're playing a new game where we have $r$ remaining timeslots, and we continue drawing from the remainder until we reach the final timeslot. Let's call this second phase the endgame, and expected number of rides we get from it $E_r$. The number of time slots $r$ in the endgame is determined by the latest time slot we got in our original allotment of $3$ random timeslots. 
+After we take our first ride, we're playing a new game where we have $r$ remaining time slots, and we continue drawing from the remainder until we reach the final time slot. Let's call this second phase the endgame, and expected number of rides we get from it $E_r$. The number of time slots $r$ in the endgame is determined by the latest time slot we got in our original allotment of $3$ random time slots. 
 
-The probability that our latest txime slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3},$ that's because we know the third time slot is at $r$ (probability $1$) and there are $\binom{r-1}{2}$ ways to pick $2$ slots less than $r.$
+The probability that our latest time slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3},$ that's because we know the third time slot is at $r$ (probability $1$) and there are $\binom{r-1}{2}$ ways to pick $2$ slots less than $r.$
 
 So, the expected number of rides is
 
@@ -114,10 +114,10 @@ $$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\
 
 which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
 
-Plotting the series summation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
+Plotting the series (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
-The gains from additional time slots take a while to accumuate. While we're guaranteed $3$ in the $N=3$ time slot scenario, by $N=70$ time slots the expected number of rides is just under $6,$ meaning about half the value is still from the initial allotment.
+The gains from additional time slots take a while to accumulate. While we're guaranteed $3$ in the $N=3$ time slot scenario, by $N=70$ time slots the expected number of rides is just under $6,$ meaning about half the value is still from the initial allotment.
 
 <br>
