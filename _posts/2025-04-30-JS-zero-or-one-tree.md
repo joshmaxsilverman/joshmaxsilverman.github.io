@@ -1,23 +1,38 @@
 ---
 layout: post
-published: false
-title: 
+published: true
+title: Sum one, somewhere
 date: 2025/04/30
-subtitle:
-tags:
+subtitle: What's the chance the somebody comes across just zero or one labels on an unending walk down a binary tree with nodes randomly blessed with a label?
+tags: recursion trees
 ---
 
->**Question**:
+>**Question**: For a fixed $p,$ independently label the nodes of an infinite complete binary tree $0$ with probability $p,$ and $1$ otherwise. For what $p$ is there exactly a $1/2$ probability that there exists an infinite path down the tree that sums to at most $1$ (that is, all nodes visited, with the possible exception of one, will be labeled $0$)?
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Jane Street](https://www.janestreet.com/puzzles/sum-one-somewhere-index/))
 
 ## Solution
 
-to 
+to access a path with at most one label placed, it either must be the case that:
+- the current node is labelless and goes on to a path with at most one label placed, or
+- the current node is labelled and goes on to a path with no labels placed.
+
+calling the probability of a zero-label path $P_\text{zero},$ and the probability of a path with at most one label $P_\text{either},$ we can capture this with the following equation:
+
+$$ 
+  \begin{align}
+    P_\text{either} &= P(\text{at least one 0}) + P(\text{at least one 1}) \\
+                    &= 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} - (1-p) P^2_\text{zero}) 
+  \end{align}
+$$
+
+we can find the probability of a zero-label path with the same kind of analysis:
 
 $$ P_\text{zero} = 2p P_\text{zero} - p P^2_\text{zero} $$
+
+which is solved by
 
 $$ P_\text{zero} = 
   \begin{cases} 
@@ -26,9 +41,12 @@ $$ P_\text{zero} =
   \end{cases} 
 $$
 
-$$ P_\text{either} = P(\text{at least one 0}) + P(\text{at least one 1}) = 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} - (1-p) P^2_\text{zero}) $$
+this is zero until $p=\frac12$ and then it shoots up, approaching $1$ as $p$ approaches $1.$ plugging this solution into the first equation, we can solve it for $P_\text{either}$:
+
 
 $$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p} $$
+
+plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac{1/2}$:
 
 $$ 
   \begin{align}
@@ -36,6 +54,8 @@ $$
                 &\approx 0.5306035754 
   \end{align} 
 $$
+
+plotting $P_\text{either}$ alongside $P_\text{zero},$ we see similar thresholding behavior with a much steeper rise after $p=\frac12$:
 
 ![](/img/2025-04-30-JS-zero-or-one-tree.png){:width="450-px" class="image-centered"}
 
