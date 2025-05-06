@@ -69,7 +69,7 @@ $$
   \end{align}
 $$
 
-which for $N=12$ is equal to 
+where $H_N$ is the $N^\text{th}$ harmonic number. For $N=12,$ this is equal to 
 
 $$
   \begin{align}
@@ -110,7 +110,7 @@ and $E_r = 1/r + 1/(r-1) + \ldots + 1/2 + 1 = H_r. $
 
 So the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7Br%3D3%7D%5E%7B12%7D%28binomial%28r-1%2C2%29%2Fbinomial%2812%2C3%29%283+%2B+harmonicnumber%2812-r%29%29%29), 
 
-$$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\right), $$
+$$ R_N = \sum_{r=3}^N \left(3 + H_{N - r}\right)\dfrac{\binom{r - 1}{2}}{\binom{N}{3}}, $$
 
 which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
 
