@@ -33,7 +33,7 @@ tags: recursion
 
 ## Solution
 
-This week, the extra credit is actually simpler so we'll solve it first.
+This week, with the approach taken here, the extra credit is simpler so we'll solve it first.
 
 ### Extra credit
 
@@ -79,11 +79,11 @@ $$
   \end{align}
 $$
 
-Plotting the calculation (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement:
+Plotting the calculation (gold points) alongside a $10^6$ trial simulation (blue points), there is good agreement:
 
 ![](/img/2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
-The standard problem is actually more complicated. Whereas in the extra credit, the first time slot in our schedule determines the number of remaining time slots, the standard credit conditions this on the maximum time slot in our schedule.
+The standard problem is actually more complicated than this. Whereas in the extra credit, the first time slot in our schedule determines the number of remaining time slots, the standard credit conditions this on the maximum time slot in our schedule.
 
 <!-- we keep playing the same game with fewer time slots, the standard credit transitions you between fundamentally different games. -->
 
@@ -114,7 +114,7 @@ $$ R_N = \sum_{r=3}^N \dfrac{\binom{r - 1}{2}}{\binom{N}{3}}\left(H_{N - r} + 3\
 
 which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
 
-Plotting the series (gold points) alongside an $N=10^6$ trial simulation (blue points), there is good agreement once again.
+Plotting the series (gold points) alongside a $10^6$ trial simulation (blue points), there is good agreement once again.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
