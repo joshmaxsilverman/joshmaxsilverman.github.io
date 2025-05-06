@@ -69,7 +69,7 @@ $$
   \end{align}
 $$
 
-where $H_N$ is the $N^\text{th}$ harmonic number. For $N=12,$ this is equal to 
+where $H_N$ is the $N^\text{th}$ [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). For $N=12,$ this is equal to 
 
 $$
   \begin{align}
