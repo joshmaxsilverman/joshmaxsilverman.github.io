@@ -112,7 +112,7 @@ So the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7
 
 $$ R_N = \sum_{r=3}^N \left(3 + H_{N - r}\right)\dfrac{\binom{r - 1}{2}}{\binom{N}{3}}, $$
 
-which actually simplifies to $H_N + 7/6.$ For $N=12$ equals $118361/27720 \approx 4.26988$ rides.
+which actually simplifies to $H_N + 7/6.$ For $N=12$ this equals $118361/27720 \approx 4.26988$ rides.
 
 Plotting the series (gold points) alongside a $10^6$ trial simulation (blue points), there is good agreement once again.
 
