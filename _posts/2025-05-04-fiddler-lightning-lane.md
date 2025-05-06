@@ -112,12 +112,14 @@ So the expected number of rides [is](https://www.wolframalpha.com/input?i=sum_%7
 
 $$ R_N = \sum_{r=3}^N \left(3 + H_{N - r}\right)\dfrac{\binom{r - 1}{2}}{\binom{N}{3}}, $$
 
-which for $N=12$ equals $118361/27720 \approx 4.26988$ rides.
+which actually simplifies to $H_N + 7/6.$ For $N=12$ equals $118361/27720 \approx 4.26988$ rides.
 
 Plotting the series (gold points) alongside a $10^6$ trial simulation (blue points), there is good agreement once again.
 
 ![](/img/2025-05-04-fiddler-lightning-lane-after-last.png){:width="450 px" class="image-centered"}
 
 The gains from additional time slots take a while to accumulate. While we're guaranteed $3$ in the $N=3$ time slot scenario, by $N=70$ time slots the expected number of rides is just under $6,$ meaning about half the value is still from the initial allotment.
+
+Comparing the two schemes for large $N,$ the "next free time slot" rule allots about three times as many time slots as the "after last scheduled time slot" rule.
 
 <br>
