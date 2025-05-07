@@ -33,7 +33,7 @@ tags: recursion
 
 ## Solution
 
-This week, with the approach taken here, the extra credit is simpler so we'll solve it first.
+With the approach taken here, the extra credit is simpler so we'll solve it first.
 
 ### Extra credit
 
