@@ -24,7 +24,7 @@ Calling the probability of a zero-label path $P_\text{zero},$ and the probabilit
 $$ 
   \begin{align}
     P_\text{zero or one} &= P(\text{zero or one}|\text{first node is zero})P(\text{first node is zero}) \\ 
-    & \, + P(\text{zero}|\text{first node is 1})P(\text{first node is 1}) \\
+    & \,\,\, + P(\text{zero}|\text{first node is 1})P(\text{first node is 1}) \\
     &= 2p P_\text{zero or one} + 2(1-p)P_\text{zero} - p P^2_\text{zero or one} - (1-p) P^2_\text{zero}. 
   \end{align}
 $$
