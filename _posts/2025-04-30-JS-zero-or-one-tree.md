@@ -19,12 +19,12 @@ To access a path with at most one label placed, it either must be the case that:
 - the current node is labelless and goes on to a path with at most one label placed, or
 - the current node is labelled and goes on to a path with no labels placed.
 
-Calling the probability of a zero-label path $P_\text{zero},$ and the probability of a path with at most one label $P_\text{either},$ we can capture this with the following equation:
+Calling the probability of a zero-label path $P_\text{zero},$ and the probability of a path with at most one label $P_\text{zero or one},$ we can capture this with the following equation:
 
 $$ 
   \begin{align}
-    P_\text{either} &= P(\text{at least one 0}) + P(\text{at least one 1}) \\
-                    &= 2p P_\text{either} + 2(1-p)P_\text{zero} - p P^2_\text{either} - (1-p) P^2_\text{zero}. 
+    P_\text{zero or one} &= P(\text{at least one 0}) + P(\text{at least one 1}) \\
+                    &= 2p P_\text{zero or one} + 2(1-p)P_\text{zero} - p P^2_\text{zero or one} - (1-p) P^2_\text{zero}. 
   \end{align}
 $$
 
@@ -41,12 +41,12 @@ $$ P_\text{zero} =
   \end{cases} 
 $$
 
-So, $P_\text{zero}$ is zero until $p=\frac12$ after which it shoots up, approaching $1$ as $p$ approaches $1.$ Plugging this solution into the first equation, we can solve it for $P_\text{either}$:
+So, $P_\text{zero}$ is zero until $p=\frac12$ after which it shoots up, approaching $1$ as $p$ approaches $1.$ Plugging this solution into the first equation, we can solve it for $P_\text{zero or one}$:
 
 
-$$ P_\text{either} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p}. $$
+$$ P_\text{zero or one} = \dfrac{2 p+\sqrt{\dfrac{4 (p-1)^3}{p}+1}-1}{2 p}. $$
 
-Plugging in $P_\text{either}=\frac12,$ we can solve for the value $p_\frac12$:
+Plugging in $P_\text{zero or one}=\frac12,$ we can solve for the value $p_\frac12$:
 
 $$ 
   \begin{align}
@@ -55,7 +55,7 @@ $$
   \end{align} 
 $$
 
-Plotting $P_\text{either}$ alongside $P_\text{zero},$ we see similar thresholding behavior with a much steeper rise after $p=\frac12$:
+Plotting $P_\text{zero or one}$ alongside $P_\text{zero},$ we see similar thresholding behavior with a much steeper rise after $p=\frac12$:
 
 ![](/img/2025-04-30-JS-zero-or-one-tree.png){:width="450-px" class="image-centered"}
 
