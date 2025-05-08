@@ -85,15 +85,17 @@ Plotting the calculation (gold points) alongside a $10^6$ trial simulation (blue
 
 ![](/img/2025-05-04-fiddler-lightning-lane-next-free.png){:width="450 px" class="image-centered"}
 
-The standard problem is actually more complicated than this. Whereas in the extra credit, the first time slot in our schedule determines the number of remaining time slots, the standard credit conditions this on the maximum time slot in our schedule.
+The standard problem is actually more complicated than this. Whereas in the extra credit the first time slot in our schedule determines the number of remaining time slots, the standard credit conditions this on the maximum time slot in our schedule.
 
 <!-- we keep playing the same game with fewer time slots, the standard credit transitions you between fundamentally different games. -->
 
 ### Standard credit
 
-After we take our first ride, we're playing a new game where we have $r$ remaining time slots, and we continue drawing from the remainder until we reach the final time slot. Let's call this second phase the endgame, and expected number of rides we get from it $E_r$. The number of time slots $r$ in the endgame is determined by the latest time slot we got in our original allotment of $3$ random time slots. 
+After we take our first ride, we're playing a new game where we have $r$ remaining time slots, and we continue drawing from the remainder until we reach the final time slot. 
 
-The probability that our latest time slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3},$ that's because we know the third time slot is at $r$ (probability $1$) and there are $\binom{r-1}{2}$ ways to pick $2$ slots less than $r.$
+Let's call this second phase the endgame, and the expected number of rides we get from it $E_r$. The number of time slots $r$ in the endgame is determined by the latest time slot we got in our original allotment of $3$ random time slots. 
+
+The probability that our latest scheduled time slot in the original draw is $r$ is $P(r) = \binom{r-1}{2}/\binom{12}{3},$ that's because we know the third time slot is at $r$ (probability $1$) and there are $\binom{r-1}{2}$ ways to pick $2$ slots less than $r.$
 
 So, the expected number of rides is
 
