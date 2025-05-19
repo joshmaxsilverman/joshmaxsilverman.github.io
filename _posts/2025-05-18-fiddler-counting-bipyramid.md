@@ -33,7 +33,7 @@ Call $\Omega(i, \ell)$ the number of ways to arrive at node $i$ as the last node
 
 Any path that leaves layer $\ell$ at node $i$ enters layer $\ell$ at some other node $j$ then travels to $i,$ so
 
-$$ \Omega(i, \ell) = \sum\limits_{j\in\text{layer}}T(i\leftarrow j, \ell)W(j,\ell). $$
+$$ \Omega(i, \ell) = \sum\limits_{j\ \in\ \text{layer}}T(i\leftarrow j, \ell)W(j,\ell). $$
 
 Putting this to code, we have
 
