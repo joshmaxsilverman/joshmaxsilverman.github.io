@@ -25,9 +25,9 @@ $$ \Omega(\text{endpoint}, L) = \left(\left(\frac12 L\right)!!\right)^2. $$
 
 
 
-$$ \Omega(i, \ell) = \sum\limits_{j\elem\text{layer}}T(i\leftarrow j, \ell)W(j,\ell). $$
+$$ \Omega(i, \ell) = \sum\limits_{j\in\text{layer}}T(i\leftarrow j, \ell)W(j,\ell). $$
 
-$$ W(i, \ell) = \sum\limits_{j\elem\text{last layer neighbors}}\Omega(j, \ell-1). $$
+$$ W(i, \ell) = \sum\limits_{j\in\text{last layer neighbors}}\Omega(j, \ell-1). $$
 
 Find $T(i\leftarrow k, \ell)$ by depth first search at each layer.
 
