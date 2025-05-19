@@ -56,6 +56,7 @@ In code, we have
 
 ```python
 def W(j):
+
   return sum(
       omega(n) for n in vert_neighbors(j)
   )
@@ -106,7 +107,8 @@ def vert_neighbors(n):
 
       candidates = [ Node(n.row, n.index, n.layer - 1)
                    , Node(n.row - 1, n.index, n.layer - 1)
-                   , Node(n.row - 1, n.index - 1, n.layer - 1)]
+                   , Node(n.row - 1, n.index - 1, n.layer - 1)
+                   ]
 
       filtered = [ c for c in candidates 
                   if 0 <= c.index <= c.row and c.row <= c.layer
@@ -118,7 +120,8 @@ def vert_neighbors(n):
 
       candidates = [ Node(n.row, n.index, n.layer - 1)
                    , Node(n.row + 1, n.index, n.layer - 1)
-                   , Node(n.row + 1, n.index + 1, n.layer - 1)]
+                   , Node(n.row + 1, n.index + 1, n.layer - 1)
+                   ]
 
       filtered = [ c for c in candidates 
                   if 0 <= c.index <= c.row and c.row < L - c.layer 
@@ -131,9 +134,12 @@ Within a layer, the neighbors for an interior point are just the nearest neighbo
 
 ```python
 def layer_neighbors(n):
-  candidates = [ Node(n.row - 1, n.index, n.layer), Node(n.row - 1, n.index - 1, n.layer)
-               , Node(n.row, n.index - 1, n.layer), Node(n.row, n.index + 1, n.layer)
-               , Node(n.row + 1, n.index, n.layer), Node(n.row + 1, n.index + 1, n.layer)
+  candidates = [ Node(n.row - 1, n.index, n.layer)
+               , Node(n.row - 1, n.index - 1, n.layer)
+               , Node(n.row, n.index - 1, n.layer)
+               , Node(n.row, n.index + 1, n.layer)
+               , Node(n.row + 1, n.index, n.layer)
+               , Node(n.row + 1, n.index + 1, n.layer)
                ]
 
   row_upper_bound = n.layer if n.layer < L / 2 else L - n.layer - 1
@@ -141,6 +147,7 @@ def layer_neighbors(n):
   filtered = [ c for c in candidates 
               if 0 <= c.index <= c.row and 0 <= c.row <= row_upper_bound
              ]
+
   return filtered
 ```
 
@@ -151,7 +158,10 @@ def layer_of(n):
 
   upper_bound_rows = n.layer if n.layer < L / 2 else L - n.layer - 1
 
-  filtered = [ Node(r, j, n.layer) for r in range(upper_bound_rows + 1) for j in range(r + 1)]
+  filtered = [ Node(r, j, n.layer)
+                for r in range(upper_bound_rows + 1)
+                for j in range(r + 1)
+             ]
 
   return filtered
 ```
