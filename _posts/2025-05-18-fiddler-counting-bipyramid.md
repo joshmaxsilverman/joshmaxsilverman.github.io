@@ -50,7 +50,7 @@ def omega(n):
 
 Also, the number of ways to arrive at node $i$ as the first node visited in layer $\ell$ is equal to sum over ways to exit layer $(\ell-1)$ from one of the neighbors of $i$ (in layer $(\ell-1)$), so
 
-$$ W(i, \ell) = \sum\limits_{j\in\text{last layer\\ neighbors of $i$}}\Omega(j, \ell-1). $$
+$$ W(i, \ell) = \sum\limits_{j\in\text{last layer\\\ neighbors of $i$}}\Omega(j, \ell-1). $$
 
 In code, we have
 
