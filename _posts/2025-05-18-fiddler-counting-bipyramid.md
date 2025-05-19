@@ -82,8 +82,8 @@ def T(i, j):
 
     return sum(
           find_T(n, j, visited.union({n})) 
-          for n in neighbors
-          )
+            for n in neighbors
+    )
     
   return find_T(i, j, visited)
 ```
@@ -160,7 +160,7 @@ def layer_of(n):
 
   filtered = [ Node(r, j, n.layer)
                 for r in range(upper_bound_rows + 1)
-                for j in range(r + 1)
+                  for j in range(r + 1)
              ]
 
   return filtered
