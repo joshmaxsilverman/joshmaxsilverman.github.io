@@ -169,9 +169,9 @@ Making alterations to the code for $T$, and the neighbors, we get $2,304$ paths 
 
 ### Analytic solution for standard question
 
-The in-layer side steps connect pairs of layer nodes with unique straight-line paths, so they don't actually increase the multiplicity. As a result, the overall number of paths is just the product of downward paths available at each level. Two edges emerge from every node, so for the problem at hand this is 
+The in-layer side steps connect pairs of layer nodes with unique straight-line paths, so they don't actually increase the multiplicity. As a result, the overall number of paths is just the product of downward paths available at each level. Two edges emerge from every node, so for the problem at hand this is (as we found above)
 
-$$ \Omega(\text{endpoint}, \ell = 6) = 2\times 4\times 6\times 6\times 4\times 2 = 2034. $$
+$$ \Omega(\text{endpoint}, \ell = 6) = 2\times 4\times 6\times 6\times 4\times 2 = 2,304. $$
 
 and in general it becomes
 
