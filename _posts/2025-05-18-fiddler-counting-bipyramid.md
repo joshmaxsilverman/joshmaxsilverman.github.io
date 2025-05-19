@@ -13,7 +13,7 @@ tags: counting recursion search
 > - You only move downward or sideways—never upward.
 >![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5af6e222-c841-4b17-b05b-54bcb3d254ad_1336x1054.png)
 >
->**Extra credit**:Consider the following figure, which shows $30$ points arranged in a three-dimensional triangular bipyramid. As before, points are connected to their neighbors by edges. How many distinct paths are there from the top point to the bottom along the edges such that:
+>**Extra credit**: Consider the following figure, which shows $30$ points arranged in a three-dimensional triangular bipyramid. As before, points are connected to their neighbors by edges. How many distinct paths are there from the top point to the bottom along the edges such that:
 >
 > - You never visit the same point twice.
 > - You only move downward or sideways—never upward.
