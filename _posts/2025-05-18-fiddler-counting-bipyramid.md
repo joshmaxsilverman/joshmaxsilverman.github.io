@@ -91,7 +91,7 @@ In the code above, we're using $i$ and $j$ to refer to nodes, but really we need
 
 In this scheme, the node at the zero corner in any layer is $(0,0,\ell)$, the corner in the bottom left is $(\ell,0,\ell)$ and the corner in the bottom right is $(\ell,\ell,\ell).$
 
-We need lookups that store the neighbors of a node within its layer, as well as its vertical neighbors. Overlaying one layer of the grid on the next, we see that in the upper bipyramid, the candidate vertical neighbors of a node $(r, i, \ell)$ are $\{(r,i,\ell-1),(r-1,i,\ell-1),(r-1,i-1,\ell-1)\},$ filtered for any points that fall outside the confines of the grid. Going down it's the same with the row and index shifts reversed: $\{(r,i,\ell-1),(r+1,i,\ell-1),(r+1,i+1,\ell-1)\}.$
+We need lookups that store the neighbors of a node within its layer, as well as its vertical neighbors. Overlaying one layer of the grid on the next, we see that in the upper bipyramid, the candidate vertical neighbors of a node $(r, i, \ell)$ are $\\{(r,i,\ell-1),(r-1,i,\ell-1),(r-1,i-1,\ell-1)\\},$ filtered for any points that fall outside the confines of the grid. Going down it's the same with the row and index shifts reversed: $\\{(r,i,\ell-1),(r+1,i,\ell-1),(r+1,i+1,\ell-1)\\}.$
 
 ```python
 def vert_neighbors(n):
