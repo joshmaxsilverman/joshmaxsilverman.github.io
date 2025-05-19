@@ -10,13 +10,13 @@ tags: counting recursion search
 >**Question**: Consider the following figure, which shows 16 points arranged in a rhombus shape and connected to their neighbors by edges. How many distinct paths are there from the top point to the bottom along the edges such that:
 >
 > - You never visit the same point twice.
-> -You only move downward or sideways—never upward.
+> - You only move downward or sideways—never upward.
 >![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5af6e222-c841-4b17-b05b-54bcb3d254ad_1336x1054.png)
 >
 >**Extra credit**:Consider the following figure, which shows $30$ points arranged in a three-dimensional triangular bipyramid. As before, points are connected to their neighbors by edges. How many distinct paths are there from the top point to the bottom along the edges such that:
 >
 > - You never visit the same point twice.
-> -You only move downward or sideways—never upward.
+> - You only move downward or sideways—never upward.
 >![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ee87243-ef32-458f-8577-f29d30508a99_720x790.png)
 
 <!--more-->
