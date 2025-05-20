@@ -158,12 +158,12 @@ def layer_of(n):
 
   upper_bound_rows = n.layer if n.layer < L / 2 else L - n.layer - 1
 
-  filtered = [ Node(r, j, n.layer)
+  nodes = [ Node(r, j, n.layer)
                 for r in range(upper_bound_rows + 1)
                   for j in range(r + 1)
              ]
 
-  return filtered
+  return nodes
 ```
 
 For clarity, nodes were implemented as named tuples like so:
