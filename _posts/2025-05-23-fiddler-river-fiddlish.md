@@ -22,7 +22,7 @@ since a new word starts each line, we are asking, what is the probability that t
 $$ 
 \begin{align}
   P(\text{river of length }\, \ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+\ell-1)\cdot\left(1-P(12+\ell)\right) \\
-  &= \left(1-P(12+j)\right)\prod\limits_{j=1}^{\ell-1} P(12+j)
+  &= \left(1-P(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P(12+j)
 \end{align}
 $$
 
