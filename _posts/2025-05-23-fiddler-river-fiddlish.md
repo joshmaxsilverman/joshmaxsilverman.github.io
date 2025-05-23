@@ -72,4 +72,7 @@ $$ \begin{align}
     \end{align}
 $$
 
+with this in hand, we can evaluate the weighted sum which comes to $\langle \ell\rangle \approx 1.5347081153095188$
+
+
 <br>
