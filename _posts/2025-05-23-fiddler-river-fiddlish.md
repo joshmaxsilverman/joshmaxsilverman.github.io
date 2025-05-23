@@ -15,7 +15,7 @@ tags:
 
 ## Solution
 
-after a long stretch of words, correlations with the beginning disappear and we should be equally likely to hit a space at any position. since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $P(\text{space}) = 2/9.
+after a long stretch of words, correlations with the beginning disappear and we should be equally likely to hit a space at any position. since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $P(\text{space}) = 2/9.$
 
 since a new word starts each line, we are asking, what is the probability that the 13th character on a new line is a space, and the 14th character on the next line is a space, and ... until the line $j$ at which it ends, where we multiply by the probability that the (12+j)th character on that line is a letter. in other words
 
