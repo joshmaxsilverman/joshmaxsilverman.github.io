@@ -49,7 +49,7 @@ $$
     P(j)z^j \ldots &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
     \sum\limits_{j=6}^\infty P(j)z^j \ldots &= \frac12\sum\limits_{j=6} z^jP(j-4) + \frac12\sum\limits_{j=6} z^jP(j-5) \\
     G(z) - P(4)z^4 - P(5)z^5 &= z^4 G(z) + z^5 G(z) \\
-    G(z) &= \frac{z^4+z^5}{2-z^4-z^4}
+    G(z) &= \frac{z^4+z^5}{2-z^4-z^5}
   \end{align}
 $$
 
