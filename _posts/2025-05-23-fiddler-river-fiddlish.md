@@ -21,7 +21,7 @@ since a new word starts each line, we are asking, what is the probability that t
 
 $$ 
 \begin{align}
-  P(\text{river of length }\, \ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+j-1)\cdot(1-P(12+j) \\
+  P(\text{river of length }\, \ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+j-1)\cdot(1-P(12+j)\right) \\
   &= \left(1-P(12+j)\right)\prod\limits_{j=1}^\ell P(12+j)
 \end{align}
 $$
