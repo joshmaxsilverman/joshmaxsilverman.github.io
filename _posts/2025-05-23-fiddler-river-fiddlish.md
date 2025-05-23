@@ -38,8 +38,19 @@ but we can make some more progress analytically, turning to the glory of generat
 
 the idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. naively, we could make the quantity $(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and count how many terms of $z^\ell$ result. 
 
-however, with that motivation out of the way, we can accept that such a polynomial would be useful.
+but with that motivation out of the way, we can accept that such a polynomial would be useful. specifically, the polynomial is 
 
-specifically, the polynomial is $G(z) = \sum\limits_{\ell=1}^\infty P(\ell)z^\ell.$
+$$ G(z) = \sum\limits_{\ell=1}^\infty P(\ell)z^\ell. $$
+
+taking the recursive relationship, we get
+
+$$
+  \begin{align}
+    P(j)z^j \ldots &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
+    \sum\limits_{j=6}^\infty P(j)z^j \ldots &= \frac12\sum\limits_{j=6} z^jP(j-4) + \frac12\sum\limits_{j=6} z^jP(j-5) \\
+    G(z) - P(4)z^4 - P(5)z^5 &= z^4 G(z) + z^5 G(z) \\
+    G(z) &= \frac{z^4+z^5}{2-z^4-z^4}
+  \end{align}
+$$
 
 <br>
