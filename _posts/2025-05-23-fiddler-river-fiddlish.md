@@ -26,4 +26,8 @@ $$
 \end{align}
 $$
 
+because every word begins after a space, and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters
+
+$$ P(\ell) = P(\text{three letter word}\rvert \text{space at }(j-4)P(j-4) + P(\text{four letter word}\rvert \text{space at }(j-5)P(j-5) $$
+
 <br>
