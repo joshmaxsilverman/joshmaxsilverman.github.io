@@ -34,4 +34,12 @@ at this point, we could code the recursion to find $P(j)$ and then take the weig
 
 $$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P(\text{river length}=\ell)}{\sum\limits_{\ell=1}^\infty  P(\text{river length}=\ell)}. $$
 
+but we can make some more progress analytically, turning to the glory of generating functions. 
+
+the idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. naively, we could make the quantity $(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and count how many terms of $z^\ell$ result. 
+
+however, with that motivation out of the way, we can accept that such a polynomial would be useful.
+
+specifically, the polynomial is $G(z) = \sum\limits_{\ell=1}^\infty P(\ell)z^\ell.$
+
 <br>
