@@ -68,7 +68,7 @@ to get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a ter
 
 $$ \begin{align} 
     P(\ell) &= \left[z^\ell\right] \\
-      &= \frac12\sum\limits{j=0} \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
+      &= \frac12\sum\limits_{j=0} \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
     \end{align}
 $$
 
