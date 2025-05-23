@@ -64,4 +64,8 @@ $$
   \end{align}
 $$
 
+to get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a term from the expansion of $(1+z)^j$ to equal $\ell.$ in other words, we have the sum
+
+$$ \left[z^\ell\right] = \frac12\sum \dfrac{\binom{j}{\ell - 4j}}{2^{j-1}} $$
+
 <br>
