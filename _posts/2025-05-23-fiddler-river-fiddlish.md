@@ -59,7 +59,7 @@ $$
   \begin{align}
     G(z) &= \frac12 \dfrac{(z^4+z^5)}{1-\frac{z^4+z^5}{2}} \\
          &= \frac12 (z^4+z^5)\left(1 + \frac{z^4+z^5}{2} + \frac{z^4+z^5)^2}{2^2}\right) \\
-         &= \frac12 \sum\limits_{j=1} \frac{1}{2^{j-1}(z^4+z^5)^j
+         &= \frac12 \sum\limits_{j=1} \frac{1}{2^{j-1}}(z^4+z^5)^j
   \end{align}
 $$
 
