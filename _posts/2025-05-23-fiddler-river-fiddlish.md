@@ -26,8 +26,12 @@ $$
 \end{align}
 $$
 
-because every word begins after a space, and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters
+because every word begins after a space, and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters. since the probability of a three or four letter word after a space is $\frac12$, this becomes
 
-$$ P(\ell) = P(\text{three letter word}\rvert \text{space at }(j-4)P(j-4) + P(\text{four letter word}\rvert \text{space at }(j-5)P(j-5) $$
+$$ P(j) = \frac12 P(j-4) +\frac12 P(j-5) $$
+
+at this point, we could code the recursion to find $P(j)$ and then take the weighted sum 
+
+$$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P(\text{river length}=\ell)}{\sum\limits_{\ell=1}^\infty  P(\text{river length}=\ell)}. $$
 
 <br>
