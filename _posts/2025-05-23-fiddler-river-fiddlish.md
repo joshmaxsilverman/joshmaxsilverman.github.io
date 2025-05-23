@@ -46,10 +46,20 @@ taking the recursive relationship, we get
 
 $$
   \begin{align}
-    P(j)z^j \ldots &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
-    \sum\limits_{j=6}^\infty P(j)z^j \ldots &= \frac12\sum\limits_{j=6} z^jP(j-4) + \frac12\sum\limits_{j=6} z^jP(j-5) \\
+    P(j)z^j  &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
+    \sum\limits_{j=6}^\infty P(j)z^j  &= \frac12z^4\sum\limits_{j=6} z^{j-4}P(j-4) + \frac12z^5\sum\limits_{j=6} z^{j-5}P(j-5) \\
     G(z) - P(4)z^4 - P(5)z^5 &= z^4 G(z) + z^5 G(z) \\
     G(z) &= \frac{z^4+z^5}{2-z^4-z^5}
+  \end{align}
+$$
+
+to extract the probabilities, we have to turn this into an unambiguous series in $z$:
+
+$$
+  \begin{align}
+    G(z) &= \frac12 \dfrac{(z^4+z^5)}{1-\frac{z^4+z^5}{2}} \\
+         &= \frac12 (z^4+z^5)\left(1 + \frac{z^4+z^5}{2} + \frac{z^4+z^5)^2}{2^2}\right) \\
+         &= \frac12 \sum\limits_{j=1} \frac{1}{2^{j-1}(z^4+z^5)^j
   \end{align}
 $$
 
