@@ -78,7 +78,7 @@ with this in hand, we can evaluate the weighted sum which comes to $\langle \ell
 def P(l):
   
   return 1/2 * sum(
-                math.comb(j, l - 4 * j) / 2 ** (j-1) 
+                math.comb(j, l - 4 * j) / 2 ** (j - 1) 
                 for j in range(1, l // 4 + 1)
               )
 
@@ -99,5 +99,7 @@ exp_l = sum(
           for j in range(1, 100)
         )
 ```
+
+
 
 <br>
