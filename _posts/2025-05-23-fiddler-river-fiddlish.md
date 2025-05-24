@@ -74,5 +74,30 @@ $$
 
 with this in hand, we can evaluate the weighted sum which comes to $\langle \ell\rangle \approx 1.5347081153095188$
 
+```python
+def P(l):
+  
+  return 1/2 * sum(
+                math.comb(j, l - 4 * j) / 2 ** (j-1) 
+                for j in range(1, l // 4 + 1)
+              )
+
+def P_diag(l):
+  
+  P_return = 1
+  
+  for i in range(1, l):
+    P_return *= P(12 + i)
+  
+  return P_return * (1 - P(12 + l))
+
+exp_l = sum(
+          j * P_diag(j) 
+          for j in range(1, 100)
+        ) / sum(
+          P_diag(j) 
+          for j in range(1, 100)
+        )
+```
 
 <br>
