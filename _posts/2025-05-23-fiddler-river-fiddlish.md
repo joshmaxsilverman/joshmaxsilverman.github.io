@@ -15,22 +15,22 @@ tags:
 
 ## Solution
 
-after a long stretch of words, correlations with the beginning disappear and we should be equally likely to hit a space at any position. since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $P(\text{space}) = 2/9.$
+after a long stretch of words, correlations with the beginning disappear and we should be equally likely to hit a space at any position. since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $P_\text{space} = 2/9.$
 
-since a new word starts each line, we are asking, what is the probability that the 13th character on a new line is a space, and the 14th character on the next line is a space, and ... until the line $j$ at which it ends, where we multiply by the probability that the (12+j)th character on that line is a letter. in other words
+since a new word starts each line, we are asking, what is the probability that the 13th character on a new line is a space, and the 14th character on the next line is a space, and ... until the line $j$ at which it ends, where we multiply by the probability that the $(12+j)^\text{th}$ character on that line is a letter. in other words
 
 $$ 
 \begin{align}
-  P_\text{river}(\ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+\ell-1)\cdot\left(1-P(12+\ell)\right) \\
-  &= \left(1-P(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P(12+j)
+  P_\text{river}(\ell) &= P_\text{space}(12+1)\cdot P_\text{space}(12+2)\cdot \ldots \cdot P_\text{space}(12+\ell-1)\cdot\left(1-P_\text{space}(12+\ell)\right) \\
+  &= \left(1-P_\text{space}(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P_\text{space}(12+j)
 \end{align}
 $$
 
 because every word begins after a space, and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters. since the probability of a three or four letter word after a space is $\frac12$, this becomes
 
-$$ P(j) = \frac12 P(j-4) +\frac12 P(j-5) $$
+$$ P_\text{space}(j) = \frac12 P_\text{space}(j-4) +\frac12 P_\text{space}(j-5) $$
 
-at this point, we could code the recursion to find $P(j)$ and then take the weighted sum 
+at this point, we could code the recursion to find $P_\text{space}(j)$ and then take the weighted sum 
 
 $$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P_\text{river}(\ell)}{\sum\limits_{\ell=1}^\infty  P_\text{river}(ell)}. $$
 
@@ -40,15 +40,15 @@ the idea is to make a polynomial where the coefficient on $z^\ell$ represents th
 
 but with that motivation out of the way, we can accept that such a polynomial would be useful. specifically, the polynomial is 
 
-$$ G(z) = \sum\limits_{\ell=1}^\infty P(\ell)z^\ell. $$
+$$ G(z) = \sum\limits_{\ell=1}^\infty P_\text{space}(\ell)z^\ell. $$
 
 taking the recursive relationship, we get
 
 $$
   \begin{align}
-    P(j)z^j  &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
-    \sum\limits_{j=6}^\infty P(j)z^j  &= \frac12z^4\sum\limits_{j=6} z^{j-4}P(j-4) + \frac12z^5\sum\limits_{j=6} z^{j-5}P(j-5) \\
-    G(z) - P(4)z^4 - P(5)z^5 &= \frac12 z^4 G(z) + \frac12 z^5 G(z) \\
+    P_\text{space}(j)z^j  &= \frac12z^j P_\text{space}(j-4) + \frac12z^j P_\text{space}(j-5) \\
+    \sum\limits_{j=6}^\infty P_\text{space}(j)z^j  &= \frac12z^4\sum\limits_{j=6} z^{j-4}P_\text{space}(j-4) + \frac12z^5\sum\limits_{j=6} z^{j-5}P_\text{space}(j-5) \\
+    G(z) - P_\text{space}(4)z^4 - P_\text{space}(5)z^5 &= \frac12 z^4 G(z) + \frac12 z^5 G(z) \\
     G(z) &= \frac{z^4+z^5}{2-z^4-z^5}
   \end{align}
 $$
@@ -67,7 +67,7 @@ $$
 to get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a term from the expansion of $(1+z)^j$ to equal $\ell.$ in other words, we have the sum
 
 $$ \begin{align} 
-    P(\ell) &= \left[z^\ell\right] \\
+    P_\text{space}(\ell) &= \left[z^\ell\right] \\
       &= \frac12\sum\limits_{j=0} \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
     \end{align}
 $$
