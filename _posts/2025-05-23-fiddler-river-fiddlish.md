@@ -76,7 +76,7 @@ To get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a ter
 
 $$ \begin{align} 
     P_\text{space}(\ell) &= \left[z^\ell\right] \\
-      &= \frac12\sum\limits_{j=0} \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
+      &= \frac12\sum\limits_j \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
     \end{align}
 $$
 
@@ -93,7 +93,7 @@ def P_space(l):
   
   return 1/2 * sum(
                 math.comb(j, l - 4 * j) / 2 ** (j - 1) 
-                for j in range(0, l // 4 + 1)
+                for j in range(l // 5, l // 4 + 1)
               )
 
 def P_river(l):
