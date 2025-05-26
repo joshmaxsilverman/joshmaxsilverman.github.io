@@ -80,7 +80,7 @@ $$ \begin{align}
     \end{align}
 $$
 
-This has a straightforward interpretation: $j$ is the number of words in a line, and each one contributes at least $4$ characters (four characters for three-letter words, and five for four-letter words). So, $(\ell - 4j)$ is the number of four letter (five character) words. When $j$ total words are used, and $(\ell-4j)$ of them are four letter words, there are $\dbinom{j}{\ell-4j}$ ways to order them. The sum takes care of all feasible word counts. 
+This has a straightforward interpretation: $j$ is the number of words in a line, and each one contributes at least $4$ characters (four characters for three-letter words, and five for four-letter words). So, $(\ell - 4j)$ is the number of four letter (five character) words. When $j$ total words are used, and $(\ell-4j)$ of them are four letter words, there are $\binom{j}{\ell-4j}$ ways to order them. The sum takes care of all feasible word counts. 
 
 For small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually settles down to $2/9:$
 
