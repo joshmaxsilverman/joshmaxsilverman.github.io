@@ -87,7 +87,7 @@ For small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually set
 With this in hand, we can evaluate the weighted average which comes to $\langle \ell\rangle \approx 1.5347081153095188$
 
 ```python
-def P(l):
+def P_space(l):
   
   return 1/2 * sum(
                 math.comb(j, l - 4 * j) / 2 ** (j - 1) 
@@ -99,7 +99,7 @@ def P_river(l):
   P_return = 1
   
   for i in range(1, l):
-    P_return *= P(12 + i)
+    P_return *= P_space(12 + i)
   
   return P_return * (1 - P(12 + l))
 
