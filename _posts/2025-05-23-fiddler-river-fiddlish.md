@@ -21,7 +21,7 @@ since a new word starts each line, we are asking, what is the probability that t
 
 $$ 
 \begin{align}
-  P(\text{river length}=\ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+\ell-1)\cdot\left(1-P(12+\ell)\right) \\
+  P_\text{river}(\ell) &= P(12+1)\cdot P(12+2)\cdot \ldots \cdot P(12+\ell-1)\cdot\left(1-P(12+\ell)\right) \\
   &= \left(1-P(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P(12+j)
 \end{align}
 $$
@@ -48,7 +48,7 @@ $$
   \begin{align}
     P(j)z^j  &= \frac12z^jP(j-4) + \frac12z^jP(j-5) \\
     \sum\limits_{j=6}^\infty P(j)z^j  &= \frac12z^4\sum\limits_{j=6} z^{j-4}P(j-4) + \frac12z^5\sum\limits_{j=6} z^{j-5}P(j-5) \\
-    G(z) - P(4)z^4 - P(5)z^5 &= z^4 G(z) + z^5 G(z) \\
+    G(z) - P(4)z^4 - P(5)z^5 &= \frac12 z^4 G(z) + \frac12 z^5 G(z) \\
     G(z) &= \frac{z^4+z^5}{2-z^4-z^5}
   \end{align}
 $$
@@ -82,7 +82,7 @@ def P(l):
                 for j in range(1, l // 4 + 1)
               )
 
-def P_diag(l):
+def P_river(l):
   
   P_return = 1
   
@@ -92,10 +92,10 @@ def P_diag(l):
   return P_return * (1 - P(12 + l))
 
 exp_l = sum(
-          j * P_diag(j) 
+          j * P_river(j) 
           for j in range(1, 100)
         ) / sum(
-          P_diag(j) 
+          P_river(j) 
           for j in range(1, 100)
         )
 ```
