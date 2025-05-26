@@ -19,9 +19,11 @@ tags: recursion generating-functions keyboard-problems
 
 ## Solution
 
-after a long stretch of words, correlations with the beginning disappear and we should be equally likely to hit a space at any position. since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $P_\text{space} = 2/9.$
+After a long stretch of words, correlations with the beginning of the line decay and we should be equally likely to hit a space at any position. 
 
-since a new word starts each line, we are asking, what is the probability that the 13th character on a new line is a space, and the 14th character on the next line is a space, and ... until the line $j$ at which it ends, where we multiply by the probability that the $(12+j)^\text{th}$ character on that line is a letter. in other words
+Since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $\limit\limits_{\ell\rightarrow 0} P_\text{space}(\ell) \rightarrow 2/9.$
+
+Since a new word starts each line, we are asking what is the probability that the $13^\text{th}$ character on a new line is a space, and the $14^\text{th}$ character on the next line is a space, and so on until line $\ell$ at which it ends, where we multiply by the probability that the $(12+j)^\text{th}$ character on that line is a letter. In other words
 
 $$ 
 \begin{align}
@@ -30,23 +32,25 @@ $$
 \end{align}
 $$
 
-because every word begins after a space, and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters. since the probability of a three or four letter word after a space is $\frac12$, this becomes
+Because every word begins after a space and ends on a space, the probability that position $j$ is a space is the probability that position $(j-4)$ ended on a space and the next word had three letters plus the probability $(j-5)$ ended on a space and the next word had four letters. Since the probability of a three or four letter word after a space is $\frac12$, this becomes
 
-$$ P_\text{space}(j) = \frac12 P_\text{space}(j-4) +\frac12 P_\text{space}(j-5) $$
+$$ P_\text{space}(j) = \frac12 P_\text{space}(j-4) +\frac12 P_\text{space}(j-5). $$
 
-at this point, we could code the recursion to find $P_\text{space}(j)$ and then take the weighted sum 
+At this point, we could code the recursion to find $P_\text{space}(j)$ and then take the weighted sum 
 
 $$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P_\text{river}(\ell)}{\sum\limits_{\ell=1}^\infty  P_\text{river}(ell)}. $$
 
-but we can make some more progress analytically, turning to the glory of generating functions. 
+But we can make some more progress analytically, turning to the glory of generating functions. 
 
-the idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. naively, we could make the quantity $\frac12(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and count how many terms of $z^\ell$ result. 
+The idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. In principle, we could make the quantity $\frac12(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and then count how many terms of $z^\ell$ result. 
 
-but with that motivation out of the way, we can accept that such a polynomial would be useful. specifically, the polynomial is 
+But with that motivation out of the way, we can accept that such a polynomial would be useful and find a way to do it more neatly. 
+
+The polynomial so described is 
 
 $$ G(z) = \sum\limits_{\ell=1}^\infty P_\text{space}(\ell)z^\ell. $$
 
-taking the recursive relationship, we get
+Taking the recursive relationship, multiplying by $z^j$ and summing both sides, we get
 
 $$
   \begin{align}
@@ -57,7 +61,7 @@ $$
   \end{align}
 $$
 
-to extract the probabilities, we have to turn this into an unambiguous series in $z$:
+To extract the probabilities, we need to turn this into an unambiguous series in $z$:
 
 $$
   \begin{align}
@@ -68,7 +72,7 @@ $$
   \end{align}
 $$
 
-to get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a term from the expansion of $(1+z)^j$ to equal $\ell.$ in other words, we have the sum
+To get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a term from the expansion of $(1+z)^j$ to equal $\ell,$ the coefficients of which are binomial coefficients. Putting it together, we get the sum
 
 $$ \begin{align} 
     P_\text{space}(\ell) &= \left[z^\ell\right] \\
@@ -76,11 +80,11 @@ $$ \begin{align}
     \end{align}
 $$
 
-for small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually settles down to $2/9:$
+For small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually settles down to $2/9:$
 
 ![](/img/2025-05-26-fiddlish-Pspace.png){:width="450 px" class="image-centered"}
 
-with this in hand, we can evaluate the weighted sum which comes to $\langle \ell\rangle \approx 1.5347081153095188$
+With this in hand, we can evaluate the weighted average which comes to $\langle \ell\rangle \approx 1.5347081153095188$
 
 ```python
 def P(l):
@@ -108,11 +112,11 @@ exp_l = sum(
         )
 ```
 
-looking at the log plot, this eventually falls as a power law (the straight line on a log plot means it's proportional to $\ell^{-t}$
+Looking at the log plot, this eventually falls as a power law (the straight line on a log plot means it's proportional to $\ell^{-t}$):
 
 ![](/img/2025-05-26-fiddlish-Priver.png){:width="450 px" class="image-centered"}
 
-interestingly, $P_\text{river}(\ell)$ seems to settle very close to $(2/9)^\ell(1-2/9)$ which is the naive solution times an extra factor of $2/9.$ 
+Interestingly, $P_\text{river}(\ell)$ seems to settle very close to $(2/9)^\ell(1-2/9)$ which is the naive solution times an extra factor of $2/9.$ 
 
 ![](/img/2025-05-26-fiddlish-Priver_normalized.png){:width="450 px" class="image-centered"}
 
