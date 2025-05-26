@@ -21,7 +21,7 @@ tags: recursion generating-functions keyboard-problems
 
 After a long stretch of words, correlations with the beginning of the line decay and we should be equally likely to hit a space at any position. 
 
-Since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $\limit_{\ell\rightarrow 0} P_\text{space}(\ell) \rightarrow 2/9.$
+Since half the words are three letters and half are four, this means that two out of every nine characters is a space, and $\lim\limits_{\ell\rightarrow 0} P_\text{space}(\ell) \rightarrow 2/9.$
 
 Since a new word starts each line, we are asking what is the probability that the $13^\text{th}$ character on a new line is a space, and the $14^\text{th}$ character on the next line is a space, and so on until line $\ell$ at which it ends, where we multiply by the probability that the $(12+j)^\text{th}$ character on that line is a letter. In other words
 
