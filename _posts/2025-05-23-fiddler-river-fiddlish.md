@@ -38,7 +38,7 @@ $$ P_\text{space}(j) = \frac12 P_\text{space}(j-4) +\frac12 P_\text{space}(j-5).
 
 At this point, we could code the recursion to find $P_\text{space}(j)$ and then take the weighted sum 
 
-$$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P_\text{river}(\ell)}{\sum\limits_{\ell=1}^\infty  P_\text{river}(ell)}. $$
+$$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P_\text{river}(\ell)}{\sum\limits_{\ell=1}^\infty  P_\text{river}(\ell)}. $$
 
 But we can make some more progress analytically, turning to the glory of generating functions. 
 
