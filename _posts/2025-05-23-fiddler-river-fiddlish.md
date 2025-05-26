@@ -112,11 +112,11 @@ exp_l = sum(
         )
 ```
 
-Looking at the log plot, this eventually falls as a power law (the straight line on a log plot means it's proportional to $\ell^{-t}$):
+Looking at the log plot, this eventually falls as a power law (the straight line on the log plot means it's proportional to $\ell^{-t}$; eying it up the slope is about $-125/200$ which is approximately $\log_{10}2/9$):
 
 ![](/img/2025-05-26-fiddlish-Priver.png){:width="450 px" class="image-centered"}
 
-Interestingly, $P_\text{river}(\ell)$ seems to settle very close to $(2/9)^\ell(1-2/9)$ which is the naive solution times an extra factor of $2/9.$ 
+Interestingly, $P_\text{river}(\ell)$ settles very close to $(2/9)^\ell(1-2/9)$ which is the naive solution times an extra factor of $2/9.$ 
 
 ![](/img/2025-05-26-fiddlish-Priver_normalized.png){:width="450 px" class="image-centered"}
 
