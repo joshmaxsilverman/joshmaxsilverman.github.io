@@ -72,6 +72,10 @@ $$ \begin{align}
     \end{align}
 $$
 
+for small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually settles down to $2/9:$
+
+![](/img/2025-05-26-fiddlish-Pspace.png){:width="450 px" class="image-centered"}
+
 with this in hand, we can evaluate the weighted sum which comes to $\langle \ell\rangle \approx 1.5347081153095188$
 
 ```python
@@ -99,6 +103,14 @@ exp_l = sum(
           for j in range(1, 100)
         )
 ```
+
+looking at the log plot, this eventually falls as a power law (the straight line on a log plot means it's proportional to $\ell^{-t}$
+
+![](/img/2025-05-26-fiddlish-Priver.png){:width="450 px" class="image-centered"}
+
+interestingly, $P_\text{river}(\ell)$ seems to settle very close to $(2/9)^\ell(1-2/9)$ which is the naive solution times an extra factor of $2/9.$ 
+
+![](/img/2025-05-26-fiddlish-Priver_normalized.png){:width="450 px" class="image-centered"}
 
 
 
