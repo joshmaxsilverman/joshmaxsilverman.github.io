@@ -76,11 +76,11 @@ To get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a ter
 
 $$ \begin{align} 
     P_\text{space}(\ell) &= \left[z^\ell\right] \\
-      &= \frac12\sum\limits_j \dfrac{\dbinom{j}{\ell - 4j}}{2^{j-1}} 
+      &= \sum\limits_j \dfrac{\dbinom{j}{\ell - 4j}}{2^j} 
     \end{align}
 $$
 
-This has a straightforward interpretation: $j$ is the number of words in a line, and each one contributes at least $4$ characters (four characters for three-letter words, and five for four-letter words). So, $(\ell - 4j)$ is the number of four letter (five character) words. When $j$ total words are used, and $(\ell-4j)$ of them are four letter words, there are $\binom{j}{\ell-4j}$ ways to order them. The sum takes care of all feasible word counts. 
+This has a straightforward interpretation: $j$ is the number of words in a line, and each one contributes at least $4$ characters (four characters for three-letter words, and five for four-letter words). So, $(\ell - 4j)$ is the number of four letter (five character) words. When $j$ total words are used, and $(\ell-4j)$ of them are four letter words, there are $\binom{j}{\ell-4j}$ ways to order them. The sum takes care of all feasible word counts, and each particular choice of $j$ words has probability $1/2^j.$ 
 
 For small values of $\ell$, $P_\text{space}(\ell)$ fluctuates but eventually settles down to $2/9:$
 
