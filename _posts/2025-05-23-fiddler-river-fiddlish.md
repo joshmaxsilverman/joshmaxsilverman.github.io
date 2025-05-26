@@ -1,17 +1,21 @@
 ---
 layout: post
-published: false
+published: true
 title: How long is the river?
 date: 2025/05/23
-subtitle: 
-tags:
+subtitle: What should we expect from coincidental diagonals of contiguous spaces?
+tags: recursion generating-functions keyboard-problems
 ---
 
->**Question**:
+>**Question**: Fiddlish is written using a monospace font, meaning each character (including spaces) takes up the same amount of horizontal space. As before, lines of text are very, very long, and each next word has a $50$ percent chance of being three letters and a $50$ percent chance of being four letters. Each line begins with a new word (i.e., words at the end of a line are not hyphenated into the next line).
+>
+>Suppose the $12^\text{th}$ character of a specific line of text is a space. You want to know how long the river down and to the right from this space will be. For example, suppose the $13^\text{th}$ character on the next line and the $14^\text{th}$ character on the line after that are both spaces, but the $15^\text{th}$ character on the very next line is not a space. In this case, the river would have a length of $3.$ (By this definition, the length of the river is always at least $1.$)
+>
+>On average, how long do you expect the resulting river from the given space (again, the $12^\text{th}$ character in its line) to be?
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/how-long-is-the-river-of-text))
 
 ## Solution
 
