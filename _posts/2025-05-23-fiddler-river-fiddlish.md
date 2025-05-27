@@ -27,7 +27,7 @@ Since a new word starts each line, we are asking what is the probability that th
 
 $$ 
 \begin{align}
-  P_\text{river}(\ell) &= P_\text{space}(12+1)\cdot P_\text{space}(12+2)\cdot \ldots \cdot P_\text{space}(12+\ell-1)\cdot\left(1-P_\text{space}(12+\ell)\right) \\
+  P_\text{river}(\ell) &= P_\text{space}(12+1)\cdot P_\text{space}(12+2) \ldots P_\text{space}(12+\ell-1)\cdot\left(1-P_\text{space}(12+\ell)\right) \\
   &= \left(1-P_\text{space}(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P_\text{space}(12+j)
 \end{align}
 $$
@@ -40,11 +40,7 @@ At this point, we could code the recursion to find $P_\text{space}(j)$ and then 
 
 $$ \langle \ell\rangle = \dfrac{\sum\limits_{\ell=1}^\infty \ell P_\text{river}(\ell)}{\sum\limits_{\ell=1}^\infty  P_\text{river}(\ell)}. $$
 
-But we can make some more progress analytically, turning to the glory of generating functions. 
-
-The idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. In principle, we could make the quantity $\frac12(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and then count how many terms of $z^\ell$ result. 
-
-But with that motivation out of the way, we can accept that such a polynomial would be useful and find a way to do it more neatly. 
+But we can make some more progress analytically, turning to the glory of generating functions. The idea is to make a polynomial where the coefficient on $z^\ell$ represents the probability to have a space at position $\ell$. In principle, we could make the quantity $\frac12(z^4 + z^5)$, raise it to a high enough power (anything bigger than $\ell/4$), expand it, and then count how many terms of $z^\ell$ result. With that motivation out of the way, we can accept that such a polynomial would be useful and find a way to do it more neatly. 
 
 The polynomial so described is 
 
@@ -76,7 +72,7 @@ To get a $z^\ell$ term we need the $4j$ from $z^{4j}$ plus the exponent of a ter
 
 $$ \begin{align} 
     P_\text{space}(\ell) &= \left[z^\ell\right] \\
-      &= \sum\limits_j \dfrac{\dbinom{j}{\ell - 4j}}{2^j} 
+      &= \sum\limits_j \dfrac{\dbinom{j}{\ell - 4j}}{2^j}.
     \end{align}
 $$
 
