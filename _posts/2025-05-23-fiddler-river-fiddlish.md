@@ -27,7 +27,7 @@ Since a new word starts each line, we are asking what is the probability that th
 
 $$ 
 \begin{align}
-  P_\text{river}(\ell) &= P_\text{space}(12+1)\cdot P_\text{space}(12+2) \ldots P_\text{space}(12+\ell-1)\cdot\left(1-P_\text{space}(12+\ell)\right) \\
+  P_\text{river}(\ell) &= P_\text{space}(12+1)\cdot P_\text{space}(12+2) \cdots P_\text{space}(12+\ell-1)\cdot\left(1-P_\text{space}(12+\ell)\right) \\
   &= \left(1-P_\text{space}(12+\ell)\right)\prod\limits_{j=1}^{\ell-1} P_\text{space}(12+j)
 \end{align}
 $$
