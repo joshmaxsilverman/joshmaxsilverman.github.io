@@ -50,10 +50,13 @@ $$ \int\text{d}\theta\, \frac12 \ell^3(\theta), $$
 
 This has two intuitive interpretations: 
 
-- for a given choice of $\mathbf{x},$ the probability that $\mathbf{y}$ falls on the line from $\mathbf{x}$ to $\mathbf{p}$ is proportional to the length of that line $\ell(\theta).$ Meanwhile, area of the polar sector at angle $\theta$ from which we could pick $\mathbf{x}$ is just $\frac12 \ell^2(\theta)\,\text{d}\theta.$
-- the probability that two random points fall on a line through $\mathbf{p}$ at a given angle $\theta$ is proportional to the number of pairs of points that form such a line which is the handshake between all points on the line $\ell(\theta),$ yielding a factor of $\frac12 \ell^2(\theta).$ Now, the probability that the angle $\theta$ would be chosen at random is proportional to the number of ways to choose a point at an angle $\theta$ to $\mathbf{p},$ which is proportional to $\ell(\theta).$ 
+- for a given choice of $\mathbf{x},$ the probability that $\mathbf{y}$ falls on the line from $\mathbf{x}$ to $\mathbf{p}$ is proportional to the length of that line $\ell(\theta).$ Next, the area of the polar strip at angle $\theta$ from which we can pick $\mathbf{x}$ is $\frac12 \ell^2(\theta)\,\text{d}\theta.$
+- we can index the lines by their angle. The probability that two random points fall on a line through $\mathbf{p}$ at a given angle $\theta$ is proportional to the number of pairs of points that can define such a line which is the handshake between all points on the line, yielding a factor of $\frac12 \ell^2(\theta).$ Next, the probability that a random line through $\mathbf{p}$ would have angle $\theta$ is proportional to the number of ways to choose a point at an angle $\theta$ to $\mathbf{p},$ which is proportional to $\ell(\theta).$ 
 
 The interpretive confusion comes from $\ell$ doing double duty in the probability and the measure of the physical space the points are chosen from.
+
+![](/img/2025-06-08-fiddler-square-points-vertical.png){:width="200-px" class="image-centered"}
+![](/img/2025-06-08-fiddler-square-points-horizontal.png){:width="200-px" class="image-centered"}
 
 Returning to the calculation, we need to find a concrete expression for $\ell(\theta).$ From the picture, it has a constant vertical component of $1$ while its horizontal component is $\ell(\theta)\sin\theta.$ This means its length is given by 
 
