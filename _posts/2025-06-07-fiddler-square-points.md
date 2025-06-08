@@ -63,6 +63,8 @@ which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for 
 
 $$ 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta}  = 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\left(\tan\frac{\pi}{8}\right)\right) \approx 2.2956. $$
 
+The case for the center is nearly the same. 
+
 ```python
 import random, math, pandas as pd
 # from ace_tools import display_dataframe_to_user
