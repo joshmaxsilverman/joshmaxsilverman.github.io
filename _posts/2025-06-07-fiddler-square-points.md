@@ -61,7 +61,7 @@ $$\ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
 
 which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is just
 
-$$ 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta}  = 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\tan\frac{\pi}{8}\right) \approx 2.2956. $$
+$$ 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta}  = 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\left(\tan\frac{\pi}{8}\right)\right) \approx 2.2956. $$
 
 ```python
 import random, math, pandas as pd
