@@ -55,8 +55,7 @@ This has two intuitive interpretations:
 
 The interpretive confusion comes from $\ell$ doing double duty in the probability and the measure of the physical space the points are chosen from.
 
-![](/img/2025-06-08-fiddler-square-points-vertical.png){:width="200-px" class="image-centered"}
-![](/img/2025-06-08-fiddler-square-points-horizontal.png){:width="200-px" class="image-centered"}
+![](/img/2025-06-08-fiddler-square-points-clean.png){:width="200-px" class="image-centered"}
 
 Returning to the calculation, we need to find a concrete expression for $\ell(\theta).$ From the picture, it has a constant vertical component of $1$ while its horizontal component is $\ell(\theta)\sin\theta.$ This means its length is given by 
 
