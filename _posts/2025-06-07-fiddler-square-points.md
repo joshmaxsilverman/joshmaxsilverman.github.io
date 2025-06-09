@@ -79,7 +79,7 @@ $$ P_\text{middle-edge} = 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\le
 
 This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying
 
-$$ \frac{16 \left(\sqrt{2}+\coth ^{-1}\left(\sqrt{2}\right)\right)}{4 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)+8 \coth ^{-1}\left(\sqrt{5}\right)} \approx 2.57975. $$
+$$ \dfrac{P_\text{center}}{P_\text{middle-edge}} =  \frac{16 \left(\sqrt{2}+\coth ^{-1}\left(\sqrt{2}\right)\right)}{4 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)+8 \coth ^{-1}\left(\sqrt{5}\right)} \approx 2.57975. $$
 
 We can estimate these quantities by generating random lines, discretizing the square, and testing if the line passes within a unit cell of $\mathbf{p}$
 
