@@ -28,6 +28,28 @@ tags: indicators geometry pdfs
 
 ## Solution
 
+First, let's get some intuition for the problem. 
+
+### Intuition
+
+The probability that two random points establish a line through a point $\mathbf{p}$ is bigger, the longer that line is. In particular, it is proportional to the number of ways to pick two points from that line, which is proportional to the square of its length. Already, we can say the center of the square will have the greatest chance to fall on a random line, since on average, the lines through it are most numerous and longest. 
+
+Another point of interest is any corner of the square. For argument's sake, let's consider the lower left corner. While the lines that go through it range from one side length up to $\approx 1.414,$ a line must have positive slope to qualify, meaning a half of all lines are ineligible. We should expect the corners to have pretty low probability.
+
+A final point of interest is the middle of any edge. The length of lines through these points range from half a side length, to just over a side length. These should also have low probability, but it's hard to compare with corner points without more work.
+
+### Simulation
+
+We can confirm these intuitions by measuring the probability that any given point in the unit square is hit by a random line. We do this by discretizing the unit square into $10^{-3} \times 10^{-3}$ unit cells, picking two random points, establishing the line through them, and measuring which unit cells are touched by it. Doing this for $N=10^6$ random lines in the unit square, we get the following heatmap.
+
+`<heat map>`
+
+It seems like the center has the greatest probability, and the middle-edge position is slightly lower than the corners, while both are much lower than the center.
+
+
+
+### Calculation
+
 The probability that two random points $x$ and $y$ form a line through a given point $p$ is
 
 $$ \int \text{d}\mathbf{x} \int \text{d}\mathbf{y}\, \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}) $$
@@ -123,7 +145,7 @@ which leads to the following estimates at $N=4\times 10^8:$
 $$
 \begin{array}{c|c}
 \text{Point} & \text{Estimated $\text{pdf}(\mathbf{p})$} \\ \hline
-P_\text{center}	& 3.062 \\
+P_\text{center}	& \approx 3.062 \\
 P_\text{middle‑edge} & \approx 1.196 \\
 P_\text{corner} & \approx 1.531
 \end{array}
