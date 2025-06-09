@@ -81,7 +81,7 @@ $$\ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
 
 which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is proportional to
 
-$$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= \frac{1}{2} \left(\sqrt{2}+\tanh ^{-1}\left(\frac{1}{\sqrt{2}}\right)\right) \\ &\approx 1.14779. \end{align}$$
+$$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= \frac{1}{2} \left(\sqrt{2}+\tanh ^{-1}\frac{1}{\sqrt{2}}\right) \\ &\approx 1.14779. \end{align}$$
 
 The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner} \approx 2.29559.$
 
@@ -93,7 +93,7 @@ The second, given by the red line in the diagram, has constant horizontal compon
 
 So, 
 
-$$ \begin{align} P_\text{middle-edge} &\propto 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} \\ &= \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\left(\frac{1}{\sqrt{5}}\right)\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)\right) \\ & \approx 0.88985. \end{align} $$
+$$ \begin{align} P_\text{middle-edge} &\propto 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} \\ &= \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\frac{1}{\sqrt{5}}\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\frac{2}{\sqrt{5}}\right) \\ & \approx 0.88985. \end{align} $$
 
 This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying
 
