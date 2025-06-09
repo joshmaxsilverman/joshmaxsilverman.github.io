@@ -40,7 +40,7 @@ A final point of interest is the middle of any edge. The length of lines through
 
 ### Simulation
 
-We can confirm these intuitions by measuring the probability that any given point in the unit square is hit by a random line. We do this by discretizing the unit square into $10^{-3} \times 10^{-3}$ unit cells, picking two random points, establishing the line through them, and measuring which unit cells are touched by it. Doing this for $N=10^6$ random lines in the unit square, we get the following heatmap.
+We can confirm these intuitions by measuring the probability that any given point in the unit square is hit by a random line. We do this by discretizing the unit square into $10^{-3} \times 10^{-3}$ unit cells, picking two random points, establishing the line through them, and measuring which unit cells are touched by it. Doing this for ${N=4\times10^6}$ random lines in the unit square, we get the following heatmap.
 
 ![](/img/2025-06-02-fiddler-square-points-heatmap-4M.png){:width="450-px" class="image-centered"}
 
