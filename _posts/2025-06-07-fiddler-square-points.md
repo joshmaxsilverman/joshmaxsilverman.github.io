@@ -67,15 +67,28 @@ $$ P_\text{corner} = 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\thet
 
 The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner}.$
 
-The middle edge is slightly more complicated, breaking into two unique integrals. The first, given by the salmon colored line in the diagram, has constant vertical component $\frac12$ and horizontal component $\ell_\theta \sin(\theta).$ This means that $\ell_\theta^2 = 1/2^2 + \sin^2\theta \ell_\theta^2$ which leads to $\ell_\theta = \frac1{2\cos\theta}.$ The salmon angle starts at zero and ranges up until $\tan\theta = 1/(1/2)$ or $\theta = \arctan 2.$
+The middle edge is slightly more complicated, breaking into two unique integrals. 
+
+The first, given by the salmon colored line in the diagram, has constant vertical component $\frac12$ and horizontal component $\ell_\theta \sin(\theta).$ This means that $\ell_\theta^2 = 1/2^2 + \sin^2\theta \ell_\theta^2$ which leads to $\ell_\theta = \frac1{2\cos\theta}.$ The salmon angle starts at zero and ranges up until $\tan\theta = 1/(1/2)$ or $\theta = \arctan 2.$
+
+The second, given by the red line in the diagram, has constant horizontal component $1$ and vertical component $\ell_\theta \sin\theta$ which, like the corner and center cases, leads to $\ell_\theta = 1/\cos\theta.$ The red angle starts at zero and ranges up to $\tan\theta = 1/2$ or $\theta = \arctan \frac12.$
+
+So, 
+
+$$ P_\text{middle-edge} = \int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + \int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = xxx. $$
+
+We can estimate these quantities by generating random lines, discretizing the square, and testing if the line passes within a unit cell of $\mathbf{p}$
 
 ```python
-import random, math, pandas as pd
-# from ace_tools import display_dataframe_to_user
+import random
+import math
+import pandas as pd
 
-def estimate_density(p, N=400_000_000, eps=1e-3):
+eps=1e-3
+
+def estimate_density(p, N=400_000_000):
     # MC estimate using small-band approximation.
-    # f ~= P( distance(line(x, y), p) < eps ) / eps
+    # pdf ~= P( distance(line(x, y), p) < eps ) / eps
 
     px, py = p
     count = 0
@@ -90,17 +103,28 @@ def estimate_density(p, N=400_000_000, eps=1e-3):
     return count / (N * eps)
 
 test_points = {
-    "center (0.5,0.5)"      : (0.5, 0.5),
-    "mid‑edge (0.5,0.001)"   : (0.5, 0.001),  # just off the boundary for robustness
-    "near‑corner (0.001,0.001)": (0.001, 0.001), # just off the boundary for robustness
+    "center"      : (0.5, 0.5),
+    "middle‑edge"   : (0.5, 0.001), # just off the boundary for robustness
+    "near‑corner": (0.001, 0.001), # just off the boundary for robustness
 }
 
 results = []
-for label, pt in test_points.items():
-    f_est = estimate_density(pt)
-    results.append({"Point": label, "Estimated f(x,y)": round(f_est, 3)})
+for label, p in test_points.items():
+    f_est = estimate_density(p)
+    results.append({"Point": label, "Estimated pdf(p)": round(f_est, 3)})
 
 df = pd.DataFrame(results)
 ```
+
+which leads to 
+
+$$
+\begin{array}{c|c}
+\text{Point} & \text{Estimated $pdf(\mathbf{p})$} \\ \hline
+\text{center (0.5,0.5)}	& 3.062 \\
+\text{mid‑edge (0.5,0.01)} & 1.273 \\
+\text{near‑corner (0.001,0.001)} & 1.531
+\end{array}
+$$
 
 <br>
