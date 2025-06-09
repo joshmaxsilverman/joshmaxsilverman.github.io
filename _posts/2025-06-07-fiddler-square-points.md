@@ -127,8 +127,8 @@ def estimate_density(p, N=400_000_000):
 test_points = {
     # put zero just off the boundary to avoid edge effects
     "center"      : (0.5, 0.5),
-    "middle‑edge"   : (0.5, 0.001), 
-    "near‑corner": (0.001, 0.001)
+    "middle edge"   : (0.5, 0.001), 
+    "corner": (0.001, 0.001)
 }
 
 results = []
