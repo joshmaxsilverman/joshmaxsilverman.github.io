@@ -90,7 +90,7 @@ eps=1e-3
 
 def estimate_density(p, N=400_000_000):
     # MC estimate using small-band approximation.
-    # pdf ~= P( distance(line(x, y), p) < eps ) / eps
+    # pdf ~= P(distance(line(x, y), p) < eps ) / eps
 
     px, py = p
     count = 0
