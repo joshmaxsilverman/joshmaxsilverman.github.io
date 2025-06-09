@@ -120,7 +120,7 @@ which leads to
 
 $$
 \begin{array}{c|c}
-\text{Point} & \text{Estimated $pdf(\mathbf{p})$} \\\\ \\hline
+\text{Point} & \text{Estimated $\text{pdf}(\mathbf{p})$} \\\\ \\hline
 \text{center (0.5,0.5)}	& 3.062 \\\\
 \text{mid‑edge (0.5,0.01)} & 1.273 \\\\
 \text{near‑corner (0.001,0.001)} & 1.531
