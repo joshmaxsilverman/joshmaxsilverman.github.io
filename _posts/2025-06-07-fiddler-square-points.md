@@ -81,9 +81,9 @@ $$\ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
 
 which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is proportional to
 
-$$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\left(\tan\frac{\pi}{8}\right)\right) \\ &\approx 2.2956. \end{align}$$
+$$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= \frac{1}{2} \left(\sqrt{2}+\tanh ^{-1}\left(\frac{1}{\sqrt{2}}\right)\right) \\ &\approx 1.14779. \end{align}$$
 
-The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner}.$
+The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner} \approx 2.29559.$
 
 The middle edge is slightly more complicated, breaking into two unique integrals. 
 
