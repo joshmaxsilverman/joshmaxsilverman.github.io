@@ -30,11 +30,11 @@ tags: indicators geometry pdfs
 
 The probability that two random points $x$ and $y$ form a line through a given point $p$ is
 
-$$ \int \text{d}\mathbf{x} \int \text{d}\mathbf{y} \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}) $$
+$$ \int \text{d}\mathbf{x} \int \text{d}\mathbf{y}\, \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}) $$
 
 As literal as it seems, we can work this out to get the probability density for any $\mathbf{p}.$ Concretely, let's work out the case where $\mathbf{p}$ is the lower left corner. We start by carrying out the integral over $\mathbf{y}:$
 
-$$ \int \text{d}\mathbf{y} \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}). $$
+$$ \int \text{d}\mathbf{y}\, \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}). $$
 
 The indicator function is $1$ for all points $\mathbf{y}$ that fall on a line through the lower left corner and $\mathbf{x}.$ Drawing this out for an arbitrary $\mathbf{x}$, the support is the line labeled $\ell(\theta).$ 
 
