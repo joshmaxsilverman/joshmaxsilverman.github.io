@@ -122,9 +122,9 @@ which leads to the following estimates at $N=4\times 10^8:$
 
 $$
 \begin{array}{c|c}
-\text{Point} & \text{Estimated $\text{pdf}(\mathbf{p})$} \\\\ \\hline
-P_\text{center}	& 3.062 \\\\
-P_\text{middle‑edge} & \approx 1.196 \\\\
+\text{Point} & \text{Estimated $\text{pdf}(\mathbf{p})$} \\ \hline
+P_\text{center}	& 3.062 \\
+P_\text{middle‑edge} & \approx 1.196 \\
 P_\text{corner} & \approx 1.531
 \end{array}
 $$
