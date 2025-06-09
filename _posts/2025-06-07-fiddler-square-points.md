@@ -75,7 +75,7 @@ The second, given by the red line in the diagram, has constant horizontal compon
 
 So, 
 
-$$ P_\text{middle-edge} = \int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + \int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = xxx. $$
+$$ P_\text{middle-edge} = 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = xxx. $$
 
 We can estimate these quantities by generating random lines, discretizing the square, and testing if the line passes within a unit cell of $\mathbf{p}$
 
