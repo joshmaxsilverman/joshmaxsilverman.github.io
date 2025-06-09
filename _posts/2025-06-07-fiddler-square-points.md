@@ -42,7 +42,7 @@ The indicator function is $1$ for all points $\mathbf{y}$ that fall on a line th
 
 Now we just have to integrate over $\mathbf{x}.$ To do this, let's represent $\mathbf{x}$ in polar coordinates $\mathbf{x} = (r, \theta),$ changing $\text{d}\mathbf{x}$ to $r\, \text{d}r\, \text{d}\theta.$ With this change, the integral becomes
 
-$$ \int \text{d}\mathbf{x} \ell(\theta) = \int \text{d}\theta\, \ell(\theta) \int \text{d}r \, r\, . $$
+$$ \int \text{d}\mathbf{x}\, \ell(\theta) = \int \text{d}\theta\, \ell(\theta) \int \text{d}r \, r\, . $$
 
 The range for $\theta$ is just zero to $\pi/4$ while $r$ ranges from zero to $\ell(\theta),$ so the integral further simplifies to
 
