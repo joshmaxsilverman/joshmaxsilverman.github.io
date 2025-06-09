@@ -24,7 +24,7 @@ tags: indicators geometry pdfs
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-weave-the-web))
 
 ## Solution
 
@@ -32,17 +32,17 @@ The probability that two random points $x$ and $y$ form a line through a given p
 
 $$ \int \text{d}\mathbf{x} \int \text{d}\mathbf{y} \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}) $$
 
-As literal as it seems, we can work this out to get the probability density for any $\mathbf{p}.$ Concretely, let's work out the case where $\mathbf{p}$ is the lower left corner.
-
-Let's start by carrying out the integral over $\mathbf{y}:$
+As literal as it seems, we can work this out to get the probability density for any $\mathbf{p}.$ Concretely, let's work out the case where $\mathbf{p}$ is the lower left corner. We start by carrying out the integral over $\mathbf{y}:$
 
 $$ \int \text{d}\mathbf{y} \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}). $$
 
 The indicator function is $1$ for all points $\mathbf{y}$ that fall on a line through the lower left corner and $\mathbf{x}.$ Drawing this out for an arbitrary $\mathbf{x}$, the support is the line labeled $\ell(\theta).$ 
 
-Now we just have to integrate over $\mathbf{x}.$ To do this, let's represent $\mathbf{x}$ in polar coordinates $\mathbf{x} = (r, \theta).$ With this change, the integral becomes
+![](/img/2025-06-08-fiddler-square-points-clean.png){:width="600-px" class="image-centered"}
 
-$$ \int \text{d}\mathbf{x} \ell(\theta) = \int \text{d}\theta \int \text{d}r \, r\, \ell(\theta). $$
+Now we just have to integrate over $\mathbf{x}.$ To do this, let's represent $\mathbf{x}$ in polar coordinates $\mathbf{x} = (r, \theta),$ changing $\text{d}\mathbf{x}$ to $r\, \text{d}r\, \text{d}\theta.$ With this change, the integral becomes
+
+$$ \int \text{d}\mathbf{x} \ell(\theta) = \int \text{d}\theta\, \ell(\theta) \int \text{d}r \, r\, . $$
 
 The range for $\theta$ is just zero to $\pi/4$ while $r$ ranges from zero to $\ell(\theta),$ so the integral further simplifies to
 
@@ -55,15 +55,13 @@ This has two intuitive interpretations:
 
 The interpretive confusion comes from $\ell$ doing double duty in the probability and the measure of the physical space the points are chosen from.
 
-![](/img/2025-06-08-fiddler-square-points-clean.png){:width="600-px" class="image-centered"}
-
 Returning to the calculation, we need to find a concrete expression for $\ell(\theta).$ From the picture, it has a constant vertical component of $1$ while its horizontal component is $\ell(\theta)\sin\theta.$ This means its length is given by 
 
 $$\ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
 
-which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is just
+which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is proportional to
 
-$$ P_\text{corner} = 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta}  = 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\left(\tan\frac{\pi}{8}\right)\right) \approx 2.2956. $$
+$$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= 2\left(\frac{1}{\sqrt{2}} + \tanh^{-1}\left(\tan\frac{\pi}{8}\right)\right) \\ &\approx 2.2956. \end{align}$$
 
 The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner}.$
 
@@ -75,7 +73,7 @@ The second, given by the red line in the diagram, has constant horizontal compon
 
 So, 
 
-$$ P_\text{middle-edge} = 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\left(\frac{1}{\sqrt{5}}\right)\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)\right) \approx 0.88985. $$
+$$ \begin{align} P_\text{middle-edge} &\propto 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} \\ &= \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\left(\frac{1}{\sqrt{5}}\right)\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)\right) \\ & \approx 0.88985. \end{align} $$
 
 This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying
 
@@ -120,15 +118,18 @@ for label, p in test_points.items():
 df = pd.DataFrame(results)
 ```
 
-which leads to 
+which leads to the following estimates at $N=4\times 10^8:$
 
 $$
 \begin{array}{c|c}
 \text{Point} & \text{Estimated $\text{pdf}(\mathbf{p})$} \\\\ \\hline
-\text{center (0.5,0.5)}	& 3.062 \\\\
-\text{mid‑edge (0.5,0.01)} & 1.273 \\\\
-\text{near‑corner (0.001,0.001)} & 1.531
+P_\text{center}	& 3.062 \\\\
+P_\text{middle‑edge} & \approx 1.196 \\\\
+P_\text{corner} & \approx 1.531
 \end{array}
 $$
+
+taking ratios, we see that $P_\text{center}/P_\text{middle edge} \approx 2.560,$ in precise agreement with the calculation.
+
 
 <br>
