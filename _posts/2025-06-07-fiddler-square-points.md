@@ -75,7 +75,11 @@ The second, given by the red line in the diagram, has constant horizontal compon
 
 So, 
 
-$$ P_\text{middle-edge} = 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = xxx. $$
+$$ P_\text{middle-edge} = 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} = \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\left(\frac{1}{\sqrt{5}}\right)\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)\right) \approx 0.88985. $$
+
+This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying
+
+$$ \frac{16 \left(\sqrt{2}+\coth ^{-1}\left(\sqrt{2}\right)\right)}{4 \sqrt{5}+\tanh ^{-1}\left(\frac{2}{\sqrt{5}}\right)+8 \coth ^{-1}\left(\sqrt{5}\right)} \approx 2.57975. $$
 
 We can estimate these quantities by generating random lines, discretizing the square, and testing if the line passes within a unit cell of $\mathbf{p}$
 
