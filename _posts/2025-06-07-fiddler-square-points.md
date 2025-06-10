@@ -83,7 +83,7 @@ which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for 
 
 $$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, \frac{1}{\cos^3\theta} \\ &= \frac{1}{2} \left(\sqrt{2}+\tanh ^{-1}\frac{1}{\sqrt{2}}\right) \\ &\approx 1.14779. \end{align}$$
 
-The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner} \approx 2.29559.$
+The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $\pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner} \approx 2.29559.$
 
 The middle edge is slightly more complicated, breaking into two unique integrals. 
 
