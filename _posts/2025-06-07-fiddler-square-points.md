@@ -118,7 +118,7 @@ def estimate_density(p, N=400_000_000):
         x1, y1 = random.random(), random.random()
         x2, y2 = random.random(), random.random()
         dx, dy = x2 - x1, y2 - y1
-        len_sq = dx*dx + dy*dy
+        len_sq = dx * dx + dy * dy
         dist = abs(dx * (y1 - py) - dy * (x1 - px)) / math.sqrt(len_sq)
         if dist < eps:
             count += 1
