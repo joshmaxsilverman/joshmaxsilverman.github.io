@@ -152,5 +152,24 @@ $$
 
 taking ratios, we see that $P_\text{center}/P_\text{middle edge} \approx 2.560,$ in precise agreement with the calculation.
 
+### General integral
+
+For any point $\mathbf=(a,b)$ in the square, we can define find $\ell$ using the distance to the nearest point on a wall
+
+$$
+\ell(\theta) =
+\min\!\Bigl(\frac{1-a}{\cos\theta},\;\frac{1-b}{\sin\theta}\Bigr)
++
+\min\!\Bigl(\frac{a}{-\cos\theta},\;\frac{b}{-\sin\theta}\Bigr),
+\qquad 0 \le \theta < \pi
+$$
+
+and integrating as above
+
+$$
+\text{pdf}(a, b) \;=\;
+\int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm d\theta
+}.
+$$
 
 <br>
