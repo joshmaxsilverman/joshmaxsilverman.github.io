@@ -171,4 +171,314 @@ $$
 \int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm \text{d}\theta.
 $$
 
+This lets us evaluate the relative probability for any point in the square. For example, $P(\tfrac{2}{10},\tfrac{3}{10})$ is equal to 
+
+$$
+\frac{147381798187149976038850560-13257329264910423610968288
+   \sqrt{13}+20213848760908162765916160 \sqrt{53}+17249734735662818781624960
+   \sqrt{73}+27383542835421048585855192 \sqrt{113}-1808130795219293585177984
+   \sqrt{689}-1551653025917708842727424 \sqrt{949}+2365852048227127334085120
+   \sqrt{3869}+3734766338947529859442656 \sqrt{5989}+3205001267743300560815616
+   \sqrt{8249}-211625702552539469996032 \sqrt{50297}+437121336818716621682688
+   \sqrt{437197}+16128000 \left(2377073337+324202516 \sqrt{53}\right)
+   \left(2806047137+328422976 \sqrt{73}\right) \tanh
+   ^{-1}\left(\frac{3}{\sqrt{73}}\right)+16128000 \left(2377073337+324202516
+   \sqrt{53}\right) \left(2806047137+328422976 \sqrt{73}\right) \tanh
+   ^{-1}\left(\frac{7}{\sqrt{113}}\right)+215153320652214696267264000 \tanh
+   ^{-1}\left(\frac{1}{2} \left(-3+\sqrt{13}\right)\right)+29344171589268373297152000
+   \sqrt{53} \tanh ^{-1}\left(\frac{1}{2}
+   \left(-3+\sqrt{13}\right)\right)+25181791472123303657472000 \sqrt{73} \tanh
+   ^{-1}\left(\frac{1}{2} \left(-3+\sqrt{13}\right)\right)+3434475506318684061696000
+   \sqrt{3869} \tanh ^{-1}\left(\frac{1}{2}
+   \left(-3+\sqrt{13}\right)\right)-64515366729877114426891152 \cosh \left(3 \left(\log
+   \left((3+2 i)-i \sqrt{13}\right)-\log \left((3-2 i)+i
+   \sqrt{13}\right)\right)\right)-8799074007908428644335936 \sqrt{53} \cosh \left(3
+   \left(\log \left((3+2 i)-i \sqrt{13}\right)-\log \left((3-2 i)+i
+   \sqrt{13}\right)\right)\right)-7550952533823251321373696 \sqrt{73} \cosh \left(3
+   \left(\log \left((3+2 i)-i \sqrt{13}\right)-\log \left((3-2 i)+i
+   \sqrt{13}\right)\right)\right)-1029853716146441794736128 \sqrt{3869} \cosh \left(3
+   \left(\log \left((3+2 i)-i \sqrt{13}\right)-\log \left((3-2 i)+i
+   \sqrt{13}\right)\right)\right)+55957692760266029669218377 \cosh \left(3 \left(\log
+   \left((7+8 i)-i \sqrt{113}\right)-\log \left((7-8 i)+i
+   \sqrt{113}\right)\right)\right)+7631916314929088638417236 \sqrt{53} \cosh \left(3
+   \left(\log \left((7+8 i)-i \sqrt{113}\right)-\log \left((7-8 i)+i
+   \sqrt{113}\right)\right)\right)+6549352555092243276050496 \sqrt{73} \cosh \left(3
+   \left(\log \left((7+8 i)-i \sqrt{113}\right)-\log \left((7-8 i)+i
+   \sqrt{113}\right)\right)\right)+893248240801724108598528 \sqrt{3869} \cosh \left(3
+   \left(\log \left((7+8 i)-i \sqrt{113}\right)-\log \left((7-8 i)+i
+   \sqrt{113}\right)\right)\right)-53788330163053674066816000 \log
+   (49)-7336042897317093324288000 \sqrt{53} \log (49)-6295447868030825914368000 \sqrt{73}
+   \log (49)-858618876579671015424000 \sqrt{3869} \log (49)+17932016311657982364096000
+   \log \left(\frac{57}{212}+\frac{1}{\sqrt{53}}\right)+2409634339068512812032000
+   \sqrt{53} \log
+   \left(\frac{57}{212}+\frac{1}{\sqrt{53}}\right)+2098783760650439159808000 \sqrt{73}
+   \log \left(\frac{57}{212}+\frac{1}{\sqrt{53}}\right)+282026367366997671936000
+   \sqrt{3869} \log
+   \left(\frac{57}{212}+\frac{1}{\sqrt{53}}\right)+35848595079475418677248000 \log
+   \left(2+\sqrt{53}\right)+5033548438360135400448000 \sqrt{53} \log
+   \left(2+\sqrt{53}\right)+4195760693459895189504000 \sqrt{73} \log
+   \left(2+\sqrt{53}\right)+589132283691351343104000 \sqrt{3869} \log
+   \left(2+\sqrt{53}\right)+35864032623315964728192000 \log \left(106+4
+   \sqrt{53}\right)+4819268678137025624064000 \sqrt{53} \log \left(106+4
+   \sqrt{53}\right)+4197567521300878319616000 \sqrt{73} \log \left(106+4
+   \sqrt{53}\right)+564052734733995343872000 \sqrt{3869} \log \left(106+4
+   \sqrt{53}\right)-54971673426640854896285952 \log \left(\cosh \left(\frac{1}{2}
+   \left(\log \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log
+   \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-7497435841058069377422336 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-6433947721127504084484096 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-877508491864423777763328 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+54971673426640854896285952 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8 i}{7}\right)-\frac{i
+   \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+7497435841058069377422336 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+6433947721127504084484096 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+877508491864423777763328 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+10650089372284627465229568 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i \left((2+7
+   i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+1452536493668784478209024
+   \sqrt{53} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+1246498677870103531044864
+   \sqrt{73} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+170006537562774861053952
+   \sqrt{3869} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-10650089372284627465229568 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i \left((8+3
+   i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-1452536493668784478209024
+   \sqrt{53} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-1246498677870103531044864
+   \sqrt{73} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-170006537562774861053952
+   \sqrt{3869} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-64115689554359979487644672 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2 i}{3}\right)-\frac{i
+   \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-8744563133601975242551296 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-7504173858692744489926656 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-1023473700882967850385408 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+64115689554359979487644672 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2 i}{3}\right)-\frac{i
+   \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+8744563133601975242551296 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+7504173858692744489926656 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+1023473700882967850385408 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{2 i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3}
+   i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+54971673426640854896285952 \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2 i}{3}\right)-\frac{i
+   \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+7497435841058069377422336 \sqrt{53}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+6433947721127504084484096 \sqrt{73}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)+877508491864423777763328 \sqrt{3869}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{2
+   i}{3}\right)-\frac{i \sqrt{13}}{3}\right)-\log \left(\frac{1}{3} i \left((-2-3
+   i)+\sqrt{13}\right)\right)\right)\right)\right)-12478892597828452383501312 \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left((7+2 i)+i \sqrt{53}\right)-\log
+   \left((2+7 i)+\sqrt{53}\right)\right)\right)\right)-1701961952177565651234816
+   \sqrt{53} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left((7+2 i)+i
+   \sqrt{53}\right)-\log \left((2+7
+   i)+\sqrt{53}\right)\right)\right)\right)-1460543905383151612133376 \sqrt{73} \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left((7+2 i)+i \sqrt{53}\right)-\log
+   \left((2+7 i)+\sqrt{53}\right)\right)\right)\right)-199199579366483675578368
+   \sqrt{3869} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left((7+2 i)+i
+   \sqrt{53}\right)-\log \left((2+7
+   i)+\sqrt{53}\right)\right)\right)\right)+12478892597828452383501312 \log \left(i \sinh
+   \left(\frac{1}{2} \left(\log \left((3+8 i)+i \sqrt{73}\right)-\log \left((8+3
+   i)+\sqrt{73}\right)\right)\right)\right)+1701961952177565651234816 \sqrt{53} \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left((3+8 i)+i \sqrt{73}\right)-\log
+   \left((8+3 i)+\sqrt{73}\right)\right)\right)\right)+1460543905383151612133376
+   \sqrt{73} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left((3+8 i)+i
+   \sqrt{73}\right)-\log \left((8+3
+   i)+\sqrt{73}\right)\right)\right)\right)+199199579366483675578368 \sqrt{3869} \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left((3+8 i)+i \sqrt{73}\right)-\log
+   \left((8+3 i)+\sqrt{73}\right)\right)\right)\right)+64115689554359979487644672 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8 i}{7}\right)-\frac{i
+   \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+8744563133601975242551296 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+7504173858692744489926656 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+1023473700882967850385408 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)-i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-64115689554359979487644672 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8 i}{7}\right)-\frac{i
+   \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-8744563133601975242551296 \sqrt{53}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-7504173858692744489926656 \sqrt{73}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-1023473700882967850385408 \sqrt{3869}
+   \log \left(\cosh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(\left(1+\frac{8 i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log
+   \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-54971673426640854896285952 \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8 i}{7}\right)-\frac{i
+   \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-7497435841058069377422336 \sqrt{53}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-6433947721127504084484096 \sqrt{73}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)-877508491864423777763328 \sqrt{3869}
+   \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(\left(1+\frac{8
+   i}{7}\right)-\frac{i \sqrt{113}}{7}\right)-\log \left(\frac{1}{7} i \left((-8-7
+   i)+\sqrt{113}\right)\right)\right)\right)\right)+12478892597828452383501312 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i \left((2+7
+   i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{7} i \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+1701961952177565651234816
+   \sqrt{53} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{7} i \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+1460543905383151612133376
+   \sqrt{73} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{7} i \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)+199199579366483675578368
+   \sqrt{3869} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{7} i \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-10650089372284627465229568 \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i \left((2+7
+   i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-1452536493668784478209024
+   \sqrt{53} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-1246498677870103531044864
+   \sqrt{73} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-170006537562774861053952
+   \sqrt{3869} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{7} i
+   \left((2+7 i)+\sqrt{53}\right)\right)-\log \left(1+\frac{1}{7} i
+   \left(2+\sqrt{53}\right)\right)\right)\right)\right)-12478892597828452383501312 \log
+   \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i \left((8+3
+   i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{3} i \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-1701961952177565651234816
+   \sqrt{53} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{3} i \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-1460543905383151612133376
+   \sqrt{73} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{3} i \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)-199199579366483675578368
+   \sqrt{3869} \log \left(\cosh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)+i \sinh \left(\frac{1}{2} \left(\log
+   \left(-\frac{1}{3} i \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)+10650089372284627465229568 \log
+   \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i \left((8+3
+   i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)+1452536493668784478209024
+   \sqrt{53} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)+1246498677870103531044864
+   \sqrt{73} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)+170006537562774861053952
+   \sqrt{3869} \log \left(i \sinh \left(\frac{1}{2} \left(\log \left(-\frac{1}{3} i
+   \left((8+3 i)+\sqrt{73}\right)\right)-\log \left(1+\frac{1}{3} i
+   \left(8+\sqrt{73}\right)\right)\right)\right)\right)}{32256000
+   \left(2+\sqrt{53}\right)^2 \left(4097+456 \sqrt{53}\right)^2 \left(37457+4384
+   \sqrt{73}\right)^2 \left(2 \sqrt{2}+\coth ^{-1}\left(\sqrt{2}\right)+\log \left(\cot
+   \left(\frac{\pi }{8}\right)\right)\right)}
+   $$
+
+   or roughly $0.7349890315253553.$
+
 <br>
