@@ -171,7 +171,7 @@ $$
 \int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm \text{d}\theta.
 $$
 
-This lets us evaluate the relative probability for any point in the square. For example, $P(\tfrac{2}{10},\tfrac{3}{10})$ is equal to 
+This lets us evaluate the relative probability for any point in the square. For example, $P\left(\tfrac{2}{10},\tfrac{3}{10}\right)$ is equal to 
 
 $$
 \frac{147381798187149976038850560-13257329264910423610968288
