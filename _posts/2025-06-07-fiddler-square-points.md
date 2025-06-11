@@ -167,7 +167,7 @@ $$
 and integrating as above
 
 $$
-\text{pdf}(a, b) =
+\text{pdf}(a, b) \propto
 \int_{0}^{\pi} \ell(\theta)^3 \text{d}\theta.
 $$
 
