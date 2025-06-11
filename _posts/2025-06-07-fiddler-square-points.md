@@ -168,8 +168,7 @@ and integrating as above
 
 $$
 \text{pdf}(a, b) \;=\;
-\int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm d\theta
-}.
+\int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm \text{d}\theta.
 $$
 
 <br>
