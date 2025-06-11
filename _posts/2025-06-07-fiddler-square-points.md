@@ -154,7 +154,7 @@ taking ratios, we see that $P_\text{center}/P_\text{middle edge} \approx 2.560,$
 
 ### General integral
 
-For any point $\mathbf{p} = (a,b)$ in the square, we can define find $\ell$ using the distance to the nearest point on a wall
+For any point $\mathbf{p} = (a,b)$ in the square, we can define find $\ell$ using the distance to the nearest point on a wall at a given $\theta$
 
 $$
 \ell(\theta) =
