@@ -167,8 +167,8 @@ $$
 and integrating as above
 
 $$
-\text{pdf}(a, b) \;=\;
-\int_{0}^{\pi} \bigl[\ell(\theta)\bigr]^{3} \,\mathrm \text{d}\theta.
+\text{pdf}(a, b) =
+\int_{0}^{\pi} \ell(\theta)^3 \text{d}\theta.
 $$
 
 This lets us evaluate the relative probability for any point in the square. For example, $P\left(\tfrac{2}{10},\tfrac{3}{10}\right)$ is equal to 
