@@ -167,7 +167,7 @@ $$
 and integrating as above
 
 $$
-\text{pdf}(a, b) \propto
+\text{pdf}(\mathbf{p}) \propto
 \int_{0}^{\pi} \ell(\theta)^3 \text{d}\theta.
 $$
 
