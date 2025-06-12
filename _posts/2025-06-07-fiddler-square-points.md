@@ -48,7 +48,7 @@ It seems like the center has the greatest probability, and the middle-edge posit
 
 ### Calculation
 
-The probability that two random points $x$ and $y$ form a line through a given point $p$ is
+The probability density that the two random points $x$ and $y$ form a line through a given point $p$ is proportional to
 
 $$ \int \text{d}\mathbf{x} \int \text{d}\mathbf{y}\, \mathbb{I}(\text{$\mathbf{x}$ and $\mathbf{y}$ form a line through $\mathbf{p}$}) $$
 
