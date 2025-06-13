@@ -32,15 +32,15 @@ First, let's get some intuition for the problem.
 
 ### Intuition
 
-The probability that two random points establish a line through a point $\mathbf{p}$ is bigger, the longer that line is. In particular, it is proportional to the number of ways to pick two points from that line, which is proportional to the square of its length. Already, we can say the center of the square will have the greatest chance to fall on a random line, since on average, the lines through it are most numerous and longest. 
+The probability that two random points fall on a particular line through a point $\mathbf{p}$ is bigger the longer that line is. In particular, it is proportional to the number of ways to pick two points from that line, which is proportional to the square of its length. Already, we can say the center of the square will have the greatest chance to fall on a random line, since on average, the lines through it are most numerous and longest. 
 
-Another point of interest is any corner of the square. For argument's sake, let's consider the lower left corner. While the lines that go through it range from one side length up to $\approx 1.414,$ a line must have positive slope to qualify, meaning a half of all lines are ineligible. We should expect the corners to have pretty low probability.
+Another point of interest is any corner of the square. For argument's sake, let's consider the lower left corner. While the lines that go through it range from one side length up to $\sqrt{2}\approx 1.414,$ a line must have positive slope to qualify, meaning a half of all lines are ineligible. We should expect the corners to have pretty low probability.
 
 A final point of interest is the middle of any edge. The length of lines through these points range from half a side length, to just over a side length. These should also have low probability, but it's hard to compare with corner points without more work.
 
 ### Simulation
 
-We can confirm these intuitions by measuring the probability that any given point in the unit square is hit by a random line. We do this by discretizing the unit square into $10^{-3} \times 10^{-3}$ unit cells, picking two random points, establishing the line through them, and measuring which unit cells are touched by it. Doing this for ${N=4\times10^6}$ random lines in the unit square, we get the following heatmap.
+We can confirm these intuitions by measuring the probability that any given point in the unit square is hit by a random line. We do this by discretizing the unit square into $10^{-3} \times 10^{-3}$ unit cells, picking two random points, establishing the line through them, and measuring which unit cells are touched by it. Doing this for ${N=4\times10^6}$ random lines in the unit square, we get the following heatmap:
 
 ![](/img/2025-06-02-fiddler-square-points-heatmap-4M.png){:width="450-px" class="image-centered"}
 
@@ -73,11 +73,11 @@ This has two intuitive interpretations:
 - for a given choice of $\mathbf{x},$ the probability that $\mathbf{y}$ falls on the line from $\mathbf{x}$ to $\mathbf{p}$ is proportional to the length of that line $\ell(\theta).$ Next, the area of the polar strip at angle $\theta$ from which we can pick $\mathbf{x}$ is $\frac12 \ell^2(\theta)\,\text{d}\theta.$
 - we can index the lines by their angle. The probability that two random points fall on a line through $\mathbf{p}$ at a given angle $\theta$ is proportional to the number of pairs of points that can define such a line which is the handshake between all points on the line, yielding a factor of $\frac12 \ell^2(\theta).$ Next, the probability that a random line through $\mathbf{p}$ would have angle $\theta$ is proportional to the number of ways to choose a point at an angle $\theta$ to $\mathbf{p},$ which is proportional to $\ell(\theta).$ 
 
-The interpretive confusion comes from $\ell$ doing double duty in the probability and the measure of the physical space the points are chosen from.
+The interpretive confusion comes from $\ell$ doing double duty in the probability and in the measure of the physical space the points are chosen from.
 
 Returning to the calculation, we need to find a concrete expression for $\ell(\theta).$ From the picture, it has a constant vertical component of $1$ while its horizontal component is $\ell(\theta)\sin\theta.$ This means its length is given by 
 
-$$\ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
+$$ \ell^2(\theta) = 1 + \sin^2\theta \ell^2(\theta), $$
 
 which leads to $\ell(\theta) = 1 / \cos\theta.$ So, the probability density for a corner of the square is proportional to
 
@@ -85,21 +85,17 @@ $$ \begin{align}P_\text{corner} &\propto 2\int\limits_0^{\pi/4}\text{d}\theta\, 
 
 The case for the center is nearly the same, except that the green angle ranges from $-\pi/4$ to $\pi/4$, doubling the result so that $P_\text{center} = 2P_\text{corner} \approx 2.29559.$
 
-The middle edge is slightly more complicated, breaking into two unique integrals. 
+The middle edge is slightly more complicated, breaking into two distinct integrals. The first, given by the salmon colored line in the diagram, has constant vertical component $\frac12$ and horizontal component $\ell_\theta \sin(\theta).$ This means that $\ell_\theta^2 = 1/2^2 + \sin^2\theta \ell_\theta^2$ which leads to $\ell_\theta = \frac1{2\cos\theta}.$ The salmon angle starts at zero and ranges up until $\tan\theta = 1/(1/2)$ or $\theta = \arctan 2.$ The second, given by the red line in the diagram, has constant horizontal component $1$ and vertical component $\ell_\theta \sin\theta$ which, like the corner and center cases, leads to $\ell_\theta = 1/\cos\theta.$ The red angle starts at zero and ranges up to $\tan\theta = 1/2$ or $\theta = \arctan \frac12.$
 
-The first, given by the salmon colored line in the diagram, has constant vertical component $\frac12$ and horizontal component $\ell_\theta \sin(\theta).$ This means that $\ell_\theta^2 = 1/2^2 + \sin^2\theta \ell_\theta^2$ which leads to $\ell_\theta = \frac1{2\cos\theta}.$ The salmon angle starts at zero and ranges up until $\tan\theta = 1/(1/2)$ or $\theta = \arctan 2.$
-
-The second, given by the red line in the diagram, has constant horizontal component $1$ and vertical component $\ell_\theta \sin\theta$ which, like the corner and center cases, leads to $\ell_\theta = 1/\cos\theta.$ The red angle starts at zero and ranges up to $\tan\theta = 1/2$ or $\theta = \arctan \frac12.$
-
-So, 
+Adding the two pieces, we get
 
 $$ \begin{align} P_\text{middle-edge} &\propto 2\int\limits_0^{\arctan 2} \text{d}\theta \frac{1}{\left(2\cos\theta\right)^3} + 2\int\limits_0^{\arctan \frac12} \text{d}\theta \frac{1}{\left(\cos\theta\right)^3} \\ &= \frac{1}{8} \left(\sqrt{5}+4 \tanh ^{-1}\frac{1}{\sqrt{5}}\right)+\frac{1}{16} \left(2 \sqrt{5}+\tanh ^{-1}\frac{2}{\sqrt{5}}\right) \\ & \approx 0.88985. \end{align} $$
 
-This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying
+This shows that $P_\text{center}/P_\text{middle-edge}$ is, after simplifying:
 
 $$ \dfrac{P_\text{center}}{P_\text{middle-edge}} =  \frac{16 \left(\sqrt{2}+\coth ^{-1}\sqrt{2}\right)}{4 \sqrt{5}+\tanh ^{-1}\frac{2}{\sqrt{5}}+8 \coth ^{-1}\sqrt{5}} \approx 2.57975. $$
 
-We can estimate these quantities by generating random lines, discretizing the square, and testing if the line passes within a unit cell of $\mathbf{p}$
+We can estimate these quantities by generating random lines, discretizing the square, and testing if each line passes within a unit cell of $\mathbf{p}$
 
 ```python
 import random
@@ -150,28 +146,28 @@ P_\text{corner} & \approx 1.531
 \end{array}
 $$
 
-taking ratios, we see that $P_\text{center}/P_\text{middle edge} \approx 2.560,$ in precise agreement with the calculation.
+Taking ratios, we see that $P_\text{center}/P_\text{middle edge} \approx 2.560,$ in precise agreement with the calculation.
 
 ### General integral
 
-For any point $\mathbf{p} = (a,b)$ in the square, we can find $\ell(\theta)$ as the sum of the distances to the wall at the given $\theta$
+We can generalize the expression for $\ell(\theta)$ for any interior point $\mathbf{p} = (a,b)$ in the square as the sum of the distances to the wall at the given $\theta$
 
 $$
 \ell(\theta) =
 \min\!\Bigl(\frac{1-a}{\cos\theta},\;\frac{1-b}{\sin\theta}\Bigr)
 +
 \min\!\Bigl(\frac{a}{-\cos\theta},\;\frac{b}{-\sin\theta}\Bigr),
-\qquad 0 \le \theta < \pi
+\qquad 0 \le \theta < \pi.
 $$
 
-and integrating as above
+Integrating over all angles as above, we find the relative density:
 
 $$
 \text{pdf}(\mathbf{p}) \propto
 \int_{0}^{\pi} \ell(\theta)^3 \text{d}\theta.
 $$
 
-This lets us evaluate the relative probability for any point in the square. For example, $P\left(\tfrac{2}{10},\tfrac{3}{10}\right)/P\left(\tfrac{1}{2},\tfrac{1}{2}\right)$ is equal to 
+We can use this to evaluate the relative probability density for any two points in the square. For example, $P\left(\tfrac{2}{10},\tfrac{3}{10}\right)/P\left(\tfrac{1}{2},\tfrac{1}{2}\right)$ is equal to 
 
 $$
 \frac{147381798187149976038850560-13257329264910423610968288
@@ -479,6 +475,6 @@ $$
    \left(\frac{\pi }{8}\right)\right)\right)}
    $$
 
-   or roughly $0.7349890315253553.$
+   or, as any good pocket calculator will show, roughly $0.7349890315253553.$
 
 <br>
