@@ -481,4 +481,65 @@ $$
 
    or roughly $0.7349890315253553.$
 
+   $$
+\[
+\frac{1}{
+  32256000
+  \bigl(2+\sqrt{53}\bigr)^{2}
+  \bigl(4097+456\sqrt{53}\bigr)^{2}
+  \bigl(37457+4384\sqrt{73}\bigr)^{2}
+  \Bigl(2\sqrt{2}+\coth^{-1}\!\bigl(\sqrt{2}\bigr)
+        +\log\!\bigl(\cot\tfrac{\pi}{8}\bigr)\Bigr)
+}
+\biggl(
+\begin{aligned}
+ &147381798187149976038850560
+  -13257329264910423610968288\sqrt{13}
+  +20213848760908162765916160\sqrt{53}\\[4pt]
+ &+17249734735662818781624960\sqrt{73}
+  +27383542835421048585855192\sqrt{113}
+  -1808130795219293585177984\sqrt{689}\\[4pt]
+ &-1551653025917708842727424\sqrt{949}
+  +2365852048227127334085120\sqrt{3869}
+  +3734766338947529859442656\sqrt{5989}\\[4pt]
+ &+3205001267743300560815616\sqrt{8249}
+  -211625702552539469996032\sqrt{50297}
+  +437121336818716621682688\sqrt{437197}\\[4pt]
+ &+16128000\bigl(2377073337+324202516\sqrt{53}\bigr)
+          \bigl(2806047137+328422976\sqrt{73}\bigr)
+          \tanh^{-1}\!\!\left(\frac{3}{\sqrt{73}}\right)\\
+ &\phantom{+}\;+
+   16128000\bigl(2377073337+324202516\sqrt{53}\bigr)
+            \bigl(2806047137+328422976\sqrt{73}\bigr)
+            \tanh^{-1}\!\!\left(\frac{7}{\sqrt{113}}\right)
+  +215153320652214696267264000
+   \tanh^{-1}\!\!\left(\frac{-3+\sqrt{13}}{2}\right)\\[4pt]
+ &+29344171589268373297152000\sqrt{53}
+   \tanh^{-1}\!\!\left(\frac{-3+\sqrt{13}}{2}\right)
+  +25181791472123303657472000\sqrt{73}
+   \tanh^{-1}\!\!\left(\frac{-3+\sqrt{13}}{2}\right)
+  +3434475506318684061696000\sqrt{3869}
+   \tanh^{-1}\!\!\left(\frac{-3+\sqrt{13}}{2}\right)\\[4pt]
+ &-64515366729877114426891152
+   \cosh\!\Bigl(3\!\bigl(\log\!\bigl((3+2i)-i\sqrt{13}\bigr)
+                         -\log\!\bigl((3-2i)+i\sqrt{13}\bigr)\bigr)\Bigr)\\
+ &-8799074007908428644335936\sqrt{53}
+   \cosh\!\Bigl(3\!\bigl(\log\!\bigl((3+2i)-i\sqrt{13}\bigr)
+                         -\log\!\bigl((3-2i)+i\sqrt{13}\bigr)\bigr)\Bigr)
+  -7550952533823251321373696\sqrt{73}
+   \cosh\!\Bigl(3\!\bigl(\log\!\bigl((3+2i)-i\sqrt{13}\bigr)
+                         -\log\!\bigl((3-2i)+i\sqrt{13}\bigr)\bigr)\Bigr)\\[4pt]
+ &-1029853716146441794736128\sqrt{3869}
+   \cosh\!\Bigl(3\!\bigl(\log\!\bigl((3+2i)-i\sqrt{13}\bigr)
+                         -\log\!\bigl((3-2i)+i\sqrt{13}\bigr)\bigr)\Bigr)
+  +55957692760266029669218377
+   \cosh\!\Bigl(3\!\bigl(\log\!\bigl((7+8i)-i\sqrt{113}\bigr)
+                         -\log\!\bigl((7-8i)+i\sqrt{113}\bigr)\bigr)\Bigr)
+  +\dots
+\end{aligned}
+\biggr)
+\]
+
+   $$
+
 <br>
