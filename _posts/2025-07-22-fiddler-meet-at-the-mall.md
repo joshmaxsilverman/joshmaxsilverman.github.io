@@ -111,6 +111,23 @@ this is a wonderful formula, that closely matches the data as $N$ scales:
 
 <plot/>
 
+$$
+\begin{array}{ccc}
+ 10 & 4.97447 & 5.13277 \\
+ 20 & 8.61085 & 8.7233 \\
+ 30 & 11.9893 & 12.0601 \\
+ 40 & 15.2142 & 15.2655 \\
+ 50 & 18.372 & 18.3871 \\
+ 100 & 33.4214 & 33.3255 \\
+ 200 & 62.026 & 61.7741 \\
+ 400 & 117.148 & 116.651 \\
+ 800 & 224.349 & 223.548 \\
+ 1600 & 434.588 & 433.302 \\
+ 3200 & 848.996 & 847.096 \\
+ 6400 & 1669.43 & 1666.6 \\
+\end{array}
+$$
+
 however, the formula $\delta = \sqrt{2\mu\log\frac1s}$ is not a close approximation for the numerical solution of the $P(\delta) = \tau(\delta)$ equation. in the first place, we know we are making the aggressive assumption ( that the rate $\lambda$ of the poisson process remains constant as friends come and go, even though we should expect it to rise or fall as we observe windows of low or high friend attendance), so we shouldn't expect the numerical solution to be spot on. however, it is remarkable that effectively ignoring the normalization of the probability distribution, and the $\delta$ from the estimation of the excitation lifetime, leads to a spot-on prediction.
 
 in the time i had, i did not arrive at a more fundamental argument for this result, though it demands a sound explanation.
