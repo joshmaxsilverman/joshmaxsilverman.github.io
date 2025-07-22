@@ -44,7 +44,9 @@ there are two ways to realize $\text{max}=3$. one is for three of the friends to
 $$ \begin{align}P_4(\text{one triple}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\hspace{-1em} \int\limits_{t_1}^{\min(t_1+s,1-s)}\hspace{-1em}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.5em}\int\limits_{t_2+s}^1\text{d}t_4\, \\ &= 2s^2(6+s(11s-16)) \\ &= \frac{86}{256} \end{align} $$
 $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\int\limits_{t_1}^{t_1+s}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.75em}\int\limits_{\max(t_1+s,t_3)}^{\min(1,t_2+s)}\text{d}t_4\, \\ &= 4s^3-5s^4 \\ &= \frac{11}{246}\end{align}$$
 putting these together, we get
+
 $$ \langle \text{max}_4 \rangle = \frac{317}{128} \approx 2.48 $$
+
 ## General $N$ case
 
 i now present a calculation which led to that seems to tightly capture the large $N$ behavior. however, it is ultimately unjustified it comes from errantly dropping a pair of terms. i believe it's a glimpse of a deeper calculation i have yet to see how to develop.
