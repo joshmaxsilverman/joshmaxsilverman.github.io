@@ -40,7 +40,7 @@ $$ \langle \text{max}_3 \rangle = \frac{65}{32} \approx 2.03 $$
 
 ## $N=4$ friends
 
-with $4$ friends, the cases from above generalize directly, giving $P_4(\text{max}=1)=(1-3s)^4=\frac{13}{256}$ and $P_4(\text{max}=4) = (4-3s)s^3 = \frac{1}{256}$. however, we have to deal with one of the intermediate cases. we'll go for the case of $\text{max}=3.$ 
+with $4$ friends, the cases from above generalize directly, giving $P_4(\text{max}=1)=(1-3s)^4=\frac{1}{256}$ and $P_4(\text{max}=4) = (4-3s)s^3 = \frac{13}{256}$. however, we have to deal with one of the intermediate cases. we'll go for the case of $\text{max}=3.$ 
 
 there are two ways to realize $\text{max}=3$. one is for three of the friends to overlap while the fourth friend overlaps with at most one of the other friends. the other way is for there to be two distinct $3$-friend overlaps, in other words $t_3-t_1 \leq s,$ $t_4-t_2\leq s,$ while $t_4-t_1 \gt s.$ 
 
