@@ -31,17 +31,20 @@ if it is $1$ then none of the friends overlap at all, so the probability is equa
 $$ \begin{align} P_3(\text{max}=1) &= \int\limits_0^{1-2s}\text{d}t_1 \int\limits_{t_1+s}^{1-s}\text{d}t_2 \int\limits_{t_2+s}^1\text{d}t_3 \\ &= (1-2s)^3 \end{align}$$
 
 if it is $3$ then they all have to occur within $s$ of friend $1$'s arrival, so
+
 $$ \begin{align} P_3(\text{max}=3) &= \int\limits_0^1\text{d}t_1 \int\limits_{t_1}^{t_1+s}\text{d}t_2 \int\limits_{t_2}^{t_1+s}\text{d}t_3 \\ &= 3s^2 \end{align} $$
+
 because the probabilities sum to $1$, we can figure out $P(\text{max}=2)$ and calculate the expectation.
 
 $$ \langle \text{max}_3 \rangle = \frac{65}{32} \approx 2.03 $$
+
 ## $N=4$ friends
 
 with $4$ friends, the cases from above generalize directly, giving $P_4(\text{max}=1)=(1-3s)^4=\frac{13}{256}$ and $P_4(\text{max}=4) = (4-3s)s^3 = \frac{1}{256}$. however, we have to deal with one of the intermediate cases. we'll go for the case of $\text{max}=3.$ 
 
 there are two ways to realize $\text{max}=3$. one is for three of the friends to overlap while the fourth friend overlaps with at most one of the other friends. the other way is for there to be two distinct $3$-friend overlaps, in other words $t_3-t_1 \leq s,$ $t_4-t_2\leq s,$ while $t_4-t_1 \gt s.$ 
 
-$$ \begin{align}P_4(\text{one triple}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\hspace{-1em} \int\limits_{t_1}^{\min(t_1+s,1-s)}\hspace{-1em}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.5em}\int\limits_{t_2+s}^1\text{d}t_4\, \\ &= 2s^2(6+s(11s-16)) \\ &= \frac{86}{256} \end{align} $$
+$$ \begin{align} P_4(\text{one triple}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\hspace{-1em} \int\limits_{t_1}^{\min(t_1+s,1-s)}\hspace{-1em}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.5em}\int\limits_{t_2+s}^1\text{d}t_4\, \\ &= 2s^2(6+s(11s-16)) \\ &= \frac{86}{256} \end{align} $$
 
 $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\int\limits_{t_1}^{t_1+s}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.75em}\int\limits_{\max(t_1+s,t_3)}^{\min(1,t_2+s)}\text{d}t_4\, \\ &= 4s^3-5s^4 \\ &= \frac{11}{246}\end{align}$$
 
