@@ -109,7 +109,7 @@ $$\begin{align} k &= \mu + \delta \\ &= Ns + \sqrt{2Ns\log\frac1s}\end{align} $$
 
 this is a wonderful formula, that closely matches the data as $N$ scales:
 
-<plot/>
+![](/img/2025-07-22-fiddler-meet-at-mall-plot.png){:width="450 px" class="image-centered"}
 
 $$
 \begin{array}{ccc}
