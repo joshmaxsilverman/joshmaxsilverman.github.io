@@ -50,7 +50,7 @@ $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d
 
 putting these together, we get
 
-$$ \langle \text{max}_4 \rangle = \frac{317}{128} \approx 2.48 $$
+$$ \begin{align} \langle \text{max}_4 \rangle &= \left(1 + 6 s - 9 s^2 + 6 s^3\right)\rvert\limits_{s=\frac12} \\ &=\frac{317}{128} \\ &\approx 2.48 \end{align}$$
 
 ## General $N$ case
 
