@@ -42,7 +42,9 @@ with $4$ friends, the cases from above generalize directly, giving $P_4(\text{ma
 there are two ways to realize $\text{max}=3$. one is for three of the friends to overlap while the fourth friend overlaps with at most one of the other friends. the other way is for there to be two distinct $3$-friend overlaps, in other words $t_3-t_1 \leq s,$ $t_4-t_2\leq s,$ while $t_4-t_1 \gt s.$ 
 
 $$ \begin{align}P_4(\text{one triple}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\hspace{-1em} \int\limits_{t_1}^{\min(t_1+s,1-s)}\hspace{-1em}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.5em}\int\limits_{t_2+s}^1\text{d}t_4\, \\ &= 2s^2(6+s(11s-16)) \\ &= \frac{86}{256} \end{align} $$
+
 $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d}t_1\,\int\limits_{t_1}^{t_1+s}\text{d}t_2\, \int\limits_{t_2}^{t_1+s}\text{d}t_3\, \hspace{-0.75em}\int\limits_{\max(t_1+s,t_3)}^{\min(1,t_2+s)}\text{d}t_4\, \\ &= 4s^3-5s^4 \\ &= \frac{11}{246}\end{align}$$
+
 putting these together, we get
 
 $$ \langle \text{max}_4 \rangle = \frac{317}{128} \approx 2.48 $$
@@ -59,6 +61,7 @@ the big picture is roughly
 - compute the $k$ at which we would expect one such interval to appear per hour
 
 let's assume there are effectively $1/s = 4$ intervals. the rate at which the people arrive is $\lambda = N\,\text{hr}^{-1}$, so the probability that nobody shows up in time $\Delta t$ is $(1-\lambda \Delta t)$ and the chance nobody shows up for time $t$ is $(1-\lambda \Delta t)^{t/\Delta t}$ which as $\Delta t$ goes to zero becomes $e^{-\lambda t}.$ the probability that someone shows up in time $dt$ is $\lambda dt$ so the chance that $k$ people show up in time $T$ is (making aggressive assumption $\lambda$ stays constant) approximately
+
 $$\begin{align} P(k\,\,\text{friends in time}\,\, T) &\approx \int \lambda\, dt_1 \int \lambda\, dt_2 \ldots \int \lambda\, dt_k\, e^{-\lambda(t_1 + t_2 + \ldots + t_k)} \\ &= \lambda^k e^{-\lambda s} \int\, dt_1 \int\, dt_2 \ldots \int\, dt_k \\ &= \frac{(\lambda s)^k}{k!} e^{-\lambda s} \end{align}$$
 
 the expectation of this distribution is $\mu = \lambda s = N s$ and is approximately gaussian for large $\lambda.$ 
@@ -67,9 +70,11 @@ $$ P(\text{max}=k) = \frac1{k!} \mu^k e^{-\mu } $$
 taking the log...
 
 $$ \begin{align} \log P(\text{max} = k) &= k\log \mu - \mu - \log k! \\ &= k\log\mu - \mu - \left(k\log k - k + \frac12 \log 2\pi k\right)  \end{align} $$
+
 centering about the mean $\mu = k - \delta$ we get
 
 $$ \begin{align}\log P(\text{deviation} = \delta) &= \delta + (\mu + \delta) \log\mu - (\mu + \delta)\log(\mu + \delta) - \frac12\log 2\pi(\mu+\delta) \\ &= \delta - (\mu + \delta) \log\frac{\mu + \delta}{\mu} - \frac12\log 2\pi(\mu+\delta) \\ &= \delta - (\mu + \delta) \log\left(1 + \delta/\mu\right) - \frac12\log 2\pi(\mu+\delta) \\ &= \delta -(\mu+\delta)\left(\delta/\mu - \frac12\delta^2/\mu^2\right) - \frac12\log 2\pi(\mu+\delta) \\ &= \delta - \delta + \frac12 \delta^2/\mu - \delta^2/\mu + \frac12\delta^3/\mu^2 - \frac12\log 2\pi(\mu+\delta) \\ &\approx -\frac12\delta^2/\mu - \frac12\log 2\pi\mu\end{align} $$
+
 so the probability of seeing a deviation of size $\delta$ at a random point in time is approximately
 
 $$ P(\delta) = \frac{1}{\sqrt{2\pi\mu}}\large e^{-\frac12\delta^2/\mu} $$
@@ -84,15 +89,21 @@ $$ P(\delta) = \tau(\delta) $$
 the default size of an interval is the mean, i.e. $k = \mu$ so we need to find out the lifetime of an excitation of magnitude $\delta.$ if there are $\delta$ friends in the excitation, and they all spawned inside the window size $s,$ then we'd expect the oldest friend to have time $s/\delta$ left before they leave the mall. 
 
 so we have
+
 $$ s/\delta = \frac{1}{\sqrt{2\pi\mu}}e^{-\frac12\delta^2/\mu} $$
+
 this equation can't be solved outright, but we can use it to develop an approximation for $\delta$. 
 
 taking logs we get 
+
 $$ \log\frac1s  = \frac12\delta^2/\mu + \log\sqrt{2\pi\mu} - \log\delta  $$
+
 we are about to see the unjustified step.
 
 the thinking goes roughly: $\log\frac1s$ doesn't grow at all, so the right side mustn't either. however, the second term grows as $\log\sqrt{\mu}$, so the negative term must also grow as $\log\sqrt{\mu},$ since the $\delta^2$ term is positive. therefore, to leading order we have $\log\frac1s \approx \frac12\delta^2/\mu$ and $\delta = \sqrt{2\mu\log\frac1s}$ leading to
+
 $$\begin{align} k &= \mu + \delta \\ &= Ns + \sqrt{2Ns\log\frac1s}\end{align} $$
+
 this is a wonderful formula, that closely matches the data as $N$ scales:
 
 <plot/>
