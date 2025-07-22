@@ -40,7 +40,7 @@ $$ \begin{align} P_3(\text{max}=3) &= \int\limits_0^1\text{d}t_1 \int\limits_{t_
 
 because the probabilities sum to $1$, we can figure out $P(\text{max}=2)$ and calculate the expectation.
 
-$$ \begin{align} \langle \text{max}_3 \rangle &= \left(1 + 6 s - 9 s^2 + 6 s^3\right)\rvert{s=\frac12} \\ &=\frac{65}{32} \\ &\approx 2.03 \end{align}$$
+$$ \begin{align} \langle \text{max}_3 \rangle &= \left(1 + 6 s - 9 s^2 + 6 s^3\right)\bigg\rvert{s=\frac12} \\ &=\frac{65}{32} \\ &\approx 2.03 \end{align}$$
 
 ## $N=4$ friends
 
