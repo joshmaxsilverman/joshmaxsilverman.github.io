@@ -22,9 +22,13 @@ tags: maximum approximation
 
 ## Solution
 
+For both questions, the task at hand is enumerating how many ways there are for $1$, $2$, $3$, or $4$ friends to be at the mall at the same time, turn those descriptions into constraints on the space of arrival times $\{t_1, t_2, \ldots\}$, and then find the sub-volumes by integration. That's what's described in the first two sections below.
+
+Extending that style of analysis to high $N$ is not simple, because the mutual constraints between the $t_j$ get complicated, as would evaluating the resulting integrals. Instead, I approximate the window of overlap as the outcome of a Poisson process, look at excitations of the window, and ask at what number of friends $k$ would we expect to see one such occurrence over the hour. This leads to a seemingly exact asymptotic formula, though as we'll see, it is not wholly justified by the analysis. 
+
 ## $N=3$ friends
 
-let $t_j$ be the time that friend $j$ arrives and $s$ the fraction of an hour that they stay for (in this case $s=\frac14$). the max can either be $1$, $2$, or $3$. 
+Let $t_j$ be the time that friend $j$ arrives and $s$ the fraction of an hour that they stay for (in this case $s=\frac14$). the max can either be $1$, $2$, or $3$. 
 
 if it is $1$ then none of the friends overlap at all, so the probability is equal to
 
