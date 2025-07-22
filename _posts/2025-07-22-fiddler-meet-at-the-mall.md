@@ -113,6 +113,7 @@ this is a wonderful formula, that closely matches the data as $N$ scales:
 
 $$
 \begin{array}{ccc}
+N & $10^5\,\text{Monte Carlo sim} & \text{formula} \\ \hline
  10 & 4.97447 & 5.13277 \\
  20 & 8.61085 & 8.7233 \\
  30 & 11.9893 & 12.0601 \\
