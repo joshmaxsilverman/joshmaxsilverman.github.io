@@ -38,7 +38,7 @@ $$ \begin{align} P_3(\text{max}=3) &= \int\limits_0^1\text{d}t_1 \int\limits_{t_
 
 Because the probabilities sum to $1$, we can figure out $P(\text{max}=2)$ and calculate the expectation
 
-$$ \begin{align} \langle \text{max}_3 \rangle &= \sum_j j P(\text{max} = j) \\ &= \left(1 + 6 s - 9 s^2 + 6 s^3\right)\bigg\rvert_{s=\frac12} \\ &=\frac{65}{32} \\ &\approx 2.03 \end{align}$$
+$$ \begin{align} \langle \text{max}_3 \rangle &= \sum_j j \cdot P(\text{max} = j) \\ &= \left(1 + 6 s - 9 s^2 + 6 s^3\right)\bigg\rvert_{s=\frac12} \\ &=\frac{65}{32} \\ &\approx 2.03 \end{align}$$
 
 ## $N=4$ friends
 
@@ -54,7 +54,7 @@ $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d
 
 Putting these all together, we get
 
-$$ \begin{align} \langle \text{max}_4 \rangle &= \sum_j j P(\text{max} = j) \\&= \left(1 + 12 s - 42 s^2 + 88 s^3 - 70 s^4\right)\bigg\rvert_{s=\frac12} \\ &=\frac{317}{128} \\ &\approx 2.48 \end{align}$$
+$$ \begin{align} \langle \text{max}_4 \rangle &= \sum_j j \cdot P(\text{max} = j) \\&= \left(1 + 12 s - 42 s^2 + 88 s^3 - 70 s^4\right)\bigg\rvert_{s=\frac12} \\ &=\frac{317}{128} \\ &\approx 2.48 \end{align}$$
 
 ## General $N$ case
 
