@@ -30,11 +30,11 @@ Extending that style of analysis to high $N$ is not simple, because the mutual c
 
 Let $t_j$ be the time that friend $j$ arrives and $s$ the fraction of an hour that they stay for (in this case $s=\frac14$). The max can either be $1$, $2$, or $3$. If it's $1$ then none of the friends overlap at all, and the probability is equal to
 
-$$ \begin{align} P_3(\text{max}=1) &= \int\limits_0^{1-2s}\text{d}t_1 \int\limits_{t_1+s}^{1-s}\text{d}t_2 \int\limits_{t_2+s}^1\text{d}t_3 \\ &= (1-2s)^3. \end{align}$$
+$$ \begin{align} P_3(\text{max}=1) &= 3! \int\limits_0^{1-2s}\text{d}t_1 \int\limits_{t_1+s}^{1-s}\text{d}t_2 \int\limits_{t_2+s}^1\text{d}t_3 \\ &= (1-2s)^3. \end{align}$$
 
 If it's $3$ then they all have to occur within $s$ of friend $1$'s arrival, and the probability is equal to
 
-$$ \begin{align} P_3(\text{max}=3) &= \int\limits_0^1\text{d}t_1 \int\limits_{t_1}^{t_1+s}\text{d}t_2 \int\limits_{t_2}^{t_1+s}\text{d}t_3 \\ &= 3s^2. \end{align} $$
+$$ \begin{align} P_3(\text{max}=3) &= 3! \int\limits_0^1\text{d}t_1 \int\limits_{t_1}^{t_1+s}\text{d}t_2 \int\limits_{t_2}^{t_1+s}\text{d}t_3 \\ &= 3s^2. \end{align} $$
 
 Because the probabilities sum to $1$, we can figure out $P(\text{max}=2)$ and calculate the expectation
 
