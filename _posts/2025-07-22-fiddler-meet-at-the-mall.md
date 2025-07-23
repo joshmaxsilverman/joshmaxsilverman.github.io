@@ -54,7 +54,7 @@ $$ \begin{align}P_4(\text{two triples}) &= 2\times 4! \int\limits_0^{1-s}\text{d
 
 Putting these all together, we get
 
-$$ \begin{align} \langle \text{max}_4 \rangle &= \sum_j j P(\text{max} = j) \\&= \left(1 + 12 s - 42 s^2 + 88 s^3 - 70 s^4\right)\bigg_\rvert_{s=\frac12} \\ &=\frac{317}{128} \\ &\approx 2.48 \end{align}$$
+$$ \begin{align} \langle \text{max}_4 \rangle &= \sum_j j P(\text{max} = j) \\&= \left(1 + 12 s - 42 s^2 + 88 s^3 - 70 s^4\right)\bigg\rvert_{s=\frac12} \\ &=\frac{317}{128} \\ &\approx 2.48 \end{align}$$
 
 ## General $N$ case
 
