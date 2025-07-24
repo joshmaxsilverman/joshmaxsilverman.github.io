@@ -71,7 +71,7 @@ Let's assume there are $1/s = 4$ effectively independent intervals. The rate at 
 
 $$\begin{align} P(k\,\,\text{friends in time}\,\, T) &\approx \int \lambda\, dt_1 \int \lambda\, dt_2 \ldots \int \lambda\, dt_k\, e^{-\lambda(t_1 + t_2 + \ldots + t_k)} \\ &= \lambda^k e^{-\lambda s} \int\, dt_1 \int\, dt_2 \ldots \int\, dt_k \\ &= \frac{(\lambda s)^k}{k!} e^{-\lambda s}, \end{align}$$
 
-a Poisson distribution. The expectation of this distribution is $\mu = \lambda s = N s$ and is approximately gaussian for large $N.$ So
+a Poisson distribution. The expectation of this distribution is $\mu = \lambda s = N s$ and is approximately Gaussian for large $N.$ So
 
 $$ P(\text{max}=k) = \frac1{k!} \mu^k e^{-\mu } $$
 
