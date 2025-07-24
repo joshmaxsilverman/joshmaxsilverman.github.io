@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Can you meet me at the mall?
 date: 2025/07/22
-subtitle: What is the greatest number of friends you're likely to meet if everyone fails to coordinate?
+subtitle: What is the greatest number of friends you're likely to meet if nobody deigns to coordinate?
 tags: maximum approximation
 ---
 
