@@ -30,6 +30,7 @@ $$ N \geq x_B \geq N - N(1 - v_B/v_A) $$
 At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end, it is positioned so that $A$ can overtake it at the last minute.
 
 Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes a car of speed $v_B$ is proportional to the sub-volume coordinate space. Since $\Delta t$ and $\Delta v_B$ are both simple expressions in terms of velocity and $N$, they form a rectangle and the relative probability is just
+
 $$ P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). $$
 ### Distance lost
 
