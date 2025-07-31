@@ -50,6 +50,6 @@ In the slow lane, the car goes down to and up from zero ($a=0$) so it's just $v_
 
 Now we can find the expected distance lost, with the help of computer algebra
 
-
+![](/img/2025-08-01-robot-road-trip.png){:width="450 px" class="image-centered"}
 
 <br>
