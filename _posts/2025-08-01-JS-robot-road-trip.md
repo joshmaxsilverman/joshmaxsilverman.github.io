@@ -70,7 +70,7 @@ In the slow lane, the car goes down to and up from zero ($a=0$) so it's just $v_
 
 Now we can find the expected distance lost, with the help of computer algebra
 
-$$ \begin{align}\langle \text{distance lost} \rvert a \rangle &= \int \text{d}v_A \int\text{d}v_B\, P(v_A\text{ overtakes }v_B) \text{distance lost}(v_B) \\ &= \int\limits_1^a \text{d}v_A \int\limits_1^{v_A}\text{d}v_B\, v_B^2 \frac{v_A - v_B}{v_Av_B} + \int\limits_a^2 \text{d}v_A\, \int\limits_a^{v_A}\text{d}v_B \left(v_B-a\right)^2 \frac{v_A - v_B}{v_Av_B}\\ &= \frac{6 a^3 \log \left(\frac{2}{a}\right)+\left(6-36 a^2\right) \log (a)+9 a (2 a (a-1+\log (4))-5)+16}{18 (\log (8)-2)},\end{align} $$
+$$ \begin{align}\langle \text{distance lost} \rvert a \rangle &\sim \int \text{d}v_A \int\text{d}v_B\, P(v_A\text{ overtakes }v_B) \text{distance lost}(v_B) \\ &\sim \int\limits_1^a \text{d}v_A \int\limits_1^{v_A}\text{d}v_B\, v_B^2 \frac{v_A - v_B}{v_Av_B} + \int\limits_a^2 \text{d}v_A\, \int\limits_a^{v_A}\text{d}v_B \left(v_B-a\right)^2 \frac{v_A - v_B}{v_Av_B}\\ &\sim \frac{6 a^3 \log \left(\frac{2}{a}\right)+\left(6-36 a^2\right) \log (a)+9 a (2 a (a-1+\log (4))-5)+16}{18 (\log (8)-2)},\end{align} $$
 
 which matches an $N=10^6$-trial simulation pretty well
 
