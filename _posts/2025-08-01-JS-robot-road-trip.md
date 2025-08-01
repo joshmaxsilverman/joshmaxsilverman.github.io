@@ -37,7 +37,7 @@ $$ \mathcal{T}_A - \mathcal{T}_B \leq t_B \leq \mathcal{T}_A, $$
 
 and $\Delta t_B = \mathcal{T}_B = N/v_B.$ 
 
-Because $t_B$ ranges from $0$ to $N/v_A$ the range for $x_B$ is 
+Because $t_B$ ranges from $-\mathcal{T}_A$ to $0,$ the range for $x_B$ is 
 
 $$ N - N(1 - v_B/v_A) \leq x_B \leq N, $$
 
