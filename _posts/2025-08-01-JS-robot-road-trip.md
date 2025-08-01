@@ -33,13 +33,13 @@ $$ v_At_A = x_B + v_B\left(t_A-t_B\right). $$
 
 The latest spawn time that car $B$ can spawn is $\mathcal{T}_A=N/v_A$, the time at which car $A$ comes off the highway. The earliest it can spawn is one lifetime before car $A$ despawns, $(N/v_A - N/v_B)$ so the range for $t_B$ is 
 
-$$ N/v_A \geq t_B \geq N/v_A - N/v_B, $$
+$$ N/v_A - N/v_B \leq t_B \leq N/v_A, $$
 
 and $\Delta t_B = \mathcal{T}_B = N/v_B.$ 
 
 Because $t_B$ ranges from $0$ to $N/v_A$ the range for $x_B$ is 
 
-$$ N \geq x_B \geq N - N(1 - v_B/v_A), $$
+$$ N - N(1 - v_B/v_A) \leq x_B \leq N, $$
 
 and $\Delta x_B = N(1-v_B/v_A).$
 
