@@ -41,7 +41,9 @@ so $\Delta x_B = N(1-v_B/v_A).$
 
 At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end, it is positioned so that $A$ can overtake it at the last minute.
 
-Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume of the $x_B, t_B$ coordinate space that leads to collision. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of the velocities and $N$, they form a rectangle and the relative probability is
+Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume of the $x_B, t_B$ coordinate space that leads to collision. 
+
+Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of the velocities and $N$, they form a rectangle and the relative probability is
 
 $$ 
   \begin{align}
