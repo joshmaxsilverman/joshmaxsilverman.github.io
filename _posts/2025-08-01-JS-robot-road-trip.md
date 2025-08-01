@@ -55,7 +55,16 @@ With this in hand, we can find the relative expected lost distance, if only we h
 
 First of all, it is awkward to frame the problem in terms of lost distance, since every trip lasts for $N$ miles. What's actually lost is time. But alas.
 
-The distance lost accelerating and decelerating in the fast lane is the difference between the distance the slow car would have traveled in that time $v_B\Delta t = 2v_B(v_B-a)$ and the distance it travels while decelerating $\langle v\rangle \Delta t = \left(v_B + a\right)\left(v_B-a\right)$ which is $2v_B^2-2v_Ba - v_B^2 + a^2 = v_B^2 + a^2 - 2v_Ba = (v_B-a)^2.$ 
+The distance lost accelerating and decelerating in the fast lane is the difference between the distance the slow car would have traveled in that time, $v_B\Delta t = 2v_B(v_B-a),$ and the distance it travels while decelerating, $\langle v\rangle \Delta t = \left(v_B + a\right)\left(v_B-a\right),$ which is 
+
+$$ 
+  \begin{align}
+    \left(v_B - \langle v\rangle\right)\Delta t &= 2v_B(v_B-a) - \left(v_B + a\right)\left(v_B-a\right) \\
+    &= 2v_B^2-2v_Ba - v_B^2 + a^2 \\ 
+    &= v_B^2 + a^2 - 2v_Ba \\
+    &= (v_B-a)^2.
+  \end{align}
+$$ 
 
 In the slow lane, the car goes down to and up from zero ($a=0$) so it's just $v_B^2.$
 
