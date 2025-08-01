@@ -23,13 +23,11 @@ tags: kinematics expectation asymptotics
 
 ## Solution
 
-### Setup
-
 Because each car is spawned uniformly in time and space, we can condition on the two speeds $v_A$ and $v_B$ and find the relative probability of collision as the relative fraction of spawn times and distances that lead to intersection. 
 
 ### Relative probability of interaction
 
-Let $t_B$ and $x_B$ be the time and position at which car $B$ was spawned, that travels at speed $v_B$. Considering the time and position of car $A$'s spawn to be $(0,0)$, we have
+Let $t_B$ and $x_B$ be the time and position at which car $B$ was spawned, and $v_B$ be its speed. Considering the time and position of car $A$'s spawn to be $(0,0)$, we have
 
 $$ v_At_A = x_B + v_B\left(t_A-t_B\right). $$
 
@@ -47,7 +45,7 @@ and $\Delta x_B = N(1-v_B/v_A).$
 
 At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end, it is positioned so that $A$ can overtake it at the last minute.
 
-Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume coordinate space. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of velocity and $N$, they form a rectangle and the relative probability is just
+Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume of the $x_B, t_B$ coordinate space that leads to collision. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of the velocities and $N$, they form a rectangle and the relative probability is
 
 $$ P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). $$
 
