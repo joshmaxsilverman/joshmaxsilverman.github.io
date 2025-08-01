@@ -15,7 +15,7 @@ tags: kinematics expectation asymptotics
 >
 >Assume all car trips are of constant length $N,$ starting at arbitrary points and times along an infinitely long highway. This is made more mathematically precise below.
 >
->Mathematical clarification: Say car trips arrive at a rate of $z$ car trip beginnings per mile per minute, uniformly across the infinite highway (cars enter and exit their trips at their preferred speed due to on/off ramps), and car trips have a constant length of $N$ miles. Define $f(z,N)$ to be the value of a that minimizes the expected lost distance per car trip due to passing. Find $\lim\limits_{N\rightarrow\infty}\lim\limits_{z\rightarrow 0+}f(z,N)$ the limit of [the limit of f(z,N) as z -> 0+] as N -> infinity. 
+>Mathematical clarification: Say car trips arrive at a rate of $z$ car trip beginnings per mile per minute, uniformly across the infinite highway (cars enter and exit their trips at their preferred speed due to on/off ramps), and car trips have a constant length of $N$ miles. Define $f(z,N)$ to be the value of a that minimizes the expected lost distance per car trip due to passing. Find $\lim\limits_{N\rightarrow\infty}\lim\limits_{z\rightarrow 0+}f(z,N).$
 
 <!--more-->
 
