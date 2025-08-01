@@ -29,21 +29,28 @@ Because each car is spawned uniformly in time and space, we can condition on two
 
 ### Relative probability of interaction
 
-Let $t_B$ and $x_B$ be the time and position at which car $B$ was spawned, that travels at speed $v_B$. Considering the time and position of car A's spawn to be $(0,0)$, we have
-$$v_At = x_B + v_B\left(t-t_B\right)$$
-The latest spawn time that car $B$ can spawn is $T_A=N/v_A$, the time at which car $A$ comes off the highway. The earliest it can spawn is one lifetime before car $A$ despawns, $(N/v_A - N/v_B)$ so the range for $t_B$ is 
+Let $t_B$ and $x_B$ be the time and position at which car $B$ was spawned, that travels at speed $v_B$. Considering the time and position of car $A$'s spawn to be $(0,0)$, we have
 
-$$ N/v_A \geq t \geq N/v_A - N/v_B. $$
+$$ v_At = x_B + v_B\left(t-t_B\right). $$
 
-Because $t$ ranges from $0$ to $N/v_A$ the range for $x_B$ is 
+The latest spawn time that car $B$ can spawn is $\mathcal{T}_A=N/v_A$, the time at which car $A$ comes off the highway. The earliest it can spawn is one lifetime before car $A$ despawns, $(N/v_A - N/v_B)$ so the range for $t_B$ is 
 
-$$ N \geq x_B \geq N - N(1 - v_B/v_A) $$
+$$ N/v_A \geq t_B \geq N/v_A - N/v_B, $$
+
+and $\Delta t_B = \mathcal{T}_B = N/v_B.$ 
+
+Because $t_B$ ranges from $0$ to $N/v_A$ the range for $x_B$ is 
+
+$$ N \geq x_B \geq N - N(1 - v_B/v_A), $$
+
+and $\Delta x_B = N(1-v_B/v_A).$
 
 At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end, it is positioned so that $A$ can overtake it at the last minute.
 
-Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes a car of speed $v_B$ is proportional to the sub-volume coordinate space. Since $\Delta t$ and $\Delta v_B$ are both simple expressions in terms of velocity and $N$, they form a rectangle and the relative probability is just
+Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume coordinate space. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of velocity and $N$, they form a rectangle and the relative probability is just
 
 $$ P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). $$
+
 ### Distance lost
 
 With this in hand, we can find the relative expected lost distance, if only we had expressions for lost distance. 
@@ -60,7 +67,7 @@ Now we can find the expected distance lost, with the help of computer algebra
 
 $$ \begin{align}\langle \text{distance lost} \rvert a \rangle &\sim \int\limits_1^a \text{d}v_A \int\limits_1^{v_A}\text{d}v_B\, v_B^2 \frac{v_A - v_B}{v_Av_B} + \int\limits_a^2 \text{d}v_A\, \int\limits_a^{v_A}\text{d}v_B \left(v_B-a\right)^2 \frac{v_A - v_B}{v_Av_B}\\ &= \frac{6 a^3 \log \left(\frac{2}{a}\right)+\left(6-36 a^2\right) \log (a)+9 a (2 a (a-1+\log (4))-5)+16}{18 (\log (8)-2)},\end{align} $$
 
-which matches a simulation pretty well
+which matches an $N=10^6$-trial simulation pretty well
 
 ![](/img/2025-08-01-robot-road-trip.png){:width="450 px" class="image-centered"}
 
