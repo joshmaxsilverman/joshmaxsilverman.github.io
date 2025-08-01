@@ -19,7 +19,7 @@ tags: kinematics expectation asymptotics
 
 <!--more-->
 
-([Jane Street](URL))
+([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
 
 ## Solution
 
