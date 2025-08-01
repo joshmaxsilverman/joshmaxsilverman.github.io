@@ -7,7 +7,15 @@ subtitle: How much time will you lose avoiding a tragic collision?
 tags: kinematics expectation asymptotics
 ---
 
->**Question**
+>**Question**: Robot cars have a top speed (which they prefer to maintain at all times while driving) that’s a real number randomly drawn uniformly between $1$ and $2$ miles per minute. A two-lane highway for robot cars has a fast lane (with minimum speed $a$) and a slow lane (with maximum speed $a$). When a faster car overtakes a slower car in the same lane, the slower car is required to decelerate to either change lanes (if both cars start in the fast lane) or stop on the shoulder (if both cars start in the slow lane). Robot cars decelerate and accelerate at a constant rate of $1$ mile per minute per minute, timed so the faster, overtaking car doesn’t have to change speed at all, and passing happens instantaneously. If cars rarely meet (so you never have to consider a car meeting more than one other car on its trip, see Mathematical clarification below), and you want to minimize the miles not driven due to passing, what should $a$ be set to, in miles per minute? Give your answer to $10$ decimal places.
+>
+>Example car interactions: suppose $a$ is set to $1.2$ miles per minute. If a car with top speed $1.8$ overtakes a car with top speed $1.1,$ neither has to slow down because they are in different lanes. If instead the car with top speed $1.8$ overtakes one with top speed $1.7,$ the slower car computes the optimal time to start decelerating for $30$ seconds (to reach $1.2$ miles per minute to switch to the other lane) so the faster car instantly passes and the slower car can immediately start accelerating for another 30 seconds to return to $1.7$ miles per minute. This pass cost $0.25$ miles (how far behind where the slower car would be if it continued at $1.7$ miles per minute).
+>
+>If a car with top speed $1.1$ overtakes one with top speed $1.0$ in the slow lane, the slower (slowest!) car must decelerate for a full minute all the way to $0$ to allow the pass, and then accelerate for a full minute to reestablish its speed, losing exactly $1$ mile of distance.
+>
+>Assume all car trips are of constant length $N,$ starting at arbitrary points and times along an infinitely long highway. This is made more mathematically precise below.
+>
+>Mathematical clarification: Say car trips arrive at a rate of $z$ car trip beginnings per mile per minute, uniformly across the infinite highway (cars enter and exit their trips at their preferred speed due to on/off ramps), and car trips have a constant length of $N$ miles. Define $f(z,N)$ to be the value of a that minimizes the expected lost distance per car trip due to passing. Find $\lim_{N\rightarrow\infty}\lim_{z\rightarrow 0+}f(z,N)$ the limit of [the limit of f(z,N) as z -> 0+] as N -> infinity. 
 
 <!--more-->
 
