@@ -19,7 +19,7 @@ tags: kinematics expectation asymptotics
 
 <!--more-->
 
-([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/))
+([Jane Street](https://www.janestreet.com/puzzles/robot-road-trip-index/))
 
 ## Solution
 
