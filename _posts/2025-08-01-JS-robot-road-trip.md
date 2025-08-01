@@ -44,7 +44,11 @@ At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end
 Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume of the $x_B, t_B$ coordinate space that leads to collision. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of the velocities and $N$, they form a rectangle and the relative probability is
 
 $$ 
-  P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). 
+  \begin{align}
+    P(v_A\text{ overtakes }v_B) &\propto \Delta t_B\Delta x_B \\
+    &= N^2\left(1/v_B - 1/v_A\right) \\
+    &= N^2\frac{v_B - v_A}{v_Av_B}
+  \end{align}
 $$
 
 ### Distance lost
