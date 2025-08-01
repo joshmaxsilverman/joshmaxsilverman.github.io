@@ -35,15 +35,17 @@ The latest spawn time that car $B$ can spawn is $0$, the time at which car $A$ c
 
 Because $t_B$ ranges from $-\mathcal{T}_B$ to $0,$ the range for $x_B$ is 
 
-$$ N - N(1 - v_B/v_A) \leq x_B \leq N, $$
+$$ 0 \leq x_B \leq N - v_B \mathcal{T}_A, $$
 
-and $\Delta x_B = N(1-v_B/v_A).$
+so $\Delta x_B = N(1-v_B/v_A).$
 
 At the upper end, car $B$ spawns exactly where $A$ despawns and at the lower end, it is positioned so that $A$ can overtake it at the last minute.
 
 Because we're told that each car has at most one interaction, the probability that any given car of speed $v_A$ overtakes any given car of speed $v_B$ is proportional to the sub-volume of the $x_B, t_B$ coordinate space that leads to collision. Since $\Delta t_B$ and $\Delta v_B$ are both simple expressions in terms of the velocities and $N$, they form a rectangle and the relative probability is
 
-$$ P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). $$
+$$ 
+  P(v_A\text{ overtakes }v_B) \propto \Delta t_B\Delta x_B = N^2\left(1/v_A - 1/v_B\right). 
+$$
 
 ### Distance lost
 
