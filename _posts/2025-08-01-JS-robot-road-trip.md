@@ -25,7 +25,7 @@ tags: kinematics expectation asymptotics
 
 ### Setup
 
-Because each car is spawned uniformly in time and space, we can condition on two speeds and find the relative fraction of spawn times and distances that lead to their intersection. 
+Because each car is spawned uniformly in time and space, we can condition on the two speeds $v_A$ and $v_B$ and find the relative probability of collision as the relative fraction of spawn times and distances that lead to intersection. 
 
 ### Relative probability of interaction
 
