@@ -31,7 +31,7 @@ Because each car is spawned uniformly in time and space, we can condition on two
 
 Let $t_B$ and $x_B$ be the time and position at which car $B$ was spawned, that travels at speed $v_B$. Considering the time and position of car $A$'s spawn to be $(0,0)$, we have
 
-$$ v_At = x_B + v_B\left(t-t_B\right). $$
+$$ v_At_A = x_B + v_B\left(t_A-t_B\right). $$
 
 The latest spawn time that car $B$ can spawn is $\mathcal{T}_A=N/v_A$, the time at which car $A$ comes off the highway. The earliest it can spawn is one lifetime before car $A$ despawns, $(N/v_A - N/v_B)$ so the range for $t_B$ is 
 
