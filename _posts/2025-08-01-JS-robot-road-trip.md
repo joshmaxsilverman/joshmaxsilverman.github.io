@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Robot road trip
 date: 2025/08/01
-subtitle:
-tags:
+subtitle: How much time will you lose avoiding a tragic collision?
+tags: kinematics expectation asymptotics
 ---
 
 >**Question**
@@ -50,6 +50,12 @@ In the slow lane, the car goes down to and up from zero ($a=0$) so it's just $v_
 
 Now we can find the expected distance lost, with the help of computer algebra
 
+$$ \begin{align}\langle \text{distance lost} \rvert a \rangle &\sim \int\limits_1^a \text{d}v_A \int\limits_1^{v_A}\text{d}v_B\, v_B^2 \frac{v_A - v_B}{v_Av_B} + \int\limits_a^2 \text{d}v_A\, \int\limits_a^{v_A}\text{d}v_B \left(v_B-a\right)^2 \frac{v_A - v_B}{v_Av_B}\\ &= \frac{6 a^3 \log \left(\frac{2}{a}\right)+\left(6-36 a^2\right) \log (a)+9 a (2 a (a-1+\log (4))-5)+16}{18 (\log (8)-2)},\end{align} $$
+
+which matches a simulation pretty well
+
 ![](/img/2025-08-01-robot-road-trip.png){:width="450 px" class="image-centered"}
+
+Minimizing the result with respect to $a$ we get $a^* \approx 1.1771414167566419952\ldots$
 
 <br>
