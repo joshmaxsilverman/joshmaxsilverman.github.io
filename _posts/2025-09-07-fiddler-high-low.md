@@ -34,13 +34,13 @@ Assume $x_1$ is high, causing us to bet low. We'll win if $x_2$ comes out less t
 - it's low, and the chance to win with $x_3$ is $(1-x_2),$ or 
 - it's high, and the chance to win with $x_3$ is $x_2.$
 
-<!-- So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$ -->
+So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$
 
 To find the chance of winning, we allow for all possible values of $x_1$ and $x_2,$ 
 
 $$
 \begin{align}
-\frac12P(\text{win}) &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, \int\limits_{x_2}^{1}\text{d}x_3\, + \int\limits_{\frac12}^{x_1}\text{d}x_2\,\int\limits_{0}^{x_2}\text{d}x_3\,\right] \\
+\frac12P(\text{win}) &= \int\limits_{\frac12}^1\text{d}x_1\,\int\limits_0^{x_1}\text{d}x_2\,\max\{x_2,1-x_2\} \\
 &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, (1-x_2) + \int\limits_{\frac12}^{x_1}\text{d}x_2\,x_2\,\right]\\
 &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \left(\frac12-\frac18\right) + \frac12\left(x_1^2-\frac14\right)\right] \\
 &= \int\limits_{\frac12}^1\text{d}x_1\, \frac12x_1^2 + \frac14 \\
