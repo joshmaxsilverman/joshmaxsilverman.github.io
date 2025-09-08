@@ -48,9 +48,9 @@ $$
 \end{align}
 $$
 
-So the chance to win both rounds is $13/24.$ The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is 
+So the chance to win both rounds is $13/24$ or $\approx 54.2\%.$ The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is 
 
-$$ \begin{align} P(\text{win second round|win first round}) &= 4/3\times13/24 \\ &= 13/18 \\ &\approx 0.722\ldots\end{align} $$
+$$ \begin{align} P(\text{win second round|win first round}) &= 4/3\times13/24 \\ &= 13/18 \\ &\approx 72.2\%.\end{align} $$
 
 <!-- ---
 
