@@ -72,19 +72,19 @@ Without loss of generality, let's assume $x$ is low, then
 
 $$ \gamma(x) = \overbrace{\int\limits_{1/2}^{1} \text{d}y \frac{1}{y}\gamma(y)}^\text{coming from above 1/2} + \overbrace{\int\limits_0^{x} \text{d}y \frac{1}{1-y}\gamma(y)}^\text{coming from below $x$}$$
 
-Taking the derivative 
+Taking the derivative we get
 
 $$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$ 
 
-which means $\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ 
-
-Integrating, we get $\log\,\gamma(x) = -\log(1-x) + \text{const.}$ which means $\gamma(x)$ is proportional to $1/(1-x)$ on the low side. On the high side, we can replace $(1-x)$ with $x,$ so the distribution there is proportional to $1/x.$ Each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is ${1/(2\log 2).}$ 
+Swapping the $\text{d}x$ and $\gamma(x)$ and integrating, we get $\log\,\gamma(x) = -\log(1-x) + \text{const.}$ which means $\gamma(x)$ is proportional to $1/(1-x)$ on the low side. On the high side, we can replace $(1-x)$ with $x,$ so the distribution there is proportional to $1/x.$ Each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is ${1/(2\log 2).}$ 
 
 We can write this as 
 
 $$ \gamma(x) = \frac1{2\log2}\frac{1}{\max(x,1-x)}. $$
 
 In agreement with our reasoning from before, this shows that winning numbers cluster about the center despite providing less of an advantage.
+
+![](/img/2025-09-07-fiddler-high-low.png){:width="450 px" class="image-centered"}
 
 So what's the chance to win a round in steady state? As before, chance to win given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
 
