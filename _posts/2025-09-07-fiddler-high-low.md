@@ -44,15 +44,16 @@ $$
 	\frac12P(\text{win}) = \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, \int\limits_{x_2}^{1}\text{d}x_3\, + \int\limits_{\frac12}^{x_1}\text{d}x_2\,\int\limits_{0}^{x_2}\text{d}x_3\,\right]
 $$
 
-the integrals over $x_3$ are $(1-x_2)$ and $x_2$ so we can rewrite it as $\max(y, 1-y).$ 
-
-$$\begin{align}
+$$
+\begin{align}
 \frac12P(\text{win}) &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, \int\limits_{x_2}^{1}\text{d}x_3\, + \int\limits_{\frac12}^{x_1}\text{d}x_2\,\int\limits_{0}^{x_2}\text{d}x_3\,\right] \\
 &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, (1-x_2) + \int\limits_{\frac12}^{x_1}\text{d}x_2\,x_2\,\right]\\
 &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \left(\frac12-\frac18\right) + \frac12\left(x_1^2-\frac14\right)\right] \\
 &= \int\limits_{\frac12}^1\text{d}x_1\, \frac12x_1^2 + \frac14 \\
 &= \frac{13}{48}
-\end{align}$$
+\end{align}
+$$
+
 ---
 
 }"???????{r
