@@ -64,6 +64,8 @@ $$\textrm{\}"???????\{r}\leftarrow\text{child sitting on keyboard} $$
 
 In the steady state, the distribution of winners should be stable from one round to the next (reminiscient of the [tug of war problem](https://joshmaxsilverman.github.io/2021-09-01-JS-robot-tug-of-war/)).
 
+Before we get into it, let's think about the intuition. Suppose we're currently at a low number. We can arrive here by coming from the low side or the high side. If it's from the high side, then any place on that side could have been the previous bet. By contrast, if the last number was low, it could have only been to our left. So, the closer we are to the middle, the more potential places we could have come from, the more likely our current position, peaking at the middle. So, somewhat counterintutively, we should expect winning bets to be in the middle.
+
 Let $\gamma(x)$ be the distribution of bets that end up winning, $y$ the winning bet at round $n,$ and $x$ the winning bet in round $(n+1)$. The probability that the winning bet has value $x$ is the probability that the last winning bet had value $y$ _and_ $x$ was a valid bet from it. 
 
 If the last value was high (above $1/2$) then the jump distribution is uniform $1/y$ from zero to $y$, and if it was low (below $1/2$) then it'the jump distirbution is uniform $1/(1-y)$ from $y$ to $1$.
@@ -76,19 +78,18 @@ Taking the derivative
 
 $$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$ 
 
-which means 
-
-$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\,\gamma(x) = -\log(1-x)$ which means $\gamma(x) \propto 1/(1-x).$
-
-On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
+which means $\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\,\gamma(x) = -\log(1-x) + \text{const.}$ which means $\gamma(x) \propto 1/(1-x).$ On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
 
 Each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is $1/(2\log 2)$. We can write this as 
 
-$$\gamma(x) = \frac1{2\log2}\frac{1}{\max(x,1-x)}$$
+$$\gamma(x) = \frac1{2\log2}\frac{1}{\max(x,1-x)}. $$
 
-As before, chance to win given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
+In agreement with our intuitive reasoning from before, this shows that winning numbers cluster about the center despite providing less of an advantage.
 
-$$ \begin{align} P(\text{win}) &= \int\limits_0^1\text{d}x\, \max(x,1-x) \gamma(x) \\ &= \frac{1}{2\log2}\int\limits_0^1\text{d}x\, \\ &= \frac{1}{2\log2}. \end{align}$$
+So what's the chance to win a round in steady state? As before, chance to win given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
 
+$$ \begin{align} P(\text{win}) &= \int\limits_0^1\text{d}x\, \max(x,1-x) \gamma(x) \\ &= \frac{1}{2\log2}\int\limits_0^1\text{d}x\, \\ &= \frac{1}{2\log2} \\ &\approx 0.7213475204\ldots \end{align}$$
+
+This is remarkably close to the answer from before, indicating that the game is basically in steady state after just two rounds of play.
 
 <br>
