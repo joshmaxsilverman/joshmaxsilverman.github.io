@@ -48,7 +48,9 @@ $$
 \end{align}
 $$
 
-So the chance to win both rounds is $13/24.$ The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is $4/3\times13/24 = 13/18 \approx 0.722\ldots$
+So the chance to win both rounds is $13/24.$ The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is 
+
+$$ \begin{align} P(\text{win second round|win first round}) &= 4/3\times13/24 \\ &= 13/18 \\ &\approx 0.722\ldots\end{align} $$
 
 <!-- ---
 
@@ -64,7 +66,7 @@ Before we get into it, let's think about the intuition. Suppose we're currently 
 
 Let $\gamma(x)$ be the distribution of bets that end up winning, $y$ the winning bet at round $n,$ and $x$ the winning bet in round $(n+1)$. The probability that the winning bet has value $x$ is the probability that the last winning bet had value $y$ _and_ $x$ was a valid bet from it. 
 
-If the last value was high (above $1/2$) then the jump distribution is uniform $1/y$ from zero to $y$, and if it was low (below $1/2$) then it'the jump distirbution is uniform $1/(1-y)$ from $y$ to $1$.
+If the last value was high (above $1/2$) then the jump distribution is uniform $1/y$ from zero to $y$, and if it was low (below $1/2$) then it'the jump distribution is uniform $1/(1-y)$ from $y$ to $1$.
 
 Without loss of generality, let's assume $x$ is low, then
 
