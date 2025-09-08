@@ -78,7 +78,9 @@ Taking the derivative
 
 $$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$ 
 
-which means $\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\,\gamma(x) = -\log(1-x) + \text{const.}$ which means $\gamma(x) \propto 1/(1-x).$ On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
+which means $\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ 
+
+Integrating, we get $\log\,\gamma(x) = -\log(1-x) + \text{const.}$ which means $\gamma(x) \propto 1/(1-x).$ On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
 
 Each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is $1/(2\log 2)$. We can write this as 
 
