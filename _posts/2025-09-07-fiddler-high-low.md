@@ -56,7 +56,7 @@ The chance to win the first round alone is $3/4,$ so the conditional chance to w
 
 ---
 
-}"???????{r
+$$\verbatim{}"???????{r}\leftarrow\text{child sitting on keyboard} $$
 
 ---
 
