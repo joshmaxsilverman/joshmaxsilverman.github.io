@@ -40,10 +40,6 @@ So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$
 
 To find the chance of winning, we allow for all possible values of $x_1$ and $x_2,$ 
 
-$$ 
-	\frac12P(\text{win}) = \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, \int\limits_{x_2}^{1}\text{d}x_3\, + \int\limits_{\frac12}^{x_1}\text{d}x_2\,\int\limits_{0}^{x_2}\text{d}x_3\,\right]
-$$
-
 $$
 \begin{align}
 \frac12P(\text{win}) &= \int\limits_{\frac12}^1\text{d}x_1\,\left[ \int\limits_0^{\frac12}\text{d}x_2\, \int\limits_{x_2}^{1}\text{d}x_3\, + \int\limits_{\frac12}^{x_1}\text{d}x_2\,\int\limits_{0}^{x_2}\text{d}x_3\,\right] \\
@@ -53,6 +49,10 @@ $$
 &= \frac{13}{48}
 \end{align}
 $$
+
+So the chance to win both rounds is $13/24.$
+
+The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is $4/3\times13/24 = 13/18 \approx 0.722\ldots$
 
 ---
 
