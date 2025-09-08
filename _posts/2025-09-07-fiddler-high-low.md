@@ -78,7 +78,7 @@ $$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$
 
 which means 
 
-$$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x) \rightarrow \log\gamma(x) = -\log(1-x) \rightarrow = 1/(1-x).$$
+$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\gamma(x) = -\log(1-x)$ which means $\gamma(x) \propto 1/(1-x).$
 
 On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
 
