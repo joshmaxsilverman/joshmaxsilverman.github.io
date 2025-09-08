@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: High low
 date: 2025/09/07
 subtitle: Where will you be when you can't stop winning?
@@ -78,7 +78,7 @@ $$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$
 
 which means 
 
-$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\gamma(x) = -\log(1-x)$ which means $\gamma(x) \propto 1/(1-x).$
+$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x).$ Integrating, we get $\log\,\gamma(x) = -\log(1-x)$ which means $\gamma(x) \propto 1/(1-x).$
 
 On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
 
@@ -88,7 +88,7 @@ $$\gamma(x) = \frac1{2\log2}\frac{1}{\max(x,1-x)}$$
 
 As before, chance to win given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
 
-$$ P(\text{win}) = \int\limits_0^1\text{d}x\, \max(x,1-x) \gamma(x) = \frac{1}{2\log2}\int\limits_0^1\text{d}x\, = \frac{1}{2\log2}. $$
+$$ \begin{align} P(\text{win}) &= \int\limits_0^1\text{d}x\, \max(x,1-x) \gamma(x) \\ &= \frac{1}{2\log2}\int\limits_0^1\text{d}x\, \\ &= \frac{1}{2\log2}. \end{align}$$
 
 
 <br>
