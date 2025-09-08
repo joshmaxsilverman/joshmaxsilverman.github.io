@@ -70,7 +70,7 @@ If the last value was high (above $1/2$) then the jump distribution is uniform $
 
 Without loss of generality, let's assume $x$ is low, then
 
-$$ \gamma(x) = \overbrace{\int\limits_{1/2}^{1} \text{d}y \frac{1}{y}\gamma(y)}^\text{coming from above 1/2} + \overbrace{\int\limits_0^{x} \text{d}y \frac{1}{1-y}\gamma(y)}^\text{coming from below $x$}$$
+$$ \gamma(x) = \overbrace{\int\limits_{1/2}^{1} \text{d}y \frac{1}{y}\gamma(y)}^\text{coming from above 1/2} + \overbrace{\int\limits_0^{x} \text{d}y \frac{1}{1-y}\gamma(y)}^\text{coming from below $x$}. $$
 
 Taking the derivative we get
 
