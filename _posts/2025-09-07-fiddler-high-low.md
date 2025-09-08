@@ -36,7 +36,7 @@ $x_2$ can end up high or low so we have two cases, either
 - it's low, and the chance to win with $x_3$ is $(1-x_2),$ or 
 - it's high, and the chance to win with $x_3$ is $x_2.$
 
-So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$
+<!-- So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$ -->
 
 To find the chance of winning, we allow for all possible values of $x_1$ and $x_2,$ 
 
@@ -50,15 +50,13 @@ $$
 \end{align}
 $$
 
-So the chance to win both rounds is $13/24.$
+So the chance to win both rounds is $13/24.$ The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is $4/3\times13/24 = 13/18 \approx 0.722\ldots$
 
-The chance to win the first round alone is $3/4,$ so the conditional chance to win the second round is $4/3\times13/24 = 13/18 \approx 0.722\ldots$
-
----
+<!-- ---
 
 $$\textrm{\}"???????\{r}\leftarrow\text{child sitting on keyboard} $$
 
----
+--- -->
 
 ## Extra credit
 
