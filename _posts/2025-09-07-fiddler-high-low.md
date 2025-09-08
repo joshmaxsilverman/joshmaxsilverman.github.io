@@ -62,7 +62,7 @@ $$\textrm{\}"???????\{r}\leftarrow\text{child sitting on keyboard} $$
 
 ## Extra credit
 
-In the steady state, the distribution of winners should be stable from one round to the next. 
+In the steady state, the distribution of winners should be stable from one round to the next (reminiscient of the [tug of war problem](https://joshmaxsilverman.github.io/2021-09-01-JS-robot-tug-of-war/)).
 
 Let $\gamma(x)$ be the distribution of bets that end up winning, $y$ the winning bet at round $n,$ and $x$ the winning bet in round $(n+1)$. The probability that the winning bet has value $x$ is the probability that the last winning bet had value $y$ _and_ $x$ was a valid bet from it. 
 
