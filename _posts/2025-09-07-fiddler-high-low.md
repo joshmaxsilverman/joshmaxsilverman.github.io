@@ -34,7 +34,7 @@ Assume $x_1$ is high, causing us to bet low. We'll win if $x_2$ comes out less t
 - it's low, and the chance to win with $x_3$ is $(1-x_2),$ or 
 - it's high, and the chance to win with $x_3$ is $x_2.$
 
-So, the conditional chance to win the second round is $\max\{x_2, 1-x_2\}.$
+So, the conditional chance to win the second round is $\\max\{x_2, 1-x_2\\}.$
 
 To find the chance of winning, we allow for all possible values of $x_1$ and $x_2,$ 
 
