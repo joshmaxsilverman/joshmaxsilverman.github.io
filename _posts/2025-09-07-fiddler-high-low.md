@@ -11,9 +11,9 @@ tags: expectation self-consistency distributions
 >
 >First, you are presented with a random number, $x_1$, which is between $0$ and $1$.
 >
->A new number, $x_2$, is about to be randomly selected between $0$ and $1$, independent of the first number. But before it’s selected, you must guess how $x_2$ will compare to $x_1.$ If you think $x_2$ will be greater than x1 you guess “high.” If you think x2 will be less than $x_1,$ you guess “low.” If you guess correctly, you earn a point and advance to the next round. Otherwise, the game is over.
+>A new number, $x_2$, is about to be randomly selected between $0$ and $1$, independent of the first number. But before it’s selected, you must guess how $x_2$ will compare to $x_1.$ If you think $x_2$ will be greater than x1 you guess “high.” If you think $x_2$ will be less than $x_1,$ you guess “low.” If you guess correctly, you earn a point and advance to the next round. Otherwise, the game is over.
 >
->If you correctly guessed how $x_2$ compared to x1 then another random number, $x_3,$ will be selected between $0$ and $1.$ This time, you must compare $x_3$ to $x_2,$ guessing whether it will be “high” or “low.” If you guess correctly, you earn a point and advance to the next round. Otherwise, the game is over.
+>If you correctly guessed how $x_2$ compared to $x_1$ then another random number, $x_3,$ will be selected between $0$ and $1.$ This time, you must compare $x_3$ to $x_2,$ guessing whether it will be “high” or “low.” If you guess correctly, you earn a point and advance to the next round. Otherwise, the game is over.
 >
 >You continue playing as many rounds as you can, as long as you keep guessing correctly.
 >
