@@ -62,19 +62,31 @@ $$\textrm{\}"???????\{r}\leftarrow\text{child sitting on keyboard} $$
 
 ## Extra credit
 
-in the steady state, the distribution of winners is not uniform, but it is stable from one round to the next. 
+In the steady state, the distribution of winners should be stable from one round to the next. 
 
-let $\gamma(x)$ be the distribution of bets that end up winning, $x_n$ be the bet at round $n$ and $x_{n+1}$ the bet at round $(n+1)$.
+Let $\gamma(x)$ be the distribution of bets that end up winning, $y$ the winning bet at round $n,$ and $x$ the winning bet in round $(n+1)$. The probability that the winning bet has value $x$ is the probability that the last winning bet had value $y$ _and_ $x$ was a valid bet from it. 
 
-the probability that the winning bet has value $x$ is the probability that the last winning bet had value $y$ and $x$ was a valid bet from it. if the last value was above $1/2$ then the distribution is uniform $1/y$ from zero to $y$, and if it was below $1/2$ then it's uniform $1/(1-y)$ from $1-y$ to $1$.
+If the last value was high (above $1/2$) then the jump distribution is uniform $1/y$ from zero to $y$, and if it was low (below $1/2$) then it'the jump distirbution is uniform $1/(1-y)$ from $y$ to $1$.
 
-without loss of generality, let's assume $x < 1/2$, then
+Without loss of generality, let's assume $x$ is low, then
+
 $$ \gamma(x) = \overbrace{\int\limits_{1/2}^{1} \text{d}y \frac{1}{y}\gamma(y)}^\text{coming from above 1/2} + \overbrace{\int\limits_0^{x} \text{d}y \frac{1}{1-y}\gamma(y)}^\text{coming from below $x$}$$
-taking the derivative $$\gamma^\prime(x) = \gamma(x)/(1-x) $$ which means $$d\gamma(x)/\gamma(x) = dx/(1-x) \rightarrow \log\gamma(x) = -\log(1-x) \rightarrow = 1/(1-x)$$
-on the other side, we can replace $1-x$ with $x,$ so the distribution is $1/(1-x)$ for $x<1/2$ and $1/x$ for $x>1/2$. each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is $1/(2\log 2)$. we can write this as 
+
+Taking the derivative 
+
+$$ \frac{\text{d}\gamma(x)}{\text{d}x} = \frac{\gamma(x)}{1-x}, $$ 
+
+which means 
+
+$$\text{d}\gamma(x)/\gamma(x) = \text{d}x/(1-x) \rightarrow \log\gamma(x) = -\log(1-x) \rightarrow = 1/(1-x).$$
+
+On the other side, we can replace $1-x$ with $x,$ so the distribution is proportional to $1/(1-x)$ for $x<1/2$ and to $1/x$ for $x>1/2$. 
+
+Each side has total probability $1/2$ but integrates to $\log 2$ so the normalization constant is $1/(2\log 2)$. We can write this as 
+
 $$\gamma(x) = \frac1{2\log2}\frac{1}{\max(x,1-x)}$$
 
-the chance to be right given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
+As before, chance to win given the last winning number $x$ is $\max(x,1-x)$ so the expected chance to win is
 
 $$ P(\text{win}) = \int\limits_0^1\text{d}x\, \max(x,1-x) \gamma(x) = \frac{1}{2\log2}\int\limits_0^1\text{d}x\, = \frac{1}{2\log2}. $$
 
