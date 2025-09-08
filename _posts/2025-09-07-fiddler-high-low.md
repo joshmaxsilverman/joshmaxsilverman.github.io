@@ -30,9 +30,7 @@ tags: expectation self-consistency distributions
 
 ## Solution
 
-Assume $x_1$ is high, causing us to bet low. We'll win if $x_2$ comes out less than $x_1.$
-
-$x_2$ can end up high or low so we have two cases, either
+Assume $x_1$ is high, causing us to bet low. We'll win if $x_2$ comes out less than $x_1.$ $x_2$ can end up high or low so we have two cases, either
 - it's low, and the chance to win with $x_3$ is $(1-x_2),$ or 
 - it's high, and the chance to win with $x_3$ is $x_2.$
 
