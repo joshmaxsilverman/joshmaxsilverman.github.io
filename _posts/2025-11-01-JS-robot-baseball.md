@@ -47,7 +47,15 @@ $$
 
 this is a recursion relating the value of each count to the value of the outcomes it can lead to. but at each step the pitcher and batter can set the probabilities however they like, so they'll change with the count. 
 
-however, we know the batter is trying to maximize the value of the at bat while the pitcher is trying to minimize it. this means the batter will pick $P_\text{swing}$ so that the value is indifferent to a change in $P_\text{strike}$ so they will set according to $$ \frac{\partial V(b,s)}{\partial P_\text{strike}} = 0, $$ and vice versa for the pitcher $$ \frac{\partial V(b,s)}{\partial P_\text{swing}} = 0. $$somewhat surprisingly, the value function is symmetric with respect to $P_\text{strike}$ and $P_\text{swing},$ so they'll set their probabilities to the same equilibrium value. solving these, we can find this optimal probability in terms of the expected values of the future states. 
+however, we know the batter is trying to maximize the value of the at bat while the pitcher is trying to minimize it. this means the batter will pick $P_\text{swing}$ so that the value is indifferent to a change in $P_\text{strike}$ so they will set according to 
+
+$$ \frac{\partial V(b,s)}{\partial P_\text{strike}} = 0, $$ 
+
+and vice versa for the pitcher 
+
+$$ \frac{\partial V(b,s)}{\partial P_\text{swing}} = 0. $$
+
+somewhat surprisingly, the value function is symmetric with respect to $P_\text{strike}$ and $P_\text{swing},$ so they'll set their probabilities to the same equilibrium value. solving these, we can find this optimal probability in terms of the expected values of the future states. 
 
 this gets us 
 
