@@ -59,6 +59,16 @@ $$ V(b,s) = \frac{\left(pV_\text{HR} + (1-p)V(b,s+1)\right)V(b+1,s)-V(b,s+1)^2}{
 
 which lets us compute the expected value of each state. 
 
+```wolfram
+Vhomerun = 4;
+V[4, _] = 1;
+V[_, 3] = 0;
+V[b_, s_] :=
+  V[b, s] =
+   (-V[b, 1 + s]^2 + (p Vhomerun - (-1 + p) V[b, 1 + s]) V[1 + b, s]) /
+(p Vhomerun - (1 + p) V[b, 1 + s] + V[1 + b, s]);
+```
+
 but what's the probability that we get to a particular state? it's the chance that we get to each predecessor times the chance they transition to the current state. since walks, homeruns, and outs are terminal states that can't transition to the full count, we can ignore them for this purpose.
 
 the transitions are governed by the probabilities we just found, we just need to turn things round and  track the transitions in the forward direction:
