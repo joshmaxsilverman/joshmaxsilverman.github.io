@@ -86,13 +86,12 @@ W[-1, _] = 0;
 W[_, -1] = 0;
 W[b_, s_] :=
   W[b, s] =
-   FullSimplify[
     ((1 - pstrike[b - 1, s]) (1 - pswing[b - 1, s])) W[b - 1, s] +
      (pstrike[b, s - 1] pswing[b, s - 1] (1 - p) + 
         pstrike[b, 
           s - 1] (1 - pswing[b, s - 1]) + (1 - 
            pstrike[b, s - 1]) pswing[b, s - 1]) W[b, s - 1]
-    ];
+    ;
 ```
 
 recursing, we can get a nasty expression for $W(3,2).$
