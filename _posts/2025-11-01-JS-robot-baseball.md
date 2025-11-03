@@ -76,7 +76,8 @@ $$ W(0,0) = 1.$$
 ```wolfram
 pstrike[b_, s_] := (
  V[b, 1 + s] - V[1 + b, s])/(-p Vhomerun + V[b, 1 + s] + 
-  p V[b, 1 + s] - V[1 + b, s]); 
+  p V[b, 1 + s] - V[1 + b, s]);
+
 pswing[b_, s_] := (
  V[b, 1 + s] - V[1 + b, s])/(-p Vhomerun + V[b, 1 + s] + 
   p V[b, 1 + s] - V[1 + b, s]);
@@ -84,6 +85,7 @@ pswing[b_, s_] := (
 W[0, 0] = 1;
 W[-1, _] = 0;
 W[_, -1] = 0;
+
 W[b_, s_] :=
   W[b, s] =
     ((1 - pstrike[b - 1, s]) (1 - pswing[b - 1, s])) W[b - 1, s] +
