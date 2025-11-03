@@ -78,9 +78,7 @@ pstrike[b_, s_] := (
  V[b, 1 + s] - V[1 + b, s])/(-p Vhomerun + V[b, 1 + s] + p V[b, 1 + s] - V[1 + b, s]
 );
 
-pswing[b_, s_] := (
- V[b, 1 + s] - V[1 + b, s])/(-p Vhomerun + V[b, 1 + s] + p V[b, 1 + s] - V[1 + b, s]
-);
+pswing[b_, s_] := pstrike[b,s];
 
 W[0, 0] = 1;
 W[-1, _] = 0;
