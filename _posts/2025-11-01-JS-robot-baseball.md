@@ -67,7 +67,7 @@ $$ V(b,s) = \frac{\left(pV_\text{HR} + (1-p)V(b,s+1)\right)V(b+1,s)-V(b,s+1)^2}{
 
 which lets us compute the expected value of each state. 
 
-```wolfram
+```mathematica
 Vhomerun = 4;
 V[4, _] = 1;
 V[_, 3] = 0;
@@ -93,7 +93,7 @@ and
 
 $$ W(0,0) = 1.$$
 
-```wolfram
+```mathematica
 pstrike[b_, s_] := (
  V[b, 1 + s] - V[1 + b, s])/(-p Vhomerun + V[b, 1 + s] + p V[b, 1 + s] - V[1 + b, s]
 );
