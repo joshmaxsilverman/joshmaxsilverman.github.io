@@ -126,7 +126,7 @@ $$ W(3,2) = \frac{(4 p+1)^2 (8 p (2 p (p (p (p (p (p (p (p (p (12 p (p (p (3 p (
 
 ![](/img/2025-11-03-JS-robot-baseball-W-grid.png){:width="450 px" class="image-centered"}
 
-now, the players will adjust to any value of $p$ according to the decision rules above in order to pursue their own optimal outcomes. it's only the league office that cares about full counts and can set $p$. plotting $W(3,2)$ (bottom right corner of diagram) we see the optimum is around $p \approx 22\%.$ binary searching for the maximum, we find that full counts will happen in a fraction $q_\text{opt} \approx 0.295967993374272054854169869096$ of all at bats given that the league sets $p_\text{opt} \approx 0.226973232538510017721759332456$
+now, the players will adjust to any value of $p$ according to the decision rules above in order to pursue their own optimal outcomes. it's only the league office that cares about full counts and can set $p$. plotting $W(3,2)$ (bottom right corner of diagram) we see the optimum is around $p \approx 22\%,$ indicated by the black dot in each plot. binary searching for the maximum, we find that full counts will happen in a fraction $q_\text{opt} \approx 0.295967993374272054854169869096$ of all at bats given that the league sets $p_\text{opt} \approx 0.226973232538510017721759332456$
 
 
 
