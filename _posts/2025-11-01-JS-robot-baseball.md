@@ -126,7 +126,7 @@ $$ W(3,2) = \frac{(4 p+1)^2 (8 p (2 p (p (p (p (p (p (p (p (p (12 p (p (p (3 p (
 
 ![](/img/2025-11-03-JS-robot-baseball-W-grid.png){:width="450 px" class="image-centered"}
 
-now, the players will adjust to any value of $p$ and pursue their optimal behavior. it's only the league office that cares about and can set $p$. plotting $W(3,2)$ we see the optimum is around $p \approx 22\%.$ binary searching for the minimum, we find that $q_\text{opt} \approx 0.295967993374272054854169869096$ and $p_\text{opt} \approx 0.226973232538510017721759332456$
+now, the players will adjust to any value of $p$ and pursue their optimal behavior. it's only the league office that cares about and can set $p$. plotting $W(3,2)$ we see the optimum is around $p \approx 22\%.$ binary searching for the maximum, we find that $q_\text{opt} \approx 0.295967993374272054854169869096$ and $p_\text{opt} \approx 0.226973232538510017721759332456$
 
 
 
