@@ -32,6 +32,8 @@ tags: nash-equilibria optimization
 
 ## Solution
 
+the big idea here is that batters and pitchers are motivated by expectation value. in each count, they will do what maximizes their EV, defined for the batter as the probability weighted average of $0$ (out), $1$ (walk), and $4$ (homerun). that let's us work backward from the goal states to find the values of each intermediate state. however, those decisions determine the probabilities of forward transitions from the blank count $(0,0)$ to any of the terminal states. so, we will work backward to work forwards. at the end, we will still have the undetermined parameter $p$ set by the scheming league office. they will set it to whatever value maximizes the probability of the full count state, in the wake of the decision structure of the players.
+
 the value of count $(b,s)$ is the average value of the counts it can move to. a strike can be added if the pitcher throws a strike and the batter doesn't swing, or if the pitcher throws a ball and the batter swings, or if the pitcher throws a strike and the batter misses. a ball can be added if the pitcher throws one and the batter doesn't swing. finally, the batter can walk or hit a homerun which have values $1$ and $4$. 
 
 $$ \begin{align} V(b,s) &= P_\text{strike}P_\text{swing}pV_\text{HR} \\ \,& + \left[P_\text{strike}(1-P_\text{swing}) + (1-P_\text{strike})P_\text{swing} + P_\text{strike}P_\text{swing}(1-p) \right]V(b,s+1) \\ &+ (1-P_\text{strike})(1-P_\text{swing})V(b+1,s) \end{align} $$
@@ -77,9 +79,13 @@ V[b_, s_] :=
 (p Vhomerun - (1 + p) V[b, 1 + s] + V[1 + b, s]);
 ```
 
-![](/img/2025-11-03-JS-robot-baseball-V-exp.png){:width="450 px" class="image-centered"}
+plotting this, we can see how the expected value to the batter evolves in each count (equivalently, the negative value to the pitcher). as we move from $(0,0)$ to $1, 2$ and $3$ balls, the batter becomes near certain to get $1$ for all $p \approxgeq 0.4.$ likewise, as we add strikes, the curve bends down quite a bit, so that an $(0,2)$ count has a max of $1/2$ when $p=1.$ 
 
-but what's the probability that we get to a particular state? it's the chance that we get to each predecessor times the chance they transition to the current state. since walks, homeruns, and outs are terminal states that can't transition to the full count, we can ignore them for this purpose.
+![](/img/2025-11-03-JS-robot-baseball-V-value-plot.png){:width="450 px" class="image-centered"}
+
+now, we can use these values to find the probabilities of forward propagation.
+
+the probability $W\left[b,s\right]$ that we get to a particular state is the chance that we get to each predecessor times the chance they transition to the current state. since walks, homeruns, and outs are terminal states that can't transition to the full count, we can ignore them for this purpose. also, every count is guaranteed to start at $(0,0)$ so that $W\left[0,0\right]=1.$
 
 the transitions are governed by the probabilities we just found, we just need to turn things round and  track the transitions in the forward direction:
 
