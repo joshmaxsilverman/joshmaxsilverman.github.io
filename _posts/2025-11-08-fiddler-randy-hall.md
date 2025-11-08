@@ -37,14 +37,26 @@ or $\gamma = \frac{6}{10}. $
 
 ### Extra credit
 
-now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and $\frac12.$
+now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and $\frac12.$ because the effective rate of staying at door $2$ is higher, we should expect the contestant to stay at doors $1$ and $3$ more often as well to compensate. so $\gamma^\prime > \gamma.$
 
 the transition from an even turn to an odd turn has the same relationships we worked above, so
 
 $$ \begin{align}
-P_1^\text{odd}(t+1) &= \gamma P_1^\text{even}(t) + \frac{4}{10}P_2^\text{even}(t) \\
-P_2^\text{odd}(t+1) &= \left(1-\gamma\right) \left[P_1^\text{even}(t) + P_2^\text{even}(t)\right] + \frac{2}{10}P_2^\text{even}(t) \\
-P_3^\text{odd}(t+1) &= \gamma P_3^\text{even}(t) + \frac{4}{10}P_2^\text{even}(t)
+P_1^\text{odd} &= \gamma^\prime P_1^\text{even} + \frac{4}{10}P_2^\text{even} \\
+P_2^\text{odd} &= \left(1-\gamma^\prime\right) \left[P_1^\text{even} + P_2^\text{even}\right] + \frac{2}{10}P_2^\text{even} \\
+P_3^\text{odd} &= \gamma^\prime P_3^\text{even} + \frac{4}{10}P_2^\text{even}
 \end{align} $$
+
+the transition from odd to even has the same structure, with a new rate for staying at door $2$
+
+$$ \begin{align}
+P_1^\text{even} &= \gamma^\prime P_1^\text{odd} + \frac14 P_2^\text{odd} \\
+P_2^\text{even} &= \left(1-\gamma^\prime\right) \left[P_1^\text{odd} + P_2^\text{odd}\right] + \frac12 P_2^\text{odd} \\
+P_3^\text{even} &= \gamma^\prime P_3^\text{odd} + \frac14 P_2^\text{odd}
+\end{align} $$
+
+we can plug the first set of equations into the equation for door $1$ to get
+
+$$ P_1^\text{even} = \gamma^\prime\left(\gamma^\prime P_1^\text{even} + \frac{4}{10}P_2^\text{even}\right) + \frac14\left(\left(1-\gamma^\prime\right) \left[P_1^\text{even} + P_2^\text{even}\right] + \frac{2}{10}P_2^\text{even}\right). $$
 
 <br>
