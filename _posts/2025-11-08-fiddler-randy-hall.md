@@ -65,6 +65,6 @@ $$ 1 = {\gamma^\prime}^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\p
 
 or
 
-$$ \gamma^\prime^2 -\frac{1}{10}\gamma^\prime $$
+$$ {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime $$
 
 <br>
