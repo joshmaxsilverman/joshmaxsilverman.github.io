@@ -59,4 +59,12 @@ we can plug the first set of equations into the equation for door $1$ to get
 
 $$ P_1^\text{even} = \gamma^\prime\left(\gamma^\prime P_1^\text{even} + \frac{4}{10}P_2^\text{even}\right) + \frac14\left(\left(1-\gamma^\prime\right) \left[P_1^\text{even} + P_2^\text{even}\right] + \frac{2}{10}P_2^\text{even}\right). $$
 
+since the aim is for these probabilities to become equal, this equation becomes
+
+$$ 1 = \gamma^\prime^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\prime\right) + \frac{2}{10} $$
+
+or
+
+$$ \gamma^\prime^2 -\frac{1}{10}\gamma^\prime $$
+
 <br>
