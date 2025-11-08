@@ -61,7 +61,7 @@ $$ P_1^\text{even} = \gamma^\prime\left(\gamma^\prime P_1^\text{even} + \frac{4}
 
 since the aim is for these probabilities to become equal, this equation becomes
 
-$$ 1 = \gamma^\prime^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\prime\right) + \frac{2}{10} $$
+$$ 1 = {\gamma^\prime}^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\prime\right) + \frac{2}{10} $$
 
 or
 
