@@ -65,8 +65,8 @@ $$ 1 = {\gamma^\prime}^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\p
 
 or
 
-$$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{3}{10} $$
+$$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{9}{20} $$
 
-which has positive root 
+which has positive root $\frac1{20}\left(1+\sqrt{181}\right) \approx 0.7226812$
 
 <br>
