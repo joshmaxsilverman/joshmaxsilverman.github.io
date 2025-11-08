@@ -42,11 +42,9 @@ now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and
 the transition from an even turn to an odd turn has the same relationships we worked above, so
 
 $$ \begin{align}
-
 P_1^\text{odd}(t+1) &= \gamma P_1^\text{even}(t) + \frac{4}{10}P_2^\text{even}(t) \\
 P_2^\text{odd}(t+1) &= \left(1-\gamma\right) \left[P_1^\text{even}(t) + P_2^\text{even}(t)\right] + \frac{2}{10}P_2^\text{even}(t) \\
 P_3^\text{odd}(t+1) &= \gamma P_3^\text{even}(t) + \frac{4}{10}P_2^\text{even}(t)
-
 \end{align} $$
 
 <br>
