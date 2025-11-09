@@ -69,4 +69,6 @@ $$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{9}{20} $$
 
 which has positive root $\frac1{20}\left(1+\sqrt{181}\right) \approx 0.7226812$
 
+this predicts that, on odd steps, we'll have $P_1^\text{odd} = P_3^\text{odd} = (\gamma^\prime +\frac{4}{10})\frac13 \approx 0.37422707$ and $P_2^\text{odd} = \left[2(1-\gamma^\prime) + \frac{2}{10}\right]\times\frac13 \approx 0.25154587$
+
 <br>
