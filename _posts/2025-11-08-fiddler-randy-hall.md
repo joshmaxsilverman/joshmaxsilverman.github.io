@@ -1,17 +1,35 @@
 ---
 layout: post
 published: false
-title: 
+title: Randy hall
 date: 2025/11/08
-subtitle:
+subtitle: 
 tags:
 ---
 
->Question
+>**Question**: You are a producer on a game show hosted by Randy “Random” Hall (no relation to Monty Hall). The show has three doors labeled 1 through 3 from left to right, and behind them are various prizes.
+>
+>Contestants pick one of the three doors at which to start, and then they press an electronic button many, many times in rapid succession. Each time they press the button, they either stay at their current door or move to an adjacent door. If they’re at door 2 and move to an adjacent door, that new door will be 1 or 3 with equal probability.
+>
+>Randy has decided that when a contestant presses the button while at door 2, there should be a 20 percent chance they remain at door 2.
+>
+>As the producer, you want the chances of a contestant ultimately winding up at each of the three doors to be nearly equal after many button presses. Otherwise, mathematicians will no doubt write you nasty letters complaining about how your show is rigged.
+>
+>If a contestant presses the button while at door 1 (or door 3), what should the probability be that they remain at that door?
+>
+>**Extra credit**: Randy has an updated suggestion for how the button should behave at door 2. What hasn’t changed is that if a contestant at door 2 and moves to an adjacent door, that new door will be 1 or 3 with equal probability.
+>
+>But this time, on the first, third, fifth, and other odd button presses, there’s a 20 percent the contestant remains at door 2 (if they happen to be there). On the second, fourth, sixth, and other even button presses, there’s a 50 percent chance the contest remains at door 2 (again, if they happen to be there).
+>
+>Meanwhile, the button’s behavior at doors 1 and 3 should in no way depend on the number of times the button has been pressed.
+>
+>As the producer, you want the chances of winding up at each of the three doors—after a large even number of button presses— to be nearly equal.
+>
+>If a contestant presses the button while at door 1 (or door 3), what should the probability be that they remain at that door?
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/the-randy-hall-problem))
 
 ## Solution
 
