@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: true
 title: Randy hall
 date: 2025/11/08
-subtitle: 
-tags:
+subtitle: How should you move in order to be unpredictable?
+tags: recursion master-equation
 ---
 
 >**Question**: You are a producer on a game show hosted by Randy “Random” Hall (no relation to Monty Hall). The show has three doors labeled 1 through 3 from left to right, and behind them are various prizes.
@@ -35,19 +35,19 @@ tags:
 
 ### Standard credit
 
-the contestant can be at door $1$ at time $(t+1)$ because they were there and stayed put or because they came from door $2$
+The probability to end up at a place is found by all the ways we can get there.
+
+A contestant can be at door $1$ at time $(t+1)$ because they were already there and stayed put or because they came from door $2$
 
 $$ P_1(t+1) = \gamma P_1(t) + \frac{4}{10}P_2(t). $$
 
-likewise, contestant can be at door $2$ at time $(t+1)$ because they came from doors $1$ or $3$ or because they were already there and stayed put
+Likewise, a contestant can be at door $2$ at time $(t+1)$ because they were already there and stayed put or because they came from doors $1$ or $3$
 
-$$ P_2(t+1) = (1-\gamma)\left[P_1(t) + P_3(t)\right] + \frac{2}{10}P_2(t), $$
+$$ P_2(t+1) = (1-\gamma)\left[P_1(t) + P_3(t)\right] + \frac{2}{10}P_2(t). $$
 
-and the equation for door $3$ has the same form as for door $1.$
+The equation for door $3$ has the same form as for door $1.$ (we don't actually need all of these equations, but it's good setup for the extra credit where we will)
 
-(we don't actually need all of these equations, but it's good setup for the extra credit where we will)
-
-the point is to arrange so that the probability of being at any of the three doors is equal, so the first equation becomes
+We're trying to arrange $\gamma$ so that the probability of being at any of the three doors is equal, so the first equation becomes
 
 $$ 1 = \gamma + \frac{4}{10}$$
 
@@ -55,9 +55,9 @@ or $\gamma = \frac{6}{10}. $
 
 ### Extra credit
 
-now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and $\frac12.$ because the effective rate of staying at door $2$ is higher, we should expect the contestant to stay at doors $1$ and $3$ more often as well to compensate. so $\gamma^\prime > \gamma.$
+Now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and $\frac12.$ Because the effective rate of staying at door $2$ is higher, we should expect the contestant to stay at doors $1$ and $3$ more often as well to compensate, so $\gamma^\prime > \gamma.$
 
-the transition from an even turn to an odd turn has the same relationships we worked above, so
+The transition from an even turn to an odd turn has the same relationships that we worked above, so
 
 $$ \begin{align}
 P_1^\text{odd} &= \gamma^\prime P_1^\text{even} + \frac{4}{10}P_2^\text{even} \\
@@ -65,7 +65,7 @@ P_2^\text{odd} &= \left(1-\gamma^\prime\right) \left[P_1^\text{even} + P_2^\text
 P_3^\text{odd} &= \gamma^\prime P_3^\text{even} + \frac{4}{10}P_2^\text{even}
 \end{align} $$
 
-the transition from odd to even has the same structure, with a new rate for staying at door $2$
+The transition from odd to even also has the same structure but with a new rate for staying at door $2$
 
 $$ \begin{align}
 P_1^\text{even} &= \gamma^\prime P_1^\text{odd} + \frac14 P_2^\text{odd} \\
@@ -73,20 +73,20 @@ P_2^\text{even} &= \left(1-\gamma^\prime\right) \left[P_1^\text{odd} + P_2^\text
 P_3^\text{even} &= \gamma^\prime P_3^\text{odd} + \frac14 P_2^\text{odd}
 \end{align} $$
 
-we can plug the first set of equations into the equation for door $1$ to get
+We can plug the first set of equations into the equation for door $1$ to get
 
 $$ P_1^\text{even} = \gamma^\prime\left(\gamma^\prime P_1^\text{even} + \frac{4}{10}P_2^\text{even}\right) + \frac14\left(\left(1-\gamma^\prime\right) \left[P_1^\text{even} + P_2^\text{even}\right] + \frac14\frac{2}{10}P_2^\text{even}\right). $$
 
-since the aim is for these probabilities to become equal, this equation becomes
+Since the aim is for these probabilities to become equal, this equation becomes
 
 $$ 1 = {\gamma^\prime}^2 + \gamma^\prime\frac{4}{10} + 2\frac14\left(1-\gamma^\prime\right) + \frac14\frac{2}{10} $$
 
 or
 
-$$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{9}{20} $$
+$$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{9}{20}. $$
 
-which has positive root $\frac1{20}\left(1+\sqrt{181}\right) \approx 0.7226812$
+That has positive root $\frac1{20}\left(1+\sqrt{181}\right) \approx 0.7226812$
 
-this predicts that, on odd steps, we'll have $P_1^\text{odd} = P_3^\text{odd} = (\gamma^\prime +\frac{4}{10})\times\frac13 \approx 0.37422707$ and $P_2^\text{odd} = \left[2(1-\gamma^\prime) + \frac{2}{10}\right]\times\frac13 \approx 0.25154587$
+With $\gamma^\prime$ in hand, we can use the system to predict the distribution on odd numbered steps: we should have $P_1^\text{odd} = P_3^\text{odd} = (\gamma^\prime +\frac{4}{10})\times\frac13 \approx 0.37422707$ and $P_2^\text{odd} = \left[2(1-\gamma^\prime) + \frac{2}{10}\right]\times\frac13 \approx 0.25154587$ which matches simulation.
 
 <br>
