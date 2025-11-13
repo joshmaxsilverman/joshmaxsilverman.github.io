@@ -33,9 +33,9 @@ tags: recursion master-equation
 
 ## Solution
 
-### Standard credit
-
 The probability to end up at a place is found by all the ways we can get there.
+
+### Standard credit
 
 A contestant can be at door $1$ at time $(t+1)$ because they were already there and stayed put or because they came from door $2$
 
