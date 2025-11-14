@@ -55,6 +55,8 @@ or $\gamma = \frac{6}{10}. $
 
 ![](/img/doorGrid_standard.gif)
 
+ddd
+
 ![](/img/doorGrid_standard.mp4)
 
 ### Extra credit
