@@ -53,6 +53,10 @@ $$ 1 = \gamma + \frac{4}{10}$$
 
 or $\gamma = \frac{6}{10}. $
 
+![](/img/doorGrid_standard.gif)
+
+![](/img/doorGrid_standard.mp4)
+
 ### Extra credit
 
 Now, the probability to remain at door $2$ flip flops between $\frac{2}{10}$ and $\frac12.$ Because the effective rate of staying at door $2$ is higher, we should expect the contestant to stay at doors $1$ and $3$ more often as well to compensate, so $\gamma^\prime > \gamma.$
