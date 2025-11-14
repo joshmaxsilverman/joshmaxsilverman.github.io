@@ -53,11 +53,9 @@ $$ 1 = \gamma + \frac{4}{10}$$
 
 or $\gamma = \frac{6}{10}. $
 
+Simulating over a range of $\gamma$ we see that the $\gamma=6/10$ system settles down to the equiprobable state after about 10 button presses.
+
 ![](/img/doorGrid_standard.gif)
-
-ddd
-
-![](/img/doorGrid_standard.mp4)
 
 ### Extra credit
 
@@ -94,5 +92,7 @@ $$ 0 = {\gamma^\prime}^2 -\frac{1}{10}\gamma^\prime -\frac{9}{20}. $$
 That has positive root $\frac1{20}\left(1+\sqrt{181}\right) \approx 0.7226812$
 
 With $\gamma^\prime$ in hand, we can use the system to predict the distribution on odd numbered steps: we should have $P_1^\text{odd} = P_3^\text{odd} = (\gamma^\prime +\frac{4}{10})\times\frac13 \approx 0.37422707$ and $P_2^\text{odd} = \left[2(1-\gamma^\prime) + \frac{2}{10}\right]\times\frac13 \approx 0.25154587$ which matches simulation.
+
+![](/img/doorGrid_extraCredit.gif)
 
 <br>
