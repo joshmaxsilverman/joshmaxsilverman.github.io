@@ -20,7 +20,7 @@ tags: symmetry
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-irrigate-the-garden))
 
 ## Solution
 
