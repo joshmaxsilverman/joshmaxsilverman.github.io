@@ -13,7 +13,7 @@ tags: symmetry
 >
 >On average, how far can you expect the center of the garden to be from the nearest part of the hose?
 >
-> ** Extra credit**
+> **Extra credit**
 >As before, your assistant intends to pick two random points along the circumference of the garden and run a hose straight between them.
 >
 >This time, you’ve decided to contribute to the madness yourself by picking a random point inside the garden to plant a second peach tree. On average, how far can you expect this point to be from the nearest part of the hose?
