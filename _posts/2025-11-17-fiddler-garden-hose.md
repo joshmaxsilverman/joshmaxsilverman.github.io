@@ -24,7 +24,7 @@ tags: symmetry
 
 ## Solution
 
-Because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. If the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $\cos\frac12\theta.$
+Because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. If the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $h(\theta) = \cos\frac12\theta.$
 
 The placement of the second point relative to the first is uniformly random, so the probability distribution on $\theta$ is uniform from $0$ to $\pi.$ 
 
@@ -32,7 +32,7 @@ Averaging the distance over $\theta$ we get an expected hose to tree distance of
 
 $$ 
   \begin{align}
-  \int\limits_0^\pi \text{d}\theta\, p(\theta)d(\theta) &= \frac1\pi \int_0^\pi \text{d}\theta\, \cos\frac12\theta \\
+  \int\limits_0^\pi \text{d}\theta\, p(\theta)h(\theta) &= \frac1\pi \int_0^\pi \text{d}\theta\, \cos\frac12\theta \\
   &= \frac{2}{\pi}\left[\sin\frac12\pi -\sin0\right] \\ 
   &= \frac{2}{\pi} \\
   &\approx 0.63661977\ldots
