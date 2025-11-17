@@ -46,13 +46,13 @@ As before, we can ignore the orientation of the hose. Wherever the point lands, 
 
 The probability a point lands distance $y$ from the center is proportional to the width of the parallel at that height. Because all points on the circle satisfy $x^2 + y^2 = 1$, the width of the strip is ${2x = 2\sqrt{1-y^2}}.$ 
 
-The integral of this strip over $y$ is just the area of the circle, so the distribution on $y$ is $\frac{2}{\pi}\sqrt{1-y^2}.$
+The integral of this strip over $y$ is just the area of the circle, so the distribution on $y$ is $p(y) = \frac{2}{\pi}\sqrt{1-y^2}.$
 
 The average distance for a given $h$ is then simply
 
 $$ 
   \begin{align} 
-    \langle d(h)\rangle &= \int_{-1}^1 \text{d}y\, P(y)\lvert y-h\rvert \\
+    \langle d(h)\rangle &= \int_{-1}^1 \text{d}y\, p(y)\lvert y-h\rvert \\
     &= \frac{2}{\pi} \int_h^1 d\text{y}\, \sqrt{1-y^2}(y-h)  + \frac{2}{\pi}  \int_{-1}^h d\text{y}\, \sqrt{1-y^2} (h-y) \\
     &= \frac{2}{\pi}\left[\frac{1}{3} \sqrt{1-h^2} \left(h^2+2\right)+h \sin ^{-1}h\right]
   \end{align}
