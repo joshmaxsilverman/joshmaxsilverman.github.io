@@ -32,7 +32,7 @@ Averaging the distance over $\theta$ we get an expected hose to tree distance of
 
 $$ 
   \begin{align}
-  \int\limits_0^\pi \text{d}\theta\, p(\theta)h(\theta) &= \frac1\pi \int_0^\pi \text{d}\theta\, \cos\frac12\theta \\
+  \int\limits_0^\pi \text{d}\theta\, p_\theta h_\theta &= \frac1\pi \int_0^\pi \text{d}\theta\, \cos\frac12\theta \\
   &= \frac{2}{\pi}\left[\sin\frac12\pi -\sin0\right] \\ 
   &= \frac{2}{\pi} \\
   &\approx 0.63661977\ldots
@@ -53,8 +53,8 @@ The average distance for a given $h$ is then simply
 
 $$ 
   \begin{align} 
-    \langle d(h)\rangle &= \int_{-1}^1 \text{d}y\, p(y)\lvert y-h\rvert \\
-    &= \frac{2}{\pi} \int_h^1 d\text{y}\, \sqrt{1-y^2}(y-h)  + \frac{2}{\pi}  \int_{-1}^h d\text{y}\, \sqrt{1-y^2} (h-y) \\
+    \langle d_h\rangle &= \int_{-1}^1 \text{d}y\, p_y \lvert y-h\rvert \\
+    &= \frac{2}{\pi} \int_h^1 \text{d}y\, \sqrt{1-y^2}(y-h)  + \frac{2}{\pi}  \int_{-1}^h \text{d}y\, \sqrt{1-y^2} (h-y) \\
     &= \frac{2}{\pi}\left[\frac{1}{3} \sqrt{1-h^2} \left(h^2+2\right)+h \sin ^{-1}h\right]
   \end{align}
 $$
@@ -63,7 +63,7 @@ Plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ to get the unq
 
 $$ 
   \begin{align}
-    \langle d\rangle &= \int_0^\pi\text{d}\theta\, p(\theta) \langle d(\cos\frac12\theta)\rangle \\
+    \langle d\rangle &= \int_0^\pi\text{d}\theta\, p_\theta \langle d_\theta\rangle \\
     &= \frac{1}{\pi} \int_0^\pi\text{d}\theta \cos \left[\frac{1}{6} \left(\cos\theta + 5\right)\sin\frac{1}{2}\theta + \cos\frac{1}{2}\theta \sin ^{-1}\left(\cos\frac{1
    }{2}\theta\right)\right] \\
     &= \frac{64}{9\pi^2} \approx 0.7205061\ldots
