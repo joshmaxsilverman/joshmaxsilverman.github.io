@@ -24,27 +24,31 @@ tags: symmetry
 
 ## Solution
 
-because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. if the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $\cos\frac12\theta.$
+Because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. If the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $\cos\frac12\theta.$
 
-now, the placement of the second point relative to the first is uniformly random, so the probability distribution on $\theta$ is uniform from $0$ to $\pi.$ 
+The placement of the second point relative to the first is uniformly random, so the probability distribution on $\theta$ is uniform from $0$ to $\pi.$ 
 
-averaging the distance over $\theta$ we get an average distance from hose to tree of 
+Averaging the distance over $\theta$ we get an expected hose to tree distance of 
 
 $$ 
   \begin{align}
   \frac1{\pi}\int_0^\pi \text{d}\theta\, \cos\frac12\theta &= \frac{2}{\pi}\left[\sin\frac12\pi -\sin0\right] \\ 
   &= \frac{2}{\pi} \\
-  &\approx 0.63661977.
+  &\approx 0.63661977\ldots
 \end{align}
 $$
 
 ## Extra credit
 
-now the tree can be anywhere. as before, we can ignore the orientation of the hose. whereever the point lands, its distance to the closest point on the hose is the vertical separation between the line of the hose and the perpendicular line through the point.
+Now the tree can be anywhere. 
 
-the probability that a point lands distance $y$ from the center is proportional to the width of the chord at that height. since all points on the circle satisfy $x^2 + y^2 = 1$, the width of the strip is $2\sqrt{1-y^2}.$ since the integral of this over $y$ is just the area of the circle, the distribution is $\frac{2}{\pi}\sqrt{1-y^2}.$
+As before, we can ignore the orientation of the hose. Wherever the point lands, its distance to the closest point on the hose is the vertical separation between the line of the hose and the line through the point that's parallel to the hose.
 
-so, the average distance for a given $h$ is simply
+The probability a point lands distance $y$ from the center is proportional to the width of the parallel at that height. Because all points on the circle satisfy $x^2 + y^2 = 1$, the width of the strip is $2\sqrt{1-y^2}.$ 
+
+The integral of this over $y$ is just the area of the circle, so the distribution on $y$ is $\frac{2}{\pi}\sqrt{1-y^2}.$
+
+The average distance for a given $h$ is then simply
 
 $$ 
   \begin{align} 
@@ -53,7 +57,7 @@ $$
   \end{align}
 $$
 
-plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ and get
+Plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ to get the unqualified expected tree to hose distance:
 
 $$ 
   \begin{align}
