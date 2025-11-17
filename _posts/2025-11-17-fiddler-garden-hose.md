@@ -46,14 +46,22 @@ the probability that a point lands distance $y$ from the center is proportional 
 
 so, the average distance for a given $h$ is simply
 
-$$ \langle d(h)\rangle = \frac{2}{\pi} \int_h^1 d\text{y}\, (y-h)  + \frac{2}{\pi^2}  \int_{-1}^h d\text{y}\, (y-h) $$
-
-which comes to
-
-<>
+$$ 
+  \begin{align} 
+    \langle d(h)\rangle &= \frac{2}{\pi} \int_h^1 d\text{y}\, (y-h)  + \frac{2}{\pi^2}  \int_{-1}^h d\text{y}\, (y-h) \\
+    &= \frac{1}{3} \sqrt{1-h^2} \left(h^2+2\right)+h \sin ^{-1}(h)
+  \end{align}
+$$
 
 plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ and get
 
-$$ \langle d\rangle = \frac{64}{9\pi^2} \approx 0.7205061. $$
+$$ 
+  \begin{align}
+    \langle d\rangle &= \frac{1}{\pi}\int_0^\pi\text{d}\theta \cos \left(\frac{\theta }{2}\right) \sin ^{-1}\left(\cos \left(\frac{\theta
+   }{2}\right)\right)+\frac{1}{6} \sin\left(\frac{\theta }{2}\right) (\cos
+   (\theta )+5) \\
+    &= \frac{64}{9\pi^2} \approx 0.7205061.
+  \end{align}
+$$
 
 <br>
