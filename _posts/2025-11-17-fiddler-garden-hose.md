@@ -44,9 +44,9 @@ Now the tree can be anywhere.
 
 As before, we can ignore the orientation of the hose. Wherever the point lands, its distance to the closest point on the hose is the vertical separation between the line of the hose and the line through the point that's parallel to the hose.
 
-The probability a point lands distance $y$ from the center is proportional to the width of the parallel at that height. Because all points on the circle satisfy $x^2 + y^2 = 1$, the width of the strip is $2\sqrt{1-y^2}.$ 
+The probability a point lands distance $y$ from the center is proportional to the width of the parallel at that height. Because all points on the circle satisfy $x^2 + y^2 = 1$, the width of the strip is ${2x = 2\sqrt{1-y^2}}.$ 
 
-The integral of this over $y$ is just the area of the circle, so the distribution on $y$ is $\frac{2}{\pi}\sqrt{1-y^2}.$
+The integral of this strip over $y$ is just the area of the circle, so the distribution on $y$ is $\frac{2}{\pi}\sqrt{1-y^2}.$
 
 The average distance for a given $h$ is then simply
 
