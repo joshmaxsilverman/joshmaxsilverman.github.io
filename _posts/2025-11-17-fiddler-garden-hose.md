@@ -32,7 +32,7 @@ averaging the distance over $\theta$ we get an average distance from hose to tre
 
 $$ 
   \begin{align}
-  \frac1{\pi}\int_0^\pi \cos\frac12\theta &= \frac{2}{\pi}\left[\sin\frac12\pi -\sin0\right] \\ 
+  \frac1{\pi}\int_0^\pi \text{d}\theta\, \cos\frac12\theta &= \frac{2}{\pi}\left[\sin\frac12\pi -\sin0\right] \\ 
   &= \frac{2}{\pi} \\
   &\approx 0.63661977.
 \end{align}
