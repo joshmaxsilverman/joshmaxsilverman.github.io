@@ -54,6 +54,6 @@ which comes to
 
 plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ and get
 
-$$ \langle d\rangle = \frac{64}{9\pi^2}. $$
+$$ \langle d\rangle = \frac{64}{9\pi^2} \approx 0.7205061. $$
 
 <br>
