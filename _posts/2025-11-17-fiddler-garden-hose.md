@@ -48,7 +48,7 @@ so, the average distance for a given $h$ is simply
 
 $$ 
   \begin{align} 
-    \langle d(h)\rangle &= \frac{2}{\pi} \int_h^1 d\text{y}\, (y-h)  + \frac{2}{\pi^2}  \int_{-1}^h d\text{y}\, (y-h) \\
+    \langle d(h)\rangle &= \frac{2}{\pi} \int_h^1 d\text{y}\, \sqrt{1-y^2}(y-h)  + \frac{2}{\pi}  \int_{-1}^h d\text{y}\, \sqrt{1-y^2} (h-y) \\
     &= \frac{1}{3} \sqrt{1-h^2} \left(h^2+2\right)+h \sin ^{-1}(h)
   \end{align}
 $$
