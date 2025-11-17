@@ -57,9 +57,8 @@ plugging in $h = \cos\frac12\theta,$ we can average over $\theta$ and get
 
 $$ 
   \begin{align}
-    \langle d\rangle &= \frac{1}{\pi}\int_0^\pi\text{d}\theta \cos \left(\frac{\theta }{2}\right) \sin ^{-1}\left(\cos \left(\frac{\theta
-   }{2}\right)\right)+\frac{1}{6} \sin\left(\frac{\theta }{2}\right) (\cos
-   (\theta )+5) \\
+    \langle d\rangle &= \frac{1}{\pi}\int_0^\pi\text{d}\theta \cos \left[\frac{1}{6} \sin\left(\frac{\theta }{2}\right) (\cos(\theta )+5) + \left(\frac{\theta }{2}\right) \sin ^{-1}\left(\cos \left(\frac{\theta
+   }{2}\right)\right)\right] \\
     &= \frac{64}{9\pi^2} \approx 0.7205061.
   \end{align}
 $$
