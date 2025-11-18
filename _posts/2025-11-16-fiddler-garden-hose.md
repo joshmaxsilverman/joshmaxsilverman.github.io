@@ -24,7 +24,7 @@ tags: symmetry
 
 ## Solution
 
-Because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. If the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $h(\theta) = \cos\frac12\theta.$
+Because of the radial symmetry, we can ignore the exact orientation of the hose and focus on the angle between the two random points on the perimeter. If the smaller angle made by the two points is $\theta$ then the distance from the hose to the center will be $h_\theta = \cos\frac12\theta.$
 
 ![](/img/2025-11-16-fiddler-garden-hose-sc.png){:width='450 px' class='image-centered'}
 
@@ -51,7 +51,7 @@ The probability a point lands distance $y$ from the center is proportional to th
 
 ![](/img/2025-11-16-fiddler-garden-hose-ec.png){:width='450 px' class='image-centered'}
 
-The integral of this strip over $y$ is just the area of the circle, so the distribution on $y$ is $p(y) = \frac{2}{\pi}\sqrt{1-y^2}.$
+The integral of this strip over $y$ is just the area of the circle, so the distribution on $y$ is $p_y = \frac{2}{\pi}\sqrt{1-y^2}.$
 
 The average distance for a given $h$ is then simply
 
