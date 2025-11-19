@@ -74,6 +74,11 @@ The lower end for this probability is the max of the probability of either event
 
 $$ \max\{P(f_j < f_1), P(f_j+s_j \leq f_1+s_1)\} \leq \varepsilon(f_1,s_1) \leq P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1). $$
 
-This implies that both quantities are on the order of $\varepsilon$ itself. Expanding $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, $\varepsilon$ has to be on the order $1/N$ or else $J^N$ will shrink exponentially to zero instead of something finite.
+This implies that both quantities are on the order of $\varepsilon$ itself. We can approximate $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, so $\varepsilon$ has to be on the order $1/N$ otherwise $J^N$ will shrink exponentially to zero instead of staying finite.
+
+The winner's times are going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
+
+The probability that $f_j$ is less than $f_1$ is $\int\limits-{-\infty}^{f_1} \text{d}f_j\, N(f_j,1) $ and the probability that $f_j+s_j\leqf_1+s_1$ is $\int\limits-{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, N(f_j+s_j, 2) $
+
 
 <br>
