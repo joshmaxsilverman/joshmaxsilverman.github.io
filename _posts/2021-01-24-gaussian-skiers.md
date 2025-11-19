@@ -3,6 +3,8 @@ layout: post
 published: true
 title: Gaussian Skiers
 date: 2025/11/18
+subtitle: How safe are you for winning the first heat?
+tags: scaling approximation
 ---
 
 >**Question**: You're in your town's heat to head marble racing championship, the traditional way to determine who is the town's next mayor. The race is split into two heats and your time in either heat is a random, normally distributed variable. If you have the fastest time in the first run, what is the probability $P_\text{win it all}$ that you end up winning the event, as determined by the sum of your times on heat run? Extra credit: what if there are $29$ other candidates in the race?
@@ -32,7 +34,7 @@ A simulation suggests a roughly linear decrease on log-log axes, and yields $P_{
 
 ```python
 def round(N):
-    data = [np.random.normal() for _ in range(N)]
+    data = [ np.random.normal() for _ in range(N) ]
     first_win = data.index(min(data))
     for i in range(N):
         data[i] += np.random.normal()
@@ -47,5 +49,19 @@ datapoints = [np.mean([round(N) for _ in range(100000)])  for N in domain]
 ```
 
 My attempts at an approximate solution for $N=30$ got the right shape, but took too long to "turn up". Updates forthcoming if I make progress.
+
+## 2025-11-18 Update
+
+If the first and second heat times for racer $j$ are $f_j$ and $s_j$, and the winner goes first, then
+
+- each $f_j$ can range from $f_1$ up to $\infty$
+- each $s_j$ can range from $f_1 + s_1 - f_j$ up to $\infty$
+- $f_1$ and $s_1$ can range from $-\infty$ to $\infty$
+
+The first condition ensures that Racer $1$ wins the first round and the second condition ensures they win the second. 
+
+Call $J(f_1,s_1)$ the probability that a racer has a first heat time worse than $f_1$ and a total race time worse than $f_1 + s_1$. Then the probability the racer who wins the first heat wins the whole race is
+
+$$ \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(f_1)\mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
 <br>
