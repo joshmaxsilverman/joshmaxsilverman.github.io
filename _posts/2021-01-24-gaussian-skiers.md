@@ -70,7 +70,7 @@ This implies that $J(f_1,s_1)\approx 1.$
 
 $J(f_1,s_1)$ is the integral
 
-$$ J(f_1,s_1) = \int\limits_{f_1}^\infty \text{d}f_j N(f_j) \int\limits_{f_1+s_1-f_j}\text{d}s_1 N(s_1). $$
+$$ J(f_1,s_1) = \int\limits_{f_1}^\infty \text{d}f_j N(f_j) \int\limits_{f_1+s_1-f_j}\text{d}s_j N(s_j). $$
 
 $
 
