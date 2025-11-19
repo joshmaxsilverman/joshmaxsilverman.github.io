@@ -79,7 +79,9 @@ This implies that both quantities are on the order of $\varepsilon$ itself. We c
 The winner's times are going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
 
 The probability that $f_j$ is less than $f_1$ is 
+
 $$ \int\limits_{-\infty}^{f_1} \text{d}f_j\, N(f_j,1) $$ 
+
 and the probability that $f_j+s_j\leq f_1+s_1$ is 
 
 $$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, N(f_j+s_j, 2) $$
