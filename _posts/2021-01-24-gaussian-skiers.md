@@ -64,4 +64,14 @@ Call $J(f_1,s_1)$ the probability that a racer has a first heat time worse than 
 
 $$ \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(f_1)\mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
+In the large $N$ limit, the integral will only have significant mass where $J(f_1, s_1),$ otherwise the $(N-1)^\text{st}$ power would decay to zero. 
+
+This implies that $J(f_1,s_1)\approx 1.$
+
+$J(f_1,s_1)$ is the integral
+
+$$ J(f_1,s_1) = \int\limits_{f_1}^\infty \text{d}f_j N(f_j) \int\limits_{f_1+s_1-f_j}\text{d}s_1 N(s_1). $$
+
+$
+
 <br>
