@@ -66,12 +66,12 @@ $$ \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s
 
 In the large $N$ limit, the integral will only have significant mass where $J(f_1, s_1),$ otherwise the $(N-1)^\text{st}$ power would decay to zero. 
 
-This implies that $J(f_1,s_1)\approx 1.$
+This implies that $J(f_1,s_1) \approx 1 - \varepsilon(f_1, s_1).$
 
-$J(f_1,s_1)$ is the integral
+$\varepsilon(f_1,s_1)$, being the complement of $J$ is the probability that one of $f_1 > f_j$ and $f_1+s_1 > f_j+s_j.$ 
 
-$$ J(f_1,s_1) = \int\limits_{f_1}^\infty \text{d}f_j N(f_j) \int\limits_{f_1+s_1-f_j}\text{d}s_j N(s_j). $$
+The lower end for this probability is the max of the probability of either event and the upper end is their sum.
 
-$
+$$\max\{\erfc(f_1),\erfc{\frac{f_1+s_1}{\sqrt{2}}\} < q(f_1,s_1) < \erfc(f_1) + \erfc{\frac{f_1+s_1}{\sqrt{2}}}. $$
 
 <br>
