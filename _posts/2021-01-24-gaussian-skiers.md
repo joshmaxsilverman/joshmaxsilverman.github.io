@@ -72,7 +72,7 @@ $\varepsilon(f_1,s_1)$, being the complement of $J$ is the probability that one 
 
 The lower end for this probability is the max of the probability of either event and the upper end is their sum.
 
-$$ \max( P(f_j < f_1), P(f_j+s_j \leq f_1+s_1) ) \leq \varepsilon(f_1,s_1) \leq P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1). $$
+$$ \max\{P(f_j < f_1), P(f_j+s_j \leq f_1+s_1)\} \leq \varepsilon(f_1,s_1) \leq P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1). $$
 
 This implies that both quantities are on the order of $\varepsilon$ itself. Expanding $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, $\varepsilon$ has to be on the order $1/N$ or else $J^N$ will shrink exponentially to zero instead of something finite.
 
