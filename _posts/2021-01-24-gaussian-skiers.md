@@ -72,6 +72,8 @@ $\varepsilon(f_1,s_1)$, being the complement of $J$ is the probability that one 
 
 The lower end for this probability is the max of the probability of either event and the upper end is their sum.
 
-$$\max\{\text{erfc}(f_1),\text{erfc}{\frac{f_1+s_1}{\sqrt{2}}}\} < q(f_1,s_1) < \text{erfc}(f_1) + \text{erfc}{\frac{f_1+s_1}{\sqrt{2}}}. $$
+$$\max\{\text{erfc}(f_1),\text{erfc}{\frac{f_1+s_1}{\sqrt{2}}}\} < \varepsilon(f_1,s_1) < \text{erfc}(f_1) + \text{erfc}{\frac{f_1+s_1}{\sqrt{2}}}. $$
+
+This implies that both quantities are on the order of $\varepsilon$ itself. Expanding $(1-\varepsilon)^N \approx e^{N\varepsilon}$, $\varepsilon$ has to be on the order $1/N$ or else $J^N$ will shrink exponentially to zero instead of something finite.
 
 <br>
