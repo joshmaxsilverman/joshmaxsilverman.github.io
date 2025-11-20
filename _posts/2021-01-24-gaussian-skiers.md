@@ -88,6 +88,6 @@ $$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, N(f_j+s_j, 2) $$
 
 Both of these are tails of the Gaussian distribution which is estimated by $N(t)\left(1/t + 1/t^3\right).$ 
 
-Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
+Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$/$(f_1+s_1$) $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
 
 <br>
