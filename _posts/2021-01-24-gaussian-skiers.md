@@ -70,11 +70,15 @@ This implies that $J(f_1,s_1) \approx 1 - \varepsilon(f_1, s_1).$
 
 $\varepsilon(f_1,s_1)$, being the complement of $J$ is the probability that one of $f_1 > f_j$ and $f_1+s_1 > f_j+s_j.$ 
 
-The lower end for this probability is the max of the probability of either event and the upper end is their sum.
+This the probability of either event minus the probability of both events
 
-$$ \max\{P(f_j < f_1), P(f_j+s_j \leq f_1+s_1)\} \leq \varepsilon(f_1,s_1) \leq P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1). $$
+$$ \varepsilon(f_1,s_1) = P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) - P(f_j < f_1\,\textbf{AND}\,f_j+s_j \leq f_1+s_1). $$
 
-This implies that both quantities are on the order of $\varepsilon$ itself. We can approximate $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, so $\varepsilon$ has to be on the order $1/N$ otherwise $J^N$ will shrink exponentially to zero instead of staying finite.
+In large systems, the probability of both occuring is much smaller than the probability of either, so we can approximate
+
+$$ \varepsilon(f_1,s_1) = P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) $$
+
+We can approximate $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, so $\varepsilon$ has to be on the order $1/N$ otherwise $J^N$ will shrink exponentially to zero instead of staying finite. This means that $N\varepsilon \approx 1.$
 
 The winner's times are going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
 
@@ -88,6 +92,8 @@ $$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, N(f_j+s_j, 2) $$
 
 Both of these are tails of the Gaussian distribution which is estimated by $N(t)\left(1/t + 1/t^3\right).$ 
 
-Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$ / $(f_1+s_1),$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
+Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1),$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
+
+
 
 <br>
