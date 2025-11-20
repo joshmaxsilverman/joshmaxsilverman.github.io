@@ -99,10 +99,10 @@ So, the probability mass will be centered around $f_1 \approx f_1^*$ and $s_1 \a
 Plugging them into the integrand, we get
 
 $$ \begin{align}
-    N \exp{-\left(f_1^2 + s_1^2\right)/2} &= N \exp{-\left(\gamma^2 + 2y + y^2/gamma^2 + {s_1^*}^2 + 2ys_1^*/\gamma + y^2/\gamma^2\right)/2} \\
+    N \exp{-\left(f_1^2 + s{_1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2y + y^2/gamma^2 + {s_{1}^{*}}^2 + 2ys_{1}^{*}/\gamma + y^2/\gamma^2\right)/2} \\
     \end{align}
 $$
 
-Now we can go back to $J(f_1,s_1).$ $f_1 
+Now we can go back to $J(f_1,s_1).$
 
 <br>
