@@ -99,7 +99,7 @@ So, the probability mass will be centered around $f_1 \approx f_1^* $ and $s_1 \
 Plugging them into the integrand, we get
 
 $$ \begin{align}
-    N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2y + y^2/gamma^2 + {s_{1}^{*}}^2 + 2ys_{1}^{*}/\gamma + y^2/\gamma^2\right)/2} \\
+    N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2y + y^2/\gamma^2 + {s_{1}^{*}}^2 + 2ys_{1}^{*}/\gamma + y^2/\gamma^2\right)/2} \\
     \end{align}
 $$
 
