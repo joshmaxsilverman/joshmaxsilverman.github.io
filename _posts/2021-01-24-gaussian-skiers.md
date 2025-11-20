@@ -98,4 +98,6 @@ We can plug these into $N\mathcal{N}(f_1)\mathcal{N}(s_1) = N\frac{1}{2\pi}\exp{
 
 The exponent $f_1^2 + s_1^2$ is equal to $2\log N + (4 + 2 - 2\sqrt{2})\log N = \left(8 - 2\sqrt{2}\right)\log N.$ Plugging this in, we get $N \cdot N^{-(4 - 2\sqrt{2})} = N^{-(3-2\sqrt{2})}.$
 
+Now we can go back to $J(f_1,s_1).$ $f_1 
+
 <br>
