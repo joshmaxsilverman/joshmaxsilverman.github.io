@@ -84,13 +84,13 @@ The winner's times are going to be negative (it's a normal distribution), and as
 
 The probability that $f_j$ is less than $f_1$ is 
 
-$$ \int\limits_{-\infty}^{f_1} \text{d}f_j\, N(f_j,1) $$ 
+$$ \int\limits_{-\infty}^{f_1} \text{d}f_j\, \mathcal{N}(f_j,1) $$ 
 
 and the probability that $f_j+s_j\leq f_1+s_1$ is 
 
-$$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, N(f_j+s_j, 2) $$
+$$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2) $$
 
-Both of these are tails of the Gaussian distribution which is estimated by $N(t)\left(1/t + 1/t^3\right).$ 
+Both of these are tails of the Gaussian distribution which is estimated by $\mathcal{N}(t)\left(1/t + 1/t^3\right).$ 
 
 Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1),$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
 
