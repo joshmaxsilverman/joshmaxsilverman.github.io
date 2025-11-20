@@ -92,11 +92,16 @@ $$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2) $$
 
 Both of these are tails of the Gaussian distribution which is estimated by $\mathcal{N}(t)\left(1/t + 1/t^3\right).$ 
 
-Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1),$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
+Setting both equal to $1/N$ and solving for $f_1^*$ and $(f_1^*+s_1^*)$ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1),$ we get $f_1^* \approx -\sqrt{2\log N}$ and $f_1^*+s_1^*\approx -2\sqrt{\log N}.$ Solving for $s_1^*$ we get $s_1^*\approx -(2-\sqrt{2})\sqrt{\log N}.$
 
-We can plug these into $N\mathcal{N}(f_1)\mathcal{N}(s_1) = N\frac{1}{2\pi}\exp{-\frac{f_1^2+s_1^2}{2}}.$
+So, the probability mass will be centered around $f_1 \approx f_1^*$ and $s_1 \approx s_1^*,$ which are both roughly on the scale $\gamma = \srqt{2\log N}.$ We can rescale them like $f_1 = f_1^* + x/\gamma$ and $s_1 = s_1^* + y/\gamma.$
 
-The exponent $f_1^2 + s_1^2$ is equal to $2\log N + (4 + 2 - 2\sqrt{2})\log N = \left(8 - 2\sqrt{2}\right)\log N.$ Plugging this in, we get $N \cdot N^{-(4 - 2\sqrt{2})} = N^{-(3-2\sqrt{2})}.$
+Plugging them into the integrand, we get
+
+$$ \begin{align}
+    N \exp{-\left(f_1^2 + s_1^2\right)/2} &= N \exp{-\left(\gamma^2 + 2y + y^2/gamma^2 + {s_1^*}^2 + 2ys_1^*/\gamma + y^2/\gamma^2\right)/2} \\
+    \end{align}
+$$
 
 Now we can go back to $J(f_1,s_1).$ $f_1 
 
