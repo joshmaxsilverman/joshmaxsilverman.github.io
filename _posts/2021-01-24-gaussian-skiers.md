@@ -94,6 +94,8 @@ Both of these are tails of the Gaussian distribution which is estimated by $\mat
 
 Setting both equal to $1/N$ and solving for $f_1$ and $(f_1+s_1)$ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1),$ we get $f_1 \approx -\sqrt{2\log N}$ and $f_1+s_1\approx -2\sqrt{\log N}.$ Solving for $s_1$ we get $s_1\approx -(2-\sqrt{2})\sqrt{\log N}.$
 
+We can plug these into $N\mathcal{N}(f_1)\mathcal{N}(s_1) = N\frac{1}{2\pi}\exp{-\frac{f_1^2+s_1^2}{2}}.$
 
+The exponent $f_1^2 + s_1^2$ is equal to $2\log N + (4 + 2 - 2\sqrt{2})\log N = \left(8 - 2\sqrt{2}\right)\log N.$ Plugging this in, we get $N \cdot N^{-(4 - 2\sqrt{2})} = N^{-(3-2\sqrt{2})}.$
 
 <br>
