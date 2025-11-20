@@ -106,6 +106,12 @@ $$
     \end{align}
 $$
 
-Now we can go back to $J(f_1,s_1).$
+Now we can go back to $\varepsilon(f_1,s_1).$
+
+$$
+    \begin{align}
+        \varepsilon(f_1,s_1) &\approx \frac{1}{\sqrt{2\pi}}\exp{-f_1^2/2}\left(1/f_1 + 1/f_1^3\right) + \frac{1}{\sqrt{2\pi}}\exp{-(f_1+s_1)^2/4}\left(\sqrt{2}/(f_1+s_1) + 2\sqrt{2}/(f_1+s_1)^3\right)
+    \end{align}
+$$
 
 <br>
