@@ -100,9 +100,9 @@ Plugging them into the first part of the integrand, we get
 
 $$
     \begin{align}
-    N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2x + x^2/\gamma^2 + {s_{1}^{\*}}^2 + 2ys_{1}^{\*}/\gamma + y^2/\gamma^2\right)/2} \\
-    &= N \exp{-\left(2\log N - 2x + (6-2\sqrt{2})\log N - 2y (2-2\sqrt{2})\sqrt{\log N}/\sqrt{2\log N} + x^2/\gamma^2 + y^2/\gamma^2\right)/2} \\
-    &= N N^{-(4-2\sqrt{2})} \exp\left(x + y(\sqrt{2}-1) + O(1/\gamma^2)\right)
+    \frac{1}{2\pi}N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2x + x^2/\gamma^2 + {s_{1}^{\*}}^2 + 2ys_{1}^{\*}/\gamma + y^2/\gamma^2\right)/2} \\
+    &= \frac{1}{2\pi}N \exp{-\left(2\log N - 2x + (6-2\sqrt{2})\log N - 2y (2-2\sqrt{2})\sqrt{\log N}/\sqrt{2\log N} + x^2/\gamma^2 + y^2/\gamma^2\right)/2} \\
+    &= \frac{1}{2\pi}N N^{-(4-2\sqrt{2})} \exp\left(x + y(\sqrt{2}-1) + O(1/\gamma^2)\right)
     \end{align}
 $$
 
