@@ -111,7 +111,7 @@ Now we can go back to $\varepsilon(f_1,s_1).$
 $$
     \begin{align}
         \varepsilon(f_1,s_1) &\approx \frac{1}{\sqrt{2\pi}}e^{-f_1^2/2}\left[\frac{1}{f_1} + \frac{1}{f_1^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(f_1+s_1)^2/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right] \\
-        &= \frac{1}{\sqrt{2\pi}}e^{-(\gamma^2 + 2x)/2}\left[\frac{1}{\gamma + x/\gamma} + \frac{1}{(\gamma + x/\gamma)^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(4\log N + (x+y)/\sqrt{2\log N})^2/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right]
+        &= \frac{1}{\sqrt{2\pi}}e^{-(\gamma^2 + 2x)/2}\left[\frac{1}{\gamma - x/\gamma} + \frac{1}{(\gamma + x/\gamma)^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(4\log N -2 (x+y))^2/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right]
     \end{align}
 $$
 
