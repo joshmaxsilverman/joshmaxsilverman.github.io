@@ -84,11 +84,11 @@ The winner's times are going to be negative (it's a normal distribution), and as
 
 The probability that $f_j$ is less than $f_1$ is 
 
-$$ \int\limits_{-\infty}^{f_1} \text{d}f_j\, \mathcal{N}(f_j,1) $$ 
+$$ P(f_j < f_1) = \int\limits_{-\infty}^{f_1} \text{d}f_j\, \mathcal{N}(f_j,1). $$ 
 
 and the probability that $f_j+s_j\leq f_1+s_1$ is 
 
-$$\int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2) $$
+$$ P(f_j+s_j \leq f_1+s_1) = \int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2). $$
 
 Both of these are tails of the Gaussian distribution which is estimated by $\mathcal{N}(t)\left(1/t + 1/t^3\right).$ 
 
