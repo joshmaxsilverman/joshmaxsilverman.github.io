@@ -121,6 +121,6 @@ $$
 
 Putting these both together, and writing $\eta = 3-2\sqrt{2},$ the integrand becomes
 
-$$ \frac{1}{(2\pi)^{3/2} N^{-\eta} e^{x + \left(\sqrt{2}-1\right)y} \exp{-N\varepsilon} \frac{\text{d}x\,\text{d}y}{\gamma^2} $$
+$$ \frac{1}{\left(2\pi\right)^{3/2}} N^{-\eta} e^{x + \left(\sqrt{2}-1\right)y} \exp{- N \varepsilon} \frac{\text{d}x\,\text{d}y}{\gamma^2} $$
 
 <br>
