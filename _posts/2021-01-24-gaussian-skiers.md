@@ -124,7 +124,7 @@ Putting these both together, and writing $\eta = 3-2\sqrt{2},$ the integrand bec
 $$ 
     \begin{align}
         \text{int} &= \frac{1}{\left(2\pi\right)^{3/2}} N^{-\eta} e^{x + \left(\sqrt{2}-1\right)y} \exp{- N \varepsilon(x,y)} \frac{\text{d}x\,\text{d}y}{\gamma^2} \\
-        &= \frac{1}{\left(2\pi\right)^{3/2}} N^{-\eta} e^{x + \left(\sqrt{2}-1\right)y} \exp\left[{-\frac{1}{N\sqrt{2\pi}}\left(e^{x} + e^{(x+y)/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}\right] \frac{\text{d}x\,\text{d}y}{\gamma^2}
+        &= \frac{1}{\left(2\pi\right)^{3/2}} N^{-\eta} e^{x + \left(\sqrt{2}-1\right)y} \exp\left[{-\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{(x+y)/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}\right] \frac{\text{d}x\,\text{d}y}{\gamma^2}
     \end{align}
 $$
 
