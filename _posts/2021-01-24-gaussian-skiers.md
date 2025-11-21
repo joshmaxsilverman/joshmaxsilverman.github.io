@@ -64,7 +64,7 @@ Call $J(f_1,s_1)$ the probability that a racer has a first heat time worse than 
 
 $$ N \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(f_1)\mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
-In the large $N$ limit, the integral will only have significant mass where $J(f_1, s_1),$ otherwise the $(N-1)^\text{st}$ power would decay to zero. 
+As $N$ grows, the integral will only have significant mass where $J(f_1, s_1),$ otherwise the $(N-1)^\text{st}$ power would decay to zero. 
 
 This implies that $J(f_1,s_1) \approx 1 - \varepsilon(f_1, s_1).$
 
@@ -74,9 +74,9 @@ This the probability of either event minus the probability of both events
 
 $$ \varepsilon(f_1,s_1) = P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) - P(f_j < f_1\,\textbf{AND}\,f_j+s_j \leq f_1+s_1). $$
 
-In large systems, the probability of both occuring is much smaller than the probability of either, so we can approximate
+With many racers, the probability of both occuring is much smaller than the probability of either, so we can make the approximation
 
-$$ \varepsilon(f_1,s_1) = P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) $$
+$$ \varepsilon(f_1,s_1) \approx P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) $$
 
 We can approximate $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, so $\varepsilon$ has to be on the order $1/N$ otherwise $J^N$ will shrink exponentially to zero instead of staying finite. This means that $N\varepsilon \approx 1.$
 
