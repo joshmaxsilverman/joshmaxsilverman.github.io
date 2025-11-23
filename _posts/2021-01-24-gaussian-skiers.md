@@ -128,8 +128,12 @@ $$
     \end{align}
 $$
 
-the integral is over $x$ and $y$ which we can do however is easiest. one nice way is to tilt $y$ so that the exponents $x$ and $(x+y)/\sqrt{2}$ becomes equal apart from a perturbation. in other words pick $y$ so that $(x+(y-h))/\sqrt{2} = x$ or $y = (\sqrt{2}-1)x + h.$ plugging this in the exponent becomes
+the integral is over $x$ and $y$ which we can do however is easiest. one nice way is to tilt $y$ so that the exponents $x$ and $(x+y)/\sqrt{2}$ becomes equal apart from a perturbation. in other words pick $y$ so that $(x+(y-h))/\sqrt{2} = x$ or $y = (\sqrt{2}-1)x + h.$ plugging this in the exponent in the second exponential becomes
 
-$$ -\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{x + h/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right) \approx -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{d}{\sqrt{2}} + \frac{d^2}{4}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right) $$
+$$ -\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{x + h/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right) \approx -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{d}{\sqrt{2}} + \frac{d^2}{4}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right). $$
+
+likewise, the first becomes
+
+$$ e^{x + \left(\sqrt{2}-1\right)y} = e^{x(1+(\sqrt{2}-1)^2) + (\sqrt{2}-1)h}. $$
 
 <br>
