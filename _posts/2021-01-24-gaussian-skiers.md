@@ -130,6 +130,6 @@ $$
 
 the integral is over $x$ and $y$ which we can do however is easiest. one nice way is to tilt $y$ so that the exponents $x$ and $(x+y)/\sqrt{2}$ becomes equal apart from a perturbation. in other words pick $y$ so that $(x+(y-h))/\sqrt{2} = x$ or $y = (\sqrt{2}-1)x + h.$ plugging this in the exponent becomes
 
-$$ -\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{x + h/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)} $$
+$$ -\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{x + h/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right) $$
 
 <br>
