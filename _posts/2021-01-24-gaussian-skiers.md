@@ -138,6 +138,6 @@ $$ e^{x + \left(\sqrt{2}-1\right)y} = e^{x(1+(\sqrt{2}-1)^2) + (\sqrt{2}-1)h} = 
 
 putting this altogether, the integrand becomes
 
-$$ \exp{Ax + Bh - -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{h}{\sqrt{2}} + \frac{h^2}{4}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}. $$
+$$ \exp{Ax + Bh - -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{h}{\sqrt{2}} + \frac{h^2}{4}\right)\overbrace{\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}}^{\Gamma}. $$
 
 <br>
