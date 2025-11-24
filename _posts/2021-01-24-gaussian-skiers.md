@@ -143,6 +143,9 @@ $$ \begin{align}
     &= \exp\left[\overbrace{\left(Ax - 2\frac{\Delta e^x}{\sqrt{2\pi}}\right)}^\theta + \overbrace{\left(B -\frac{\Delta e^x}{2\sqrt{\pi}}\right)}^\beta h -\overbrace{\frac{\Delta e^x}{\sqrt{2\pi}}}^\alpha h^2  \right]. \\
     &= \exp\theta \exp\left[-\alpha h^2 + \beta h\right] \\
     &= \exp\theta \exp\left[-\alpha \left(h^2 + \frac{\beta}{\alpha} h\right)\right] \\
+    &= \exp\theta \exp\left[-\alpha \left(h^2 - \frac{\beta}{\alpha} h\right)\right] \\
+    &= \exp\theta \exp\left[-\alpha \left(h - \frac12\frac{\beta}{\alpha}\right)^2 + \frac{\beta^2}{4\alpha^2}\right)\right] \\
+    &= \exp \theta + \beta^2/4\alpha \exp-A\left(h-\beta/2\alpha\right)^2
 \end{align}$$
 
 <br>
