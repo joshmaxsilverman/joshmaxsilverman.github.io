@@ -152,4 +152,8 @@ the exponential in $h$ is now a simple Gaussian, so integrating over all $h$, we
 
 $$ e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{A}}. $$
 
+now we have to do the integral over $x.$ putting together all our pieces, we have 
+
+$$ \frac{1}{\gamma^2} \int \text{d}x\, \frac{1}{\left(2\pi\right)^{3/2}} N^{-\eta} e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{A}}. $$
+
 <br>
