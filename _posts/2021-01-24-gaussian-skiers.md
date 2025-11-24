@@ -141,7 +141,8 @@ putting this altogether, the integrand becomes
 $$ \begin{align}
     &= \exp\left[Ax + Bh -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{h}{\sqrt{2}} + \frac{h^2}{4}\right)\overbrace{\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}^\Delta\right] \\
     &= \exp\left[\overbrace{\left(Ax - 2\frac{\Delta e^x}{\sqrt{2\pi}}\right)}^\theta + \overbrace{\left(B -\frac{\Delta e^x}{2\sqrt{\pi}}\right)}^\beta h -\overbrace{\frac{\Delta e^x}{\sqrt{2\pi}}}^\alpha h^2  \right]. \\
-    &= e^\theta e^{-\alpha h^2 + \beta h}
+    &= \exp\theta \exp\left[-\alpha h^2 + \beta h\right] \\
+    &= \exp\theta \exp\left[-\alpha \left(h^2 + \frac{\beta}{\alpha} h\right)\right] \\
 \end{align}$$
 
 <br>
