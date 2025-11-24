@@ -145,7 +145,11 @@ $$ \begin{align}
     &= \exp\theta \exp\left[-\alpha \left(h^2 + \frac{\beta}{\alpha} h\right)\right] \\
     &= \exp\theta \exp\left[-\alpha \left(h^2 - \frac{\beta}{\alpha} h\right)\right] \\
     &= \exp\theta \exp\left[-\alpha \left(h - \frac12\frac{\beta}{\alpha}\right)^2 + \frac{\beta^2}{4\alpha^2}\right] \\
-    &= e^{\theta + \beta^2/4\alpha} e^{-A\left(h-\beta/2\alpha\right)^2}
+    &= e^{\theta + \beta^2/4\alpha} e^{-\alpha\left(h-\beta/2\alpha\right)^2}
 \end{align}$$
+
+the exponential in $h$ is now a simple Gaussian, so integrating over all $h$, we just get
+
+$$ e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{A}}. $$
 
 <br>
