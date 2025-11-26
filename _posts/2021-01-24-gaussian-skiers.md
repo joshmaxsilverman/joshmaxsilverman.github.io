@@ -64,7 +64,7 @@ The first condition ensures that Racer $1$ wins the first round and the second c
 
 The probability that racer $j$ meets these conditions is 
 
-$$ \int\limits_{f_1}^\infty \text{d}f_j\, \int\limits_{f_1 + s_1 - f_j}^\infty \text{d}s_j\, \mathcal{N}(f_j)\mathcal{N}(s_j}. $$
+$$ \int\limits_{f_1}^\infty \text{d}f_j\, \int\limits_{f_1 + s_1 - f_j}^\infty \text{d}s_j\, \mathcal{N}(f_j)\mathcal{N}(s_j). $$
 
 The only constraint on the losers is set by the times of the winner, Racer $1$, so they are independent of each other. 
 
