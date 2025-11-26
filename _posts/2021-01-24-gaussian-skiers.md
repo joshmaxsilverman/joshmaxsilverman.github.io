@@ -52,7 +52,7 @@ My attempts at an approximate solution for $N=30$ got the right shape, but took 
 
 ## 2025-11-18 Update
 
-The formal solution I was trying to approximate four years ago was the following:
+The formal solution I was trying to approximate (to no avail) four years ago was the following:
 
 If the first and second heat times for racer $j$ are $f_j$ and $s_j$, and the winner goes first, then
 
@@ -70,7 +70,7 @@ The only constraint on the losers is set by the times of the winner, Racer $1$, 
 
 $$ J(f_1,s_1)^{N-1}. $$
 
-Call $J(f_1,s_1)$ the probability that a racer has a first heat time worse than $f_1$ and a total race time worse than $f_1 + s_1$. Then the probability the racer who wins the first heat wins the whole race is
+The probability that the racer who wins the first heat wins the whole race is then just
 
 $$ N \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(f_1)\mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
