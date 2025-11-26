@@ -64,9 +64,11 @@ The first condition ensures that Racer $1$ wins the first round and the second c
 
 The probability that racer $j$ meets these conditions is 
 
-$$ \int\limits_{f_1}^\infty \text{d}f_j\, \int\limits_{f_1 + s_1 - f_j}^\infty \text{d}s_j\, \mathcal{N}(f_j)\mathcal{N}(s_j). $$
+$$ J(f_1,s_j) = \int\limits_{f_1}^\infty \text{d}f_j\, \mathcal{N}(f_j) \int\limits_{f_1 + s_1 - f_j}^\infty \text{d}s_j\, \mathcal{N}(s_j). $$
 
-The only constraint on the losers is set by the times of the winner, Racer $1$, so they are independent of each other. 
+The only constraint on the losers is set by the times of the winner, Racer $1$, so they are independent of each other and the probability that all $(N-1)$ satisfy the constraint is just
+
+$$ J(f_1,s_1)^{N-1}. $$
 
 Call $J(f_1,s_1)$ the probability that a racer has a first heat time worse than $f_1$ and a total race time worse than $f_1 + s_1$. Then the probability the racer who wins the first heat wins the whole race is
 
