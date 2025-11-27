@@ -72,15 +72,21 @@ $$ J(f_1,s_1)^{N-1}. $$
 
 The probability that the racer who wins the first heat wins the whole race is then just
 
-$$ N \int\limits_{-\infty}^\infty \text{d}f_1\int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(f_1)\mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
+$$ N \int\limits_{-\infty}^\infty \text{d}f_1\mathcal{N}(f_1) \int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
-As $N$ grows, the integral will only have significant mass where $J(f_1, s_1),$ otherwise the $(N-1)^\text{st}$ power would decay to zero. 
+This is not easy because the integral defining $J$ depends very strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
 
-This implies that $J(f_1,s_1) \approx 1 - \varepsilon(f_1, s_1).$
+The crucial insight is that we actually don't have to...
 
-$\varepsilon(f_1,s_1)$, being the complement of $J$ is the probability that one of $f_1 > f_j$ and $f_1+s_1 > f_j+s_j.$ 
+As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
-This the probability of either event minus the probability of both events
+This means that we can approximate it as one minus a small quantity that depends on $f_1$ and $s_1$ like so 
+
+$$ J(f_1,s_1) \approx 1 - \varepsilon(f_1, s_1). $$
+
+$J$ is the probability that a racer who is did not win heat $1$ loses so $\varepsilon(f_1,s_1)$, being the complement of $J,$ is the probability that at least one of the losing conditions is broken, i.e. $f_1 > f_j$ or $f_1+s_1 > f_j+s_j.$ 
+
+This the probability of either event happening minus the probability of both events happening
 
 $$ \varepsilon(f_1,s_1) = P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) - P(f_j < f_1\,\textbf{AND}\,f_j+s_j \leq f_1+s_1). $$
 
@@ -88,9 +94,11 @@ With many racers, the probability of both occuring is much smaller than the prob
 
 $$ \varepsilon(f_1,s_1) \approx P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1) $$
 
-We can approximate $(1-\varepsilon)^N \approx e^{-N\varepsilon}$, so $\varepsilon$ has to be on the order $1/N$ otherwise $J^N$ will shrink exponentially to zero instead of staying finite. This means that $N\varepsilon \approx 1.$
+Now, since $\varespilon$ is small, $J^{N-1} = (1-\varepsilon)^{N-1} \approx e^{-{N\varepsilon}.$ For $J^{N-1}$ to be close to $1,$ $\varepsilon$ has to be on the order $1/N$ otherwise $J^^{N-1} \approx e^{-N\varepsilon}$ will shrink exponentially to zero instead of staying finite. This means 
 
-The winner's times are going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
+$$ N\varepsilon \approx 1. $$
+
+With many racers, the winner's heat times are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
 
 The probability that $f_j$ is less than $f_1$ is 
 
