@@ -108,7 +108,7 @@ $$ P(f_j+s_j \leq f_1+s_1) = \int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\,
 
 Here the normal distribution has variance $2$ instead of $1$ because the random variable is $f_j + s_j$, adding the unit variances!
 
-With many racers, the winner's first heat time and total time are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. So, both of these are tails of the Gaussian distribution which is estimated by 
+With many racers, the winner's first heat time and total time are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. So, both of these probabilities are the lefthand tails of a Gaussian distribution which is estimated by 
 
 $$ \int\limits_{-\infty}^t \text{d}t^\prime \mathcal{N}(t^\prime) \approx \mathcal{N}(t)\left(1/t + 1/t^3\right). $$ 
 
