@@ -152,15 +152,15 @@ $$
 
 The integral is over $x$ and $y$ which we can perform however is easiest. One nice way is to tilt $y$ so that the exponents $x$ and $(x+y)/\sqrt{2}$ become equal apart from a perturbation $h.$ In other words pick $y$ so that $(x+(y-h))/\sqrt{2} = x$ or $y = (\sqrt{2}-1)x + h.$ 
 
-Plugging this in, the exponent in the second exponential becomes
+Plugging this in, and expanding in $h,$ the exponent in the second exponential becomes
 
 $$ -\frac{1}{\sqrt{2\pi}}\left(e^{x} + e^{x + h/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right) \approx -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{h}{\sqrt{2}} + \frac{h^2}{4}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right). $$
 
-Likewise, the first becomes
+Likewise, the first exponential becomes
 
 $$ e^{x + \left(\sqrt{2}-1\right)y} = e^{x(1+(\sqrt{2}-1)^2) + (\sqrt{2}-1)h} = e^{Ax + Bh}. $$
 
-putting this altogether, the integrand becomes
+Putting these altogether, the integrand is now
 
 $$ \begin{align}
     &= \exp\left[Ax + Bh -\frac{e^x}{\sqrt{2\pi}}\left(2 + \frac{h}{\sqrt{2}} + \frac{h^2}{4}\right)\overbrace{\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)}^\Delta\right] \\
