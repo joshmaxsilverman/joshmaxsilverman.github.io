@@ -118,16 +118,6 @@ Setting both equal to $1/N$, we can solve for the values $f_1^{\*} $ and $(f_1^{
 
 So, the probability mass will be centered around $f_1 \approx f_1^{\*} $ and $s_1 \approx s_1^\* ,$ with small deviations on either side. Both are roughly on the scale $\gamma = \sqrt{2\log N},$ so we can rescale the deviations like $f_1 = f_1^\* + x/\gamma$ and $s_1 = s_1^\* + y/\gamma.$
 
-Plugging these into the $N\mathcal{N}(f_1)\mathcal{N}(s_1)$ part of the integrand, we get
-
-$$
-    \begin{align}
-    \frac{1}{2\pi}N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2x + x^2/\gamma^2 + {s_{1}^{\*}}^2 + 2ys_{1}^{\*}/\gamma + y^2/\gamma^2\right)/2} \\
-    &\approx \frac{1}{2\pi}N \exp{-\left(2\log N - 2x + (6-2\sqrt{2})\log N - 2y (2-2\sqrt{2})\sqrt{\log N}/\sqrt{2\log N} + O(1/\gamma^2)\right)/2} \\
-    &= \frac{1}{2\pi}N N^{-(4-2\sqrt{2})} \exp\left(x + y(\sqrt{2}-1)\right) \\
-    &= \frac{1}{2\pi}N^{-(3-2\sqrt{2})} e^{x + y(\sqrt{2}-1)}
-    \end{align}
-$$
 
 Now we can plug in to the exponent $\varepsilon(f_1,s_1).$
 
@@ -139,6 +129,18 @@ $$
         &\approx -\frac{1}{N\sqrt{2\pi}}e^{x}\left[\frac{1}{-\gamma} + \frac{1}{-\gamma^3}\right] + \frac{1}{N\sqrt{2\pi}}e^{(x+y)/\sqrt{2}}\left[\frac{1}{-\gamma} + \frac{1}{-\gamma^3}\right] \\
         &= \frac{1}{N\sqrt{2\pi}}\left(e^{x} + e^{(x+y)/\sqrt{2}}\right)\left(\frac{1}{\gamma} + \frac{1}{\gamma^3}\right)
 \end{align}
+$$
+
+
+Plugging these into the $N\mathcal{N}(f_1)\mathcal{N}(s_1)$ part of the integrand, we get
+
+$$
+    \begin{align}
+    \frac{1}{2\pi}N \exp{-\left(f_1^2 + s_{1}^{2}\right)/2} &= N \exp{-\left(\gamma^2 + 2x + x^2/\gamma^2 + {s_{1}^{\*}}^2 + 2ys_{1}^{\*}/\gamma + y^2/\gamma^2\right)/2} \\
+    &\approx \frac{1}{2\pi}N \exp{-\left(2\log N - 2x + (6-2\sqrt{2})\log N - 2y (2-2\sqrt{2})\sqrt{\log N}/\sqrt{2\log N} + O(1/\gamma^2)\right)/2} \\
+    &= \frac{1}{2\pi}N N^{-(4-2\sqrt{2})} \exp\left(x + y(\sqrt{2}-1)\right) \\
+    &= \frac{1}{2\pi}N^{-(3-2\sqrt{2})} e^{x + y(\sqrt{2}-1)}
+    \end{align}
 $$
 
 Putting these results together, and writing $\eta = 3-2\sqrt{2},$ the integrand becomes
