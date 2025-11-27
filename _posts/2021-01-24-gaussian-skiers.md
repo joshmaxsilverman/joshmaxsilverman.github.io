@@ -118,7 +118,7 @@ Setting both equal to $1/N$, we can solve for the values $f_1^{\*} $ and $(f_1^{
 
 So, the probability mass will be centered around $f_1 \approx f_1^{\*} $ and $s_1 \approx s_1^\* ,$ with small deviations on either side. Both are roughly on the scale $\gamma = \sqrt{2\log N},$ so we can rescale the deviations like $f_1 = f_1^\* + x/\gamma$ and $s_1 = s_1^\* + y/\gamma.$
 
-Plugging them into the first part of the integrand, we get
+Plugging these into the $N\mathcal{N}(f_1)\mathcal{N}(s_1)$ part of the integrand, we get
 
 $$
     \begin{align}
