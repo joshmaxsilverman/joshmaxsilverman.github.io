@@ -171,12 +171,14 @@ $$ \begin{align}
     &= e^{\theta + \beta^2/4\alpha} e^{-\alpha\left(h-\beta/2\alpha\right)^2}
 \end{align}$$
 
-the exponential in $h$ is now a simple Gaussian, so integrating over all $h$, we just get
+The exponential in $h$ is now a simple Gaussian, so integrating over all $h$, we just get
 
 $$ e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{\alpha}}. $$
 
-now we have to do the integral over $x.$ putting together all our pieces, we have 
+Now we have to do the integral over $x.$ Putting together all our pieces, we have 
 
-$$ \frac{1}{\gamma^2}\frac{N^{-\eta}}{\left(2\pi\right)^{3/2}} \int \text{d}x\, e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{\alpha}}. $$
+$$ P = \frac{1}{\gamma^2}\frac{N^{-\eta}}{\left(2\pi\right)^{3/2}} \int \text{d}x\, e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{\alpha}}. $$
 
+What we ultimately want to know is how this integral scales in terms of the number of racers $N.$ If we keep all the terms in $\alpha$ and $\beta$ when we perform the integral, we would get not just this scaling form, but the numerical value of the coefficients on the terms. 
+ 
 <br>
