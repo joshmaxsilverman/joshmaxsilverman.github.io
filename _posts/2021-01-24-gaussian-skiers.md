@@ -133,7 +133,7 @@ Now we can plug in to the exponent $\varepsilon(f_1,s_1).$
 
 $$
 \begin{align}
-        \varepsilon(f_1,s_1) &\approx -\frac{1}{\sqrt{2\pi}}e^{-\left(f_1^\ast + x/\gamma\right)^2/2}\left[\frac{1}{f_1} + \frac{1}{f_1^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(f_1^\ast+s_1^\ast + x/\gamma + y\gamma)^2/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right] \\
+        \varepsilon(f_1,s_1) &\approx -\frac{1}{\sqrt{2\pi}}e^{-\left(f_1^\ast + x/\gamma\right)^2/2}\left[\frac{1}{f_1} + \frac{1}{f_1^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(f_1^\ast+s_1^\ast + x/\gamma + y/\gamma)^2/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right] \\
         &\approx -\frac{1}{\sqrt{2\pi}}e^{-(\gamma^2 - 2x)/2}\left[\frac{1}{f_1} + \frac{1}{f_1^3}\right] + \frac{1}{\sqrt{2\pi}}e^{-(4\log N -2\sqrt{2} (x+y))/4}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right] \\
         &= -\frac{1}{N\sqrt{2\pi}}e^{x}\left[\frac{1}{f_1} + \frac{1}{f_1^3}\right] + \frac{1}{N\sqrt{2\pi}}e^{(x+y)/\sqrt{2}}\left[\frac{\sqrt{2}}{f_1+s_1} + \frac{2\sqrt{2}}{(f_1+s_1)^3}\right] \\
         &\approx -\frac{1}{N\sqrt{2\pi}}e^{x}\left[\frac{1}{-\gamma} + \frac{1}{-\gamma^3}\right] + \frac{1}{N\sqrt{2\pi}}e^{(x+y)/\sqrt{2}}\left[\frac{1}{-\gamma} + \frac{1}{-\gamma^3}\right] \\
@@ -141,7 +141,7 @@ $$
 \end{align}
 $$
 
-Putting these both together, and writing $\eta = 3-2\sqrt{2},$ the integrand becomes
+Putting these results together, and writing $\eta = 3-2\sqrt{2},$ the integrand becomes
 
 $$ 
     \begin{align}
