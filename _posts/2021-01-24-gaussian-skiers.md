@@ -94,7 +94,7 @@ With many racers, the probability of both occuring is much smaller than the prob
 
 $$ \varepsilon(f_1,s_1) \approx P(f_j < f_1) + P(f_j+s_j \leq f_1+s_1). $$
 
-Now, since $\varepsilon$ is small, $J^{N-1} = (1-\varepsilon)^{N-1} \approx e^{-N\varepsilon}.$ For $J^{N-1}$ to be close to $1,$ $\varepsilon$ has to be on the order $1/N$ otherwise $J^^{N-1} \approx e^{-N\varepsilon}$ will shrink exponentially to zero instead of staying finite. This means 
+Now, since $\varepsilon$ is small, $J^{N-1} = (1-\varepsilon)^{N-1} \approx e^{-N\varepsilon}.$ For $J^{N-1}$ to be close to $1,$ $\varepsilon$ has to be on the order $1/N$ otherwise $J^{N-1} \approx e^{-N\varepsilon}$ will shrink exponentially to zero instead of staying finite. This means 
 
 $$ N\varepsilon \approx 1. $$
 
