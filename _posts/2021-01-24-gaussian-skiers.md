@@ -98,17 +98,19 @@ Now, since $\varepsilon$ is small, $J^{N-1} = (1-\varepsilon)^{N-1} \approx e^{-
 
 $$ N\varepsilon \approx 1. $$
 
-With many racers, the winner's heat times are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. 
-
 The probability that $f_j$ is less than $f_1$ is 
 
 $$ P(f_j < f_1) = \int\limits_{-\infty}^{f_1} \text{d}f_j\, \mathcal{N}(f_j,1). $$ 
 
-and the probability that $f_j+s_j\leq f_1+s_1$ is 
+The probability that $f_j+s_j\leq f_1+s_1$ is 
 
 $$ P(f_j+s_j \leq f_1+s_1) = \int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2). $$
 
-Both of these are tails of the Gaussian distribution which is estimated by $\mathcal{N}(t)\left(1/t + 1/t^3\right).$ 
+Here the normal distribution has variance $2$ instead of $1$ because the random variable is $f_j + s_j$, adding the unit variances!
+
+With many racers, the winner's first heat time and total time are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. So, both of these are tails of the Gaussian distribution which is estimated by 
+
+$$ \int\limits_{-\infty}^t \text{d}t^\prime \mathcal{N}(t^\prime) \approx \mathcal{N}(t)\left(1/t + 1/t^3\right). $$ 
 
 Setting both equal to $1/N$ and solving for $f_1^{\*} $ and $(f_1^{\*} + s_1^{\*} ) $ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1)),$ we get $f_1^{\*} \approx -\sqrt{2\log N} $ and $f_1^{\*} + s_1^{\*} \approx -2\sqrt{\log N}. $ Solving for $s_1^{\*} $ we get $s_1^{\*} \approx -(2-\sqrt{2})\sqrt{\log N}.$
 
