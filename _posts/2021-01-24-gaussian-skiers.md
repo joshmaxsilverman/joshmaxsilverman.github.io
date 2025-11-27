@@ -106,15 +106,17 @@ The probability that $f_j+s_j\leq f_1+s_1$ is
 
 $$ P(f_j+s_j \leq f_1+s_1) = \int\limits_{-\infty}^{f_1+s_1} \text{d}(f_j+s_j)\, \mathcal{N}(f_j+s_j, 2). $$
 
-Here the normal distribution has variance $2$ instead of $1$ because the random variable is $f_j + s_j$, adding the unit variances!
+Here the normal distribution has variance $2$ instead of $1$ because the random variable is $(f_j + s_j)$, adding the unit variances!
 
 With many racers, the winner's first heat time and total time are very likely going to be negative (it's a normal distribution), and as more racers participate, they'll be driven to large negative values. So, both of these probabilities are the lefthand tails of a Gaussian distribution which is estimated by 
 
 $$ \int\limits_{-\infty}^t \text{d}t^\prime \mathcal{N}(t^\prime) \approx \mathcal{N}(t)\left(1/t + 1/t^3\right). $$ 
 
-Setting both equal to $1/N$ and solving for $f_1^{\*} $ and $(f_1^{\*} + s_1^{\*} ) $ we get (dropping the terms logarithmic in $f_1$ and $(f_1+s_1)),$ we get $f_1^{\*} \approx -\sqrt{2\log N} $ and $f_1^{\*} + s_1^{\*} \approx -2\sqrt{\log N}. $ Solving for $s_1^{\*} $ we get $s_1^{\*} \approx -(2-\sqrt{2})\sqrt{\log N}.$
+$J$ is appoximately the product of the complements of these probabilities, which means the complements should both be close $1$ and therefore comparable to each other. This means that these probabilities should be comparable as well. 
 
-So, the probability mass will be centered around $f_1 \approx f_1^{\*} $ and $s_1 \approx s_1^\* ,$ which are both roughly on the scale $\gamma = \sqrt{2\log N}.$ We can rescale them like $f_1 = f_1^\* + x/\gamma$ and $s_1 = s_1^\* + y/\gamma.$
+Setting both equal to $1/N$, we can solve for the values $f_1^{\*} $ and $(f_1^{\*} + s_1^{\*} )$ that give $J^N$ sizable mass. After dropping terms logarithmic in $f_1$ and $(f_1+s_1)),$ we get $f_1^{\*} \approx -\sqrt{2\log N} $ and $f_1^{\*} + s_1^{\*} \approx -2\sqrt{\log N}. $ Solving for $s_1^{\*}$ we get $s_1^{\*} \approx -(2-\sqrt{2})\sqrt{\log N}.$
+
+So, the probability mass will be centered around $f_1 \approx f_1^{\*} $ and $s_1 \approx s_1^\* ,$ with small deviations on either side. Both are roughly on the scale $\gamma = \sqrt{2\log N},$ so we can rescale the deviations like $f_1 = f_1^\* + x/\gamma$ and $s_1 = s_1^\* + y/\gamma.$
 
 Plugging them into the first part of the integrand, we get
 
