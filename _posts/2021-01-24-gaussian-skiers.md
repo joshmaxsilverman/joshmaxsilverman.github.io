@@ -129,7 +129,7 @@ $$
     \end{align}
 $$
 
-Now we can go back to $\varepsilon(f_1,s_1).$
+Now we can plug in to the exponent $\varepsilon(f_1,s_1).$
 
 $$
     \begin{align}
