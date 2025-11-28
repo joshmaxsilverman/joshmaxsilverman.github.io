@@ -100,17 +100,17 @@ $$ \frac{\mathcal{N}(\gamma)}{\gamma} \approx \frac1N $$
 
 which finds $\gamma = \sqrt{2\log N}.$
 
-We can rescale the time $f_1$ to $f_1 = \gamma + x/\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables, we can divide the sum by $\sqrt{2}$ to make it a normal variable as well, $(f_1+s_1)/\sqrt{2}.$ 
+We can rescale the time $f_1$ to $f_1 = -\gamma + x/\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables, we can divide the sum by $\sqrt{2}$ to make it a normal variable as well, $(f_1+s_1)/\sqrt{2}.$ 
 
-Racer $1$ will win if $f_1+s_1$ is less than the expected fastest racer of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $\gamma$ too.
+Racer $1$ will win if $f_1+s_1$ is less than the expected fastest racer of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $-\gamma$ too.
 
-So, Racer $1$ will win if $(f_1+s_1)/\sqrt{2} < \gamma$ or
+So, Racer $1$ will win if $(f_1+s_1)/\sqrt{2} < -\gamma$ or
 
-$$ \frac{\gamma + x/\gamma}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < \gamma, $$
+$$ \frac{-\gamma + x/\gamma}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < -\gamma, $$
 
 which is equivalent to 
 
-$$ s_1 < \overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
+$$ s_1 < \overbrace{-\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
 
 So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma - x/\gamma)/(\nu\gamma - x/\gamma).$
 
@@ -119,11 +119,11 @@ working this out, we get
 $$
     \begin{align}
         P(\text{Racer 1 wins}|x) 
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma-x/\gamma} e^{-(\nu\gamma-x/\gamma)^2/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma-x/\gamma} e^{-(\nu^2\gamma^2 - 2\nu x + x^2/\gamma^2)/2} \\
-        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 - 2\nu x)/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu^2\log N + \nu x} \\
-        &= \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{\nu x}
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{-\nu\gamma-x/\gamma} e^{-(\nu\gamma+x/\gamma)^2/2} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{-\nu\gamma-x/\gamma} e^{-(\nu^2\gamma^2 + 2\nu x + x^2/\gamma^2)/2} \\
+        &\approx -\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 + 2\nu x)/2} \\
+        &= -\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu^2\log N - \nu x} \\
+        &= -\frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu x}
     \end{align}
 $$
 
@@ -146,9 +146,9 @@ $$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^x} = e^x 
 
 Putting it all together, the probability that the winner of the first heat wins the entire race is 
 
-$$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{\nu x}. $$
+$$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{-\nu x}. $$
 
-If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^\nu dz/z = e^{-z}z^{\nu}$ which is the gamma function.
+If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ which is the gamma function.
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
