@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Gaussian Skiers
 date: 2025/11/18
 subtitle: How safe are you for winning the first heat?
