@@ -127,7 +127,7 @@ $$
     \end{align}
 $$
 
-Now, the probability a single racer's first heat time is over $\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}. $ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}\right]^{N-1}. $ 
+Now, the probability a single racer's first heat time is over $\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{\gamma + x/\gamma}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}\right]^{N-1}.$ 
 
 
 
