@@ -72,7 +72,9 @@ The probability that the racer who wins the first heat wins the whole race is th
 
 $$ N \int\limits_{-\infty}^\infty \text{d}f_1\mathcal{N}(f_1) \int\limits_{-\infty}^\infty\text{d}s_1 \mathcal{N}(s_1)J(f_1,s_1)^{N-1}. $$
 
-This is not easy because the integral defining $J$ depends very strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
+We can evaluate this numerically for e.g. $N=30$ and we get $0.31471089\ldots$, which closely matches simulation.
+
+However, it is not easy to get a formula general $N$ because the integral defining $J$ depends very strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
 
 The crucial insight is that we actually don't have to...
 
@@ -92,7 +94,7 @@ which is approximated by
 
 $$ \mathcal{N}(v)/v. $$
 
-So we can find the likely value of $f_1,$ $\gamma,$ by solving
+The minimum should occur at the value $\gamma$ where the probability to fall short of $\gamma$ is less than $\frac1N.$ So, we can find the likely value of $f_1,$ $\gamma,$ by solving
 
 $$ 
     \begin{align}
@@ -181,7 +183,7 @@ $$
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
-To get more accurate small $N$ predictions, we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation. Those corrections shrink with powers of $1/\log N$, so the convergence is slow, but we can see that even the two curves are converging.
+To get more accurate predictions for small $N,$ we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation. Those corrections shrink with powers of $1/\log N$, so the convergence is very slow, but we can already see the asymptotic result (gold curve) and the prediction (blue points) are converging.
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
