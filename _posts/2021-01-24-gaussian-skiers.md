@@ -100,7 +100,7 @@ which finds $\gamma = \sqrt{2\log N}.$
 
 We can rescale the time $f_1$ to $f_1 = -\gamma + x/\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
 
-Racer $1$ wins if $f_1+s_1$ is less than the smallest time of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j = (f_j+s_j)/sqrt{2}.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $-\gamma$ too.
+Racer $1$ wins if $f_1+s_1$ is less than the smallest time of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j = (f_j+s_j)/\sqrt{2}.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $-\gamma$ too.
 
 So, Racer $1$ will win if $(f_1+s_1)/\sqrt{2} < -\gamma$ or
 
