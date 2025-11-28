@@ -94,38 +94,43 @@ $$ \mathcal{N}(v)/v. $$
 
 So, the likely value of $f_1,$ $\gamma,$ is found by solving
 
-$$ \frac{\mathcal{N}(\gamma)}{\gamma} \approx \frac1N $$
+$$ \begin{align}
+    \frac{\mathcal{N}(\gamma)}{\gamma} &\approx \frac1N \\
+    \frac{e^{-gamma^2/2}{\sqrt{2\pi}\gamma} &= \frac1N \\
+    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N
+    \end{align}
+$$
 
-which finds $\gamma = \sqrt{2\log N}.$
+which, keeping the dominant term for $\gamma$ finds $\gamma \approx \sqrt{2\log N}.$
 
-We can rescale the time $f_1$ to $f_1 = -\gamma + x/\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
+$f_1$ will be strongly peaked at $\gamma$, and there will be a very small likelihood of straying far from it, so we can rewrite it as $f_1 = -\gamma + x$ where $x$ is small compared to $\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
 
 Racer $1$ wins if $f_1+s_1$ is less than the smallest time of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j = (f_j+s_j)/\sqrt{2}.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $-\gamma$ too.
 
 So, Racer $1$ will win if $(f_1+s_1)/\sqrt{2} < -\gamma$ or
 
-$$ \frac{-\gamma + x/\gamma}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < -\gamma, $$
+$$ \frac{-\gamma + x}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < -\gamma, $$
 
 which is equivalent to 
 
-$$ s_1 < -\overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
+$$ s_1 < -\left(\overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma + x\right). $$
 
-So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma - x/\gamma)/(\nu\gamma - x/\gamma).$
+So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma + x)/(\nu\gamma + x).$
 
 working this out, we get
 
 $$
     \begin{align}
         P(\text{Racer 1 wins}|x) 
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x/\gamma} e^{-(\nu\gamma+x/\gamma)^2/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x/\gamma} e^{-(\nu^2\gamma^2 + 2\nu x + x^2/\gamma^2)/2} \\
-        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 + 2\nu x)/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} {e^{-\gamma^2/2}}^{\nu^2} e^{-\nu x} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x} e^{-(\nu\gamma+x)^2/2} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x} e^{-(\nu^2\gamma^2 + 2\nu \gamma x + x^2)/2} \\
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 + 2\nu \gamma x)/2} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} {e^{-\gamma^2/2}}^{\nu^2} e^{-\nu \gamma x} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} e^{-\nu x}
     \end{align}
 $$
 
-Now, the probability a single racer's first heat time is over $-\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x/\gamma)}{-\gamma + x/\gamma}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x/\gamma)}{(-\gamma + x/\gamma)}\right]^{N-1}.$ 
+Now, the probability a single racer's first heat time is over $-\gamma + x$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x)}{-\gamma + x}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x)}{(-\gamma + x)}\right]^{N-1}.$ 
 
 $$
     \begin{align}
