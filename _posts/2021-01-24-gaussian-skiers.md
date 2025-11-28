@@ -112,6 +112,7 @@ which is equivalent to
 
 $$ s_1 < \overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
 
+So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma - x/\gamma)/(\nu\gamma - x\gamma).$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
