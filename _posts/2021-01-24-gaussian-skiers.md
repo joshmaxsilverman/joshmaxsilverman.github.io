@@ -97,7 +97,7 @@ So we can find the likely value of $f_1,$ $\gamma,$ by solving
 $$ 
     \begin{align}
         \frac{\mathcal{N}(\gamma)}{\gamma} &\approx \frac1N \\
-    \frac{e^{-gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
+    \frac{e^{-\gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
     \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N
     \end{align}
 $$
