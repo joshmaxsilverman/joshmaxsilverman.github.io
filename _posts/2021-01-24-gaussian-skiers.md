@@ -154,7 +154,11 @@ $$ P(\text{Racer }1\text{ wins}) \propto \gamma^{\nu^2-1}N^{-\nu^2} \propto \dfr
 
 If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ and the integral goes from $0$ to $\infty$
 
-$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{0}^{\infty} \text{d}z\, e^z z^{-\nu}. $$
+$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{0}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. $$
+
+This integral is just the gamma function $\Gamma(1-\nu) = \Gamma(2-\sqrt{2})$ making the final result 
+
+$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \Gamma(2-\sqrt{2}). $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
