@@ -78,6 +78,7 @@ This is not easy because the integral defining $J$ depends very strongly on the 
 
 The crucial insight is that we actually don't have to...
 
+<--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
 This means that we can approximate it as one minus a small quantity that depends on $f_1$ and $s_1$ like so 
@@ -181,6 +182,6 @@ Now we have to do the integral over $x.$ Putting together all our pieces, we hav
 
 $$ P = \frac{1}{\gamma^2}\frac{N^{-\eta}}{\left(2\pi\right)^{3/2}} \int \text{d}x\, e^{\theta + \beta^2/4\alpha} \sqrt{\frac{\pi}{\alpha}}. $$
 
-What we ultimately want to know is how this integral scales in terms of the number of racers $N.$ If we keep all the terms in $\alpha$ and $\beta$ when we perform the integral, we would get not just this scaling form, but the numerical value of the coefficients on the terms. 
+What we ultimately want to know is how this integral scales in terms of the number of racers $N.$ If we keep all the terms in $\alpha$ and $\beta$ when we perform the integral, we would get not just this scaling form, but the numerical value of the coefficients on the terms. -->
  
 <br>
