@@ -127,6 +127,8 @@ $$
     \end{align}
 $$
 
+Now, the probability that out of $(N-1)$ people, noone has a total time under $\gamma + x/\gamma$ is $\frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}. $
+
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
