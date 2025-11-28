@@ -78,6 +78,27 @@ This is not easy because the integral defining $J$ depends very strongly on the 
 
 The crucial insight is that we actually don't have to...
 
+Instead, we can calculate the expected value of the probability that the winner of the first heat wins the whole race.
+
+We know two useful things about the winner
+- they won the first heat
+- their first heat time plus their second heat time is less than the expected minimum total time of the $(N-1)$ other racers.
+
+To win the first heat, they need the probability of beating their first heat time $f_1$ to be less than $1/N.$
+
+The probability that a normal variable is less than a target $v$ is 
+
+$$ P(z < v) = \int\limits_{-\infty}^v \text{d}z\, \mathcal{N}(z), $$
+
+which is approximated by 
+
+$$ \mathcal{N}(v)/v. $$
+
+
+
+
+
+
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
