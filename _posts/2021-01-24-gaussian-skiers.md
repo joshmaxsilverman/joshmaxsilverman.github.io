@@ -116,9 +116,7 @@ which is equivalent to
 
 $$ s_1 < -\left(\overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma + x\right). $$
 
-So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma + x)/(\nu\gamma + x).$
-
-working this out, we get
+So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma + x)/(\nu\gamma + x).$ Working this out, we get
 
 $$
     \begin{align}
@@ -131,26 +129,26 @@ $$
     \end{align}
 $$
 
-Now, the probability a single racer's first heat time is over $-\gamma + x$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x)}{-\gamma + x}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x)}{(-\gamma + x)}\right]^{N-1}.$ 
+Now, the probability that a single racer's first heat time is over $-\gamma + x$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x)}{-\gamma + x}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x)}{(-\gamma + x)}\right]^{N-1}.$ 
 
 $$
     \begin{align}
-        P(\text{first heat time < }-\gamma + x/\gamma) &= \frac{1}{\sqrt{2\pi}}\frac{\mathcal{N}(-\gamma + x/\gamma)}{(\gamma + x/\gamma)} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x/\gamma)^2/2}}{(\gamma + x/\gamma)} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}}{(\gamma + x/\gamma)} \\ 
-        &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x)/2}}{\gamma} \\
-        &= \frac{\mathcal{N}(\gamma)}{\gamma}e^x \\
-        &\approx e^x/N
+        P(\text{first heat time < }-\gamma + x) &= \frac{1}{\sqrt{2\pi}}\frac{\mathcal{N}(-\gamma + x)}{(\gamma + x)} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x)^2/2}}{(\gamma + x)} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma + x^2)/2}}{(\gamma + x)} \\ 
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma)/2}}{\gamma} \\
+        &= \frac{\mathcal{N}(\gamma)}{\gamma}e^{\gamma x} \\
+        &\approx e^{\gamma x}/N
     \end{align}
 $$
 
-The probability that a racer's first heat time is greater than $(-\gamma + x/\gamma)$ is then $(1-e^x/N)$ and the probability that the minimum first heat time is greater than $(-\gamma+x/\gamma)$ is $\approx(1-e^x/N)^N = e^{-e^x}.$ So, the cumulative probability that the minimum is less than $(-\gamma+x/\gamma)$ is $1 - e^{-e^z}$ and the probability distribution that the minimum first heat time is $x$ exactly is then just 
+The probability that a racer's first heat time is greater than $(-\gamma + x)$ is then $(1-e^{\gamma x}/N)$ and the probability that the minimum first heat time is greater than $(-\gamma+x)$ is $\approx(1-e^{\gamma x}/N)^N = e^{-e^{\gamma x}}.$ So, the cumulative probability that the minimum is less than $(-\gamma+x)$ is $1 - e^{-e^{\gamma x}}$ and the probability distribution that the minimum first heat time is $x$ exactly is then just 
 
-$$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^x} = e^x e^{-e^x}. $$
+$$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^{\gamma x}} = \gamma e^{\gamma x} e^{-e^{\gamma x}}. $$
 
 Putting it all together, the probability that the winner of the first heat wins the entire race is 
 
-$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{-\nu x}. $$
+$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, \gamma e^{\gamma x} e^{-e^{\gamma x}} e^{-\nu \gamma x}. $$
 
 The integral will get us an overall numerical factor, but already we can see how the problem will scale with $N.$ Pulling out the $N$ dependent terms from the prefactor, we have 
 
