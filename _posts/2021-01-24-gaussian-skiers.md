@@ -127,9 +127,18 @@ $$
     \end{align}
 $$
 
-Now, the probability a single racer's first heat time is over $\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{\gamma + x/\gamma}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}\right]^{N-1}.$ 
+Now, the probability a single racer's first heat time is over $-\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x/\gamma)}{-\gamma + x/\gamma}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x/\gamma)}{(-\gamma + x/\gamma)}\right]^{N-1}.$ 
 
-
+$$
+    \begin{align}
+        P(\text{first heat time < }-\gamma + x/\gamma) &= \frac{1}{\sqrt{2\pi}}\frac{\mathcal{N}(-\gamma + x/\gamma)}{(\gamma + x/\gamma)} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x/\gamma)^2/2}{(\gamma + x/\gamma)}
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}{(\gamma + x/\gamma)} \\
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x)/2}{(\gamma)} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-\gamma^2/2}{(\gamma)}e^x \\
+        &= e^x/N
+    \end{align}
+$$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
