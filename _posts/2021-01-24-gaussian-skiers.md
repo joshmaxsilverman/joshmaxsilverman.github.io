@@ -135,10 +135,18 @@ $$
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x/\gamma)^2/2}}{(\gamma + x/\gamma)}
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}}{(\gamma + x/\gamma)} \\
         &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x)/2}}{(\gamma)} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-\gamma^2/2}}{(\gamma)}e^x \\
+        &= \frac{\mathcal{N}(\gamma)}{(\gamma)}e^x \\
         &= e^x/N
     \end{align}
 $$
+
+The probability that a racer's first heat time is greater than $(-\gamma + x/\gamma)$ is then $(1-e^x/N)$ and the probability that the minimum first heat time is greater than $(-\gamma+x/\gamma)$ is $\approx(1-e^x/N)^N = e^{-e^x}.$ So, the cumulative probability that the minimum is less than $(-\gamma+x/\gamma)$ is $1 - e^{-e^z}$ and the probability distribution that the minimum first heat time is $x$ exactly is then just 
+
+$$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^x} = e^x e^{-e^x}. $$
+
+Putting it all together, the probability that the winner of the first heat wins the entire race is 
+
+$$ \int\limits_{-\inf}^{\inf} \text{d}x\, e^x e^{-e^x} \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{\nu x}. $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
