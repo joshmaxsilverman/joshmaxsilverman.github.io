@@ -114,6 +114,19 @@ $$ s_1 < \overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
 
 So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma - x/\gamma)/(\nu\gamma - x/\gamma).$
 
+working this out, we get
+
+$$
+    \begin{align}
+        P(\text{Racer 1 wins}|x) 
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma-x/\gamma} e^{-(\nu\gamma-x/\gamma)^2/2} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma-x/\gamma} e^{-(\nu^2\gamma^2 - 2\nu x + x^2/\gamma^2)/2} \\
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 - 2\nu x)/2} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu^2\log N + \nu x} \\
+        &= \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{\nu x}
+    \end{align}
+$$
+
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
