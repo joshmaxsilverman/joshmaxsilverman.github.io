@@ -122,8 +122,8 @@ $$
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x/\gamma} e^{-(\nu\gamma+x/\gamma)^2/2} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x/\gamma} e^{-(\nu^2\gamma^2 + 2\nu x + x^2/\gamma^2)/2} \\
         &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 + 2\nu x)/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu^2\log N - \nu x} \\
-        &= \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\nu x}
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-\gamma^2/2}^{\nu^2} e^{-\nu x} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} e^{-\nu x}
     \end{align}
 $$
 
