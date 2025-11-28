@@ -146,7 +146,7 @@ $$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^x} = e^x 
 
 Putting it all together, the probability that the winner of the first heat wins the entire race is 
 
-$$ \int\limits_{-\inf}^{\inf} \text{d}x\, e^x e^{-e^x} \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{\nu x}. $$
+$$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \int\limits_{-\inf}^{\inf} \text{d}x\, e^x e^{-e^x} e^{\nu x}. $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
