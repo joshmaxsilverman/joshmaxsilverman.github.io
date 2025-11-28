@@ -148,6 +148,10 @@ Putting it all together, the probability that the winner of the first heat wins 
 
 $$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{-\nu x}. $$
 
+The integral will get us an overall numerical factor, but already we can see how the problem will scale with $N.$ Pulling out the $N$ dependent terms from the prefactor, we have 
+
+$$ P(Racer $1$ wins) \propto \gamma^{\nu^2-1}N^{-\nu^2} = \sqrt{2\log N}^{}N^{-(3-2\sqrt{2})}. $$
+
 If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ which is the gamma function.
 
 <!--
