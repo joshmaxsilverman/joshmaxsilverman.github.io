@@ -127,7 +127,9 @@ $$
     \end{align}
 $$
 
-Now, the probability that out of $(N-1)$ people, noone has a total time under $\gamma + x/\gamma$ is $\frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}. $
+Now, the probability a single racer's first heat time is over $\gamma + x/\gamma$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}. $ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(\gamma + x/\gamma)}{(\gamma + x/\gamma)}\right]^{N-1}. $ 
+
+
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
