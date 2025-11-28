@@ -136,7 +136,7 @@ $$
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}}{(\gamma + x/\gamma)} \\ 
         &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x)/2}}{\gamma} \\
         &= \frac{\mathcal{N}(\gamma)}{\gamma}e^x \\
-        &= e^x/N
+        &\approx e^x/N
     \end{align}
 $$
 
@@ -146,7 +146,7 @@ $$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^x} = e^x 
 
 Putting it all together, the probability that the winner of the first heat wins the entire race is 
 
-$$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{-\nu x}. $$
+$$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, e^x e^{-e^x} e^{-\nu x}. $$
 
 If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ which is the gamma function.
 
