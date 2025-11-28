@@ -160,7 +160,7 @@ $$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\ri
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
-To get more accurate small $N$ predictions, we'd need perturbatively develop the $e^{-x^2/\gamma^2}$ that we dropped for the approximation. Those corrections shrink with powers of $1/\log N$, so the convergence is slow, but we can see that even the two curves are converging.
+To get more accurate small $N$ predictions, we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation. Those corrections shrink with powers of $1/\log N$, so the convergence is slow, but we can see that even the two curves are converging.
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
