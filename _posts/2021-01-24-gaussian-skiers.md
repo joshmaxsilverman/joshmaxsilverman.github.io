@@ -94,9 +94,23 @@ which is approximated by
 
 $$ \mathcal{N}(v)/v. $$
 
+So, the likely value of $f_1,$ $\gamma,$ is found by solving
 
+$$ \frac{\mathcal{N}(\gamma)}{\gamma} \approx \frac1N $$
 
+which finds $\gamma = \sqrt{2\log N}.$
 
+We can rescale the time $f_1$ to $f_1 = \gamma + x/\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables, we can divide the sum by $\sqrt{2}$ to make it a normal variable as well, $(f_1+s_1)/\sqrt{2}.$ 
+
+Racer $1$ will win if $f_1+s_1$ is less than the expected fastest racer of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $\gamma$ too.
+
+So, Racer $1$ will win if $(f_1+s_1)/\sqrt{2} < \gamma$ or
+
+$$ \frac{\gamma + x/\gamma}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < \gamma, $$
+
+which is equivalent to 
+
+$$ s_1 < \overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma - x/\gamma. $$
 
 
 <!--
