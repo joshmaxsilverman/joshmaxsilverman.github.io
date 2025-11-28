@@ -60,13 +60,11 @@ If the first and second heat times for racer $j$ are $f_j$ and $s_j$, and the wi
 - each $s_j$ can range from $f_1 + s_1 - f_j$ up to $\infty$ (because anything faster would cause racer $j$ to win the race)
 - $f_1$ and $s_1$ can range from $-\infty$ to $\infty$ (because the winner sets the constraints for the other racers)
 
-The first condition ensures that Racer $1$ wins the first round and the second condition ensures they win the second. 
-
 The probability that racer $j$ meets these conditions is 
 
 $$ J(f_1,s_j) = \int\limits_{f_1}^\infty \text{d}f_j\, \mathcal{N}(f_j) \int\limits_{f_1 + s_1 - f_j}^\infty \text{d}s_j\, \mathcal{N}(s_j). $$
 
-The only constraint on the losers is set by the times of the winner, Racer $1$, so they are independent of each other and the probability that all $(N-1)$ satisfy the constraint is just
+The constraint on the losers is set by the times of the winner, Racer $1$, so they're independent of each other and the probability that all $(N-1)$ satisfy the constraint is just
 
 $$ J(f_1,s_1)^{N-1}. $$
 
