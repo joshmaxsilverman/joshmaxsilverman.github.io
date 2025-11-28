@@ -150,7 +150,7 @@ $$ \frac{N^{-\nu^2}}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gam
 
 The integral will get us an overall numerical factor, but already we can see how the problem will scale with $N.$ Pulling out the $N$ dependent terms from the prefactor, we have 
 
-$$ P(\text{Racer }1\text{ wins}) \propto \gamma^{\nu^2-1}N^{-\nu^2} \propto {\log N}^{1-\sqrt{2}}N^{-(3-2\sqrt{2})}. $$
+$$ P(\text{Racer }1\text{ wins}) \propto \gamma^{\nu^2-1}N^{-\nu^2} \propto \dfrac{N^{-(3-2\sqrt{2})}}{(\log N)^{\sqrt{2}-1}}. $$
 
 If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ which is the gamma function.
 
