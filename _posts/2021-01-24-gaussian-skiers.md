@@ -162,15 +162,22 @@ $$
 
 The integral will get us an overall numerical factor, but already we can see how the problem will scale with $N.$ Pulling out the $N$ dependent terms from the prefactor, we have 
 
-$$ P(\text{Racer }1\text{ wins}) \propto \gamma^{\nu^2-1}N^{-\nu^2} \propto \dfrac{N^{-(3-2\sqrt{2})}}{(\log N)^{\sqrt{2}-1}}. $$
+$$ 
+    \begin{align}
+        P(\text{heat 1 winner wins}) &\propto \gamma^{\nu^2-1}N^{-\nu^2} \\
+        & \propto \dfrac{N^{-(3-2\sqrt{2})}}{(\log N)^{\sqrt{2}-1}}. 
+    \end{align}
+$$
 
-If we substitute $z=e^x$ then the integrand becomes $ze^{-z}z^{-\nu} dz/z = e^{-z}z^{-\nu}$ and the integral goes from $0$ to $\infty$
 
-$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{0}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. $$
+This integral is just the gamma function $\Gamma(1-\nu)$ making the final result 
 
-This integral is just the gamma function $\Gamma(1-\nu) = \Gamma(2-\sqrt{2})$ making the final result 
-
-$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \Gamma(2-\sqrt{2}). $$
+$$ 
+    \begin{align}
+        P(\text{heat 1 winner wins}) &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \Gamma(1-\nu) \\
+        &= .
+    \end{align}
+$$
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
