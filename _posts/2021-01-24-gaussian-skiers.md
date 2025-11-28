@@ -150,6 +150,11 @@ Putting it all together, the probability that the winner of the first heat wins 
 
 $$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, \gamma e^{\gamma x} e^{-e^{\gamma x}} e^{-\nu \gamma x}. $$
 
+We can non-dimensionalize the integral by setting $z = e^{\gamma x}$ so that $\text{d}z = \gamma e^{\gamma x} \text{d}x = \gamma z \text{d}x$ so that the probability becomes 
+
+$$ \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, \frac{1}{\gamma z} \gamma z e^{-z} z^{-\nu} = \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. $$
+
+
 The integral will get us an overall numerical factor, but already we can see how the problem will scale with $N.$ Pulling out the $N$ dependent terms from the prefactor, we have 
 
 $$ P(\text{Racer }1\text{ wins}) \propto \gamma^{\nu^2-1}N^{-\nu^2} \propto \dfrac{N^{-(3-2\sqrt{2})}}{(\log N)^{\sqrt{2}-1}}. $$
