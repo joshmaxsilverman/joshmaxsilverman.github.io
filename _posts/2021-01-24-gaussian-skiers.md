@@ -133,7 +133,7 @@ $$
     \begin{align}
         P(\text{first heat time < }-\gamma + x/\gamma) &= \frac{1}{\sqrt{2\pi}}\frac{\mathcal{N}(-\gamma + x/\gamma)}{(\gamma + x/\gamma)} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x/\gamma)^2/2}}{(\gamma + x/\gamma)}
-        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}}{(\gamma + x/\gamma)} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x + x^2/\gamma^2)/2}}{(\gamma + x/\gamma)} \\ 
         &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x)/2}}{(\gamma)} \\
         &= \frac{\mathcal{N}(\gamma)}{(\gamma)}e^x \\
         &= e^x/N
