@@ -74,7 +74,7 @@ $$ N \int\limits_{-\infty}^\infty \text{d}f_1\mathcal{N}(f_1) \int\limits_{-\inf
 
 We can evaluate this numerically for e.g. $N=30$ and we get $0.31471089\ldots$, which closely matches simulation.
 
-However, it is not easy to get a formula general $N$ because the integral defining $J$ depends strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
+However, it is not easy to get a formula for general $N$ because the integral $J$ depends strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
 
 The crucial insight is that we actually don't have to...
 
