@@ -156,7 +156,7 @@ Putting it all together, the probability that the winner of the first heat wins 
 
 $$ \begin{align}
     P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty \text{d}x\, P(\text{first heat winner wins}|x)P(\text{first heat time is }x) \\
-    &=\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, \gamma e^{\gamma x} e^{-e^{\gamma x}} e^{-\nu \gamma x}.
+    &=\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\,  e^{-\nu \gamma x} \gamma e^{\gamma x} e^{-e^{\gamma x}}.
 \end{align}
 $$
 
