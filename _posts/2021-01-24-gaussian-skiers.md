@@ -13,7 +13,7 @@ tags: scaling approximation
 
 ([FiveThirtyEight](https://fivethirtyeight.com/features/can-you-skillfully-ski-the-slopes/))
 
-## Solution
+## Solution (originally published 2021-01-24)
 
 If the first skier wins the first round by $\Delta T_1,$ they will prevail so long as they don't lose the second round by more than $\Delta T_1.$ 
 
