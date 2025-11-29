@@ -169,7 +169,7 @@ The integral will get us an overall numerical factor, but already we can see how
 $$ 
     \begin{align}
         P(\text{heat 1 winner wins}) &\propto \gamma^{\nu^2-1}N^{-\nu^2} \\
-        & \propto \dfrac{N^{-(3-2\sqrt{2})}}{(\log N)^{\sqrt{2}-1}}. 
+        & \propto N^{-(3-2\sqrt{2})}(\log N)^{1-\sqrt{2}}. 
     \end{align}
 $$
 
