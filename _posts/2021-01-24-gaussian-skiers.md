@@ -106,7 +106,7 @@ $$
     \end{align}
 $$
 
-We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term and find $\gamma \approx \sqrt{2\log N}.$ It isn't the most wonderful approximation, but improves as $N$ grows and is consistent with the other approximations we'll make. The plot shows the distribution of minima in blue and the approximation for the mean in gold for $N$ from $10$ to $10^7.$. 
+We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term and find $\gamma \approx \sqrt{2\log N}.$ It isn't the most wonderful approximation, but improves as $N$ grows and is consistent with the other approximations we'll make. The plot shows the distribution of minima in blue and the approximation for the mean in gold for $N$ from $10$ to $10^6.$. 
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-histcol.png){:width="450 px" class="image-centered"}
 
