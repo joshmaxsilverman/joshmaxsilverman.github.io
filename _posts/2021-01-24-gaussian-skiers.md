@@ -78,7 +78,9 @@ However, it is not easy to get a formula for general $N$ because the integral $J
 
 The crucial insight is that we actually don't have to...
 
-Instead, we can calculate the expected value of the probability that the winner of the first heat wins the whole race.
+Instead, we can calculate the expected value of the probability that the winner of the first heat wins the whole race. The strategy will be to find the probability that the winner of the first heat wins in terms of their first heat time, and then average this using the probability distribution of the winning first heat time.
+
+$$ P(\text{heat 1 winner wins}) = \int\limits_{-\infty}^\infty \text{d}x\, P(\text{first heat winner wins}|x)P(\text{first heat time is }x). $$
 
 We know two useful things about the winner
 - they won the first heat
@@ -152,9 +154,13 @@ $$ P(\text{first heat min} = x) = \frac{\text{d}}{\text{d}x} 1 - e^{-e^{\gamma x
 
 Putting it all together, the probability that the winner of the first heat wins the entire race is 
 
-$$ P(\text{heat 1 winner wins}) = \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, \gamma e^{\gamma x} e^{-e^{\gamma x}} e^{-\nu \gamma x}. $$
+$$ \begin{align}
+    P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty \text{d}x\, P(\text{first heat winner wins}|x)P(\text{first heat time is }x) \\
+    &=\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\, \gamma e^{\gamma x} e^{-e^{\gamma x}} e^{-\nu \gamma x}.
+\end{align}
+$$
 
-We can non-dimensionalize the integral by setting $z = e^{\gamma x}$ so that $\text{d}z = \gamma e^{\gamma x} \text{d}x = \gamma z \text{d}x$ so that the probability becomes 
+The integral has no actual $\gamma$ dependence which we can see by setting $z = e^{\gamma x}$ so that $\text{d}z = \gamma e^{\gamma x} \text{d}x = \gamma z \text{d}x$ so that the probability becomes 
 
 $$ 
     \begin{align}
