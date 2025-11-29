@@ -74,7 +74,7 @@ $$ N \int\limits_{-\infty}^\infty \text{d}f_1\mathcal{N}(f_1) \int\limits_{-\inf
 
 We can evaluate this numerically for e.g. $N=30$ and we get $0.31471089\ldots$, which closely matches simulation.
 
-However, it is not easy to get a formula general $N$ because the integral defining $J$ depends very strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
+However, it is not easy to get a formula general $N$ because the integral defining $J$ depends strongly on the values of $f_1$ and $s_1$. Depending on how they're set it could be very likely, a tossup, or very unlikely for a given Racer $j$ to lose to Racer $1$. Without definite values, we can't evaluate the integral or systematically approximate it.
 
 The crucial insight is that we actually don't have to...
 
@@ -104,7 +104,7 @@ $$
     \end{align}
 $$
 
-We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term to find $\gamma \approx \sqrt{2\log N}.$
+We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term to find $\gamma \approx \sqrt{2\log N}.$ 
 
 $f_1$ will be peaked near $\gamma$, but vary around it. We can rewrite $f_1 = -\gamma + x$ where $x$ is assumed small compared to $\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
 
@@ -179,13 +179,13 @@ This integral is just the gamma function $\Gamma(1-\nu)$ making the final result
 $$ 
     \begin{align}
         P(\text{heat 1 winner wins}) &= \frac{1}{\nu}(4\pi)^\frac{\nu^1-1}{2}\Gamma(1-\nu)\frac{\left(\log N\right)^{\frac{\nu^2-1}{2}}}{N^{-\nu^2}} \\
-        &= \frac{(1+\sqrt{2})(4\pi)^{1-\sqrt{2}}\Gamma[2-\sqrt{2}]}{\left(\log N\right)^{\sqrt{2}-1} N^{-3-2\sqrt{2}}}.
+        &= (1+\sqrt{2})(4\pi)^{1-\sqrt{2}}\Gamma[2-\sqrt{2}]\left(\log N\right)^{1-\sqrt{2}} N^{-(3-2\sqrt{2})}}.
     \end{align}
 $$
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
-To get more accurate predictions for small $N,$ we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation. Those corrections shrink with powers of $1/\log N$, so the convergence is very slow, but we can already see the asymptotic result (gold curve) and the prediction (blue points) are converging.
+To get more accurate predictions for small $N,$ we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, and use higher iteration estimates for $\gamma.$ Those perturbative terms shrink with powers of $1/\log N$, so convergence is very slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
