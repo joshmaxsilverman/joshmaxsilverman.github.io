@@ -100,13 +100,13 @@ $$
     \begin{align}
         \frac{\mathcal{N}(\gamma)}{\gamma} &\approx \frac1N \\
     \frac{e^{-\gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
-    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N
+    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N.
     \end{align}
 $$
 
-which, keeping the dominant term for $\gamma$ finds $\gamma \approx \sqrt{2\log N}.$
+We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term to find $\gamma \approx \sqrt{2\log N}.$
 
-$f_1$ will be strongly peaked at $\gamma$, and there will be a very small likelihood of straying far from it, so we can rewrite it as $f_1 = -\gamma + x$ where $x$ is small compared to $\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
+$f_1$ will be peaked near $\gamma$, but vary around it. We can rewrite $f_1 = -\gamma + x$ where $x$ is assumed small compared to $\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
 
 Racer $1$ wins if $f_1+s_1$ is less than the smallest time of the $(N-1)$ other racers. The total time for other racers is also a normal variable $t_j = (f_j+s_j)/\sqrt{2}.$ The expected minimum for this variable is found the same way we found it for $f_1,$ except with $(N-1)$ in place of $N.$ In practice, $(N-1)\approx N$ for large $N$ so the expected minimum for the other racers is $-\gamma$ too.
 
