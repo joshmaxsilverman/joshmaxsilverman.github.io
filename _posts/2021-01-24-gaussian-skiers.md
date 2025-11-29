@@ -108,7 +108,7 @@ $$
 
 We could solve this by iterated approximation, but to first order we can keep the dominant quadratic $\gamma$ term and find $\gamma \approx \sqrt{2\log N}.$ It isn't the most wonderful approximation, but improves as $N$ grows and is consistent with the other approximations we'll make. The plot shows the distribution of minima in blue and the approximation for the mean in gold for $N$ from $10$ to $10^6.$. 
 
-![](/img/2025-11-28-fiddler-gaussian-skier-histcol.png){:width="150 px" class="image-centered"}
+![](/img/2025-11-28-fiddler-gaussian-skier-histcol.png){:width="250 px" class="image-centered"}
 
 $f_1$ will be peaked near $\gamma$, but vary around it. We can rewrite $f_1 = -\gamma + x$ where $x$ is assumed small compared to $\gamma.$ The total time taken is $f_1 + s_1.$ Because $f_1$ and $s_1$ are both normal variables with variance $1$, if we divide the sum by $\sqrt{2}$ it will be a normal variable as too: $(f_1+s_1)/\sqrt{2}.$ 
 
