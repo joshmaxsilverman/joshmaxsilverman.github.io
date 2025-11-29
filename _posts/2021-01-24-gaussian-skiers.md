@@ -173,7 +173,6 @@ $$
     \end{align}
 $$
 
-
 This integral is just the gamma function $\Gamma(1-\nu)$ making the final result 
 
 $$ 
@@ -185,7 +184,7 @@ $$
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
-To get more accurate predictions for small $N,$ we'd need perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, and use higher iteration estimates for $\gamma.$ Those perturbative terms shrink with powers of $1/\log N$, so convergence is very slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
+To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
