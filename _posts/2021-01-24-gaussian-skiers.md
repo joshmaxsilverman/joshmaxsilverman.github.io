@@ -7,7 +7,7 @@ subtitle: How safe are you for winning the first heat?
 tags: scaling approximation
 ---
 
->**Question**: You're in your town's heat to head marble racing championship, the traditional way to determine who is the town's next mayor. The race is split into two heats and your time in either heat is a random, normally distributed variable. If you have the fastest time in the first run, what is the probability $P_\text{win it all}$ that you end up winning the event, as determined by the sum of your times on heat run? Extra credit: what if there are $29$ other candidates in the race?
+>**Question**: You're in your town's head to head marble racing championship, the traditional way to determine who is the town's next mayor. The race is split into two heats and your time in either heat is a random, normally distributed variable. If you have the fastest time in the first run, what is the probability $P_\text{win it all}$ that you end up winning the event, as determined by the sum of your times on heat run? Extra credit: what if there are $29$ other candidates in the race?
 
 <!--more-->
 
