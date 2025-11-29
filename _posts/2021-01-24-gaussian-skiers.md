@@ -190,6 +190,8 @@ $$
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot.png){:width="450 px" class="image-centered"}
 
+As the number of racers increases the advantage of the first heat winner grows, far exceeding $1/N.$
+
 To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
 <!--
