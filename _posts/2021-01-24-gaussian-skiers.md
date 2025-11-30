@@ -104,7 +104,7 @@ The minimum should occur at the value $\gamma$ where the probability to fall sho
 
 $$ 
     \begin{align}
-        \frac{\mathcal{N}(\gamma)}{\gamma} &\approx \frac1N \\
+        \frac{\mathcal{N}(\gamma)}{\gamma} &= \frac1N \\
     \frac{e^{-\gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
     \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N.
     \end{align}
