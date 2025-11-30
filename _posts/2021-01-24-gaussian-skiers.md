@@ -189,7 +189,7 @@ This integral is just the gamma function $\Gamma(1-\nu)$ making the final result
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &approx \frac{1}{\nu}(4\pi)^\frac{\nu^1-1}{2}\Gamma(1-\nu)\left(\log N\right)^{\frac{\nu^2-1}{2}}N^{-\nu^2} \\
+        P(\text{heat 1 winner wins}) &\approx \frac{1}{\nu}(4\pi)^\frac{\nu^1-1}{2}\Gamma(1-\nu)\left(\log N\right)^{\frac{\nu^2-1}{2}}N^{-\nu^2} \\
         &\approx (1+\sqrt{2})(4\pi)^{1-\sqrt{2}}\Gamma[2-\sqrt{2}]\left(\log N\right)^{1-\sqrt{2}} N^{-(3-2\sqrt{2})}.
     \end{align}
 $$
