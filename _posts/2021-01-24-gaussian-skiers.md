@@ -162,7 +162,7 @@ Putting it all together, the probability that the winner of the first heat wins 
 
 $$ \begin{align}
     P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty \text{d}x\, P(\text{first heat winner wins}|x)P(\text{first heat time is }x) \\
-    &=\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\,  e^{-\nu \gamma x} \gamma e^{\gamma x} e^{-e^{\gamma x}}.
+    &\approx\frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}x\,  e^{-\nu \gamma x} \gamma e^{\gamma x} e^{-e^{\gamma x}}.
 \end{align}
 $$
 
@@ -170,8 +170,8 @@ The integral has no actual $\gamma$ dependence which we can see by setting $z = 
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, \frac{1}{\gamma z} \gamma z e^{-z} z^{-\nu} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. 
+        P(\text{heat 1 winner wins}) &approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, \frac{1}{\gamma z} \gamma z e^{-z} z^{-\nu} \\
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. 
     \end{align}
 $$
 
@@ -189,8 +189,8 @@ This integral is just the gamma function $\Gamma(1-\nu)$ making the final result
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &= \frac{1}{\nu}(4\pi)^\frac{\nu^1-1}{2}\Gamma(1-\nu)\left(\log N\right)^{\frac{\nu^2-1}{2}}N^{-\nu^2} \\
-        &= (1+\sqrt{2})(4\pi)^{1-\sqrt{2}}\Gamma[2-\sqrt{2}]\left(\log N\right)^{1-\sqrt{2}} N^{-(3-2\sqrt{2})}.
+        P(\text{heat 1 winner wins}) &approx \frac{1}{\nu}(4\pi)^\frac{\nu^1-1}{2}\Gamma(1-\nu)\left(\log N\right)^{\frac{\nu^2-1}{2}}N^{-\nu^2} \\
+        &\approx (1+\sqrt{2})(4\pi)^{1-\sqrt{2}}\Gamma[2-\sqrt{2}]\left(\log N\right)^{1-\sqrt{2}} N^{-(3-2\sqrt{2})}.
     \end{align}
 $$
 
