@@ -124,7 +124,7 @@ $$ \frac{-\gamma + x}{\sqrt{2}} + \frac{s_1}{\sqrt{2}} < -\gamma, $$
 
 which is equivalent to 
 
-$$ s_1 < -\left(\overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma + x\right). $$
+$$ s_1 < -\overbrace{\left(\sqrt{2}-1\right)}^{\nu}\gamma + x. $$
 
 So, for a given value of $x,$ the probability Racer $1$ wins is $\mathcal{N}(\nu \gamma + x)/(\nu\gamma + x).$ Working this out, we get
 
