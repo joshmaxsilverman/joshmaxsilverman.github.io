@@ -150,7 +150,7 @@ $$
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma + x^2)/2}}{(\gamma + x)} \\ 
         &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma)/2}}{\gamma} \\
         &= \frac{\mathcal{N}(\gamma)}{\gamma}e^{\gamma x} \\
-        &\approx e^{\gamma x}/N
+        &= e^{\gamma x}/N
     \end{align}
 $$
 
