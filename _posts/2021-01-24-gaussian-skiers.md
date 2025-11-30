@@ -134,7 +134,7 @@ $$
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x} e^{-(\nu\gamma+x)^2/2} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma+x} e^{-(\nu^2\gamma^2 + 2\nu \gamma x + x^2)/2} \\
         &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} e^{-(\nu^2\gamma^2 + 2\nu \gamma x)/2} \\
-        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} {e^{-\gamma^2/2}}^{\nu^2} e^{-\nu \gamma x} \\
+        &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(e^{-\gamma^2/2}\right)^{\nu^2} e^{-\nu \gamma x} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} e^{-\nu x}
     \end{align}
 $$
