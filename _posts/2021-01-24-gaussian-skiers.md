@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Gaussian Skiers
+title: Gaussian skiers
 date: 2025/11/18
 subtitle: How safe are you for winning the first heat?
 tags: scaling approximation
