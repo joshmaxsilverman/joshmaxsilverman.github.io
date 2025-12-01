@@ -56,7 +56,7 @@ My attempts at an approximate solution for $N=30$ got the right shape, but took 
 
 ## 2025-11-18 Update
 
-The formal solution I was trying to approximate (to no avail) four years ago was the following:
+The formal solution I was trying to approximate (to no avail) almost five years ago was the following:
 
 If the first and second heat times for racer $j$ are $f_j$ and $s_j$, and the winner goes first, then
 
