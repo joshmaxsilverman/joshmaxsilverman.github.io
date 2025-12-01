@@ -139,7 +139,7 @@ $$
     \end{align}
 $$
 
-We dropped the $x^2$ term in the exponent on the assumption that the probability distribution of $x$ will crush the integrand before the $x^2$ term has a big impact. This will not be true for small values of $N$, and so we should expect our approximation to be an overestimate, and converage asymptotically from above.
+We dropped the $x^2$ term in the exponent on the assumption that the probability distribution of $x$ will crush the integrand before the $x^2$ term has a big impact. This will not be true for small values of $N$ so we should expect our approximation to overestimate, and converge asymptotically from above.
 
 Now, the probability that a single racer's first heat time is over $-\gamma + x$ is one minus the probability that they're under: $1 - \frac{\mathcal{N}(-\gamma + x)}{-\gamma + x}.$ And the probability that none of the $(N-1)$ people's first heat time is faster is $\left[1 - \frac{\mathcal{N}(-\gamma + x)}{(-\gamma + x)}\right]^{N-1}.$ 
 
