@@ -170,8 +170,8 @@ The integral has no actual $\gamma$ dependence which we can see by setting $z = 
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, \frac{1}{\gamma z} \gamma z e^{-z} z^{-\nu} \\
-        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{-\infty}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. 
+        P(\text{heat 1 winner wins}) &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{0}^{\infty} \text{d}z\, \frac{1}{\gamma z} \gamma z e^{-z} z^{-\nu} \\
+        &\approx \frac{1}{\sqrt{2\pi}}\frac{1}{\nu\gamma} \left(\frac{\sqrt{2\pi}\gamma}{N}\right)^{\nu^2} \int\limits_{0}^{\infty} \text{d}z\, e^{-z} z^{-\nu}. 
     \end{align}
 $$
 
