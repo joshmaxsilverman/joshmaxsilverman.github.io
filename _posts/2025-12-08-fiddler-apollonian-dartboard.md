@@ -23,15 +23,15 @@ whenever we hit a circle, we get points for its area plus whatever additional po
 
 let $\gamma A$ be the expected points from landing inside a circle of area $A.$ starting from the unit circle, we have
 
-$$ \gamma \pi = \pi + \gamma \langle A_j\rangle_{j\elem\text{set of level-1 circles}}. $$
+$$ \gamma \pi = \pi + \gamma \langle A_j\rangle_{j\in\text{set of level-1 circles}}. $$
 
 the probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
 
-$$ \langle A_j\rangle_{j\elem\text{set of level-1 circles}} = \frac{\sum\limits_{j\elem\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\elem\text{set of level-1 circles}} r_j^2}. $$
+$$ \langle A_j\rangle_{j\elem\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
 
 solving for $\gamma$ we get
 
-$$ \gamma = \frac{1}{1 - \frac{\sum\limits_{j\elem\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\elem\text{set of level-1 circles}} r_j^2}}. $$
+$$ \gamma = \frac{1}{1 - \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}}. $$
 
 each time we draw a new circle that's tangent to three existing ones, represented by the triple $(r_a,r_b,r_c)$, we get a new one of radius $r_d$ that's tangent to all three. that means we get three new opportunities to draw a new circle, given by the triple $(r_a, r_b, r_d)$, $(r_a,r_d,r_c),$ and $(r_d,r_b,r_c).$ determining the radius of the new circle is a classic problem solved by Descarte's appropriately named ![circle theorem](https://en.wikipedia.org/wiki/Descartes%27_theorem#Statement) which relates the four radii like
 
