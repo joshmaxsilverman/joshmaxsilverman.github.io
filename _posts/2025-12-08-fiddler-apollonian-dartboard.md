@@ -40,11 +40,11 @@ Since each circle is its own Apollonian gasket, and we land at random inside the
 
 We can use this fact to calculate the expected multiplier. Let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ starting from the unit circle, we have
 
-$$ \gamma \pi = \pi + \gamma \langle A_j\rangle_{j\in\text{set of level-1 circles}}. $$
+$$ \gamma \pi = \pi + \gamma \langle A\rangle_{\text{set of level-1 circles}}. $$
 
 The probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
 
-$$ \langle A_j\rangle_{j\in\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
+$$ \langle A\rangle_{\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
 
 Solving for $\gamma$ we get
 
@@ -124,7 +124,7 @@ $$\langle \text{points}\rangle = \pi \gamma \approx 3.7108642714207782\ldots, $$
 
 computed over 129,140,165 circles. This is an overestimate, since each recursion brings smaller and smaller circles into the expected value calculation.
 
-You could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as I did at first, but due to the low number of datums, you end up with $\gamma A \approx \sim3.825$
+You could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as I did at first, but due to the low number of datums, you end up with $\pi\gamma \approx \sim3.825$
 
 ## Standard credit
 
