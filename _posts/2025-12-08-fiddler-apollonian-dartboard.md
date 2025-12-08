@@ -40,7 +40,9 @@ Since each circle is its own Apollonian gasket, and we land at random inside the
 
 We can use this fact to calculate the expected multiplier. Let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ starting from the unit circle, we have
 
-$$ \gamma \pi = \pi + \gamma \langle A\rangle_{\text{set of level-1 circles}}. $$
+$$ \gamma \pi = \pi + \gamma \langle A\rangle, $$
+
+where the average is taken over the set of level-$1$ circles.
 
 The probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
 
