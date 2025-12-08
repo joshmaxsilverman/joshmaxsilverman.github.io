@@ -28,31 +28,43 @@ tags: recursion fractals linearity-of-expectation
 
 ## Solution
 
-there are two big pieces to this problem. one is finding the radii of all the sub-gaskets inside the unit circle and the other is calculating expected points due to the sub-circles.
+There are two big pieces to this problem. One is finding the radii of all the sub-gaskets inside the unit circle and the other is calculating expected points due to the sub-circles.
 
-we'll do the second part first.
+We'll do the second part first.
 
-when we are throwing our first dart, we will get points for being inside the unit circle, plus whatever recursive points resulting from which level-$1$ subcircle we land inside, meaning the biggest circle we are inside that is not that unit circle itself. since each circle is its own Apollonian gasket, and we land at random inside it, we are sampling the are inside each sub-gaskets uniformly. we can use this to calculate the expected multiplier:
+## Expected points
 
-let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ starting from the unit circle, we have
+When we are throwing our first dart, we will get points for being inside the unit circle, plus whatever recursive points resulting from which level-$1$ subcircle we land inside, meaning the biggest circle we are inside that is not the unit circle itself. 
+
+Since each circle is its own Apollonian gasket, and we land at random inside them, we are sampling the inside of each sub-gaskets uniformly. 
+
+We can use this fact to calculate the expected multiplier. Let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ starting from the unit circle, we have
 
 $$ \gamma \pi = \pi + \gamma \langle A_j\rangle_{j\in\text{set of level-1 circles}}. $$
 
-the probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
+The probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
 
 $$ \langle A_j\rangle_{j\in\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
 
-solving for $\gamma$ we get
+Solving for $\gamma$ we get
 
 $$ \gamma = \frac{1}{1 - \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}}. $$
 
-each time we draw a new circle that's tangent to three existing ones, represented by the triple $(r_a,r_b,r_c)$, we get a new one of radius $r_d$ that's tangent to all three. that means we get three new opportunities to draw a new circle, given by the triple $(r_a, r_b, r_d)$, $(r_a,r_d,r_c),$ and $(r_d,r_b,r_c).$ determining the radius of the new circle is a classic problem solved by Descarte's appropriately named ![circle theorem](https://en.wikipedia.org/wiki/Descartes%27_theorem#Statement) which relates the four radii like
+To carry out this calculation, we just need the set of level-$1$ circles to sum over. Since this is infinite, we can't have it, but since the contribution of individual circles falls off as $r^4,$ we can get a very good approximation with a large set.
+
+## Finding the level-$1$ circles
+
+Each time we draw a new circle that's tangent to three existing ones, represented by the triple $(r_a,r_b,r_c)$, we get a new one of radius $r_d$ that's tangent to all three. That means we get three new opportunities to draw a new circle, given by the triple $(r_a, r_b, r_d)$, $(r_a,r_d,r_c),$ and $(r_d,r_b,r_c).$ Determining the radius of the new circle is a classic problem solved by Descarte's appropriately named ![circle theorem](https://en.wikipedia.org/wiki/Descartes%27_theorem#Statement) which relates the four radii like
 
 $$ \left(1/r_a+1/r_b+1/r_c+1/r_d\right)^2 = 2\left(1/r_a^2 + 1/r_b^2+1/r_c^2+1/r_D^2\right). $$
 
-if a circle encompasses the others, its sign is negative.
+If a circle encompasses the others, its sign is negative.
 
-starting from the top level, where we have two spaces both described by the triples $\left(-1,\frac12, \frac12\right).$ from there, we can just proceed one level at a time, consuming the current triples, computing the resulting radii, and accumulating the new triples for the next round. for ease of typing, the code is written in terms of the circles' inverse radii a.k.a. curvatures:
+Starting from the top level, where we have two spaces both described by the triples $\left(-1,\frac12, \frac12\right).$ From there, we can just proceed one level at a time, consuming the current triples, computing the resulting radii, and accumulating the new triples for the next round. 
+
+## Implementation
+
+For ease of typing, the code is written in terms of the circles' inverse radii a.k.a. curvatures:
 
 ```python
 import math
@@ -110,16 +122,16 @@ which, for $17$ recursions, gets
 
 $$\langle \text{points}\rangle = \pi \gamma \approx 3.7108642714207782\ldots, $$
 
-computed over XYZ circles. this is an overestimate, since each recursion brings smaller and smaller circles into the expected value calculation.
+computed over 129,140,165 circles. This is an overestimate, since each recursion brings smaller and smaller circles into the expected value calculation.
 
-you could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as i did at first, but due to the low number of datums, you end up with $\gamma A \approx \sim3.825$
+You could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as I did at first, but due to the low number of datums, you end up with $\gamma A \approx \sim3.825$
 
 ## Standard credit
 
-the maximum possible score is found by landing inside the biggest possible circle at each level of recursion which means the unit circle, the half unit circle, the quarter unit circle and so on. this gives $\pi\left(1+\frac1{2^2} + \frac{1}{2^4} + \frac1{2^6} + \ldots\right) =  4\pi/3.$ 
+The maximum possible score is found by landing inside the biggest possible circle at each level of recursion which means the unit circle, the half unit circle, the quarter unit circle and so on. This gives $\pi\left(1+\frac1{2^2} + \frac{1}{2^4} + \frac1{2^6} + \ldots\right) =  4\pi/3.$ 
 
-but, if we hit at the exact point of contact between the two half unit circles, we can double our points, making the maximum possible score for an individual dart $8\pi/3.$ 
+But, if we hit at the exact point of contact between the two half unit circles, we can double our points, making the maximum possible score for an individual dart $8\pi/3.$ 
 
-however, hitting two circles at once doesn't matter in expectation, since it is a probability zero event.
+However, hitting two circles at once doesn't matter in expectation, since it is a probability zero event.
 
 <br>
