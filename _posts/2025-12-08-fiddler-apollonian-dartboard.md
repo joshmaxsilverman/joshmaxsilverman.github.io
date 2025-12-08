@@ -91,7 +91,7 @@ def generate_curvatures(current_triples, depth):
             a, b, c = triple
 
             for x, y in ((a, b), (a, c), (b, c)):
-                next_triples.append(tuple(((x, y, new_curvature))))
+                next_triples.append((x, y, new_curvature))
         
         current_triples = next_triples
 
