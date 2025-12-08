@@ -48,7 +48,7 @@ $$ \langle A\rangle_{\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\te
 
 Solving for $\gamma$ we get
 
-$$ \gamma = \frac{1}{1 - \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}}. $$
+$$ \gamma = \frac{1}{1 - \frac{\sum\limits_{j\in\text{set of level-1 circles}} r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}}. $$
 
 To carry out this calculation, we just need the set of level-$1$ circles to sum over. Since this is infinite, we can't have it, but since the contribution of individual circles falls off as $r^4,$ we can get a very good approximation with a large set.
 
