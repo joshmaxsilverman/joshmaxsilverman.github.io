@@ -116,15 +116,15 @@ denom = sum(freq / curv ** 2 for curv, freq in curv_freq.items())
 Q = num / denom
 gamma = 1 / (1 - Q)
 
-exp_points = math.pi * gamma
+exp_points = gamma * math.pi
 ```
 which, for $17$ recursions, gets 
 
-$$\langle \text{points}\rangle = \pi \gamma \approx 3.7108642714207782\ldots, $$
+$$\langle \text{points}\rangle = \gamma \pi \approx 3.7108642714207782\ldots, $$
 
 computed over 129,140,165 circles. This is an overestimate, since each recursion brings smaller and smaller circles into the expected value calculation.
 
-You could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as I did at first, but due to the low number of datums, you end up with $\pi\gamma \approx \sim3.825$
+You could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as I did at first, but due to the low number of datums, you end up with $\gamma \pi \approx \sim3.825$
 
 ## Standard credit
 
