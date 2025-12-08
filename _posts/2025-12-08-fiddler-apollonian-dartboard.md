@@ -27,7 +27,7 @@ $$ \gamma \pi = \pi + \gamma \langle A_j\rangle_{j\in\text{set of level-1 circle
 
 the probability to land inside a circle of area $A = \pi r_j^2$ is that area relative to the overall area, e.g. $\pi r_j^2/\pi = r_j^2.$ so 
 
-$$ \langle A_j\rangle_{j\elem\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
+$$ \langle A_j\rangle_{j\in\text{set of level-1 circles}} = \frac{\sum\limits_{j\in\text{set of level-1 circles}} \pi r_j^4}{\sum\limits_{j\in\text{set of level-1 circles}} r_j^2}. $$
 
 solving for $\gamma$ we get
 
