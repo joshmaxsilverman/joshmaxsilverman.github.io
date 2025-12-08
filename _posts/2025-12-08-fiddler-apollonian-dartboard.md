@@ -1,13 +1,25 @@
 ---
 layout: post
-published: false
-title: Apollonian dartboard
+published: true
+title: Can you fling the fractal darts?
 date: 2025/12/08
-subtitle:
-tags:
+subtitle: How many points will you asymptotically approach?
+tags: recursion fractals linearity-of-expectation
 ---
 
->**Question**:
+>**Question**: You are playing darts with your friend, Apollonius, who has brought his own dartboard. However, this dartboard is somewhat … different. Instead of being a circle divided into concentric rings and sectors, the dartboard is a unit circle (i.e., with radius $1$) that’s divided via an Apollonian gasket. In particular, this gasket is defined by two horizontally adjacent, congruent circles with radius $1/2.$ (Note: An Apollonian gasket also includes circles above, below, and around these two circles of radius $1/2.$ Put simply, you keep drawing circles that are tangent to three other circles wherever you can.)
+>
+>But that’s not all! Every circle on the dartboard, no matter how small, is also its own Apollonian sub-gasket. Like the larger circle, every gasket, sub-gasket, sub-sub-gasket, etc., are defined by two horizontally adjacent, congruent circles with radii that are half the radius of their outer circle.
+>
+>Having trouble imagining what this dartboard looks like? You’re not alone! Fortunately, Quowong created an image of the dartboard:
+>
+>![](https://substackcdn.com/image/fetch/$s_!VAWq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad54f80c-220c-4ccc-ad27-3f3a6d77f3e9_469x470.png)
+>Now, when you throw a dart at this board, your score is the sum of the areas of every circle for which the dart lies inside or on the circumference. (Remember, the entire board is a unit circle.)
+>
+>What is the most a single dart can score?
+>
+>**Extra credit**: Suppose each point on the dartboard is equally likely to be hit by a dart. On average, what score would you expect a single dart to earn?
+
 
 <!--more-->
 
@@ -44,7 +56,6 @@ starting from the top level, where we have two spaces both described by the trip
 ```python
 import math
 from collections import Counter, defaultdict
-
 
 depth = 17
 initial_triples = ((-1, 2, 2), (-1, 2, 2))
@@ -88,9 +99,10 @@ curv_freq[-1] = 0
 
 num = sum(freq / curv ** 4 for curv, freq in curv_freq.items())
 denom = sum(freq / curv ** 2 for curv, freq in curv_freq.items())
-Q = num / denom
 
+Q = num / denom
 gamma = 1 / (1 - Q)
+
 exp_points = math.pi * gamma
 ```
 which, for $17$ recursions, gets 
@@ -99,6 +111,7 @@ $$\langle \text{points}\rangle = \pi \gamma \approx 3.7108642714207782\ldots, $$
 
 computed over XYZ circles. this is an overestimate, since each recursion brings smaller and smaller circles into the expected value calculation.
 
+you could also do this using the found data at OEIS sequences ![A042944](https://oeis.org/A042944) and ![A042946](https://oeis.org/A042946), as i did at first, but due to the low number of datums, you end up with $\gamma A \approx \sim3.825$
 
 ## Standard credit
 
