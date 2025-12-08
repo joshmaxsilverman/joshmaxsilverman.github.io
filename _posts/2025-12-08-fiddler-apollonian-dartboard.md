@@ -38,7 +38,7 @@ When we are throwing our first dart, we will get points for being inside the uni
 
 Since each circle is its own Apollonian gasket, and we land at random inside them, we are sampling the inside of each sub-gaskets uniformly. 
 
-We can use this fact to calculate the expected multiplier. Let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ starting from the unit circle, we have
+We can use this fact to calculate the expected multiplier. Let's call $\gamma A$ the expected points resulting from landing inside a circle of area $A.$ Starting from the unit circle, we have
 
 $$ \gamma \pi = \pi + \gamma \langle A\rangle, $$
 
