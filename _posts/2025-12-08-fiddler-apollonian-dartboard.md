@@ -71,7 +71,7 @@ import math
 from collections import Counter, defaultdict
 
 depth = 17
-initial_triples = ((-1, 2, 2), (-1, 2, 2))
+initial_triples = [(-1, 2, 2), (-1, 2, 2)]
 
 def descartes_theorem(triple):
     k1, k2, k3 = triple
@@ -79,8 +79,7 @@ def descartes_theorem(triple):
     return (k1 + k2 + k3) + 2.0 * math.sqrt(sum_of_prods)
 
 
-def generate_curvatures(initial_triples, depth):
-    current_triples = [tuple((triple)) for triple in initial_triples]
+def generate_curvatures(current_triples, depth):
     level_curvatures = defaultdict(list)
 
     for level in range(depth):
