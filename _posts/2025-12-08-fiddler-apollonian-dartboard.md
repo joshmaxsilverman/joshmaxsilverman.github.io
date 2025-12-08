@@ -130,7 +130,7 @@ You could also do this using the found data at OEIS sequences ![A042944](https:/
 
 The maximum possible score is found by landing inside the biggest possible circle at each level of recursion which means the unit circle, the half unit circle, the quarter unit circle and so on. This gives $\pi\left(1+\frac1{2^2} + \frac{1}{2^4} + \frac1{2^6} + \ldots\right) =  4\pi/3.$ 
 
-But, if we hit at the exact point of contact between the two half unit circles, we can double our points, making the maximum possible score for an individual dart $8\pi/3.$ 
+But, if we hit at the exact point of contact between the two half unit circles, we can double our points for all but the unit circle, making the maximum possible score for an individual dart $\pi + 2\pi\times(4/3 - 1) =\pi(1 + 2/3) = 5\pi/3.$ 
 
 However, hitting two circles at once doesn't matter in expectation, since it is a probability zero event.
 
