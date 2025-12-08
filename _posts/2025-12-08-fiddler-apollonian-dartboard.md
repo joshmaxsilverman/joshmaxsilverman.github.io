@@ -56,7 +56,7 @@ To carry out this calculation, we just need the set of level-$1$ circles to sum 
 
 Each time we draw a new circle that's tangent to three existing ones, represented by the triple $(r_a,r_b,r_c)$, we get a new one of radius $r_d$ that's tangent to all three. That means we get three new opportunities to draw a new circle, given by the triple $(r_a, r_b, r_d)$, $(r_a,r_d,r_c),$ and $(r_d,r_b,r_c).$ Determining the radius of the new circle is a classic problem solved by Descarte's appropriately named ![circle theorem](https://en.wikipedia.org/wiki/Descartes%27_theorem#Statement) which relates the four radii like
 
-$$ \left(1/r_a+1/r_b+1/r_c+1/r_d\right)^2 = 2\left(1/r_a^2 + 1/r_b^2+1/r_c^2+1/r_D^2\right). $$
+$$ \left(r_a^{-1}+r_b^{-1}+r_c^{-1}+r_d^{-1}\right)^2 = 2\left(r_a^{-2} + r_b^{-2}+r_c^{-2}+r_d^{-2}\right). $$
 
 If a circle encompasses the others, its sign is negative.
 
