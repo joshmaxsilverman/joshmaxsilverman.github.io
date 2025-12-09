@@ -13,7 +13,7 @@ tags: recursion fractals linearity-of-expectation
 >
 >Having trouble imagining what this dartboard looks like? You’re not alone! Fortunately, Quowong created an image of the dartboard:
 >
->![](https://substackcdn.com/image/fetch/$s_!VAWq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad54f80c-220c-4ccc-ad27-3f3a6d77f3e9_469x470.png)
+>![](https://substackcdn.com/image/fetch/$s_!VAWq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad54f80c-220c-4ccc-ad27-3f3a6d77f3e9_469x470.png){:class="image-centered"}
 >
 >Now, when you throw a dart at this board, your score is the sum of the areas of every circle for which the dart lies inside or on the circumference. (Remember, the entire board is a unit circle.)
 >
