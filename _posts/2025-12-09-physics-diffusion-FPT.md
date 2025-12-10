@@ -41,16 +41,21 @@ However, its initial condition is distinct from the diffusing particles. Their i
 ## Solving the differential equation
 
 The differential equation is
+
 $$ \partial_t w(x,t) = \frac12 \partial_x^2 w(x,t) $$
+
 So long as the ratio $\eta = x/\sqrt{2t}$ is kept constant, the equation doesn't change. So, $w$ is a function of $\eta$ alone, and we can rewrite it $\partial_t w(\eta) = \frac12 \partial_x^2 w(\eta).$ Working this out, we get $\partial_x \eta = \eta/x,$ $\partial_t \eta = -\eta/2t,$ and
 
 $$\begin{align}
 \partial \eta/\partial t \times\partial w(\eta)/\partial\eta &= \frac12\partial_x \left(\partial\eta/\partial x\times\partial w(\eta)/\partial\eta\right) \\
 &= \frac12\left(\xcancel{\partial^2 \eta/\partial x^2}\times \partial w(\eta)/\partial \eta + \left(\partial \eta/\partial x\right)^2 \left(\partial^2 w(\eta)/\partial\eta^2\right) \right) \\
 -\frac{\eta}{2t}\partial_\eta w(\eta)&= \frac12 \frac{\eta^2}{x^2}\partial_\eta^2 w(\eta) \\
-0 &= 2\eta\partial_\eta w(\eta)+ \partial_\eta^2 w(\eta) 
+-2\eta\partial_\eta w(\eta) &= \partial_\eta^2 w(\eta) 
 \end{align}$$
 
+This can be directly integrated to find $\log \partial_\eta w(\eta) = -\eta^2$ leading to $\partial_\eta w(\eta) = \exp-\eta^2$ and 
+
+$$ w(\eta) = \int\limits_{-\infty}^t \text{d}\eta \exp-\eta^2. $$
 
 <!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
