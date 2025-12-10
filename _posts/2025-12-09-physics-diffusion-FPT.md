@@ -19,7 +19,11 @@ $$ P(x, t) = \frac{1+a}{2}P(x-\Delta x,t-\Delta t) + \frac{1-a}{2} P(x+\Delta x,
 
 $a$ is an asymmetry to describe any drift that might be in the system. If we expand this equation to second order in $\Delta x$ we get
 
-$$ P(x, t) = \frac{1+a}{2}\left[P(x,t-\Delta t) - \Delta x \partial_x P(x,t-\Delta t) + \frac12 \Delta x^2 \partial_x^2 P(x,t-\Delta t)\right] + \frac{1-a}{2} \left[P(x,t-\Delta t) + \Delta x \partial_x P(x,t-\Delta t) + \frac12\Delta x^2\partial_x^2 P(x,t-\Delta t)\right]. $$
+$$ \begin{align}
+  P(x, t) &= \frac{1+a}{2}\left[P(x,t-\Delta t) - \Delta x \partial_x P(x,t-\Delta t) + \frac12 \Delta x^2 \partial_x^2 P(x,t-\Delta t)\right] + \frac{1-a}{2} \left[P(x,t-\Delta t) + \Delta x \partial_x P(x,t-\Delta t) + \frac12\Delta x^2\partial_x^2 P(x,t-\Delta t)\right] \\ 
+&= P(x,t-\Delta t) - a\Delta x \partial_x P(x, t-\Delta t) + \frac12\Delta x^2\partial_x^2 P(x,t-\Delta t). 
+  \end{align}
+$$
 
 
 
