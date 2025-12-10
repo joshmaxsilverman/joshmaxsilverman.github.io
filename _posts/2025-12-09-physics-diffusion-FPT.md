@@ -66,7 +66,7 @@ So long as the ratio $\eta = x/\sqrt{2t}$ is kept constant, the equation doesn't
 
 $$\begin{align}
 \frac{\partial \eta}{\partial t} \cdot\frac{\partial w(\eta)}{\partial\eta} &= \frac12\partial_x \left(\frac{\partial\eta}{\partial x}\cdot\frac{\partial w(\eta)}{\partial\eta}\right) \\
-&= \frac12\left(\xcancel{\partial^2 \eta/\partial x^2}\times \partial w(\eta)/\partial \eta + \left(\partial \eta/\partial x\right)^2 \left(\partial^2 w(\eta)/\partial\eta^2\right) \right) \\
+&= \frac12\left(\frac{\partial \eta}{\partial x}\right)^2 \frac{\partial^2 w(\eta)}{\partial\eta^2} \\
 -\frac{\eta}{2t}\partial_\eta w(\eta)&= \frac12 \frac{\eta^2}{x^2}\partial_\eta^2 w(\eta) \\
 -2\eta\partial_\eta w(\eta) &= \partial_\eta^2 w(\eta) 
 \end{align}$$
