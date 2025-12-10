@@ -40,14 +40,14 @@ However, its initial condition is distinct from the diffusing particles. Their i
 
 ## Approach
 
-To solve this, we're going to find the impulse response and convolve it with the signal at the origin.
+To solve this, we're going to find the impulse response $h(t)$ and convolve it with the signal at the origin.
 
 The step solution is what happens due to a constant source of at the origin. If the concentration at the origin varies in time like $f(t),$ then we have to add up the increments $df(\tau)$ as $\tau$ ranges from the past to present:
 
 $$\begin{align}
 w_\text{vary}(x,t) 
-&=  \int\limits_{-\infty}^t \text{d}f(\tau)w(x,t-\tau) \\ 
-&= \int\limits_{-\infty}^t \text{d}\tau\, \dfrac{\text{d}f(\tau)}{\text{d}\tau}w(x,t-\tau) \\ 
+&=  \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)h(x,t-\tau) \\ 
+&= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau) \dfrac{h(\tau)}{\text{d}\tau} \\ 
 &= -\int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\,\dfrac{\text{d}w(x,t-\tau)}{\text{d}\tau} \\
 &= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
 &= \frac{\text{d}}{\text{d}t}w(x,t)
