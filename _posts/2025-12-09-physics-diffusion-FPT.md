@@ -30,9 +30,27 @@ The term with $\Delta x^2\Delta t$ is higher order than the rest of the equation
 $$ 
   \begin{align} 
     \partial_t FPT(x, t) &= \frac{\Delta x^2}{2\Delta t} \partial_x^2 FPT(x, t) \\
-        &= D \partial_x^2 FPT(x, t). 
+        &= D \partial_x^2 FPT(x, t)
   \end{align}
 $$
+
+which is just the diffusion equation. This means that the first passage distribution itself satisfies the diffusion equation.
+
+However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $\delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $\delta(t).$
+
+## Solving the differential equation
+
+The differential equation is
+$$ \partial_t w(x,t) = \frac12 \partial_x^2 w(x,t) $$
+So long as the ratio $\eta = x/\sqrt{2t}$ is kept constant, the equation doesn't change. So, $w$ is a function of $\eta$ alone, and we can rewrite it $\partial_t w(\eta) = \frac12 \partial_x^2 w(\eta).$ Working this out, we get $\partial_x \eta = \eta/x,$ $\partial_t \eta = -\eta/2t,$ and
+
+$$\begin{align}
+\partial \eta/\partial t \times\partial w(\eta)/\partial\eta &= \frac12\partial_x \left(\partial\eta/\partial x\times\partial w(\eta)/\partial\eta\right) \\
+&= \frac12\left(\xcancel{\partial^2 \eta/\partial x^2}\times \partial w(\eta)/\partial \eta + \left(\partial \eta/\partial x\right)^2 \left(\partial^2 w(\eta)/\partial\eta^2\right) \right) \\
+-\frac{\eta}{2t}\partial_\eta w(\eta)&= \frac12 \frac{\eta^2}{x^2}\partial_\eta^2 w(\eta) \\
+0 &= 2\eta\partial_\eta w(\eta)+ \partial_\eta^2 w(\eta) 
+\end{align}$$
+
 
 <!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
