@@ -38,6 +38,24 @@ which is just the diffusion equation. This means that the first passage distribu
 
 However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $P(x,0) = \delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $FPT(0,t) = \delta(t).$
 
+## Approach
+
+To solve this, we're going to find the impulse response and convolve it with the signal at the origin.
+
+The step solution is what happens due to a constant source of at the origin. If the concentration at the origin varies in time like $f(t),$ then we have to add up the increments $df(\tau)$ as $\tau$ ranges from the past to present:
+
+$$\begin{align}
+w_\text{vary}(x,t) 
+&=  \int\limits_{-\infty}^t \text{d}f(\tau)w(x,t-\tau) \\ 
+&= \int\limits_{-\infty}^t \text{d}\tau\, \dfrac{\text{d}f(\tau)}{\text{d}\tau}w(x,t-\tau) \\ 
+&= -\int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\,\dfrac{\text{d}w(x,t-\tau)}{\text{d}\tau} \\
+&= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
+&= \frac{\text{d}}{\text{d}t}w(x,t)
+\end{align}$$
+since $f(\tau) = \delta(\tau).$ This gives us
+$$ P(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
+
+
 ## Solving the differential equation
 
 The differential equation is
