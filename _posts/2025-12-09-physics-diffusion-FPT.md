@@ -40,7 +40,7 @@ However, its initial condition is distinct from the diffusing particles. Their i
 
 ## Approach
 
-To solve this, we can find the impulse response $h(t)$ and convolve it with the signal at the origin. However, as this shows, can instead find the step response and take its time derivative:
+To solve this, we can find the impulse response $h(t)$ and convolve it with the signal at the origin. But as this shows, can instead find the step response and take its time derivative:
 
 $$
   \begin{align}
@@ -73,9 +73,9 @@ $$\begin{align}
 
 This can be directly integrated to find $\log \partial_\eta w(\eta) = -\eta^2$ leading to $\partial_\eta w(\eta) = \exp-\eta^2$ and 
 
-$$ w(\eta) = A + B\int\limits_0^\eta \text{d}z \exp-z^2. $$
+$$ w(\eta) = w(x,t) = A + B\int\limits_0^\eta \text{d}z\, \exp-z^2. $$
 
-The step response is $1$ at the 
+The step response is $1$ at the origin for all time and should be zero for all $x\neq 0$ at time zero. This means $1 = A$ and $0 = A + B \int\limits_0^\infty \text{d}z\, \exp{-z^2}$ so $A=1$ and $B = -2/\sqrt{\pi},$ making $w(x,t)$ the error function $\frac{2}{\sqrt{\pi}}\int\limits_\eta^\infty \text{d}z\, \exp-eta^2.$
 
 ---
 
