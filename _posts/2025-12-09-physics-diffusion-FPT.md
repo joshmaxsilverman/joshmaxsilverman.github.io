@@ -50,9 +50,7 @@ w_\text{vary}(x,t)
 &= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
 &= \frac{\text{d}}{\text{d}t}w(x,t)
 \end{align}$$
-since $f(\tau) = \delta(\tau).$ This gives us
-$$ P(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
-
+since $f(\tau) = \delta(\tau).$ 
 
 ## Solving the differential equation
 
@@ -72,6 +70,11 @@ $$\begin{align}
 This can be directly integrated to find $\log \partial_\eta w(\eta) = -\eta^2$ leading to $\partial_\eta w(\eta) = \exp-\eta^2$ and 
 
 $$ w(\eta) = A + B\int\limits_0^\eta \text{d}z \exp-z^2. $$
+
+---
+
+This gives us
+$$ P(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
 
 <!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
