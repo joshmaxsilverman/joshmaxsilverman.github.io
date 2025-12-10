@@ -36,7 +36,7 @@ $$
 
 which is just the diffusion equation. This means that the first passage distribution itself satisfies the diffusion equation.
 
-However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $\delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $\delta(t).$
+However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $P(x,0) = \delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $FPT(0,t) = \delta(t).$
 
 ## Solving the differential equation
 
