@@ -44,12 +44,15 @@ To solve this, we're going to find the impulse response $h(t)$ and convolve it w
 
 The step solution is what happens due to a constant source of at the origin. If the concentration at the origin varies in time like $f(t),$ then we have to add up the increments $df(\tau)$ as $\tau$ ranges from the past to present:
 
-$$\begin{align}
-w_\text{vary}(x,t) 
-&=  \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)h(x,t-\tau) \\ 
-&= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
-&= \frac{\text{d}}{\text{d}t}w(x,t)
-\end{align}$$
+$$
+  \begin{align}
+    w_\text{vary}(x,t) 
+    &=  \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)h(x,t-\tau) \\ 
+    &= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
+    &= \frac{\text{d}}{\text{d}t}w(x,t)
+  \end{align}
+$$
+
 since $f(\tau) = \delta(\tau).$ 
 
 ## Solving the differential equation
@@ -76,7 +79,6 @@ $$ w(\eta) = A + B\int\limits_0^\eta \text{d}z \exp-z^2. $$
 This gives us
 $$ P(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
 
-<!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
 <!--more-->
 
