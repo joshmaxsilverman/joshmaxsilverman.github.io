@@ -7,9 +7,9 @@ subtitle: How long until a particle diffuses to $x$?
 tags:
 ---
 
->**Question** given a population of diffusing particles, what is the probability distribution of first passage times (FPT) to position $x?$ 
+>**Question** given a population of diffusing particles, what is the probability distribution of first passage times ($\text{FPT}(x,t)$) to position $x?$ 
 >
->Typically this is solved by solving for the diffusion differential equation to find the probability distribution, integrating that to find the survival, and then differentiating that to find the FPT distribution. In this post we'll show how to solve for the FPT distribution directly.
+>Typically this is solved by solving for the diffusion differential equation to find the probability distribution, integrating that to find the survival, and then differentiating that to find the $\text{FPT}$ distribution. In this post we'll show how to solve for the $\text{FPT}$ distribution directly.
 
 <!--more-->
 
@@ -17,34 +17,34 @@ tags:
 
 ## Background
 
-Suppose a particle makes first passage to the origin from position $x$ in time $t.$ This can happen by moving $\Delta x$ to the left or right and making first passage from either of those locations in time $t-\Delta t.$ This means the $FPT$ distribution satisfies
+Suppose a particle makes first passage to the origin from position $x$ in time $t.$ This can happen by moving $\Delta x$ to the left or right and making first passage from either of those locations in time $t-\Delta t.$ This means the $\text{FPT}$ distribution satisfies
 
-$$ FPT(x, t) = \frac12 FPT(x-\Delta x, t-\Delta t) + \frac12 FPT(x + \Delta x, t-\Delta t). $$
+$$ \text{FPT}(x, t) = \frac12 \text{FPT}(x-\Delta x, t-\Delta t) + \frac12 \text{FPT}(x + \Delta x, t-\Delta t). $$
 
 Expanding first in $\Delta x$ we get, to second order in $\Delta x$
 
-$$ FPT(x, t) = FPT(x,t-\Delta t) + \frac12\Delta x^2 \partial_x^2 FPT(x, t-\Delta t). $$
+$$ \text{FPT}(x, t) = \text{FPT}(x,t-\Delta t) + \frac12\Delta x^2 \partial_x^2 \text{FPT}(x, t-\Delta t). $$
 
 Expanding in $\Delta t,$ we get 
 
-$$ FPT(x, t) = FPT(x, t) - \Delta t\partial_t FPT(x, t) + \frac12\Delta x^2 \partial_x^2 FPT(x, t) + \frac12\Delta x^2\Delta t\partial_t FPT(x, t). $$
+$$ \text{FPT}(x, t) = \text{FPT}(x, t) - \Delta t\partial_t \text{FPT}(x, t) + \frac12\Delta x^2 \partial_x^2 \text{FPT}(x, t) + \frac12\Delta x^2\Delta t\partial_t \text{FPT}(x, t). $$
 
 The term with $\Delta x^2\Delta t$ is higher order than the rest of the equation, so we are left with
 
 $$ 
   \begin{align} 
-    \partial_t FPT(x, t) &= \frac{\Delta x^2}{2\Delta t} \partial_x^2 FPT(x, t) \\
-        &= D \partial_x^2 FPT(x, t)
+    \partial_t \text{FPT}(x, t) &= \frac{\Delta x^2}{2\Delta t} \partial_x^2 \text{FPT}(x, t) \\
+        &= D \partial_x^2 \text{FPT}(x, t)
   \end{align}
 $$
 
 which is just the diffusion equation. This means that the first passage distribution itself satisfies the diffusion equation.
 
-However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $P(x,0) = \delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $FPT(0,t) = \delta(t).$
+However, its initial condition is distinct from the diffusing particles. Their initial condition is a spike at position $0$ at time $t=0,$ i.e. $\text{FPT}(x,0) = \delta (x).$ On the other hand, the first passage distribution is a spike at time $0$ for position $x=0,$ i.e. $\text{FPT}(0,t) = \delta(t).$
 
 ## Approach
 
-To solve this, we can find the impulse response $h(t)$ and convolve it with the signal ($FPT(0,t) = \delta(t)$) at the origin. But as this shows, we can instead find the step response and take its time derivative:
+To solve this, we can find the impulse response $h(t)$ and convolve it with the signal ($\text{FPT}(0,t) = \delta(t)$) at the origin. But as this shows, we can instead find the step response and take its time derivative:
 
 $$
   \begin{align}
@@ -95,12 +95,10 @@ $$
   \end{align}
 $$
 
----
-
 Taking the time derivative, this gives
 
-$$ P(x,t) = \frac{d}{dt} w(x,t) = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/2t}. $$
+$$ \text{FPT}(x,t) = \frac{d}{dt} w(x,t) = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/2t}. $$
 
-An upshot is that for systems that can't be solved analytically, we can calculate the FPT distribution by equilibrating the master equation.
+An upshot is that for systems that can't be solved analytically, we can calculate the FPT distribution by equilibrating the master equation rather than solving the equivalent diffusion master equation, numerically integrating over space, then numerically derivating in time.
 
 <br>
