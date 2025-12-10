@@ -40,9 +40,7 @@ However, its initial condition is distinct from the diffusing particles. Their i
 
 ## Approach
 
-To solve this, we're going to find the impulse response $h(t)$ and convolve it with the signal at the origin.
-
-The step solution is what happens due to a constant source of at the origin. If the concentration at the origin varies in time like $f(t),$ then we have to add up the increments $df(\tau)$ as $\tau$ ranges from the past to present:
+To solve this, we can find the impulse response $h(t)$ and convolve it with the signal at the origin. However, as this shows, can instead find the step response and take its time derivative:
 
 $$
   \begin{align}
@@ -54,6 +52,9 @@ $$
 $$
 
 since $f(\tau) = \delta(\tau).$ 
+
+The step solution is what happens due to a constant source of at the origin. It stays zero at the origin for all $t$ and decays to zero 
+
 
 ## Solving the differential equation
 
@@ -73,6 +74,8 @@ $$\begin{align}
 This can be directly integrated to find $\log \partial_\eta w(\eta) = -\eta^2$ leading to $\partial_\eta w(\eta) = \exp-\eta^2$ and 
 
 $$ w(\eta) = A + B\int\limits_0^\eta \text{d}z \exp-z^2. $$
+
+The step response is $1$ at the 
 
 ---
 
