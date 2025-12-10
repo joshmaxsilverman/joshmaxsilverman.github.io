@@ -27,7 +27,12 @@ $$ FPT(x, t) = FPT(x, t) - \Delta t\partial_t FPT(x, t) + \frac12\Delta x^2 \par
 
 The term with $\Delta x^2\Delta t$ is higher order than the rest of the equation, so we are left with
 
-$$ \partial_t FPT(x, t) = \frac{\Delta x^2}{2\Delta t} \partial_x^2 FPT(x, t). $$
+$$ 
+  \begin{align} 
+    \partial_t FPT(x, t) &= \frac{\Delta x^2}{2\Delta t} \partial_x^2 FPT(x, t) \\
+        &= D \partial_x^2 FPT(x, t). 
+  \end{align}
+$$
 
 <!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
