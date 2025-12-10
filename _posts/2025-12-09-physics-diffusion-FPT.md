@@ -17,10 +17,13 @@ Suppose a particle makes first passage to the origin from position $x$ in time $
 
 $$ FPT(x, t) = \frac12 FPT(x-\Delta x, t-\Delta t) + \frac12 FPT(x + \Delta x, t-\Delta t). $$
 
-Expanding first in $\Delta x$ we get
+Expanding first in $\Delta x$ we get, to second order in $\Delta x$
 
 $$ FPT(x, t) = FPT(x,t-\Delta t) + \frac12\Delta x^2 \partial_x^2 FPT(x, t-\Delta t). $$
 
+Expanding in $\Delta t,$ we get 
+
+$$ FPT(x, t) = FPT(x, t) - \Delta t\partial_t FPT(x, t) + \frac12\Delta x^2 \partial_x^2 FPT(x, t) + \frac12\Delta x^2\Delta t\partial_t FPT(x, t). $$
 
 <!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
