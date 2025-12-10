@@ -47,7 +47,6 @@ The step solution is what happens due to a constant source of at the origin. If 
 $$\begin{align}
 w_\text{vary}(x,t) 
 &=  \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)h(x,t-\tau) \\ 
-&= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau) \dfrac{dw(t-\tau)}{\text{d}t} \\ 
 &= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
 &= \frac{\text{d}}{\text{d}t}w(x,t)
 \end{align}$$
