@@ -13,14 +13,12 @@ tags:
 
 ## Background
 
-Suppose a particle makes first passage to the origin from position $x$ in time $t.$ 
-
-This can happen by moving $\Delta x$ to the left or right and making first passage from either of those locations in time $t-\Delta t.$ This means the $FPT$ distribution satisfies
+Suppose a particle makes first passage to the origin from position $x$ in time $t.$ This can happen by moving $\Delta x$ to the left or right and making first passage from either of those locations in time $t-\Delta t.$ This means the $FPT$ distribution satisfies
 
 $$ FPT(x, t) = \frac12 FPT(x-\Delta x, t-\Delta t) + \frac12 FPT(x + \Delta x, t-\Delta t). $$
 
 
-Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$
+<!-- Typically this is approached by solving the diffusion equation, then integrating over positions up to but not beyond $x$ to get the survival probability, then differentiating that with respect to time to get the rate at which particles penetrate $x$ for the first time, with that rate proportional to the probability of passing the boundary for the first time at time $t.$ -->
 
 <!--more-->
 
