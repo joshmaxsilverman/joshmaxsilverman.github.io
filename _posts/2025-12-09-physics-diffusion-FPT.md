@@ -47,7 +47,7 @@ $$ \partial_t w(x,t) = \frac12 \partial_x^2 w(x,t) $$
 So long as the ratio $\eta = x/\sqrt{2t}$ is kept constant, the equation doesn't change. So, $w$ is a function of $\eta$ alone, and we can rewrite it $\partial_t w(\eta) = \frac12 \partial_x^2 w(\eta).$ Working this out, we get $\partial_x \eta = \eta/x,$ $\partial_t \eta = -\eta/2t,$ and
 
 $$\begin{align}
-\partial \eta/\partial t \times\partial w(\eta)/\partial\eta &= \frac12\partial_x \left(\partial\eta/\partial x\times\partial w(\eta)/\partial\eta\right) \\
+\frac{\partial \eta}{\partial t} \cdot\frac{\partial w(\eta)}{\partial\eta} &= \frac12\partial_x \left(\frac{\partial\eta}{\partial x}\cdot\frac{\partial w(\eta)}{\partial\eta}\right) \\
 &= \frac12\left(\xcancel{\partial^2 \eta/\partial x^2}\times \partial w(\eta)/\partial \eta + \left(\partial \eta/\partial x\right)^2 \left(\partial^2 w(\eta)/\partial\eta^2\right) \right) \\
 -\frac{\eta}{2t}\partial_\eta w(\eta)&= \frac12 \frac{\eta^2}{x^2}\partial_\eta^2 w(\eta) \\
 -2\eta\partial_\eta w(\eta) &= \partial_\eta^2 w(\eta) 
