@@ -81,7 +81,7 @@ This means $1 = A$ and $0 = A + B \int\limits_0^\infty \text{d}z\, \exp -z^2$ so
 
 $$ 
   \begin{align} w(x,t) &= \frac{2}{\sqrt{\pi}}\int\limits_\eta^\infty \text{d}z\, \exp-\eta^2 \\ 
-  &= \text{erfc}\frac{{x}{2\sqrt{t}}. 
+  &= \text{erfc}\frac{x}{2\sqrt{t}}. 
   \end{align}
 $$
 
