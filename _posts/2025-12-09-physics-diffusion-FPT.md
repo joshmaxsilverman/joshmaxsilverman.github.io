@@ -87,8 +87,9 @@ $$
 
 ---
 
-This gives us
-$$ P(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
+Taking the time derivative, this gives
+
+$$ P(x,t) = \frac{d}{dt} w(x,t) = \frac{x e^{-x^2/2t}}{\sqrt{2\pi t^3}}. $$
 
 
 <!--more-->
