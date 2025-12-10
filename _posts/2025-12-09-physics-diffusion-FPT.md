@@ -2,14 +2,18 @@
 layout: post
 published: false
 title: First passage time
-date: 2018/04/21
-subtitle: How long til a particle to diffuse to $x$?
+date: 2025/12/10
+subtitle: How long until a particle diffuses to $x$?
 tags:
 ---
 
 >**Question** given a population of diffusing particles, what is the probability distribution of first passage times (FPT) to position $x?$ 
 >
 >Typically this is solved by solving for the diffusion differential equation to find the probability distribution, integrating that to find the survival, and then differentiating that to find the FPT distribution. In this post we'll show how to solve for the FPT distribution directly.
+
+<!--more-->
+
+([Physics](https://en.wikipedia.org/wiki/First-hitting-time_model))
 
 ## Background
 
@@ -40,7 +44,7 @@ However, its initial condition is distinct from the diffusing particles. Their i
 
 ## Approach
 
-To solve this, we can find the impulse response $h(t)$ and convolve it with the signal at the origin. But as this shows, can instead find the step response and take its time derivative:
+To solve this, we can find the impulse response $h(t)$ and convolve it with the signal ($FPT(0,t) = \delta(t)$) at the origin. But as this shows, we can instead find the step response and take its time derivative:
 
 $$
   \begin{align}
@@ -53,7 +57,7 @@ $$
 
 since $f(\tau) = \delta(\tau).$ 
 
-The step solution is what happens due to a constant source of at the origin. It stays zero at the origin for all $t$ and decays to zero 
+The step response is the time integral of $FPT(x,t)$ which is the cumulative distribution of first passage times, the probability that a particle's first passage to $x$ is $t$ or earlier. It stays zero at the origin for all $t$ and decays to zero as $x$ goes to infinity.
 
 
 ## Solving the differential equation
@@ -91,11 +95,6 @@ Taking the time derivative, this gives
 
 $$ P(x,t) = \frac{d}{dt} w(x,t) = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/2t}. $$
 
-
-<!--more-->
-
-([Physics](URL))
-
-## Solution
+An upshot is that for systems that can't be solved analytically, we can calculate the FPT distribution by equilibrating the master equation.
 
 <br>
