@@ -99,6 +99,8 @@ Taking the time derivative, this gives
 
 $$ \text{FPT}(x,t) = \frac{d}{dt} w(x,t) = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/2t}. $$
 
-An upshot is that for systems that can't be solved analytically, we can calculate the FPT distribution by equilibrating the master equation rather than solving the equivalent diffusion master equation, numerically integrating over space, then numerically derivating in time.
+The usual forward approach evolves the distribution from a specific starting point $p(x,0) = \delta(x-x_0).$ If the starting point changes, then the whole process needs to be recalculated. By contast, the approach we take here solves on equation whose solution contains FPT statistics for every possible starting state. The boundary condition is the same ($\text{FPT)(0,t)=\delta(t), \text{FPT}(x,0) = 0) and the starting point is just an argument. Once $w$ is known, the FPT is just the time derivative. 
+
+
 
 <br>
