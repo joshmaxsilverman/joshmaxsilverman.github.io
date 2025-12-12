@@ -220,7 +220,7 @@ we dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\ga
 
 Plugging in, we get the new equation
 
-$$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} &= \log N $$
+$$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
 which, solving for $\gamma$ gets us 
 
