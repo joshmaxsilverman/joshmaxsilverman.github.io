@@ -198,7 +198,29 @@ $$
 
 As the number of racers increases the advantage of the first heat winner grows, far exceeding $1/N.$
 
-To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
+To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, model the fluctuations in the second place racer, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
+
+## Update 2025-12-11
+
+The wonders never cease. Let's make two of the improvements suggested above:
+- modeling the flucuation of the competition
+- using the iterated approximation for the expected minimum
+
+In our original approximation
+
+$$ 
+    \begin{align}
+        \frac{\mathcal{N}(\gamma)}{\gamma} &= \frac1N \\
+    \frac{e^{-\gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
+    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N.
+    \end{align}
+$$
+
+we dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a constant approximation. 
+
+Plugging in, we get the new equation
+
+$$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} &= \log N ##
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
