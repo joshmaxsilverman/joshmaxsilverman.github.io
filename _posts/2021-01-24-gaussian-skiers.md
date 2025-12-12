@@ -226,6 +226,18 @@ which, solving for $\gamma$ gets us
 
 $$ \gamma \approx \sqrt{2} \sqrt{\log n-\log \left(2 \sqrt{\pi } \sqrt{\log n}\right)}. $$
 
+The condition we used for Racer $1$ winning was their sum of times being below $\gamma:$ 
+
+$$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma $$
+
+However, the minimum of the competition will fluctuate around $-\gamma$ just like we modeled Racer $1.$ Accounting for this, we get the new condition
+
+$$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
+
+or
+
+$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$
+
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
