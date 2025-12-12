@@ -200,7 +200,7 @@ As the number of racers increases the advantage of the first heat winner grows, 
 
 To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, model the fluctuations in the second place racer, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
-<!-- ## Update 2025-12-11
+## Update 2025-12-11
 
 The wonders never cease. Let's make two of the improvements suggested above:
 - modeling the flucuation of the competition
@@ -226,6 +226,8 @@ which, solving for $\gamma$ gets us
 
 $$ \gamma \approx \sqrt{2} \sqrt{\log n-\log \left(2 \sqrt{\pi } \sqrt{\log n}\right)}. $$
 
+Note that previously, the simple approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ This refined approximation means we'll have to preserve the integration. 
+
 The condition we used for Racer $1$ winning was their sum of times being below $\gamma:$ 
 
 $$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma $$
@@ -236,7 +238,11 @@ $$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
 
 or
 
-$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$ -->
+$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$
+
+This makes the probability that the first heat winner wins it all equal to
+
+$$ P(\text{heat 1 winner wins}\rvert x, y) = \int\limits_{-\infty}^{-(\sqrt{2}-1)\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
