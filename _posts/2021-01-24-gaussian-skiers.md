@@ -200,7 +200,7 @@ As the number of racers increases the advantage of the first heat winner grows, 
 
 To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, model the fluctuations in the second place racer, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
-## Update 2025-12-11
+<!-- ## Update 2025-12-11
 
 The wonders never cease. Let's make two of the improvements suggested above:
 - modeling the flucuation of the competition
@@ -236,7 +236,7 @@ $$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
 
 or
 
-$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$
+$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$ -->
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
