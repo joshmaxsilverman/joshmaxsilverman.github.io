@@ -224,7 +224,7 @@ $$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
 which, solving for $\gamma$ gets us 
 
-$$ \gamma \approx \sqrt{2} \sqrt{\log (n)-\log \left(2 \sqrt{\pi } \sqrt{\log (n)}\right)}. $$
+$$ \gamma \approx \sqrt{2} \sqrt{\log n-\log \left(2 \sqrt{\pi } \sqrt{\log n}\right)}. $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
