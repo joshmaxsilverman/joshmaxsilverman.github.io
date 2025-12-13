@@ -224,7 +224,7 @@ $$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
 which, solving for $\gamma$ gets us 
 
-$$ \gamma \approx \sqrt{2} \sqrt{\log n-\log \left(2 \sqrt{\pi } \sqrt{\log n}\right)}. $$
+$$ \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi } \sqrt{\log N}\right)}. $$
 
 Note that previously, the simple approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ This refined approximation means we'll have to preserve the integration. 
 
