@@ -242,7 +242,7 @@ $$ s_1 \lt -\nu\gamma + \sqrt{2}y - x. $$
 
 This makes the probability that the first heat winner wins it all equal to
 
-$$ P(\text{heat 1 winner wins}\rvert x, y) = \int\limits_{-\infty}^{-(\sqrt{2}-1)\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
+$$ P(\text{heat 1 winner wins}\rvert x, y) = \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
 
 
 
