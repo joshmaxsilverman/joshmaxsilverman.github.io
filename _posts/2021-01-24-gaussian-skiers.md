@@ -202,11 +202,11 @@ To get more accurate predictions for small $N,$ we'd need to perturbatively deve
 
 ## Update 2025-12-11
 
-The wonders never cease. Let's make two of the improvements suggested above:
-- modeling the flucuation of the competition
+Let's make the improvements suggested above:
+- modeling the fluctuations of the next best racer
 - using the iterated approximation for the expected minimum
 
-In our original approximation
+In our original approximation for $\gamma$
 
 $$ 
     \begin{align}
@@ -216,9 +216,9 @@ $$
     \end{align}
 $$
 
-we dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a constant approximation. 
+we dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
 
-Plugging in, we get the new equation
+Plugging back in in, we get the new equation
 
 $$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
@@ -226,13 +226,13 @@ which, solving for $\gamma$ gets us
 
 $$ \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi } \sqrt{\log N}\right)}. $$
 
-Note that previously, the simple approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ This refined approximation means we'll have to preserve the integration. 
+<!-- Note that previously, the approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ The refined approximation means we'll have to preserve the integration. -->
 
-The condition we used for Racer $1$ winning was their sum of times being below $\gamma:$ 
+Our original condition for Racer $1$ to win pegged the second best racer at constant $-\gamma,$ so we had
 
 $$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma $$
 
-However, the minimum of the competition will fluctuate around $-\gamma$ just like we modeled Racer $1.$ Accounting for this, we get the new condition
+However, the minimum of the competition will fluctuate around $-\gamma$ just like Racer $1$ does. Accounting for this, we get the new condition
 
 $$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
 
@@ -240,11 +240,15 @@ or
 
 $$ s_1 \lt -\nu\gamma + \sqrt{2}y - x. $$
 
-This makes the probability that the first heat winner wins it all equal to
+This makes the probability that the first heat winner wins it all, conditioned on their first heat time $-\gamma + x$ and the competitions time $-\gamma + y$ equal to
 
-$$ P(\text{heat 1 winner wins}\rvert x, y) = \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
+$$ P(\text{heat 1 winner wins}\rvert x, y) = f(-\nu\gamma + \sqrt{2}y - x) = \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
 
+In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. 
 
+We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \sqrt{2}y-x)$ in terms of $f(-\nu\gamma).$ Using the same $\mathcal{N}(z)/z$ approximation, we get
+
+$$ f(-\nu\gamma+\sqrt{2}y -x) \approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \sqrt{2}y - x)}{\mathcal{N}(-\nu\gamma} \frac{-\nu\gamma}{-\nu\gamma + \sqrt{2}y - x}. $$
 
 <!-- -->
 <!-- -->
