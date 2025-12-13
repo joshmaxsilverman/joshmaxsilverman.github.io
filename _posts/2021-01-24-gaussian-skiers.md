@@ -224,7 +224,7 @@ dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma
 
 $$ P(z < -v) = \frac12\text{erfc}(v/\sqrt{2}). $$ 
 
-So, the $\gamma$ we are after is $\gamma \ approx \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
+So, the $\gamma$ we are after is $\gamma \approx \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
 
 <!-- However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
 
