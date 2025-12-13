@@ -224,7 +224,7 @@ $$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
 which, solving for $\gamma$ gets us 
 
-$$ \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi } \sqrt{\log N}\right)}. $$
+$$ \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}. $$
 
 <!-- Note that previously, the approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ The refined approximation means we'll have to preserve the integration. -->
 
@@ -260,8 +260,16 @@ $$ P(\text{heat 1 winner wins}) = \int\limits_{-\infty}^\infty\text{d}x \int\lim
 
 As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and $y,$ being the minimum of nearly as many normal variables, is also distributed like $P(x) \approx \gamma e^{-e^{\gamma y}},$ so we get
 
-$$ P(\text{heat 1 winner wins}) = \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, f(-\nu\gamma)e^{\nu\gamma \sqrt{2}y}e^{-\nu\gamma x}\gamma^2 e^{-e^{\gamma x}} \gamma e^{-e^{\gamma y}}. $$
+$$ 
+    \begin{align}
+        P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, f(-\nu\gamma)e^{\nu\gamma \sqrt{2}y}e^{-\nu\gamma x}\gamma^2 e^{-e^{\gamma x}} e^{-e^{\gamma y}} \\
+        &= f(-\nu\gamma)\int\limits_{-\infty}^\infty\text{d}x e^{-\nu\gamma x}\gamma^2 e^{-e^{\gamma x}}\int\limits_{-\infty}^\infty\text{d}y\, e^{\nu\gamma \sqrt{2}y} e^{-e^{\gamma y}}.
+    \end{align}
+$$
 
+The $x$ and $y$ integrals are versions of the integral from our original calculation, and applying the same pattern, we get
+
+$$ P(\text{heat 1 winner wins}) = f(-\nu\gamma)\Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu). $$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
