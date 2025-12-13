@@ -278,7 +278,7 @@ Now, all have to do is put the integral back together. The probability that the 
 
 $$ \begin{align}
     P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) \\
-    &\quad \timesP(\text{first heat time is}\, -\gamma + x) P(\text{second place total time is}\, -\gamma + y).\end{align} $$
+    &\quad \times P(\text{first heat time is}\, -\gamma + x) P(\text{second place total time is}\, -\gamma + y).\end{align} $$
 
 As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and $y,$ being the minimum of nearly as many normal variables, is also distributed like $P(x) \approx \gamma e^{-e^{\gamma y}},$ so we get
 
