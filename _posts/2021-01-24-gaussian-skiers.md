@@ -246,9 +246,12 @@ $$ P(\text{heat 1 winner wins}\rvert x, y) = f(-\nu\gamma + \sqrt{2}y - x) = \in
 
 In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. 
 
-We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \sqrt{2}y-x)$ in terms of $f(-\nu\gamma).$ Using the same $\mathcal{N}(z)/z$ approximation, we get
+We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \delta)$ in terms of $f(-\nu\gamma).$ Using the same $\mathcal{N}(z)/z$ approximation, we get
 
-$$ f(-\nu\gamma+\sqrt{2}y -x) \approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \sqrt{2}y - x)}{\mathcal{N}(-\nu\gamma} \frac{-\nu\gamma}{-\nu\gamma + \sqrt{2}y - x}. $$
+$$ \begin{align}
+    f(-\nu\gamma + \delta) &\approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \delta)}{\mathcal{N}(-\nu\gamma)} \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
+    &= f(-\nu\gamma)\exp {\nu^2\gamma^2 - (\nu^2\gamma^2 - 2\nu\gamma\delta + \delta^2}\frac{-\nu\gamma}{-\nu\gamma + \delta}.
+    \end{align}$$
 
 <!-- -->
 <!-- -->
