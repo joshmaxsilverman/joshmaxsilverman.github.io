@@ -261,7 +261,7 @@ $$ \begin{align}
 
 Now, all have to do is put the integral back together. The probability that the winner of heat $1$ wins the race is
 
-$$ P(\text{heat 1 winner wins}) = \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) P(\text{first heat time is}\, x) P(\text{second place total time is}\, y). $$
+$$ P(\text{heat 1 winner wins}) = \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) P(\text{first heat time is}\, -\gamma + x) P(\text{second place total time is}\, -\gamma + y). $$
 
 As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and $y,$ being the minimum of nearly as many normal variables, is also distributed like $P(x) \approx \gamma e^{-e^{\gamma y}},$ so we get
 
