@@ -206,11 +206,11 @@ Let's make the improvements suggested above:
 - modeling the fluctuations of the next best racer
 - using the iterated approximation for the expected minimum
 
-In our original approximation for $\gamma,$ we approximated the integral
+In our original scheme to approximate for $\gamma,$ we approximated the integral
 
-$$ P(z < -v) = \int\limits_{-\infty}^{-v} \text{d}z\, \mathcal{N}(z) $$ 
+$$ P(z < -\gamma) = \int\limits_{-\infty}^{-\gamma} \text{d}z\, \mathcal{N}(z) $$ 
 
-by $\mathcal{N}(v)/v,$ set it equal to $1/N$
+by $\mathcal{N}(\gamma)/\gamma,$ set it equal to $1/N$
 
 $$ 
     \begin{align}
@@ -220,9 +220,9 @@ $$
     \end{align}
 $$
 
-dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. But if we don't make the original approximation, we can just write the solution in terms of the complementary error function. After rescaling the variable of integration, the integral is equal to half the error function of $v/\sqrt{2}:$
+dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. But if we don't make the integral approximation, we can just write the solution in terms of the complementary error function. After rescaling the variable of integration, the integral is equal to half the error function of $\gamma/\sqrt{2}:$
 
-$$ P(z < -v) = \frac12\text{erfc}(v/\sqrt{2}). $$ 
+$$ P(z < -\gamma) = \frac12\text{erfc}(\gamma/\sqrt{2}). $$ 
 
 So, the $\gamma$ we are after is $\gamma \approx \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
 
