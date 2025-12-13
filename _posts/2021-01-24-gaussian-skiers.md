@@ -297,6 +297,14 @@ $$
     \end{align}
 $$
 
+Before we graph it let's take stock of its features. Aesthetically, it seems like a clear win. On grounds of transparency, it depends on your intuition with the error function. However, on the most important ground of accuracy, it's an unmitigated triumph:
+
+![](/img/2025-11-28-fiddler-gaussian-skier-plot-erfc.png){:width="450 px" class="image-centered"}
+
+The fidelity at small $N$ is significantly improved, already in the ball park for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ it gives $\approx 30.4\%$ compared to $31.5\%.$ 
+
+We can even interpret the shape... the $\text{erfc}^{-1}(2/N)$ asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large, then gets slightly more than halved, before getting remapped by "what is the tail area beyond $N$?" yielding a slightly larger small number. This is in line with the shallow decay compared to regular $\text{erfc}(x).$
+
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
 
