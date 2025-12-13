@@ -206,17 +206,27 @@ Let's make the improvements suggested above:
 - modeling the fluctuations of the next best racer
 - using the iterated approximation for the expected minimum
 
-In our original approximation for $\gamma$
+In our original approximation for $\gamma,$ we approximated the integral
+
+$$ P(z < -v) = \int\limits_{-\infty}^{-v} \text{d}z\, \mathcal{N}(z) $$ 
+
+by $\mathcal{N}(v)/v,$ set it equal to $1/N$
 
 $$ 
     \begin{align}
-        \frac{\mathcal{N}(\gamma)}{\gamma} &= \frac1N \\
+    \frac{\mathcal{N}(\gamma)}{\gamma} &= \frac1N \\
     \frac{e^{-\gamma^2/2}}{\sqrt{2\pi}\gamma} &= \frac1N \\
-    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N.
+    \gamma^2/2 + \log \sqrt{2\pi}\gamma &= \log N,
     \end{align}
 $$
 
-we dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
+dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. But if we don't make the original approximation, we can just write the solution in terms of the complementary error function. After rescaling the variable of integration, the integral is equal to half the error function of $v/\sqrt{2}:$
+
+$$ P(z < -v) = \frac12\text{erfc}(v/\sqrt{2}). $$ 
+
+So, the $v$ we are after is $\sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
+
+<!-- However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
 
 Plugging back in in, we get the new equation
 
@@ -229,7 +239,7 @@ $$
         \gamma &\approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
         &\approx \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
     \end{align}. 
-$$
+$$ -->
 
 <!-- Note that previously, the approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ The refined approximation means we'll have to preserve the integration. -->
 
