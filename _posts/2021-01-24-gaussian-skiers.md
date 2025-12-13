@@ -238,7 +238,7 @@ $$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
 
 or
 
-$$ s_1 \lt -(\sqrt{2}-1)\gamma +\sqrt{2}y - x. $$
+$$ s_1 \lt -\nu\gamma + \sqrt{2}y - x. $$
 
 This makes the probability that the first heat winner wins it all equal to
 
