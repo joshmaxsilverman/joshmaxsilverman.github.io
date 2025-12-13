@@ -289,7 +289,7 @@ $$
     \end{align}
 $$
 
-The $x$ and $y$ integrals are versions of the integral from our original calculation, and applying the same pattern, we get
+The $x$ and $y$ integrals are versions of the integral from our original calculation. Applying the same pattern, and re-expressing $f$ in terms of the complementary error function, we get
 
 $$ 
     \begin{align}
