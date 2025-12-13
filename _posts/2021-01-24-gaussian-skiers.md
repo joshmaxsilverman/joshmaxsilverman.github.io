@@ -293,7 +293,7 @@ $$
     \begin{align}
         P(\text{heat 1 winner wins}) &\approx f(-\nu\gamma)\Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu)\\
         &= \frac12 \text{erfc}\left(-\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}}\right)\Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2}) \\
-        &= \frac12 \text{erfc}\left(-(\sqrt{2}-1)\text{erfc}^{-1}\left\frac{2}{N}\right)}\right)\Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2}).
+        &= \frac12 \text{erfc}\left(-(\sqrt{2}-1)\text{erfc}^{-1}\left(\frac{2}{N}\right)\right)\Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2}).
     \end{align}
 $$
 
