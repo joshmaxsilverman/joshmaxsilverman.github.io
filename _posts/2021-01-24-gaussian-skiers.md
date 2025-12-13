@@ -305,7 +305,7 @@ Before we graph it let's take stock of its features. Aesthetically, it seems lik
 
 The light salmon curve shows the original model, and gold shows the refined model. The fidelity at small $N$ is significantly improved, already in the ball park for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ gives $\approx 30.4\%$ compared to $31.5\%.$ 
 
-Given the invert $\rightarrow$ scale $\rightarrow$ remap structure of the solution, we can even interpret the shape... the $\text{erfc}^{-1}(2/N)$ asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large, then gets slightly more than halved, before getting remapped by "what is the tail area beyond $N$?" yielding a slightly larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}(x).$
+Given the invert $\rightarrow$ scale $\rightarrow$ remap structure of the solution, we can even interpret the shape... the $\text{erfc}^{-1}(2/N)$ asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large, then gets slightly more than halved, before getting remapped by "what is the tail area beyond $N$?" yielding a slightly larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}.$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
