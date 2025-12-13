@@ -250,7 +250,8 @@ We're assuming that the fluctuations around $-\gamma$ are small compared to $\ga
 
 $$ \begin{align}
     f(-\nu\gamma + \delta) &\approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \delta)}{\mathcal{N}(-\nu\gamma)} \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
-    &= f(-\nu\gamma)\exp {\nu^2\gamma^2 - (\nu^2\gamma^2 - 2\nu\gamma\delta + \delta^2}\frac{-\nu\gamma}{-\nu\gamma + \delta}.
+    &= f(-\nu\gamma)\exp\left[{\nu^2\gamma^2 - (\nu^2\gamma^2 - 2\nu\gamma\delta + \delta^2)}\right]\frac{-\nu\gamma}{-\nu\gamma + \delta} \\
+    &\approx f(-\nu\gamma)\exp\left[{2\nu\gamma\delta}\right].
     \end{align}$$
 
 <!-- -->
