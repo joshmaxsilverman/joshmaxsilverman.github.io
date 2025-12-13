@@ -242,7 +242,12 @@ $$ s_1 \lt -\nu\gamma + \sqrt{2}y - x. $$
 
 This makes the probability that the first heat winner wins it all, conditioned on their first heat time $-\gamma + x$ and the competitions time $-\gamma + y$ equal to
 
-$$ P(\text{heat 1 winner wins}\rvert x, y) = f(-\nu\gamma + \sqrt{2}y - x) = \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
+$$ 
+    \begin{align}
+        P(\text{heat 1 winner wins}\rvert x, y) &= f(-\nu\gamma + \sqrt{2}y - x) \\ 
+        &= \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z).
+    \end{align}
+$$
 
 In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. This time we're going to preserve $f$ for the bulk and just use the $\mathcal{N}(z)/z$ approximation to extract the the fluctuation.
 
