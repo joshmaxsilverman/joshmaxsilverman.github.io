@@ -227,7 +227,7 @@ which, solving for $\gamma$ gets us
 $$ 
     \begin{align}
         \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
-        &= \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}{\sqrt{2\log N}}
+        &= \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
     \end{align}. 
 $$
 
