@@ -94,7 +94,7 @@ To win the first heat, they need the probability of beating their first heat tim
 
 The probability that a normal variable is less than a target $v$ is 
 
-$$ P(z < v) = \int\limits_{-\infty}^v \text{d}z\, \mathcal{N}(z), $$
+$$ P(z < -v) = \int\limits_{-\infty}^{-v} \text{d}z\, \mathcal{N}(z), $$
 
 which is approximated by 
 
