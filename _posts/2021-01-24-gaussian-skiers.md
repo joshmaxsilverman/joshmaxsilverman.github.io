@@ -222,12 +222,12 @@ Plugging back in in, we get the new equation
 
 $$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
 
-which, solving for $\gamma$ gets us 
+which, solving for $\gamma$ and linearly expanding the root gets us 
 
 $$ 
     \begin{align}
-        \gamma \approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
-        &= \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
+        \gamma &\approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
+        &\approx \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
     \end{align}. 
 $$
 
@@ -279,7 +279,12 @@ $$
 
 The $x$ and $y$ integrals are versions of the integral from our original calculation, and applying the same pattern, we get
 
-$$ P(\text{heat 1 winner wins}) = f(-\nu\gamma)\Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu). $$
+$$ 
+    \begin{align}
+        P(\text{heat 1 winner wins}) &\approx f(-\nu\gamma)\Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu)\\
+        &= \frac12 \text{erfc}(-\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}})\Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2}). 
+    \end{align}
+$$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
