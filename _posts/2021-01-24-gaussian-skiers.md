@@ -244,9 +244,9 @@ This makes the probability that the first heat winner wins it all, conditioned o
 
 $$ P(\text{heat 1 winner wins}\rvert x, y) = f(-\nu\gamma + \sqrt{2}y - x) = \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z). $$
 
-In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. 
+In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. This time we're going to preserve $f$ for the bulk and just use the $\mathcal{N}(z)/z$ approximation to extract the the fluctuation.
 
-We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \delta)$ in terms of $f(-\nu\gamma).$ Using the same $\mathcal{N}(z)/z$ approximation, we get
+We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \delta)$ in terms of $f(-\nu\gamma).$ Applying the same $\mathcal{N}(z)/z$ approximation, we get
 
 $$ \begin{align}
     f(-\nu\gamma + \delta) &\approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \delta)}{\mathcal{N}(-\nu\gamma)} \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
@@ -254,11 +254,11 @@ $$ \begin{align}
     &\approx f(-\nu\gamma)e^{\nu\gamma\delta}.
     \end{align}$$
 
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
+Now, all have to do is put the integral back together. The probability that the winner of heat $1$ wins the race is
+
+$$ P(\text{heat 1 winner wins}) = \int\text{d} \int\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) P(x) P(x). $$
+
+As before, $P(x) \approx \gamma e^{-e^{\gamma x}}.$ $y,$ being the minimum of nearly as many normal variables is also distributed
 
 
 
