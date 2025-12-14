@@ -198,15 +198,15 @@ $$
 
 As the number of racers increases the advantage of the first heat winner grows, far exceeding $1/N.$
 
-To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, model the fluctuations in the second place racer, and use higher iteration estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
+To get more accurate predictions for small $N,$ we'd need to perturbatively develop the $e^{-x^2/2\gamma^2}$ that we dropped for the approximation, model the fluctuations in the second place racer, and use a higher fidelity estimates for $\gamma.$ The perturbative terms shrink with powers of $1/\log N$, so convergence is slow, but we can already see the asymptotic result (gold curve) and the simulation (blue points) converging.
 
 ## Update 2025-12-11
 
-Let's make the improvements suggested above:
+The wonder's never cease. In this update we're going to make two of the improvements suggested above:
 - modeling the fluctuations of the next best racer
-- using the iterated approximation for the expected minimum
+- use the inverse error function to approximate the extrema
 
-In our original scheme to approximate for $\gamma,$ we approximated the integral
+In our original scheme to find the approximate value of $\gamma,$ we approximated the integral
 
 $$ P(z < -\gamma) = \int\limits_{-\infty}^{-\gamma} \text{d}z\, \mathcal{N}(z) $$ 
 
@@ -220,67 +220,54 @@ $$
     \end{align}
 $$
 
-dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. But if we don't make the integral approximation, we can just write the solution in terms of the complementary error function. After rescaling the variable of integration, the integral is equal to half the error function of $\gamma/\sqrt{2}:$
+dropped the $\log\sqrt{2\pi}\gamma$ term and solved for $\gamma$ to find $\gamma \approx \sqrt{2\log N}$ and called it a day. 
+
+But if we don't make the integral approximation, we can just write the solution in terms of the complementary error function. After rescaling the variable of integration, the integral is equal to half the error function of $\gamma/\sqrt{2}:$
 
 $$ P(z < -\gamma) = \frac12\text{erfc}(\gamma/\sqrt{2}). $$ 
 
 So, the $\gamma$ we are after is $\gamma \approx \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
 
-<!-- However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
-
-Plugging back in in, we get the new equation
-
-$$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
-
-which, solving for $\gamma$ and linearly expanding the root gets us 
-
-$$ 
-    \begin{align}
-        \gamma &\approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
-        &\approx \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
-    \end{align}. 
-$$ -->
-
-<!-- Note that previously, the approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ The refined approximation means we'll have to preserve the integration. -->
-
 Our original condition for Racer $1$ to win pegged the second best racer at constant $-\gamma,$ so we had
 
-$$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma $$
+$$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma. $$
 
-However, the minimum of the competition will fluctuate around $-\gamma$ just like Racer $1$ does. Accounting for this, we get the new condition
+However, the minimum of the competition will fluctuate around $-\gamma$ just the winner of heat $1$ does. Accounting for this, we get the new condition
 
-$$ \frac{-\gamma + x+s_1}{\sqrt{2}} < -\gamma + y $$
+$$ \begin{align}
+    \frac{-\gamma + x+s_1}{\sqrt{2}} &< -\gamma + y \\
+   s_1 &\lt -\nu\gamma + \sqrt{2}y - x. 
+   \end{align}
+$$
 
-or
-
-$$ s_1 \lt -\nu\gamma + \sqrt{2}y - x. $$
-
-This makes the probability that the first heat winner wins it all, conditioned on their first heat time $-\gamma + x$ and the competitions time $-\gamma + y$ equal to
+This makes the probability that the first heat winner wins it all, conditioned on their first heat time $-\gamma + x,$ and the competition's time $-\gamma + y,$ equal to
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}\rvert x, y) &= f(-\nu\gamma + \sqrt{2}y - x) \\ 
-        &= \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z).
+        P(\text{heat 1 winner wins}\rvert x, y) &= \int\limits_{-\infty}^{-\nu\gamma +\sqrt{2}y - x} \text{d}z\, \mathcal{N}(z)\\
+        &= f(-\nu\gamma + \sqrt{2}y - x).
     \end{align}
 $$
 
-In our original calculation, we approximated this step using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could take advantage of $e^{-\gamma^2/2} \approx N.$ However, we then dropped terms in the denominator, introducing new error. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. This time we're going to preserve $f$ for the bulk and just use the $\mathcal{N}(z)/z$ approximation to extract the the fluctuation.
+In the original calculation, we approximated this quantity using $f(z) \approx \mathcal{N}(z)/z,$ which was in part motivated by the fact that we could then take advantage of $e^{-\gamma^2/2} \approx 1/N.$ However, this approximation has low accuracy for small $\gamma$ and since $\gamma$ is logarithmic in $N,$ this is a source of slow convergence. And in any case, with our refined estimate for $\gamma,$ we can't make that substitution. This time we're going to preserve $f$ for the bulk and only use the $\mathcal{N}(z)/z$ approximation to extract the the fluctuation.
 
-We're assuming that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \delta)$ in terms of $f(-\nu\gamma).$ Applying the same $\mathcal{N}(z)/z$ approximation, we get
+We assume that the fluctuations around $-\gamma$ are small compared to $\gamma,$ so $\left(x - \sqrt{2}y\right)$ is small compared to $\nu\gamma.$ This means we can approximate $f(-\nu\gamma + \delta)$ in terms of $f(-\nu\gamma).$ 
+
+Applying the same $\mathcal{N}(z)/z$ approximation, we get
 
 $$ \begin{align}
-    f(-\nu\gamma + \delta) &\approx f(-\nu\gamma) \frac{\mathcal{N}(-\nu\gamma + \delta)}{\mathcal{N}(-\nu\gamma)} \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
-    &= f(-\nu\gamma)\exp\left[{\frac12\nu^2\gamma^2 - \frac12(\nu^2\gamma^2 - 2\nu\gamma\delta + \delta^2)}\right]\frac{-\nu\gamma}{-\nu\gamma + \delta} \\
+    f(-\nu\gamma + \delta) &\approx f(-\nu\gamma) \cdot \frac{\mathcal{N}(-\nu\gamma + \delta)}{\mathcal{N}(-\nu\gamma)} \cdot \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
+    &= f(-\nu\gamma)\cdot \exp\left[{\frac12\nu^2\gamma^2 - \frac12(\nu^2\gamma^2 - 2\nu\gamma\delta + \delta^2)}\right]\cdot \frac{-\nu\gamma}{-\nu\gamma + \delta} \\
     &\approx f(-\nu\gamma)e^{\nu\gamma\delta}.
     \end{align}$$
 
-Now, all have to do is put the integral back together. The probability that the winner of heat $1$ wins the race is
+Now, all have to do is put the integral back together. The probability that the winner of heat $1$ wins the race is now an integral over the heat $1$ winner's heat $1$ time, through $x,$ and the second place racer's total time, through $y:$
 
 $$ \begin{align}
     P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) \\
     &\quad \times P(\text{first heat time is}\, -\gamma + x) P(\text{second place total time is}\, -\gamma + y).\end{align} $$
 
-As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and $y,$ being the minimum of nearly as many normal variables, is also distributed like $P(x) \approx \gamma e^{-e^{\gamma y}},$ so we get
+As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and now $y,$ being the minimum of nearly as many random normal variables, is also distributed like $P(y) \approx \gamma e^{-e^{\gamma y}},$ so we get
 
 $$ 
     \begin{align}
@@ -289,7 +276,7 @@ $$
     \end{align}
 $$
 
-The $x$ and $y$ integrals are versions of the integral from our original calculation. Applying the same pattern, and re-expressing $f$ in terms of the complementary error function, we get
+The $x$ and $y$ integrals are versions of the integral in our original calculation. Applying the same pattern, and re-expressing $f$ in terms of the complementary error function, we get
 
 $$ 
     \begin{align}
@@ -299,13 +286,19 @@ $$
     \end{align}
 $$
 
-Before we graph it let's take stock of its features. Aesthetically, it seems like a clear win. On grounds of transparency, it depends on your intuition with the error function. However, on the most important ground of accuracy, it's an unmitigated triumph:
+Before we graph it, let's take stock of its features. 
+
+Aesthetically, it seems like a clear win. On grounds of transparency, it depends on your intuition with the error function. However, on the most important ground of accuracy, it's an unmitigated triumph:
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot-erfc.png){:width="450 px" class="image-centered"}
 
-The light salmon curve shows the original model, and gold shows the refined model. The fidelity at small $N$ is significantly improved, already in the ball park for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ gives $\approx 30.4\%$ compared to $31.5\%.$ 
+The light salmon curve shows the original model, and the gold curve shows the refined model. The fidelity at small $N$ is significantly improved, already in the ball park for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ gives $\approx 30.4\%$ compared to $31.5\%.$ 
 
-Given the invert $\rightarrow$ scale $\rightarrow$ remap structure of the solution, we can even interpret the shape... the $\text{erfc}^{-1}(2/N)$ asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large, then gets slightly more than halved, before getting remapped by "what is the tail area beyond $N$?" yielding a slightly larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}.$
+Given the invert $\rightarrow$ scale $\rightarrow$ remap structure of the solution, we can even use it to anticipate the shape. 
+
+The $\text{erfc}^{-1}(2/N)$ piece asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large. 
+
+That answer then then gets slightly more than halved by the factor $(\sqrt{2}-1\)$, before the second $\text{erfc}$ asks by "what is the tail area beyond this value of $N$?" with the overall effect yielding a larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}(\log N).$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
@@ -414,3 +407,21 @@ $$ P = \frac{1}{\gamma^2}\frac{N^{-\eta}}{\left(2\pi\right)^{3/2}} \int \text{d}
 What we ultimately want to know is how this integral scales in terms of the number of racers $N.$ If we keep all the terms in $\alpha$ and $\beta$ when we perform the integral, we would get not just this scaling form, but the numerical value of the coefficients on the terms. -->
  
 <br>
+
+
+<!-- However, this is now a good approximation for the value of $\gamma$ which lets use replace the dropped term with a numerical approximation. 
+
+Plugging back in in, we get the new equation
+
+$$ \gamma^2/2 + \log \sqrt{2\pi}\sqrt{2 \log N} = \log N $$
+
+which, solving for $\gamma$ and linearly expanding the root gets us 
+
+$$ 
+    \begin{align}
+        \gamma &\approx \sqrt{2} \sqrt{\log N - \log \left(2 \sqrt{\pi\log N}\right)}\\
+        &\approx \sqrt{2\log N} - \frac{\log 2 \sqrt{\pi \log N}}{\sqrt{2\log N}}
+    \end{align}. 
+$$ -->
+
+<!-- Note that previously, the approximation $\gamma \approx \sqrt{2\log N}$ allowed us to replace $e^{-\gamma^2/2}$ with $N.$ The refined approximation means we'll have to preserve the integration. -->
