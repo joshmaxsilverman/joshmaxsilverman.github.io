@@ -280,9 +280,9 @@ The $x$ and $y$ integrals are versions of the integral in our original calculati
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &\approx \Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu)f(-\nu\gamma) \\
-        &= \Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2})\frac12 \text{erfc}\left[\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}}\right] \\
-        &= \frac{2-\sqrt{2}}{2}\Gamma(2-\sqrt{2})^2 \text{erfc}\left[\left(\sqrt{2}-1\right)\text{erfc}^{-1}\left[\frac{2}{N}\right]\right].
+        P(\text{heat 1 winner wins}) &\approx f(-\nu\gamma)\Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu) \\
+        &= \frac12 \text{erfc}\left[\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}}\right]\Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2}) \\
+        &= \text{erfc}\left[\left(\sqrt{2}-1\right)\text{erfc}^{-1}\left[\frac{2}{N}\right]\right]\frac{2-\sqrt{2}}{2}\Gamma(2-\sqrt{2})^2 .
     \end{align}
 $$
 
