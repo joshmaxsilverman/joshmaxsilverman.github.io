@@ -271,8 +271,8 @@ As before, $P(x) \approx \gamma e^{\gamma x}e^{-e^{\gamma x}}$ and now $y,$ bein
 
 $$ 
     \begin{align}
-        P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, f(-\nu\gamma)e^{\nu\gamma \sqrt{2}y}e^{-\nu\gamma x}\gamma^2 e^{-e^{\gamma x}} e^{-e^{\gamma y}} \\
-        &= f(-\nu\gamma)\int\limits_{-\infty}^\infty\text{d}x e^{-\nu\gamma x}\gamma^2 e^{-e^{\gamma x}}\int\limits_{-\infty}^\infty\text{d}y\, e^{\nu\gamma \sqrt{2}y} e^{-e^{\gamma y}}.
+        P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, f(-\nu\gamma)e^{\nu\gamma \sqrt{2}y}e^{-\nu\gamma x}\gamma^2 e^{\gamma x}e^{-e^{\gamma x}} e^{\gamma y}e^{-e^{\gamma y}} \\
+        &= f(-\nu\gamma)\int\limits_{-\infty}^\infty\text{d}x e^{-\nu\gamma x}\gamma^2 e^{\gamma x} e^{-e^{\gamma x}}\int\limits_{-\infty}^\infty\text{d}y\, e^{\nu\gamma \sqrt{2}y} e^{\gamma y}e^{-e^{\gamma y}}.
     \end{align}
 $$
 
