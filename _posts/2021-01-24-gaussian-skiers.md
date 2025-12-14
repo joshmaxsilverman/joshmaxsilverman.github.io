@@ -202,9 +202,9 @@ To get more accurate predictions for small $N,$ we'd need to perturbatively deve
 
 ## Update 2025-12-11
 
-The wonder's never cease. In this update we're going to make two of the improvements suggested above:
+The wonders never cease. In this update we're going to make two of the improvements suggested above:
 - modeling the fluctuations of the next best racer
-- use the inverse error function to approximate the extrema
+- use the inverse complementary error function to approximate the extrema
 
 In our original scheme to find the approximate value of $\gamma,$ we approximated the integral
 
@@ -226,9 +226,9 @@ But if we don't make the integral approximation, we can just write the solution 
 
 $$ P(z < -\gamma) = \frac12\text{erfc}(\gamma/\sqrt{2}). $$ 
 
-So, the $\gamma$ we are after is $\gamma \approx \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
+So, the $\gamma$ we are after is $\gamma = \sqrt{2}\text{erfc}^{-1}\left(\frac{2}{N}\right).$
 
-Our original condition for Racer $1$ to win pegged the second best racer at constant $-\gamma,$ so we had
+Our original condition for the winner of heat $1$ to win it all pegged the second best racer at constant $-\gamma,$ so we had
 
 $$ \frac{f_1+s_1}{\sqrt{2}} < -\gamma. $$
 
@@ -267,7 +267,7 @@ $$ \begin{align}
     P(\text{heat 1 winner wins}) &= \int\limits_{-\infty}^\infty\text{d}x \int\limits_{-\infty}^\infty\text{d}y\, P(\text{heat 1 winner wins}\rvert x, y) \\
     &\quad \times P(\text{first heat time is}\, -\gamma + x) P(\text{second place total time is}\, -\gamma + y).\end{align} $$
 
-As before, $P(x) \approx \gamma e^{-e^{\gamma x}}$ and now $y,$ being the minimum of nearly as many random normal variables, is also distributed like $P(y) \approx \gamma e^{-e^{\gamma y}},$ so we get
+As before, $P(x) \approx \gamma e^{\gamma x}e^{-e^{\gamma x}}$ and now $y,$ being the minimum of nearly as many random normal variables, is also distributed like $P(y) \approx \gamma e^{\gamma y}e^{-e^{\gamma y}},$ so we get
 
 $$ 
     \begin{align}
@@ -281,7 +281,7 @@ The $x$ and $y$ integrals are versions of the integral in our original calculati
 $$ 
     \begin{align}
         P(\text{heat 1 winner wins}) &\approx \Gamma(1-\nu)\Gamma(1 + \sqrt{2}\nu)f(-\nu\gamma) \\
-        &= \Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2})\frac12 \text{erfc}\left[-\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}}\right] \\
+        &= \Gamma(2-\sqrt{2})\Gamma(3-\sqrt{2})\frac12 \text{erfc}\left[\frac{(\sqrt{2}-1)\gamma}{\sqrt{2}}\right] \\
         &= \frac{2-\sqrt{2}}{2}\Gamma(2-\sqrt{2})^2 \text{erfc}\left[\left(\sqrt{2}-1\right)\text{erfc}^{-1}\left[\frac{2}{N}\right]\right].
     \end{align}
 $$
@@ -292,13 +292,13 @@ Aesthetically, it seems like a clear win. On grounds of transparency, it depends
 
 ![](/img/2025-11-28-fiddler-gaussian-skier-plot-erfc.png){:width="450 px" class="image-centered"}
 
-The light salmon curve shows the original model, and the gold curve shows the refined model. The fidelity at small $N$ is significantly improved, already in the ball park for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ gives $\approx 30.4\%$ compared to $31.5\%.$ 
+The light salmon curve shows the original model, and the gold curve shows the refined model. The fidelity at small $N$ is significantly improved, already in the ballpark for $N=2$, giving $\approx 67.9\%$ compared to the true answer of $0.75,$ and for $N=30$ gives $\approx 30.4\%$ compared to $31.5\%.$ 
 
 Given the invert $\rightarrow$ scale $\rightarrow$ remap structure of the solution, we can even use it to anticipate the shape. 
 
-The $\text{erfc}^{-1}(2/N)$ piece asks "at what $N$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large. 
+The $\text{erfc}^{-1}(2/N)$ piece asks "at what threshold $z$ is the tail area equal to $2/N$?," and so returns large arguments when $N$ is large. 
 
-That answer then then gets slightly more than halved by the factor $(\sqrt{2}-1\)$, before the second $\text{erfc}$ asks by "what is the tail area beyond this value of $N$?" with the overall effect yielding a larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}(\log N).$
+That answer then gets slightly more than halved by the factor $(\sqrt{2}-1\)$, before the second $\text{erfc}$ asks "what is the tail area beyond this value of $N$?" with the overall effect yielding a larger small number. This is in line with the shallow decay compared to standard issue $\text{erfc}(\log N).$
 
 <!--
 As the number of racers gets big, the exponent on $J$ will crush the product toward zero except where $J$ is close to $1.$ Any deviations from that region will be punished with increasing severity as $N$ grows.
