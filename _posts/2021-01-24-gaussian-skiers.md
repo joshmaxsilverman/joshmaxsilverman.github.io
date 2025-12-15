@@ -42,7 +42,7 @@ def round(N):
     data = np.random.normal(0, 1, size=N)
     first_win = data.argmin()
 
-    data += np.random.normal(0, 1, size = N)
+    data += np.random.normal(0, 1, size=N)
     overall_win = data.argmin()
 
     if first_win == overall_win:
