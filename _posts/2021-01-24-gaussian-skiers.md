@@ -145,7 +145,7 @@ Now, the probability that a single racer's first heat time is over $-\gamma + x$
 
 $$
     \begin{align}
-        P(\text{first heat time < }-\gamma + x) &= \frac{1}{\sqrt{2\pi}}\frac{\mathcal{N}(-\gamma + x)}{(\gamma + x)} \\
+        P(\text{first heat time < }-\gamma + x) &= \frac{\mathcal{N}(-\gamma + x)}{(\gamma + x)} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(-\gamma + x)^2/2}}{(\gamma + x)} \\
         &= \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma + x^2)/2}}{(\gamma + x)} \\ 
         &\approx \frac{1}{\sqrt{2\pi}}\frac{e^{-(\gamma^2 -2x\gamma)/2}}{\gamma} \\
