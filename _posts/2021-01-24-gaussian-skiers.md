@@ -38,18 +38,16 @@ A simulation suggests a roughly linear decrease on log-log axes, and yields $P_{
 
 ```python
 def round(N):
-    data = [ np.random.normal() for _ in range(N) ]
-    first_win = data.index(min(data))
-    for i in range(N):
-        data[i] += np.random.normal()
-    overall_win = data.index(min(data))
+    
+    data = np.random.normal(0, 1, size=N)
+    first_win = data.argmin()
+
+    data += np.random.normal(0, 1, size = N)
+    overall_win = data.argmin()
+
     if first_win == overall_win:
         return 1
-    else:
-        return 0
-  
-domain = range(2, 50, 2)
-datapoints = [np.mean([round(N) for _ in range(100000)])  for N in domain]
+    return 0
 ```
 
 My attempts at an approximate solution for $N=30$ got the right shape, but took too long to "turn up". Updates forthcoming if I make progress.
