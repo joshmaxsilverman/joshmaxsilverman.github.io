@@ -17,17 +17,17 @@ Take a vector $ \mathbf{V}(X) = V^i(X) e_i(X) $ where $e_i(X)$ is the $i^\text{t
 
 The basis vectors at each point come from the map from surface coordinates to position in the embedding space: ${\mathbf{r}(X) = \langle \gamma_1(X), \gamma_2(X), \ldots, \gamma_d(X)\rangle,}$ so that $e_j = \partial \boldsymbol{\gamma} / \partial X^j.$ This means that we can freely flip flop derivatives of the basis vectors with respect to surface coordinates like $\partial e_i/\partial X^j \leftrightarrow \partial e_j/\partial X^i.$
 
-If we advance along the path, resulting in a shift of $dX = \epsilon^j e_j$ in the coordinates of the surface, the new vector is $$V^i(X+\Delta X)e_i(X+ \Delta X).$$ Expanding this, subtracting $\mathbf{V}(X),$ and dropping second order terms we get (Einstein convention implied)
+If we advance along the path, resulting in a shift of $dX = \Delta X^j$ in the coordinates of the surface, the new vector is $$V^i(X+\Delta X)e_i(X+ \Delta X).$$ Expanding this, subtracting $\mathbf{V}(X),$ and dropping second order terms we get (Einstein convention implied)
 
-$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \frac{\partial e_i(X)}{\partial X^j}\right) \epsilon^j e_j. $$
+$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \frac{\partial e_i(X)}{\partial X^j}\right) \Delta X^j. $$
 
-The first term corresponds to the ordinary Jacobian while the second term is the new stuff corresponding to the variation of the basis vectors. The derivative of the basis vector $e_i(X)$ with respect to the coordinate $X_j$ can be expressed in terms of the basis vectors at $X,$ e.g. some superposition $\Gamma^k_{ij} e_k(X).$
+The first term corresponds to the ordinary Jacobian while the second term is the new stuff corresponding to the variation of the basis vectors. The derivative of the basis vector $e_i(X)$ with respect to the coordinate $X^j$ can be expressed in terms of the basis vectors at $X,$ e.g. some superposition $\Gamma^k_{ij} e_k(X)$ plus some normal component.
 
 Focusing on this, we have, so far
 
-$$ \frac{\partial e_i}{\partial X^j} = \Gamma^k_{ij} e_k. $$
+$$ \frac{\partial e_i}{\partial X^j} = \Gamma^k_{ij} e_k _ \text{normal}. $$
 
-Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ getting the metric tensor on the right side
+Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ getting the metric tensor on the right side and killing the normal component
 
 $$
   \begin{align}
@@ -42,8 +42,8 @@ $$
    \end{align}
 $$
 
-Now, we can write the covariant derivative of $V$ at $X$ like 
+Now, we can write the covariant derivative $\rf{D}_j$ of $\mathbf{V}$ at $X$ in the direction of $e_j$ like like 
 
-$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i. $$
+$$ \rf{D}_j \mathbf{V} = \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i. $$
 
 <br>
