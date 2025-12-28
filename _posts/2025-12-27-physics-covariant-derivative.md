@@ -30,9 +30,11 @@ Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ g
 $$
   \begin{align}
      e_m \Gamma^k_{ij} e_k  &= e_m\frac{\partial e_i}{\partial X_j} \\
-       \Gamma^k_{ij}e_m e_k &=e_m \frac12\left[\frac{\partial e_i}{\partial X_j} + \frac{\partial e_j}{\partial X_i}\right]- \\
-      \Gamma^k_{ij} g_{mk} &= \frac{\partial e_m e_i}{\partial X_j} - \frac{\partial e_m}{\partial X_j}e_i \\
-     &= \frac12\left[\frac{\partial e_m e_i}{\partial X_j} + \frac{\partial e_m e_j}{\partial X_i}\right] - 
+       \Gamma^k_{ij}e_m e_k &=e_m \frac12\left[\frac{\partial e_i}{\partial X_j} + \frac{\partial e_j}{\partial X_i}\right] \\
+      \Gamma^k_{ij} g_{mk} &= \frac12\left[\frac{\partial e_me_i}{\partial X_j} + \frac{\partial e_me_j}{\partial X_i} - \frac{e_i\partial e_m}{\partial X_j} + \frac{e_j\partial e_m}{\partial X_i}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - e_i\frac{\partial e_j}{\partial X_m} - e_j\frac{\partial e_i}{\partial X_m}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - e_i\frac{\partial e_j}{\partial X_m} - e_j\frac{\partial e_i}{\partial X_m}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial e_ie_j}{\partial X_m}\right]
    \end{align}
 $$
 
