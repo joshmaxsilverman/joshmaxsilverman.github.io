@@ -29,14 +29,14 @@ Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ g
 
 $$
   \begin{align}
-     e_m \Gamma^k_{ij} e_k  &= e_m\frac{\partial e_i}{\partial X_j} \\
-       \Gamma^k_{ij}e_m e_k &=e_m \frac12\left[\frac{\partial e_i}{\partial X_j} + \frac{\partial e_j}{\partial X_i}\right] \\
-      \Gamma^k_{ij} g_{mk} &= \frac12\left[\frac{\partial e_me_i}{\partial X_j} + \frac{\partial e_me_j}{\partial X_i} - e_i\frac{\partial e_m}{\partial X_j} - e_j\frac{\partial e_m}{\partial X_i}\right] \\
-     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - e_i\frac{\partial e_j}{\partial X_m} - e_j\frac{\partial e_i}{\partial X_m}\right] \\
-     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial e_ie_j}{\partial X_m}\right] \\
-     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial g_{ij}}{\partial X_m}\right] \\
-     \Gamma^k_{ij} g^{\ell m}g_{mk} &= g^{\ell m} \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial g_{ij}}{\partial X_m}\right] \\
-     \Gamma^{\ell}_{ij} &= g^{\ell m} \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial g_{ij}}{\partial X_m}\right]
+     e_m \Gamma^k_{ij} e_k  &= e_m\frac{\partial e_i}{\partial X^j} \\
+       \Gamma^k_{ij}e_m e_k &=e_m \frac12\left[\frac{\partial e_i}{\partial X^j} + \frac{\partial e_j}{\partial X^i}\right] \\
+      \Gamma^k_{ij} g_{mk} &= \frac12\left[\frac{\partial e_me_i}{\partial X^j} + \frac{\partial e_me_j}{\partial X^i} - e_i\frac{\partial e_m}{\partial X^j} - e_j\frac{\partial e_m}{\partial X^i}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - e_i\frac{\partial e_j}{\partial X^m} - e_j\frac{\partial e_i}{\partial X^m}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial e_ie_j}{\partial X^m}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial g_{ij}}{\partial X^m}\right] \\
+     \Gamma^k_{ij} g^{\ell m}g_{mk} &= g^{\ell m} \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial g_{ij}}{\partial X^m}\right] \\
+     \Gamma^{\ell}_{ij} &= g^{\ell m} \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial g_{ij}}{\partial X^m}\right]
    \end{align}
 $$
 
