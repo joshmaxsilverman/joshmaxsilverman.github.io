@@ -13,7 +13,7 @@ tags:
 
 ## Argument
 
-We want to calculate the derivative of a vector $\mathbf{V}$ attached to a point that moves along the surface, in the locally flat coordinates of the surface at that point.
+We want to calculate the derivative of a vector $\mathbf{V}$ attached to a point that moves along the surface, in the locally flat coordinates of the surface at that point, along some particular direction.
 
 Take a vector $\mathbf{V}(X) = V^i(X) e_i(X)$ where $e_i(X)$ is the $i^\text{th}$ basis vector. The components of $\mathbf{V}$ can change because the $V^i$ change, due to some physical process, or because the basis vectors have changed due to variation of the surface. 
 
