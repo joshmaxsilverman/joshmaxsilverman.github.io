@@ -44,6 +44,11 @@ $$
 
 Now, we can write the covariant derivative $D_j$ of $\mathbf{V}$ at $X$ in the direction of $e_j$ like like 
 
-$$ D_j \mathbf{V} = \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X). $$
+$$ 
+  \begin{align}
+    D_j \mathbf{V} &= \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right) \\
+                   &= \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X).
+  \end{align} 
+$$
 
 <br>
