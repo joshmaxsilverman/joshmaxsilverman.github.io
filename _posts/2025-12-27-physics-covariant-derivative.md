@@ -13,7 +13,7 @@ tags:
 
 ## Argument
 
-We want to calculate the derivative of a vector $\mathbf{V}$ attached to a point that moves along the surface, in the locally flat coordinates of the surface at that point, along some particular direction.
+We want to calculate the derivative of a vector $\mathbf{V}$ attached to a point that moves along the surface, in the coordinates of the surface, along some particular direction, at that point.
 
 Take a vector $\mathbf{V}(X) = V^i(X) e_i(X)$ where $e_i(X)$ is the $i^\text{th}$ basis vector. The components of $\mathbf{V}$ can change because the $V^i$ change, due to some physical process, or because the basis vectors have changed due to variation of the surface. 
 
@@ -36,7 +36,7 @@ $$
     \Gamma^k_{ij} e_m\cdot e_k  &= e_m\cdot \frac{\partial e_i}{\partial X^j} + e_m\cdot \text{normal} \\
        \Gamma^k_{ij}g_{mk} &=e_m\cdot \frac12\left[\frac{\partial e_i}{\partial X^j} + \frac{\partial e_j}{\partial X^i}\right] \\
                            &= \frac12\left[\frac{\partial e_m\cdot e_i}{\partial X^j} + \frac{\partial e_m\cdot e_j}{\partial X^i} - e_i\cdot \frac{\partial e_m}{\partial X^j} - e_j\cdot \frac{\partial e_m}{\partial X^i}\right] \\
-     &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - e_i\frac{\partial e_j}{\partial X^m} - e_j\cdot \frac{\partial e_i}{\partial X^m}\right] \\
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - e_i\cdot\frac{\partial e_j}{\partial X^m} - e_j\cdot \frac{\partial e_i}{\partial X^m}\right] \\
      &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial e_i\cdot e_j}{\partial X^m}\right] \\
      &= \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial g_{ij}}{\partial X^m}\right] \\
      \Gamma^k_{ij} g^{\ell m}g_{mk} &= g^{\ell m} \frac12\left[\frac{\partial g_{mi}}{\partial X^j} + \frac{\partial g_{mj}}{\partial X^i} - \frac{\partial g_{ij}}{\partial X^m}\right] \\
@@ -44,7 +44,7 @@ $$
    \end{align}
 $$
 
-Now, we can write the covariant derivative $D_{\Delta X}$ of $\mathbf{V}$ at $X$ in the direction of $\Delta X$ like 
+Now, switching labels $k\leftrightarrow i,$ we can write the covariant derivative $D_{\Delta X}$ of $\mathbf{V}$ at $X$ in the direction of $\Delta X$ like 
 
 $$ 
   \begin{align}
