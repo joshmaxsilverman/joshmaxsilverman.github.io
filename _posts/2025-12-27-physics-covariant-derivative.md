@@ -15,7 +15,7 @@ tags:
 
 Take a vector $ \mathbf{V}(X) = V^i(X) e_i(X) $ where $e_i(X)$ is the $i^\text{th}$ basis vector. The components of $\mathbf{V}$ can change because the $V^i$ change, due to some physical process, or because the basis vectors have changed due to variation of the surface. 
 
-The basis vectors at each point come from the map from surface coordinates to position in the embedding space: ${\mathbf{r}(X) = \langle \gamma_1(X), \gamma_2(X), \ldots, \gamma_d(X)\rangle,}$ so that $e_j = \partial \boldsymbol{\gamma} / \partial X^j.$ This means that we can freely flip flop derivatives of the basis vectors with respect to surface coordinates like $\partial e_i/\partial X^j \leftrightarrow \partial e_j/\partial X^i.$
+The basis vectors at each point come from the map from surface coordinates to position in the embedding space: ${\mathbf{r}(X) = \boldsymbol{\gamma}(X)= \langle \gamma_1(X), \gamma_2(X), \ldots, \gamma_d(X)\rangle,}$ so that $e_j = \partial \boldsymbol{\gamma}(X) / \partial X^j.$ This means that we can freely flip flop derivatives of the basis vectors with respect to surface coordinates like $\partial e_i/\partial X^j \leftrightarrow \partial e_j/\partial X^i.$
 
 If we advance along the path, resulting in a shift of $\Delta X^j$ in the coordinates of the surface, the new vector is $$V^i(X+\Delta X)e_i(X+ \Delta X).$$ Expanding this, subtracting $\mathbf{V}(X),$ and dropping second order terms we get (Einstein convention implied)
 
@@ -42,12 +42,12 @@ $$
    \end{align}
 $$
 
-Now, we can write the covariant derivative $D_j$ of $\mathbf{V}$ at $X$ in the direction of $e_j$ like like 
+Now, we can write the covariant derivative $D_{\Delta X}$ of $\mathbf{V}$ at $X$ in the direction of $\Delta X$ like 
 
 $$ 
   \begin{align}
-    D_j \mathbf{V} &= \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right) \\
-                   &= \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X).
+    D_{\Delta X} \mathbf{V} &= \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right)\Delta X^j \\
+                   &= \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X)\Delta X^j.
   \end{align} 
 $$
 
