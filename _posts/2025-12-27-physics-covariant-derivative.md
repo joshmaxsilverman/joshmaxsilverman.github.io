@@ -29,7 +29,7 @@ Now we need to isolate $\Gamma^k_{ij}.$ We can multiply both sides by $e_m,$ get
 
 $$
   \begin{align}
-     e_m \Gamma^k_{ij} e_k  &= e_m \frac{\partial e_i}{\partial X_j} \\
+     e_m \Gamma^k_{ij} e_k  &= e_m \frac12\left[\frac{\partial e_i}{\partial X_j} + \frac{\partial e_j}{\partial X_i}\right- \\
      \Gamma^k_{ij}e_m e_k &= \frac{\partial e_m e_i}{\partial X_j} - \frac{\partial e_m}{\partial X_j}e_i \\
      &= \frac12\left[\frac{\partial e_m e_i}{\partial X_j} + \frac{\partial e_m e_j}{\partial X_i}\right] - 
    \end{align}
