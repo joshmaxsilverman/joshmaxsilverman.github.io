@@ -34,7 +34,7 @@ $$
       \Gamma^k_{ij} g_{mk} &= \frac12\left[\frac{\partial e_me_i}{\partial X_j} + \frac{\partial e_me_j}{\partial X_i} - e_i\frac{\partial e_m}{\partial X_j} - e_j\frac{\partial e_m}{\partial X_i}\right] \\
      &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - e_i\frac{\partial e_j}{\partial X_m} - e_j\frac{\partial e_i}{\partial X_m}\right] \\
      &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial e_ie_j}{\partial X_m}\right] \\
-     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial g_{ij}{\partial X_m}\right]
+     &= \frac12\left[\frac{\partial g_{mi}}{\partial X_j} + \frac{\partial g_{mj}}{\partial X_i} - \frac{\partial g_{ij}}{\partial X_m}\right]
    \end{align}
 $$
 
