@@ -48,8 +48,8 @@ Now, switching labels $k\leftrightarrow i,$ we can write the covariant derivativ
 
 $$ 
   \begin{align}
-    D_{\Delta X} \mathbf{V} &= \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right)\Delta X^j \\
-                   &= \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X)\Delta X^j.
+    D_{\Delta X} \mathbf{V} &= \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i(X)\right)\frac{\Delta X^j}{\lvert\Delta X\rvert} \\
+                   &= \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i(X)\frac{\Delta X^j}{\lvert\Delta X\rvert}.
   \end{align} 
 $$
 
