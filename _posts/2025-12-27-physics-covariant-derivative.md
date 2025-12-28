@@ -25,7 +25,7 @@ The first term corresponds to the ordinary Jacobian while the second term is the
 
 Focusing on this, we have, so far
 
-$$ \frac{\partial e_i}{\partial X^j} = \Gamma^k_{ij} e_k _ \text{normal}. $$
+$$ \frac{\partial e_i}{\partial X^j} = \Gamma^k_{ij} e_k + \text{normal}. $$
 
 Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ getting the metric tensor on the right side and killing the normal component
 
@@ -42,8 +42,8 @@ $$
    \end{align}
 $$
 
-Now, we can write the covariant derivative $\rf{D}_j$ of $\mathbf{V}$ at $X$ in the direction of $e_j$ like like 
+Now, we can write the covariant derivative $D_j$ of $\mathbf{V}$ at $X$ in the direction of $e_j$ like like 
 
-$$ \rf{D}_j \mathbf{V} = \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i. $$
+$$ D_j \mathbf{V} = \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^k(X) \Gamma^i_{kj}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^k(X)\Gamma^i_{kj}\right)e_i. $$
 
 <br>
