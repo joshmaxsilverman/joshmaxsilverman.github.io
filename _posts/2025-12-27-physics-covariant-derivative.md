@@ -19,13 +19,13 @@ If we advance along the path, resulting in a shift of $dX$ in the coordinates of
 
 $$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \frac{\partial e_i(X)}{\partial X_j}\right) \Delta X. $$
 
-The first term corresponds to the ordinary Jacobian while the second term corresponds to the variation of the basis vectors. The derivative of the basis vector $e_i(X)$ with respect to the coordinate $X_j$ can be expressed in terms of the basis vectors at $X,$ e.g. some superposition $\Gamma^k_{ij} e_k(X).$
+The first term corresponds to the ordinary Jacobian while the second term is the new stuff corresponding to the variation of the basis vectors. The derivative of the basis vector $e_i(X)$ with respect to the coordinate $X_j$ can be expressed in terms of the basis vectors at $X,$ e.g. some superposition $\Gamma^k_{ij} e_k(X).$
 
 Focusing on this, we have, so far
 
 $$ \frac{\partial e_i}{\partial X_j} = \Gamma^k_{ij} e_k. $$
 
-Now we need to isolate $\Gamma^k_{ij}.$ We can multiply both sides by $e_m,$ getting the metric tensor on the right side
+Now we need to get $\Gamma^k_{ij}$ alone. We can multiply both sides by $e_m,$ getting the metric tensor on the right side
 
 $$
   \begin{align}
