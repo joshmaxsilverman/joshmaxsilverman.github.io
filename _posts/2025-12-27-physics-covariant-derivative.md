@@ -42,6 +42,6 @@ $$
 
 Now, we can write the derivative 
 
-$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \Gamma^i_{jk}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + \Gama^i_{jk}\right)e_i. $$
+$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \Gamma^i_{jk}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + \Gamma^i_{jk}\right)e_i. $$
 
 <br>
