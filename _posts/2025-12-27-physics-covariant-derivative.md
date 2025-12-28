@@ -40,8 +40,8 @@ $$
    \end{align}
 $$
 
-Now, we can write the derivative 
+Now, we can write the covariant derivative of $V$ at $X$ like 
 
-$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \Gamma^i_{jk}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + \Gamma^i_{jk}\right)e_i. $$
+$$ \left(\frac{\partial V^i(X)}{\partial X^j} e_i(X) + V^i(X) \Gamma^i_{jk}e_i\right) = \left(\frac{\partial V^i(X)}{\partial X^j} + V^i(X)\Gamma^i_{jk}\right)e_i. $$
 
 <br>
