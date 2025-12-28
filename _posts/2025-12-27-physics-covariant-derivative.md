@@ -23,6 +23,17 @@ The first term corresponds to the ordinary Jacobian while the second term corres
 
 Focusing on this, we have, so far
 
-$$ \frac{\partial e_i(X)}{\partial X_j} = \Gamma^k_{ij} e_k(X). $$
+$$ \frac{\partial e_i}{\partial X_j} = \Gamma^k_{ij} e_k. $$
+
+Now we need to isolate $\Gamma^k_{ij}.$ We can multiply both sides by $e_m,$ getting the metric tensor on the right side
+
+$$
+  \begin{align}
+     e_m \Gamma^k_{ij} e_k  &= e_m \frac{\partial e_i}{\partial X_j} \\
+     \Gamma^k_{ij}e_m e_k &= \frac{\partial e_m e_i}{\partial X_j} - \frac{\partial e_m}{\partial X_j}e_i
+   \end{align}
+$$
+
+\end{align} $$
 
 <br>
