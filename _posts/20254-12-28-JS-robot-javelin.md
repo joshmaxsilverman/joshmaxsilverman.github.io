@@ -64,5 +64,6 @@ c\int\limits_{t_-}^1\text{d}S_1 \right) \int\limits_{0}^{S_1}\text{d}J_1
 + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1
 + t_-\int\limits_{c}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 
 \right)
+$$
 
 <br>
