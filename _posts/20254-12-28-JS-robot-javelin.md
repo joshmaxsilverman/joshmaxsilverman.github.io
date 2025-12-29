@@ -103,7 +103,7 @@ $$
             &\int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
             &+\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
             &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
-            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}^1\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d}S_2 \\
+            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d}S_2 \\
             &= f(d,c,t_+)
     \end{align}
 $$
