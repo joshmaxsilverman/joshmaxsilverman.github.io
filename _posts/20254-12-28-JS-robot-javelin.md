@@ -63,7 +63,12 @@ $$ \begin{align}
   \end{align}
 $$
 
+this has two unknowns in $d$ and $t_-$ but we can maximize it with respect to $t_-$ to find $t_-$ in terms of $d.$ setting the derivative equal to zero and solving for $t_-(d)$ we get
 
-ddd
+$$ t_-(d)= \frac{c(c-1) + d(2 - d)}{2c}. $$
+
+plugging this back in, we get 
+
+$$ P(J\,\text{wins}, J_1 < d\rvert c<d) = \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3 - \frac{3\sqrt{5}-5}{16}\frac1d. $$
 
 <br>
