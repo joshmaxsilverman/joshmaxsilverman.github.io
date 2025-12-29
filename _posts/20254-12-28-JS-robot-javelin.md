@@ -19,7 +19,7 @@ before we embark on calculating, let's sketch out the big picture of the approac
 
 - in the first level of belief, the two players want to find the value of the first roll where their expected score is the same whether they reroll or stay put.
 - at the second level, S is able to learn something about J's first roll, so S should be able to be less aggressive when J's first is low, and should be more aggressive when J's first roll is high. 
-- at the third level of belief, J knows exactly what thresholds S is using to trigger their rerolls and so, in turn, should be able to be less aggressive managing their reroll.
+- at the third level of belief, J knows exactly what thresholds S is using to trigger their rerolls and so, in turn, will be more aggressive managing their reroll.
 
 given the three thresholds we gather from that analysis (J's new threshold, and S's low and high thresholds), we can add up the probabilities of all scenarios where J is victorious. 
 
@@ -89,6 +89,23 @@ again, we can figure out $t_+$ in terms of $d$ by optimizing, and we get
 
 $$ t_+(d) = \frac12\left(1 + d^2\right). $$
 
-with these in hand, we have the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$
+with these in hand, we have the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ this also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
+
+### Level 3: the doubly molested game
+
+now, it's $J$'s turn to have secret thresholds $h_-$ and $h_+.$ they know $S$ is at an informational advantage, so they should become more aggressive to counter. whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
+
+adding up the probabilities for $J$ winning when $c < J_1,$ we get
+
+$$
+    \begin{align}
+         P($J$\,\text{wins}, c < J_1\rvert c \geq h) = 
+            &\int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
+            &+\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
+            &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
+            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}^1\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d}S_2 \\
+            &= f(d,c,t_+)
+    \end{align}
+$$
 
 <br>
