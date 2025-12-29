@@ -59,10 +59,7 @@ put to integrals, this becomes
 
 $$ P(J\,\text{wins}|c<d, J_1 < d) = 
 \frac1d\left(
-c\int\limits_{t_-}^1\text{d}S_1 \right) \int\limits_{0}^{S_1}\text{d}J_1 
-+ ct_-\int\limits_{0}^1\text{d}S_2 \right) \int\limits_{0}^{S_2}\text{d}J_2
-+ \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1
-+ t_-\int\limits_{c}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 
+c\int\limits_{t_-}^1\text{d}S_1 \right) \int\limits_{0}^{S_1}\text{d}J_1 + ct_-\int\limits_{0}^1\text{d}S_2 \right) \int\limits_{0}^{S_2}\text{d}J_2 + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 + t_-\int\limits_{c}^1\text{d}S_1 \right) \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 
 \right)
 $$
 
