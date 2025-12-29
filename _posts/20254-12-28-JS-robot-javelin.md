@@ -18,8 +18,8 @@ tags:
 before we embark on calculating, let's sketch out the big picture of the approach:
 
 - in the first level of belief, the two players want to find the value of the first roll where their expected score is the same whether they reroll or stay put.
-- at the second level, S is able to learn something about J's first roll, so S should be able to be less aggressive when J's first is low, and should be more aggressive when J's first roll is high. 
-- at the third level of belief, J knows exactly what thresholds S is using to trigger their rerolls and so, in turn, will be more aggressive managing their reroll.
+- at the second level, S is able to learn something about J's first roll, so S should be able to be less aggressive when J's first is low, and may be more aggressive when J's first roll is high. 
+- at the third level of belief, J knows exactly what thresholds S is using to trigger their rerolls and so, in turn, can set their own threshold for reroll.
 
 given the three thresholds we gather from that analysis (J's new threshold, and S's low and high thresholds), we can add up the probabilities of all scenarios where J is victorious. 
 
@@ -93,7 +93,7 @@ with these in hand, we have the overall probability that $S$ wins in terms of $d
 
 ### Level 3: the doubly molested game
 
-now, it's $J$'s turn to have secret thresholds $h_-$ and $h_+.$ they know $S$ is at an informational advantage, so they should become more aggressive to counter. whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
+now, it's $J$'s turn to have a secret threshold $h.$ they know that when their first roll is high, $S$ uses $c$ as a threshold. whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
 
 adding up the probabilities for $J$ winning when $c < J_1,$ we get
 
