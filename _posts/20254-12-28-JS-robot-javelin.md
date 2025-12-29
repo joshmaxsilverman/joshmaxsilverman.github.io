@@ -3,7 +3,7 @@ layout: post
 published: false
 title: Javelin toss
 date: 2025/12/29
-subtitle:
+subtitle: 
 tags:
 ---
 
