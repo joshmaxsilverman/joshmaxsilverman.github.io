@@ -57,9 +57,7 @@ first, the scenario where $S$ learns that $J_1 \leq d.$ this has four scenarios 
 
 put to integrals, this becomes
 
-$$ 
-P(J\,\text{wins}\rvert c<d, J_1 < d) = \frac1d\left(c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 + ct_-\int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 + t_-\int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \right)
-$$
+$$ P(J\,\text{wins}\rvert c<d, J_1 < d) = \frac1d\left(c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \right) $$
 
 
 ddd
