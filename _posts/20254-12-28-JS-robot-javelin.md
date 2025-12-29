@@ -69,6 +69,6 @@ $$ t_-(d)= \frac{c(c-1) + d(2 - d)}{2c}. $$
 
 plugging this back in, we get 
 
-$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3 - \frac{3\sqrt{5}-5}{16}\frac1d. $$
+$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{5 - 3\sqrt{5}}{16}\frac1d + \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3. $$
 
 <br>
