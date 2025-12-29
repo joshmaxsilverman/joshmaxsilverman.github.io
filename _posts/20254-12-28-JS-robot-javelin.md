@@ -55,7 +55,7 @@ first, the scenario where $S$ learns that $J_1 \leq d.$ this has four scenarios 
 - $S$ and $J$ keep their first roll and $S$ wins. This means $\max\{c,t_-\} < S_1 < 1$ and $c < J_1 < \min\{S_1, d\}.$
 - $S$ rerolls and $J$ doesn't, and $S$ wins. This means $S_1 < t_-$ and $c < J_1 < \min\{S_1,d\}.$
 
-put to integrals, this becomes
+put to integrals, these become
 
 $$ \begin{align}
     P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &+ ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &+ \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &+ t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
@@ -70,5 +70,25 @@ $$ t_-(d)= \frac{c(c-1) + d(2 - d)}{2c}. $$
 plugging this back in, we get 
 
 $$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{5 - 3\sqrt{5}}{16}\frac1d + \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3. $$
+
+when $S$ learns $d \leq J_1,$ they have two winning scenarios:
+
+- neither $S$ nor $J$ reroll and $S$ wins. This means $t_+ < S_1 < 1$ and $d < J_1 < S_1.$
+- $S$ rerolls and wins. This means $S_1 < t_+$ and $d < J_1$ and $J_1 < S_2.$
+
+put to integrals, these become
+
+$$ 
+    \begin{align}
+        P(J\,\text{wins}, d < J_1 \rvert c < d) &= \int\limits_{t_+}^1\text{d}S_1  \int\limits_{d}^{S_1}\text{d}J_1 + t_+\int\limits_{d}^1\text{d}S_2  \int\limits_{d}^{S_2}\text{d}J_1 \\
+        &= \frac12\left(1 - 2d + t_+ +d^2t_+ - t_+^2\right)
+    \end{align}
+$$
+
+again, we can figure out $t_+$ in terms of $d$ by optimizing, and we get
+
+$$ t_+(d) = \frac12\left(1 + d^2\right). $$
+
+with these in hand, we have the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$
 
 <br>
