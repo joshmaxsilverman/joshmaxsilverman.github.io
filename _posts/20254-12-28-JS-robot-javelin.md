@@ -44,15 +44,15 @@ $$ c = \tfrac12\left(\sqrt{5} - 1\right) \approx 0.61803399\ldots $$
 
 ### Level 2: the molested game
 
-in the second level, $S$ understands $J$ to be playing the standard game while $S$ has secret information from their fuzzy surveillance bit. they will find out if $J$'s first roll exceeds their chosen threshold $d.$ this allows $S$ to set their threshold to $t_\plus$ or $t_\minus$ based on the value of the bit. 
+in the second level, $S$ understands $J$ to be playing the standard game while $S$ has secret information from their fuzzy surveillance bit. they will find out if $J$'s first roll exceeds their chosen threshold $d.$ this allows $S$ to set their threshold to $t_+$ or $t_-$ based on the value of the bit. 
 
-before we calculate, we can anticipate some aspects of the thresholds. first of all, $d$ should be at least $c$ since $S$ believes $J$ will reroll for anything less than $c.$ second since $d \geq c$, $t_\plus$ should be greater than $c$ since we know $J_1$ is on average $\tfrac12(1 + c).$ finally, if we can be sure $J$ is rerolling, the ideal threshold to use is $t_\minus = \tfrac12$ since a reroll is expected to be $\tfrac12.$ 
+before we calculate, we can anticipate some aspects of the thresholds. first of all, $d$ should be at least $c$ since $S$ believes $J$ will reroll for anything less than $c.$ second since $d \geq c$, $t_+$ should be greater than $c$ since we know $J_1$ is on average $\tfrac12(1 + c).$ finally, if we can be sure $J$ is rerolling, the ideal threshold to use is $t_- = \tfrac12$ since a reroll is expected to be $\tfrac12.$ 
 
 first, the scenario where $S$ learns that $J_1 \leq d.$ this has four scenarios where $S$ ends up winning:
 
-- $S$ keeps their first roll, $J$ rerolls and still loses. This means $S_1 > t_\minus,$ $J_1 < c,$ and $J_2 < S_1.$
-- $S$ and $J$ both reroll, and $S$ wins. This means $S_1 < t_\minus,$ $J_1 < c,$ and $J_2 < S_2.$
-- $S$ and $J$ keep their first roll and $S$ wins. This means $\max\{c,t_\minus\} < S_1 < 1$ and $c < J_1 < \min\{S_1, d\}.$
-- $S$ rerolls and $J$ doesn't, and $S$ wins. This means $S_1 < t_\minus$ and $c < J_1 < \min\{S_1,d\}.$
+- $S$ keeps their first roll, $J$ rerolls and still loses. This means $S_1 > t_-,$ $J_1 < c,$ and $J_2 < S_1.$
+- $S$ and $J$ both reroll, and $S$ wins. This means $S_1 < t_-,$ $J_1 < c,$ and $J_2 < S_2.$
+- $S$ and $J$ keep their first roll and $S$ wins. This means $\max\{c,t_-\} < S_1 < 1$ and $c < J_1 < \min\{S_1, d\}.$
+- $S$ rerolls and $J$ doesn't, and $S$ wins. This means $S_1 < t_-$ and $c < J_1 < \min\{S_1,d\}.$
 
 <br>
