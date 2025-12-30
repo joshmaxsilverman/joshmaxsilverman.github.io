@@ -109,7 +109,7 @@ when $J_1 > c,$ $J$ can win by beating $S$'s first roll, or by beating their rer
 
 $$
     \begin{align}
-         P(J\,\text{wins}, c < J_1\rvert c \geq h) &= \quad \int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
+         P(J\,\text{wins}, c < J_1\rvert c \geq h) &= \int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
             & \quad +\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
             <!-- &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
             &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d} S_2 \\ -->
