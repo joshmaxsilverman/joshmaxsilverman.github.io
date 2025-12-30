@@ -138,7 +138,9 @@ optimizing for $h,$ we get
 
 $$ h = \frac12\frac{1+t_- +t_-^2}{1+t_-} = \frac{7}{12}. $$
 
-plugging this back in, we get
+plugging this back in, we get $P(J\,\text{wins}, J_1 < c) = \frac{193\sqrt{5}-287}{384} \approx 37.65\%.$
+
+putting it all together, the probability that $J$ wins under optimal play is
 
 $$ 
     \begin{align}
@@ -147,6 +149,8 @@ $$
         &\approx 49.3937090364649\%.
     \end{align}
 $$
+
+closing the gap from $100\%-50.696601\% = 49.303399\%$ by a full $7/100^\text{th}$s of a percent!
 
 in the alternate interpretation, where $S$ can set $d$ in knowledge of their own first throw $S_1,$ a more significant advantage is possible, putting $J$'s optimized win probability at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
