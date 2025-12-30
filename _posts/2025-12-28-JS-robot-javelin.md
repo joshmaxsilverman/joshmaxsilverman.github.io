@@ -18,16 +18,16 @@ tags:
 before we embark on calculating, let's sketch out the big picture of the approach:
 
 - in the first level of belief, the two players want to find the value of the first roll where their expected score is the same whether they reroll or stay put.
-- at the second level, S is able to learn something about J's first roll, so S should be able to be less aggressive when J's first is low, and may be more aggressive when J's first roll is high. 
-- at the third level of belief, J knows exactly what thresholds S is using to trigger their rerolls and so, in turn, can set their own threshold for reroll.
+- at the second level, $S$ is able to learn something about $J$'s first roll, so $S$ should be able to be less aggressive when $J$'s first is low, and may be more aggressive when $J$'s first roll is high. 
+- at the third level of belief, $J$ knows exactly what thresholds $S$ is using to trigger their rerolls and so, in turn, can modify their threshold for reroll. but the tension between the informational disadvantage of $J$ and the knowledge of $S$'s strategy makes it unclear whether they should become more or less aggressive.
 
-given the three thresholds we gather from that analysis (J's new threshold, and S's low and high thresholds), we can add up the probabilities of all scenarios where J is victorious. 
+given the three thresholds we gather from that analysis ($J$'s new threshold, and $S$'s low and high thresholds), we can add up the probabilities of all scenarios where $J$ is victorious. 
 
-### Level 1: the unmolested game
+### Level 1: the unperturbed game
 
-in the symmetric game, each of S and J only know their own first roll plus the fact that the other player is in the same situation. this means that their strategy has to be something of the form "if my first roll $R_1$ is greater than $t$, then keep it, else reroll." the value of that threshold will be at the point where their expected probability of winning is the same whether they reroll or stay put. intuitively, below this point they will be playing too conservatively, and above this point too aggressively. 
+in the symmetric game, each of $S$ and $J$ only know their own first roll plus the fact that the other player is in the same situation. this means that their strategy has to be something of the form "if my first roll $R_1$ is greater than $t$, then keep it, else reroll." the value of that threshold will be at the point where their expected probability of winning is the same whether they reroll or stay put. intuitively, below this point they will be playing too conservatively, and above this point too aggressively. 
 
-let's take the position of player J, whose first roll we suppose is at the threshold $c,$ the probability that they win without rerolling is the probability that the other player rerolls below them. this is the chance that the first player rerolls times the probability they are less than $c$, which is just $c\times c=c^2.$
+let's take the position of player $J,$ whose first roll we suppose is at the threshold $c,$ the probability that they win without rerolling is the probability that the other player rerolls below them. this is the chance that the first player rerolls times the probability they are less than $c$, which is just $c\times c=c^2.$
 
 in the case where $J$ rerolls, they have two ways to win. one is if $S$ stays put because they're over the threshold and lose to $J$'s reroll, and the second is if $S$ rerolls and loses to $J$'s reroll. the first has probability $(1-c)$ and the second has probability $c\times\tfrac12.$
 
@@ -42,7 +42,7 @@ which has physical root
 
 $$ c = \tfrac12\left(\sqrt{5} - 1\right) \approx 0.61803399\ldots $$
 
-### Level 2: the molested game
+### Level 2: the perturbed game
 
 in the second level, $S$ understands $J$ to be playing the standard game while $S$ has secret information from their fuzzy surveillance bit. they will find out if $J$'s first roll exceeds their chosen threshold $d.$ this allows $S$ to set their threshold to $t_+$ or $t_-$ based on the value of the bit. 
 
@@ -101,7 +101,7 @@ we can add these results to get the overall probability that $S$ wins in terms o
 
 it should not be missed that the margins we're playing with are very small, the range of win probability for $S$ stays between $50\%$ and $51\%.$
 
-### Level 3: the doubly molested game
+### Level 3: the doubly perturbed game
 
 now, it's $J$'s turn to have a secret threshold $h.$ they know that when their first roll is high, $S$ uses $c$ as a threshold. whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
 
@@ -118,11 +118,16 @@ $$
     \end{align}
 $$
 
+adding up the probabilities for $J$ winning when $J_1 < c,$ we get
 
-$$ P(J\,\text{wins}, c < J_1\rvert c \geq h) = \frac{c^2(1+t_-)-2ct_- +h((1+t_-)(1-h) + t_-^2)}{2c}. $$
+$$ 
+    \begin{align}
+        P(J\,\text{wins}, J_1 < c\rvert c \geq h) = &\int \\
+        &= \frac{c^2(1+t_-)-2ct_- +h((1+t_-)(1-h) + t_-^2)}{2c}. 
+    \end{align}
+$$
 
 ![](/img/2025-12-30-JS-javelin-J-wins.png){:width="450 px" class="image-centered"}
-
 
 optimizing for $h,$ we get 
 
@@ -131,5 +136,7 @@ $$ h = \frac12\frac{1+t_- +t_-^2}{1+t_-} = \frac{7}{12}. $$
 plugging this back in, we get
 
 $$ P(J\,\text{wins}) = (1-c)P(J\,\text{wins} | c<J_1) + cP(J\,\text{wins}|J_1<c) = \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \approx 0.493937090364649. $$
+
+in the alternate interpretation, where $S$ can set $d$ in knowledge of their own first throw $S_1,$ a more significant advantage is possible, putting $J$'s optimized win probability at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
 <br>
