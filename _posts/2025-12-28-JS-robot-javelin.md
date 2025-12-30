@@ -105,17 +105,17 @@ it should not be missed that the margins we're playing with are very small, the 
 
 now, it's $J$'s turn to have a secret threshold $h.$ they know that when their first roll is high, $S$ uses $t_+$ as a threshold. this means that there is already a region $c < J_1 < t_+$ where $J$ has the advantage, and we can foreclose on the possibility that $c < h.$
 
-whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
+<!-- whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll. -->
 
-adding up the probabilities for $J$ winning when $c < J_1,$ we get
+when $J_1 > c,$ $J$ can win by beating $S$'s first roll, or by beating their reroll. adding up the probabilities, we get 
 
 $$
     \begin{align}
          P(J\,\text{wins}, c < J_1\rvert c \geq h) = 
             &\int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
             &+\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
-            &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
-            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d}S_2 \\
+            <!-- &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
+            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d} S_2 \\ -->
             &= \tfrac12\left(1+h-t_+ + (1+ht_+)(t_+ - h)+c(t_+ -1 - t_+^2)\right)
     \end{align}
 $$
