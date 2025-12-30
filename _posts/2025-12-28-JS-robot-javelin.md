@@ -69,7 +69,9 @@ $$ t_-(d)= \frac{c(c-1) + d(2 - d)}{2c}. $$
 
 plugging this back in, we get 
 
-$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{5 - 3\sqrt{5}}{16}\frac1d + \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3. $$
+<!--$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{5 - 3\sqrt{5}}{16}\frac1d + \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3. $$-->
+
+$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{\left((2-d)d-(1-c)c\right)\left(c(3+c)+(2-d)d\right)}{8cd}. $$
 
 when $S$ learns $d \leq J_1,$ they have two winning scenarios:
 
@@ -89,7 +91,15 @@ again, we can figure out $t_+$ in terms of $d$ by optimizing, and we get
 
 $$ t_+(d) = \frac12\left(1 + d^2\right). $$
 
-with these in hand, we have the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ this also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
+plugging this back in, we get 
+
+$$ P(J\,\text{wins}, d < J_1 \rvert c < d) = \frac18 (1-d)(5+d(2+d)) $$
+
+we can add these results to get the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ this also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
+
+![](/img/2025-12-30-JS-javelin-S-wins.png){:width="450 px" class="image-centered"}
+
+it should not be missed that the margins we're playing with are very small, the range of win probability for $S$ stays between $50\%$ and $51\%.$
 
 ### Level 3: the doubly molested game
 
@@ -107,5 +117,8 @@ $$
             &= \tfrac12\left(1+h-t_- + (1+ht_+)(t_+ - h)+c(t-1-t^2)\right)
     \end{align}
 $$
+
+
+![](/img/2025-12-30-JS-javelin-J-wins.png){:width="450 px" class="image-centered"}
 
 <br>
