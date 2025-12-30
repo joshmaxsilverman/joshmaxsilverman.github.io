@@ -130,6 +130,6 @@ $$ h = \frac12\frac{1+t_- +t_-^2}{1+t_-} = \frac{7}{12}. $$
 
 plugging this back in, we get
 
-$$ P(J\,\text{wins}) = (1-c)P(J\,\text{wins}|c<J_1) + cP(J\,\text{wins}|J_1<c) = \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \approx 0.493937090364649. $$
+$$ P(J\,\text{wins}) = (1-c)P(J\,\text{wins} | c<J_1) + cP(J\,\text{wins}|J_1<c) = \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \approx 0.493937090364649. $$
 
 <br>
