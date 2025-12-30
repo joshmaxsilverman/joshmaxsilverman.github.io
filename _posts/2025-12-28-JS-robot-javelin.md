@@ -135,7 +135,13 @@ $$ h = \frac12\frac{1+t_- +t_-^2}{1+t_-} = \frac{7}{12}. $$
 
 plugging this back in, we get
 
-$$ P(J\,\text{wins}) = (1-c)P(J\,\text{wins} | c < J_1) + cP(J\,\text{wins}|J_1 < c) = \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \approx 0.493937090364649. $$
+$$ 
+    \begin{align}
+        P(J\,\text{wins}) &= (1-c)P(J\,\text{wins} | c < J_1) + cP(J\,\text{wins}|J_1 < c) \\ 
+        &= \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \\
+        &\approx 49.3937090364649\%.
+    \end{align}
+$$
 
 in the alternate interpretation, where $S$ can set $d$ in knowledge of their own first throw $S_1,$ a more significant advantage is possible, putting $J$'s optimized win probability at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
