@@ -103,7 +103,7 @@ $$ P(J\,\text{wins}, d < J_1 \rvert c < d) = \frac18 (1-d)(5+d(2+d)) $$
 
 we can add these results to get the overall probability that $S$ wins in terms of $d.$ looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ this also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
 
-![](/img/2025-12-30-JS-javelin-S-wins.png){:width="450 px" class="image-centered"}
+![](/img/2025-12-30-JS-javelin-S-wins.png){:width="300 px" class="image-centered"}
 
 it should not be missed that the margins we're playing with are very small, the range of win probability for $S$ stays between $50\%$ and $51\%.$
 
@@ -137,7 +137,7 @@ $$
     \end{align}
 $$
 
-![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="450 px" class="image-centered"}
+![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="250 px" class="image-centered"}
 
 optimizing for $h,$ we get 
 
