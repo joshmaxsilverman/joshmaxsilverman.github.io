@@ -103,7 +103,9 @@ it should not be missed that the margins we're playing with are very small, the 
 
 ### Level 3: the doubly perturbed game
 
-now, it's $J$'s turn to have a secret threshold $h.$ they know that when their first roll is high, $S$ uses $c$ as a threshold. whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
+now, it's $J$'s turn to have a secret threshold $h.$ they know that when their first roll is high, $S$ uses $t_+$ as a threshold. this means that there is already a region $c < J_1 < t_+$ where $J$ has the advantage, and we can foreclose on the possibility that $c < h.$
+
+whether or not $h < J_1$ or $J_1 < h,$ player $J$ can win on all four combinations of staying put/reroll.
 
 adding up the probabilities for $J$ winning when $c < J_1,$ we get
 
