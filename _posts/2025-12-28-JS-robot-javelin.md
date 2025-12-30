@@ -115,7 +115,8 @@ $$
             <!-- &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
             &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d} S_2 \\ -->
             &= \frac{1-(1+c^2)t + t^2}{2} \\
-            &= \frac{1+2\sqrt{5}}{8}
+            &= \frac{1+2\sqrt{5}}{8} \\
+            &\approx 68.4\%
     \end{align}
 $$
 
