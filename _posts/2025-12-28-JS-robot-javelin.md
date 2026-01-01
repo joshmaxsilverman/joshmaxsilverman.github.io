@@ -140,7 +140,7 @@ $$
     \end{align}
 $$
 
-![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="450 px" class="image-centered"}
+![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="350 px" class="image-centered"}
 
 Optimizing for $h,$ we get 
 
