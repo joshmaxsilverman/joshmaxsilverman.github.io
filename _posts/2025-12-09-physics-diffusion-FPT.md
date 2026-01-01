@@ -1,10 +1,10 @@
 ---
 layout: post
-published: false
+published: True
 title: First passage time
-date: 2025/12/31
+date: 2025/12/10
 subtitle: How long until a particle diffuses to $x$?
-tags:
+tags: statistical-mechanics first-passage-time
 ---
 
 >**Question** given a population of diffusing particles, what is the probability distribution of first passage times ($\text{FPT}(x,t)$) to position $x?$ 
