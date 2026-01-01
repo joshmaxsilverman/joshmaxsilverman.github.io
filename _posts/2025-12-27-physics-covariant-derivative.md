@@ -1,13 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Covariant derivative
 date: 2025/12/27
 subtitle: Where does it come form, how do we find it?
-tags:
+tags: general-relativity differential-geometry
 ---
 
->**Question**: How does the directional derivative generalize when the basis vectors can vary?
+>**Question**: How does the directional derivative generalize when basis vectors can vary?
 
 <!--more-->
 
