@@ -69,7 +69,7 @@ First, the scenario where $S$ learns that $J_1 \leq d.$ This has four scenarios 
 Put to integrals, these become
 
 $$ \begin{align}
-    P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &+ ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &+ \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &+ t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
+    P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &\, + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &\, + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &\, + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
     &= \frac12\left(c^2(1+t_-) + (2-d)d(1+t_-) -c(1+t_- + t_-^2)\right).
   \end{align}
 $$
@@ -108,7 +108,7 @@ $$ P(J\,\text{wins}, d < J_1 \rvert c < d) = \frac18 (1-d)(5+d(2+d)) $$
 
 We can add these results to get the overall probability that $S$ wins in terms of $d.$ Looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ This also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. Plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
 
-![](/img/2025-12-30-JS-javelin-S-wins.png){:width="300 px" class="image-centered"}
+![](/img/2025-12-30-JS-javelin-S-wins.png){:width="450 px" class="image-centered"}
 
 It should not be missed that the margins we're playing with are very small, the range of win probability for $S$ stays between $50\%$ and $51\%.$
 
@@ -140,15 +140,13 @@ $$
     \end{align}
 $$
 
-![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="250 px" class="image-centered"}
+![](/img/2025-12-30-JS-javelin-J-wins-low.png){:width="450 px" class="image-centered"}
 
 Optimizing for $h,$ we get 
 
 $$ h = \frac12\frac{1+t_- +t_-^2}{1+t_-} = \frac{7}{12}. $$
 
-Plugging this back in, we get $P(J\,\text{wins}, J_1 < c) = \frac{193\sqrt{5}-287}{384} \approx 37.65\%.$
-
-Putting it all together, the probability that $J$ wins under optimal play is
+Plugging this back in, we get $P(J\,\text{wins}, J_1 < c) = \frac{193\sqrt{5}-287}{384} \approx 37.65\%.$ Putting it all together, the probability that $J$ wins under optimal play is
 
 $$ 
     \begin{align}
@@ -158,8 +156,8 @@ $$
     \end{align}
 $$
 
-This closes the gap from $100\%-50.696601\% = 49.303399\%$ by a full $7/100^\text{th}$s of a percent!
+This closes the gap from $100\%-50.70\% = 49.30\%$ by a full $9/100^\text{th}$s of a percent!
 
-There is an alternate interpretation which matched my initial read. In this version, $S$ can set $d$ after learning the result of their own first throw $S_1.$ In this scenairo, a more significant advantage is possible, and puts $J$'s optimized win probability down at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
+There's an alternate interpretation which matched my initial read. In this version, $S$ can set $d$ after learning the result of their own first throw $S_1.$ In this scenairo, a more significant advantage is possible, and puts $J$'s optimized win probability down at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
 <br>
