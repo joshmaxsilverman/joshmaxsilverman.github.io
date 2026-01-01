@@ -158,6 +158,6 @@ $$
 
 This closes the gap from $100\%-50.70\% = 49.30\%$ by a full $9/100^\text{th}$s of a percent!
 
-There's an alternate interpretation which matched my initial read. In this version, $S$ can set $d$ after learning the result of their own first throw $S_1.$ In this scenairo, a more significant advantage is possible, and puts $J$'s optimized win probability down at $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
+There's an alternate interpretation which matched my initial read. In this version, $S$ can set $d$ after learning the result of their own first throw $S_1.$ In this scenario, a more significant advantage results and $J$'s optimized win probability ends up being $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
 <br>
