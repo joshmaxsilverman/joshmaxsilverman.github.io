@@ -9,7 +9,7 @@ tags:
 
 >**Question** given a population of diffusing particles, what is the probability distribution of first passage times ($\text{FPT}(x,t)$) to position $x?$ 
 >
->Typically this is solved by solving for the diffusion differential equation to find the probability distribution, integrating that to find the survival, and then differentiating that to find the $\text{FPT}$ distribution. In this post we'll show how to solve for the $\text{FPT}$ distribution directly.
+>Typically this is found by solving the diffusion differential equation to find the probability distribution, integrating that to find the survival, and then differentiating that to find the $\text{FPT}$ distribution. In this post we'll show how to solve for the $\text{FPT}$ distribution directly.
 
 <!--more-->
 
@@ -99,7 +99,7 @@ Taking the time derivative, this gives
 
 $$ \text{FPT}(x,t) = \frac{d}{dt} w(x,t) = \frac{x}{\sqrt{2\pi t^3}} e^{-x^2/2t}. $$
 
-The usual forward approach evolves the distribution from a specific starting point $p(x,0) = \delta(x-x_0).$ If the starting point changes, then the whole process needs to be recalculated. By contrast, the approach we take here solves on equation whose solution contains FPT statistics for every possible starting state. The boundary condition is the same ($\text{FPT)(0,t)=\delta(t), \text{FPT}(x,0) = 0) and the starting point is just an argument. Once $w$ is known, the FPT is just the time derivative. 
+<!-- The usual forward approach evolves the distribution from a specific starting point $p(x,0) = \delta(x-x_0).$ If the starting point changes, then the whole process needs to be recalculated. By contrast, the approach we take here solves on equation whose solution contains FPT statistics for every possible starting state. The boundary condition is the same ($\text{FPT)(0,t)=\delta(t), \text{FPT}(x,0) = 0) and the starting point is just an argument. Once $w$ is known, the FPT is just the time derivative. -->
 
 
 
