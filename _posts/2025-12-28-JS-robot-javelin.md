@@ -69,7 +69,7 @@ First, the scenario where $S$ learns that $J_1 \leq d.$ This has four scenarios 
 Put to integrals, these become
 
 $$ \begin{align}
-    P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &\, + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &\, + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &\, + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
+    P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &\quad + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &\quad + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &\quad + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
     &= \frac12\left(c^2(1+t_-) + (2-d)d(1+t_-) -c(1+t_- + t_-^2)\right).
   \end{align}
 $$
