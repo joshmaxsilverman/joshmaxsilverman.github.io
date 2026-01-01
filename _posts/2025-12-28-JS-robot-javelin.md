@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Javelin toss
-date: 2025/12/29
+date: 2026/01/01
 subtitle: How should you counter the tosser who doesn't know you know they're cheating?
 tags: nash-equilibrium recursion
 ---
