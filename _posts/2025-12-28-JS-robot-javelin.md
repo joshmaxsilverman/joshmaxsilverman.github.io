@@ -41,7 +41,7 @@ Setting these equal, we get
 
 $$ \begin{align}
 (1-c) + \frac12 c &= c^2\\
-0 &= c^2 +\frac12c - 1 &= 0
+0 &= c^2 +\frac12c - 1
 \end{align} $$
 
 which has physical root 
@@ -122,8 +122,6 @@ $$
     \begin{align}
          P(J\,\text{wins}, c < J_1\rvert c \geq h) &= \int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
             & \quad +\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
-            <!-- &+\int\limits_c^h\text{d}J_1 \int\limits_{t_+}^1\text{d}J_2 \int\limits_{t_+}^{J_2}\text{d}S_1 \\
-            &+\int\limits_c^h\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{J_2}\text{d} S_2 \\ -->
             &= \frac{1-(1+c^2)t + t^2}{2} \\
             &= \frac{1+2\sqrt{5}}{8} \\
             &\approx 68.40\%
