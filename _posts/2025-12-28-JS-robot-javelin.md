@@ -69,7 +69,7 @@ First, the scenario where $S$ learns that $J_1 \leq d.$ This has four scenarios 
 Put to integrals, these become
 
 $$ \begin{align}
-    P(J\,\text{wins}, J_1 < d\rvert c < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &\quad + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &\quad + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &\quad + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
+    P(J\,\text{wins}, J_1 < d) &= c\int\limits_{t_-}^1\text{d}S_1  \int\limits_{0}^{S_1}\text{d}J_1 \\ &\quad + ct_- \int\limits_{0}^1\text{d}S_2 \int\limits_{0}^{S_2}\text{d}J_2 \\ &\quad + \int\limits_{\max\{c,t_-\}}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_1 \\ &\quad + t_- \int\limits_{c}^1\text{d}S_1 \int\limits_{c}^{\min\{S_1,d\}}\text{d}J_2 \\
     &= \frac12\left(c^2(1+t_-) + (2-d)d(1+t_-) -c(1+t_- + t_-^2)\right).
   \end{align}
 $$
@@ -82,7 +82,7 @@ Plugging this back in, we get
 
 <!--$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{5 - 3\sqrt{5}}{16}\frac1d + \frac{1+\sqrt{5}}{4} + \frac{1+\sqrt{5}}{8}d -\frac{1+\sqrt{5}}{4}d^2 + \frac{1+\sqrt{5}}{16}d^3. $$-->
 
-$$ P(J\,\text{wins}, J_1 < d\rvert c < d) = \frac{\left((2-d)d-(1-c)c\right)\left(c(3+c)+(2-d)d\right)}{8cd}. $$
+$$ P(J\,\text{wins}, J_1 < d) = \frac{\left((2-d)d-(1-c)c\right)\left(c(3+c)+(2-d)d\right)}{8cd}. $$
 
 When $S$ learns $d \leq J_1,$ they have two winning scenarios:
 
@@ -93,7 +93,7 @@ Put to integrals, these become
 
 $$ 
     \begin{align}
-        P(J\,\text{wins}, d < J_1 \rvert c < d) &= \int\limits_{t_+}^1\text{d}S_1  \int\limits_{d}^{S_1}\text{d}J_1 + t_+\int\limits_{d}^1\text{d}S_2  \int\limits_{d}^{S_2}\text{d}J_1 \\
+        P(J\,\text{wins}, d < J_1) &= \int\limits_{t_+}^1\text{d}S_1  \int\limits_{d}^{S_1}\text{d}J_1 + t_+\int\limits_{d}^1\text{d}S_2  \int\limits_{d}^{S_2}\text{d}J_1 \\
         &= \frac12\left(1 - 2d + t_+ +d^2t_+ - t_+^2\right)
     \end{align}
 $$
@@ -104,7 +104,7 @@ $$ t_+(d) = \frac12\left(1 + d^2\right). $$
 
 Plugging this back in, we get 
 
-$$ P(J\,\text{wins}, d < J_1 \rvert c < d) = \frac18 (1-d)(5+d(2+d)) $$
+$$ P(J\,\text{wins}, d < J_1) = \frac18 (1-d)(5+d(2+d)) $$
 
 We can add these results to get the overall probability that $S$ wins in terms of $d.$ Looking at the graph, it is monotonic decreasing as $d$ moves away from $c,$ so the optimal surveillance threshold is $d = c.$ This also means that $t_- = \tfrac12$ since there is no sliver where we're uncertain if $J$ is rerolling. Plugging in $d=c,$ we get $t_+ = \tfrac14(5-\sqrt{5}).$
 
@@ -120,7 +120,7 @@ When $J_1 > c,$ $J$ can win by beating $S$'s first roll, or by beating their rer
 
 $$
     \begin{align}
-         P(J\,\text{wins}, c < J_1\rvert c \geq h) &= \int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
+         P(J\,\text{wins}, c < J_1) &= \int\limits_{t_+}^1\text{d}J_1 \int\limits_{t_+}^{J_1}\text{d}S_1 \\
             & \quad +\int\limits_h^1\text{d}J_1 \int\limits_0^{t_+}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
             &= \frac{1-(1+c^2)t + t^2}{2} \\
             &= \frac{1+2\sqrt{5}}{8} \\
@@ -132,7 +132,7 @@ when $J_1 < c,$ we have all four cases active ($J$ winning on their first or sec
 
 $$ 
     \begin{align}
-        P(J\,\text{wins}, J_1 < c\rvert c \geq h) &= \int\limits_h^c\text{d}J_1 \int\limits_{t_-}^{J_1}\text{d}S_1 \\
+        P(J\,\text{wins}, J_1 < c) &= \int\limits_h^c\text{d}J_1 \int\limits_{t_-}^{J_1}\text{d}S_1 \\
         & \quad +\int\limits_h^c\text{d}J_1 \int\limits_0^{t_-}\text{d}S_1 \int\limits_0^{J_1}\text{d}S_2 \\
         & \quad +\int\limits_0^h\text{d}J_1 \int\limits_{t_-}^1\text{d}J_2 \int\limits_{t_-}^{J_2}\text{d}S_1 \\
         & \quad +\int\limits_0^h\text{d}J_1 \int\limits_0^1\text{d}J_2 \int\limits_0^{t_-}\text{d}S_1 \int\limits_0^{J_2}\text{d}S_2 \\
