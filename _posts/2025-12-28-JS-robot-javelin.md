@@ -152,11 +152,11 @@ $$
     \begin{align}
         P(J\,\text{wins}) &= (1-c)P(J\,\text{wins} | c < J_1) + cP(J\,\text{wins}|J_1 < c) \\ 
         &= \frac{1}{192} \left(229 - 60 \sqrt{5}\right) \\
-        &\approx 49.3937090364649\%.
+        &\approx 49.3937090364649\%,
     \end{align}
 $$
 
-This closes the gap from $100\%-50.70\% = 49.30\%$ by a full $9/100^\text{th}$s of a percent!
+which closes the gap from $100\%-50.70\% = 49.30\%$ by a full $9/100^\text{th}$s of a percent!
 
 There's an alternate interpretation which matched my initial read. In this version, $S$ can set $d$ after learning the result of their own first throw $S_1.$ In this scenario, a more significant advantage results and $J$'s optimized win probability ends up being $\tfrac{1}{72}\left(\tfrac{1515}{8}-69\sqrt{5}\right)\approx 48.73\%$
 
