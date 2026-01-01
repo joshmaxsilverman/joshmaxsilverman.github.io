@@ -15,7 +15,11 @@ tags:
 
 We want to calculate the derivative of a vector $\mathbf{V}$ attached to a point that moves along the surface, in the coordinates of the surface, along some particular direction, at that point.
 
-Take a vector $\mathbf{V}(X) = V^i(X) e_i(X)$ where $e_i(X)$ is the $i^\text{th}$ basis vector. The components of $\mathbf{V}$ can change because the $V^i$ change, due to some physical process, or because the basis vectors have changed due to variation of the surface. 
+Take a vector 
+
+$$\mathbf{V}(X) = V^i(X) e_i(X)$$ 
+
+where $e_i(X)$ is the $i^\text{th}$ basis vector. The components of $\mathbf{V}$ can change because the $V^i$ change, due to some physical process, or because the basis vectors have changed due to variation of the surface. 
 
 The basis vectors at each point come from the map from surface coordinates to position in the embedding space: ${\mathbf{r}(X) = \boldsymbol{\gamma}(X)= \langle \gamma_1(X), \gamma_2(X), \ldots, \gamma_d(X)\rangle,}$ so that $e_j = \partial \boldsymbol{\gamma}(X) / \partial X^j.$ This means that the basis vectors are tangent to the surface. It also means that we can freely flip flop derivatives of the basis vectors with respect to surface coordinates like $\partial e_i/\partial X^j \leftrightarrow \partial e_j/\partial X^i.$
 
