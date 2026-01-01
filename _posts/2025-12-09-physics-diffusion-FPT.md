@@ -2,7 +2,7 @@
 layout: post
 published: false
 title: First passage time
-date: 2025/12/10
+date: 2025/12/31
 subtitle: How long until a particle diffuses to $x$?
 tags:
 ---
