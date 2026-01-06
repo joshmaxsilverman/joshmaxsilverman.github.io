@@ -84,11 +84,11 @@ $$
 
 However, in the curvilinear coordinate system $\widetilde{X},$ this is just 
 
-$$ \widetilde{D}_\alpha\widetilde{V}^\beta = \frac{\partial\widetilde{V}^\beta}{\partial\widetilde{X}^\alpha} + \widetilde{\Gamma}^\beta_{\gamma\alpha}\widewilde{V}^\gamma $$
+$$ \widetilde{D}_\alpha\widetilde{V}^\beta = \frac{\partial\widetilde{V}^\beta}{\partial\widetilde{X}^\alpha} + \widetilde{\Gamma}^\beta_{\gamma\alpha}\widetilde{V}^\gamma $$
 
 which shows that the Christoffel symbol can be written as
 
-$$ \widetilde{\Gamma^\beta_{\gamma\alpha} = \frac{\partial\widetilde{X}^\beta}{\partial X^b}\frac{\partial^2 X^b}{\partial\widetilde{X}^\alpha\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma $$
+$$ \widetilde{\Gamma}^\beta_{\gamma\alpha} = \frac{\partial\widetilde{X}^\beta}{\partial X^b}\frac{\partial^2 X^b}{\partial\widetilde{X}^\alpha\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma $$
 
 which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
