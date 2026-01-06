@@ -92,7 +92,7 @@ $$ \widetilde{\Gamma}^\beta_{\gamma\alpha} = \frac{\partial\widetilde{X}^\beta}{
 
 which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
-## Derivative of the metric tensor 
+<!-- ## Derivative of the metric tensor 
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
 
@@ -110,5 +110,20 @@ $$
     &= \left(\frac{\partial \delta^a_m}{\partial X^\ell} e_a + \Gamma^c_{a\ell}e_c\delta^a_m\right)\cdot e_n + e_m\cdot \left(D_\ell \frac{\partial \delta^b_n}{\partial X^\ell} e_b + \Gamma^d_{b\ell}e_d\delta^b_n \right) \\
   \end{align}
 $$
+
+The partial derivatives of the $\delta^i_j$ are zero so
+
+$$
+  \begin{align}
+    \frac{\partial g_{mn}}{\partial X^\ell} &= \Gamma^c_{m\ell}e_c\cdot e_n + e_m\cdot \Gamma^d_{n\ell}e_d \\
+    &= \Gamma^c_{m\ell}g_{cn}+ \Gamma^d_{n\ell}g_{md}
+  \end{align}
+$$
+
+so we end up with
+
+$$ 0 = \frac{\partial g_{mn}}{\partial X^\ell} - \Gamma^c_{m\ell}g_{cn} - \Gamma^d_{n\ell}g_{md}. $$
+
+We evaluated this in $X,$ the coordinates at the point, where the metric is approximately flat. But each quantity is a tensor so it's true in arbitrary coordinates $\widetilde{X}.$ -->
 
 <br>
