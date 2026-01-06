@@ -48,7 +48,7 @@ To solve this, we can find the impulse response $h(t)$ and convolve it with the 
 
 $$
   \begin{align}
-    FPT(x,t) 
+    \text{FPT}(x,t) 
     &=  \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)h(x,t-\tau) \\ 
     &= \int\limits_{-\infty}^t \text{d}\tau\, f(\tau)\, \frac{\text{d}}{\text{d} t}w(x,t-\tau) \\
     &= \frac{\text{d}}{\text{d}t}w(x,t)
