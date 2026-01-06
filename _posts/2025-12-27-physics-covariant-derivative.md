@@ -75,7 +75,10 @@ In the flat coordinates $X,$ the metric is flat at the point, so the Christoffel
 
 $$
    \begin{align}
-      \widetilde{D}_\alpha \widetilde{V}^\beta &= \frac{\partial \widetilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \widetilde{X}^\alpha}\left[\frac{\partial \widetilde{X}^\delta}{\partial X^a}\frac{\partial}{\partial\widetilde{X}^\delta}\left(\frac{\partial X^b}{\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma\right)\right] \\ &= \frac{\partial \widetilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \widetilde{X}^\alpha}\frac{\partial \widetilde{X}^\delta}{\partial X^a}\left[\frac{\partial^2 X^b}{\partial\widetilde{X}^\delta\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma + \frac{\partial X^b}{\partial\widetilde{X}^\gamma}\frac{\partial\widetilde{V}^\gamma}{\partial\widetilde{X}^\delta}\right]
+      \widetilde{D}_\alpha \widetilde{V}^\beta &= \frac{\partial \widetilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \widetilde{X}^\alpha}\left[\frac{\partial \widetilde{X}^\delta}{\partial X^a}\frac{\partial}{\partial\widetilde{X}^\delta}\left(\frac{\partial X^b}{\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma\right)\right] \\ 
+      &= \frac{\partial \widetilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \widetilde{X}^\alpha}\frac{\partial \widetilde{X}^\delta}{\partial X^a}\left[\frac{\partial^2 X^b}{\partial\widetilde{X}^\delta\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma + \frac{\partial X^b}{\partial\widetilde{X}^\gamma}\frac{\partial\widetilde{V}^\gamma}{\partial\widetilde{X}^\delta}\right] \\
+      &= \frac{\partial\widetilde{X}^\beta}{\partial X^b}\delta^\alpha_\delta\frac{\partial^2 X^b}{\partial\widetilde{X}^\delta\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma + \delta^\beta_\gamma\delta^\delta_\alpha\frac{\partial\widetilde{V}^\gamma}{\partial\widetilde{X}^delta} \\
+      &=  \frac{\partial\widetilde{X}^\beta}{\partial X^b}\frac{\partial^2 X^b}{\partial\widetilde{X}^\alpha\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma + \frac{\partial\widetilde{V}^\beta}{\partial\widetilde{X}^\alpha}
    \end{align}
 $$
 
