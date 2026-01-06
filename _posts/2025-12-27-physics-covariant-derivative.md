@@ -107,7 +107,7 @@ $$
     D_\ell g_{mn} &= D_\ell \left(e_m\cdot e_n\right) \\
     \frac{\partial g_{mn}}{\partial X^\ell} &= \left(D_\ell e_m\right)\cdot e_n + e_m\cdot \left(D_\ell e_n\right) \\
     &= \left(D_\ell \delta^a_m e_a\right)\cdot e_n + e_m\cdot \left(D_\ell \delta^a_m e_a\right) \\
-    &= \left(\frac{\partial \delta^a_m}{\partial X^\ell} e_a + \Gamma^c_{a\ell}e_c\Delta^a_m\right)\cdot e_n + e_m\cdot \left(D_\ell \frac{\partial \delta^b_n}{\partial X^\ell} e_b + \Gamma^d_{b\ell}e_d\Delta^b_n \right) \\
+    &= \left(\frac{\partial \delta^a_m}{\partial X^\ell} e_a + \Gamma^c_{a\ell}e_c\delta^a_m\right)\cdot e_n + e_m\cdot \left(D_\ell \frac{\partial \delta^b_n}{\partial X^\ell} e_b + \Gamma^d_{b\ell}e_d\delta^b_n \right) \\
   \end{align}
 $$
 
