@@ -71,4 +71,12 @@ $$ \begin{align}
 \end{align}  
 $$
 
+In the flat coordinates $X,$ the metric is flat at the point, so the Christoffel symbols are zero. Transforming the partial derivative and the coefficients $V^b$ we get
+
+$$
+   \begin{align}
+      \frac{\partial \widetilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \widetilde{X}^\alpha}\left[\frac{\partial \widetilde{X}^\delta}{\partial X^a}\frac{\partial}{\partial\widetilde{X}^\delta}\left(\frac{\partial X^b}{\partial\widetilde{X}^\gamma}\widetilde{V}^\gamma\right)\right]
+   \end{align}
+$$
+
 <br>
