@@ -92,4 +92,23 @@ $$ \widetilde{\Gamma}^\beta_{\gamma\alpha} = \frac{\partial\widetilde{X}^\beta}{
 
 which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
+## Derivative of the metric tensor 
+
+We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
+
+From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on vectors.
+
+$$ D_\ell g_{mn} = D_\ell \left(e_m\cdot e_n\right). $$
+
+On the left side, we have the covariant derivative of $g$ as a scalar field, so is no variation of basis vectors and we just get the partial derivative in the coordinate $X^\ell.$ On the right side, we can break it up using the product rule and apply the formula we worked out above. Our formula assumes vectors in the coefficient and basis vector form like $V = V^a e_a,$ so we need to re-express the basis vectors like $e_m = \delta^a_m e_a.$ 
+
+$$
+  \begin{align}
+    D_\ell g_{mn} &= D_\ell \left(e_m\cdot e_n\right) \\
+    \frac{\partial g_{mn}}{\partial X^\ell} &= \left(D_\ell e_m\right)\cdot e_n + e_m\cdot \left(D_\ell e_n\right) \\
+    &= \left(D_\ell \delta^a_m e_a\right)\cdot e_n + e_m\cdot \left(D_\ell \delta^a_m e_a\right) \\
+    &= \left(\frac{\partial \delta^a_m}{\partial X^\ell} e_a + \Gamma^c_{a\ell}e_c\Delta^a_m\right)\cdot e_n + e_m\cdot \left(D_\ell \frac{\partial \delta^b_n}{\partial X^\ell} e_b + \Gamma^d_{b\ell}e_d\Delta^b_n \right) \\
+  \end{align}
+$$
+
 <br>
