@@ -27,7 +27,7 @@ $$ \text{FPT}(x, t) = \text{FPT}(x,t-\Delta t) + \frac12\Delta x^2 \partial_x^2 
 
 Expanding in $\Delta t,$ we get 
 
-$$ \text{FPT}(x, t) = \text{FPT}(x, t) - \Delta t\partial_t \text{FPT}(x, t) + \frac12\Delta x^2 \partial_x^2 \text{FPT}(x, t) + \frac12\Delta x^2\Delta t\partial_t \text{FPT}(x, t). $$
+$$ \text{FPT}(x, t) = \text{FPT}(x, t) - \Delta t\partial_t \text{FPT}(x, t) + \frac12\Delta x^2 \partial_x^2 \text{FPT}(x, t) + \frac12\left(\Delta x^2\Delta t\right)\partial_t \text{FPT}(x, t). $$
 
 The term with $\Delta x^2\Delta t$ is higher order than the rest of the equation, so we are left with
 
