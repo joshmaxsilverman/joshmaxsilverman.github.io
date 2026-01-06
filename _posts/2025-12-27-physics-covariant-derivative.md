@@ -65,6 +65,10 @@ Starting from the definition of the covariant derivative of an amplitude as the 
 
 Take two coordinate systems, $X$ (Roman indices) where the metric is flat, and $\tilde{X}$ (Greek indices) where the coordinates are curvilinear. Then the covariant derivative in $\tilde{X}$ can be gotten from the one in $X$ by the transformation
 
-$$ \tilde{D}_\alpha \tilde{V}^\beta = \frac{\partial \tilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \tilde{X}^\alpha} D_a V^b. $$
+$$ \begin{align}
+    \tilde{D}_\alpha \tilde{V}^\beta &= \frac{\partial \tilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \tilde{X}^\alpha} D_a V^b \\
+    &= \frac{\partial \tilde{X}^\beta}{\partial X^b}\frac{\partial X^a}{\partial \tilde{X}^\alpha} \left[\frac{\partial}{\partial X^a}V^b + \Gamma^b_{\ell a} V^\ell \right]
+\end{align}  
+$$
 
 <br>
