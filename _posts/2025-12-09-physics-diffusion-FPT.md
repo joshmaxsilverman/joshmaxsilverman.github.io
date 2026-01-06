@@ -57,7 +57,7 @@ $$
 
 since $f(\tau) = \delta(\tau).$ 
 
-The step response is the time integral of $FPT(x,t)$ which is the cumulative distribution of first passage times, the probability that a particle's first passage to $x$ is $t$ or earlier. It stays zero at the origin for all $t$ and decays to zero as $x$ goes to infinity.
+The step response is the time integral of $\text{FPT}(x,t)$ which is the cumulative distribution of first passage times, the probability that a particle's first passage to $x$ is $t$ or earlier. It stays zero at the origin for all $t$ and decays to zero as $x$ goes to infinity.
 
 
 ## Solving the differential equation
