@@ -138,7 +138,7 @@ $$ \left(D_\ell W_{mn}\right) = \frac{\partial W_{mn}}{\partial X^\ell} - W_{kn}
 
 ### As a tensor field
 
-Another way is to write the metric in its full form with dual basis vectors $\mathbf{g}_{mn} e^m\otimes e^n.$ Applying the product rule, we get
+Another way is to write the metric in its full form with dual basis vectors $\mathbf{g} = g_{mn} e^m\otimes e^n.$ Applying the product rule, we get
 
 $$ D_\ell \mathbf{g} = \left(D_\ell g_{mn}\right)e^m\otimes e^n + g_{mn}\left(D_\ell e^m\right)\otimes e^n + g_{mn}e^m\otimes \left(D_\ell e^n\right). $$
 
