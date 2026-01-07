@@ -116,8 +116,8 @@ $$
 Equating the two forms, the terms with partial derivatives of the $\Delta X$ are present on both sides so we can drop them. We leave the $D_\ell g_{mn}$ unevaluated, since we don't know how to evaluate it. 
 
 $$ \begin{align}
-\frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n + g_{mn}\Delta X^m\Gamma^n_{\ell k}V^k \\
-\frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}V^k &= \left(D_\ell g_{mn}\right)
+\left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n + g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n \\
+\left(D_\ell g_{mn}\right) &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k
 \end{align} $$
 
 <!-- ## Derivative of the metric tensor 
