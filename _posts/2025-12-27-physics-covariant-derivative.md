@@ -120,6 +120,14 @@ $$ \begin{align}
 \left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k
 \end{align} $$
 
+Flip-flopping indices $k \leftrightarrow m$ and $k\leftrightarrow n$ in the Christoffel terms on the right, we get
+
+$$ \begin{align}
+  \left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{kn}\Gamma^k_{m\ell}\Delta X^m\Delta X^n - g_{mk}\Delta X^m\Gamma^k_{\ell n}\Delta X^n \\
+    \left(D_\ell g_{mn}\right) &= \frac{\partial g_{mn}}{\partial X^\ell} - g_{kn}\Gamma^k_{m\ell} - g_{mk}\Gamma^k_{\ell n}
+    \end{align}
+$$
+
 <!-- ## Derivative of the metric tensor 
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
