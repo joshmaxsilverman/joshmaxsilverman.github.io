@@ -102,7 +102,7 @@ One way is to form the interval $s^2 = g_{mn}V^m V^n.$
 
 Taking the covariant derivative $D_\ell \Delta s^2, we can evaluate it in two ways. One is to treat it like a scalar in which case we get a partial derivative
 
-$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n + g_{mn}\frac{\partial V^m}{\partial X^\ell}V^n + g_{mn} V^m\frac{\partialV^n}{\partial X^\ell}. $$
+$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n + g_{mn}\frac{\partial V^m}{\partial X^\ell}V^n + g_{mn} V^m\frac{\partial V^n}{\partial X^\ell}. $$
 
 The second way is to treat the right side as tensor objects using the product rule that we assume holds
 
