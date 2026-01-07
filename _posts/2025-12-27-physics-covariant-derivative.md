@@ -109,7 +109,7 @@ The second way is to treat the right side as tensor objects using the product ru
 $$ 
   \begin{align}
     D_\ell \Delta s^2 &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left(D_\ell \Delta X^m\right)\Delta X^n +  g_{mn}\Delta X^m\left(D_\ell \Delta X^n\right) \\
-    &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left[\frac{\partial \Delta X^m}{\partial X^\ell} + \Gamma^m_{k\ell}V^k + \frac{\partial \Delta X^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
+    &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left[\frac{\partial \Delta X^m}{\partial X^\ell} + \Gamma^m_{k\ell}\Delta X^k\right]\Delta X^n + \Delta X^m\left[\frac{\partial \Delta X^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
   \end{align}. 
 $$
 
