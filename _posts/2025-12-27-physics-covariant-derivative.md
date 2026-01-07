@@ -158,8 +158,8 @@ The last line shows that $D_\ell e^i$ must be $-\Gamma^i_{\ell j} e^j.$ Plugging
 
 $$
   \begin{align}
-    D_\ell\mathbf{g} = \frac{\partial g_{mn}}{\partial X^\ell}e^me^n - g_{mn}\Gamma^m_{\ell j}e^j e^n - g_{mn}e^m\Gamma^n_{\ell j} e^j \\
-    &= e^me^n\left(\frac{\partial g_{mn}}{\partial X^\ell} - g_{jn}\Gamma^j_{\ell m} - g_{mj}\Gamma^j_{\ell n}\right)
+    D_\ell\mathbf{g} &= \frac{\partial g_{mn}}{\partial X^\ell}e^me^n - g_{mn}\Gamma^m_{\ell j}e^j e^n - g_{mn}e^m\Gamma^n_{\ell j} e^j \\
+    &= \left(\frac{\partial g_{mn}}{\partial X^\ell} - g_{jn}\Gamma^j_{\ell m} - g_{mj}\Gamma^j_{\ell n}\right)e^me^n
   \end{align}
 $$
 
