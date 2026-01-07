@@ -128,6 +128,8 @@ $$ \begin{align}
     \end{align}
 $$
 
+At the point of evaluation, where the flat coordinates $X$ are defined, the metric entries are $\Delta_{ij}$ and the Christoffel symbols are zero since we're in an orthonormal coordinate system. So, the covariant derivative of the metric $D_\ell g_{mn}$ is equal to zero. Since the covariant derivative is a tensor, the covariant derivative of the metric tensor is zero in all frames. 
+
 <!-- ## Derivative of the metric tensor 
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
