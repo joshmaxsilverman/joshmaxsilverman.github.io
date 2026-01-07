@@ -92,6 +92,27 @@ $$ \widetilde{\Gamma}^\beta_{\gamma\alpha} = \frac{\partial\widetilde{X}^\beta}{
 
 which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
+## Derivative of the metric tensor
+
+We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
+
+From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on vectors.
+
+One way is to form the interval $\Delta s^2$ like $g_{mn}\Delta X^m \Delta X^n.$ 
+
+Taking the covariant derivative $D_\ell \Delta s^2, we can evaluate it in two ways. One is to treat it like a scalar in which case we get a partial derivative
+
+$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n + g_{mn}\frac{\partial \Delta X^m}{\partial X^\ell}\Delta X^n + g_{mn} \Delta X^m\frac{\Delta X^n \partial}{\partial X^\ell}. $$
+
+The second way is to treat the right side as tensor objects using the product rule that we assume holds
+
+$$ 
+  \begin{align}
+    D_\ell \Delta s^2 &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left(D_\ell \Delta X^m\right)\Delta X^n +  g_{mn}\Delta X^m\left(D_\ell \Delta X^n\right) \\
+    &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left[\frac{\partial \Delta X^m}{\partial X^\ell} + \Gamma^k_{mn}V^m\right]
+  \end{align}. 
+$$
+
 <!-- ## Derivative of the metric tensor 
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
