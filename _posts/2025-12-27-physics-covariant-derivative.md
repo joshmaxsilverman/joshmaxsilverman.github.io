@@ -102,7 +102,7 @@ One way is to form the interval $\Delta s^2$ like $g_{mn}\Delta X^m \Delta X^n.$
 
 Taking the covariant derivative $D_\ell \Delta s^2, we can evaluate it in two ways. One is to treat it like a scalar in which case we get a partial derivative
 
-$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n + g_{mn}\frac{\partial \Delta X^m}{\partial X^\ell}\Delta X^n + g_{mn} \Delta X^m\frac{\Delta X^n \partial}{\partial X^\ell}. $$
+$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n + g_{mn}\frac{\partial \Delta X^m}{\partial X^\ell}\Delta X^n + g_{mn} \Delta X^m\frac{\partial\Delta X^n}{\partial X^\ell}. $$
 
 The second way is to treat the right side as tensor objects using the product rule that we assume holds
 
@@ -112,6 +112,13 @@ $$
     &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left[\frac{\partial \Delta X^m}{\partial X^\ell} + \Gamma^m_{k\ell}\Delta X^k\right]\Delta X^n + \Delta X^m\left[\frac{\partial \Delta X^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
   \end{align}. 
 $$
+
+Equating the two forms, the terms with partial derivatives of the $\Delta X$ are present on both sides so we can drop them. We leave the $D_\ell g_{mn}$ unevaluated, since we don't know how to evaluate it. 
+
+$$ \begin{align}
+\frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n + g_{mn}\Delta X^m\Gamma^n_{\ell k}V^k \\
+\frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}V^k &= \left(D_\ell g_{mn}\right)
+\end{align} $$
 
 <!-- ## Derivative of the metric tensor 
 
