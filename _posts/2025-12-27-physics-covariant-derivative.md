@@ -96,9 +96,9 @@ which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
 
-From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on scalars and vectors.
+From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on scalars and vectors. One of the ways we'll work out will bootstrap the rule we worked out for the coefficients of vectors, and the other will return to finding the derivatives of basis (and dual basis) vectors.
 
-### As a scalar 
+### As scalar coefficients
 
 One way is to form the quantity $V^2 = g_{mn}V^m V^n.$ Taking the covariant derivative $D_\ell V^2, we can evaluate it in two ways. 
 
@@ -163,7 +163,7 @@ $$
   \end{align}
 $$
 
-Again, due to the flat coordinates $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. 
+Again, due to the flat coordinates $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. The piece in parenthesis becomes the definition for the covariant derivative of $g_{mn}$ when we don't want to keep explicit track of basis elements.
 
 <!-- ## Derivative of the metric tensor 
 
