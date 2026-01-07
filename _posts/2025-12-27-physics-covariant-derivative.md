@@ -120,7 +120,7 @@ $$ \begin{align}
 \left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k
 \end{align} $$
 
-Flip-flopping indices $k \leftrightarrow m$ and $k\leftrightarrow n$ in the Christoffel terms on the right, we get
+Flip-flopping indices $k \leftrightarrow m$ and $k\leftrightarrow n$ in the Christoffel terms on the right, we get the explicit form of the covariant derivative for the metric
 
 $$ \begin{align}
   \left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{kn}\Gamma^k_{m\ell}\Delta X^m\Delta X^n - g_{mk}\Delta X^m\Gamma^k_{\ell n}\Delta X^n \\
@@ -129,6 +129,10 @@ $$ \begin{align}
 $$
 
 At the point of evaluation, where the flat, orthonormal coordinates $X$ are defined, the metric entries are $\delta_{ij}$ and the Christoffel symbols are zero. So, the covariant derivative of the metric $D_\ell g_{mn}$ is equal to zero. Since the covariant derivative is a tensor, the covariant derivative of the metric tensor is zero in all frames. 
+
+Generalizing, the covariant derivative of a $(0,2)$ tensor $W_{mn}$ is equal to 
+
+$$ \left(D_\ell W_{mn}\right) = \frac{\partial W_{mn}}{\partial X^\ell} - W_{kn}\Gamma^k_{m\ell} - W_{mk}\Gamma^k_{\ell n} $$
 
 <!-- ## Derivative of the metric tensor 
 
