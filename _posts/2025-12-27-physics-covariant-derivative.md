@@ -163,7 +163,7 @@ $$
   \end{align}
 $$
 
-Again, due to the flat coordinats $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. 
+Again, due to the flat coordinates $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. 
 
 <!-- ## Derivative of the metric tensor 
 
