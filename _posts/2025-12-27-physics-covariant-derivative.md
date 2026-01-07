@@ -98,32 +98,32 @@ We can also use the flat coordinates $X$ to learn that the covariant derivative 
 
 From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on vectors.
 
-One way is to form the interval $\Delta s^2$ like $g_{mn}\Delta X^m \Delta X^n.$ 
+One way is to form the interval $s^2 = g_{mn}V^m V^n.$ 
 
 Taking the covariant derivative $D_\ell \Delta s^2, we can evaluate it in two ways. One is to treat it like a scalar in which case we get a partial derivative
 
-$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n + g_{mn}\frac{\partial \Delta X^m}{\partial X^\ell}\Delta X^n + g_{mn} \Delta X^m\frac{\partial\Delta X^n}{\partial X^\ell}. $$
+$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n + g_{mn}\frac{\partial V^m}{\partial X^\ell}V^n + g_{mn} V^m\frac{\partialV^n}{\partial X^\ell}. $$
 
 The second way is to treat the right side as tensor objects using the product rule that we assume holds
 
 $$ 
   \begin{align}
-    D_\ell \Delta s^2 &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left(D_\ell \Delta X^m\right)\Delta X^n +  g_{mn}\Delta X^m\left(D_\ell \Delta X^n\right) \\
-    &= \left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\left[\frac{\partial \Delta X^m}{\partial X^\ell} + \Gamma^m_{k\ell}\Delta X^k\right]\Delta X^n + \Delta X^m\left[\frac{\partial \Delta X^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
+    D_\ell \Delta s^2 &= \left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\left(D_\ell V^m\right)V^n +  g_{mn}V^m\left(D_\ell V^n\right) \\
+    &= \left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\left[\frac{\partial V^m}{\partial X^\ell} + \Gamma^m_{k\ell}V^k\right]V^n + V^m\left[\frac{\partial V^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
   \end{align}. 
 $$
 
-Equating the two forms, the terms with partial derivatives of the $\Delta X$ are present on both sides so we can drop them. We leave the $D_\ell g_{mn}$ unevaluated, since we don't know how to evaluate it. 
+Equating the two forms, the terms with partial derivatives of the $V$ are present on both sides so we can drop them. We leave the $D_\ell g_{mn}$ unevaluated, since we don't know how to evaluate it. 
 
 $$ \begin{align}
-\left(D_\ell g_{mn}\right)\Delta X^m\Delta X^n + g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n + g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n \\
-\left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{mn}\Gamma^m_{k\ell}\Delta X^k\Delta X^n - g_{mn}\Delta X^m\Gamma^n_{\ell k}\Delta X^k
+\left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\Gamma^m_{k\ell}V^kV^n + g_{mn}V^m\Gamma^n_{\ell k}V^k &= \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n \\
+\left(D_\ell g_{mn}\right)V^m V^n &= \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n - g_{mn}\Gamma^m_{k\ell}V^kV^n - g_{mn}V^m\Gamma^n_{\ell k}V^k
 \end{align} $$
 
 Flip-flopping indices $k \leftrightarrow m$ and $k\leftrightarrow n$ in the Christoffel terms on the right, we get the explicit form of the covariant derivative for the metric
 
 $$ \begin{align}
-  \left(D_\ell g_{mn}\right)\Delta X^m \Delta X^n &= \frac{\partial g_{mn}}{\partial X^\ell}\Delta X^m\Delta X^n - g_{kn}\Gamma^k_{m\ell}\Delta X^m\Delta X^n - g_{mk}\Delta X^m\Gamma^k_{\ell n}\Delta X^n \\
+  \left(D_\ell g_{mn}\right)V^m V^n &= \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n - g_{kn}\Gamma^k_{m\ell}V^mV^n - g_{mk}V^m\Gamma^k_{\ell n}V^n \\
     \left(D_\ell g_{mn}\right) &= \frac{\partial g_{mn}}{\partial X^\ell} - g_{kn}\Gamma^k_{m\ell} - g_{mk}\Gamma^k_{\ell n}
     \end{align}
 $$
