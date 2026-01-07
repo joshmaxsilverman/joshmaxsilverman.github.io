@@ -96,19 +96,21 @@ which is symmetric in the lower indices $\gamma$ and $\alpha.$
 
 We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
 
-From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on vectors.
+From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on scalars and vectors.
 
-One way is to form the interval $s^2 = g_{mn}V^m V^n.$ 
+### As a scalar 
 
-Taking the covariant derivative $D_\ell \Delta s^2, we can evaluate it in two ways. One is to treat it like a scalar in which case we get a partial derivative
+One way is to form the quantity $V^2 = g_{mn}V^m V^n.$ Taking the covariant derivative $D_\ell V^2, we can evaluate it in two ways. 
 
-$$ D_\ell \Delta s^2 = \frac{\partial\Delta s^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n + g_{mn}\frac{\partial V^m}{\partial X^\ell}V^n + g_{mn} V^m\frac{\partial V^n}{\partial X^\ell}. $$
+The first is to treat the whole thing like a scalar in which case we get a partial derivative
 
-The second way is to treat the right side as tensor objects using the product rule that we assume holds
+$$ D_\ell V^2 = \frac{\partial V^2}{\partial X^\ell} = \frac{\partial g_{mn}}{\partial X^\ell}V^mV^n + g_{mn}\frac{\partial V^m}{\partial X^\ell}V^n + g_{mn} V^m\frac{\partial V^n}{\partial X^\ell}. $$
+
+The second way is to treat the pieces as tensor objects using the product rule that we assume holds
 
 $$ 
   \begin{align}
-    D_\ell \Delta s^2 &= \left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\left(D_\ell V^m\right)V^n +  g_{mn}V^m\left(D_\ell V^n\right) \\
+    D_\ell V^2 &= \left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\left(D_\ell V^m\right)V^n +  g_{mn}V^m\left(D_\ell V^n\right) \\
     &= \left(D_\ell g_{mn}\right)V^mV^n + g_{mn}\left[\frac{\partial V^m}{\partial X^\ell} + \Gamma^m_{k\ell}V^k\right]V^n + V^m\left[\frac{\partial V^n}{\partial X^\ell} + \Gamma^n_{\ell k}V^k\right]
   \end{align}. 
 $$
@@ -133,6 +135,10 @@ At the point of evaluation, where the flat, orthonormal coordinates $X$ are defi
 Generalizing, the covariant derivative of a $(0,2)$ tensor $W_{mn}$ is equal to 
 
 $$ \left(D_\ell W_{mn}\right) = \frac{\partial W_{mn}}{\partial X^\ell} - W_{kn}\Gamma^k_{m\ell} - W_{mk}\Gamma^k_{\ell n} $$
+
+### As a tensor field
+
+Another way is to write the metric in its full form $\mathbf{g}_mn e^m\otimes e^n.$
 
 <!-- ## Derivative of the metric tensor 
 
