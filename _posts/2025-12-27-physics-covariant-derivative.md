@@ -140,7 +140,7 @@ $$ \left(D_\ell W_{mn}\right) = \frac{\partial W_{mn}}{\partial X^\ell} - W_{kn}
 
 Another way is to write the metric in its full form with dual basis vectors $\mathbf{g}_{mn} e^m\otimes e^n.$ Applying the product rule, we get
 
-$$ D_\ell \mathbf{g} = \left(D_\ell g_{mn}\right)e^m\otimes e^ + g_{mn}\left(D_\ell e^m\right)\otimes e^n + g_{mn}e^m\otimes \left(D_\ell e^n\right). $$
+$$ D_\ell \mathbf{g} = \left(D_\ell g_{mn}\right)e^m\otimes e^n + g_{mn}\left(D_\ell e^m\right)\otimes e^n + g_{mn}e^m\otimes \left(D_\ell e^n\right). $$
 
 This requires us to figure out the covariant derivative of the dual basis vectors $e^i.$ This is actually straightforward since we know the covariant derivative of the lower basis vector $e_j.$ The product $e^i e_j$ is equal to $\delta^i_j$ so
 
