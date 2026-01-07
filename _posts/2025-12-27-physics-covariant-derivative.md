@@ -100,7 +100,7 @@ From the above, we don't have a direct approach to deal with rank-$2$ tensors. B
 
 ### As scalar coefficients
 
-One way is to form the quantity $V^2 = g_{mn}V^m V^n.$ Taking the covariant derivative $D_\ell V^2, we can evaluate it in two ways. 
+One way is to form the quantity $V^2 = g_{mn}V^m V^n.$ Taking the covariant derivative $D_\ell V^2,$ we can evaluate it in two ways. 
 
 The first is to treat the whole thing like a scalar in which case we get a partial derivative
 
