@@ -138,7 +138,32 @@ $$ \left(D_\ell W_{mn}\right) = \frac{\partial W_{mn}}{\partial X^\ell} - W_{kn}
 
 ### As a tensor field
 
-Another way is to write the metric in its full form $\mathbf{g}_mn e^m\otimes e^n.$
+Another way is to write the metric in its full form with dual basis vectors $\mathbf{g}_{mn} e^m\otimes e^n.$ Applying the product rule, we get
+
+$$ D_\ell \mathbf{g} = \left(D_\ell g_{mn}\right)e^m\otimes e^ + g_{mn}\left(D_\ell e^m\right)\otimes e^n + g_{mn}e^m\otimes \left(D_\ell e^n\right). $$
+
+This requires us to figure out the covariant derivative of the dual basis vectors $e^i.$ This is actually straightforward since we know the covariant derivative of the lower basis vector $e_j.$ The product $e^i\cdot e_j$ is equal to $\delta^i_j$ so
+
+$$
+  \begin{align}
+    0 &= D_\ell \delta^i_j \\
+      &= D_\ell\left(e^i\cdot e_j\right) \\
+      &= \left(D_\ell e^i\right)\cdot e_j + e^i\cdot\left(D_\ell e_j\right) \\
+      &= \left(D_\ell e^i\right)\cdot e_j + e^i\cdot \left(\Gamma^c_{\ell j} e_c\right) \\
+      -\Gamma^i_{\ell j} &= \left(D_\ell e^i\right)\cdot e_j
+  \end{align}
+$$
+
+The last line shows that $D_\ell e^i$ must be $-\Gamma^i_{\ell j} e^j.$ Plugging this in to $D_\ell\mathbf{g}$ above, we get
+
+$$
+  \begin{align}
+    D_\ell\mathbf{g} = \frac{\partialg_{mn}}{\partial X^\ell}e^me^n - g_{mn}\Gamma^m_{\ell j}e^j e^n - g_{mn}e^m\Gamma^n_{\ell j} e^j \\
+    &= e^me^n\left(\frac{\partialg_{mn}}{\partial X^\ell} - g_{jn}\Gamma^j_{\ell m} - g_{mj}\Gamma^j_{\ell n}\right)
+  \end{align}
+$$
+
+Again, due to the flat coordinats $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. 
 
 <!-- ## Derivative of the metric tensor 
 
