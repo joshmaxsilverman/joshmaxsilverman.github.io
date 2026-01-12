@@ -176,9 +176,11 @@ After moving from $X$ to $X+dX$ and changing a vector by $dV,$ the squared lengt
 $$ 
   \begin{align}
     {L^\prime}^2 &= g_{mn}(X+dX)(V^m + dV^m)(V^n + dV^n) \\
-    &= (g_{mn}(X+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell)(V^m + dV^m)(V^n + dV^n).
+    &= (g_{mn}(X+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell)(V^m + dV^m)(V^n + dV^n)
   \end{align}
 $$
+
+where we are expanding using the coordinates of the tangent space at $X.$
 
 The covariant derivative of $V^m$ is $D_r V^m = \frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k,$ so if we keep the covariant derivative zero, then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
 
@@ -190,6 +192,14 @@ $$
   \end{align}
 $$
 
+The bracketed term is zero since it's the covariant derivative of the metric tensor, so the new squared length is just $g_{mn}V^mV^n$ which is the old squared length.
 
+### By covariant derivative
+
+Starting from the squared length $L^2 = g_{mn}V^mV^n$ and taking the covariant derivative, we get
+
+$$ D_r L^2 = \left(D_r g_{mn}\right)V^mV^n + g_{mn}\left(D_r V^m\right)V^n + g_{mn}V^m\left(D_r V^n\right) $$
+
+which is zero since the covariant derivative of the metric is zero, and $V$ is being parallel transported which makes the $D_rV^m$ zero.
 
 <br>
