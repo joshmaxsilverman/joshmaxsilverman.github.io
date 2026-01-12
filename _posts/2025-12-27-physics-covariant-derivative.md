@@ -182,7 +182,7 @@ $$
 
 where we are expanding using the coordinates of the tangent space at $X.$
 
-The covariant derivative of $V^m$ is $D_r V^m = \frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k,$ so if we keep the covariant derivative zero, then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
+The covariant derivative of $V^m$ is $D_r V^m = \frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k,$ so if we keep the covariant derivative zero ($D_r V^m dX^r = 0$), then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
 
 $$
   \begin{align}
@@ -198,8 +198,8 @@ The bracketed term is zero since it's the covariant derivative of the metric ten
 
 Starting from the squared length $L^2 = g_{mn}V^mV^n$ and taking the covariant derivative, we get
 
-$$ D_r L^2 = \left(D_r g_{mn}\right)V^mV^n + g_{mn}\left(D_r V^m\right)V^n + g_{mn}V^m\left(D_r V^n\right) $$
+$$ D_{\Delta X} L^2 = \left(D_{\Delta X} g_{mn}\right)V^mV^n + g_{mn}\left(D_{\Delta X} V^m\right)V^n + g_{mn}V^m\left(D_{\Delta X} V^n\right) $$
 
-which is zero since the covariant derivative of the metric is zero, and $V$ is being parallel transported which makes the $D_rV^m$ zero.
+which is zero since the covariant derivative of the metric is zero, and $V$ is being parallel transported which makes the $D_{\Delta X}V^m$ zero.
 
 <br>
