@@ -192,7 +192,7 @@ $$
   \end{align}
 $$
 
-The bracketed term is zero since it's the covariant derivative of the metric tensor, so the new squared length is just $g_{mn}V^mV^n$ which is the old squared length.
+The bracketed term is zero since it's the covariant derivative of the metric tensor, so the new squared length is just $g_{mn}(X)V^mV^n$ which is the old squared length.
 
 ### By covariant derivative
 
