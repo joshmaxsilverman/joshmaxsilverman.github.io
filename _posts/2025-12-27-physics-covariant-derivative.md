@@ -165,38 +165,31 @@ $$
 
 Again, due to the flat coordinates $X$, the partials and Christoffel symbols are zero at the point of evaluation, and so the covariant derivative is zero. The piece in parenthesis becomes the definition for the covariant derivative of $g_{mn}$ when we don't want to keep explicit track of basis elements.
 
-<!-- ## Derivative of the metric tensor 
+## Length preservation under parallel transport
 
-We can also use the flat coordinates $X$ to learn that the covariant derivative of the metric tensor is zero in all frames $\widetilde{X}.$
+We can also see that the length of a vector is preserved by parallel transport. We can see this two ways, one that requires honest work, and one using our covariant derivative technology. The honest way first.
 
-From the above, we don't have a direct approach to deal with rank-$2$ tensors. But if we make the assumption that the covariant derivative has to obey a product rule, then we can work it out from the rules on vectors.
+### By projection
 
-$$ D_\ell g_{mn} = D_\ell \left(e_m\cdot e_n\right). $$
+After moving from $X$ to $X+dX$ and changing a vector by $dV,$ the squared length goes from $L^2 = g_{mn}(X)V^m V^n$ to
 
-On the left side, we have the covariant derivative of $g$ as a scalar field, so is no variation of basis vectors and we just get the partial derivative in the coordinate $X^\ell.$ On the right side, we can break it up using the product rule and apply the formula we worked out above. Our formula assumes vectors in the coefficient and basis vector form like $V = V^a e_a,$ so we need to re-express the basis vectors like $e_m = \delta^a_m e_a.$ 
-
-$$
+$$ 
   \begin{align}
-    D_\ell g_{mn} &= D_\ell \left(e_m\cdot e_n\right) \\
-    \frac{\partial g_{mn}}{\partial X^\ell} &= \left(D_\ell e_m\right)\cdot e_n + e_m\cdot \left(D_\ell e_n\right) \\
-    &= \left(D_\ell \delta^a_m e_a\right)\cdot e_n + e_m\cdot \left(D_\ell \delta^b_n e_b\right) \\
-    &= \left(\frac{\partial \delta^a_m}{\partial X^\ell} e_a + \Gamma^c_{a\ell}e_c\delta^a_m\right)\cdot e_n + e_m\cdot \left(D_\ell \frac{\partial \delta^b_n}{\partial X^\ell} e_b + \Gamma^d_{b\ell}e_d\delta^b_n \right) \\
+    {L^\prime}^2 &= g_{mn}(X+dX)(V^m + dV^m)(V^n + dV^n) \\
+    &= (g_{mn}(X+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell)(V^m + dV^m)(V^n + dV^n).
   \end{align}
 $$
 
-The partial derivatives of the $\delta^i_j$ are zero so
+The covariant derivative of $V^m$ is $D_r V^m = \frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k,$ so if we keep the covariant derivative zero, then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
 
 $$
   \begin{align}
-    \frac{\partial g_{mn}}{\partial X^\ell} &= \Gamma^c_{m\ell}e_c\cdot e_n + e_m\cdot \Gamma^d_{n\ell}e_d \\
-    &= \Gamma^c_{m\ell}g_{cn}+ \Gamma^d_{n\ell}g_{md}
+    (g_{mn}(X+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell)(V^m + dV^m)(V^n + dV^n) &\approx g_{mn}(X)V^mV^n +\frac{\partial g_{mn}(X)}{\partial X^\ell}dX^\ell - g_{mn}(X)V^m \Gamma^m_{kr}V^kdX^r V^n - g_{mn}(X)V^m\Gamma^n_{jr}V^j dX^r \\
+    &= g_{mn}(X)V^mV^n + dX^\ell\left[ \frac{\partial g_{mn}(X)}{\partial X^\ell}V^mV^n - g_{mn}(X_\Gamma^m_{k\ell}V^kV^n - g_{mn}(X)\Gamma^n_{j\ell}V^kjV^m\right] \\
+    &= g_{mn}(X)V^mV^n + dX^\ell V^mV^n\left[ \frac{}\partial g_{mn}(X){\partial X^\ell} - g_{kn}(X)\Gamma^k_{m\ell} - g_{mj}\Gamma^j_{n\ell} \right]
   \end{align}
 $$
 
-so we end up with
 
-$$ 0 = \frac{\partial g_{mn}}{\partial X^\ell} - \Gamma^c_{m\ell}g_{cn} - \Gamma^d_{n\ell}g_{md}. $$
-
-We evaluated this in $X,$ the coordinates at the point, where the metric is approximately flat. But each quantity is a tensor so it's true in arbitrary coordinates $\widetilde{X}.$ -->
 
 <br>
