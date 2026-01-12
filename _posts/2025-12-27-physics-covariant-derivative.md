@@ -175,7 +175,7 @@ After moving from $X$ to $X+dX$ and changing a vector by $dV,$ the squared lengt
 
 $$ 
   \begin{align}
-    {L^\prime}^2 &= g_{mn}(X+dX)(V^m + dV^m)(V^n + dV^n) \\
+    {L^\prime}^2 &= g_{mn}(X + dX)(V^m + dV^m)(V^n + dV^n) \\
     &= \left(g_{mn}(X)+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell\right)\left(V^m + dV^m\right)\left(V^n + dV^n\right)
   \end{align}
 $$
