@@ -169,7 +169,7 @@ Again, due to the flat coordinates $X$, the partials and Christoffel symbols are
 
 We can also see that the length of a vector is preserved by parallel transport. We can see this two ways, one that requires honest work, and one using our covariant derivative technology. The honest way first.
 
-### By projection
+### By local expansion
 
 After moving from $X$ to $X+dX$ and changing a vector by $dV,$ the squared length goes from $L^2 = g_{mn}(X)V^m V^n$ to
 
