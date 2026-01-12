@@ -187,7 +187,7 @@ The covariant derivative of $V^m$ is $D_r V^m = \frac{\partial V^m}{\partial X^r
 $$
   \begin{align}
     \left(g_{mn}(X)+\frac{\partial g_{mn}(X)}{\partial X^\ell} dX^\ell\right)(V^m + dV^m)(V^n + dV^n) &\approx g_{mn}(X)V^m V^n +\frac{\partial g_{mn}(X)}{\partial X^\ell}dX^\ell V^m V^n - g_{mn}(X) \Gamma^m_{kr}V^k dX^r V^n - g_{mn}(X)V^m\Gamma^n_{jr} V^j dX^r \\
-    &= g_{mn}(X)V^mV^n + dX^\ell\left[ \frac{\partial g_{mn}(X)}{\partial X^\ell}V^m V^n - g_{mn}(X)\Gamma^m_{k\ell}V^kV^n - g_{mn}(X)\Gamma^n_{j\ell}V^kjV^m\right] \\
+    &= g_{mn}(X)V^mV^n + dX^\ell\left[ \frac{\partial g_{mn}(X)}{\partial X^\ell}V^m V^n - g_{mn}(X)\Gamma^m_{k\ell}V^k V^n - g_{mn}(X)\Gamma^n_{j\ell}V^j V^m\right] \\
     &= g_{mn}(X)V^mV^n + dX^\ell V^mV^n\left[ \frac{\partial g_{mn}(X)}{\partial X^\ell} - g_{kn}(X)\Gamma^k_{m\ell} - g_{mj}(X)\Gamma^j_{n\ell} \right]
   \end{align}
 $$
