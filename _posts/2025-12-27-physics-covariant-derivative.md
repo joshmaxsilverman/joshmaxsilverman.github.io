@@ -182,7 +182,7 @@ $$
 
 where we are expanding using the coordinates of the tangent space at $X.$
 
-The covariant derivative of $V^m$ is $D_{\Delta x} V^m = \left(\frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k\right)dX^r,$ so if we keep the covariant derivative zero ($D_{\Delta X} V^m dX^r = 0$), then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
+The covariant derivative of $V^m$ is $D_{\Delta x} V^m = \left(\frac{\partial V^m}{\partial X^r} + \Gamma^m_{kr}V^k\right)dX^r,$ so if we keep the covariant derivative zero ($D_r V^m dX^r = 0$), then $dV^m = \frac{\partial V^m}{\partial X^r}dX^r = -\Gamma^m_{kr}V^kdX^r$ and
 
 $$
   \begin{align}
