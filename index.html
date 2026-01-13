@@ -1,90 +1,117 @@
 ---
 layout: page
 title: Jamshrivelson
-subtitle: Puzzle Solutions
 use-site-title: true
 ---
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<style>
+.split-layout {display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start;}
+@media (max-width: 900px) { .split-layout {grid-template-columns:1fr;}}
+.filter-bar {display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.5rem 0 1rem;}
+.filter-bar select, .filter-bar input {padding:0.45rem 0.6rem;border:1px solid #d0d0d0;border-radius:6px;min-width:160px;}
+.post-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0;}
+.post-card {display:block;border:1px solid #e0e0e0;border-radius:8px;padding:0.75rem 0.9rem;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,0.05);text-decoration:none;color:inherit;} 
+.post-card__meta {display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;font-size:0.85rem;color:#555;}
+.badge {background:#eef2ff;color:#233266;padding:0.2rem 0.45rem;border-radius:12px;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.02em;}
+.badge--kind {background:#e6f4ea;color:#116149;}
+.badge--theme {background:#f3e8ff;color:#4b198f;}
+.badge--source {background:#ffeede;color:#7a2e0e;}
+.post-card__title {margin:0.35rem 0 0.2rem;font-size:1.05rem;}
+.post-card__subtitle {margin:0;color:#444;font-size:0.95rem;}
+#no-results {display:none;color:#a00;margin-top:1rem;}
+.sidebar h3 {margin-top:0;}
+.sidebar .post-card {margin-bottom:0.75rem;}
+.recent-rail {display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:start;margin-bottom:2rem;}
+.recent-rail > div {max-height:720px;overflow:auto;padding-right:0.25rem;}
+@media (max-width: 900px) {
+  .recent-rail {grid-template-columns:1fr;}
+  .recent-rail > div {max-height:none;overflow:visible;}
+}
+</style>
 
-  ga('create', 'UA-97379807-1', 'auto');
-  ga('send', 'pageview');
+{% assign puzzle_posts = site.posts | where: "kind", "puzzle" %}
+{% assign writeup_physics = site.posts | where: "kind", "physics" %}
+{% assign writeup_learning = site.posts | where: "kind", "learning" %}
+{% assign writeup_extra = site.posts | where: "kind", "writeup" %}
+{% assign writeup_posts = writeup_physics | concat: writeup_learning | concat: writeup_extra %}
+{% assign recent_puzzles = puzzle_posts | slice: 0,6 %}
 
-</script>
-
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <img src="{{ post.image }}">
-        </a>
-      </div>
-      {% endif %}
-	{% if post.subtitle %}
-<!-- 	  <div class="none"></div> -->
-	  {% else %}
-       	    <div class="post-entry">
-
-	    {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-	    {% assign excerpt_word_count = post.excerpt | number_of_words %}
-
-            {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-              <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Solution]</a>
-            {% endif %}
-            </div>
-	{% endif %}
-    </div>
-
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-<!--       <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a> -->
-      <a href="{{ site.url }}/tags/#{{ tag }}">{{ tag }}</a>
+<div class="recent-rail">
+  <div>
+    <h2>Recent Puzzles</h2>
+    <div class="post-grid">
+      {% for post in recent_puzzles %}
+        {% include theme-from-tags.html post=post %}
+        {% include post-card.html post=post theme=computed_theme source=computed_source %}
       {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
     </div>
+  </div>
+  <aside class="sidebar">
+    <h2>Writeups</h2>
+    {% if writeup_posts.size == 0 %}
+      <p>No writeups yet.</p>
+    {% else %}
+      {% for post in writeup_posts limit:6 %}
+        {% include post-card.html post=post theme=post.theme source=post.source %}
+      {% endfor %}
     {% endif %}
-
-   </article>
-  {% endfor %}
+  </aside>
 </div>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<div>
+  <h2>Archive</h2>
+  <div class="filter-bar">
+    <select id="filter-theme">
+      <option value="all">All themes</option>
+      <option value="probability">Probability</option>
+      <option value="geometry">Geometry</option>
+      <option value="physics">Physics</option>
+      <option value="algorithms">Algorithms</option>
+      <option value="game-theory">Game Theory</option>
+    </select>
+    <select id="filter-source">
+      <option value="all">All sources</option>
+      <option value="fiddler">The Fiddler</option>
+      <option value="jane-street">Jane Street</option>
+      <option value="fivethirtyeight">FiveThirtyEight</option>
+      <option value="other">Other</option>
+    </select>
+    <input id="filter-text" type="search" placeholder="Search title, tags, theme, or source" />
+  </div>
+  <div class="post-grid" id="puzzle-archive-grid">
+    {% for post in site.posts %}
+      {% include theme-from-tags.html post=post %}
+      {% include post-card.html post=post theme=computed_theme source=computed_source %}
+    {% endfor %}
+  </div>
+  <p id="no-results">No posts match those filters.</p>
+</div>
+
+<script>
+const themeSel = document.getElementById('filter-theme');
+const sourceSel = document.getElementById('filter-source');
+const textInput = document.getElementById('filter-text');
+const cards = Array.from(document.querySelectorAll('#puzzle-archive-grid .post-card'));
+const noResults = document.getElementById('no-results');
+function applyFilters(){
+  const t = themeSel.value;
+  const s = sourceSel.value;
+  const q = textInput.value.trim().toLowerCase();
+  let shown = 0;
+  cards.forEach(card => {
+    const ct = card.dataset.theme || 'probability';
+    const cs = card.dataset.source || 'other';
+    const tags = (card.dataset.tags || '').toLowerCase();
+    const text = card.querySelector('.post-card__title').innerText.toLowerCase();
+    const themeOk = (t === 'all') || (ct === t);
+    const sourceOk = (s === 'all') || (cs === s);
+    const textOk = !q || text.includes(q) || tags.includes(q) || ct.includes(q) || cs.includes(q);
+    const visible = themeOk && sourceOk && textOk;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  noResults.style.display = shown === 0 ? 'block' : 'none';
+}
+[themeSel, sourceSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
+applyFilters();
+</script>
