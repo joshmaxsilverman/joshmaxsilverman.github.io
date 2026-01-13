@@ -13,7 +13,6 @@
   {%- when "optimization" -%}{%- assign normalized_theme = "algorithms" -%}
   {%- when "sports" -%}{%- assign normalized_theme = "probability" -%}
   {%- when "seasonal" -%}{%- assign normalized_theme = "probability" -%}
-  {%- when "other" -%}{%- assign normalized_theme = "probability" -%}
   {%- else -%}{%- assign normalized_theme = normalized_theme -%}
 {%- endcase -%}
 {%- assign normalized_source = card_source | downcase -%}
