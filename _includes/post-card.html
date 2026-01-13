@@ -6,24 +6,11 @@
 {%- assign card_kind = include.post.kind | default: "puzzle" -%}
 {%- assign card_source = include.source | default: include.post.source | default: "" -%}
 {%- assign post_date = include.post.date | date: "%b %-d, %Y" -%}
-{%- comment -%}Normalize deprecated themes into the current set{%- endcomment -%}
-{%- assign normalized_theme = card_theme | downcase -%}
-{%- case normalized_theme -%}
-  {%- when "games-logic" -%}{%- assign normalized_theme = "algorithms" -%}
-  {%- when "optimization" -%}{%- assign normalized_theme = "algorithms" -%}
-  {%- when "sports" -%}{%- assign normalized_theme = "probability" -%}
-  {%- when "seasonal" -%}{%- assign normalized_theme = "probability" -%}
-  {%- else -%}{%- assign normalized_theme = normalized_theme -%}
-{%- endcase -%}
-{%- assign normalized_source = card_source | downcase -%}
-{%- unless normalized_source == "fiddler" or normalized_source == "jane-street" or normalized_source == "fivethirtyeight" -%}
-  {%- assign normalized_source = "other" -%}
-{%- endunless -%}
-<a class="post-card" href="{{ include.post.url | relative_url }}" data-kind="{{ card_kind }}" data-theme="{{ normalized_theme | default: 'probability' }}" data-source="{{ normalized_source | default: 'other' }}" data-tags="{{ include.post.tags | join: ' ' | downcase }}">
+<a class="post-card" href="{{ include.post.url | relative_url }}" data-kind="{{ card_kind }}" data-theme="{{ card_theme | downcase | default: '' }}" data-source="{{ card_source | downcase | default: '' }}" data-tags="{{ include.post.tags | join: ' ' | downcase }}">
   <div class="post-card__meta">
     <span class="badge badge--kind">{{ card_kind }}</span>
-    {%- if normalized_theme != "" -%}
-      <span class="badge badge--theme">{{ normalized_theme }}</span>
+    {%- if card_theme != "" -%}
+      <span class="badge badge--theme">{{ card_theme }}</span>
     {%- endif -%}
     {%- if card_source != "" -%}
       <span class="badge badge--source">{{ card_source }}</span>
