@@ -76,6 +76,21 @@ permalink: /preview/split/
       <option value="fivethirtyeight">FiveThirtyEight</option>
       <option value="other">Other</option>
     </select>
+    <select id="filter-tag">
+      <option value="all">All tags</option>
+      {% assign all_tags = "" | split: "" %}
+      {% for p in site.posts %}
+        {% for t in p.tags %}
+          {% unless all_tags contains t %}
+            {% assign all_tags = all_tags | push: t %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+      {% assign sorted_tags = all_tags | sort %}
+      {% for tag in sorted_tags %}
+        <option value="{{ tag | downcase }}">{{ tag }}</option>
+      {% endfor %}
+    </select>
     <input id="filter-text" type="search" placeholder="Search title, tags, theme, or source" />
   </div>
   <div class="post-grid" id="puzzle-archive-grid">
@@ -90,12 +105,14 @@ permalink: /preview/split/
 <script>
 const themeSel = document.getElementById('filter-theme');
 const sourceSel = document.getElementById('filter-source');
+const tagSel = document.getElementById('filter-tag');
 const textInput = document.getElementById('filter-text');
 const cards = Array.from(document.querySelectorAll('#puzzle-archive-grid .post-card'));
 const noResults = document.getElementById('no-results');
 function applyFilters(){
   const t = themeSel.value;
   const s = sourceSel.value;
+  const tag = tagSel.value;
   const q = textInput.value.trim().toLowerCase();
   let shown = 0;
   cards.forEach(card => {
@@ -105,13 +122,14 @@ function applyFilters(){
     const text = card.querySelector('.post-card__title').innerText.toLowerCase();
     const themeOk = (t === 'all') || (ct === t);
     const sourceOk = (s === 'all') || (cs === s);
-    const textOk = !q || text.includes(q) || tags.includes(q);
-    const visible = themeOk && sourceOk && textOk;
+    const tagOk = (tag === 'all') || tags.split(' ').includes(tag);
+    const textOk = !q || text.includes(q) || tags.includes(q) || ct.includes(q) || cs.includes(q);
+    const visible = themeOk && sourceOk && tagOk && textOk;
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   noResults.style.display = shown === 0 ? 'block' : 'none';
 }
-[themeSel, sourceSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
+[themeSel, sourceSel, tagSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
 applyFilters();
 </script>
