@@ -1,12 +1,8 @@
 ---
 layout: page
-title: Home preview — Split
+title: Jamshrivelson
 permalink: /preview/split/
 ---
-
-<section class="home-preview">
-  <h1>Homepage Preview: Split (Puzzles + Physics)</h1>
-</section>
 
 <style>
 .split-layout {display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start;}
@@ -25,7 +21,7 @@ permalink: /preview/split/
 #no-results {display:none;color:#a00;margin-top:1rem;}
 .sidebar h3 {margin-top:0;}
 .sidebar .post-card {margin-bottom:0.75rem;}
-.recent-rail {display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start;margin-bottom:2rem;}
+.recent-rail {display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:start;margin-bottom:2rem;}
 .recent-rail > div {max-height:720px;overflow:auto;padding-right:0.25rem;}
 @media (max-width: 900px) {
   .recent-rail {grid-template-columns:1fr;}
@@ -33,7 +29,7 @@ permalink: /preview/split/
 }
 </style>
 
-{% assign puzzle_posts = site.posts | where: "kind", "puzzle" %}
+{% assign puzzle_posts = site.posts | where_exp: "post", "post.kind == nil or post.kind == 'puzzle'" %}
 {% assign writeup_physics = site.posts | where: "kind", "physics" %}
 {% assign writeup_learning = site.posts | where: "kind", "learning" %}
 {% assign writeup_extra = site.posts | where: "kind", "writeup" %}

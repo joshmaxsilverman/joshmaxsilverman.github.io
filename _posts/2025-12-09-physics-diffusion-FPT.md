@@ -4,6 +4,9 @@ published: True
 title: First passage time
 date: 2025/12/10
 subtitle: How long until a particle diffuses to $x$?
+source: writeup
+kind: physics
+theme: physics
 tags: statistical-mechanics first-passage-time
 ---
 

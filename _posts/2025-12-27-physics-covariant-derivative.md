@@ -4,6 +4,9 @@ published: true
 title: Covariant derivative
 date: 2025/12/27
 subtitle: Where does it come form, how do we find it?
+source: writeup
+kind: physics
+theme: physics
 tags: general-relativity differential-geometry
 ---
 
