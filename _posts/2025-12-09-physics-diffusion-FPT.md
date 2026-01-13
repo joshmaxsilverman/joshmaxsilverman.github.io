@@ -6,7 +6,7 @@ date: 2025/12/10
 subtitle: How long until a particle diffuses to $x$?
 source: writeup
 kind: physics
-theme: physics
+theme: diffusion
 tags: statistical-mechanics first-passage-time
 ---
 

@@ -29,7 +29,7 @@ permalink: /preview/split/
 }
 </style>
 
-{% assign puzzle_posts = site.posts | reject: "kind", "physics" | reject: "kind", "writeup" | reject: "kind", "learning" %}
+{% assign puzzle_posts = site.posts | where_exp: "post", "post.kind != 'physics' and post.kind != 'writeup' and post.kind != 'learning'" %}
 {% assign writeup_physics = site.posts | where: "kind", "physics" %}
 {% assign writeup_learning = site.posts | where: "kind", "learning" %}
 {% assign writeup_extra = site.posts | where: "kind", "writeup" %}
