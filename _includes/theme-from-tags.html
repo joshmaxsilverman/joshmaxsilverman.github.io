@@ -1,0 +1,51 @@
+{%- comment -%}
+  Computes a coarse theme and source for a post to support homepage grouping/filtering.
+  Priority: explicit post.theme/post.source -> heuristics -> defaults by kind.
+  Exposes `computed_theme` and `computed_source` in the parent scope.
+{%- endcomment -%}
+
+{%- assign post_theme = include.post.theme | default: "" -%}
+{%- assign post_source = include.post.source | default: "" -%}
+
+{%- if post_theme == "" -%}
+  {%- assign post_theme = "probability" -%}
+  {%- assign probability_tags = "probability,random,stochastic,coin,dice,markov,collapse,fpt,distribution,expected,uniform,random-walk,simulation,monte-carlo" | split: "," -%}
+  {%- assign geometry_tags = "geometry,triangle,polygon,circle,sphere,line,grid,prism,knight,distance,area,volume,edge,tiling" | split: "," -%}
+  {%- assign algorithms_tags = "algorithm,algorithms,recursion,graph,path,route,stack,matching,optimization,flow,search" | split: "," -%}
+  {%- assign gametheory_tags = "game-theory,nash,equilibrium,strategy,auction,hammer" | split: "," -%}
+  {%- for tag in include.post.tags -%}
+    {%- assign tag_lower = tag | downcase -%}
+    {%- if geometry_tags contains tag_lower -%}
+      {%- assign post_theme = "geometry" -%}
+      {%- break -%}
+    {%- elsif algorithms_tags contains tag_lower -%}
+      {%- assign post_theme = "algorithms" -%}
+      {%- break -%}
+    {%- elsif gametheory_tags contains tag_lower -%}
+      {%- assign post_theme = "game-theory" -%}
+      {%- break -%}
+    {%- elsif probability_tags contains tag_lower -%}
+      {%- assign post_theme = "probability" -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if post_theme == "probability" and include.post.kind == "physics" -%}
+  {%- assign post_theme = "physics" -%}
+{%- endif -%}
+
+{%- if post_source == "" -%}
+  {%- assign slug = include.post.url | downcase -%}
+  {%- if slug contains "fiddler" -%}
+    {%- assign post_source = "fiddler" -%}
+  {%- elsif slug contains "js-" or slug contains "jane" or slug contains "robot" -%}
+    {%- assign post_source = "jane-street" -%}
+  {%- elsif slug contains "riddler" or slug contains "538" or slug contains "fivethirtyeight" -%}
+    {%- assign post_source = "fivethirtyeight" -%}
+  {%- else -%}
+    {%- assign post_source = "other" -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign computed_theme = post_theme -%}
+{%- assign computed_source = post_source -%}

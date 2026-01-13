@@ -4,6 +4,8 @@ published: true
 title: Stable tiles
 date: 2024/11/17
 subtitle: How to defy the laws of physics in service of age 3+ entertainment.
+source: fiddler
+theme: physics
 tags: symmetry optimization
 ---
 

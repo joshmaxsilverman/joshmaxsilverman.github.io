@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Sign Markers
+title: Sign markers
 date: 2020/06/06
+subtitle: Where do you dot to keep the ink perfectly even?
+source: fivethirtyeight
+theme: geometry
 ---
 
 >**Question**: You're making a sign using a marker to draw the letters. The marker tip is a circle that's $2\text{ cm}$ across. If you want the marks to be as uniform as possible (as measured by the standard deviation of the ink intensity), and you can't place the tip within $1\text{ cm}$ of where it's previously been, how far apart should you make the marks?
@@ -111,4 +114,3 @@ This is palpable if we look at the post as $d$ changes. Bands of light and dark 
 **Top**: *density plot of ink intensity in a region with a drawn letter as the two market tips move closer together.* **Bottom**: *zoom in on two overlapping marker trails, (red) and (blue) show the profiles of the left and right hand trails, (black) shows their superposition ($I_\text{total}$), and (gold) shows the mean intensity of ink in the letters. Around $d_\text{sep} \approx 1.69,$ the variation of $I_\text{total}$ about the mean is minimized.*
 
 <br>
-

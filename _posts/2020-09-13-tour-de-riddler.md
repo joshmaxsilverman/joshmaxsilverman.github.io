@@ -3,6 +3,9 @@ layout: post
 published: true
 title: Tour de 538
 date: 2020/09/13
+subtitle: How bad is a bike race when your teammate rage-quits?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: You've entered the annual Tour de 538 but, like a fool, you've gotten into a blowout fight with your teammate just before the race. As a result, they refuse to cooperate with you, claiming "the team is dead." Not a day has passed, but you rue it already. The other two people in the race still have their team spirit intact, and they'll cooperate, allowing one another to draft up so that they always finish one after the other. If, drafting aside, all cyclists are equally skilled, and the point allotment goes $\\{5,3,2,1\\},$ what is your expected point total? 

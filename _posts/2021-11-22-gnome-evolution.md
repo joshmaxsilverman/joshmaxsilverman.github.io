@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Hat Hostage Strategies II
+title: Hat hostage strategies II
 subtitle: Can the ghost of Darwin get you out of this bind?
+source: fivethirtyeight
 tags: logic evolution 
 date: 2021/11/22
+theme: algorithms
 ---
 
 >**Question**: Four gnomes are trying to escape from a room. Guards have placed a hat on each gnome’s head, and each hat is one of three colors: red, yellow or blue. The four gnomes are arranged at the vertices of a square, with an obstacle in the middle. Each gnome can see the hats on the heads of those on adjacent vertices of the square, but they cannot see the hat of the gnome diagonally across from them. They also do not know the color of the hat on their own head. Each gnome must guess the color of the hat on their own head. If at least one gnome guesses correctly, they can all escape the room together. No communication is allowed once the hats are placed on their heads, but they can coordinate on a strategy beforehand. They also know how they will be arranged in the circle.

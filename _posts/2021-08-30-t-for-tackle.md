@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: $t$ for tackle
+title: $t$ is for tackle
 date: 2021/08/30
+subtitle: "How fast must you sprint to tackle a $15\\,\\text{mph}$ returner?"
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: Hames Jarrison has just intercepted a pass at one end zone of a football field, and begins running — at a constant speed of $15$ miles per hour — to the other end zone, $100$ yards away.

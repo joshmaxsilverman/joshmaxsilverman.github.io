@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: The Dark Forest
+title: The dark forest
 date: 2023/01/08
 subtitle: How long will you wait to get off your assemblers?
+source: fivethirtyeight
 tags: optimality
+theme: game-theory
 ---
 
 >**Question**: The astronomers of Planet Xiddler are back in action! Unfortunately, this time they have used their telescopes to spot an armada of hostile alien warships on a direct course for Xiddler. The armada will be arriving in exactly $100$ days. (Recall that, like Earth, there are 24 hours in a Xiddler day.)

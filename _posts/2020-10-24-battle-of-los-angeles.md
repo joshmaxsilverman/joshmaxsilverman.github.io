@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: The Battle of Los Angeles
+title: The battle of Los Angeles
 date: 2020/10/24
+subtitle: Can LeBron steal enough to beat AD in king of the court?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: It's the day after the championship parade and you are Lebron James. Doc Rivers has been deposed, Paul George's name is on the trade winds, and Patrick Beverley hasn't thought about trash talk in over a month. Needless to say, life is good. But one day, your brother in arms, The Brow, Anthony Davis himself, challenges you to some $1$ on $1,$ first to score wins! Due to his dominant height and wingspan, he's able to grab every single rebound, even the ones off his own three pointers! "What's a king to do?", you wonder. But then you realize — your career steal line is a full $0.2$ steals per game higher than Davis'. Every possession, you have the chance to steal the ball away with probability $L_\text{steal}.$ If yours and Anthony's shot percentages are $L_\text{score}$ and $D_\text{score},$ respectively, then what is the chance that you, Lebron James, win the $1$ on $1$ game? Inversely, how high does your steal probability, $L_\text{steal},$ need to be for it to be an even match?
