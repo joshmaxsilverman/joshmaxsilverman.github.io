@@ -4,7 +4,9 @@ published: true
 title: Drone delivery
 date: 2023/01/21
 subtitle: How much shorter as the crow flies?
+source: fivethirtyeight
 tags: expectation geometry integration 
+theme: geometry
 ---
 
 >**Question**: A  restaurant at the center of Riddler City is testing an airborne drone delivery service against their existing fleet of scooters. The restaurant is at the center of a large Manhattan-like array of square city blocks, which the scooter must follow.

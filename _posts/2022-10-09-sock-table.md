@@ -4,7 +4,9 @@ published: true
 title: Sock wash
 date: 2022/10/09
 subtitle: Will you be able to fit all your lonely socks on the chair?
+source: fivethirtyeight
 tags: recursion scaling
+theme: probability
 ---
 
 >**Question**: In my laundry basket, I have 14 pairs of socks that I need to pair up. To do this, I use a chair that can fit nine socks, at most. I randomly draw one clean sock at a time from the basket. If its matching counterpart is not already on the chair, then I place it in one of the nine spots. But if its counterpart is already on the chair, then I remove it from the chair (making that spot once again unoccupied) and place the folded pair in my drawer.

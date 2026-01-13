@@ -4,6 +4,8 @@ published: true
 title: Randy hall
 date: 2025/11/08
 subtitle: How should you move in order to be unpredictable?
+source: fiddler
+theme: probability
 tags: recursion master-equation
 ---
 

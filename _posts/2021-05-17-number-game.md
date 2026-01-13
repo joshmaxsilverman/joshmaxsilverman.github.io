@@ -3,6 +3,9 @@ layout: post
 published: true
 title: Survivor
 date: 2021/05/17
+subtitle: Who survives the race-to-20 counting game?
+source: fivethirtyeight
+theme: games-logic
 ---
 
 >**Question**: Players A, B, C, and D are playing a game which starts with A saying the number $1.$ From that point on, each player says a number between $1$ and $4$ greater than the number spoken by the preceding player. The player who says $20$ wins the round, the player after them is removed from the game, the player after them starts the next round. Any other players survive to the next round. Each player's top aim is to win the whole game but, if they realize that's impossible, they'll prioritize surviving to the next round. Who will survive the $4$ players game?

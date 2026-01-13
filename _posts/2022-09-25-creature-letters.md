@@ -4,7 +4,9 @@ published: true
 title: Letters from the sea
 date: 2022/09/25
 subtitle: How many letters are you going to have to read?
+source: fivethirtyeight
 tags: expectation scaling translation
+theme: probability
 ---
 
 >**Question:** Graydon is about to depart on a boating expedition that seeks to catch footage of the rare aquatic creature, _F. Riddlerius_. Every day he is away, he will send a hand-written letter to his new best friend, David Hacker. But if Graydon still has not spotted the creature after $N$ days (where $N$ is some very, very large number), he will return home.

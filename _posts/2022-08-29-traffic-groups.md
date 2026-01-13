@@ -4,7 +4,9 @@ published: true
 title: Traffic groups
 date: 2022/08/29
 subtitle: How many will go as fast as they want if everyone goes as fast as they want?
+source: fivethirtyeight
 tags: occlusion counting ensemble
+theme: probability
 ---
 
 >**Question**:

@@ -4,6 +4,8 @@ published: true
 title: Robot road trip
 date: 2025/08/01
 subtitle: How much time will you lose avoiding a tragic collision?
+source: jane-street
+theme: probability
 tags: kinematics expectation asymptotics
 ---
 

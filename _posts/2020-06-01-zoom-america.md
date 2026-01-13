@@ -3,6 +3,9 @@ layout: post
 published: true
 title: Wherefore art thou superzoomer
 date: 2020/06/01
+subtitle: What’s the chance one caller overlaps everyone on Zoom?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: In one of the greatest disasters in the history  of collective planning, all 330M residents of the U.S. join the same Zoom call by picking two random times between 8:00 and 9:00. They dial in at the earlier time and hang up at the later time. What is the probability that there is at least one person who is on for some portion of everyone else's call, a so-called Superzoomer? Further, what is the chance of there being two Superzoomers on the same call?

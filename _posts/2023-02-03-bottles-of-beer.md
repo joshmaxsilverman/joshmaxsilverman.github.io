@@ -4,7 +4,9 @@ published: true
 title: Keep on singing
 date: 2023/02/03
 subtitle: Will you get to zero bottles of beer on the wall before someone loses their cool?
+source: fivethirtyeight
 tags: recursion expectation markov
+theme: probability
 ---
 
 >**Question**: You and your friends are singing the traditional song, “99 Bottles of Beer.” With each verse, you count down the number of bottles. The first verse contains the lyrics “$99$ bottles of beer,” the second verse contains the lyrics “$98$ bottles of beer,” and so on. The last verse contains the lyrics “$1$ bottle of beer.”

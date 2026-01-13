@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Simple Runoff Elections
+title: Simple runoff elections
 date: 2020/10/21
+subtitle: How often do random elections force a runoff?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: Like a banshee on a motorcycle, November approaches and brings with it everyone's favorite day: the election... But as we know, nobody can conduct a poll these days, what with phones and computers and all that. That means you have no idea what's going to happen. In fact, you might as well pull a random election result out of a hat. 

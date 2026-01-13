@@ -1,10 +1,12 @@
 ---
 layout: post
 published: True
-title: Rotating Light
+title: Rotating light
 tags: superposition physics concave
 subtitle: How much light can you spin with a series of filters?
+source: fivethirtyeight
 date: 2022/02/06
+theme: physics
 ---
 
 >**Question:** I have a light source that’s polarized in the vertical direction, but I want it to be polarized in the horizontal direction. To make that happen I need … polarizers! When light passes through a polarizer, only the light whose polarization aligns with the polarizer passes through. When they aren’t perfectly aligned, only the component of the light that’s in the direction of the polarizer passes through.

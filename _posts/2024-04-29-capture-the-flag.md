@@ -3,6 +3,8 @@ layout: post
 published: true
 title: Capture the flag
 subtitle: How often can you win when you have a number and they have an arrow?
+source: jane-street
+theme: game-theory
 tags: geometry game-theory expectation jane-street
 date: 2024/05/01
 ---

@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Wordly Wise
+title: Wordly wise
 date: 2020/09/20
+subtitle: How many guesses to find the secret word in a giant dictionary?
+source: fivethirtyeight
+theme: algorithms
 ---
 
 >**Question**: Every night your children change their favorite word and refuse to let you go to bed until you guess which word it is. If you guess wrong, they'll tell you if their word comes before or after yours in a list of all words. If there are $W = 267,751$ words that they're knowledgable about, how many guesses will you take, on average, to uncover their word?

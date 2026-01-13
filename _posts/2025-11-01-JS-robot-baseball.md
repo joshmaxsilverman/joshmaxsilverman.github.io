@@ -4,6 +4,8 @@ published: true
 title: Robot baseball
 date: 2025/11/01
 subtitle: How common can league office scheming rig full counts to be?
+source: jane-street
+theme: game-theory
 tags: nash-equilibria optimization
 ---
 

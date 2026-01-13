@@ -4,7 +4,9 @@ published: true
 title: Take a number
 date: 2023/05/22
 subtitle: When should you stop dreaming of a brighter future?
+source: fivethirtyeight
 tags: expectation strategy
+theme: probability
 ---
 
 >**Question**: You start with just the number 1 written on a slip of paper in a hat. Initially, there are no other slips of paper in the hat. You will draw from the hat $100$ times, and each time you draw, you have a choice: If the number on the slip of paper you draw is $k,$ then you can either receive $k$ dollars or add $k$ higher numbers to the hat.

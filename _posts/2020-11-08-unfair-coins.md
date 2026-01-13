@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Fair Unfair Coins
+title: Fair unfair coins
 date: 2020/11/09
+subtitle: For how many biases can three flips fake a fair coin?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: after a life of flipping fair coins, you've had enough. Your new mission is to construct elaborate and worthless schemes to extract virtual fair coins out of $3$ flips of a crooked one. Ever the positivist, you want to know just how many crooked coins there can be that suit your campaign. For how many values of $p$ can a fair coin be simulated using no more than $3$ flips?

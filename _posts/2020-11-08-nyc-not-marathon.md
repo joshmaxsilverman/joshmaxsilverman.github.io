@@ -3,6 +3,9 @@ layout: post
 published: true
 title: Not a Marathon
 date: 2020/11/08
+subtitle: "Which treadmill run is faster: steady pace or end-of-run sprint?"
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: you're practicing for the forgotten NYC marathon. On the first day you set your treadmill to $9$ minutes per mile. On the second day, you set it to steadily "speed up" over time from $r_0 = 10$ minutes per mile at the beginning down to $r_1 = 8$ minutes per mile at the end (when the run is half over, the treadmill moves at $9$ minutes per mile). Which run took less time?

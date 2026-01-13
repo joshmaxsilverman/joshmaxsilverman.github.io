@@ -4,6 +4,8 @@ published: true
 title: Hammer golf
 date: 2025/04/21
 subtitle: Live by the hammer, die by the hammer.
+source: fiddler
+theme: game-theory
 tags: game-theory recursive-games strategy
 ---
 

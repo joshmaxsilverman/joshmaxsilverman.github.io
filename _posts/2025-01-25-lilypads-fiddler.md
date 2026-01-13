@@ -4,6 +4,8 @@ published: true
 title: Can you hop to the lily pad?
 date: 2025/01/25
 subtitle: The further you go, the harder it gets.
+source: fiddler
+theme: probability
 tags: master-equation recursion
 ---
 

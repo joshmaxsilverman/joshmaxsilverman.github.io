@@ -4,6 +4,8 @@ published: true
 title: Can you witness an epic collapse?
 date: 2024/06/09
 subtitle: How often will Indianapolis get its dreams crushed?
+source: fiddler
+theme: probability
 tags: counting first-passage
 ---
 

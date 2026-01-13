@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Pass the Cranberry Sauce
+title: Pass the cranberry sauce
 date: 2020/11/22
+subtitle: Where do you drop the sauce so Uncle Zach gets it last?
+source: fivethirtyeight
+theme: probability
 ---
 
 

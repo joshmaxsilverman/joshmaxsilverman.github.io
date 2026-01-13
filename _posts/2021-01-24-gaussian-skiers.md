@@ -2,9 +2,11 @@
 layout: post
 published: true
 title: Gaussian skiers
-date: 2025/11/18
+date: 2021/01/24
 subtitle: How safe are you for winning the first heat?
+source: fivethirtyeight
 tags: scaling approximation
+theme: probability
 ---
 
 >**Question**: You're in your town's head to head marble racing championship, the traditional way to determine who is the town's next mayor. The race is split into two heats and your time in either heat is a random, normally distributed variable. If you have the fastest time in the first run, what is the probability $P_\text{win it all}$ that you end up winning the event, as determined by the sum of your times on heat run?

@@ -4,6 +4,8 @@ published: true
 title: Can you spin the graph?
 date: 2025/02/02
 subtitle: If you tumble your function is it still a function?
+source: fiddler
+theme: geometry
 tags: spherical-geometry vectors
 ---
 

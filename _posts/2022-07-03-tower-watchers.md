@@ -3,8 +3,10 @@ layout: post
 published: true
 title: Hide and go seek tower
 subtitle: Now you see me, now you don't
+source: fivethirtyeight
 tags: geometry approximation physics materials
 date: 2022/07/03
+theme: geometry
 ---
 
 >**Question:** As the Royal Astronomer of Planet Xiddler, you wake up from a dream in which you measured the planet’s radius using a satellite. “How silly!” you think to yourself. “Satellites haven’t even been invented yet!” And so you and another astronomer set out to investigate the curvature of the planet.

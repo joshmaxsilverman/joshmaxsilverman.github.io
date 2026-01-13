@@ -4,6 +4,8 @@ published: true
 title: Twisted balkanization 
 date: 2023/07/09
 subtitle: How many different adventures does the Mobius prism have in store?
+source: fiddler
+theme: number-theory
 tags: maps dynamics measurement
 ---
 

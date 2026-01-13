@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Frustrated Graduation
+title: Frustrated graduation
 date: 2020/08/03
+subtitle: What’s the smallest class where musical chairs always fails?
+source: fivethirtyeight
+theme: combinatorics
 ---
 
 >**Question**: A gaggle of graduates gathers round a gargoyle who genuflects until they gear up in a circle upon which they (the gargoyle) announce, I thought no two of you were now in the same position relative to one another but alas I am mistaken, you comprise a number larger than $100$ such that you are the least populous class size for which it is simply not possible for less than $2$ of you to have remained in the correct relative position. How many students are in this graduation class?

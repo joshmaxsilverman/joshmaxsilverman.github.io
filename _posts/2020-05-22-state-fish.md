@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: State Fish
+title: State fish
 date: 2020-05-22
+subtitle: Can every state land its own perfect fish?
+source: fivethirtyeight
+theme: combinatorics
 ---
 
 >**Question**: Find the longest words that share letters with only 49 of the 50 U.S. states. Extra: find the state with the most such words.
@@ -62,6 +65,4 @@ Reverse-sorting the word list by word length, we can quickly find that the longe
 The code takes a total of $\approx3.5\, \textrm{s}$ to run.
 
 <br>
-
-
 

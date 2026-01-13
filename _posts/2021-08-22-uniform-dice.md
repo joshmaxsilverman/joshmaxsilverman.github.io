@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Uniform Dice
+title: Uniform dice
 date: 2021/08/22
+subtitle: How close to uniform can you make the sum of two loaded die?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: When you roll a pair of fair dice, the most likely outcome is $7$ (which occurs $1/6^\text{th}$ of the time) and the least likely outcomes are 2 and 12 (which each occur $1/36^\text{th}$ of the time).

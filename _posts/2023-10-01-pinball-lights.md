@@ -4,6 +4,8 @@ published: true
 title: Pinball lights
 date: 2023/10/01
 subtitle: How many shots does it take to turn the lights on?
+source: fiddler
+theme: probability
 tags: master-equation
 ---
 

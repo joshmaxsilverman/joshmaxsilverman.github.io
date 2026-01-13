@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Squid Game
+title: Squid game
 subtitle: How many will die crossing this entropic bridge?
+source: fivethirtyeight
 tags: "probability counting recursion"
 date: 2021/10/30
+theme: probability
 ---
 
 >**Question**: Congratulations, you’ve made it to the fifth round of The Squiddler — a competition that takes place on a remote island. In this round, you are one of the 16 remaining competitors who must cross a bridge made up of 18 pairs of separated glass squares. 

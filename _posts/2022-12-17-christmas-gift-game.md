@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Secret Santa administrivia
+title: Secret santa administrivia
 date: 2022/12/17
 subtitle: How long must you wait to pawn your candle off on some poor relative?
+source: fivethirtyeight
 tags: approximation linearity-of-expectation 
+theme: probability
 ---
 
 >**Question**: Every Christmas, Gary’s family has a gift exchange. And every year, there is a big fight over how much folks should spend on the gifts. This year, they decided to pair up. So if Virginia gives Justin a gift, then Justin gives Virginia a gift. This way, while there will still be arguments, only two people will be involved in each argument.

@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Different Dice
+title: Different dice
 subtitle: Get absorbed by these dice.
+source: fivethirtyeight
 tags: coarse-graining counting
 date: 2022/05/14
+theme: probability
 ---
 
 >**Question**: You have four fair four-sided dice whose sides are numbered 1 through 4.

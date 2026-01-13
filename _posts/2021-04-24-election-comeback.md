@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Election Comeback
+title: Election comeback
 date: 2021/04/24
+subtitle: What's the chance of a comeback when late ballots lean your way?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: it's election night and your candidate is behind in the count. However, a significant fraction of the vote is still out in uncounted mail-in ballots. What are the chances that your candidates come back for the stunning victory if a whole bunch of people vote? What happens when the polls are tilted in one direction?

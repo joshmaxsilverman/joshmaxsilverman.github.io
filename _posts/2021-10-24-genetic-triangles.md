@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Genetic Triangles
+title: Genetic triangles
 subtitle: Will a random baby triangle cover the center of its equilateral parent?
+source: fivethirtyeight
 tags: "geometry probability calculus"
 date: 2021/10/24
+theme: geometry
 ---
 
 <!-- will a random triangle made from a parent triangle contain the center of the parent triangle? -->

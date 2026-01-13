@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Broken Ruler
+title: Broken ruler
 date: 2020/08/17
+subtitle: When your ruler shatters, where does the 6-inch shard fall?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: Quality control at your ruler factory has taken a turn for the worst and your latest shipment of rulers are all broken into 4 pieces! What is the average length of the shard that contains the $\text{6 inch}$ mark?

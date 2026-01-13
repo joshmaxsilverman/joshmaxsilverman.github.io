@@ -4,6 +4,8 @@ published: true
 title: Tree-edge triage
 date: 2024/09/01
 subtitle: Can you taunt your friend forever?
+source: jane-street
+theme: game-theory
 tags: recursion phase-transitions game-theory jane-street
 ---
 

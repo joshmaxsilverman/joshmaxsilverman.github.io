@@ -4,6 +4,8 @@ published: true
 title: Can you beat the heats?
 date: 2024/05/06
 subtitle: A good old racetrack whodunit.
+source: fiddler
+theme: algorithms
 tags: information-theory trees
 ---
 

@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: An End to War
+title: An end to war
 date: 2020/08/28
+subtitle: How many lifetimes to see a flawless War victory?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: your friend Duane's friend's no-good, duplicitous, self-promoting grandchild has made extraordinary claims regarding their performance in the well-known cabin and road trip cardgame known as War. According to them, they've triumphed in a round where they won every single matchup with no ties, ending the game in a mere $26$ hands. Never one to let the feats of grandchildren go unchallenged, you set out to compute the probability of this occurrence. About how many rounds of War would one need to play to bear witness to their flawless victory?

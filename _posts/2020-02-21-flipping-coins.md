@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Flipping Coins to Freedom
+title: Flipping coins to freedom
 date: 2020-02-21
+subtitle: How do you survive 100 flips with two risky coins?
+theme: game-theory
+source: fivethirtyeight
 ---
 
 >**Question**: You can make 100 coin flips with either of two coins, **Coin A** worth $\pm1,$ and **Coin B** worth $\pm2.$ You survive if you end up with a positive score. How should you flip the coins to maximize your chances?

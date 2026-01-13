@@ -4,7 +4,9 @@ published: true
 title: Save the world
 date: 2023/05/15
 subtitle: Good use of polling or bad use of polling?
+source: fivethirtyeight
 tags: approximation 
+theme: probability
 ---
 
 >**Question**: Later this year, aliens will visit Earth and announce that they intend to blow up the planet. (Lovely.)

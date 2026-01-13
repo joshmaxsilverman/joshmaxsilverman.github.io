@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Stick it to the Genie
+title: Stick it to the genie
 subtitle: How much can you bilk the genie for?
+source: fivethirtyeight
 tags: probability algebra invariance
 date: 2021/11/14
+theme: probability
 ---
 
 >**Question**: One day you stumble across a magic genie, who says that if you play a simple game with him, you could win fabulous riches. You take the genie up on his offer, and he hands you a stick of length 1. He says that behind his back is another stick, with a random length between 0 and 1 (chosen uniformly over that interval).

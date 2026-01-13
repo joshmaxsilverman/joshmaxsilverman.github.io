@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Robot Weightlifters
+title: Robot weightlifters
 date: 2021/07/21
+subtitle: How should three robot lifters choose weights to maximize their odds to win?
+source: jane-street
+theme: game-theory
 tags: game-theory jane-street
 ---
 

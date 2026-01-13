@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Introverts' Exodus
+title: Introverts' exodus
 subtitle: Can you get some privacy on your last walk into the great beyond?
+source: fivethirtyeight
 tags: generating-functions counting exclusion
 date: 2022/06/05
+theme: probability
 ---
 
 >**Question:** In the Great Riddlerian Desert, there is a single oasis that is straight and narrow. There are $n$ travelers who are trapped at the oasis, and one day, they agree that they will all leave. They independently pick a random location in the oasis from which to start and a random direction in which to travel. Once their supplies are packed, they all head out.

@@ -4,6 +4,8 @@ published: true
 title: The radius of a rectangle
 date: 2024/05/19
 subtitle: What would the world look like if you could only see squares?
+source: fiddler
+theme: geometry
 tags: scaling geometry
 ---
 

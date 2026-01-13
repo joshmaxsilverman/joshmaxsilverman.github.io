@@ -4,6 +4,8 @@ published: true
 title: How long is the river?
 date: 2025/05/23
 subtitle: What should we expect from coincidental diagonals of contiguous spaces?
+source: fiddler
+theme: probability
 tags: recursion generating-functions keyboard-problems
 ---
 

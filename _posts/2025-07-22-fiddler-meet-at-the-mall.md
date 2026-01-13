@@ -4,6 +4,8 @@ published: true
 title: Can you meet me at the mall?
 date: 2025/07/22
 subtitle: What is the greatest number of friends you're likely to meet if nobody deigns to coordinate?
+source: fiddler
+theme: probability
 tags: maximum approximation
 ---
 

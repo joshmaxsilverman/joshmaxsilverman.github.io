@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Speedy Hammer
+title: Speedy hammer
 date: 2022/11/13
 subtitle: Will the giant hammer be going fast enough when it hits the big elf door?
+source: fivethirtyeight
 tags: conservation-of-energy optimization vectors
+theme: physics
 ---
 
 >**Question**: From the fantastical land of Central Earth comes a physics riddle that will break down your doors:

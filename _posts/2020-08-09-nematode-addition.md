@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Nematode Addition
+title: Nematode addition
 date: 2020/08/09
+subtitle: How reliable is worm math when your CPU is a petri dish?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: It's year 5 of quarantine and all computing power is reserved for face filters that make you look like a baby or the GEICO lizard. If you want to crunch numbers there's a new calculator in town — the _C. elegans_ petri dish. 

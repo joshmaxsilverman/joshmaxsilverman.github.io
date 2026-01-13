@@ -2,9 +2,11 @@
 layout: post
 published: true
 subtitle: How many times will you press the broken button?
+source: fivethirtyeight
 tags: expectation structure dynamics
-title: Broken Elevator
+title: Broken elevator
 date: 2022/05/07
+theme: probability
 ---
 
 >**Question:** You are on the $10^\text{th}$ floor of a tower and want to exit on the first floor. You get into the elevator and hit $1.$ However, this elevator is malfunctioning in a specific way. When you hit $1,$ it correctly registers the request to descend, but it randomly selects some floor below your current floor (including the first floor). The car then stops at that floor. If it’s not the first floor, you again hit $1$ and the process repeats.

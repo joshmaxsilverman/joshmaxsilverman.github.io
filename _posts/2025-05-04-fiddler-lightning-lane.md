@@ -4,6 +4,8 @@ published: true
 title: How many rides can you reserve?
 date: 2025/05/04
 subtitle: How many rides will you get if you throw Mickey a little money on the side?
+source: fiddler
+theme: probability
 tags: recursion
 ---
 

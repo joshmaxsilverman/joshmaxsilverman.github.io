@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: 
-date: 2020/06/29
+title: Knockoff polygons
+date: 2020/06/26
+subtitle: How many look-alike polygons can you squeeze from one dot set?
+source: fivethirtyeight
+theme: geometry
 ---
 
 >**Question**: Suppose you have a pencil, a hexagon, and absolutely nothing to do. What is the greatest number of knockoff hexagons you can draw using the same $6$ points as the original hexagons? What about septagons? What about octagons? What about ...
@@ -183,4 +186,3 @@ A set of $339$ unique octagons generated from the same $8$ points.
 I tried going for a more involved genetic approach, being less aggressive in repicking random points as the score improves, but I ran out of Saturday. 
 
 <br>
-

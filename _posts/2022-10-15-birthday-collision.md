@@ -4,7 +4,9 @@ published: true
 title: Birthday collisions
 date: 2022/10/15
 subtitle: How many people in this room have stolen your birthday?
+source: fivethirtyeight
 tags: approximation recursion combinatorics
+theme: probability
 ---
 
 >**Question**: Today I happen to be celebrating the birthday of a family member, which got me wondering about how likely it is for two people in a room to have the same birthday.

@@ -4,6 +4,8 @@ published: true
 title: Pick a circle, any circle
 date: 2024/02/19
 subtitle: What chance is there, for a circle inside a square?
+source: jane-street
+theme: geometry
 tags: conditional-probability transformations jane-street
 ---
 

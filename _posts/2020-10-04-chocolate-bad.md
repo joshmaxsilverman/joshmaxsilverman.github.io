@@ -1,8 +1,11 @@
 ---
 layout: post
 published: false
-title: A Bag of Chocolates
+title: A bag of chocolates
 date: 2020/10/04
+subtitle: What’s the chance you finish on a vegan chocolate?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: Your good friend, the Count, is back from $6$ years on a pirate ship and, as promised, she has brought with her, among other gifts, various and sundry, a bag of chocolates. But not just any bag of a chocolates, a velvet bag of chocolates. And not just any bag of velvet chocolates, but one that contains $d$ dark chocolates, $m$ soymilk chocolates (she is a noble, vegan vampire), and has a built-in game whose rules determine when you can eat them!
@@ -201,4 +204,3 @@ Indeed, we find $1/2$ everywhere we look. If we take this result for granted, we
 
 <br>
  
-

@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Reasonable Sandwich
+title: Reasonable sandwich
 date: 2022/11/13
 subtitle: How often will the hand of fate deliver a reasonable slice to the undercard?
+source: fivethirtyeight
 tags: parameter-space geometry probability
+theme: geometry
 ---
 
 >**Question**: I have made a square peanut butter and jelly sandwich, and now it’s time to slice it. But rather than making a standard horizontal or diagonal cut, I instead pick two random points along the perimeter of the sandwich and make a straight cut from one point to the other. (These points can be on the same side.)

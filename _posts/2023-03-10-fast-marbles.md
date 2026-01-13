@@ -4,7 +4,9 @@ published: true
 title: Fast times at the marble track
 date: 2023/03/12
 subtitle: It won't be long before this marble's at your door
+source: fivethirtyeight
 tags: optimality conservation-of-energy calculus
+theme: physics
 ---
 
 >**Question**: While passing the time at home one evening, you decide to set up a marble race course. No Teflon is spared, resulting in a track that is effectively frictionless.

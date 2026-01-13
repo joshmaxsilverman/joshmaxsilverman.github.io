@@ -3,8 +3,10 @@ layout: post
 published: true
 title: Morning walkabout
 subtitle: Will the friendly ant have an unusual experience?
+source: jane-street
 tags: recursion counting waiting-time coarse-graining jane-street
 date: 2022/07/26
+theme: probability
 ---
 
 >**Question**: Andy the ant has spent most of his days living on a strange land consisting of white hexagons that are surrounded by alternating black pentagons and white hexagons (three of each), and black pentagons surrounded by five white hexagons. To us this land is familiar as the classic soccer ball we see above on the left. Due to Andy’s tiny size and terrible eyesight, he doesn’t notice the curvature of the land and avoids the black pentagons because he suspects they may be bottomless pits.

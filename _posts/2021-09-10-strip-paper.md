@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Strip Paper
+title: Strip paper
 date: 2021/09/10
+subtitle: How many random cuts before a sheet turns into all strips?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: One morning, Phil was playing with his daughter, who loves to cut paper with her safety scissors. She especially likes cutting paper into “strips,” which are rectangular pieces of paper whose shorter sides are at most 1 inch long.

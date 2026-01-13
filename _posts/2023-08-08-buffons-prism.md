@@ -4,6 +4,8 @@ published: true
 title: Buffon's prism
 date: 2023/08/08
 subtitle: If you throw a rod into a jelly lattice, what is the chance it crosses just one wall?
+source: jane-street
+theme: geometry
 tags: probability geometry jane-street
 ---
 

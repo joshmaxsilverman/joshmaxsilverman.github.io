@@ -4,6 +4,8 @@ published: true
 title: Traffic light chase
 date: 2023/10/23
 subtitle: How long until you meet your menacing assailant?
+source: fiddler
+theme: probability
 tags: counting convolution
 ---
 

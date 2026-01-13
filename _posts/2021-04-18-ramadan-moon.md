@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Crescent Observatory
+title: Crescent observatory
 date: 2021/04/18
+subtitle: How much quicker does the Moon brighten at half than at a slim crescent?
+source: fivethirtyeight
+theme: geometry
 ---
 
 >**Question**: you're watching the Moon from your room, alone, like every night. Seeking a higher purpose, you decide to track the projected area of the illuminated portion of the Moon throughout the month. If your data is accurate, how much faster will the illuminated Moon's area be growing at half Moon as compared to a crescent Moon of $1/6^\text{th}$ area?

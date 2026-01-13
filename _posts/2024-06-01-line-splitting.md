@@ -4,6 +4,8 @@ published: true
 title: Interview line splitting
 date: 2024/06/01
 subtitle: What is the sum of the products of endless division?
+source: fiddler
+theme: probability
 tags: scaling recursion
 ---
 

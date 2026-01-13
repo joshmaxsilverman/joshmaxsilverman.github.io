@@ -4,6 +4,8 @@ published: true
 title: Card collisions
 date: 2024/04/21
 subtitle: What's the chance no card sees its own reflection?
+source: fiddler
+theme: probability
 tags: approximation recursion mean-field
 ---
 
@@ -106,5 +108,4 @@ We can also use this to approximate the infinite limit. Evaluating for an $N=10^
 
 
 <br>
-
 

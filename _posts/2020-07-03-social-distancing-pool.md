@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Social Distance Swimming Pool
+title: Social distance swimming pool
 date: 2020/07/04
+subtitle: How many swimmers get waved off in the pandemic pool rush?
+source: fivethirtyeight
+theme: probability
 ---
 
 >Question: It's 8:59 at the $N$-lane town pool and the coronavirus is absolutely ripping. In an effort to mitigate the spread, swimmers must stay at least one lane apart. In one minute, the swimmers will hop into the pool, one lane at a time, until it becomes impossible to obey social distancing. If there are $N$ swimmers, how many do you expect to be left crying on the side of the pool?

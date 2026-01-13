@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Hit the Bullseye, Kind Of
+title: Hit the bullseye, kind of
 date: 2021/01/10
+subtitle: How long can your closer-and-closer dart streak last?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: each night, you like to wind down with a relaxing game of one-upsmanship against yourself, throwing darts at your bullseye one by one, trying to get each one closer than the last. When a dart lands further from the center than the one that came before, the streak is over. Over the course of your life, how many darts will you throw on the average night? Assume that all darts hit inside the bullseye and that the darts are equally likely to land at any point inside the outer ring of the dartboard. For additional credit, you can play the demented version of the game where the board is divided into $10$ annuli, and instead of trying to move closer, period, you try to get within tighter and tighter rings.

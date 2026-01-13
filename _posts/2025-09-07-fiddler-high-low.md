@@ -4,6 +4,8 @@ published: true
 title: High low
 date: 2025/09/07
 subtitle: Where will you be when you can't stop winning?
+source: fiddler
+theme: probability
 tags: expectation self-consistency distributions
 ---
 

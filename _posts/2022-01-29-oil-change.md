@@ -1,10 +1,12 @@
 ---
 layout: post
 published: True
-title: Calendrical Oil Change
+title: Calendrical oil change
 subtitle: How fresh is the oil in your jalopy if you only change a quart per month?
+source: fivethirtyeight
 tags: probability steady-state 
 date: 2022/01/29
+theme: probability
 ---
 
 >**Question:** You want to change the transmission fluid in your old van, which holds 12 quarts of fluid. At the moment, all 12 quarts are “old.” But changing all 12 quarts at once carries a risk of transmission failure.

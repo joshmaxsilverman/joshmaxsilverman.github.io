@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Bacterial Collapse
+title: Bacterial collapse
 date: 2020/06/13
+subtitle: Will these reckless microbes form a dynasty or disappear from the annals of history?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: A bacterial colony starts from a single cell that has a probability $\gamma$ of splitting into $2$ and a probability $\left(1-\gamma\right)$ of lysing, as do all of its descendants. 

@@ -4,6 +4,8 @@ published: true
 title: Cool weave curve
 date: 2023/09/10
 subtitle: What shape is the margin doodle?
+source: fiddler
+theme: geometry
 tags: geometry lines
 ---
 
@@ -113,7 +115,6 @@ Subtracting this area from the enclosing square, the white region occupies appro
 
 
 <br>
-
 
 
 

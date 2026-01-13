@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Hard choices for the Easter bunny
+title: Hard choices for the easter bunny
 date: 2023/04/09
 subtitle: Hoppity hop, which carton are you going to get?
+source: fivethirtyeight
 tags: counting symmetry 
+theme: probability
 ---
 
 >**Question**: For Easter, you and your family decide to decorate $10$ beautiful eggs. You pull a fresh carton of eggs out of your fridge and remove $10$ eggs. There are two eggs remaining in the carton, which you return to the fridge.

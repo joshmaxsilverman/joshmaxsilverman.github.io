@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Antipersistent Basketball
+title: Antipersistent basketball
 subtitle: Who will win if nobody cares until they're losing?
+source: fivethirtyeight
 tags: coarse-graining scaling symmetry
 date: 2022/05/01
+theme: probability
 ---
 
 >**Question:** The New York Nicks are facing off against the Brooklyn Naughts. Throughout the entire game, the two teams alternate possession, starting with the Nicks, until both teams have had exactly 100 possessions. For simplicity, assume that each team scores either 0 points or 2 points with each possession. (So don’t worry about 3-pointers, fouls, etc.)

@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Spam Attack
+title: Spam attack
 date: 2020/04/11
+subtitle: How long until spam buries the inbox?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: A post can accumulate spam comments, and each spam comment can accumulate spam comments. If each open reply thread accumulates spam at a rate of $1$ reply per day, then what is the expected number of spam posts by the end of a three day weekend?

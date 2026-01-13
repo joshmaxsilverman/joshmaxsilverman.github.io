@@ -1,9 +1,11 @@
 ---
 layout: post
 published: true
-title: Infinite March madness
+title: Infinite march madness
 date: 2025/03/24
 subtitle: How often will the $1$-seed make the final four when there are $(2^d-1)$ worse teams in their region?
+source: fiddler
+theme: probability
 tags: recursion trees
 ---
 

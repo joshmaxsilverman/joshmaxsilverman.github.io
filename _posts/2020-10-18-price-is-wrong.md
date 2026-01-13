@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: The Price is Wrong
+title: The price is wrong
 date: 2020/10/18
+subtitle: How do you bid when no one knows any prices anymore?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: The ghost of Bob Parker takes a break from saving animals to remind you of your invitation to pandemic Price is Right, with Drew Carey. Usually, you're up against some real price wizards, but since nobody has been to a store in $7$ months, everyone is on a level playing field and has no idea about prices. 

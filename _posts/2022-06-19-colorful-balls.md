@@ -3,8 +3,10 @@ layout: post
 published: true
 title: Colorful balls
 subtitle: How many do they have?
+source: fivethirtyeight
 tags: counting inference
 date: 2022/06/19
+theme: probability
 ---
 
 >**Question:** You have an urn with an equal number of red balls and blue balls, but you have no information about what that number might be. You draw 19 balls at random, without replacement, and you get eight red balls and 11 blue balls. What is your best guess for the original number of balls (red plus blue) in the urn?

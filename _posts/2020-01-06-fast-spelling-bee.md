@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Fast Spelling Bee
+title: Fast spelling bee
 date: 2020/01/06
+subtitle: Can you build the ultimate Spelling Bee board?
+source: fivethirtyeight
+theme: algorithms
 ---
 
 >**Question:** The NYTimes has a new word game called Spelling Bee. The idea of the game is, on a board like the one below, to make words using **only** the letters on the board under the constraint that the central letter must be used. Words are worth their length in letters (with a minimum length of $4$), but words that use all $7$ letters — known as **pangrams** — are awarded $7$ bonus points. The valid word list is Peter Norvig's which contains some 172820 distinct words. The object is to find the game board with the highest possible maximum score.

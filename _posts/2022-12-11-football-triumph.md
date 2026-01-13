@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Soccer Brackets
+title: Soccer brackets
 date: 2022/12/11
 subtitle: Who will win when anything is possible?
+source: fivethirtyeight
 tags: uniform-probability rankings tournaments
+theme: probability
 ---
 
 >**Question**: Speaking of “football,” the Riddler Football Playoff (RFP) consists of four teams. Each team is assigned a random real number between 0 and 1, representing the “quality” of the team. If team A has quality $a$ and team B has quality $b,$ then the probability that team A will defeat team B in a game is $a/(a+b).$

@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Maximum Dice
+title: Maximum dice
 date: 2021/08/16
+subtitle: How high can your score get with optimal freeze-and-reroll?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: You have four standard dice, and your goal is simple: Maximize the sum of your rolls. So you roll all four dice at once, hoping to achieve a high score.

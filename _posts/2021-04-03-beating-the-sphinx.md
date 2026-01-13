@@ -1,8 +1,12 @@
 ---
 layout: post
 published: false
-title: Beating the Sphinx
+title: Beating the sphinx
 date: 2021/04/03
+subtitle: What profit can you lock in if three-in-a-row never appears?
+subtitle: If the coin can’t land the same way thrice, what payoff can you guarantee?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: an oracular Sphinx gives you a starting capital of a dollar and the opportunity to wager any portion of your stake on a series of $4$ coin flips. The coin flips are completely random, except for the fact that the Sphinx guarantees there aren't any runs of $3$ like outcomes in a row (no $\mathbf{H}\rightarrow\mathbf{H}\rightarrow\mathbf{H}$ or $\mathbf{T}\rightarrow\mathbf{T}\rightarrow\mathbf{T}$).  If you set your wagers right, what is your maximum guaranteed profit for the worst-case outcome? If the Sphinx now offers you $N$ wagers, and guarantees that no $Q$ flips in a row will have the same outcome, what is your maximum guaranteed profit?

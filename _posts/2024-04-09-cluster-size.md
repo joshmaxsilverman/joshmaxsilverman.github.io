@@ -4,6 +4,8 @@ published: true
 title: Paint by number
 date: 2024/04/09
 subtitle: Cluster your expectations
+source: fiddler
+theme: probability
 tags: approximation 
 ---
 

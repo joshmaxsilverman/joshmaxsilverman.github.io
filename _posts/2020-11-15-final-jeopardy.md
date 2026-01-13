@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Final Jeopardy
+title: Final jeopardy
 date: 2020/11/15
+subtitle: Which board order wins more money if you ace every clue?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: it's your last chance to be on Jeopardy and you want to leave it all on the field. You've trained for years and are confident that you can answer every question correctly and beat your competitors to the buzzer every time. Your only issue is how to order your guesses. The Daily Double tile is placed randomly on the board, so you can't predict its location. The two strategies you've narrowed it down to are guessing all the tiles in succession (all $\\$200$ tiles then all $\\$400$ tiles and so on) or to guess tiles randomly. What is the expected value of each strategy, assuming you have the whole "getting the answers right" part covered?

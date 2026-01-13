@@ -4,6 +4,8 @@ published: true
 title: Diametric shore
 date: 2025/03/16
 subtitle: If you wake up in a random spot on a semi-circular island, how far is the beach, probably?
+source: fiddler
+theme: geometry
 tags: geometry pdf cdf conditional-probability 
 ---
 

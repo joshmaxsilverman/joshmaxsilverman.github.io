@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: A Tale of Two U-turns
+title: A tale of two u-turns
 date: 2020/10/11
+subtitle: How tight a turn saves the stranded grocery run?
+source: fivethirtyeight
+theme: geometry
 ---
 
 >**Question**: You're driving your truck — which has the footprint of a bicycle — down to the grocery store to pick up yams for the big day. Boy do you love yourself some yams! When you're halfway there, you realize you left your N-95 face mask at home. What a klutz! You make a U-turn, pointing holding your front tire $30\,^\circ$ to the left until you turn around. 

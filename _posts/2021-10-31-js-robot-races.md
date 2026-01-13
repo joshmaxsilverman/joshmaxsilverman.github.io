@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Robot Races
+title: Robot races
 subtitle: How can you break from the crystalline grip of Nash equilibrists?
+source: jane-street
 tags: game-theory probability inclusion-exclusion jane-street
 date: 2021/10/31
+theme: game-theory
 ---
 
 >**Question**: In the Robot Swimming Trials, $3N$ identical robots compete for $N$ equivalent spots in the finals by swimming $N$ races. Each robot precommits to spending a certain amount of its fuel in each race. After all the races are run, the spots in the finals are given to the winners of the races, moving from the fastest winner to the slowest. (Once a robot wins a race, it is ineligible to win another race.) A robot’s speed is strictly increasing in the amount of fuel it spends, and ties are broken by randomly choosing the winner among the robots that have spent the same amount of fuel.

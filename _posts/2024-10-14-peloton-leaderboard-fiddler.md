@@ -4,6 +4,8 @@ published: true
 title: Peloton leaderboard
 date: 2024/10/14
 subtitle: How great will you be if you're average in the middle? 
+source: fiddler
+theme: probability
 tags: statistics 
 ---
 
@@ -68,4 +70,3 @@ So, just over $25\%$ of riders will be ahead of this rider at the end of their r
 <br>
 
 <!-- &= \frac{1}{W_\text{max}T_\text{max}}\left[\left(W_\text{max}T_\text{max} - E\log T_\text{max}\right) - \left(E - E\log\frac{E}{W_\text{max}}\right)\right] \\ -->
-

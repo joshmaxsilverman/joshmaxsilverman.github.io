@@ -4,7 +4,9 @@ published: true
 title: Sag A* alignment
 tags: probability geometry
 subtitle: Here's lookin' at you kid.
+source: fivethirtyeight
 date: 2022/05/22
+theme: probability
 ---
 
 >**Question:** Data from the Event Horizon Telescope was recently used to generate a never-before-seen image of the black hole — Sagittarius A* — at the center of our galaxy. One of the most striking things about the image is how clearly we can make out the black hole’s shadow (as shown below). That’s because the plane of its accretion disk is nearly perpendicular to the vector between us and the black hole.

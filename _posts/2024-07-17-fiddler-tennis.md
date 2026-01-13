@@ -4,6 +4,8 @@ published: true
 title: Lose to win
 date: 2024/07/17
 subtitle: Can you lose the points while winning the match?
+source: fiddler
+theme: probability
 tags: partition-functions counting
 ---
 
@@ -125,4 +127,3 @@ Plotting the full set of coefficients, we get the full probability distribution 
 ![](/img/2024-07-17-score-gap-plot.png){:width="450 px" class="image-centered"}
 
 <br>
-

@@ -1,0 +1,92 @@
+---
+layout: page
+title: Home preview — Faceted filters
+permalink: /preview/faceted/
+---
+
+<section class="home-preview">
+  <h1>Homepage Preview: Faceted Filters</h1>
+  <p>Quick links: <a href="{{ '/preview/sections/' | relative_url }}">Sections</a> · <a href="{{ '/preview/tabs/' | relative_url }}">Tabs</a> · <a href="{{ '/' | relative_url }}">Current home</a></p>
+</section>
+
+<style>
+.filter-bar {display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.5rem 0 1rem;}
+.filter-bar select, .filter-bar input {padding:0.45rem 0.6rem;border:1px solid #d0d0d0;border-radius:6px;min-width:160px;}
+.post-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0;}
+.post-card {display:block;border:1px solid #e0e0e0;border-radius:8px;padding:0.75rem 0.9rem;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,0.05);text-decoration:none;color:inherit;} 
+.post-card__meta {display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;font-size:0.85rem;color:#555;}
+.badge {background:#eef2ff;color:#233266;padding:0.2rem 0.45rem;border-radius:12px;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.02em;}
+.badge--kind {background:#e6f4ea;color:#116149;}
+.badge--theme {background:#f3e8ff;color:#4b198f;}
+.badge--source {background:#ffeede;color:#7a2e0e;}
+.post-card__title {margin:0.35rem 0 0.2rem;font-size:1.05rem;}
+.post-card__subtitle {margin:0;color:#444;font-size:0.95rem;}
+#no-results {display:none;color:#a00;margin-top:1rem;}
+</style>
+
+<div class="filter-bar">
+  <select id="filter-kind">
+    <option value="all">All kinds</option>
+    <option value="puzzle">Puzzles</option>
+    <option value="physics">Physics</option>
+    <option value="other">Other</option>
+  </select>
+  <select id="filter-theme">
+    <option value="all">All themes</option>
+    <option value="probability">Probability</option>
+    <option value="geometry">Geometry</option>
+    <option value="games-logic">Games & Logic</option>
+    <option value="sports">Sports</option>
+    <option value="seasonal">Seasonal</option>
+    <option value="other">Other</option>
+  </select>
+  <select id="filter-source">
+    <option value="all">All sources</option>
+    <option value="fiddler">The Fiddler</option>
+    <option value="jane-street">Jane Street</option>
+    <option value="fivethirtyeight">FiveThirtyEight</option>
+    <option value="other">Other</option>
+  </select>
+  <input id="filter-text" type="search" placeholder="Search title or tags" />
+</div>
+
+<div class="post-grid" id="faceted-grid">
+  {% for post in site.posts %}
+    {% include theme-from-tags.html post=post %}
+    {% include post-card.html post=post theme=computed_theme source=computed_source %}
+  {% endfor %}
+</div>
+<p id="no-results">No posts match those filters.</p>
+
+<script>
+const kindSel = document.getElementById('filter-kind');
+const themeSel = document.getElementById('filter-theme');
+const sourceSel = document.getElementById('filter-source');
+const textInput = document.getElementById('filter-text');
+const cards = Array.from(document.querySelectorAll('#faceted-grid .post-card'));
+const noResults = document.getElementById('no-results');
+function applyFilters(){
+  const k = kindSel.value;
+  const t = themeSel.value;
+   const s = sourceSel.value;
+  const q = textInput.value.trim().toLowerCase();
+  let shown = 0;
+  cards.forEach(card => {
+    const ck = card.dataset.kind || 'other';
+    const ct = card.dataset.theme || 'other';
+    const cs = card.dataset.source || 'other';
+    const tags = (card.dataset.tags || '').toLowerCase();
+    const text = card.querySelector('.post-card__title').innerText.toLowerCase();
+    const kindOk = (k === 'all') || (k === 'other' ? (ck !== 'puzzle' && ck !== 'physics') : ck === k);
+    const themeOk = (t === 'all') || (ct === t);
+    const sourceOk = (s === 'all') || (cs === s);
+    const textOk = !q || text.includes(q) || tags.includes(q);
+    const visible = kindOk && themeOk && sourceOk && textOk;
+    card.style.display = visible ? '' : 'none';
+    if(visible) shown++;
+  });
+  noResults.style.display = shown === 0 ? 'block' : 'none';
+}
+[kindSel, themeSel, sourceSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
+applyFilters();
+</script>

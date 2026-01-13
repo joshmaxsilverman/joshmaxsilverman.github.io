@@ -4,6 +4,8 @@ published: true
 title: Can you fling the fractal darts?
 date: 2025/12/08
 subtitle: How many points will you asymptotically approach?
+source: fiddler
+theme: geometry
 tags: recursion fractals linearity-of-expectation
 ---
 

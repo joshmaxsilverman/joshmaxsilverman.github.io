@@ -4,6 +4,8 @@ published: true
 title: Can you permeate the bipyramid?
 date: 2025/05/18
 subtitle: How many paths can you find?
+source: fiddler
+theme: algorithms
 tags: counting recursion search
 ---
 

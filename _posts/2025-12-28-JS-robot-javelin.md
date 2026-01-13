@@ -4,6 +4,8 @@ published: true
 title: Javelin toss
 date: 2026/01/01
 subtitle: How should you counter the tosser who doesn't know you know they're cheating?
+source: jane-street
+theme: game-theory
 tags: nash-equilibrium recursion
 ---
 

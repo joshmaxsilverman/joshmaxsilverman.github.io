@@ -4,7 +4,9 @@ published: true
 title: Left handed sister
 date: 2023/04/06
 subtitle: Are you talking to some brother, or the brother?
+source: probably-overthinking-it
 tags: bayes partition-function evidence
+theme: probability
 ---
 
 >**Question**: Suppose you meet someone who looks like the brother of your friend Mary. You ask if he has a sister named Mary, and he says “Yes I do, but I don’t think I know you.”

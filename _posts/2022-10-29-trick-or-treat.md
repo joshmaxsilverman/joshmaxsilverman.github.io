@@ -1,10 +1,13 @@
 ---
 layout: post
 published: true
-title: Neurotic Halloween
+title: Neurotic halloween
 date: 2022/10/29
 subtitle: How close can you get to perfect candy disbursement?
+source: fivethirtyeight
 tags: expectation dynamic-programming optimality
+theme: probability
+theme: probability
 ---
 
 >**Question**: For Halloween this year, David S. Pumpkins has asked you to purchase $150$ pieces of vegan chocolate to hand out to trick or treaters. You’re not sure how many trick-or-treaters will visit you but, based on previous years, it could be anywhere from $50$ to $150$ (inclusive), with each number being equally likely.

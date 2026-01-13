@@ -4,7 +4,9 @@ published: true
 title: Fall colors
 date: 2022/11/06
 subtitle: When's the best time to go leaf peeping?
+source: fivethirtyeight
 tags: bayes 
+theme: probability
 ---
 
 >**Question:** It’s peak fall foliage season in Riddler Nation, where the trees change color in a rather particular way. Each tree independently begins changing color at a random time between the autumnal equinox and the winter solstice. Then, at a random later time for each tree — between when that tree’s leaves began changing color and the winter solstice — the leaves of that tree will all fall off at once.

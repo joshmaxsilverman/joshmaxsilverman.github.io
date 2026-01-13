@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Total Collapse
+title: Total collapse
 date: 2020/11/16
+subtitle: How often does a 99% coin-flip favorite implode?
+source: fivethirtyeight
+theme: probability
 ---
 
 >**Question**: the hometown coin flipping team has staked out a healthy lead, in fact there's a $\gt 99\%$ chance they bring home the championship (chip). Suddenly, disaster strikes, and they experience a total collapse and lose the game. If the game is a best of $101$ flips, what's the chance to witness this devastating upset?

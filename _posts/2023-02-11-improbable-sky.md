@@ -4,6 +4,8 @@ published: true
 title: The chance in our stars
 date: 2023/02/11
 subtitle: A cool puzzle for planes that fly at $\approx 0\,\text{mph}.$
+source: fivethirtyeight
+theme: geometry
 tags: spherical-geometry distributions projection
 ---
 

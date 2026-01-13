@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: It's Pumpkin Time
+title: It's pumpkin time
 date: 2020/11/1
+subtitle: When does David S. Pumpkins boot you from the circle?
+source: fivethirtyeight
+theme: combinatorics
 ---
 
 >**Question**: It's Halloween Eve and famous ambassador (ambassador of pumpkins) David S. Pumpkins has appeared out of the clear blue sky to invade your apartment complex's elevator. "Join me", he entices, for a few rounds of "Damn That's a Hot Pumpkin" his crazy new game that's been sweeping the nation. Altogether, there are $61$ people, including David S. Pumpkins himself.

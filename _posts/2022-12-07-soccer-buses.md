@@ -1,10 +1,12 @@
 ---
 layout: post
 published: true
-title: Soccer Buses
+title: Soccer buses
 date: 2022/12/07
 subtitle: How many trips will the poor saps have to make?
+source: fivethirtyeight
 tags: recursion symmetry linearity-of-expectation
+theme: probability
 ---
 
 >**Question**: A certain hotel in Qatar is hosting 11 American fans and seven Dutch fans. Since no alcohol is available inside the stadiums, the fans spend the afternoon at the hotel bar before shuttle buses will take them to a match. Then, they haphazardly write their room numbers on a big board by the concierge desk.

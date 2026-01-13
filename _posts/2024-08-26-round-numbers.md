@@ -4,6 +4,8 @@ published: true
 title: Drifting around
 date: 2024/08/26
 subtitle: How often will the round of the sums be the sum of the rounds?
+source: fiddler
+theme: probability
 tags: random-walks approximation
 ---
 

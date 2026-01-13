@@ -4,6 +4,8 @@ published: true
 title: Can you weave the web?
 date: 2025/06/08
 subtitle: What is the probability that two random points form a line that goes through a particular point $\mathbf{p}$?
+source: fiddler
+theme: geometry
 tags: indicators geometry pdfs
 ---
 

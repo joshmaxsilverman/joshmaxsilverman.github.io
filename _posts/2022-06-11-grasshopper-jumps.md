@@ -3,8 +3,10 @@ layout: post
 published: true
 title: Grasshopper jumps
 subtitle: Where will you find this beautiful and mysterious creature?
+source: fivethirtyeight
 tags: equilibrium detailed-balance rates
 date: 2022/06/11
+theme: physics
 ---
 
 >**Question:** You are trying to catch a grasshopper on a balance beam that is 1 meter long. Every time you try to catch it, it jumps to a random point along the interval between 20 centimeters left of its current position and 20 centimeters right of its current position.

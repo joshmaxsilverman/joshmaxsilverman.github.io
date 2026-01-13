@@ -1,8 +1,11 @@
 ---
 layout: post
 published: true
-title: Things Have Chained
+title: Things have chained
 date: 2021/07/31
+subtitle: What curve does an infinite shrinking chain trace?
+source: fivethirtyeight
+theme: geometry
 ---
 
 >**Question**: Suppose you have a chain with infinitely many flat (i.e., one-dimensional) links. The first link has length $1,$ and the length of each successive link is a fraction $f$ of the previous link’s length. As you might expect, $f$ is less than $1.$ You place the chain flat on a table and some ink at the very end of the chain (i.e., the end with the infinitesimal links).
