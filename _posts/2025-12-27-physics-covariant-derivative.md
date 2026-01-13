@@ -200,6 +200,6 @@ Starting from the squared length $L^2 = g_{mn}V^mV^n$ and taking the covariant d
 
 $$ D_{\Delta X} L^2 = \left(D_{\Delta X} g_{mn}\right)V^mV^n + g_{mn}\left(D_{\Delta X} V^m\right)V^n + g_{mn}V^m\left(D_{\Delta X} V^n\right) $$
 
-which is zero since the covariant derivative of the metric is zero, and $V$ is being parallel transported which makes the $D_{\Delta X}V^m$ zero.
+which is zero since the covariant derivative of the metric is zero, and $V$ is being parallel transported which makes the $D_{\Delta X}V^m$ zero. Anus.
 
 <br>
