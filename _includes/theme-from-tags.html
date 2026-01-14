@@ -6,6 +6,7 @@
 
 {%- assign post_theme = include.post.theme | default: "" -%}
 {%- assign post_source = include.post.source | default: "" -%}
+{%- assign normalized_source = post_source | downcase -%}
 
 {%- if post_theme == "" -%}
   {%- assign post_theme = "probability" -%}
@@ -41,6 +42,16 @@
   {%- elsif slug contains "js-" or slug contains "jane" or slug contains "robot" -%}
     {%- assign post_source = "jane-street" -%}
   {%- elsif slug contains "riddler" or slug contains "538" or slug contains "fivethirtyeight" -%}
+    {%- assign post_source = "fivethirtyeight" -%}
+  {%- else -%}
+    {%- assign post_source = "other" -%}
+  {%- endif -%}
+{%- else -%}
+  {%- if normalized_source == "fiddler" -%}
+    {%- assign post_source = "fiddler" -%}
+  {%- elsif normalized_source == "jane-street" or normalized_source == "janestreet" or normalized_source == "js" -%}
+    {%- assign post_source = "jane-street" -%}
+  {%- elsif normalized_source == "fivethirtyeight" or normalized_source == "five-thirty-eight" or normalized_source == "538" -%}
     {%- assign post_source = "fivethirtyeight" -%}
   {%- else -%}
     {%- assign post_source = "other" -%}

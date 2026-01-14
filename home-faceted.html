@@ -11,16 +11,17 @@ permalink: /preview/faceted/
 
 <style>
 .filter-bar {display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.5rem 0 1rem;}
-.filter-bar select, .filter-bar input {padding:0.45rem 0.6rem;border:1px solid #d0d0d0;border-radius:6px;min-width:160px;}
+.filter-bar select {padding:0.45rem 0.6rem;border:1px solid #d0d0d0;border-radius:6px;min-width:160px;}
+.filter-bar input {padding:0.45rem 0.6rem;border:1px solid #d0d0d0;border-radius:6px;flex:1 1 100%;min-width:240px;}
 .post-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0;}
 .post-card {display:block;border:1px solid #e0e0e0;border-radius:8px;padding:0.75rem 0.9rem;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,0.05);text-decoration:none;color:inherit;} 
-.post-card__meta {display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;font-size:0.85rem;color:#555;}
-.badge {background:#eef2ff;color:#233266;padding:0.2rem 0.45rem;border-radius:12px;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.02em;}
+.post-card__meta {display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;font-size:1rem;color:#555;}
+.badge {background:#eef2ff;color:#233266;padding:0.2rem 0.45rem;border-radius:12px;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.02em;}
 .badge--kind {background:#e6f4ea;color:#116149;}
 .badge--theme {background:#f3e8ff;color:#4b198f;}
 .badge--source {background:#ffeede;color:#7a2e0e;}
-.post-card__title {margin:0.35rem 0 0.2rem;font-size:1.05rem;}
-.post-card__subtitle {margin:0;color:#444;font-size:0.95rem;}
+.post-card__title {margin:0.35rem 0 0.2rem;font-size:1.3rem;}
+.post-card__subtitle {margin:0;color:#444;font-size:1.08rem;}
 #no-results {display:none;color:#a00;margin-top:1rem;}
 </style>
 
@@ -47,6 +48,21 @@ permalink: /preview/faceted/
     <option value="fivethirtyeight">FiveThirtyEight</option>
     <option value="other">Other</option>
   </select>
+  <select id="filter-tag">
+    <option value="all">All tags</option>
+    {% assign all_tags = "" | split: "" %}
+    {% for p in site.posts %}
+      {% for t in p.tags %}
+        {% unless all_tags contains t %}
+          {% assign all_tags = all_tags | push: t %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+    {% assign sorted_tags = all_tags | sort %}
+    {% for tag in sorted_tags %}
+      <option value="{{ tag | downcase }}">{{ tag }}</option>
+    {% endfor %}
+  </select>
   <input id="filter-text" type="search" placeholder="Search title or tags" />
 </div>
 
@@ -59,16 +75,47 @@ permalink: /preview/faceted/
 <p id="no-results">No posts match those filters.</p>
 
 <script>
+function setupCustomSelect(root){
+  const toggle = root.querySelector('.custom-select__toggle');
+  const menu = root.querySelector('.custom-select__menu');
+  const options = Array.from(menu.querySelectorAll('.custom-select__option'));
+  let value = root.dataset.value || 'all';
+  const setLabel = (label) => { toggle.textContent = label; };
+  const close = () => { root.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
+  const open = () => { root.classList.add('open'); toggle.setAttribute('aria-expanded','true'); };
+  toggle.addEventListener('click', () => { root.classList.contains('open') ? close() : open(); });
+  document.addEventListener('click', e => { if(!root.contains(e.target)) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+  options.forEach(opt => opt.addEventListener('click', () => {
+    value = opt.dataset.value;
+    root.dataset.value = value;
+    setLabel(opt.textContent);
+    root.dispatchEvent(new Event('change'));
+    close();
+  }));
+  const initial = options.find(o => o.dataset.value === value) || options[0];
+  if(initial) { value = initial.dataset.value; setLabel(initial.textContent); }
+  return { value: () => value, onChange: (fn) => root.addEventListener('change', fn) };
+}
+
 const kindSel = document.getElementById('filter-kind');
 const themeSel = document.getElementById('filter-theme');
 const sourceSel = document.getElementById('filter-source');
+const tagSel = document.getElementById('filter-tag');
 const textInput = document.getElementById('filter-text');
 const cards = Array.from(document.querySelectorAll('#faceted-grid .post-card'));
 const noResults = document.getElementById('no-results');
+function escapeRegex(str){return str.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+function matchesQuery(haystack,q){
+  if(!q) return true;
+  const re = new RegExp(`(?:^|\\s)${escapeRegex(q)}`);
+  return re.test(haystack);
+}
 function applyFilters(){
   const k = kindSel.value;
   const t = themeSel.value;
-   const s = sourceSel.value;
+  const s = sourceSel.value;
+  const tag = tagSel.value;
   const q = textInput.value.trim().toLowerCase();
   let shown = 0;
   cards.forEach(card => {
@@ -80,13 +127,14 @@ function applyFilters(){
     const kindOk = (k === 'all') || (k === 'other' ? (ck !== 'puzzle' && ck !== 'physics') : ck === k);
     const themeOk = (t === 'all') || (ct === t);
     const sourceOk = (s === 'all') || (cs === s);
-    const textOk = !q || text.includes(q) || tags.includes(q);
-    const visible = kindOk && themeOk && sourceOk && textOk;
+    const tagOk = (tag === 'all') || tags.split(' ').includes(tag);
+    const textOk = matchesQuery(text,q) || matchesQuery(tags,q);
+    const visible = kindOk && themeOk && sourceOk && tagOk && textOk;
     card.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
   noResults.style.display = shown === 0 ? 'block' : 'none';
 }
-[kindSel, themeSel, sourceSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
+[kindSel, themeSel, sourceSel, tagSel, textInput].forEach(el => el.addEventListener('input', applyFilters));
 applyFilters();
 </script>

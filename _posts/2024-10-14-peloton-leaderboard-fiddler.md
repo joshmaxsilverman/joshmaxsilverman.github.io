@@ -6,7 +6,7 @@ date: 2024/10/14
 subtitle: How great will you be if you're average in the middle? 
 source: fiddler
 theme: probability
-tags: statistics 
+tags: statistics
 ---
 
 >**Question**:

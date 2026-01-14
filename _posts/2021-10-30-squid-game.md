@@ -4,7 +4,7 @@ published: true
 title: Squid game
 subtitle: How many will die crossing this entropic bridge?
 source: fivethirtyeight
-tags: "probability counting recursion"
+tags: probability counting recursion
 date: 2021/10/30
 theme: probability
 ---

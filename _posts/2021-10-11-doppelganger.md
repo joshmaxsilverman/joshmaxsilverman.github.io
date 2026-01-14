@@ -4,7 +4,7 @@ published: true
 title: Doppelganger standoff
 subtitle: You're being stalked by a replica who's twice as fast and a genius at hiding behind light poles. Where could they be?
 source: fivethirtyeight
-tags: "geometry scaling"
+tags: geometry scaling
 date: 2021/10/11
 theme: geometry
 ---

@@ -6,7 +6,7 @@ date: 2024/04/09
 subtitle: Cluster your expectations
 source: fiddler
 theme: probability
-tags: approximation 
+tags: approximation
 ---
 
 >**Question**: Once again, I’m painting an infinitely long strip of canvas, broken up into adjacent $1$ cm-by-$1$ cm squares. Squares are randomly and independently numbered $0$ or $1.$ But this time, the strip itself is $2$ cm wide.

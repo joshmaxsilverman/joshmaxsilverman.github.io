@@ -5,7 +5,7 @@ title: Drone delivery
 date: 2023/01/21
 subtitle: How much shorter as the crow flies?
 source: fivethirtyeight
-tags: expectation geometry integration 
+tags: expectation geometry integration
 theme: geometry
 ---
 

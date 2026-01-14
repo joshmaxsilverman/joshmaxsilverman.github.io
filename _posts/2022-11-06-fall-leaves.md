@@ -5,7 +5,7 @@ title: Fall colors
 date: 2022/11/06
 subtitle: When's the best time to go leaf peeping?
 source: fivethirtyeight
-tags: bayes 
+tags: bayes
 theme: probability
 ---
 

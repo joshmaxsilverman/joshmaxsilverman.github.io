@@ -4,7 +4,7 @@ published: true
 title: Free pete rose
 subtitle: Guess what happens in two world series games to win it all.
 source: fivethirtyeight
-tags: "probability recursion"
+tags: probability recursion
 date: 2021/10/17
 theme: probability
 ---

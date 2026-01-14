@@ -4,7 +4,7 @@ published: true
 title: Goat tower penthouse
 subtitle: What's the chance this unlucky entrepreneur will have to finance a goat party?
 source: fivethirtyeight
-tags: counting recursion 
+tags: counting recursion
 date: 2022/06/25
 theme: probability
 ---

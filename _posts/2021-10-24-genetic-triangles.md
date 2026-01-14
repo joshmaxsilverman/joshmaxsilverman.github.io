@@ -4,7 +4,7 @@ published: true
 title: Genetic triangles
 subtitle: Will a random baby triangle cover the center of its equilateral parent?
 source: fivethirtyeight
-tags: "geometry probability calculus"
+tags: geometry probability calculus
 date: 2021/10/24
 theme: geometry
 ---

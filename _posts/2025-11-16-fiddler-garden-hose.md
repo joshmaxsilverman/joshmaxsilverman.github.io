@@ -6,7 +6,7 @@ date: 2025/11/16
 subtitle: How far is the thirsty random tree from the gushing random hose?
 source: fiddler
 theme: geometry
-tags: symmetry 
+tags: symmetry
 ---
 
 >**Question**: You and your assistant are planning to irrigate a vast circular garden, which has a radius of $1$ furlong. However, your assistant is somewhat lackadaisical when it comes to gardening. Their plan is to pick two random points on the circumference of the garden and run a hose straight between them.

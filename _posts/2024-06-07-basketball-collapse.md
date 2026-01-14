@@ -6,7 +6,7 @@ date: 2024/06/09
 subtitle: How often will Indianapolis get its dreams crushed?
 source: fiddler
 theme: probability
-tags: counting first-passage
+tags: counting first-passage-time
 ---
 
 >**Question**:If you follow the NBA, then you probably know Boston Celtics had several improbable comebacks against the Indiana Pacers in this year’s playoffs. But given that the Pacers had a “$90$ percent chance or higher” to win at some point in a game, did that mean their probability of winning that game was actually $90$ percent?

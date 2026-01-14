@@ -5,7 +5,7 @@ title: Random rock climb
 date: 2021/07/25
 subtitle: "How many random holds until a $10\\,\\text{m}$ wall is climbable?"
 source: fivethirtyeight
-theme: geometry
+theme: algorithms
 ---
 
 >**Question**:

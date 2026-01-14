@@ -5,7 +5,7 @@ title: Save the world
 date: 2023/05/15
 subtitle: Good use of polling or bad use of polling?
 source: fivethirtyeight
-tags: approximation 
+tags: approximation
 theme: probability
 ---
 

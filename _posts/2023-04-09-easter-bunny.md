@@ -5,7 +5,7 @@ title: Hard choices for the easter bunny
 date: 2023/04/09
 subtitle: Hoppity hop, which carton are you going to get?
 source: fivethirtyeight
-tags: counting symmetry 
+tags: counting symmetry
 theme: probability
 ---
 
