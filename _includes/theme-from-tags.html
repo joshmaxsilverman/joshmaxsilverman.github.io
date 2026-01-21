@@ -54,7 +54,7 @@
   {%- elsif normalized_source == "fivethirtyeight" or normalized_source == "five-thirty-eight" or normalized_source == "538" -%}
     {%- assign post_source = "fivethirtyeight" -%}
   {%- else -%}
-    {%- assign post_source = "other" -%}
+    {%- assign post_source = normalized_source -%}
   {%- endif -%}
 {%- endif -%}
 

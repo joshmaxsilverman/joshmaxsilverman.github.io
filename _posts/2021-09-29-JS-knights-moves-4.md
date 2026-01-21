@@ -5,7 +5,7 @@ title: Knights moves four
 date: 2021/09/29
 subtitle: How many knight moves cover the board?
 source: fivethirtyeight
-theme: algorithms
+theme: number-theory
 ---
 
 >Question

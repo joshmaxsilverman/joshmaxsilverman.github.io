@@ -31,7 +31,7 @@ permalink: /preview/tabs/
 {% assign puzzle_posts = site.posts | where: "kind", "puzzle" %}
 {% assign physics_posts = site.posts | where: "kind", "physics" %}
 {% assign other_posts = site.posts | reject: "kind", "puzzle" | reject: "kind", "physics" %}
-{% assign puzzle_themes = "probability|geometry|games-logic|sports|seasonal|other" | split: "|" %}
+{% assign puzzle_themes = "probability|geometry|sports|seasonal|other" | split: "|" %}
 
 <div class="tab-controls">
   <button data-kind="all" class="active">All</button>

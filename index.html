@@ -63,20 +63,42 @@ meta-description: "Puzzle solutions and technical expositions."
 <div>
   <h2>Archive</h2>
   <div class="filter-bar">
+    {% assign all_themes = "" | split: "" %}
+    {% assign all_sources = "" | split: "" %}
+    {% for p in site.posts %}
+      {% include theme-from-tags.html post=p %}
+      {% assign theme_val = computed_theme | downcase %}
+      {% assign source_val = computed_source | downcase %}
+      {% unless all_themes contains theme_val %}
+        {% assign all_themes = all_themes | push: theme_val %}
+      {% endunless %}
+      {% unless all_sources contains source_val %}
+        {% assign all_sources = all_sources | push: source_val %}
+      {% endunless %}
+    {% endfor %}
+    {% assign sorted_themes = all_themes | sort %}
+    {% assign sorted_sources = all_sources | sort %}
     <select id="filter-theme">
       <option value="all">All themes</option>
-      <option value="probability">Probability</option>
-      <option value="geometry">Geometry</option>
-      <option value="physics">Physics</option>
-      <option value="algorithms">Algorithms</option>
-      <option value="game-theory">Game Theory</option>
+      {% for theme in sorted_themes %}
+        <option value="{{ theme }}">{{ theme | replace: '-', ' ' | replace: '_', ' ' | capitalize }}</option>
+      {% endfor %}
     </select>
     <select id="filter-source">
       <option value="all">All sources</option>
-      <option value="fiddler">The Fiddler</option>
-      <option value="jane-street">Jane Street</option>
-      <option value="fivethirtyeight">FiveThirtyEight</option>
-      <option value="other">Other</option>
+      {% for source in sorted_sources %}
+        {% if source == "fiddler" %}
+          <option value="fiddler">The Fiddler</option>
+        {% elsif source == "jane-street" %}
+          <option value="jane-street">Jane Street</option>
+        {% elsif source == "fivethirtyeight" %}
+          <option value="fivethirtyeight">FiveThirtyEight</option>
+        {% elsif source == "other" %}
+          <option value="other">Other</option>
+        {% else %}
+          <option value="{{ source }}">{{ source | replace: '-', ' ' | replace: '_', ' ' | capitalize }}</option>
+        {% endif %}
+      {% endfor %}
     </select>
     <select id="filter-tag">
       <option value="all">All tags</option>

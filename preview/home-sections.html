@@ -26,7 +26,7 @@ permalink: /preview/sections/
 {% assign physics_posts = site.posts | where: "kind", "physics" %}
 {% assign puzzle_posts = site.posts | where: "kind", "puzzle" %}
 {% assign other_posts = site.posts | reject: "kind", "puzzle" | reject: "kind", "physics" %}
-{% assign puzzle_themes = "probability|geometry|games-logic|sports|seasonal|other" | split: "|" %}
+{% assign puzzle_themes = "probability|geometry|sports|seasonal|other" | split: "|" %}
 
 <section class="section-heading" id="latest">
   <h2>Latest</h2>
