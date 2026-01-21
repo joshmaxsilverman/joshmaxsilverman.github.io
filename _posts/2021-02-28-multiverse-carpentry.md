@@ -5,10 +5,10 @@ title: Multiverse carpentry
 date: 2021/02/28
 subtitle: How many universes spawn from every possible staircase order?
 source: fivethirtyeight
-theme: combinatorics
+theme: probability
 subtitle: How many universes spawn from every possible staircase order?
 source: fivethirtyeight
-theme: combinatorics
+theme: probability
 ---
 
 >**Question**: a regular staircase is built from blocks and the blocks in each level are different colors. The staircase can be built in whatever order that's physically possible. However, whenever you make a choice, the Universal wave function splits so that each staircase actually exists in its own branch of the multiverse. In addition, the surface the stairs are built on is slightly sloped (in all verses), so any placed block slides forward until it hits the wall. How many universes will spawn to accommodate the possibilities for the $4$-level staircase? An $n$-level staircase?
