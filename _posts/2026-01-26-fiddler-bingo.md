@@ -25,19 +25,19 @@ theme: probability
 
 ## Solution
 
-i found two ways to deal with this problem, one approximate and one exact. because the approximate approach builds intuition for the exact approach, we'll do that first.
+I found two ways to dispense with this problem, one approximate and one exact. Because the approximate approach builds intuition for the exact approach, we'll do that first.
 
 ### Approximate approach
 
-a board with BINGO has at least one row, column, or diagonal with all its tiles filled in. it may also have some number of other filled tiles that aren't participating in the BINGO.
+A board with BINGO has at least one row, column, or diagonal with all its tiles filled in. It may also have some number of other filled tiles that aren't participating in the BINGO.
 
-let's call the side length of the board (in tiles) $n,$ the tiles in a BINGO $\ell,$ the number of BINGO lines on the board $B,$ and the number of spots on the board $S = n^2 - 1.$ 
+Let's call the side length of the board (in tiles) $n,$ the tiles in a BINGO $\ell,$ the number of BINGO lines on the board $B,$ and the number of spots on the board $S = n^2 - 1.$ 
 
-the number of ways to place a particular BINGO line on a board with $t$ placed tiles is equal to the number of ways to place the $\ell$ tiles of the BINGO line ($1$ way, by definition) times the number of ways to place the $(t-\ell)$ other tiles. this is just
+The number of ways to place a particular BINGO line on a board with $t$ placed tiles is equal to the number of ways to place the $\ell$ tiles of the BINGO line ($1$ way, by definition) times the number of ways to place the $(t-\ell)$ other tiles. This is just the binomial coefficient
 
 $$ \binom{S-\ell}{t-\ell}. $$
 
-the total number of ways to pick spots for $t$ tiles is $\binom{S}{t}$ so the probability that a given BINGO line is formed among $t$ placed tiles is
+The total number of ways to pick spots for $t$ tiles is $\binom{S}{t}$ so the probability that a given BINGO line is formed among $t$ placed tiles is
 
 $$ 
 \begin{align}
@@ -49,20 +49,20 @@ $$
 \end{align} 
 $$
 
-since there are $B$ possible BINGOs, the expected number of BINGOs in the grid is $ B e^{-\ell(S-t)/S}.$ we can set this equal to $1$ to solve for the number of placed tiles $t_\text{BINGO}$ at which we expect BINGO to first occur
+Since there are $B$ possible BINGOs, the expected number of BINGOs in the grid is $ B e^{-\ell(S-t)/S}.$ We can set this equal to $1$ to solve for the number of placed tiles $t_\text{BINGO}$ at which we expect BINGO to first occur
 
 $$\begin{align}
 t_\text{BINGO} &= S(1-\log B/\ell) \\
-&= (n^2-1)\left(1-\frac{\log 2n+2}{n}\right)
+&= (n^2-1)\left(1-\frac{\log 2n+2}{n}\right).
 \end{align}$$
 
-dividing by $S,$ this predicts that, in the limit of the infinite Bingo board, we need to fill in $100\%$ of the tiles before we can expect to make BINGO.
+Dividing by $S,$ this predicts that, in the limit of the infinite grid, we need to fill in $100\%$ of the tiles before we can expect to make BINGO.
 
-plotting the prediction (gold curve) for $t_\text{BINGO}/S$ against an $N=1,000$-round simulation (blue dots), there is very good agreement for $n\approx 9$ and above.
+Plotting the prediction (gold curve) for $t_\text{BINGO}/S$ against an $N=1,000$-round simulation (blue dots), there is very good agreement for $n\approx 9$ and above.
 
 ![](/img/2026-01-26-fiddler-bingo-normalized.png){:width="450 px" class="image-centered"}
 
-the code to run the simulation is below. the logic is to simply to fill in one tile at a time and check for horizontal, vertical, or diagonal BINGOs after each fill, stopping at first BINGO.
+The code to run the simulation is below and the logic is to simply fill in one tile at a time and check for horizontal, vertical, or diagonal BINGOs after each fill, stopping at first BINGO.
 
 ```python
 def new_board(n):
@@ -111,59 +111,59 @@ def measure(n):
 
 ### Exact approach
 
-to find the exact probability of BINGO with $t$ placed tiles, we can recycle the same idea using the principle of inclusion and exclusion. 
+To find the exact probability of BINGO with $t$ placed tiles, we can recycle the same idea using the principle of inclusion and exclusion. 
 
-we are going to count the number of ways to get at least one BINGO using $t$ tiles, then subtract it from the total number of ways to place $t$ tiles, to get the number of ways to not have BINGO with $t$ placed tiles. we then divide this by the total number of ways to place $t$ tiles to get the probability that BINGO is reached for the first time on the $t^\text{th}$ tiles.
+We are going to count the number of ways to get at least one BINGO using $t$ tiles, then subtract it from the total number of ways to place $t$ tiles, to get the number of ways to not have BINGO with $t$ placed tiles. We then divide this by the total number of ways to place $t$ tiles to get the probability that BINGO is reached for the first time on the $t^\text{th}$ tiles.
 
-the probability to make BINGO for the first time with the $t^\text{th}$ tile is the probability to not have BINGO after $(t-1)$ tiles, $P_{t-1},$ minus the probability to not have BINGO after $t$ tiles, $P_t.$
+The probability to make BINGO for the first time with the $t^\text{th}$ tile is the probability to not have BINGO after $(t-1)$ tiles, $P_{t-1},$ minus the probability to not have BINGO after $t$ tiles, $P_t.$
 
 #### Example
 
-suppose we had $4$ placed tiles in the $3$-by-$3$ grid. we could make BINGO if we have
+Suppose we had $4$ placed tiles in the $3$-by-$3$ grid. we could make BINGO if we have
 
-- one BINGO across an edge, plus another tile placed elsewhere
-- one BINGO using the free tile at grid center, plus two tiles placed elsewhere
+- one BINGO across an edge, plus another tile placed elsewhere, or
+- one BINGO using the free tile at grid center, plus two tiles placed elsewhere.
 
-but these scenarios include and double count the following scenarios
+But these scenarios include and double count the following scenarios
 
-- two BINGOs using the free tile at grid center
-- one BINGO on an edge, plus a BINGO that uses the center tile that has $1$ tile of overlap with the edge BINGO
+- two BINGOs using the free tile at grid center, or
+- one BINGO on an edge, plus a BINGO that uses the center tile that has $1$ tile of overlap with the edge BINGO.
 
-this means we have to subtract their probability off the total to get rid of the double counting. since there are no other arrangements with $4$ tiles, we don't have to worry about larger order unions.
+This means that we have to subtract their probability off the total to get rid of the double counting. Since there are no other arrangements with $4$ tiles, we don't have to worry about larger order unions.
 
-but suppose we were using $5$ tiles. then it would be possible to form three-BINGO grids. for example, a BINGO on the top edge plus both diagonal BINGOs would use a total of $5$ unique tiles. 
+But suppose we were using $5$ tiles. Then it would be possible to form three-BINGO grids. For example, a BINGO on the top edge plus both diagonal BINGOs would use a total of $5$ unique tiles. 
 
-in cases like this, subtracting the double counted two-BINGO scenarios would completely remove the three-BINGO scenarios, and we'd have to add them back in.
+In cases like this, subtracting the double counted two-BINGO scenarios would completely remove the three-BINGO scenarios, and we'd have to add them back in.
 
-as we go to higher and higher numbers of tiles, we have to consider higher and higher order unions. this is the principle of inclusion exclusion.
+As we go to higher and higher numbers of tiles, we have to consider higher and higher order unions of BINGO lines. This is the principle of inclusion exclusion.
 
 #### Counting
 
-now we have to figure out how to count the total number of two-BINGO unions, three-BINGO unions, four-BINGO unions, and so on. 
+Now we have to figure out how to count the total number of two-BINGO unions, three-BINGO unions, four-BINGO unions, and so on. 
 
-first, let's form the set of valid BINGOs, $\mathcal{B} = \\{B_1, B_2,\ldots, B_{2n+2}\\},$ which consists of the four edge BINGOs, the two diagonal BINGOs, and the vertical and horizontal BINGOs through the center tile. suppose we select the top edge and one of the diagonals and use $6$ tiles total. first we form the union of the tiles for the top edge and the diagonal, giving $4$ tiles. after that, the grid has $4$ open tiles, and we have $2$ tiles left to place. this means there are $\binom{4}{2}$ ways to form this particular double (or more) bingo using $6$ tiles.
+First, let's form the set of valid BINGOs, $\mathcal{B} = \\{B_1, B_2,\ldots, B_{2n+2}\\},$ which consists of the four edge BINGOs, the two diagonal BINGOs, and the vertical and horizontal BINGOs through the center tile. Suppose we select the top edge and one of the diagonals and use $6$ tiles total. First we form the union of the tiles for the top edge and the diagonal, giving $4$ tiles. After that, the grid has $4$ open tiles, and we have $2$ tiles left to place. This means there are $\binom{4}{2}$ ways to form this particular double (or more) bingo using $6$ tiles.
 
-the exact number of ways to make one or more BINGOs with $t$ placed tiles is equal to the sum
+The exact number of ways to make one or more BINGOs with $t$ placed tiles is equal to the sum
 
-$$ N_k = \sum_{k=1}^{\lvert\mathcal{B}\rvert} \sum \limits_{\mathcal{B}^k} (-1)^k\lvert B_i \cup B_j\cup\ldots B_k\rvert $$
+$$ N_k = \sum_{k=1}^{\lvert\mathcal{B}\rvert} \sum \limits_{\mathcal{B}^k} (-1)^k\lvert B_i \cup B_j\cup\ldots B_k\rvert, $$
 
 and the probability to have no BINGO after $k$ tiles is
 
 $$ P_k = \frac{\dbinom{S}{k} - N_k}{\dbinom{S}{k}}. $$
 
-the expected waiting time is then just
+The expected waiting time is then just
 
 $$ 
     \begin{align}
-        \langle T \rangle &= 1\cdot(P_1-P_2) + 2\cdot(P_2-p_3) + 3\cdot (P_3-P_4) + \ldots \\
+        \langle T \rangle &= 1\cdot(P_1-P_2) + 2\cdot(P_2-P_3) + 3\cdot (P_3-P_4) + \ldots \\
         &= P_1 + P_2 + P_3 + \ldots \\
-        &= \sum_j P_j
+        &= \sum_j P_j,
     \end{align}
 $$
 
 with the sum cutting off once $P_k = 0.$
 
-running the calculation for $n=\\{3,5,7,9\\}$ we get
+Running the calculation for $n=\\{3,5,7,9\\}$ we get
 
 $$
     \begin{array}{c|c|l}
@@ -175,30 +175,30 @@ $$
     \end{array}
 $$
 
-these points are plotted in black on the graph above, and overlap perfectly with the simulation.
+These points are plotted in black on the graph above, and overlap perfectly with the simulation.
 
 ```python
 from itertools import combinations
 import scipy as sp
 import fractions as F
 
-def count(N, t):
+def count(n, t):
 
-    BINGO_VERTICAL = [ set((i, j) for i in range(N) 
-        if (i, j) != (N // 2, N // 2)) 
-        for j in range(N) ]
-    BINGO_HORIZONTAL = [ set((i, j) for j in range(N) 
-        if (i, j) != (N // 2, N // 2)) 
-        for i in range(N) ]
-    BINGO_DIAGONAL = [ set((i, i) for i in range(N) 
-        if (i, i) != (N // 2, N // 2)) ]
-    BINGO_ANTI_DIAGONAL = [ set((i, N - 1 - i) for i in range(N) 
-        if (i, N - 1 - i) != (N // 2, N // 2)) ]
+    BINGO_VERTICAL = [ set((i, j) for i in range(n) 
+        if (i, j) != (n // 2, n // 2)) 
+        for j in range(n) ]
+    BINGO_HORIZONTAL = [ set((i, j) for j in range(n) 
+        if (i, j) != (n // 2, n // 2)) 
+        for i in range(n) ]
+    BINGO_DIAGONAL = [ set((i, i) for i in range(n) 
+        if (i, i) != (n // 2, n // 2)) ]
+    BINGO_ANTI_DIAGONAL = [ set((i, n - 1 - i) for i in range(n) 
+        if (i, n - 1 - i) != (n // 2, n // 2)) ]
     BINGOS = BINGO_VERTICAL + BINGO_HORIZONTAL \
         + BINGO_DIAGONAL + BINGO_ANTI_DIAGONAL
 
     total = 0
-    tiles_on_board =  N ** 2 - 1
+    tiles_on_board =  n ** 2 - 1
 
     for group_size in range(1, len(BINGOS)):
 
@@ -220,12 +220,12 @@ def count(N, t):
             int(S)
             )
 
-def exact(N):
+def exact(n):
     k = 0
     total = 0
 
     while True:
-        new = count(N, k)
+        new = count(n, k)
         if new > 0:
             total += new
         else:
@@ -236,6 +236,6 @@ def exact(N):
 
 ```
 
-beyond $n=9,$ the runtime of this naive implementation is too long to finish.
+Beyond $n=9,$ the runtime of this naive implementation is too long to finish.
 
 <br>
