@@ -62,7 +62,7 @@ plotting the prediction (gold curve) for $t_\text{BINGO}/S$ against an $N=1,000$
 
 ![](/img/2026-01-26-fiddler-bingo-normalized.png){:width="450 px" class="image-centered"}
 
-the code to run the simulation is below. the logic is to just fill in one tile at a time and check for horizontal, vertical, or diagonal BINGOs at each turn.
+the code to run the simulation is below. the logic is to simply to fill in one tile at a time and check for horizontal, vertical, or diagonal BINGOs after each fill, stopping at first BINGO.
 
 ```python
 def new_board(n):
@@ -151,17 +151,17 @@ and the probability to have no BINGO after $k$ tiles is
 
 $$ P_k = \frac{\dbinom{S}{k} - N_k}{\dbinom{S}{k}}. $$
 
-the expected weighting time is then just
+the expected waiting time is then just
 
 $$ 
     \begin{align}
         \langle T \rangle &= 1\cdot(P_1-P_2) + 2\cdot(P_2-p_3) + 3\cdot (P_3-P_4) + \ldots \\
         &= P_1 + P_2 + P_3 + \ldots \\
-        &= \sum_j P_j. 
+        &= \sum_j P_j
     \end{align}
 $$
 
-this sum cuts off once $P_k \leq 0.$
+with the sum cutting off once $P_k = 0.$
 
 running the calculation for $n=\\{3,5,7,9\\}$ we get
 
