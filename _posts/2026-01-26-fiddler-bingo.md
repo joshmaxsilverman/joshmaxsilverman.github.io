@@ -31,13 +31,13 @@ i found two ways to deal with this problem, one approximate and one exact. becau
 
 a board with BINGO has at least one row, column, or diagonal with all its tiles filled in. it may also have some number of other filled tiles that aren't participating in the BINGO.
 
-let's call the side length of the board (in tiles) $n,$ the tiles in a BINGO $L,$ the number of BINGO lines on the board $B,$ and the number of spots on the board $S = n^2 - 1.$ 
+let's call the side length of the board (in tiles) $n,$ the tiles in a BINGO $\ell,$ the number of BINGO lines on the board $B,$ and the number of spots on the board $S = n^2 - 1.$ 
 
-the number of ways to place a particular BINGO line on a board with $t$ placed tiles is equal to the number of ways to pick spots for the $\ell$ tiles of the BINGO line ($1$ way, by definition) times the number of ways to pick spots for the $(t-\ell)$ other tiles. this is just
+the number of ways to place a particular BINGO line on a board with $t$ placed tiles is equal to the number of ways to place the $\ell$ tiles of the BINGO line ($1$ way, by definition) times the number of ways to place the $(t-\ell)$ other tiles. this is just
 
 $$ \binom{S-\ell}{t-\ell}. $$
 
-the total number of ways to pick spots for $t$ tiles is $\binom{S}{t}$ so the probability that a given BINGO is formed by the point $t$ tiles have been placed is
+the total number of ways to pick spots for $t$ tiles is $\binom{S}{t}$ so the probability that a given BINGO line is formed among $t$ placed tiles is
 
 $$ 
 \begin{align}
@@ -49,18 +49,20 @@ $$
 \end{align} 
 $$
 
-since there are $B$ possible BINGOs, the expected number of BINGOs in the grid is $ B e^{-\ell(S-t)/S},$ which we can set equal to $1$ to solve for the number of tiles $t$ at which we expect BINGO to first occur
+since there are $B$ possible BINGOs, the expected number of BINGOs in the grid is $ B e^{-\ell(S-t)/S}.$ we can set this equal to $1$ to solve for the number of placed tiles $t_\text{BINGO}$ at which we expect BINGO to first occur
 
 $$\begin{align}
 t_\text{BINGO} &= S(1-\log B/\ell) \\
 &= (n^2-1)\left(1-\frac{\log 2n+2}{n}\right)
 \end{align}$$
 
-dividing by $S,$ one prediction this makes is that in the limit of the infinite Bingo board, we need to fill in $100\%$ of the tiles before we can expect to make BINGO.
+dividing by $S,$ this predicts that, in the limit of the infinite Bingo board, we need to fill in $100\%$ of the tiles before we can expect to make BINGO.
 
-plotting the prediction (gold) for $t_\text{BINGO}/S$ against an $N=1,000$-round simulation, there is very good agreement for $n\approx 9$ and above.
+plotting the prediction (gold curve) for $t_\text{BINGO}/S$ against an $N=1,000$-round simulation (blue dots), there is very good agreement for $n\approx 9$ and above.
 
 ![](/img/2026-01-26-fiddler-bingo-normalized.png){:width="450 px" class="image-centered"}
+
+the code to run the simulation is below. the logic is to just fill in one tile at a time and check for horizontal, vertical, or diagonal BINGOs at each turn.
 
 ```python
 def new_board(n):
@@ -111,9 +113,11 @@ def measure(n):
 
 to find the exact probability of BINGO with $t$ placed tiles, we can recycle the same idea using the principle of inclusion and exclusion. 
 
-we are going to count the number of ways to get at least one BINGO using $t$ tiles, then subtract it from the total number of ways to place $t$ tiles, to get the number of ways to NOT have BINGO with $t$ placed tiles. we then divide this by the number of ways to place $t$ tiles to get the probability that BINGO is reached for the first time on the $t^\text{th}$ tiles.
+we are going to count the number of ways to get at least one BINGO using $t$ tiles, then subtract it from the total number of ways to place $t$ tiles, to get the number of ways to not have BINGO with $t$ placed tiles. we then divide this by the total number of ways to place $t$ tiles to get the probability that BINGO is reached for the first time on the $t^\text{th}$ tiles.
 
-the probability to make BINGO for the first time with the $t^\text{th}$ tile, $P(t)$ is the probability to not have BINGO after $(t-1)$ tiles minus the probability to not have BINGO after $t$ tiles.
+the probability to make BINGO for the first time with the $t^\text{th}$ tile is the probability to not have BINGO after $(t-1)$ tiles, $P_{t-1},$ minus the probability to not have BINGO after $t$ tiles, $P_t.$
+
+#### Example
 
 suppose we had $4$ placed tiles in the $3$-by-$3$ grid. we could make BINGO if we have
 
@@ -125,19 +129,21 @@ but these scenarios include and double count the following scenarios
 - two BINGOs using the free tile at grid center
 - one BINGO on an edge, plus a BINGO that uses the center tile that has $1$ tile of overlap with the edge BINGO
 
-this means we have to subtract their probability off the total. since there are no other arrangements with $4$ tiles, we don't have to worry about larger numbers of intersections.
+this means we have to subtract their probability off the total to get rid of the double counting. since there are no other arrangements with $4$ tiles, we don't have to worry about larger order unions.
 
-however, if we were using $5$ tiles, then it would be possible to form three-BINGO grids. for example, a BINGO on the top edge plus both diagonal BINGOs would use a total of $5$ tiles. 
+but suppose we were using $5$ tiles. then it would be possible to form three-BINGO grids. for example, a BINGO on the top edge plus both diagonal BINGOs would use a total of $5$ unique tiles. 
 
-in cases like this, subtracting the double counter two-BINGO scenarios would also remove the three-BINGO scenarios, and we'd have to add them back in.
+in cases like this, subtracting the double counted two-BINGO scenarios would completely remove the three-BINGO scenarios, and we'd have to add them back in.
 
 as we go to higher and higher numbers of tiles, we have to consider higher and higher order unions. this is the principle of inclusion exclusion.
+
+#### Counting
 
 now we have to figure out how to count the total number of two-BINGO unions, three-BINGO unions, four-BINGO unions, and so on. 
 
 first, let's form the set of valid BINGOs, $\mathcal{B} = \\{B_1, B_2,\ldots, B_{2n+2}\\},$ which consists of the four edge BINGOs, the two diagonal BINGOs, and the vertical and horizontal BINGOs through the center tile. suppose we select the top edge and one of the diagonals and use $6$ tiles total. first we form the union of the tiles for the top edge and the diagonal, giving $4$ tiles. after that, the grid has $4$ open tiles, and we have $2$ tiles left to place. this means there are $\binom{4}{2}$ ways to form this particular double (or more) bingo using $6$ tiles.
 
-the exact number of ways to make BINGO with $t$ placed tiles is equal to the sum
+the exact number of ways to make one or more BINGOs with $t$ placed tiles is equal to the sum
 
 $$ N_k = \sum_{k=1}^{\lvert\mathcal{B}\rvert} \sum \limits_{\mathcal{B}^k} (-1)^k\lvert B_i \cup B_j\cup\ldots B_k\rvert $$
 
@@ -170,8 +176,6 @@ $$
 $$
 
 these points are plotted in black on the graph above, and overlap perfectly with the simulation.
-
-beyond $n=9,$ the runtime of this naive implementation is too long to complete.
 
 ```python
 from itertools import combinations
@@ -231,5 +235,7 @@ def exact(N):
     return total
 
 ```
+
+beyond $n=9,$ the runtime of this naive implementation is too long to finish.
 
 <br>
