@@ -117,7 +117,7 @@ We are going to count the number of ways to get at least one BINGO using $t$ til
 
 The probability to make BINGO for the first time with the $t^\text{th}$ tile is the probability to not have BINGO after $(t-1)$ tiles, $P_{t-1},$ minus the probability to not have BINGO after $t$ tiles, $P_t.$
 
-#### Example
+#### Examples for $t=4$ and $5$
 
 Suppose we had $4$ placed tiles in the $3$-by-$3$ grid. we could make BINGO if we have
 
@@ -145,9 +145,11 @@ First, let's form the set of valid BINGOs, $\mathcal{B} = \\{B_1, B_2,\ldots, B_
 
 The exact number of ways to make one or more BINGOs with $t$ placed tiles is equal to the sum
 
-$$ N_k = \sum_{k=1}^{\lvert\mathcal{B}\rvert} \sum \limits_{\mathcal{B}^k} (-1)^k\lvert B_i \cup B_j\cup\ldots B_k\rvert, $$
+$$ N_k = \sum_{k=1}^{\lvert \mathcal{B}\rvert} \sum \limits_{U_i\in\mathcal{B}^k} (-1)^k\lvert U_i\rvert, $$
 
-and the probability to have no BINGO after $k$ tiles is
+where $\mathcal{B}^k$ is the set of all order-$k$ unions of BINGO lines.
+
+The probability to have no BINGO after $k$ tiles is
 
 $$ P_k = \frac{\dbinom{S}{k} - N_k}{\dbinom{S}{k}}. $$
 
@@ -236,6 +238,6 @@ def exact(n):
 
 ```
 
-Beyond $n=9,$ the runtime of this naive implementation is too long to finish.
+Beyond $n=9,$ the run time for this naive implementation is too long to finish.
 
 <br>
