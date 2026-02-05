@@ -34,7 +34,7 @@ Each lattice point is connected to its two neighbors with equal chance to move l
 
 $$ \omega(x,t) = \frac12\omega(x-1,t-1) + \frac12\omega(x+1,t-1). $$
 
-Using the fourier transform $\widetilde{\omega}(x,t) = \int_\text{all}\, \text{d}x\, e^{ikx} \omega(x,t)$ we get
+Using the fourier transform $\widetilde{\omega}(k,t) = \int_\text{all}\, \text{d}x\, e^{ikx} \omega(x,t)$ we get
 
 $$
     \begin{align}
@@ -46,7 +46,9 @@ $$
     \end{align}
 $$
 
-Because the standing patterns are on the lattice, the smallest wavelength is the lattice spacing, so $k$ is always less than or equal to $1$ and we can approximate $\cos k$ as $\approx 1-k^2/2:$
+<!-- Because the standing patterns are on the lattice, the smallest wavelength is the lattice spacing, so $k$ is always less than or equal to $\pi/1$ and we can approximate $\cos k$ as $\approx 1-k^2/2:$ -->
+
+At long times, the integral is dominated by small values of $k$ close to the peak at $0,$ so we can approximate $\cos k$ as $\approx 1 - k^2/2.$
 
 $$
     \begin{align}
@@ -63,7 +65,7 @@ To put this back in terms of position, we add up all the standing patterns with 
 
 $$
     \begin{align}
-        \omega(x,t) &= \frac{1}{2\pi}\int\text{d}k\, e^{-ikx} \widetilde{\omega}(x,t) \\
+        \omega(x,t) &= \frac{1}{2\pi}\int\text{d}k\, e^{-ikx} \widetilde{\omega}(k,t) \\
         &= \frac{1}{2\pi}\int\text{d}k\, e^{-ikx - k^2t/2} 
     \end{align}
 $$
@@ -82,7 +84,11 @@ $$
     \end{align}
 $$
 
-Setting $x$ to zero, we get the $1$d analogue of the disappearing food problem, and after $t$ steps, we expect to find the fraction $f = 1/\sqrt{2\pi t}$ of the original food left at the origin. Plugging in $f = 1/100,$ it would take approximately $t \approx 10,000/2\pi \approx 1592$ steps for the origin to decay that low.
+Finally, we have to multiply by $2$ since the random walker is confined to even sites on even time steps and odd sites on odd time steps.
+
+$$ \omega(x,t) = e^{-x^2/2t}\qrt{\frac{2}{\pi t}}. $$
+
+Setting $x$ to zero, we get the $1$d analogue of the disappearing food problem, and after $t$ steps, we expect to find the fraction $f = \sqrt{2/\pi t}$ of the original food left at the origin. Plugging in $f = 1/100,$ it would take approximately $t \approx 20,000/\pi \approx 6,366$ steps for the origin to decay that low.
 
 ### Hexagonal lattice
 
@@ -101,7 +107,7 @@ $$
 
 When we treat $x$ and $y$ as continuous variables, and integrate over them, we are undercounting. The discrete probability $\omega(x,y)$ sums to $1,$ but when we integrate, we are locating each lattice point in a unit of area, and the area of that unit is not $1,$ it is $\sqrt{3}/2.$ So, we will have to account for this when we invert the fourier transform. 
 
-Now, the static patterns are two dimensional so we need two wave numbers, $k$ and $\ell,$ instead of one. This means that each spatial dimension gets its own wave number/transform variable. The corresponding mode is $e^{ikx}e^{iky},$ and the Fourier coefficients $\widetilde{\omega}_t(k,\ell)$ tell us how much the $(k,\ell)$ pattern contributes to the probability distribution.  
+Now, the static patterns are two dimensional so we need two wave numbers, $k$ and $\ell,$ instead of one. This means that each spatial dimension gets its own wave number/transform variable. The corresponding mode is $e^{ikx}e^{i\ell y},$ and the Fourier coefficients $\widetilde{\omega}_t(k,\ell)$ tell us how much the $(k,\ell)$ pattern contributes to the probability distribution.  
 
 By varying $k$ and $\ell$ we can visualize some of these static modes:
 
@@ -144,7 +150,7 @@ Reconstructing with the inverse Fourier transform we get
 
 $$ 
     \begin{align}
-        \omega_t(x,y) &= \frac{1}{\left(2\pi\right)^2} \int\text{d}k\,\text{d}\ell\, e^{ikx}e^{i\ell y}\,\widetilde{\omega}_t(k,\ell) \\
+        \omega_t(x,y) &= \frac{1}{\left(2\pi\right)^2} \int\text{d}k\,\text{d}\ell\, e^{-ikx}e^{-i\ell y}\,\widetilde{\omega}_t(k,\ell) \\
         &\approx  \dfrac{e^{-(x^2+y^2)/t}}{\pi t}. 
     \end{align}
 $$
