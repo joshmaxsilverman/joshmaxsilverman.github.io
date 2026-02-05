@@ -1,9 +1,9 @@
 ---
 layout: post
 published: true
-title: Hexagonal walker
+title: Hexagonal lily pads
 date: 2026/02/04
-subtitle: disappearing food
+subtitle: How long until a random walk steals 99% of your food, probability?
 source: fiddler
 kind: puzzle
 theme: probability
