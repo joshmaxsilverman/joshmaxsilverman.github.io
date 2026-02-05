@@ -84,7 +84,7 @@ setting $x$ to zero, we get the $1$d analogue of the disappearing food problem. 
 
 for the full problem, we have to accommodate a few details. there are two dimensions that the walkers can move in. they can move directly right or left, changing $x$ by $\pm 1,$ or they can move diagonally changing $(x,y)$ by $\left(\pm 1/2, \pm \sqrt{3}/2\right).$ 
 
-when we treat $x$ and $y$ as continuous variables, and integrate over them, we are overcounting. the discrete probability $\omega(x,y)$ sums to $1,$ but when we integrate, we are locating each lattice point in a unit of area, and the area of that unit is not $1,$ it is $\sqrt{3}/2.$ so, we will have to account for this when we invert the fourier transform. 
+when we treat $x$ and $y$ as continuous variables, and integrate over them, we are undercounting. the discrete probability $\omega(x,y)$ sums to $1,$ but when we integrate, we are locating each lattice point in a unit of area, and the area of that unit is not $1,$ it is $\sqrt{3}/2.$ so, we will have to account for this when we invert the fourier transform. 
 
 this makes $6$ directions that are picked uniformly, making the recursion equation (subscripting time for ease of reading)
 
