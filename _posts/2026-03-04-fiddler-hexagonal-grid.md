@@ -153,12 +153,16 @@ Again, this undercounts due to $\text{d}x\text{d}y$ being a physical area, so we
 
 $$ \omega_t(x,y) \approx  \frac{\sqrt{3}}{2}\dfrac{e^{-(x^2+y^2)/t}}{\pi t}. $$
 
+Watching the distribution over time, the probability starts peaked at the origin and then proceeds outward
+
+![](/img/2026-02-04-fiddler-hexagonal-walk-t0-40.gif){:width="600 px" class="image-centered"}
+
 We can plug in $(x,y) = (0,0)$ and solve for the value of $t$ when it equals $f.$ We get 
 
 $$ t\approx \frac{\sqrt{3}}{2\pi f}. $$ 
 
 This is $\approx 27.57$ for $f = 1/100$ which, after taking the ceiling, is dead on with the exact result of $28.$
 
-![](/img/2026-02-04-fiddler-hexagonal-walk-t0-40.gif){:width="600 px" class="image-centered"}
+![](/img/2026-02-04-fiddler-hexagonal-walk-waiting-time.png){:width="450 px" class="image-centered"}
 
 <br>
