@@ -86,7 +86,7 @@ $$
 
 Finally, we have to multiply by $2$ since the random walker is confined to even sites on even time steps and odd sites on odd time steps.
 
-$$ \omega(x,t) = e^{-x^2/2t}\qrt{\frac{2}{\pi t}}. $$
+$$ \omega(x,t) = e^{-x^2/2t}\sqrt{\frac{2}{\pi t}}. $$
 
 Setting $x$ to zero, we get the $1$d analogue of the disappearing food problem, and after $t$ steps, we expect to find the fraction $f = \sqrt{2/\pi t}$ of the original food left at the origin. Plugging in $f = 1/100,$ it would take approximately $t \approx 20,000/\pi \approx 6,366$ steps for the origin to decay that low.
 
