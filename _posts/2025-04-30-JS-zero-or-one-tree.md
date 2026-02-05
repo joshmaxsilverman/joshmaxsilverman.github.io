@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Sum one, somewhere
 date: 2025/04/30
-subtitle: What's the chance the somebody comes across just zero or one labels on an unending walk down a binary tree with nodes randomly blessed with a label?
+subtitle: What's the chance that somebody comes across just zero or one labels on an unending walk down a binary tree with nodes randomly blessed with a label?
 source: jane-street
 theme: probability
 tags: recursion trees
