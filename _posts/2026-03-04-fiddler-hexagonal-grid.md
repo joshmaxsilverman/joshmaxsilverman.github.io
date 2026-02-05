@@ -5,16 +5,20 @@ title: Hexagonal walker
 date: 2026/02/04
 subtitle: disappearing food
 source: fiddler
-kind: puzzles
+kind: puzzle
 theme: probability
 tags: fourier-transform random-walk
 ---
 
->**Question**:
+>**Question**: Frankie has stored all of her food on lily pad A. However, her food has a tendency to “fly” away. Every second, the food that’s on every lily pad splits up into six equal portions that instantaneously relocate to the six neighboring pads.
+>
+>At zero seconds, all the food is on lily pad A. After one second, there’s no food on pad A, and $1/6$ of the food is on each of the surrounding six pads. After two seconds, $1/6$ of the food is again on pad A, while the rest of the food is elsewhere.
+>
+>After how many seconds $N$ (with $N > 2$) will pad A have less than $1$ percent of its original amount?
 
 <!--more-->
 
-([Fiddler on the Proof](URL))
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-hop-in-a-spiral))
 
 ## Solution
 
@@ -22,7 +26,7 @@ Originally, I was not going to write anything up because I just had a recursion 
 
 First, a word about the intuition. Different from transforming a signal that varies in time into a sum of frequency modes, we are not decomposing the probability distribution into signals. Instead, we are transforming the spatial variation into a sum of static patterns. The component patterns are periodic and range in wavelengths all the way from infinity down to the unit spacing of the lattice.
 
-### 1d random walk
+### Traditional $1$d random walk
 
 To start, let's do the ordinary, balanced random walk.
 
@@ -100,7 +104,7 @@ When we treat $x$ and $y$ as continuous variables, and integrate over them, we a
 
 Now, the static patterns are two dimensional so we need two wave numbers, $k$ and $\ell,$ instead of one. This means that each spatial dimension gets its own wave number/transform variable. 
 
-Taking the fourier transform, we get
+Taking the Fourier transform, we get
 
 $$ 
     \widetilde{\omega}_t(k, \ell) = \frac16\int\text{d}x\,\text{d}y\, e^{i{kx+\ell y}} \left[\begin{align}&\omega_{t-1}(x+1,y) + \omega_{t-1}(x-1,y) + \\
@@ -135,12 +139,27 @@ This means that the hexagonal walk is basically two uncoupled walks in each dime
 
 Doing the inverse fourier transform we get
 
-$$ \omega_t(x,y) \approx  \dfrac{e^{-(x^2+y^2)/t}}{\pi t}. $$
+$$ 
+    \begin{align}
+        \omega_t(x,y) &= \int\text{d}k\,\text{d}\ell\, e^{ikx}e^{i\ell y}\widetilde{\omega}_t(k,\ell) \\
+        &\approx  \dfrac{e^{-(x^2+y^2)/t}}{\pi t}. 
+    \end{align}
+$$
+
+By varying $k$ and $\ell$ we can visualize some of these modes:
+
+![](/img/2026-02-04-fiddler-hexagonal-static-patterns.png){:width="750 px" class="image-centered"}
 
 Again, this undercounts due to $\text{d}x\text{d}y$ being a physical area, so we scale up by the unit area $\sqrt{3}/2$ and get
 
 $$ \omega_t(x,y) \approx  \frac{\sqrt{3}}{2}\dfrac{e^{-(x^2+y^2)/t}}{\pi t}. $$
 
-We can plug in $(x,y) = (0,0)$ and solving for the value of $t$ when it equals $f.$ We get $t\approx f^{-1}\times \sqrt{3}/(2\pi)$ which is $\approx 27.57$ for $f = 1/100$ which, after taking the ceiling, is dead on with the exact result of $28.$
+We can plug in $(x,y) = (0,0)$ and solving for the value of $t$ when it equals $f.$ We get 
+
+$$ t\approx \frac{\sqrt{3}}{2\pi f}. $$ 
+
+This is $\approx 27.57$ for $f = 1/100$ which, after taking the ceiling, is dead on with the exact result of $28.$
+
+![](/img/2026-02-04-fiddler-hexagonal-walk-t0-40.gif){:width="600 px" class="image-centered"}
 
 <br>
