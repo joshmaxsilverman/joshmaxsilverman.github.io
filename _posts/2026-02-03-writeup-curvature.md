@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Curvature
 date: 2026/02/03
 subtitle: Where does it come form, how do we find it?

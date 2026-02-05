@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Hexagonal walker
 date: 2026/02/04
-subtitle: disappearing food
+subtitle: How long until a random walk steals 99% of your food, probably?
 source: fiddler
 kind: puzzle
 theme: probability
@@ -101,8 +101,11 @@ $$
 
 When we treat $x$ and $y$ as continuous variables, and integrate over them, we are undercounting. The discrete probability $\omega(x,y)$ sums to $1,$ but when we integrate, we are locating each lattice point in a unit of area, and the area of that unit is not $1,$ it is $\sqrt{3}/2.$ So, we will have to account for this when we invert the fourier transform. 
 
+Now, the static patterns are two dimensional so we need two wave numbers, $k$ and $\ell,$ instead of one. This means that each spatial dimension gets its own wave number/transform variable. The corresponding mode is $e^{ikx}e^{iky},$ and the Fourier coefficients $\widetilde{\omega}_t(k,\ell)$ tell us how much the $(k,\ell)$ pattern contributes to the probability distribution.  
 
-Now, the static patterns are two dimensional so we need two wave numbers, $k$ and $\ell,$ instead of one. This means that each spatial dimension gets its own wave number/transform variable. 
+By varying $k$ and $\ell$ we can visualize some of these static modes:
+
+![](/img/2026-02-04-fiddler-hexagonal-static-patterns.png){:width="750 px" class="image-centered"}
 
 Taking the Fourier transform, we get
 
@@ -141,20 +144,16 @@ Doing the inverse fourier transform we get
 
 $$ 
     \begin{align}
-        \omega_t(x,y) &= \int\text{d}k\,\text{d}\ell\, e^{ikx}e^{i\ell y}\widetilde{\omega}_t(k,\ell) \\
+        \omega_t(x,y) &= \frac{1}{\left(2\pi\right)^2} \int\text{d}k\,\text{d}\ell\, e^{ikx}e^{i\ell y}\,\widetilde{\omega}_t(k,\ell) \\
         &\approx  \dfrac{e^{-(x^2+y^2)/t}}{\pi t}. 
     \end{align}
 $$
-
-By varying $k$ and $\ell$ we can visualize some of these modes:
-
-![](/img/2026-02-04-fiddler-hexagonal-static-patterns.png){:width="750 px" class="image-centered"}
 
 Again, this undercounts due to $\text{d}x\text{d}y$ being a physical area, so we scale up by the unit area $\sqrt{3}/2$ and get
 
 $$ \omega_t(x,y) \approx  \frac{\sqrt{3}}{2}\dfrac{e^{-(x^2+y^2)/t}}{\pi t}. $$
 
-We can plug in $(x,y) = (0,0)$ and solving for the value of $t$ when it equals $f.$ We get 
+We can plug in $(x,y) = (0,0)$ and solve for the value of $t$ when it equals $f.$ We get 
 
 $$ t\approx \frac{\sqrt{3}}{2\pi f}. $$ 
 
