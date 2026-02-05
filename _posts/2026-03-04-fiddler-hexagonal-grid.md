@@ -140,7 +140,7 @@ $$
 
 This means that the hexagonal walk is basically two uncoupled walks in each dimension.
 
-Doing the inverse fourier transform we get
+Reconstructing with the inverse Fourier transform we get
 
 $$ 
     \begin{align}
