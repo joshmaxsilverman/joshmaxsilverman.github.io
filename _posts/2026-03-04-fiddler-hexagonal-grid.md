@@ -53,7 +53,6 @@ At long times, the integral is dominated by small values of $k$ close to the pea
 $$
     \begin{align}
         \widetilde{\omega}(k,t) &\approx \left(1-k^2/2\right)^t\widetilde{\omega}(k, 0) \\
-        &= \left(1-k^2/2\right)^t \widetilde{\omega}(k,0) \\
         &\approx e^{-k^2t/2}\widetilde{\omega}(k,0) \\
         &= e^{-k^2t/2}.
     \end{align}
