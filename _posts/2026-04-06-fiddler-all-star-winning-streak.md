@@ -55,6 +55,29 @@ $$
     \end{align} 
 $$
 
+This closely matches a $N=100,000$ trial simulation which got $0.50039.$
+
+```mathematica
+trial3[] := (
+  {s1, s2, s3} = {0, 0, 0};
+  Do[
+   If[Mod[j, 3] == 1,
+    If[RandomReal[] > 1/2, s1 += 1; s2 = 0, s1 = 0; s2 += 1];
+    ];
+   If[Mod[j, 3] == 2,
+    If[RandomReal[] > 1/2, s2 += 1; s3 = 0, s2 = 0; s3 += 1];
+    ];
+   If[Mod[j, 3] == 0,
+    If[RandomReal[] > 1/2, s3 += 1; s1 = 0, s3 = 0; s1 += 1];
+    ];
+   , {j, 1, 5000}
+   ];
+  Return[{s1, s2, s3}]
+  )
+
+answer = Mean@ParallelTable[Median@trial3[], {j, 1, 100000}]
+```
+
 ### Two player game
 
 The current leader has at least $1$ game won and they're expected to win $1$ more, so ${S = 1 + 1 = 2.}$
