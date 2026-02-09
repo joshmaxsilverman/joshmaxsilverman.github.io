@@ -78,6 +78,10 @@ trial3[] := (
 answer = Mean@ParallelTable[Median@trial3[], {j, 1, 100000}]
 ```
 
+From the calculation above, we can also get the distribution which is $1/4$ for $S=1$ and $3/4\times 1/2^{S-1}$ for $S\geq 2:$
+
+![](/img/2026-02-09-fiddler-all-star-winning-streak-histogram.png){:width="600 px" class="image-centered"}
+
 ### Two player game
 
 The current leader has at least $1$ game won and they're expected to win $1$ more, so ${S = 1 + 1 = 2.}$
