@@ -84,7 +84,7 @@ From the calculation above, we can extract the distribution which is $1/4$ for $
 
 ### Two player game
 
-The current leader has at least $1$ game won and they're expected to win $1$ more, so ${S = 1 + 1 = 2.}$
+The current leader has at least $1$ game won and they're expected to win $1$ more, so ${\langle S \rangle = 1 + 1 = 2.}$
 
 <br>
 
