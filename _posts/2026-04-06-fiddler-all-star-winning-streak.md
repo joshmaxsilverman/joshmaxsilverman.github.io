@@ -42,11 +42,11 @@ The expected number of additional wins for the leader (beyond $2$) is
 $$ 
     \begin{align}
         W &= \frac12\cdot 0 + \frac12\cdot(1 + W) \\
-          &= 1, 
+          &= 1.
     \end{align}
 $$
 
-or $W=1.$ So, the expected maximum active streak is 
+So, the expected maximum active streak is 
 
 $$
     \begin{align}
