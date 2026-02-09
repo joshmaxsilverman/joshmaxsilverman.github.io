@@ -75,7 +75,7 @@ trial3[] := (
   Return[{s1, s2, s3}]
   )
 
-answer = Mean@ParallelTable[Median@trial3[], {j, 1, 100000}]
+answer = Mean@ParallelTable[Max@trial3[], {j, 1, 100000}]
 ```
 
 From the calculation above, we can extract the distribution which is $1/4$ for $S=1$ and $3/4\times 1/2^{S-1}$ for $S\geq 2$ (prediction in gold, simulation in blue)
