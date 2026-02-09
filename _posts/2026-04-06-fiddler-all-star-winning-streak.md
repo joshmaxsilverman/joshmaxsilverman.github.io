@@ -50,7 +50,7 @@ or $W=1.$ So, the expected maximum active streak is
 
 $$
     \begin{align}
-        S &= \frac14\cdot 1 + \frac34\cdot(2+1) \\
+        \langle S\rangle  &= \frac14\cdot 1 + \frac34\cdot(2+1) \\
         &= \frac52.
     \end{align} 
 $$
@@ -78,7 +78,7 @@ trial3[] := (
 answer = Mean@ParallelTable[Median@trial3[], {j, 1, 100000}]
 ```
 
-From the calculation above, we can also extract the distribution which is $1/4$ for $S=1$ and $3/4\times 1/2^{S-1}$ for $S\geq 2:$
+From the calculation above, we can extract the distribution which is $1/4$ for $S=1$ and $3/4\times 1/2^{S-1}$ for $S\geq 2:$
 
 ![](/img/2026-02-09-fiddler-all-star-winning-streak-histogram.png){:width="600 px" class="image-centered"}
 
