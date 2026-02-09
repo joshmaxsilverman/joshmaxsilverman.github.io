@@ -55,7 +55,7 @@ $$
     \end{align} 
 $$
 
-This closely matches a $N=100,000$ trial simulation which got $2.50039.$
+This closely matches a $N=100,000$ trial simulation which got $2.49729.$
 
 ```mathematica
 trial3[] := (
