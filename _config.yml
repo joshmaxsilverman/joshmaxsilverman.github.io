@@ -129,6 +129,7 @@ defaults:
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
       kind: puzzle # default bucket for categorizing posts
+      hide_from_recent: false # if true, keep in archive but hide from Recent puzzles
   -
     scope:
       path: "" # all files

@@ -36,15 +36,23 @@ meta-description: "Puzzle solutions and technical expositions."
 {% assign writeup_learning = site.posts | where: "kind", "learning" %}
 {% assign writeup_extra = site.posts | where: "kind", "writeup" %}
 {% assign writeup_posts = writeup_physics | concat: writeup_learning | concat: writeup_extra %}
-{% assign recent_puzzles = puzzle_posts | slice: 0,6 %}
 
 <div class="recent-rail">
   <div>
     <h2>Recent puzzles</h2>
     <div class="post-grid">
-      {% for post in recent_puzzles %}
-        {% include theme-from-tags.html post=post %}
-        {% include post-card.html post=post theme=computed_theme source=computed_source %}
+      {% assign recent_count = 0 %}
+      {% for post in puzzle_posts %}
+        {% capture hide_str %}{{ post.hide_from_recent | default: false }}{% endcapture %}
+        {% assign hide_str = hide_str | strip | downcase %}
+        {% unless post.hide_from_recent == true or hide_str == "true" %}
+          {% include theme-from-tags.html post=post %}
+          {% include post-card.html post=post theme=computed_theme source=computed_source %}
+          {% assign recent_count = recent_count | plus: 1 %}
+          {% if recent_count >= 6 %}
+            {% break %}
+          {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
   </div>
