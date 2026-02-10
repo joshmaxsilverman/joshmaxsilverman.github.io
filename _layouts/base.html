@@ -3,6 +3,7 @@ common-css:
   - "/css/bootstrap.min.css"
   - "/css/bootstrap-social.css"
   - "/css/main.css"
+  - "/css/theme.css"
 common-ext-css:
   - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
 common-googlefonts:
@@ -12,6 +13,7 @@ common-js:
   - "/js/jquery-1.11.2.min.js"
   - "/js/bootstrap.min.js"
   - "/js/main.js"
+  - "/js/theme-toggle.js"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +27,8 @@ common-js:
     {% include nav.html %}
 
     {{ content }}
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">Dark mode: off</button>
 
     {% include footer.html %}
   

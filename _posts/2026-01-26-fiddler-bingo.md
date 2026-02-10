@@ -67,27 +67,28 @@ The code to run the simulation is below and the logic is to simply fill in one t
 ```python
 def new_board(n):
 
-  board_list = [[0 for _ in range(n)] for _ in range(n)]
-
-  mid_idx = n // 2
-  board_list[mid_idx][mid_idx] = 1
+  board_list = [ [ 0 for _ in range(n) ] for _ in range(n) ]
+  board_list[n // 2][n // 2] = 1
 
   return np.array(board_list)
 
 
-def check_diag(brd):
-  h, w = brd.shape
+def check_diag(board):
+  h, w = board.shape
   assert h == w
-  if sum(brd[i,i] for i in range(0,h)) == h or\ 
-    sum(brd[h-1-i,i] for i in range(0,h)) == h:
+
+  if sum(board[i, i] for i in range(0, h)) == h or\ 
+    sum(board[h-1-i, i] for i in range(0, h)) == h:
+  
     return True
+  
   return False
 
-def check_rows_and_cols(brd):
-  h, w = brd.shape
+def check_rows_and_cols(board):
+  h, w = board.shape
   assert h == w
   
-  if h in brd.sum(axis=1) or h in brd.sum(axis=0):
+  if h in board.sum(axis=1) or h in board.sum(axis=0):
     
     return True
   
@@ -95,17 +96,21 @@ def check_rows_and_cols(brd):
 
 def trial(n):
     tiles_placed = 0
-    brd = new_board(n)
-    brd = np.array(brd)
-    while not check_diag(brd) and not check_rows_and_cols(brd):
-        open_spots = np.argwhere(brd==0)
+    board = new_board(n)
+    board = np.array(board)
+    
+    while not check_diag(board) and not check_rows_and_cols(board):
+    
+        open_spots = np.argwhere(board==0)
         idx = np.random.randint(0, len(open_spots))
         spot = open_spots[idx]
-        brd[spot[0], spot[1]] = 1
+        board[spot[0], spot[1]] = 1
         tiles_placed += 1
+    
     return tiles_placed
 
 def measure(n):
+
     return sum(trial(n) for _ in range(1_000)) / 1_000
 ```
 
@@ -207,9 +212,11 @@ def count(n, t):
         combos = combinations(BINGOS, group_size)
 
         for com in combos:
+
             tiles_in_bingo = len(set.union(*com))
             tiles_left = tiles_on_board - tiles_in_bingo
             ways = sp.special.comb(tiles_left, t - tiles_in_bingo)
+            
             if len(com) % 2 == 0:
                 total -= ways
             else:
@@ -227,11 +234,14 @@ def exact(n):
     total = 0
 
     while True:
+
         new = count(n, k)
+        
         if new > 0:
             total += new
         else:
             break
+        
         k+= 1
 
     return total

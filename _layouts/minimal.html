@@ -2,9 +2,12 @@
 common-css:
   - "/css/bootstrap.min.css"
   - "/css/main-minimal.css"
+  - "/css/theme.css"
 common-js:
   - "/js/jquery-1.11.2.min.js"
   - "/js/bootstrap.min.js"
+  - "/js/main.js"
+  - "/js/theme-toggle.js"
 ---
 
 <!DOCTYPE html>
@@ -17,6 +20,8 @@ common-js:
     <div role="main" class="container main-content">
       {{ content }}
     </div>
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">Dark mode: off</button>
 
     {% include footer-minimal.html %}
   
