@@ -6,6 +6,7 @@ date: 2025/11/16
 subtitle: How far is the thirsty random tree from the gushing random hose?
 source: fiddler
 theme: geometry
+hide_from_recent: true
 tags: symmetry
 ---
 
