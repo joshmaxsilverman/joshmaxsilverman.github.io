@@ -134,7 +134,7 @@ Repeating the expansion, we get a nice product of Gaussians.
 
 $$ 
     \begin{align}
-        \widetilde{\omega}_t(k, \ell) &= \frac13\left[1-\frac12k^2 + 1 - \frac18k^2 - \frac{3}{8}\ell^2 - \frac{\sqrt{3}}{4}k\ell + 1 - \frac18 k^2 - \frac{3}{8}\ell^2 + \frac{\sqrt{3}}{4}k\ell\right] \widetilde{\omega}_{t-1}(k,\ell) \\
+        \widetilde{\omega}_t(k, \ell) &\approx \frac13\left[1-\frac12k^2 + 1 - \frac18k^2 - \frac{3}{8}\ell^2 - \frac{\sqrt{3}}{4}k\ell + 1 - \frac18 k^2 - \frac{3}{8}\ell^2 + \frac{\sqrt{3}}{4}k\ell\right] \widetilde{\omega}_{t-1}(k,\ell) \\
         &= \frac13 \left[3 - \frac34 k^2 - \frac{3}{4}\ell^2\right] \widetilde{\omega}_{t-1}(k,\ell) \\
         &= \left[1-\frac{1}{4}k^2-\frac14\ell^2\right] \widetilde{\omega}_{t-1}(k,\ell) \\
         &= \left[1-\frac{1}{4}k^2-\frac14\ell^2\right]^t \widetilde{\omega}_0(k,\ell) \\
