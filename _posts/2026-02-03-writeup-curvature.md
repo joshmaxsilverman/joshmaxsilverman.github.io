@@ -195,7 +195,7 @@ $$ \begin{align}
     &= \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} - \frac12\frac{\partial g_{a\ell}}{\partial X^b}\frac{dX^b}{d\tau}\frac{dX^a}{d\tau} - \frac12\frac{\partial g_{b\ell}}{\partial X^a}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} \\
     &= \frac{1}{2}\left(\frac{\partial g_{ab}}{\partial X^\ell} - \frac{\partial g_{a\ell}}{\partial X^b} - \frac{\partial g_{b\ell}}{\partial X^a}\right) \frac{dX^a}{d\tau}\frac{dX^b}{d\tau} \\
     g^{m\ell}g_{a\ell}\frac{d^2 X^a}{d\tau^2} &= g^{m\ell}\frac{1}{2}\left(\frac{\partial g_{ab}}{\partial X^\ell} - \frac{\partial g_{a\ell}}{\partial X^b} - \frac{\partial g_{b\ell}}{\partial X^a}\right) \frac{dX^a}{d\tau}\frac{dX^b}{d\tau} \\
-    \frac{d^2 X^m}{d\tau^2} &= \Gamma^m_{ab} \frac{dX^a}{d\tau}\frac{dX^b}{d\tau}
+    \frac{d^2 X^m}{d\tau^2} &= -\Gamma^m_{ab} \frac{dX^a}{d\tau}\frac{dX^b}{d\tau}
     \end{align}
 $$
 <br>
