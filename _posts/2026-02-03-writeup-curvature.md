@@ -149,10 +149,10 @@ the action of a free particle moving in spacetime is the integral of its energy 
 
 $$ \int \mathcal{L} d\tau = -m_0c^2 \int\frac{d\tau}{dt}dt $$
 
-where $d\tau/dt = \sqrt{1-g_{ij}\dot{X}^i\doxt{X}^j}. $
+where $d\tau/dt = \sqrt{1-g_{ab}\dot{X}^a\dot{X}^b}. $
 
 we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.$
 
-the el equation is $\partia
+the el equation is $$ \frac{\partial\mathcal{L}}{\partial{X^j} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^j}. $$
 
 <br>
