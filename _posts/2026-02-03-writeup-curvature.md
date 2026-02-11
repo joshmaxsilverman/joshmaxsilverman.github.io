@@ -157,6 +157,10 @@ the el equation is
 
 $$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^j}. $$
 
+the derivatives $\dot{X}^j$ are independent of the $X^j$ so the only term on the left side is 
+
+$$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell}. $$
+
 ddd
 
 <br>
