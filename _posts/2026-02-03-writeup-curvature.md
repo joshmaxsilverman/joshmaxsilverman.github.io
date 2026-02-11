@@ -172,8 +172,15 @@ $$
     \begin{align}
         \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= \frac12\frac{1}{\sqrt{-g}}\left(g_{a\ell}\dot{X}^a + g_{\ell b}\dot{X}^b\right) \\
         &= \frac{dt}{d\tau} g_{a\ell}\dot{X}^a \\
-        &= g_{a\ell}\frac{d X^a}{d \tau}
     \end{align}
 $$
 
+taking the time derivative get us
+
+$$
+    \begin{align}
+        \frac{d}{dt} \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= 0 + \frac{dg_{a\ell}}{dt} + g_{a\ell}\frac{d \dot{X}^\ell}{dt} \\
+        &= \frac{\partial g_{a\ell}}{\partial X^m}\dot{X}^m\dot{X}^\ell + g_{a\ell}\frac{d^2 X^ell}{dt^2}.
+    \end{align}
+$$
 <br>
