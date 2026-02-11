@@ -143,4 +143,14 @@ which is solved by $t^{\theta/\phi} = A \cos \left(\sin^2\theta_0 \phi\right) + 
 
 this shows that when the parallel is the equator, where $\theta_0 = 0,$ then the tangent vector will remain constant as it's transported around the circle. but if say $\theta_0 = \frac14\pi,$ then the vector will rotate by $2\pi\sin\frac{\pi}{4} = 2\pi/\sqrt{2} \approx 254.6\,^\circ$ as the vector is transported around the sphere.
 
+### Geodesic equation from action
+
+the action of a free particle moving in spacetime is the integral of its energy over time
+
+$$ \mathcal{L} = -m_0c^2 \frac{d\tau}{dt}dt $$
+
+we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.$
+
+the el equation is $\partia
+
 <br>
