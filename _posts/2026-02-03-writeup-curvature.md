@@ -161,8 +161,8 @@ the derivatives $\dot{X}^j$ are independent of the $X^j$ so the only term on the
 
 $$ 
     \begin{align} 
-        \frac{\partial\mathcal{L}}{\partial{X^\ell}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \\
-        &= \frac{1}{2}\frac{dt}{d\tau} \frac{\partial g_{ab}}{\partial X^\ell}
+        \frac{\partial\mathcal{L}}{\partial{X^\ell}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \dot{X}^a\dot{X}^b\\
+        &= \frac{1}{2}\frac{dt}{d\tau} \frac{\partial g_{ab}}{\partial X^\ell}\dot{X}^a\dot{X}^b
     \end{align}. 
 $$
 
