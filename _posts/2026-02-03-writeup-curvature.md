@@ -149,7 +149,7 @@ the action of a free particle moving in spacetime is the integral of its energy 
 
 $$ \int \mathcal{L} d\tau = -m_0c^2 \int\frac{d\tau}{dt}dt $$
 
-where $d\tau/dt = \sqrt{1-g_{ab}\dot{X}^a\dot{X}^b}. $
+where $d\tau/dt = \sqrt{g_{tt} - g_{ab}\dot{X}^a\dot{X}^b}. $
 
 we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.$
 
