@@ -13,6 +13,7 @@ tags: general-relativity differential-geometry
 >This note has a few angles on curvature. The first is to compute the curvature tensor, intuitively defined as the difference of repeated covariant derivatives in either order. The second is computing the tangent vector under parallel transport on an arbitrary line of latitude on the sphere. Third, we calculate the equation of motion from minimizing the action (energy by proper time) for a particle in some given metric $g,$ and see that it's the same as the geodesic we got from parallel transport.
 
 
+## Argument
 
 First, let's compute the curvature tensor.
 
