@@ -171,7 +171,8 @@ the derivative with respect to $\dot{X}^\ell$ gets a pair of terms that can be c
 $$
     \begin{align}
         \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= \frac12\frac{1}{\sqrt{-g}}\left(g_{a\ell}\dot{X}^a + g_{\ell b}\dot{X}^b\right) \\
-        &= \frac{dt}{d\tau} g_{a\ell}\dot{X}^a.
+        &= \frac{dt}{d\tau} g_{a\ell}\dot{X}^a \\
+        &= g_{a\ell}\frac{d X^a}{d \tau}
     \end{align}
 $$
 
