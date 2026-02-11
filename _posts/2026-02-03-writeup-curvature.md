@@ -179,12 +179,12 @@ taking the time derivative get us
 
 $$
     \begin{align}
-        \frac{d}{dt} \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= 0 + \frac{dt}{d\tau}\frac{dg_{a\ell}}{dt}\dot{X}^\ell + \frac{dt}{d\tau}g_{a\ell}\frac{d \dot{X}^\ell}{dt} \\
-        &= \frac{dt}{d\tau}\frac{\partial g_{a\ell}}{\partial X^m}\dot{X}^m\dot{X}^\ell + \frac{dt}{d\tau}g_{a\ell}\frac{d^2 X^\ell}{dt^2}.
+        \frac{d}{dt} \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= 0 + \frac{dt}{d\tau}\frac{dg_{a\ell}}{dt}\dot{X}^a + \frac{dt}{d\tau}g_{a\ell}\frac{d \dot{X}^a}{dt} \\
+        &= \frac{dt}{d\tau}\frac{\partial g_{a\ell}}{\partial X^m}\dot{X}^m\dot{X}^a + \frac{dt}{d\tau}g_{a\ell}\frac{d^2 X^a}{dt^2}.
     \end{align}
 $$
 
 if we multiply both sides by another $dt/d\tau$ we get 
 
-$$ \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} = \frac{\partial g_{a\ell}}{\partial X^m}\frac{dX^m}{d\tau}\frac{dX^\ell}{d\tau} + g_{a\ell}\frac{d^2 X^\ell}{d\tau^2}. $$
+$$ \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} = \frac{\partial g_{a\ell}}{\partial X^m}\frac{dX^m}{d\tau}\frac{dX^a}{d\tau} + g_{a\ell}\frac{d^2 X^a}{d\tau^2}. $$
 <br>
