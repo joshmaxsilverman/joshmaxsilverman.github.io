@@ -198,4 +198,6 @@ $$ \begin{align}
     \frac{d^2 X^m}{d\tau^2} &= -\Gamma^m_{ab} \frac{dX^a}{d\tau}\frac{dX^b}{d\tau}
     \end{align}
 $$
+
+which is the geodesic equation we got from setting the covariant derivative to zero.
 <br>
