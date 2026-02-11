@@ -190,5 +190,10 @@ $$ \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^
 
 relabling $m$ to $b$ we get
 
-$$ g_{a\ell}\frac{d^2 X^a}{d\tau^2} = \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} - \frac{\partial g_{a\ell}}{\partial X^b}\frac{dX^b}{d\tau}\frac{dX^a}{d\tau}. $$
+$$ \begin{align}
+    g_{a\ell}\frac{d^2 X^a}{d\tau^2} &= \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} - \frac{\partial g_{a\ell}}{\partial X^b}\frac{dX^b}{d\tau}\frac{dX^a}{d\tau} \\
+    &= \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} - \frac12\frac{\partial g_{a\ell}}{\partial X^b}\frac{dX^b}{d\tau}\frac{dX^a}{d\tau} - \frac12\frac{\partial g_{b\ell}}{\partial X^a}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} \\
+    &= \frac{1}{2}\left(\frac{\partial g_{ab}}{\partial X^\ell} - \frac{\partial g_{a\ell}}{\partial X^b} - \frac{\partial g_{b\ell}}{\partial X^a}\right) \frac{dX^a}{d\tau}\frac{dX^b}{d\tau}. 
+    \end{align}
+$$
 <br>
