@@ -155,17 +155,23 @@ we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.
 
 the el equation is 
 
-$$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^j}. $$
+$$ \frac{\partial\mathcal{L}}{\partial{X^\ell}} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^\ell}. $$
 
 the derivatives $\dot{X}^j$ are independent of the $X^j$ so the only term on the left side is 
 
 $$ 
     \begin{align} 
-        \frac{\partial\mathcal{L}}{\partial{X^j}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \\
+        \frac{\partial\mathcal{L}}{\partial{X^\ell}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \\
         &= \frac{1}{2}\frac{dt}{d\tau} \frac{\partial g_{ab}}{\partial X^\ell}
     \end{align}. 
 $$
 
-ddd
+the derivative with respect to $\dot{X}^\ell$ gets a pair of terms that can be collapsed to one
+
+$$
+    \begin{align}
+        \frac{\mathcal{L}}{\partial\dot{X}^\ell} &= \frac12\frac{1}{\sqrt{-g}}\left(g_{a\ell}\dot{X}^a + g_{\ell b}\dot{X}^b\right)
+    \end{align}
+$$
 
 <br>
