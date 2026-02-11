@@ -180,7 +180,7 @@ taking the time derivative get us
 $$
     \begin{align}
         \frac{d}{dt} \frac{\partial\mathcal{L}}{\partial\dot{X}^\ell} &= 0 + \frac{dg_{a\ell}}{dt} + g_{a\ell}\frac{d \dot{X}^\ell}{dt} \\
-        &= \frac{\partial g_{a\ell}}{\partial X^m}\dot{X}^m\dot{X}^\ell + g_{a\ell}\frac{d^2 X^ell}{dt^2}.
+        &= \frac{\partial g_{a\ell}}{\partial X^m}\dot{X}^m\dot{X}^\ell + g_{a\ell}\frac{d^2 X^\ell}{dt^2}.
     \end{align}
 $$
 <br>
