@@ -145,9 +145,9 @@ this shows that when the parallel is the equator, where $\theta_0 = 0,$ then the
 
 ### Geodesic equation from action
 
-the action of a free particle moving in spacetime is the integral of its energy over time
+the action of a free particle moving in spacetime is the integral of its energy over proper time
 
-$$ \mathcal{L} = -m_0c^2 \frac{d\tau}{dt}dt $$
+$$ \int \mathcal{L} d\tau = -m_0c^2 \int\frac{d\tau}{dt}dt $$
 
 we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.$
 
