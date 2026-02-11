@@ -159,11 +159,12 @@ $$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{d}{dt}\frac{\partial\mathca
 
 the derivatives $\dot{X}^j$ are independent of the $X^j$ so the only term on the left side is 
 
-$$ \begin{align} 
-    \frac{\partial\mathcal{L}}{\partial{X^j}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \\
-    &= \frac{1}{2}\frac{dt}{d\tau} \frac{\partial g_{ab}}{\partial X^\ell}
-    
-    \end{align}. $$
+$$ 
+    \begin{align} 
+        \frac{\partial\mathcal{L}}{\partial{X^j}} &= \frac{1}{2\sqrt{-g}} \frac{\partial g_{ab}}{\partial X^\ell} \\
+        &= \frac{1}{2}\frac{dt}{d\tau} \frac{\partial g_{ab}}{\partial X^\ell}
+    \end{align}. 
+$$
 
 ddd
 
