@@ -187,4 +187,8 @@ $$
 if we multiply both sides by another $dt/d\tau$ we get 
 
 $$ \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} = \frac{\partial g_{a\ell}}{\partial X^m}\frac{dX^m}{d\tau}\frac{dX^a}{d\tau} + g_{a\ell}\frac{d^2 X^a}{d\tau^2}. $$
+
+relabling $m$ to $b$ we get
+
+$$ g_{a\ell}\frac{d^2 X^a}{d\tau^2} = \frac{1}{2}\frac{\partial g_{ab}}{\partial X^\ell}\frac{dX^a}{d\tau}\frac{dX^b}{d\tau} - \frac{\partial g_{a\ell}}{\partial X^m}\frac{dX^m}{d\tau}\frac{dX^a}{d\tau}. $$
 <br>
