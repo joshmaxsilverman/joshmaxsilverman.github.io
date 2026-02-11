@@ -153,6 +153,10 @@ where $d\tau/dt = \sqrt{1-g_{ab}\dot{X}^a\dot{X}^b}. $
 
 we can check the integrand at small $v$ which is $\approx -m_0c^2 + \frac12mv^2.$
 
-the el equation is $$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^j}. $$
+the el equation is 
+
+$$ \frac{\partial\mathcal{L}}{\partial{X^j}} = \frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{X}^j}. $$
+
+ddd
 
 <br>
