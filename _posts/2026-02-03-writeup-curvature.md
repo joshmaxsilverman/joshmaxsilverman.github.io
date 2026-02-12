@@ -69,13 +69,15 @@ $$
 
 ### Parallel transport on the sphere
 
-Now we're going to compute the covariant derivative of the tangent vector as we move around a line of latitude, i.e. a parallel of the sphere. To do this, we need to know the metric and the Christoffel symbols. 
+Now we're going to see how the tangent vector behaves during parallel transport on the sphere. To do this, we will compute the covariant derivative of the tangent vector as we move around a line of latitude, i.e. a parallel of the sphere, and set it equal to zero.  
 
 When we set the covariant derivative $D_m t^n$ equal to zero, we'll get differential equations that tell us how the components of $\mathbf{t}$ change with the angle $\phi$ around the sphere. The metric on the surface of the sphere is ${ds^2 = r^2 d\theta^2 + r^2 \cos^2\theta d\phi^2}$ or on the parallel of the unit sphere
 
 $$ g(\theta, \phi) = r^2\left(\begin{array}\ 1 & 0 \\ 0 & \cos^2\theta \end{array}\right). $$
 
-Now we can find the Christoffel symbols. because $g_{\theta\phi} = 0$ and $g_{\theta\theta} = 1,$ 
+Now we can find the Christoffel symbols. 
+
+Because $g_{\theta\phi} = 0$ and $g_{\theta\theta} = 1,$ 
 
 $$ \Gamma^\theta_{\theta\theta} = \frac12 g^{\theta\theta}\left(\partial_\phi g_{\theta\theta} + \partial_\theta g_{\theta\phi} - \partial_\theta g_{\theta\phi}\right) + \frac12 g^{\theta\phi}\left(\partial_\theta g_{\phi\theta} + \partial_\theta g_{\phi\theta} - \partial_\phi g_{\theta\theta}\right) = 0. $$
 
@@ -117,7 +119,7 @@ and
 $$ 
     \begin{align}
         D_\phi t^\theta &= \frac{\partial t^\theta}{\partial \phi} + \Gamma^\theta_{\theta\phi}t^\theta + \Gamma^\theta_{\phi\phi}t^\phi \\
-        \frac{\partial t^\phi}{\partial\phi} &= -\sin\theta_0\cos\theta_0 t^\phi.
+        \frac{\partial t^\theta}{\partial\phi} &= -\sin\theta_0\cos\theta_0 t^\phi.
     \end{align}
 $$
 
@@ -130,9 +132,9 @@ $$
     \end{align}
 $$
 
-These are solved by $t^{\theta/\phi} = A \cos \left(\sin^2\theta_0 \phi\right) + B \cos \left(\sin^2\theta_0 \phi\right).$
+These are analogous to the harmonic oscillator equation, with $\sin\theta_0$ acting as a frequency. They are solved by $t^{\theta/\phi} = A \cos \left(\sin\theta_0 \phi\right) + B \sin \left(\sin\theta_0 \phi\right).$
 
-This shows that when the parallel is the equator, where $\theta_0 = 0,$ the tangent vector will remain constant as it's transported around the circle. But if, say, $\theta_0 = \frac14\pi,$ then the vector will rotate by $2\pi\sin\frac{\pi}{4} = 2\pi/\sqrt{2} \approx 254.6\,^\circ$ as the vector is transported around the sphere.
+When the parallel is the equator, where $\theta_0 = 0,$ the tangent vector will remain constant as it's transported around the circle. But if, say, $\theta_0 = \frac14\pi,$ then the vector will rotate by $2\pi\sin\frac{\pi}{4} = 2\pi/\sqrt{2} \approx 254.6\,^\circ$ as the vector is transported around the sphere.
 
 ### Geodesic equation from action
 
