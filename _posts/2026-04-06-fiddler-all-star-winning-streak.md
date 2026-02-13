@@ -35,7 +35,7 @@ Since we're deep in the game, the current game has no dependence on the initial 
 
 If the maximum active streak is $2$ or more, then the leader is unique. That's because the only win the other two players can have is from playing each other, before immediately losing to the leader. So, when the leader is steamrolling, the other two can't "catch up" and we can focus on the leader extending their own streak.
 
-For the leader to have a streak of $2$ or more, they need to have won their last two games. Any of the three players can be the leader, so ${P(S\geq 1) = 3\cdot\frac12\cdot\frac12 = \frac34.}$ Likewise, the chance that the maximum active streak is $1$ is ${\left(1-\frac34\right) = \frac14.}$
+For the leader to have a streak of $2$ or more, they need to have won their last two games. Any of the three players can be the leader, so ${P(S\gt 1) = 3\cdot\frac12\cdot\frac12 = \frac34.}$ Likewise, the chance that the maximum active streak is $1$ is ${\left(1-\frac34\right) = \frac14.}$
 
 The expected number of additional wins for the leader (beyond $2$) is
 
