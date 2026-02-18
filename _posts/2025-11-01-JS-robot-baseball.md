@@ -67,7 +67,7 @@ $$ P_\text{strike}(b,s) = P_\text{swing}(b,s) = \frac{V(b,s+1) - V(b+1,s)}{pV(b,
 
 plugging this back in to the recursion, we get 
 
-$$ V(b,s) = \frac{\left(pV_\text{HR} + (1-p)V(b,s+1)\right)V(b+1,s)-V(b,s+1)^2}{pV_\text{HR}+(1-p)V(b,s+1) + V(b+1,s)]}$$
+$$ V(b,s) = \frac{\left(pV_\text{HR} + (1-p)V(b,s+1)\right)V(b+1,s)-V(b,s+1)^2}{pV_\text{HR} - (1+p)V(b,s+1) + V(b+1,s)}$$
 
 which lets us compute the expected value of each state. 
 
