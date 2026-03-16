@@ -64,7 +64,7 @@ Conversely, a triangle will not obtain if one of these is broken like $a > b+c.$
 
 When we pick Cantor numbers, the first division decides whether the number will be on the left or the right side of the first cut. $\text{L}$ numbers will be between $0$ and $\frac13$ and $R$ numbers will be between $\frac23$ and $1.$ Because each strip is a scaled down copy of the cantor set, we can relate the original problem to its cases.
 
-When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get eight different outcomes, 
+When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get one of eight equally likely different outcomes, 
 
 $$ \{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR} \}. $$
 
