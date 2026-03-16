@@ -76,7 +76,7 @@ $$ \{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \tex
 
 Putting it all together, the probability that number $a$ is too big is $\frac18\left[1 + 3P(\text{too big}) \right].$ 
 
-$$ P(\text{too big}) = \frac38\left[1+3P(\text{too big})\right]. $$
+$$ P(\text{too big}) = \frac18\left[1+3P(\text{too big})\right]. $$
 
 Solving this, we get $P(\text{too big})=\frac15$ so the probability to form a triangle is ${1-3P(\text{too big}) = \frac25.}$
 
