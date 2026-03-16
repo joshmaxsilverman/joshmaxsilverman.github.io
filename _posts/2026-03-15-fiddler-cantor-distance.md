@@ -66,7 +66,7 @@ When we pick Cantor numbers, the first division decides whether the number will 
 
 When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get eight different outcomes, 
 
-$$ \\{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR}\\}. $$
+$$ \{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR} \}. $$
 
 - If we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
 - If we get $\text{LLL}$ then we have the same problem again, playing out at $\frac13$ scale. The probability that number $a$ is too big is once again $P(\text{too big}).$
