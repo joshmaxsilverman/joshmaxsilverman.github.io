@@ -28,53 +28,64 @@ theme: probability
 
 ## Solution
 
-let the two points start at the middle of the intact unit line, and find their positions by repeatedly picking, at random, the midpoint of the left or right third of the line they're currently on. the sum of all these displacements for each point is the selected cantor point.
+Let the two points start at the middle of the intact unit line and find their positions by repeatedly picking, at random, the midpoint of the left or right third of the line they're currently on. The sum of all these displacements for each point is the selected Cantor point.
 
-the points are together to start, and can either stay together or move apart. if they stay together then they gain no relative displacement and restart the process at the center of a cantor line one third the length of the original. if they move apart, then they pick up relative distance $\frac23$ and start a new process separated from each other on the two sublines of length $\frac13.$ 
+The points are together to start, and can either stay together or move apart. If they stay together then they gain no relative displacement and restart the process at the center of a line one third the length of the original. If they move apart, then they pick up relative distance $\frac23$ and start the next step separated from each other on the two sublines of length $\frac13.$ 
 
-starting the next step apart, the points can have no relative movement with probability $\frac12,$ move together with probability $\frac14,$ or move apart with probability $\frac14.$ because the movements are symmetric, the expected additional separation is zero!
+Once apart, they never come back together. Also, starting a next step apart gives the points new options. The step can produce no relative movement (they move in the same direction) with probability $\frac12,$ move towards each other with probability $\frac14,$ or move apart with probability $\frac14.$ Because the movements are symmetric, the expected additional separation is zero!
 
-so, we just have the equation describing the 
+So, we just have the equation describing the first step
 
 $$ 
+    d_\text{together}(1) = \frac12 d_\text{together}\left(\frac13\right) + \frac12\left[\frac23 + d_\text{apart}\left(\frac13\right)\right].
+$$
+
+We can use the scaling property $d_\together(d) = \gamma d_\text{together}(\gamma d)$ to close the recursion and solve for $d_\text{together}(1)$:
+
+$$
     \begin{align}
-        d_\text{together}(1) &= \frac12 d_\text{apart}(\frac13) + \frac12\left(\frac23 + d_\text{apart}(\frac13)\right) \\
-        &= \frac12\frac13 d_\text{apart}(1) + \frac12\frac23 \\
-        \frac56 d_\text{together}(1) &= frac13 \\
-        d_\text{together}(1) &= \frac25.
+        d_\text{together}(1) &= \frac12\frac13 d_\text{together}\left(1\right) + \frac12\frac23 \\
+        \frac56 d_\text{together}\left(1\right) &= \frac13 \\
+        d_\text{together}\left(1\right) &= \frac25.
     \end{align}
 $$
 
+
+
 ## Extra credit
 
-three side lengths form a triangle if each pair of sides satisfies the triangle inequality with the third side, i.e.
+Three lengths form a valid triangle if each pair of sides satisfy the triangle inequality with the third side, i.e.
 
 $$ \begin{align}
 a &\leq b+c \\
 b &\leq c+a \\
-c &\leq a+b
+c &\leq a+b.
 \end{align}$$
 
-a triangle will not obtain if one of these is broken like $a > b+c.$ at the very most, one of a trio of numbers can be bigger than the sum of the other two. so, if we can find out the probability that one of the numbers is too big, $P(\text{too big}),$ the probability that a triangle forms will be $1-3P(\text{too big}).$
+Conversely, a triangle will not obtain if one of these is broken like $a > b+c.$ At the very most, one of a trio of numbers can be bigger than the sum of the other two so, if we find the probability that one of the numbers is too big, $P(\text{too big}),$ the probability that a triangle forms will be $1-3P(\text{too big}).$
 
-when we pick cantor numbers the first division decides if a number is on the left or the right side of the cut. because each side is a scaled down copy of the cantor set, we can relate the original problem to its cases.
+When we pick Cantor numbers, the first division decides whether the number will be on the left or the right side of the first cut. Because each strip is a scaled down copy of the cantor set, we can relate the original problem to its cases.
 
-when we make the first decision for the three numbers, we can get eight different outcomes, $\{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR}\}.$
+When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get eight different outcomes, 
 
-if we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
+$$ \\{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR}\\}. $$
 
-if we get $\text{LLL}$ then we have the same problem again, playing out at a smaller scale. the probability that a triangle does not form is once again $p.$
+If we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
 
-if we get any of the other scenarios where $a$ is $\text{L},$ the probability $a$ is too long is zero since either of $b$ or $c$ is $R$ and therefore greater than an $\text{L}$ number. 
+If we get $\text{LLL}$ then we have the same problem again, playing out at $\frac13$ scale. The probability that number $a$ is too big is once again $P(\text{too big}).$
 
-if we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, while the third number is between $0$ and $\frac13.$ writing $a$ as $\frac23 + x,$ $b$ as $\frac23 + y,$ and $c$ as $z,$ the condition for $a$ being too big is $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ because $x,$ $y,$ and $z$ are scaled down cantor numbers, this is just the original event and so has probability $p.$ 
+If we get any of the other scenarios where $a$ is $\text{L},$ the probability $a$ is too long is zero since either of $b$ or $c$ is $R$ and therefore greater than an $\text{L}$ number. 
 
-the case $\text{RLL}$ has probability $1$ to fail since $b$ and $c$ are less than $\frac13$ and $a>\frac23.$
+If we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, and the third number is between $0$ and $\frac13.$ Writing $a$ as $\frac23 + x,$ $b$ as $\frac23 + y,$ and $c$ as $z,$ the condition for $a$ being too big becomes $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ Because $x,$ $y,$ and $z$ are scaled down Cantor numbers, this is just the original event and also has probability $P(\text{too big}).$ 
 
-putting it all together, we have one case with probability $\frac18\left(1 + 3p\right).$ 
+The case $\text{RLL}$ surely fails since $b$ and $c$ are at most $\frac13$ and $a \geq \frac23.$
 
-$$ p = \frac38\left(1+3p\right). $$
+Putting it all together, the probability that number $a$ is too big is $\frac18\left(1 + 3P(\text{too big}) \right).$ 
 
-solving this, we get $P(\text{too big})=\frac15$ and the probability to form a triangle is $1-3P(\text{too big}) = \frac25.$
+$$ P(\text{too big}) = \frac38\left(1+3P(\text{too big})\right). $$
+
+Solving this, we get $P(\text{too big})=\frac15$ and the probability to form a triangle is $1-3P(\text{too big}) = \frac25.$
+
+Sadly, I can't see a clear reason why these two numbers ought to coincide.
 
 <br>
