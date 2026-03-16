@@ -62,7 +62,7 @@ c &\leq a+b.
 
 Conversely, a triangle will not obtain if one of these is broken like $a > b+c.$ At the very most, one of a trio of numbers can be bigger than the sum of the other two so, if we find the probability that one of the numbers is too big, $P(\text{too big}),$ the probability that a triangle forms will be $1-3P(\text{too big}).$
 
-When we pick Cantor numbers, the first division decides whether the number will be on the left or the right side of the first cut. Because each strip is a scaled down copy of the cantor set, we can relate the original problem to its cases.
+When we pick Cantor numbers, the first division decides whether the number will be on the left or the right side of the first cut. $\text{L}$ numbers will be between $0$ and $\frac13$ and $R$ numbers will be between $\frac23$ and $1.$ Because each strip is a scaled down copy of the cantor set, we can relate the original problem to its cases.
 
 When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get eight different outcomes, 
 
