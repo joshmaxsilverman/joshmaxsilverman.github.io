@@ -40,7 +40,7 @@ $$
     d_\text{together}(1) = \frac12 d_\text{together}\left(\frac13\right) + \frac12\left[\frac23 + d_\text{apart}\left(\frac13\right)\right].
 $$
 
-We can use the scaling property $d_\text{together}(d) = \gamma \cdot d_\text{together}(\gamma d)$ and the fact that $d_\text{apart} = 0$ to close the recursion and solve for $d_\text{together}(1)$:
+We can use the scaling property $d_\text{together}(\gamma d) = \gamma \cdot d_\text{together}(d)$ and the fact that $d_\text{apart} = 0$ to close the recursion and solve for $d_\text{together}(1)$:
 
 $$
     \begin{align}
