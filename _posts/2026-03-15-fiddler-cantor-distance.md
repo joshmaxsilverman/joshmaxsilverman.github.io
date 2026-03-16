@@ -40,7 +40,7 @@ $$
     d_\text{together}(1) = \frac12 d_\text{together}\left(\frac13\right) + \frac12\left[\frac23 + d_\text{apart}\left(\frac13\right)\right].
 $$
 
-We can use the scaling property $d_\text{together}(d) = \gamma d_\text{together}(\gamma d)$ to close the recursion and solve for $d_\text{together}(1)$:
+We can use the scaling property $d_\text{together}(d) = \gamma \cdot d_\text{together}(\gamma d)$ to close the recursion and solve for $d_\text{together}(1)$:
 
 $$
     \begin{align}
@@ -49,8 +49,6 @@ $$
         d_\text{together}\left(1\right) &= \frac25.
     \end{align}
 $$
-
-
 
 ## Extra credit
 
@@ -70,22 +68,18 @@ When we make the first decision for the three numbers, $\\{a,b,c\\},$ we can get
 
 $$ \\{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \text{RRL}, \text{RRR}\\}. $$
 
-If we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
+- If we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
+- If we get $\text{LLL}$ then we have the same problem again, playing out at $\frac13$ scale. The probability that number $a$ is too big is once again $P(\text{too big}).$
+- If we get any of the other scenarios where $a$ is $\text{L},$ the probability $a$ is too long is zero since either of $b$ or $c$ is $R$ and therefore greater than an $\text{L}$ number. 
+- If we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, and the third number is between $0$ and $\frac13.$ Writing $a$ as $\left(\frac23 + x\right),$ $b$ as $\left(\frac23 + y\right),$ and $c$ as $z,$ the condition for $a$ being too big becomes $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ Because $x,$ $y,$ and $z$ are scaled down Cantor numbers, this is just the original event and also has probability $P(\text{too big}).$ 
+- The case $\text{RLL}$ surely fails since $b$ and $c$ are at most $\frac13$ and $a \geq \frac23.$
 
-If we get $\text{LLL}$ then we have the same problem again, playing out at $\frac13$ scale. The probability that number $a$ is too big is once again $P(\text{too big}).$
+Putting it all together, the probability that number $a$ is too big is $\frac18\left[1 + 3P(\text{too big}) \right].$ 
 
-If we get any of the other scenarios where $a$ is $\text{L},$ the probability $a$ is too long is zero since either of $b$ or $c$ is $R$ and therefore greater than an $\text{L}$ number. 
-
-If we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, and the third number is between $0$ and $\frac13.$ Writing $a$ as $\frac23 + x,$ $b$ as $\frac23 + y,$ and $c$ as $z,$ the condition for $a$ being too big becomes $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ Because $x,$ $y,$ and $z$ are scaled down Cantor numbers, this is just the original event and also has probability $P(\text{too big}).$ 
-
-The case $\text{RLL}$ surely fails since $b$ and $c$ are at most $\frac13$ and $a \geq \frac23.$
-
-Putting it all together, the probability that number $a$ is too big is $\frac18\left(1 + 3P(\text{too big}) \right).$ 
-
-$$ P(\text{too big}) = \frac38\left(1+3P(\text{too big})\right). $$
+$$ P(\text{too big}) = \frac38\left[1+3P(\text{too big})\right]. $$
 
 Solving this, we get $P(\text{too big})=\frac15$ and the probability to form a triangle is $1-3P(\text{too big}) = \frac25.$
 
-Sadly, I can't see a clear reason why these two numbers ought to coincide.
+Sadly, I can't see a clear reason why these two answers ought to coincide.
 
 <br>
