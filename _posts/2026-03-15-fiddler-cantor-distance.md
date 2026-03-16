@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You or “Cantor” You Find the Distance?
+title: Can you or “Cantor” you find the distance?
 date: 2026/03/15
 subtitle: Random geometry from the Cantor distribution
 tags: fractals
