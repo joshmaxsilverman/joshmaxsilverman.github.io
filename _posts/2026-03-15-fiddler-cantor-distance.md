@@ -78,7 +78,7 @@ Putting it all together, the probability that number $a$ is too big is $\frac18\
 
 $$ P(\text{too big}) = \frac38\left[1+3P(\text{too big})\right]. $$
 
-Solving this, we get $P(\text{too big})=\frac15$ and the probability to form a triangle is $1-3P(\text{too big}) = \frac25.$
+Solving this, we get $P(\text{too big})=\frac15$ so the probability to form a triangle is ${1-3P(\text{too big}) = \frac25.}$
 
 Sadly, I can't see a clear reason why these two answers ought to coincide.
 
