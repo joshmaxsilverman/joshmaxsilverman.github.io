@@ -60,7 +60,7 @@ b &\leq c+a \\
 c &\leq a+b.
 \end{align}$$
 
-Conversely, a triangle will not obtain if one of these is broken like $a > b+c.$ At the very most, one of a trio of numbers can be bigger than the sum of the other two so, if we find the probability that one of the numbers is too big, $P(\text{too big}),$ the probability that a triangle forms will be $1-3P(\text{too big}).$
+Conversely, a triangle will not obtain if one of these is broken like $a > b+c.$ At the very most, one of a trio of numbers can be bigger than the sum of the other two so, if we find the probability that one of the numbers is too big, $P_\text{too big},$ the probability that a triangle forms will be $1-3P_\text{too big}.$
 
 When we pick Cantor numbers, the first division decides whether the number will be on the left or the right side of the first cut. $\text{L}$ numbers will be between $0$ and $\frac13$ and $R$ numbers will be between $\frac23$ and $1.$ Because each strip is a scaled down copy of the cantor set, we can relate the original problem to its cases.
 
@@ -71,14 +71,14 @@ $$ \{\text{LLL},\text{LLR}, \text{LRL}, \text{RLL}, \text{LRR}, \text{RLR}, \tex
 - If we get $\text{RRR}$ then all three numbers will be greater than $\frac23$ and less then $1$ which means a triangle is guaranteed, and there is no probability of failure. 
 - If we get $\text{LLL}$ then we have the same problem again, playing out at $\frac13$ scale. The probability that number $a$ is too big is once again $P(\text{too big}).$
 - If we get any of the other scenarios where $a$ is an $\text{L}$ number, the probability $a$ is too long is zero since either of $b$ or $c$ is an $\text{R}$ number and therefore greater than an $\text{L}$ number. 
-- If we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, and the third number is between $0$ and $\frac13.$ Writing $a$ as $\left(\frac23 + x\right),$ $b$ as $\left(\frac23 + y\right),$ and $c$ as $z,$ the condition for $a$ being too big becomes $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ Because $x,$ $y,$ and $z$ are scaled down Cantor numbers, this is just the original event and also has probability $P(\text{too big}).$ 
+- If we get $\text{RRL}$ or $\text{RLR}$ then $a$ is at least $\frac23$ as is one of the other numbers, and the third number is between $0$ and $\frac13.$ Writing $a$ as $\left(\frac23 + x\right),$ $b$ as $\left(\frac23 + y\right),$ and $c$ as $z,$ the condition for $a$ being too big becomes $\frac23 + x > \frac23 + y+z,$ or $x > y+z.$ Because $x,$ $y,$ and $z$ are scaled down Cantor numbers, this is just the original event and also has probability $P_\text{too big}.$ 
 - The case $\text{RLL}$ surely fails since $b$ and $c$ are at most $\frac13$ and $a \geq \frac23.$
 
-Putting it all together, the probability that number $a$ is too big is $\frac18\left[1 + 3P(\text{too big}) \right].$ 
+Putting it all together, the probability that number $a$ is too big is $\frac18\left[1 + 3P_\text{too big} \right].$ 
 
-$$ P(\text{too big}) = \frac18\left[1+3P(\text{too big})\right]. $$
+$$ P_\text{too big} = \frac18\left[1+3P_\text{too big}\right]. $$
 
-Solving this, we get $P(\text{too big})=\frac15$ so the probability to form a triangle is ${1-3P(\text{too big}) = \frac25.}$
+Solving this, we get $P_\text{too big}=\frac15$ so the probability to form a triangle is ${1-3P_\text{too big} = \frac25.}$
 
 Sadly, I can't see a clear reason why these two answers ought to coincide.
 
