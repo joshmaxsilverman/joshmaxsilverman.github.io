@@ -6,7 +6,7 @@ date: 2026/03/15
 subtitle: Random geometry from the Cantor distribution
 tags: fractals
 source: writeup
-kind: probability
+kind: puzzle
 theme: probability
 ---
 
