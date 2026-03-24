@@ -139,7 +139,7 @@ eqn[r_, θ_] :=
   14 == Pi/2 + 2 + γ1[r, θ] + γ2[r, θ] + l1[r, θ] + 
     l2[r, θ];
 
-rVal[θ_?NumericQ] := r /. FindRoot[eqn[r, θ], {r, 4}, WorkingPrecision -> 20]
+rVal[θ_] := r /. FindRoot[eqn[r, θ], {r, 4}, WorkingPrecision -> 20]
 
 θMin = ArcTan[1/(1 + ll)];
 
