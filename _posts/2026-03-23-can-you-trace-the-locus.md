@@ -27,29 +27,43 @@ theme: geometry
 
 ## Solution
 
-the string meets the circle at two points of tangency and the total length of the string is $10.$ we can use these two facts to find the radius of the point as it orbits the circle.
+With just one disk, the string meets the circle at two points of tangency and the total length of the string is $10.$ 
 
-drawing two right triangles with the tangents, we get
+We can use these facts to find the radius of the point as it orbits the circle.
 
-$$ 2\cdot\left(\pi - \theta\right) + 2\cdot\tan\left(\frac{\theta}{2}\right) = 10. $$
+![](/img/2026-03-23-fiddler-locus-one-disk.png){:width="450 px" class="image-centered"}
 
-solving this for $\theta$ we get $\theta\approx 1.2605292$ or $\ell = \tan\theta \approx 3.1189365.$ 
+Adding up the lengths around the string, we get
 
-the radius is just $r = \ell/\sin\theta$ or $r \approx 3.2753266.$ 
+$$ 2\pi - 2\beta + 2\ell = 10, $$
 
-plugging this in, the area swept out by the point is $A = \tfrac12\pi r^2 \approx 33.702266.$ 
+and using the two right triangles with the tangents, it becomes
+
+$$ 2\pi - 2\beta + 2\tan\beta = 10. $$
+
+Solving this for $\beta$ we get $\beta\approx 1.2605292$ or $\ell = \tan\beta \approx 3.1189365.$ 
+
+The radius is just $r = \ell/\sin\beta \approx 3.2753266.$ 
+
+Plugging this in, the area swept out by the point is $A = \tfrac12\pi r^2 \approx 33.702266.$ 
 
 ## Extra credit
 
-conceptually, the extra credit is the same idea, but operationally it has a fair bit of geometric accounting to do.
+The extra credit is the same idea in principle, but operationally has bunch more geometric accounting to do.
 
-as the point rotates around the disks, there are two qualitative regimes. in one of them, the string is tangent to both disks at once and in the other it has two points of tangency to one of them. we can reuse the work of the first part to find the radius of the point in the first regime, but we have to do a bit more work to find the radius in the second.
+As the point rotates around the disks, there are two qualitative regimes. 
+
+In one of them, the string is tangent to both disks at once and in the other it has two points of tangency to one of them. 
+
+We can reuse the work of the standard problem to find the radius of the point in the first regime, but we have to do a bit more work to find the radius in the second.
+
+### Two tangents to two disks
+
+Happily, if we draw the scenario, we have everything we need to divine the sought and sacred constraints.
 
 ![](/img/2026-03-23-fiddler-locus-two-tangent.png){:width="450 px" class="image-centered"}
 
-drawing the scenario, we have everything we need to divine the sought and sacred constraints.
-
-first, we can use the law of cosines to relate the radius $r_\theta$ to lengths $\ell_1$ and $\ell_2.$ 
+First, we can use the law of cosines to relate the radius $r_\theta$ to lengths $\ell_1$ and $\ell_2.$ 
 
 $$ 
     \begin{align}
@@ -64,7 +78,7 @@ $$
     l_2^2 + 1 = 1 + r_\theta^2 - 2r_\theta\cos\theta.
 $$
 
-next we can relate the angles $\beta_1$ and $\beta_2$ to $\theta$ and $r_\theta$ using right triangle trigonometry giving us
+We can relate the angles $\beta_1$ and $\beta_2$ to $\theta$ and $r_\theta$ using right triangle trigonometry, giving
 
 $$ \cos\beta_1 = \frac{1+r_\theta\cos\theta}{\sqrt{1+\ell_1^2}} $$
 
@@ -72,31 +86,31 @@ and
 
 $$ \cos\beta_2 = \frac{r_\theta\cos\theta - 1}{\sqrt{1+\ell_2^2}}. $$
 
-next, we need the angles $\gamma_1$ and $\gamma_2$ to find the length of the curved segments of the string.
+Next, we need the angles $\gamma_1$ and $\gamma_2$ to find the length of the string's curved segments.
 
 $\gamma_1$ is the complement of $\beta_1$ and its adjacent angle
 
 $$ \gamma_1 = \pi - \beta_1 - \arcsin\frac{\ell_1}{\sqrt{\ell_1^2+1}}. $$
 
-similarly, $\ell_2$ is the complement of the angle adjacent to $\beta_2$ 
+Similarly, $\gamma_2$ is the complement of the angle adjacent to $\beta_2$ 
 
 $$ \frac12\pi - \gamma_2 = \arcsin\frac{\ell_2}{\sqrt{\ell_2^2+1}} - \beta_2. $$
 
-finally, we have the total length of the string broken down into the straight segments, curved segments, and tangent segments.
+Finally, we have the total length of the string broken down into the straight segments, curved segments, and tangent segments
 
 $$ 14 = \frac12 \pi + 2 + \ell_1 + \ell_2 + \gamma_1 + \gamma_2. $$
 
-i don't think these are resolvable analytically, but we can solve it numerically.
+We can turn the length constraint into am equation in $r_\theta$ and $\theta$ and numerically solve for $r_\theta$ at each $\theta.$
 
-we can turn the length constraint into a equation in $r_\theta$ and $\theta$ and numerically solve for $r_\theta$ at each $\theta.$
+### Two tangents to one disk
 
-we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
+Since we already have most of the work done for this part from the standard problem, we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
 
 ![](/img/2026-03-23-fiddler-one-tangent.png){:width="450 px" class="image-centered"}
 
-this occurs when $\ell_1$ is flat, which implies $\tan\theta = 1/(1+\ell_1)$ which gives $\theta_\text{min}=\arctan 1/(1+\ell_1) \approx 0.238173.$
+This occurs when $\ell_1$ is flat, which implies $\tan\theta = 1/(1+\ell_1)$ or $\theta_\text{min}=\arctan 1/(1+\ell_1) \approx 0.238173.$
 
-below this value of theta, the string has two tangents to a single disk and the radius with respect to that disk is the same as in the first problem. now, the radius is about the center of the two disks, so we can use the law of cosines to relate the radius $r_\eta$ to $r_\theta.$ we get
+Below this value of theta, the string has two tangents to a single disk. The radius with respect to that disk is the same as in the first problem but, now, the radius is about the center of the two disks. We can use the law of cosines to relate the radius $r_\eta$ (the radius from the standard problem) to $r_\theta.$ We get
 
 $$ r_\eta^2 = 1 + r_\theta^2-2r_\theta\cos\theta $$
 
@@ -104,11 +118,11 @@ which simplifies to
 
 $$ r_\theta = \cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}. $$
 
-with $r_\theta$ in hand in the two regimes, we can numerically integrate
+With $r_\theta$ in hand for the two regimes, we can numerically integrate $r_\theta^2\text{d}\theta$ to find the area.
 
-$$ \frac14 \text{area} = \overbrace{\frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\left[\cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}\right]}^{\text{two tangents to one disk}}  + \overbrace{\frac12 \int_{\theta_\text{min}}^{\pi/2}\text{d}\theta\, r_\theta^2}^{\text{two tangents to two disks}}. $$
+$$ \frac14 \text{area} = \overbrace{\frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\left[\cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}\right]}^{\text{two tangents to one disk}}  + \overbrace{\frac12 \int_{\theta_\text{min}}^{\pi/2}\text{d}\theta\, r_\theta^2}^{\text{two tangents to two disks}} $$
 
-this gets approximately $\text{area} \approx 52.36472541.$
+which gets $\text{area} \approx 52.36472541.$
 
 ```mathematica
 sol = First @ NSolve[
