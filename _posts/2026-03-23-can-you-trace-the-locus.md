@@ -110,7 +110,7 @@ Since we already have most of the work done for this part from the standard prob
 
 This occurs when the top $\ell$ is flat, which implies $\tan\theta = 1/(1+\ell)$ or $\theta_\text{min}=\arctan 1/(1+\ell) \approx 0.238173.$
 
-Below this value of theta, the string has two tangents to a single disk. The radius with respect to that disk is the same as in the first problem but, now, the radius is about the center of the two disks. We can use the law of cosines to relate the radius $r_\eta$ (the radius from the standard problem) to $r_\theta.$ We get
+Below this value of theta, the string has two tangents to a single disk. The radius with respect to that disk is the same as in the first problem but, now, the radius is about the center of the two disks. We can use the law of cosines to relate the radius $r_\eta = \ell/\sin\theta_\text{min}$ (the radius from the standard problem) to $r_\theta.$ We get
 
 $$ r_\eta^2 = 1 + r_\theta^2-2r_\theta\cos\theta $$
 
