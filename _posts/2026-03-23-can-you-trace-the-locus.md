@@ -124,6 +124,10 @@ $$ \frac14 \text{area} = \overbrace{\frac12 \int_0^{\theta_\text{min}} \text{d}\
 
 which gets $\text{area} \approx 52.36472541.$
 
+Plotting the resulting locus, we see a beautiful ellipsoid like creation
+
+![](/img/2026-03-24-fiddler-locus-two-tangent.png){:width="450 px" class="image-centered"}
+
 ```mathematica
 sol = First @ NSolve[
    {
