@@ -143,7 +143,7 @@ rVal[θ_] := r /. FindRoot[eqn[r, θ], {r, 4}, WorkingPrecision -> 20]
 
 θMin = ArcTan[1/(1 + ll)];
 
-quadrantArea = 
+doubleTangentArea = 
   1/2 * NIntegrate[rVal[θ]^2, {θ, thetaMin, π/2}, 
     WorkingPrecision -> 10]
 
@@ -152,5 +152,5 @@ singleTangentArea =
    1/2 * (Cos[θ] + Sqrt[rr^2 - Sin[θ]^2])^2, {θ, 0,
      thetaMin}, WorkingPrecision -> 10];
 
-totalArea = 4 * quadrantArea + 4 * singleTangentArea
+totalArea = 4 * (doubleTangentArea + singleTangentArea)
 ```
