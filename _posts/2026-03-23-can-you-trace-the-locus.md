@@ -84,11 +84,11 @@ $$ \frac12\pi - \gamma_2 = \arcsin\frac{\ell_2}{\sqrt{\ell_2^2+1}} - \beta_2. $$
 
 finally, we have the total length of the string broken down into the straight segments, curved segments, and tangent segments.
 
-$$ 14 = \frac12 \pi + 4 + \ell_1 + \ell_2 + \gamma_1 + \gamma_2. $$
+$$ 14 = \frac12 \pi + 2 + \ell_1 + \ell_2 + \gamma_1 + \gamma_2. $$
 
-this is a system of seven equations in eight variables that we can solve for $r_\theta$ with $\theta$ independent. 
+i don't think these are resolvable analytically, but we can solve it numerically.
 
-i don't think it is resolvable analytically, but we can solve it numerically.
+we can turn the length constraint into a equation in $r_\theta$ and $\theta$ and numerically solve for $r_\theta$ at each $\theta.$
 
 we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
 
