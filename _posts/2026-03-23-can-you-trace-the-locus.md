@@ -126,7 +126,7 @@ which gets $\text{area} \approx 52.36472541.$
 
 Plotting the resulting locus, we see a beautiful ellipsoid like creation
 
-![](/img/2026-03-24-fiddler-locus-tight.png){:width="600 px" class="image-centered"}
+![](/img/2026-03-24-fiddler-locus-circles.png){:width="600 px" class="image-centered"}
 
 ```mathematica
 sol = First @ NSolve[
