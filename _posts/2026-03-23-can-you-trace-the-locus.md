@@ -108,7 +108,7 @@ Since we already have most of the work done for this part from the standard prob
 
 ![](/img/2026-03-23-fiddler-one-tangent.png){:width="600 px" class="image-centered"}
 
-This occurs when $\ell_1$ is flat, which implies $\tan\theta = 1/(1+\ell_1)$ or $\theta_\text{min}=\arctan 1/(1+\ell_1) \approx 0.238173.$
+This occurs when the top $\ell$ is flat, which implies $\tan\theta = 1/(1+\ell)$ or $\theta_\text{min}=\arctan 1/(1+\ell) \approx 0.238173.$
 
 Below this value of theta, the string has two tangents to a single disk. The radius with respect to that disk is the same as in the first problem but, now, the radius is about the center of the two disks. We can use the law of cosines to relate the radius $r_\eta$ (the radius from the standard problem) to $r_\theta.$ We get
 
