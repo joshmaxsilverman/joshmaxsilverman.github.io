@@ -31,7 +31,7 @@ With just one disk, the string meets the circle at two points of tangency and th
 
 We can use these facts to find the radius of the point as it orbits the circle.
 
-![](/img/2026-03-23-fiddler-locus-one-disk.png){:width="450 px" class="image-centered"}
+![](/img/2026-03-23-fiddler-locus-one-disk.png){:width="600 px" class="image-centered"}
 
 Adding up the lengths around the string, we get
 
@@ -61,7 +61,7 @@ We can reuse the work of the standard problem to find the radius of the point in
 
 Happily, if we draw the scenario, we have everything we need to divine the sought and sacred constraints.
 
-![](/img/2026-03-23-fiddler-locus-two-tangent.png){:width="450 px" class="image-centered"}
+![](/img/2026-03-23-fiddler-locus-two-tangent.png){:width="600 px" class="image-centered"}
 
 First, we can use the law of cosines to relate the radius $r_\theta$ to lengths $\ell_1$ and $\ell_2.$ 
 
@@ -106,7 +106,7 @@ We can turn the length constraint into am equation in $r_\theta$ and $\theta$ an
 
 Since we already have most of the work done for this part from the standard problem, we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
 
-![](/img/2026-03-23-fiddler-one-tangent.png){:width="450 px" class="image-centered"}
+![](/img/2026-03-23-fiddler-one-tangent.png){:width="600 px" class="image-centered"}
 
 This occurs when $\ell_1$ is flat, which implies $\tan\theta = 1/(1+\ell_1)$ or $\theta_\text{min}=\arctan 1/(1+\ell_1) \approx 0.238173.$
 
@@ -126,7 +126,7 @@ which gets $\text{area} \approx 52.36472541.$
 
 Plotting the resulting locus, we see a beautiful ellipsoid like creation
 
-![](/img/2026-03-24-fiddler-locus-tight.png){:width="450 px" class="image-centered"}
+![](/img/2026-03-24-fiddler-locus-tight.png){:width="600 px" class="image-centered"}
 
 ```mathematica
 sol = First @ NSolve[
