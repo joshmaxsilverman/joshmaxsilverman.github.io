@@ -108,7 +108,7 @@ with $r_\theta$ in hand in the two regimes, we can numerically integrate
 
 $$ \frac14 \text{area} = \frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\left[\cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}\right]  + \frac12 \int_{\theta_\text{min}}^{\pi/2}\text{d}\theta\, r_\theta^2 . $$
 
-this gets approximately $\text{area} \approx 52.367.$
+this gets approximately $\text{area} \approx 52.36472541.$
 
 ```mathematica
 sol = First @ NSolve[
