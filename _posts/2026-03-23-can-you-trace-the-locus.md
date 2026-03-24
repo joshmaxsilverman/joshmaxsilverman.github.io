@@ -110,4 +110,47 @@ $$ \frac14 \text{area} = \frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\lef
 
 this gets approximately $\text{area} \approx 52.367.$
 
+```mathematica
+sol = First @ NSolve[
+   {
+    2 (π - θ) + 2 s == 10
+    , s == Tan[θ]
+    , 0 <= θ <= 2 π
+    }
+   , {s, θ}
+   , WorkingPrecision -> 20
+   ]
 
+ll = s /. sol
+rr = s / Sin[θ] /. sol
+
+l1[r_, θ_] := Sqrt[r^2 + 2 r Cos[θ]];
+l2[r_, θ_] := Sqrt[r^2 - 2 r Cos[θ]];
+
+β1[r_, θ_] := ArcCos[(1 + r Cos[θ])/Sqrt[1 + l1[r, θ]^2]];
+β2[r_, θ_] := ArcCos[(-1 + r Cos[θ])/Sqrt[1 + l2[r, θ]^2]];
+
+γ1[r_, θ_] := 
+  Pi - ArcSin[l1[r, θ]/Sqrt[1 + l1[r, θ]^2]] - β1[r, θ];
+γ2[r_, θ_] := 
+  Pi/2 + β2[r, θ] - ArcSin[l2[r, θ]/Sqrt[1 + l2[r, θ]^2]];
+
+eqn[r_, θ_] := 
+  14 == Pi/2 + 2 + γ1[r, θ] + γ2[r, θ] + l1[r, θ] + 
+    l2[r, θ];
+
+rVal[θ_?NumericQ] := r /. FindRoot[eqn[r, θ], {r, 4}, WorkingPrecision -> 20]
+
+θMin = ArcTan[1/(1 + ll)];
+
+quadrantArea = 
+  1/2 * NIntegrate[rVal[θ]^2, {θ, thetaMin, π/2}, 
+    WorkingPrecision -> 10]
+
+singleTangentArea = 
+  NIntegrate[
+   1/2 * (Cos[θ] + Sqrt[rr^2 - Sin[θ]^2])^2, {θ, 0,
+     thetaMin}, WorkingPrecision -> 10];
+
+totalArea = 4 * quadrantArea + 4 * singleTangentArea
+```
