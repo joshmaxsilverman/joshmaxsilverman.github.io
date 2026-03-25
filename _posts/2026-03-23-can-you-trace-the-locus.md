@@ -61,7 +61,7 @@ We can reuse the work of the standard problem to find the radius of the point in
 
 Happily, if we draw the scenario, we have everything we need to divine the sought and sacred constraints.
 
-![](/img/2026-03-23-fiddler-locus-two-tangent.png){:width="600 px" class="image-centered"}
+![](/img/2026-03-23-fiddler-locus-two-tangents.png){:width="600 px" class="image-centered"}
 
 First, we can use the law of cosines to relate the radius $r_\theta$ to lengths $\ell_1$ and $\ell_2.$ 
 
@@ -78,7 +78,7 @@ $$
     l_2^2 + 1 = 1 + r_\theta^2 - 2r_\theta\cos\theta.
 $$
 
-We can relate the angles $\beta_1$ and $\beta_2$ to $\theta$ and $r_\theta$ using right triangle trigonometry, giving
+We can relate the angles $\beta_1$ and $\beta_2$ to $\theta$ and $r_\theta$ using right triangle trigonometry (involving the undrawn vertical of length $1$ from out point to the line connecting the circle centers), giving
 
 $$ \cos\beta_1 = \frac{1+r_\theta\cos\theta}{\sqrt{1+\ell_1^2}} $$
 
@@ -88,13 +88,30 @@ $$ \cos\beta_2 = \frac{r_\theta\cos\theta - 1}{\sqrt{1+\ell_2^2}}. $$
 
 Next, we need the angles $\gamma_1$ and $\gamma_2$ to find the length of the string's curved segments.
 
-$\gamma_1$ is the complement of $\beta_1$ and its adjacent angle
+$\gamma_1$ is supplementary to $\beta_1$ plus its adjacent angle $z_1$
 
-$$ \gamma_1 = \pi - \beta_1 - \arcsin\frac{\ell_1}{\sqrt{\ell_1^2+1}}. $$
+$$ 
+    \begin{align}
+        \gamma_1 &= \pi - \beta_1 - z_1 \\
+        &= \pi - \beta_1 - \arcsin\frac{\ell_1}{\sqrt{\ell_1^2+1}}.
+    \end{align} 
+$$
 
-Similarly, $\gamma_2$ is the complement of the angle adjacent to $\beta_2$ 
+Similarly, $\gamma_2$ is the complement of $z_2$ 
 
-$$ \frac12\pi - \gamma_2 = \arcsin\frac{\ell_2}{\sqrt{\ell_2^2+1}} - \beta_2. $$
+$$ \frac12\pi = \gamma_2 + z_2 $$
+
+and
+
+$$ \beta_2 + z_2 = \arcsin\frac{\ell_2}{\sqrt{\ell_2^2+1}}, $$
+
+which leads to 
+
+$$
+    \begin{align} 
+        \gamma_2 &= \frac12\pi - \arcsin\frac{\ell_2}{\sqrt{\ell_2^2+1}} + \beta_2. 
+    \end{align}
+$$
 
 Finally, we have the total length of the string broken down into the straight segments, curved segments, and tangent segments
 
