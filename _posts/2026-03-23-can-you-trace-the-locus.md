@@ -137,7 +137,7 @@ $$ r_\theta = \cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}. $$
 
 With $r_\theta$ in hand for the two regimes, we can numerically integrate $r_\theta^2\text{d}\theta$ to find the area.
 
-$$ \frac14 \text{area} = \overbrace{\frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\left[\cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}\right]}^{\text{two tangents to one disk}}  + \overbrace{\frac12 \int_{\theta_\text{min}}^{\pi/2}\text{d}\theta\, r_\theta^2}^{\text{two tangents to two disks}} $$
+$$ \frac14 \text{area} = \overbrace{\frac12 \int_0^{\theta_\text{min}} \text{d}\theta\,\left(\cos\theta + \sqrt{r_\eta^2 - \sin^2\theta}\right)^2}^{\text{two tangents to one disk}}  + \overbrace{\frac12 \int_{\theta_\text{min}}^{\pi/2}\text{d}\theta\, r_\theta^2}^{\text{two tangents to two disks}} $$
 
 which gets $\text{area} \approx 52.36472541.$
 
