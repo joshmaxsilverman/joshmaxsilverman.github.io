@@ -8,6 +8,7 @@ tags: backtracking
 source: fiddler
 kind: puzzle
 theme: algorithms
+hide_from_recent : true
 ---
 
 > **Question**: Suppose you want to make two groups with equal sums using the first $N_2$ prime numbers. What is the smallest value of $N_2$ for which you can do this?
