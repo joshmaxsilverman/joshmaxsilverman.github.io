@@ -59,11 +59,14 @@ def solve(i, k, current_sum):
     global buckets
     global current_bucket
 
-    unused = numbers[j] for j in range(UPPER) if not used[j]
+    unused = [ numbers[j] for j in range(UPPER) if not used[j] ]
+
+    # the end
     if k == N - 1 and sum(unused) == TARGET:
         buckets.append(unused)
         return True
 
+    # log a completed bucket
     if current_sum == TARGET:
 
         buckets.append(current_bucket)
@@ -75,6 +78,7 @@ def solve(i, k, current_sum):
         current_bucket = buckets.pop()
         return False
 
+    # try a number
     for j in range(i, UPPER):
         if not used[j] and current_sum + numbers[j] <= TARGET:
             
