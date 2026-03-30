@@ -41,7 +41,7 @@ from sympy import prime
 from random import shuffle
 
 N = 10
-UPPER = 51
+UPPER = 57
 
 numbers = [ prime(j) for j in range(1, UPPER + 1) ]
 shuffle(numbers)
@@ -58,8 +58,9 @@ def solve(i, k, current_sum):
     global buckets
     global current_bucket
 
-    if k == N-1 and sum(numbers[j] for j in range(UPPER) if not used[j]) == TARGET:
-        buckets.append([numbers[j] for j in range(UPPER) if not used[j]])
+    unused = numbers[j] for j in range(UPPER) if not used[j]
+    if k == N - 1 and sum(unused) == TARGET:
+        buckets.append(unused)
         return True
 
     if current_sum == TARGET:
@@ -67,7 +68,7 @@ def solve(i, k, current_sum):
         buckets.append(current_bucket)
         current_bucket = []
         
-        if solve(0, k+1, 0):
+        if solve(0, k + 1, 0):
             return True
         
         current_bucket = buckets.pop()
