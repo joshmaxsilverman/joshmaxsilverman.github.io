@@ -8,6 +8,7 @@ tags: fractals
 source: writeup
 kind: puzzle
 theme: probability
+hide_from_recent : true
 ---
 
 >**Question**: I start with a number line from 0 to 1, and then I remove the middle third. Then I take each of my remaining pieces (the segment from 0 to 1/3 and the segment from 2/3 to 1) and remove their middle thirds. Now I have four segments (from 0 to 1/9, 2/9 to 1/3, 2/3 to 7/9, and 8/9 to 1) and remove their middle thirds. I do this over and over again, infinitely many times.
