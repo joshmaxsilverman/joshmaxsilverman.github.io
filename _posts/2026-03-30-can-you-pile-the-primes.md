@@ -123,220 +123,34 @@ let's walk through the algorithm for $N_3=10$ and a target of $43.$
 
 ```
 Target is 43.0
+Numbers are [29, 13, 2, 11, 19, 5, 23, 3, 7, 17]
+
 Current bucket: []
-Current bucket: [2]
-Current bucket: [2, 3]
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 7]
-Current bucket: [2, 3, 5, 7, 11]
-Current bucket: [2, 3, 5, 7, 11, 13]
+Current bucket: [29]
+Current bucket: [29, 13]
 BACKTRACK
-Current bucket: [2, 3, 5, 7, 11]
+Current bucket: [29]
+Current bucket: [29, 2]
+Current bucket: [29, 2, 11]
 BACKTRACK
-Current bucket: [2, 3, 5, 7]
-Current bucket: [2, 3, 5, 7, 13]
+Current bucket: [29, 2]
+Current bucket: [29, 2, 5]
+Current bucket: [29, 2, 5, 3]
 BACKTRACK
-Current bucket: [2, 3, 5, 7]
-Current bucket: [2, 3, 5, 7, 17]
-BACKTRACK
-Current bucket: [2, 3, 5, 7]
-Current bucket: [2, 3, 5, 7, 19]
-BACKTRACK
-Current bucket: [2, 3, 5, 7]
-Current bucket: [2, 3, 5, 7, 23]
-BACKTRACK
-Current bucket: [2, 3, 5, 7]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 11]
-Current bucket: [2, 3, 5, 11, 13]
-BACKTRACK
-Current bucket: [2, 3, 5, 11]
-Current bucket: [2, 3, 5, 11, 17]
-BACKTRACK
-Current bucket: [2, 3, 5, 11]
-Current bucket: [2, 3, 5, 11, 19]
-BACKTRACK
-Current bucket: [2, 3, 5, 11]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 13]
-Current bucket: [2, 3, 5, 13, 17]
-BACKTRACK
-Current bucket: [2, 3, 5, 13]
-Current bucket: [2, 3, 5, 13, 19]
-BACKTRACK
-Current bucket: [2, 3, 5, 13]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 17]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 19]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 23]
-BACKTRACK
-Current bucket: [2, 3, 5]
-Current bucket: [2, 3, 5, 29]
-BACKTRACK
-Current bucket: [2, 3, 5]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 11]
-Current bucket: [2, 3, 7, 11, 13]
-BACKTRACK
-Current bucket: [2, 3, 7, 11]
-Current bucket: [2, 3, 7, 11, 17]
-BACKTRACK
-Current bucket: [2, 3, 7, 11]
-Current bucket: [2, 3, 7, 11, 19]
-BACKTRACK
-Current bucket: [2, 3, 7, 11]
-BACKTRACK
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 13]
-Current bucket: [2, 3, 7, 13, 17]
-BACKTRACK
-Current bucket: [2, 3, 7, 13]
-BACKTRACK
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 17]
-BACKTRACK
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 19]
-BACKTRACK
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 23]
-BACKTRACK
-Current bucket: [2, 3, 7]
-Current bucket: [2, 3, 7, 29]
-BACKTRACK
-Current bucket: [2, 3, 7]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 11]
-Current bucket: [2, 3, 11, 13]
-BACKTRACK
-Current bucket: [2, 3, 11]
-Current bucket: [2, 3, 11, 17]
-BACKTRACK
-Current bucket: [2, 3, 11]
-Current bucket: [2, 3, 11, 19]
-BACKTRACK
-Current bucket: [2, 3, 11]
-Current bucket: [2, 3, 11, 23]
-BACKTRACK
-Current bucket: [2, 3, 11]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 13]
-Current bucket: [2, 3, 13, 17]
-BACKTRACK
-Current bucket: [2, 3, 13]
-Current bucket: [2, 3, 13, 19]
-BACKTRACK
-Current bucket: [2, 3, 13]
-Current bucket: [2, 3, 13, 23]
-BACKTRACK
-Current bucket: [2, 3, 13]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 17]
-Current bucket: [2, 3, 17, 19]
-BACKTRACK
-Current bucket: [2, 3, 17]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 19]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 23]
-BACKTRACK
-Current bucket: [2, 3]
-Current bucket: [2, 3, 29]
-BACKTRACK
-Current bucket: [2, 3]
-BACKTRACK
-Current bucket: [2]
-Current bucket: [2, 5]
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 11]
-Current bucket: [2, 5, 7, 11, 13]
-BACKTRACK
-Current bucket: [2, 5, 7, 11]
-Current bucket: [2, 5, 7, 11, 17]
-BACKTRACK
-Current bucket: [2, 5, 7, 11]
-BACKTRACK
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 13]
-BACKTRACK
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 17]
-BACKTRACK
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 19]
-BACKTRACK
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 23]
-BACKTRACK
-Current bucket: [2, 5, 7]
-Current bucket: [2, 5, 7, 29]
-Bucket 0: [2, 5, 7, 29]
+Current bucket: [29, 2, 5]
+Current bucket: [29, 2, 5, 7]
+Bucket 0: [29, 2, 5, 7]
 Current bucket: []
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 11]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 11, 13]
-BACKTRACK
-Current bucket: [3, 11]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 11, 17]
-BACKTRACK
-Current bucket: [3, 11]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 11, 19]
-BACKTRACK
-Current bucket: [3, 11]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 11, 23]
-BACKTRACK
-Current bucket: [3, 11]
-BACKTRACK
-Current bucket: [3]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 13]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 13, 17]
-BACKTRACK
-Current bucket: [3, 13]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 13, 19]
-BACKTRACK
-Current bucket: [3, 13]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 13, 23]
-BACKTRACK
-Current bucket: [3, 13]
-BACKTRACK
-Current bucket: [3]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 17]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 17, 19]
-BACKTRACK
-Current bucket: [3, 17]
-Bucket 0: [2, 5, 7, 29]
-Current bucket: [3, 17, 23]
-Bucket 0: [2, 5, 7, 29]
-Bucket 1: [3, 17, 23]
+Bucket 0: [29, 2, 5, 7]
+Current bucket: [13]
+Bucket 0: [29, 2, 5, 7]
+Current bucket: [13, 11]
+Bucket 0: [29, 2, 5, 7]
+Current bucket: [13, 11, 19]
+Bucket 0: [29, 2, 5, 7]
+Bucket 1: [13, 11, 19]
 Current bucket: []
-Yes.
-Bucket 0: [2, 5, 7, 29]
-Bucket 1: [3, 17, 23]
-Bucket 2: [11, 13, 19]
+Bucket 0: [29, 2, 5, 7]
+Bucket 1: [13, 11, 19]
+Bucket 2: [23, 3, 17]
 ```
