@@ -33,16 +33,15 @@ if you try to do this by finding bins for numbers, instead of finding numbers fo
 
 
 ```python
+from sympy import prime
+from random import shuffle
+
 # go one bucket at a time filling with numbers
 # if bucket hits the target, move on to the next one and add current bucket to list of buckets
 # if bucket goes over the target, take current number out and try next one
 # at the end, the final bucket is the numbers left over
 
-from sympy import prime
-from random import shuffle
-
-N = 10
-UPPER = 57
+N, UPPER = 6, 57
 
 numbers = [ prime(j) for j in range(1, UPPER + 1) ]
 shuffle(numbers)
@@ -97,7 +96,7 @@ def solve(i, k, current_sum):
 if solve(0, 0, 0):
     print('Yes.')
     for j, b in enumerate(buckets):
-        print(f"Bucket {1+j}: {b}")
+        print(f"Bucket {1 + j}: {b}")
 ```
 
 
