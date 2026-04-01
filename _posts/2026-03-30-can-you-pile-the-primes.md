@@ -107,7 +107,7 @@ Because the numbers filled in so far are two thirds of the sum of the original l
 
 To solve the problem, we can just run this algorithm for a given $N_j$ and a trial upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
 
-Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution returns" rather than wait for what still amounts to exhaustive search.
+Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution returns" rather than wait for what still amounts to economized exhaustive search.
 
 ```python
 from sympy import prime
