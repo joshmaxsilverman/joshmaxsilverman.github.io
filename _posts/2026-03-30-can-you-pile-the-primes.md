@@ -62,8 +62,8 @@ Current bucket: [23, 5, 2]
 Current bucket: [23, 5, 2, 13]
 ```
 
-Next we start filling the next bucket, skipping the numbers we've already used.
-We add the unused numbers one at a time until we exceed the target sum with `[17,11,7,3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17.$ 
+Since $23+5+2+13$ equals the target amount $43,$ we start filling the next bucket back at the start of the list, skipping the numbers we've already used.
+We add the unused numbers one at a time until we exceed the target sum with `[17,11,7,3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17$ and trying a new second number. 
 
 ```
 Bucket 0: [23, 5, 2, 13]
@@ -88,7 +88,7 @@ BACKTRACK
 Current bucket: [17]
 ```
 
-From there we have an easier go of things and, adding the next two unused numbers $7$ and $19$ to the current bucket, we complete it. 
+From there we have an easier go of things and, adding the next two unused numbers $7$ and $19$ to the current bucket we complete the target sum. 
 
 ```
 Bucket 0: [23, 5, 2, 13]
@@ -103,9 +103,9 @@ Bucket 1: [17, 7, 19]
 Bucket 2: [11, 29, 3]
 ```
 
-Now, since the numbers remaining are a third of the sum of the list, we are guaranteed that the leftover numbers will hit the target sum. 
+Because the numbers filled in so far are two thirds of the sum of the original list, we're guaranteed that the leftover numbers will hit the target sum. 
 
-To solve the problem, we can just run this algorithm for a given $N$ and an upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
+To solve the problem, we can just run this algorithm for a given $N_j$ and a trial upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution is forthcoming" rather than wait for what still amounts to exhaustive search.
 
 ```python
 from sympy import prime
