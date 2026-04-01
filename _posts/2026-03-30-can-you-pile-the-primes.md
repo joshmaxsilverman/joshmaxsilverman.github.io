@@ -105,7 +105,9 @@ Bucket 2: [11, 29, 3]
 
 Because the numbers filled in so far are two thirds of the sum of the original list, we're guaranteed that the leftover numbers will hit the target sum. 
 
-To solve the problem, we can just run this algorithm for a given $N_j$ and a trial upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution is forthcoming" rather than wait for what still amounts to exhaustive search.
+To solve the problem, we can just run this algorithm for a given $N_j$ and a trial upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
+
+Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution returns" rather than wait for what still amounts to exhaustive search.
 
 ```python
 from sympy import prime
@@ -175,7 +177,7 @@ if solve(0, 0, 0):
 ```
 
 
-For a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ The first value for which this is true is $57$ and, as it happens, this is a workable combo and if we run the algorithm below, we get the following (one of many such) solution:
+For a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ The first value for which this is true is $57$ and, as it happens, this is a workable combo. If we run the algorithm above, we get the following (one of many such) solution:
 
 ```
 Bucket 1: [149, 103, 109, 61, 37, 43, 127, 3, 83, 19, 13, 173, 199, 7, 2, 17]
