@@ -27,10 +27,85 @@ hide_from_recent : true
 
 ## Solution
 
-the logic of this approach is to try to fill the bins one by one. if a bin goes overweight, we take a number out and try the next one. if we can't get a bin to the target weight, we go back to the last bin and try to hit the target weight with a different combination of numbers, hopefully opening up flexibility for the remaining bins. 
+The state space for this problem is enormous, so we need to be careful about how we search it. Absent any planning, we are contending with $N!$ factorial possible assignments of primes to groups. Due to this, any kind of graph search or dynamic programming approach is going to take a very long time to descend to a leaf, simply because the search tree is so wide. 
 
-if you try to do this by finding bins for numbers, instead of finding numbers for bins, it takes much longer to prune unworkable branches from the tree.
+If we could bail out of the search tree as soon as it was clear we were in a dead end, we could turn the tree into something more manageable, like a bush. We know that each bin has to sum to the same value, so if we ever go over that value, we know that we're in a dead end. 
 
+The logic of this approach is to fill the bins with numbers, in order, one by one. If at any point the bin we're in is over the target, we know that any solutions that start with that string of numbers can't possibly work. That means we can take out the last number we tried to insert, and replace it with the next untried number, carrying on until we hit another dead end. If we follow this approach systematically, we will find a solution so long as it exists, and our short circuiting sufficiently reduces the depth of the tree.
+
+It is important to realize, that if we tried to do this by finding bins for numbers, instead of finding numbers for bins, we would cut off dead branches much too late to be efficient.
+
+Before we program anything, we can follow the algorithm in a concrete example. Suppose we start with the numbers below, in the given order, and are trying to make three groups with equal sums. 
+
+```
+Target is 43.0
+Numbers are [23, 5, 17, 2, 11, 7, 13, 19, 29, 3]
+```
+
+To start, we fill the first bucket with numbers one at a time. This increases the sum from $23$ to $28.$ We can't add $17$ to this bucket without exceeding the target sum of $43$ so we skip it and add the next workable number, $2.$ We then try $11$ from which we are stuck, so we take it back out and try $7.$ Carrying on like this we eventually find $13,$ completing the bucket.
+
+
+```
+Current bucket: []
+Current bucket: [23]
+Current bucket: [23, 5]
+Current bucket: [23, 5, 2]
+Current bucket: [23, 5, 2, 11]
+BACKTRACK
+Current bucket: [23, 5, 2]
+Current bucket: [23, 5, 2, 7]
+Current bucket: [23, 5, 2, 7, 3]
+BACKTRACK
+Current bucket: [23, 5, 2, 7]
+BACKTRACK
+Current bucket: [23, 5, 2]
+Current bucket: [23, 5, 2, 13]
+```
+
+Next we start filling the next bucket, skipping the numbers we've already used.
+We add the unused numbers one at a time until we exceed the target sum with `[17,11,7,3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17.$ 
+
+```
+Bucket 0: [23, 5, 2, 13]
+Current bucket: []
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17]
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 11]
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 11, 7]
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 11, 7, 3]
+BACKTRACK
+Current bucket: [17, 11, 7]
+BACKTRACK
+Current bucket: [17, 11]
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 11, 3]
+BACKTRACK
+Current bucket: [17, 11]
+BACKTRACK
+Current bucket: [17]
+```
+
+From there we have an easier go of things and, adding the next two unused numbers $7$ and $19$ to the current bucket, we complete it. 
+
+```
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 7]
+Bucket 0: [23, 5, 2, 13]
+Current bucket: [17, 7, 19]
+Bucket 0: [23, 5, 2, 13]
+Bucket 1: [17, 7, 19]
+Current bucket: []
+Bucket 0: [23, 5, 2, 13]
+Bucket 1: [17, 7, 19]
+Bucket 2: [11, 29, 3]
+```
+
+Now, since the numbers remaining are a third of the sum of the list, we are guaranteed that the leftover numbers will hit the target sum. 
+
+To solve the problem, we can just run this algorithm for a given $N$ and an upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
 
 ```python
 from sympy import prime
@@ -100,7 +175,7 @@ if solve(0, 0, 0):
 ```
 
 
-for a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ the first value for which this is true is $57.$ as it happens, this is a workable combo and if we run the algorithm below, we get the following (one of many such) solution:
+For a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ The first value for which this is true is $57$ and, as it happens, this is a workable combo and if we run the algorithm below, we get the following (one of many such) solution:
 
 ```
 Bucket 1: [149, 103, 109, 61, 37, 43, 127, 3, 83, 19, 13, 173, 199, 7, 2, 17]
@@ -111,46 +186,5 @@ Bucket 5: [233, 257, 157, 31, 137, 59, 79, 139, 53]
 Bucket 6: [73, 107, 263, 191, 163, 167, 181]
 ```
 
-likewise, for $N_3$ we can run the same algorithm and find a solution, which is first possilbe when $N_3 = 10$:
 
-```
-Bucket 1: [2, 13, 23, 5]
-Bucket 2: [11, 29, 3]
-Bucket 3: [17, 7, 19]
-```
 
-let's walk through the algorithm for $N_3=10$ and a target of $43.$ 
-
-```
-Target is 43.0
-Numbers are [29, 13, 2, 11, 19, 5, 23, 3, 7, 17]
-
-Current bucket: []
-Current bucket: [29]
-Current bucket: [29, 13]
-BACKTRACK
-Current bucket: [29]
-Current bucket: [29, 2]
-Current bucket: [29, 2, 11]
-BACKTRACK
-Current bucket: [29, 2]
-Current bucket: [29, 2, 5]
-Current bucket: [29, 2, 5, 3]
-BACKTRACK
-Current bucket: [29, 2, 5]
-Current bucket: [29, 2, 5, 7]
-Bucket 0: [29, 2, 5, 7]
-Current bucket: []
-Bucket 0: [29, 2, 5, 7]
-Current bucket: [13]
-Bucket 0: [29, 2, 5, 7]
-Current bucket: [13, 11]
-Bucket 0: [29, 2, 5, 7]
-Current bucket: [13, 11, 19]
-Bucket 0: [29, 2, 5, 7]
-Bucket 1: [13, 11, 19]
-Current bucket: []
-Bucket 0: [29, 2, 5, 7]
-Bucket 1: [13, 11, 19]
-Bucket 2: [23, 3, 17]
-```
