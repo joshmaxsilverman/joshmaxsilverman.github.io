@@ -31,11 +31,11 @@ The state space for this problem is enormous, so we need to be careful about how
 
 If we could bail out of the search tree as soon as it was clear we were in a dead end, we could turn the tree into something more manageable, like a bush. We know that each bin has to sum to the same value, so if we ever go over that value, we know that we're in a dead end. 
 
-The logic of this approach is to fill the bins with numbers, in order, one by one. If at any point the bin we're in is over the target, we know that any solutions that start with that string of numbers can't possibly work. That means we can take out the last number we tried to insert, and replace it with the next untried number, carrying on until we hit another dead end. If we follow this approach systematically, we will find a solution so long as it exists, and our short circuiting sufficiently reduces the depth of the tree.
+The logic of this approach is to fill the bins with numbers, in order, one by one. If at any point the bin we're in is over the target, we know that any solutions that start with that string of numbers can't possibly work. That means we can take out the last number we tried to insert, and replace it with the next untried number, carrying on until we hit another dead end. If we follow this approach systematically we will find a solution so long as 1. it exists and 2. our short circuiting sufficiently reduces the depth of the tree.
 
-It is important to realize, that if we tried to do this by finding bins for numbers, instead of finding numbers for bins, we would cut off dead branches much too late to be efficient.
+It is important to realize that if we tried to do this by finding bins for numbers, instead of finding numbers for bins, we would cut off dead branches much too late to be efficient.
 
-Before we program anything, we can follow the algorithm in a concrete example. Suppose we start with the numbers below, in the given order, and are trying to make three groups with equal sums. 
+Before we program anything we can follow the algorithm in a concrete example. Suppose we start with the numbers below, in the given order, and are trying to make three groups with equal sums. 
 
 ```
 Target is 43.0
