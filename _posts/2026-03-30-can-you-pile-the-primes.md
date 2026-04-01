@@ -63,7 +63,7 @@ Current bucket: [23, 5, 2, 13]
 ```
 
 Since $23+5+2+13$ equals the target amount $43,$ we start filling the next bucket back at the start of the list, skipping the numbers we've already used.
-We add the unused numbers one at a time until we exceed the target sum with `[17,11,7,3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17$ and trying a new second number. 
+We add the unused numbers one at a time until we exceed the target sum with `[17, 11, 7, 3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17$ and trying a new second number. 
 
 ```
 Bucket 0: [23, 5, 2, 13]
