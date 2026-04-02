@@ -27,7 +27,7 @@ hide_from_recent : true
 
 ## Solution
 
-The state space for this problem is enormous, so we need to be careful about how we search it. Absent any planning, we are contending with $N!$ factorial possible assignments of primes to groups. Due to this, any kind of graph search or dynamic programming approach is going to take a very long time to descend to a leaf, simply because the search tree is so wide. 
+The state space for this problem is enormous, so we need to be careful about how we search it. Absent any planning, we are contending with $N!$ possible assignments of primes to groups. Due to this, any kind of graph search or dynamic programming approach is going to take a very long time to descend to a leaf, simply because the search tree is so wide. 
 
 If we could bail out of the search tree as soon as it was clear we were in a dead end, we could turn the tree into something more manageable, like a bush. We know that each bin has to sum to the same value, so if we ever go over that value, we know that we're in a dead end. 
 
