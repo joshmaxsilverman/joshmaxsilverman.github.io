@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Can you trace the locus?
 date: 2026/03/23
-subtitle: What are is mapped out by a string on some pegs?
+subtitle: What area is mapped out by a string on some pegs?
 tags: geometry 
 source: fiddler
 kind: puzzle
