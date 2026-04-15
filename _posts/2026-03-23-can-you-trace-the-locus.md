@@ -179,7 +179,7 @@ rVal[θ_] := r /. FindRoot[eqn[r, θ], {r, 4}, WorkingPrecision -> 20]
 θMin = ArcTan[1/(1 + ll)];
 
 doubleTangentArea = 
-  1/2 * NIntegrate[rVal[θ]^2, {θ, thetaMin, π/2}, 
+  1/2 * NIntegrate[rVal[θ]^2, {θ, θMin, π/2}, 
     WorkingPrecision -> 10]
 
 singleTangentArea = 
