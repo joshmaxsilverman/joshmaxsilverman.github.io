@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Curvature
 date: 2026/02/10
-subtitle: Where does it come form, how do we find it?
+subtitle: Where does it come from, how do we find it?
 source: writeup
 kind: physics
 theme: differential-geometry
