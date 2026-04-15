@@ -117,11 +117,11 @@ Finally, we have the total length of the string broken down into the straight se
 
 $$ 14 = \frac12 \pi + 2 + \ell_1 + \ell_2 + \gamma_1 + \gamma_2. $$
 
-We can turn the length constraint into am equation in $r_\theta$ and $\theta$ and numerically solve for $r_\theta$ at each $\theta.$
+We can turn the length constraint into an equation in $r_\theta$ and $\theta$ and numerically solve for $r_\theta$ at each $\theta.$
 
 ### Two tangents to one disk
 
-Since we already have most of the work done for this part from the standard problem, we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
+Since we have already done most of the work for this part in the standard problem, we just need to find the minimum value of $\theta$ where the disk maintains tangents on both disks.
 
 ![](/img/2026-03-23-fiddler-one-tangent.png){:width="600 px" class="image-centered"}
 
