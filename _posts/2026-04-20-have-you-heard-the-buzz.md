@@ -17,7 +17,7 @@ hide_from_recent : true
 >
 > How many times should “buzz” be said in the first 100 turns of the game?
 >
-> **Extra Credit**: There is a certain minimum number $N$ such that, for the $N$th turn in the game and for every turn thereafter, at least half the numbers up to that point have been buzzed. What is this value of $N$?
+> **Extra Credit**: There is a certain minimum number $N$ such that, for the $N^\text{th}$ turn in the game and for every turn thereafter, at least half the numbers up to that point have been buzzed. What is this value of $N$?
 
 <!--more-->
 
@@ -27,9 +27,9 @@ hide_from_recent : true
 
 A number buzzes if it's a multiple of $7$ or contains a $7$ as one of its digits. 
 
-Over a subset of numbers these two conditions might have an induced correlation, but have no actual connection. To get around this, we can look at all numbers up to a power of $10,$ which samples over all digits uniformly. 
+Over an arbitrary sequence of consecutive numbers these two conditions can have an induced correlation, but because $7$ and $10$ are coprime, there is no actual connection. To get around these artifacts, we can look at all numbers up to a power of $10,$ which samples over all digits uniformly. 
 
-On these subsets, $1/7^\text{th}$ of all numbers are divisible by $7.$ The chance that a random number contains a $7$ is the complement of the chance that there is no $7$ whatsoever, i.e. $P_\text{has 7} = 1-\left(9/10\right)^{N-1}.$
+On these subsets, $1/7$ of all numbers are divisible by $7.$ The chance that a random number contains a $7$ is the complement of the chance that there is no $7$ whatsoever, i.e. $P_\text{has 7} = 1-\left(9/10\right)^{N-1}.$
 
 So, probability that a random number from that set buzzes is then
 
@@ -39,15 +39,15 @@ $$ \begin{align}
     \end{align}
 $$
 
-Up to an order of magnitude, say $10^N,$ we have included all $(N-1)$ digit numbers in our sample. And, until we hit the next leading $7$ at $7\times 10^N,$ each additional $10^N$ numbers we consider will have the same buzz statistics since they don't have a leading $7.$ This means that the cumulative fraction of buzz numbers will be the same at $\\{10^N, 2\times 10^N, \ldots, 6\times 10^N\\}.$
+Up to the $N^\text{th}$ order of magnitude $10^N$ we have included all possible $N$ digit numbers in our sample. Until we hit the next leading $7$ at $7\times 10^N,$ each additional $10^N$ numbers we consider will have the same buzz statistics as the numbers up to $10^N$ since they don't have a leading $7.$ This means that the cumulative fraction of buzz numbers will be the same at $\\{10^N, 2\times 10^N, \ldots, 6\times 10^N\\}.$ 
 
 Once we hit the leading $7,$ the statistic jumps up quite a bit before relaxing to the next anchor value at $10^{N+1}.$ This means that once we pass $7\times 10^N,$ the cumulative fraction of buzz numbers will never again go below that level. 
 
-What's more each successive power of ten is related by 
+Each successive power of ten is related by 
 
 $$ P_\text{buzz}\left(10^{N+1}\right) = \frac{9}{10} P_\text{buzz}\left(10^N\right) + \frac{1}{10}. $$
 
-$P_\text{buzz}(7\times10^5) \approx 0.493866$ and $P_\text{buzz}(7\times10^5)\approx 0.544479$ so the final dip below $0.5$ must occur between $700,000$ and $1,000,000.$ Checking the numbers in that range, we see that the last dip occurs at $N = 708,587.$
+$P_\text{buzz}(7\times10^5) \approx 0.493866$ and $P_\text{buzz}(10^6)\approx 0.544479$ so the final dip below $0.5$ must occur between $700,000$ and $1,000,000.$ Checking the numbers in that range, we see that the last dip occurs at $N = 708,587.$
 
 ![](/img/2026-04-20-fiddler-fizz-buzz.png){:width="700 px" class="image-centered"}
 
