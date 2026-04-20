@@ -34,7 +34,7 @@ On these subsets, $1/7$ of all numbers are divisible by $7.$ The chance that a r
 So, probability that a random number from that set buzzes is then
 
 $$ \begin{align}
-    P_\text{buzz} &= P_\text{div by 7} + P_\text{has 7} - P_\text{div by 7} \times P_\text{has 7} \\
+    P_\text{buzz}(N) &= P_\text{div by 7} + P_\text{has 7} - P_\text{div by 7} \times P_\text{has 7} \\
         &= \frac17 + \frac67\left[1-\left(\frac{9}{10}\right)^{N-1}\right]
     \end{align}
 $$
