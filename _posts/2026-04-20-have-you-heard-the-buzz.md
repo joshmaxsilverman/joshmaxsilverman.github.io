@@ -39,7 +39,7 @@ $$ \begin{align}
     \end{align}
 $$
 
-Up to the $N^\text{th}$ order of magnitude $10^N$ we have included all possible $N$ digit numbers in our sample. Until we hit the next leading $7$ at $7\times 10^N,$ each additional $10^N$ numbers we consider will have the same buzz statistics as the numbers up to $10^N$ since they don't have a leading $7.$ This means that the cumulative fraction of buzz numbers will be the same at $\\{10^N, 2\times 10^N, \ldots, 6\times 10^N\\}.$ 
+Up to the $N^\text{th}$ order of magnitude $10^N$ we have included all possible $N$ digit numbers in our sample. Until we hit the next leading $7$ at $7\times 10^N,$ each additional $10^N$ numbers we consider will, asymptotically, have the same buzz statistics as the numbers up to $10^N$ since they don't have a leading $7.$ This means that the cumulative fraction of buzz numbers will be the same at $\\{10^N, 2\times 10^N, \ldots, 6\times 10^N\\}.$ 
 
 Once we hit the leading $7,$ the statistic jumps up quite a bit before relaxing to the next anchor value at $10^{N+1}.$ This means that once we pass $7\times 10^N,$ the cumulative fraction of buzz numbers will never again go below that level. 
 
