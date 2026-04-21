@@ -54,7 +54,7 @@ So, the final dip will occur for the $N$ that saturates
 
 $$ \frac{345,706 +\left(N - 700,000\right)}{N} \lt \frac12 $$
 
-Simplifying, we get $N - 354,294 < \frac12N,$ or $N < 708,588.$ Therefore, the last dip below $\frac12$ occurs exactly at $N=708,587.$
+Simplifying, we get $N - 354,294 < \frac12N,$ or $N < 708,588.$ Therefore, the cumulative proportion of buzz numbers will be $\frac12$ or greater for once $N=708,588.$
 
 ![](/img/2026-04-20-fiddler-fizz-buzz.png){:width="700 px" class="image-centered"}
 
