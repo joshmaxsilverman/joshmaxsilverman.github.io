@@ -52,7 +52,7 @@ $P_\text{buzz}(7\times10^5) \approx 0.493866$ and $P_\text{buzz}(10^6)\approx 0.
 
 Exactly 
 
-$$7\times 10^5\times P_\text{buzz}(7\times10^5) \approx 345,706$$ 
+$$7\times 10^5\times P_\text{buzz}(7\times10^5) = 345,706$$ 
 
 of the first $700,000$ numbers buzz. Since all numbers from $700,000$ up to $799,999$ start with a $7,$ they all buzz. So, the final dip will occur for the $N$ that saturates
 
