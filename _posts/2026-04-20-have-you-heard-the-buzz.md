@@ -48,11 +48,15 @@ Each successive power of ten is related by
 $$ P_\text{buzz}\left(10^{N+1}\right) = \frac{9}{10} P_\text{buzz}\left(10^N\right) + \frac{1}{10}. $$
 
 
-$P_\text{buzz}(7\times10^5) \approx 0.493866$ and $P_\text{buzz}(10^6)\approx 0.544479$ so the final dip below $0.5$ must occur between $700,000$ and $1,000,000.$ Using our result, exactly $7\times 10^5\times P_\text{buzz}(7\times10^5) \approx 345,706$ of the first $700,000$ numbers buzz. Since all numbers from $700,000$ up to $799,999$ start with a $7,$ they all buzz. 
+$P_\text{buzz}(7\times10^5) \approx 0.493866$ and $P_\text{buzz}(10^6)\approx 0.544479$ so the final dip below $0.5$ must occur between $700,000$ and $1,000,000.$ 
 
-So, the final dip will occur for the $N$ that saturates
+Exactly 
 
-$$ \frac{345,706 +\left(N - 700,000\right)}{N} \lt \frac12 $$
+$$7\times 10^5\times P_\text{buzz}(7\times10^5) \approx 345,706$$ 
+
+of the first $700,000$ numbers buzz. Since all numbers from $700,000$ up to $799,999$ start with a $7,$ they all buzz. So, the final dip will occur for the $N$ that saturates
+
+$$ \frac{345,706 +\left(N - 700,000\right)}{N} \lt \frac12. $$
 
 Simplifying, we get $N - 354,294 < \frac12N,$ or $N < 708,588.$ Therefore, the cumulative proportion of buzz numbers will be $\frac12$ or greater for once $N=708,588.$
 
