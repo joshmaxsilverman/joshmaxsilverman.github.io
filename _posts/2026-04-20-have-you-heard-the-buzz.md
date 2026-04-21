@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Have you heard the buzz?
 date: 2026/04/20
-subtitle: Taking the fizz out of Buzz and replacing it with limits
+subtitle: How big is big enough to buzz most of the time?
 tags: recursion fractals
 source: fiddler
 kind: puzzle
