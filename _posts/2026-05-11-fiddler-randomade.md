@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Can You Drink the “Random-ade”?
 date: 2026/05/11
 subtitle: How much will you pour using this deranged protocol?
@@ -43,6 +43,10 @@ after the first pour, the volumes will be $b_1-a_1, c_1-a_1,$ and so on, in the 
 
 now, the probability that $b_1-a_1$ is bigger than $v$ is equal to the probability that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the probability that the new random volume is not less than $b_1-a_1,$ or $P(\text{space} > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}.$ again using the identity above, we get each cup contributing an average volume $\langle v_2\rangle = 1/(N+2).$
 
-it keeps going on like this until we hit the cup $N.$ at this point, each 
+it keeps going on like this until we hit the cup $N+1.$ at this point, it is not possible for the first volume $a_1$ to have had a chance to land within the interval. so, from round $N$ onwards, the minimum volume is the product of $2N$ random volumes avoiding landing in the interval.
+
+for the $N$ round prep of random-ade, the expected volume is therefore 
+
+$$ NV_\text{cup}\left(\frac{1}{N+1} + \frac{1}{N+2} + \ldots + \frac{1}{2N}\right). $$
 
 
