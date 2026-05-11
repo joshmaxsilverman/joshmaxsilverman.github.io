@@ -1,0 +1,48 @@
+---
+layout: post
+published: false
+title: Can You Drink the “Random-ade”?
+date: 2026/05/11
+subtitle: How much will you pour using this deranged protocol?
+tags: expectation survival-probability
+source: fiddler
+kind: puzzle
+theme: probability
+hide_from_recent : true
+---
+
+> **Question**: I’m preparing a mixture of “random-ade” using a large, empty pitcher and two 12-ounce glasses.
+>
+>First, I fill one glass with some amount of lemon juice chosen randomly and uniformly between 0 and 12 ounces. I fill the other glass with some amount of water, also chosen randomly and uniformly between 0 and 12 ounces. Next, I pour an equal amount from each glass into the pitcher until one of the glasses is empty.
+>
+>At this point, I refill that empty glass with yet another random amount of the same liquid it previously contained. Once again, I pour an equal amount from each glass into the pitcher until one of the glasses is empty.
+>
+>On average, how much random-ade can I expect to prepare? (Note that all three random amounts in this problem are chosen independently of each other.)
+>
+>**Extra Credit**: Once again I’m preparing random-ade, but this time I have three 12-ounce glasses.
+>
+>I fill the first glass with a random amount of lemon juice, the second glass with a random amount of lime juice, and the third glass with a random amount of water. As before, each amount is chosen uniformly between 0 and 12 ounces, and all amounts are independent. Next, I pour an equal amount from each glass into the pitcher until one of the glasses is empty.
+>
+>At this point, I refill that empty glass with yet another random amount of the same liquid it previously contained. Once again, I pour an equal amount from each glass into the pitcher until one of the glasses is empty.
+>
+>Then I refill that now-empty glass with yet another random amount of the same liquid it previously contained. Again, I pour an equal amount from each glass into the pitcher until one of the glasses is empty.
+>
+>On average, how much random-ade can I expect to prepare?
+
+<!--more-->
+
+([Fiddler on the Proof](https://thefiddler.substack.com/p/can-you-drink-the-random-ade))
+
+## Solution
+
+say we draw $N$ random initial volumes. the probability that the smallest volume is greater than $v$ is equal to the probability that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ using the fact that $\langle v_1\rangle = \int_0^1 \text{d}v\, P(\text{space}>v)$ we get that the average minimum of the random volumes, and therefore the volume that each cup contributes on the first pour is $1/(N+1)$ for a total pour of $N/(N+1)$ from all $N$ cups.
+
+<--! $\{a_1, b_1, c_1, \ldots n_1\}$ with $a_1 < b_1 < c_1< \ldots < n_1. $ -->
+
+after the first pour, the volumes will be $b_1-a_1, c_1-a_1,$ and so on, in the same order.
+
+now, the probability that $b_1-a_1$ is bigger than $v$ is equal to the probability that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the probability that the new random volume is not less than $b_1-a_1,$ or $P(\text{space} > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}.$ again using the identity above, we get each cup contributing an average volume $\langle v_2\rangle = 1/(N+2).$
+
+it keeps going on like this until we hit the cup $N.$ at this point, each 
+
+
