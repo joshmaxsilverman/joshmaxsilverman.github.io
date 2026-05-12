@@ -49,7 +49,7 @@ $$ P(\text{space} > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}. $$
 
 Again using the identity above, we get each cup contributing an average volume $\langle v_2\rangle = 1/(N+2).$
 
-It keeps going on like this until we hit pour $\left(N+1\right).$ At this point, there are multiple possibilities. It could be that one of the cups has not yet been emptied. In that case the pattern continues. But it could also be that all $N$ cups have been emptied once. In that case, the region could only have ever had $N$ distinct volumes with the chance to land in it, and we descend into casework.  
+It keeps going on like this until we hit pour $\left(N+1\right).$ At this point, there are multiple possibilities. It could be that one of the cups has not yet been emptied. In that case the pattern continues. But it could also be that all $N$ cups have been emptied once. In that case, we descend into casework.  
 
 For the $N$ round prep of random-ade, the expected volume is therefore 
 
