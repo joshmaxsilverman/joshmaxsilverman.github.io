@@ -35,7 +35,7 @@ hide_from_recent : true
 
 ## Solution
 
-Say we draw $N$ random initial volumes $a_1, b_1, c_1, \ldots$ The chance that the smallest volume is greater than $v$ is equal to the chance that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ Using the fact 
+Say we draw $N$ random initial volumes $\{a_1, b_1, c_1, \ldots\}$ all between zero and $1.$ The chance that the smallest volume is greater than $v$ is equal to the chance that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ Using the fact 
 
 $$ \langle v_1\rangle = \int_0^1 \text{d}x\, P(v_1>x) $$ 
 
