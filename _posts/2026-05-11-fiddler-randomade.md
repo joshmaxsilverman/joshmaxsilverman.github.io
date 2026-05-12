@@ -43,7 +43,11 @@ the average minimum of the random volumes, and therefore the volume that each cu
 
 After the first pour, the volumes will be $\left(b_1-a_1\right), \left(c_1-a_1\right),$ and so on, in the same order.
 
-Now, the chance that $b_1-a_1$ is bigger than $v$ is equal to the chance that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the chance that the new random volume is not less than $b_1-a_1,$ or $P(\text{space} > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}.$ Again using the identity above, we get each cup contributing an average volume $\langle v_2\rangle = 1/(N+2).$
+Now, the chance that $b_1-a_1$ is bigger than $v$ is equal to the chance that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the chance that the new random volume is not less than $b_1-a_1,$ or 
+
+$$ P(\text{space} > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}. $$ 
+
+Again using the identity above, we get each cup contributing an average volume $\langle v_2\rangle = 1/(N+2).$
 
 It keeps going on like this until we hit pour $N+1.$ At this point, there are multiple possibilities. It could be that one of the cups has not yet been emptied. In that case the pattern continues. But it could also be that all $N$ cups have been emptied once. In that case, the region could only have ever had $N$ distinct volumes with the chance to land in it, and we descend into casework.  
 
