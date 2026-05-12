@@ -37,7 +37,7 @@ hide_from_recent : true
 
 Say we draw $N$ random initial volumes. The chance that the smallest volume is greater than $v$ is equal to the chance that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ Using the fact that 
 
-$$ \langle v_1\rangle = \int_0^1 \text{d}x\, P(v>x) $$ 
+$$ \langle v_1\rangle = \int_0^1 \text{d}x\, P(v_1>x) $$ 
 
 the average minimum of the random volumes, and therefore the volume that each cup contributes on the first pour, is $1/(N+1)$ for a total pour of $NV_\text{cup}/(N+1)$ from all $N$ cups.
 
