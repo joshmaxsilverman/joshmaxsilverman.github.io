@@ -35,13 +35,13 @@ hide_from_recent : true
 
 ## Solution
 
-Say we draw $N$ random initial volumes. The chance that the smallest volume is greater than $v$ is equal to the chance that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ Using the fact that 
+Say we draw $N$ random initial volumes $a_1, b_1, c_1, \ldots$ The chance that the smallest volume is greater than $v$ is equal to the chance that none of the $N$ volumes occupy the space between $0$ and $v,$ which is $(1-v)^N.$ Using the fact 
 
 $$ \langle v_1\rangle = \int_0^1 \text{d}x\, P(v_1>x) $$ 
 
-the average minimum of the random volumes, and therefore the volume that each cup contributes on the first pour, is $1/(N+1)$ for a total pour of $NV_\text{cup}/(N+1)$ from all $N$ cups.
+we can find that the average minimum of the random volumes, and therefore the volume that each cup contributes on the first pour, is $1/(N+1)$ for a total pour of $NV_\text{cup}/(N+1)$ from all $N$ cups.
 
-After the first pour, the volumes will be $\left(b_1-a_1\right), \left(c_1-a_1\right),$ and so on, in the same order.
+Suppose that $a_1$ is the minimum, then after the first pour, the volumes will be $\left(b_1-a_1\right), \left(c_1-a_1\right),$ and so on, and will keep the same relative order.
 
 Now, the chance that $\left(b_1-a_1\right)$ is bigger than $v$ is equal to the chance that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the chance that the new random volume is not less than $b_1-a_1,$ or 
 
