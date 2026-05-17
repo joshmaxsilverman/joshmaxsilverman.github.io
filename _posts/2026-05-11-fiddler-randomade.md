@@ -43,7 +43,7 @@ we can find that the average minimum of the random volumes, and therefore the vo
 
 Suppose that $a_1$ is the minimum, then after the first pour, the volumes will be $\left(b_1-a_1\right), \left(c_1-a_1\right),$ and so on, and will keep the same relative order.
 
-Now, the chance that $\left(b_1-a_1\right)$ is bigger than $v_2$ is equal to the chance that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the chance that the new random volume is not less than $b_1-a_1,$ or 
+Now, the chance that $v_2 = \left(b_1-a_1\right)$ is bigger than $v$ is equal to the chance that none of the $N$ volumes entered the space of length $v$ between $a_1$ and $b_1$ times the chance that the new random volume does not fall inside $b_1-a_1,$ or 
 
 $$ P(v_2 > v) = (1-v)^N\times(1-v) = (1-v)^{N+1}. $$ 
 
@@ -56,3 +56,23 @@ So, for the $N$ round prep of random-ade, the expected volume is therefore
 $$ NV_\text{cup}\left(\frac{1}{N+1} + \frac{1}{N+2} + \ldots + \frac{1}{2N}\right). $$
 
 In the limit of many pours, we are adding an average of half a cup of volume to the system each round and, so, should remove half a cup of volume each round too. Once the transients die out, we should expect each cup to contribute $V_\text{cup}/2N$ on average.
+
+### Demonstration of the useful fact
+
+The expectation value of a variable $v$ is 
+
+$$\langle v\rangle = \int_0^{v_\text{max}} \text{d}v^\prime\, v^\prime P(v^\prime). $$
+
+The probability that $v$ is greater than $\ell$ is 
+$$P(v\geq\ell) = \int_\ell^{v_\text{max}} \text{d}v^\prime\, P(v^\prime). $$
+
+Taking the derivative with regard to $\ell$
+$$ \frac{\text{d}}{\text{d}\ell}P(v\geq\ell) = -P(\ell). $$
+
+Replacing,
+
+$$ \langle v\rangle = -\int_0^{v_\text{max}} \text{d}v^\prime\, v^\prime \frac{\text{d}}{\text{d}v^\prime}P(v\geq v^\prime). $$
+
+Integrating by parts, the derivative moves over to kill $v^\prime$ and the boundary terms are zero (the chance to be larger than $v_\text{max}$ is zero) and we get
+
+$$\langle v\rangle = \int_0^{v_\text{max}}\text{d}v^\prime\, P(v\geq v^\prime). $$
