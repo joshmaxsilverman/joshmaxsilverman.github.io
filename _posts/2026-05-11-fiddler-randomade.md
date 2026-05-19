@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You Drink the “Random-ade”?
+title: Can you drink the “random-ade”?
 date: 2026/05/11
 subtitle: How much will you pour using this deranged protocol?
 tags: expectation survival-probability
