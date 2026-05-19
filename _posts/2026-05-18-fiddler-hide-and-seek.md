@@ -51,11 +51,13 @@ Our goal as the seeker is to make the cost insensitive to the probability distri
 
 Looking at the table one way immediately jumps out, an equal blend of $\text{ABC}$ and $\text{CBA},$ which gives us 
 
-$$\frac12\left(2p_A+7p_B+12p_C\right)+\frac12\left(14p_A+9p_B+4p_C\right) = 8. $$
+$$\frac12\left(2p_A, 7p_B, 12p_C\right)+\frac12\left(14p_A, 9p_B, 4p_C\right) = 8\left(p_A,p_B,p_C\right) $$
+
+for a total expectation of $8$ regardless of the specific hiding distribution.
 
 The same can also be achieved using an equal blend of $\text{ACB}$ and $\text{BCA}.$
 
-Is this the most efficient indifferent strategy possible? If we want to get lower than $8$ we would need to use a blend of three strategies since no other weighted pair form a flat strategy. However, this leads to contradictory conditions on the weights of the cost vectors. So, $8$ is the most efficient strategy of indifference.
+Is this the most efficient indifferent strategy possible? If we want to get lower than $8$ we would need to use a blend of three strategies since no other weighted pair form a flat strategy. However, this leads to contradictory conditions on the weights of the cost vectors. 
 
 For example, let's try to form a weighted blend of $\text{ABC},$ $\text{BAC},$ and $\text{CBA}.$
 
@@ -75,13 +77,13 @@ This means that $8$ is the minimum average hiding time, regardless of how the hi
 
 Again, we want a strategy that's indifferent to the behavior of little nephew, the hider. 
 
-If were move at the first possible time, then little nephew can just plan to be where we can't possibly be for the whole game. Go to $\text{B}$ until $t=3$ then go to $\text{A}$ and hang out for $5$ s and so on. 
+If were move at the first possible time, then little nephew can just plan to be where we can't possibly be for the whole game. For example, the could go to $\text{B}$ until just before $t=3$ then switch to $\text{A}$ and hang out for $5$ s (when we would be in transit from $\text{A}$) and so on. 
 
-To bust this behavior, we need to take away little nephew's ability to anticipate where we'll be. We can do this by making each move take the same amount of time. 
+To bust this behavior, we need to take away little nephew's ability to anticipate where we'll be. We can do this by making each move take the same amount of time.  
 
-Starting from $0$ at time $t=0$ we flip a coin and go to $\text{A}$ is heads and $\text{B}$ if tails. If we pick $\text{A}$ then we wait $1$ s before leaving, so that movement to $\text{A}$ and $\text{B}$ take the same amount of time. Once we get to that destination, we flip the coin again and either go to the other hiding spot, or wait $5$ at the current one. 
+Starting from $\text{O}$ at time $t=0$ we flip a coin and go to $\text{A}$ if heads and to $\text{B}$ if tails. If we pick $\text{A}$ then we wait $1$ s before leaving, so that movement to $\text{A}$ and $\text{B}$ take the same amount of time. Once we get to that destination, we flip the coin again and either go to the other hiding spot, or wait $5$ at the current one. Knowing that we can't possibly get to $\text{B}$ before $t=3,$ there is no chance they'll leave $\text{B}$ before $t=3.$
 
-At each interval, we have $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to require another inspection, adding $5$ steps plus whatever time it takes to find them from there on:
+By taking away the connection between time and location, little nephew has no way to counter us. At each interval, our position will be random and we will therefore have a $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to require another inspection, adding $5$ steps plus whatever time it takes to find them from there on:
 
 $$ T_\text{find} = \frac12 \times 3 + \frac12\times\left(5+T_\text{find}\right). $$
 
