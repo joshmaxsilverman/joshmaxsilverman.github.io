@@ -83,10 +83,10 @@ To bust this behavior, we need to take away little nephew's ability to anticipat
 
 Starting from $\text{O}$ at time $t=0$ we flip a coin and go to $\text{A}$ if heads and to $\text{B}$ if tails. If we pick $\text{A}$ then we wait $1$ s before leaving, so that movement to $\text{A}$ and $\text{B}$ take the same amount of time. Once we get to that destination, we flip the coin again and either go to the other hiding spot, or wait $5$ at the current one. Knowing that we can't possibly get to $\text{B}$ before $t=3,$ there is no chance they'll leave $\text{B}$ before $t=3.$
 
-By taking away the connection between time and location, little nephew has no way to counter us. At each interval, our position will be random and we will therefore have a $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to require another inspection, adding $5$ steps plus whatever time it takes to find them from there on:
+By taking away the connection between time and location, little nephew has no way to counter us. At each interval, our position will be random and we will therefore have a $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to take $3$ time steps plus another inspection:
 
 $$ \begin{align}
-    T^\text{start}_\text{find} &= \frac12 \times 3 + \frac12\times T^\text{after start}_\text{find} \\
+    T^\text{start}_\text{find} &= 3 + \frac12\times T^\text{after start}_\text{find} \\
     T^\text{after start}_\text{find} &= \frac12\times 0 + \frac12 \times \left(T^\text{after start}_\text{find} + 5\right)
 \end{align}$$
 
