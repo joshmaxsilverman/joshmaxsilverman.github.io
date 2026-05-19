@@ -87,7 +87,7 @@ By taking away the connection between time and location, little nephew has no wa
 
 $$ \begin{align}
     T^\text{start}_\text{find} &= 3 + \frac12\times T^\text{after start}_\text{find} \\
-    T^\text{after start}_\text{find} &= \frac12\times 0 + \frac12 \times \left(T^\text{after start}_\text{find} + 5\right)
+    T^\text{after start}_\text{find} &= 5 + \frac12 \times T^\text{after start}_\text{find}
 \end{align}$$
 
 Solving the equations for $T^\text{start}_\text{find}$ we get $8$ again.
