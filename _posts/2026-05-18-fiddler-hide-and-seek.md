@@ -69,7 +69,7 @@ $$\begin{align}
 
 The first equation leads to the inequality $4\alpha+\beta \geq 1,$ the second leads to $\beta \geq \frac12,$ and the third to $\frac38 \geq \beta.$ The second two are contradictory which means this is impossible. The same sort of contradictions pop up with all other possible combinations of strategy (or it collapses down to the original two we found).
 
-This means that $8$ is the average hiding time, regardless of how the hider sets their distribution.
+This means that $8$ is the minimum average hiding time, regardless of how the hider sets their distribution.
 
 ## Extra credit
 
