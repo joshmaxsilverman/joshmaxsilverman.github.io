@@ -29,7 +29,7 @@ hide_from_recent : true
 
 The first part of this problem is to figure out what the problem is.
 
-We don't know where the nephew will hide in any given game, and search strategies have different costs based on hiding spot, so there's no way to strategize at the single game. What's happening is that we're playing many hide-and-seek games with little nephew. In that case, he has a probability distribution determining where he hides, and we have one on our search strategies.
+We don't know where little nephew will hide in any given game, and search strategies have different costs based on hiding spot, so there's no way to strategize at the single gam level. But if we play many hide-and-seek games with little nephew, then we can analyze our own deception in light of little nephew's. In that case, he has a probability distribution determining where he hides, and we have one on our search strategies.
 
 With $3$ hiding spots to check we have $3! = 6$ search strategies, each with their own cost based on little nephew's hiding spot. If we check the hiding spots in the order $\text{ABC}$ then hiding at $\text{A}$ costs $2,$ hiding at $\text{B}$ costs $7$ ${(2+2+3)}$ and hiding at $\text{C}$ costs $12$ ${(2+2+3+5)}$ using the most efficient paths. 
 
