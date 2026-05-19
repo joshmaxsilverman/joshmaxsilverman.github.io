@@ -86,7 +86,7 @@ Starting from $\text{O}$ at time $t=0$ we flip a coin and go to $\text{A}$ if he
 By taking away the connection between time and location, little nephew has no way to counter us. At each interval, our position will be random and we will therefore have a $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to require another inspection, adding $5$ steps plus whatever time it takes to find them from there on:
 
 $$ \begin{align}
-    T^\text{start}_\text{find} &= \frac12 \times 3 + \frac12\times T_^\text{after start}\text{find} \\
+    T^\text{start}_\text{find} &= \frac12 \times 3 + \frac12\times T^\text{after start}_\text{find} \\
     T^\text{after start}_\text{find} &= \frac12\times 0 + \frac12 \times \left(T^\text{after start}_\text{find} + 5\right)
 \end{align}$$
 
