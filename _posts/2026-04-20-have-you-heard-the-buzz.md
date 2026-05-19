@@ -27,7 +27,7 @@ hide_from_recent : true
 
 A number buzzes if it's a multiple of $7$ or contains a $7$ as one of its digits. 
 
-Over an arbitrary sequence of consecutive numbers these two conditions can have an induced correlation, but because $7$ and $10$ are coprime, there is no actual connection. To get around these artifacts, we can look at all numbers up to a power of $10,$ which samples over all digits uniformly. 
+Over an arbitrary sequence of consecutive numbers these two conditions can have an induced correlation but, because $7$ and $10$ are coprime, there is no actual connection. To get around these artifacts, we can look at all numbers up to a power of $10,$ which samples over all digits uniformly. 
 
 On these subsets, $1/7$ of all numbers are divisible by $7.$ The chance that a random number contains a $7$ is the complement of the chance that there is no $7$ whatsoever, i.e. $P_\text{has 7} = 1-\left(9/10\right)^{N-1}.$
 
