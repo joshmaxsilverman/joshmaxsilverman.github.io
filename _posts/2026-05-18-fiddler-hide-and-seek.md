@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You Play Hide-and-Seek?
+title: Can you play hide-and-seek?
 date: 2026/05/18
 subtitle: Minimize the time to find your hiding nephew, or don't, I'm not your dad.
 tags: game-theory minimax optimization
@@ -12,6 +12,8 @@ hide_from_recent : true
 ---
 
 > **Question**: I am playing hide-and-seek with my nephew. I start at point O, whereas my nephew can hide at point A, B or C. I can walk from O to A in 2 minutes, from O to B in 3 minutes, from O to C in 4 minutes, and from B to C in 5 minutes. To get from A to B or from A to C, I must pass through O.
+>
+>![](/img/2026-05-19-fiddler-hide-seek-course.webp){:width="450 px" class="image-centered"}
 >
 > My goal is to minimize the time it takes to find him, no matter how clever his strategy might be. What is this optimal time?
 >
@@ -27,16 +29,15 @@ hide_from_recent : true
 
 The first part of this problem is to figure out what the problem is.
 
-
 We don't know where the nephew will hide in any given game, and search strategies have different costs based on hiding spot, so there's no way to strategize at the single game. What's happening is that we're playing many hide-and-seek games with little nephew. In that case, he has a probability distribution determining where he hides, and we have one on our search strategies.
 
-With $3$ hiding spots to check we have $3! = 6$ search strategies, each with their own cost based on little nephew's hiding spot. If we check the hiding spots in the order $ABC$ then hiding at $A$ costs $2,$ hiding at $B$ costs $7$ ${(2+2+3)}$ and hiding at $C$ costs $12$ ${(2+2+3+5)}$ using the msot efficient paths. 
+With $3$ hiding spots to check we have $3! = 6$ search strategies, each with their own cost based on little nephew's hiding spot. If we check the hiding spots in the order $ABC$ then hiding at $A$ costs $2,$ hiding at $B$ costs $7$ ${(2+2+3)}$ and hiding at $C$ costs $12$ ${(2+2+3+5)}$ using the most efficient paths. 
 
 Carrying out this exercise for all search orders and hiding spots we get the cost structure shown in the table below. 
 
 $$
     \begin{array}{c|ccc}
-    \text{Order} & c_\text{A} & c_\text{B} & c_\text{C} \\ \hline
+    \text{Search order} & c_\text{A} & c_\text{B} & c_\text{C} \\ \hline
     \text{ABC} & 2 & 7 & 12 \\
     \text{ACB} & 2 & 13 & 8 \\
     \text{BAC} & 8 & 3 & 14 \\
@@ -54,7 +55,21 @@ $$\frac12\left(2p_A+7p_B+12p_C\right)+\frac12\left(14p_A+9p_B+4p_C\right) = 8. $
 
 The same can also be achieved using an equal blend of $\text{ACB}$ and $\text{BCA}.$
 
-Is this the most efficient indifferent strategy possible? If we want to get lower than $8$ we would need to use a blend of three strategies. However, this leads to contradictory conditions on the weights of the cost vectors. So, $8$ is the most efficient strategy of indifference.
+Is this the most efficient indifferent strategy possible? If we want to get lower than $8$ we would need to use a blend of three strategies since no other weighted pair form a flat strategy. However, this leads to contradictory conditions on the weights of the cost vectors. So, $8$ is the most efficient strategy of indifference.
+
+For example, let's try to form a weighted blend of $\text{ABC},$ $\text{BAC},$ and $\text{CBA}.$
+
+This gives us three expressions that have to come out less than $8$
+
+$$\begin{align}
+    2\alpha+8\beta+10\gamma&\leq8\\
+    7\alpha+3\beta+15\gamma&\leq8\\
+    12\alpha+14\beta+4\gamma&\leq8
+\end{align}$$
+
+The first equation leads to the inequality $4\alpha+\beta \geq 1,$ the second leads to $\beta \geq \frac12,$ and the third to $\frac38 \geq \beta.$ The second two are contradictory which means this is impossible. The same sort of contradictions pop up with all other possible combinations of strategy (or it collapses down to the original two we found).
+
+This means that $8$ is the average hiding time, regardless of how the hider sets their distribution.
 
 ## Extra credit
 
@@ -66,14 +81,10 @@ To bust this behavior, we need to take away little nephew's ability to anticipat
 
 Starting from $0$ at time $t=0$ we flip a coin and go to $\text{A}$ is heads and $\text{B}$ if tails. If we pick $\text{A}$ then we wait $1$ s before leaving, so that movement to $\text{A}$ and $\text{B}$ take the same amount of time. Once we get to that destination, we flip the coin again and either go to the other hiding spot, or wait $5$ at the current one. 
 
-At each interval, we have $50\%$ chance to find little nephew so the [expected time to find them is](https://www.wolframalpha.com/input?i=+sum%28%283%2B5%28j-1%29%29%2F2%5Ej%2C+%7Bj%2C+1%2C+1000%7D%29)
+At each interval, we have $50\%$ chance to find little nephew. Starting from the beginning, there is a $50\%$ chance to end on the first hiding spot taking $3$ time steps, and a $50\%$ chance to require another inspection, adding $5$ steps plus whatever time it takes to find them from there on:
 
-$$ 
-    \begin{align}
-        T &= 3\frac12 + 8\frac14 + 13\frac18 + 18\frac{1}{16} + \ldots \\
-          &= \frac32 +\left(\frac34 + \frac54\right) + \left(1 + \frac58 \right) \\
-          &= 8
-    \end{align}
-$$
+$$ T_\text{find} = \frac12 \times 3 + \frac12\left(5+T_\text{find}\right). $$
+
+Solving the equation for $T_\text{find}$ we get $8$ again.
 
 
