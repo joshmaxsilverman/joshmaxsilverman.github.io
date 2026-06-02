@@ -40,7 +40,7 @@ $$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mat
 
 with similar formulas for $\beta$ and $\gamma.$ since $\theta+\beta+\gamma=\pi,$ we have
 
-$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\alpha+\beta\right)\left(\pi-\beta\right)\left(\pi - \gamma\right). $$
+$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\alpha+\beta\right). $$
 
 if we evaluate this by numerical means we get $2.719\%$ which matches simulation.
 
