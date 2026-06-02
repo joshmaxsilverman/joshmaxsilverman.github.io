@@ -42,6 +42,7 @@ if we evaluate this by numerical means we get $2.719\%$ which matches simulation
 
 ```
 mathematica
+
 r1={x1,y1};
 r2={x2,y2};
 r3={x3,y3};
