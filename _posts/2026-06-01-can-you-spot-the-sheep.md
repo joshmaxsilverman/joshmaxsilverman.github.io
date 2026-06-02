@@ -40,8 +40,7 @@ $$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int
 
 if we evaluate this by numerical means we get $2.719\%$ which matches simulation.
 
-```
-mathematica
+```mathematica
 
 r1={x1,y1};
 r2={x2,y2};
