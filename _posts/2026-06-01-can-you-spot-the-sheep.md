@@ -24,7 +24,7 @@ theme: probability
 
 ## Solution
 
-any three locations we pick will make a triangle of sheep. they'll be able to see each other so long as the visual field of each sheep encompasses the positions of the other two. the probablility that the sheep all see each other is proportional to the product of the allowable range of orientation angles for each sheep.
+any three locations we pick will make a triangle of sheep. they'll be able to see each other so long as the visual field of each sheep encompasses the positions of the other two. the probablility that the sheep all see each other is proportional to the product of the allowable range of orientation angles for each sheep. 
 
 for example, sheep A's boundary of vision can range from being parallel to the $AB$ line to being parallel with the $AC$ line. this is equal to $\pi - \theta$ with $\theta$ equal to
 
