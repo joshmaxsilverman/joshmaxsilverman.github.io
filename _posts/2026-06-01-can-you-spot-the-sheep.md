@@ -46,13 +46,13 @@ if we evaluate this by numerical means we get $2.719\%$ which matches simulation
 
 ```mathematica
 
-r1={x1,y1};
-r2={x2,y2};
-r3={x3,y3};
+r1 = {x1,y1};
+r2 = {x2,y2};
+r3 = {x3,y3};
 
-θ=ArcCos[(r3-r1).(r2-r1)/(Norm[r3-r1]Norm[r2-r1])];
-γ=ArcCos[(r3-r2).(r1-r2)/(Norm[r3-r2]Norm[r1-r2])];
-β=ArcCos[(r2-r3).(r1-r3)/(Norm[r2-r3]Norm[r1-r3])];
+θ = ArcCos[(r3-r1).(r2-r1) / (Norm[r3-r1]Norm[r2-r1])];
+γ = ArcCos[(r3-r2).(r1-r2) / (Norm[r3-r2]Norm[r1-r2])];
+β = ArcCos[(r2-r3).(r1-r3) / (Norm[r2-r3]Norm[r1-r3])];
 
 NIntegrate[
   (π - θ) (π - β) (π - γ)
