@@ -64,7 +64,7 @@ NIntegrate[
 
 we can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed. since $\theta+\beta+\gamma=\pi,$ we have
 
-$$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
+$$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
 
 this comes out to $7/240 \approx 0.02916667$ which is only about $6\%$ too optimistic, likely due to the overweighting of obtuse arrrangements.
 
