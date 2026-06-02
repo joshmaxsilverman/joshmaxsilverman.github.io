@@ -36,7 +36,9 @@ $$ \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\pi-\gamma\right). $$
 
 we have to average this over all possible positions for the three sheep. for small triangles, the geometry doesn't put much constaint on the permissible angles, but for large triangles, it's easier to be roughly equilateral than obtuse.
 
-$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\pi - \gamma\right). $$
+since $\theta+\beta+\gamma=\pi,$ we have
+
+$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\alpha+\beta\right)\left(\pi-\beta\right)\left(\pi - \gamma\right). $$
 
 if we evaluate this by numerical means we get $2.719\%$ which matches simulation.
 
@@ -62,7 +64,7 @@ NIntegrate[
 ]
 ```
 
-we can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed. since $\theta+\beta+\gamma=\pi,$ we have
+we can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed. 
 
 $$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
 
