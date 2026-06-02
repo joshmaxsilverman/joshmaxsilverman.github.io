@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Can you spot the sheep?
 date: 2026/06/01
 subtitle: Some sheep are positioned and oriented randomly in a pen. What's the probability that each sheep can see all the other sheep?
