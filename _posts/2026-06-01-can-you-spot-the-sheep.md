@@ -36,7 +36,7 @@ $$ \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\pi-\gamma\right). $$
 
 we have to average this over all possible positions for the three sheep. for small triangles, the geometry doesn't put much constaint on the permissible angles, but for large triangles, it's easier to be roughly equilateral than obtuse.
 
-$$ \dfrac{1}{\left(2\pi\right)^3}\int\0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
+$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
 if we evaluate this by numerical means and get $2.719\%$ which matches simulation.
 
