@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Can you spot the sheep?
 date: 2026/06/01
-subtitle: What's the chance three random sheep can all see each other with their sheep eyes?
+subtitle: What's the chance three randomly placed and oriented sheep can all see each other with their sheep eyes?
 tags: probability geometry
 source: fiddler
 kind: puzzle
