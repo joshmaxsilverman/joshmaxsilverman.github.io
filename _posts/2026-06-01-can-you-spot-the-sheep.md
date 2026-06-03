@@ -24,9 +24,9 @@ theme: probability
 
 ## Solution
 
-any three locations we pick will make a triangle of sheep. they'll be able to see each other so long as the visual field of each sheep encompasses the positions of the other two. the probablility that the sheep all see each other is proportional to the product of the allowable range of orientation angles for each sheep. 
+any three locations we pick will make a triangle of sheep. they'll be able to see each other so long as the visual field of each sheep encompasses the positions of the other two. the probablility that the sheep all see each other is proportional to the product of the allowable range of orientation angles for each sheep.
 
-for example, sheep A's boundary of vision can range from being parallel to the $AB$ line to being parallel with the $AC$ line. this is equal to $\left(\pi - \theta\right)$ 
+for example, sheep A's boundary of vision can range from being parallel to the $AB$ line to being parallel with the $AC$ line. this is equal to $\left(\pi - \theta\right)$
 
 the probability that all three sheep have a correct orientation is therefore proportional to
 
@@ -36,11 +36,11 @@ we have to average this over all possible positions for the three sheep. for sma
 
 using the dot product, the angle $\theta$ is given by
 
-$$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mathbf{r}_C - \mathbf{r}_A\right)}{\lvert \mathbf{r}_B - \mathbf{r}_A\rvert\lvert \mathbf{r}_C - \mathbf{r}_A\rvert}. $$
+$$ \theta = \arccos\frac{\left(\mathbf{r}\_B - \mathbf{r}\_A\right)\cdot\left(\mathbf{r}\_C - \mathbf{r}\_A\right)}{\lvert \mathbf{r}\_B - \mathbf{r}\_A\rvert\lvert \mathbf{r}\_C - \mathbf{r}\_A\rvert}. $$
 
 with similar formulas for $\beta$ and $\gamma.$ since $\theta+\beta+\gamma=\pi,$ we have
 
-$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\alpha+\beta\right). $$
+$$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_1 \int_0^1\text{d}y_1\int_0^1\text{d}x_2\int_0^1\text{d}y_2 \int_0^1\text{d}x_3 \int_0^1\text{d}y_3 \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
 if we evaluate this by numerical means we get $2.719\%$ which matches simulation.
 
@@ -50,9 +50,9 @@ r1 = {x1,y1};
 r2 = {x2,y2};
 r3 = {x3,y3};
 
-θ = ArcCos[(r3-r1).(r2-r1) / (Norm[r3-r1]Norm[r2-r1])];
-γ = ArcCos[(r3-r2).(r1-r2) / (Norm[r3-r2]Norm[r1-r2])];
-β = ArcCos[(r2-r3).(r1-r3) / (Norm[r2-r3]Norm[r1-r3])];
+θ = ArcCos[(r3-r1).(r2-r1) / (Norm[r3-r1] Norm[r2-r1])];
+γ = ArcCos[(r3-r2).(r1-r2) / (Norm[r3-r2] Norm[r1-r2])];
+β = ArcCos[(r2-r3).(r1-r3) / (Norm[r2-r3] Norm[r1-r3])];
 
 NIntegrate[
   (π - θ) (π - β) (π - γ)
@@ -66,7 +66,7 @@ NIntegrate[
 ]
 ```
 
-we can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed. 
+we can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed.
 
 $$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
 
