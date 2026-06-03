@@ -46,19 +46,19 @@ if we evaluate this by numerical means we get $2.719\%$ which matches simulation
 
 ```mathematica
 
-r1 = {x1,y1};
-r2 = {x2,y2};
-r3 = {x3,y3};
+rA = {xA, yA};
+rB = {xB, yB};
+rC = {xC, yC};
 
-θ = ArcCos[(r3-r1).(r2-r1) / (Norm[r3-r1] Norm[r2-r1])];
-γ = ArcCos[(r3-r2).(r1-r2) / (Norm[r3-r2] Norm[r1-r2])];
-β = ArcCos[(r2-r3).(r1-r3) / (Norm[r2-r3] Norm[r1-r3])];
+θ = ArcCos[(rC-rA).(rB-rA) / (Norm[rC-rA] Norm[rB-rA])];
+γ = ArcCos[(rC-rB).(rA-rB) / (Norm[rC-rB] Norm[rA-rB])];
+β = ArcCos[(rB-rC).(rA-rC) / (Norm[rB-rC] Norm[rA-rC])];
 
 NIntegrate[
   (π - θ) (π - β) (π - γ)
- , {x1, 0, 1}, {y1, 0, 1}
- , {x2, 0, 1}, {y2, 0, 1}
- , {x3, 0, 1}, {y3, 0, 1}
+ , {xA, 0, 1}, {yA, 0, 1}
+ , {xB, 0, 1}, {yB, 0, 1}
+ , {xC, 0, 1}, {yC, 0, 1}
  , Method -> "QuasiMonteCarlo"
  , MaxPoints -> 30000000
  , AccuracyGoal -> 20
