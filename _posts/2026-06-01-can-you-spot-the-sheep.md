@@ -36,7 +36,7 @@ we have to average this over all possible positions for the three sheep. for sma
 
 using the dot product, the angle $\theta$ is given by
 
-$$ \theta = \arccos\frac{\left(\mathbf{r}\_B - \mathbf{r}\_A\right)\cdot\left(\mathbf{r}\_C - \mathbf{r}\_A\right)}{\lvert \mathbf{r}\_B - \mathbf{r}\_A\rvert\lvert \mathbf{r}\_C - \mathbf{r}\_A\rvert}. $$
+$$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mathbf{r}_C - \mathbf{r}_A\right)}{\lvert \mathbf{r}_B - \mathbf{r}_A\rvert\lvert \mathbf{r}_C - \mathbf{r}_A\rvert}. $$
 
 with similar formulas for $\beta$ and $\gamma.$ since $\theta+\beta+\gamma=\pi,$ we have
 
