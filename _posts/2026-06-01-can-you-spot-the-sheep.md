@@ -81,6 +81,6 @@ NIntegrate[
 
 Looking at the distribution in $\theta,\beta$ space, and conditioning on the area of triangle, we see that smaller triangles have a more uniform distribution while large triangles overwhelmingly cluster around equilateral arrangements.
 
-![](/img/2026-06-04-fiddler-sheep-heatmaps.png){width="650 px" class="image-centered"}
+![](/img/2026-06-04-fiddler-sheep-heatmaps.png){:width="650 px" class="image-centered"}
 
 <br>
