@@ -39,13 +39,19 @@ We have to average this over all possible positions for the three sheep. For sma
 
 We can find this average at three levels of fidelity. 
 
+### Order of magnitude
+
 The first is to simply assume that each angle takes on the characteristic value of $\pi/3,$ an equilateral triangle. In this arrangement, the probability that any given sheep is validly oriented is $\left(2\pi/3\right)/2\pi = 2/3$ so that the probability all three are valid is $1/3^3 \approx 3.7\%.$ This is an overestimate because most triangles are not equilateral, and any departure from an equal split is less likely than this arrangement.
+
+### Uniform distribution
 
 The second thing we can do is average over all angular arrangements, making the radical assumption that all possible angle triples are uniformly distributed. This can be done analytically and, using the fact that $\theta+\beta+\gamma=\pi,$ we get
 
 $$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
 
 This comes out to $7/240 \approx 2.917\%$ which is only about $7\%$ too optimistic, again due to the overweighting of obtuse arrrangements.
+
+### Exact treatment
 
 The third way is to do the averaging exactly. Using the dot product, we can express the angle $\theta$ in terms of the sheep coordinates like
 
