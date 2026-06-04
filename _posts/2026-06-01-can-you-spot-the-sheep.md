@@ -8,6 +8,7 @@ tags: probability geometry
 source: fiddler
 kind: puzzle
 theme: probability
+hide_from_recent : true
 ---
 
 > **Question**: Two sheep are at two random points inside a square pen. They are munching grass and staring in two random directions. Each sheep has a field of view that’s 180 degrees.
