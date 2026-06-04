@@ -41,7 +41,7 @@ We can find this average at three levels of fidelity.
 
 ### Order of magnitude
 
-The first is to simply assume that each angle takes on the characteristic value of $\pi/3,$ an equilateral triangle. In this arrangement, the probability that any given sheep is validly oriented is $\left(2\pi/3\right)/2\pi = 2/3$ so that the probability all three are valid is $1/3^3 \approx 3.7\%.$ This is an overestimate because most triangles are not equilateral, and any departure from an equal split is less likely than this arrangement.
+The first is to simply assume that each angle takes on the characteristic value of $\pi/3,$ an equilateral triangle. In this arrangement, the probability that any given sheep is validly oriented is $\left(2\pi/3\right)/2\pi = 1/3$ so that the probability all three are valid is $1/3^3 \approx 3.7\%.$ This is an overestimate because most triangles are not equilateral, and any departure from an equal split is less likely than this arrangement.
 
 ### Uniform distribution
 
