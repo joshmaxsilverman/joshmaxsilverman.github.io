@@ -47,7 +47,7 @@ Since $\theta+\beta+\gamma=\pi,$ we have, averaging over all possible positions,
 
 $$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_A \int_0^1\text{d}y_A\int_0^1\text{d}x_B\int_0^1\text{d}y_B \int_0^1\text{d}x_C \int_0^1\text{d}y_C \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
-If we evaluate this by numerical means we get $2.719\%$ which matches simulation.
+If we evaluate this by numerical means we get $2.723\%$ which matches simulation.
 
 ```mathematica
 
@@ -64,7 +64,8 @@ NIntegrate[
  , {xA, 0, 1}, {yA, 0, 1}
  , {xB, 0, 1}, {yB, 0, 1}
  , {xC, 0, 1}, {yC, 0, 1}
- , Method -> {"QuasiMonteCarlo", "Points" -> 100000000}
+ , Method -> "QuasiMonteCarlo"
+ , PrecisionGoal -> 20
 ]
 ```
 
