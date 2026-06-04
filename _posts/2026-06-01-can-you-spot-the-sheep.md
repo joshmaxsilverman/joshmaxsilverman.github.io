@@ -37,13 +37,23 @@ $$ \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\pi-\gamma\right). $$
 
 We have to average this over all possible positions for the three sheep. For small triangles, the geometry doesn't put much constaint on the permissible angles, but for large triangles, it's easier to be roughly equilateral than obtuse.
 
-Using the dot product, the angle $\theta$ is given by
+We can find this average at three levels of fidelity. 
+
+The first is to simply assume that each angle takes on the characteristic value of $\pi/3,$ an equilateral triangle. In this arrangement, the probability that any given sheep is validly oriented is $\left(2\pi/3\right)/2\pi = 2/3$ so that the probability all three are valid is $1/3^3 \approx 3.7\%.$ This is an overestimate because most triangles are not equilateral, and any departure from an equal split is less likely than this arrangement.
+
+The second thing we can do is average over all angular arrangements, making the radical assumption that all possible angle triples are uniformly distributed. This can be done analytically and, using the fact that $\theta+\beta+\gamma=\pi,$ we get
+
+$$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
+
+This comes out to $7/240 \approx 2.917\%$ which is only about $7\%$ too optimistic, again due to the overweighting of obtuse arrrangements.
+
+The third way is to do the averaging exactly. Using the dot product, we can express the angle $\theta$ in terms of the sheep coordinates like
 
 $$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mathbf{r}_C - \mathbf{r}_A\right)}{\lvert \mathbf{r}_B - \mathbf{r}_A\rvert\lvert \mathbf{r}_C - \mathbf{r}_A\rvert}, $$
 
 with similar formulas for $\beta$ and $\gamma.$ 
 
-Since $\theta+\beta+\gamma=\pi,$ we have, averaging over all possible positions,
+Averaging over all possible positions, and dividing by the total volume of $\left(\theta,\beta,\gamma\right)$-space, we get
 
 $$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_A \int_0^1\text{d}y_A\int_0^1\text{d}x_B\int_0^1\text{d}y_B \int_0^1\text{d}x_C \int_0^1\text{d}y_C \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
@@ -69,10 +79,8 @@ NIntegrate[
 ]
 ```
 
-We can also go for an analytic approximation, making the radical assumption that all possible angle triples are uniformly distributed.
+Looking at the distribution in $\theta,\beta$ space, and conditioning on the area of triangle, we see that smaller triangles have a more uniform distribution while large triangles overwhelmingly cluster around equilateral arrangements.
 
-$$ P \approx \dfrac{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta\, \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right)}{\displaystyle\int_0^1\text{d}\theta \int_0^{\pi-\theta}\text{d}\beta}. $$
-
-This comes out to $7/240 \approx 2.917\%$ which is only about $7\%$ too optimistic, likely due to the overweighting of obtuse arrrangements.
+![](/img/2026-06-04-fiddler-sheep-heatmaps.png){width="650 px" class="image-centered"}
 
 <br>
