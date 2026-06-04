@@ -72,20 +72,19 @@ rB = {xB, yB};
 rC = {xC, yC};
 
 θ = ArcCos[(rC-rA).(rB-rA) / (Norm[rC-rA] Norm[rB-rA])];
-γ = ArcCos[(rC-rB).(rA-rB) / (Norm[rC-rB] Norm[rA-rB])];
 β = ArcCos[(rB-rC).(rA-rC) / (Norm[rB-rC] Norm[rA-rC])];
 
 NIntegrate[
-  (π - θ) (π - β) (π - γ)
+  (π - θ) (π - β) (θ + β)
  , {xA, 0, 1}, {yA, 0, 1}
  , {xB, 0, 1}, {yB, 0, 1}
  , {xC, 0, 1}, {yC, 0, 1}
  , Method -> "QuasiMonteCarlo"
  , PrecisionGoal -> 20
-]
+] / (2 π)^3 
 ```
 
-Looking at the distribution in $\theta,\beta$ space, and conditioning on the area of triangle, we see that smaller triangles have a more uniform distribution while large triangles overwhelmingly cluster around equilateral arrangements.
+Looking at the distribution in $\left(\theta,\beta\right)$-space, and conditioning on the area of triangle, we see that smaller triangles have a more uniform distribution while large triangles overwhelmingly cluster around equilateral arrangements.
 
 ![](/img/2026-06-04-fiddler-sheep-heatmap-scale.png){:width="650 px" class="image-centered"}
 
