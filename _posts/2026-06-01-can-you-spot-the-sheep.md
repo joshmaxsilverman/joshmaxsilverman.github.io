@@ -43,7 +43,7 @@ $$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mat
 
 with similar formulas for $\beta$ and $\gamma.$ 
 
-Since $\theta+\beta+\gamma=\pi,$ we have
+Since $\theta+\beta+\gamma=\pi,$ we have, averaging over all possible positions,
 
 $$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_A \int_0^1\text{d}y_A\int_0^1\text{d}x_B\int_0^1\text{d}y_B \int_0^1\text{d}x_C \int_0^1\text{d}y_C \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
