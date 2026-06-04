@@ -39,9 +39,9 @@ We have to average this over all possible positions for the three sheep. For sma
 
 Using the dot product, the angle $\theta$ is given by
 
-$$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mathbf{r}_C - \mathbf{r}_A\right)}{\lvert \mathbf{r}_B - \mathbf{r}_A\rvert\lvert \mathbf{r}_C - \mathbf{r}_A\rvert}. $$
+$$ \theta = \arccos\frac{\left(\mathbf{r}_B - \mathbf{r}_A\right)\cdot\left(\mathbf{r}_C - \mathbf{r}_A\right)}{\lvert \mathbf{r}_B - \mathbf{r}_A\rvert\lvert \mathbf{r}_C - \mathbf{r}_A\rvert}, $$
 
-With similar formulas for $\beta$ and $\gamma.$ since $\theta+\beta+\gamma=\pi,$ we have
+with similar formulas for $\beta$ and $\gamma.$ Since $\theta+\beta+\gamma=\pi,$ we have
 
 $$ P = \dfrac{1}{\left(2\pi\right)^3}\int_0^1\text{d}x_A \int_0^1\text{d}y_A\int_0^1\text{d}x_B\int_0^1\text{d}y_B \int_0^1\text{d}x_C \int_0^1\text{d}y_C \left(\pi-\theta\right)\left(\pi-\beta\right)\left(\theta+\beta\right). $$
 
