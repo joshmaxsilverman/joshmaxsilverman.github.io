@@ -29,7 +29,7 @@ Any three locations we pick will make a triangle of sheep. They'll be able to se
 
 ![](/img/2026-06-03-fiddler-sheep-triangle.png){:width="500 px" class="image-centered"}
 
-For example, sheep A's boundary of vision can range from being parallel to the $\mathbf{r}_A - \mathbf{r}_B$ line to being parallel with the $\mathbf{r}_A - \mathbf{r}_C$ line. This is equal to $\left(\pi - \theta\right)$
+For example, sheep A's boundary of vision can range from being parallel to the $\left(\mathbf{r}_B - \mathbf{r}_A\right)$ line to being parallel with the $\left(\mathbf{r}_C - \mathbf{r}_A\right)$ line. This is equal to $\left(\pi - \theta\right)$
 
 The probability that all three sheep have a correct orientation is therefore proportional to
 
