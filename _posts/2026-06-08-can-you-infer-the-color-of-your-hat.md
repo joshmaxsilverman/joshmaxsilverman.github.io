@@ -67,24 +67,24 @@ from itertools import permutations
 from collections import defaultdict
 
 def can_solve(hats, gnomes):
-	states = list(set(permutations(hats, gnomes)))
-	for h in range(gnomes):
+  states = list(set(permutations(hats, gnomes)))
+  for h in range(gnomes):
 
-		state_tracker = defaultdict(lambda : list())
-		for s in states:
-			stem = tuple(s[i] for i in range(gnomes) if i != h)
-			state_tracker[stem] += [s]
+    state_tracker = defaultdict(lambda : list())
+    for s in states:
+      stem = tuple(s[i] for i in range(gnomes) if i != h)
+      state_tracker[stem] += [s]
 
-		next_states = list()
-		for k,v in state_tracker.items():
-			if len(v) > 1:
-				next_states += v
-		
-		states = next_states
+    next_states = list()
+    for k,v in state_tracker.items():
+      if len(v) > 1:
+        next_states += v
+        
+    states = next_states
 
-	if states:
-		return False
-	return True
+  if states:
+    return False
+  return True
 ```
 
 By playing around with bag compositions, we can find that the most voluminous bag possible is $\left(\text{W}, \text{R}, \text{R}, \text{B}, \text{B}, \text{B}, \text{B}\right)$ or one of its equivalent permutations. 
