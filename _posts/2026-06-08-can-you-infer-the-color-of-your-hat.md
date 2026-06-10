@@ -54,7 +54,7 @@ If $h_1$ and $h_2$ did not announce their hat color, then $h_3$ can rule out sce
 
 ### Extra credit
 
-The manual analysis above lays out a basic algorithm for making this determination in general:
+The manual analysis above lays out a simple algorithm for making this determination in general:
 
 - find all states that uniquely identify the current contestant's hat
 - remove them
