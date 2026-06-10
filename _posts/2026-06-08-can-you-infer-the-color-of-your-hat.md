@@ -1,13 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Can you infer the color of your hat?
 date: 2026/06/08
 subtitle: What hats should be in the bag so that you don't die?
 tags: logic game-theory
 source: fiddler
 kind: puzzle
-theme: probability
+theme: logic
 hide_from_recent : true
 ---
 
