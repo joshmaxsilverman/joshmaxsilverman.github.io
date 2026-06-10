@@ -63,13 +63,8 @@ Current bucket: [23, 5, 2]
 Current bucket: [23, 5, 2, 13]
 ```
 
-<<<<<<< Updated upstream
 Since $23+5+2+13$ equals the target amount $43,$ we start filling the next bucket back at the start of the list, skipping the numbers we've already used.
 We add the unused numbers one at a time until we exceed the target sum with `[17, 11, 7, 3]` which sums to $38.$ This is the end of the line so we're forced to backtrack, going all the way back down to $17$ and trying a new second number. 
-=======
-Next, we start filling the next bucket, skipping the numbers we've already used.
-We add the unused numbers one at a time until we run out of available numbers with `[17, 11, 7, 3]`, which sums to $38.$ Since we fall short of the target sum but have no more numbers to try, this is a dead end so we're forced to backtrack, going all the way back down to $17.$ 
->>>>>>> Stashed changes
 
 ```
 Bucket 0: [23, 5, 2, 13]
@@ -94,11 +89,7 @@ BACKTRACK
 Current bucket: [17]
 ```
 
-<<<<<<< Updated upstream
-From there we have an easier go of things and, adding the next two unused numbers $7$ and $19$ to the current bucket we complete the target sum. 
-=======
-From there we have an easier go of things; adding the next two unused numbers, $7$ and $19,$ to the current bucket completes it. 
->>>>>>> Stashed changes
+From there we have an easier go of things and, adding the next two unused numbers $7$ and $19$ to the current bucket, we complete the target sum. 
 
 ```
 Bucket 0: [23, 5, 2, 13]
@@ -113,17 +104,11 @@ Bucket 1: [17, 7, 19]
 Bucket 2: [11, 29, 3]
 ```
 
-<<<<<<< Updated upstream
 Because the numbers filled in so far are two thirds of the sum of the original list, we're guaranteed that the leftover numbers will hit the target sum. 
 
 To solve the problem, we can just run this algorithm for a given $N_j$ and a trial upper bound on the primes to use. If no solution returns it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
 
 Practically, for larger values of $N,$ I used several minutes as a proxy for "no solution returns" rather than wait for what still amounts to economized exhaustive search.
-=======
-Now, since the remaining numbers constitute the final third of the total sum, we are guaranteed that the leftover numbers will hit the target sum as well. 
-
-To solve the puzzle, we can just run this algorithm for a given $N$ and an upper bound on the primes to use. If no solution returns, it means that there is no equal partition for the primes at hand. But if there are solutions for the given upper bound, there are likely to be many of them. 
->>>>>>> Stashed changes
 
 ```python
 from sympy import prime
@@ -193,11 +178,7 @@ if solve(0, 0, 0):
 ```
 
 
-<<<<<<< Updated upstream
 For a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ The first value for which this is true is $57$ and, as it happens, this is a workable combo. If we run the algorithm above, we get the following (one of many such) solution:
-=======
-For a value of $N_6$ to be a candidate, the sum $\sum_{j=1}^{N_6} p_j$ must be divisible by $6.$ The first value for which this is true is $N_6=57$, and as it happens, this is a workable combo. If we run the algorithm below, we get the following (one of many such) solution:
->>>>>>> Stashed changes
 
 ```
 Bucket 1: [149, 103, 109, 61, 37, 43, 127, 3, 83, 19, 13, 173, 199, 7, 2, 17]
