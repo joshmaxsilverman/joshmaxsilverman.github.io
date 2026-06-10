@@ -35,7 +35,7 @@ Let's write down the state space for the contestant's hat arrangements.
 
 $$ 
 \begin{array}{c|c|c}
-	# & h_1 & h_2 & h_3 \\
+	 & h_1 & h_2 & h_3 \\ \hline
 	1 & \text{R} & \text{R} & \text{R} \\
 	2 & \text{R} & \text{R} & \text{W} \\
 	3 & \text{R} & \text{W} & \text{R} \\
@@ -87,7 +87,7 @@ def can_solve(hats, gnomes):
 	return True
 ```
 
-By playing around with bag compositions, we can find that the most voluminous bag possilbe is  `can_solve(1 * ['W'] + 2 * ['R'] + 4 * ['B'], 4)` or one of its equivalent permutations. 
+By playing around with bag compositions, we can find that the most voluminous bag possible is $\left(\text{W}, \text{R}, \text{R}, \text{B}, \text{B}, \text{B}, \text{B}\right)$ or one of its equivalent permutations. 
 
 <!-- Fundamentally, by the last turn, the group has to have eliminated all possibilites in the state space. For the first person to eliminate anything, there has to be one hat color that has $1$ more hat than the sum of the other hat counts. If this were not the case, then they would have no guarantee about their own hat color.  -->
 
