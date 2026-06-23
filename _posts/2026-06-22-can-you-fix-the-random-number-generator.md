@@ -61,8 +61,8 @@ With that in our possession, we can take the expectation of $a$ like
 
 $$ 
 	\begin{align}
-		\langle a\rangle &= \int_{\tfrac12}^1 \text{d}a\, a\, P(a\rvert x=\tfrac12) \\
-		&= \int_{\tfrac12}^1 \text{d}a\, \frac{1}{\log 2} \\
+		\langle a\rangle &= \int_{\tfrac12}^1 \text{d}a^\prime\, a^\prime\, P(a^\prime\rvert x=\tfrac12) \\
+		&= \int_{\tfrac12}^1 \text{d}a^\prime\, \frac{1}{\log 2} \\
 		&= \frac{1}{2\log 2} \\
 		&\approx 0.721348
 	\end{align} 
