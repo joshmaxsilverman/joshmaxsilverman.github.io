@@ -4,7 +4,7 @@ published: true
 title: Can you fix the random number generator?
 date: 2026/06/22
 subtitle: Based on your friend's cryptic revelations, what's the biggest possible number?
-tags: conditional-probability
+tags: conditional-probability bayes-rule
 source: fiddler
 kind: puzzle
 theme: probability
