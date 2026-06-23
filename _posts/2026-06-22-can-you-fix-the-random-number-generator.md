@@ -55,7 +55,7 @@ In the standard problem, we hear that the observed $x$ is equal to $\tfrac12.$ T
 
 Plugging that in to the expression, we get 
 
-$$ P(a\rvert x=\tfrac12) = \dfrac{P(x=\tfrac12\rvert a)}{\displaystyle\int_{\tfrac12}^1 \text{d}a^\prime P(x=\tfrac12\rvert a^\prime)} = \frac{1}{a\log 2}. $$
+$$ P(a\rvert x=\tfrac12) = \dfrac{P(x=\tfrac12\rvert a)}{\displaystyle\int_{\tfrac12}^1 \text{d}a^\prime\, P(x=\tfrac12\rvert a^\prime)} = \frac{1}{a\log 2}. $$
 
 With that in our possession, we can take the expectation of $a$ like
 
