@@ -64,7 +64,7 @@ $$
 		\langle a\rangle &= \int_{\tfrac12}^1 \text{d}a\, a P(a\rvert x=\tfrac12) \\
 		&= \int_{\tfrac12}^1 \text{d}a\, \frac{1}{\log 2} \\
 		&= \frac{1}{2\log 2} \\
-		&\approx 0.72134752 
+		&\approx 0.721348
 	\end{align} 
 $$
 
