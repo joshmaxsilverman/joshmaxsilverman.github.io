@@ -83,7 +83,7 @@ $$ P(x \leq \tfrac{1}{2}\rvert a) =
 Now, the integral in the denominator of $P(a\rvert x\leq \tfrac12)$ is
 
 $$ 
-	\int_0^{\tfrac12}\text{d}a + \int_{\tfrac12}^1\text{d}a\, \frac{1}{2a} = \frac12\left(1 + \log 2\right) 
+	\int_0^{\tfrac12}\text{d}a^\prime + \int_{\tfrac12}^1\text{d}a^\prime\, \frac{1}{2a^\prime} = \frac12\left(1 + \log 2\right) 
 $$
 
 and the expectation integral yields
