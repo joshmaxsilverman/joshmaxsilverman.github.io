@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Can you fix the random number generator?
 date: 2026/06/22
-subtitle: What hats should be in the bag so that you don't die?
+subtitle: Based on your friend's cryptic revelations, what's the biggest possible number?
 tags: conditional-probability
 source: fiddler
 kind: puzzle
@@ -83,11 +83,11 @@ $$ P(x \leq \tfrac{1}{2}\rvert a) =
 Now, the integral in the denominator of $P(a\rvert x\leq \tfrac12)$ is
 
 $$ 
-	\int_0^{\tfrac12}\text{d}a + \int_{\tfrac12}^1\text{d}a \frac{1}{2a} = \frac12 + \log 2 
+	\int_0^{\tfrac12}\text{d}a + \int_{\tfrac12}^1\text{d}a \frac{1}{2a} = \frac12\left(1 + \log 2\right) 
 $$
 
 and the expectation integral yields
 
-$$ \langle a\rangle = \frac34 \frac1{1 + 2\log 2} \approx 0.44743019 $$
+$$ \langle a\rangle = \frac34 \frac1{1 + \log 2} \approx 0.442962 $$
 
 <br>
