@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Can you infer the color of your hat?
 date: 2026/06/08
 subtitle: What hats should be in the bag so that you don't die?
