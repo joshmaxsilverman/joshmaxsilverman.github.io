@@ -47,7 +47,7 @@ $$ \frac{P(\text{knowledge about }x \rvert a)P(a)}{P(\text{knowledge about }x)}.
 
 which has three pieces. The distribution $P(a)$ is just $1,$ and the conditional probability $P(\text{knowledge about }x\rvert a)$ is easy to write down, but the distribution in the denominator is tricky. However, we can expand it in terms of the simple conditional probability in the numerator so that the final expression becomes
 
-$$ P(a\rvert \text{knowledge about }x) = \frac{P(\text{knowledge about }x \rvert a)P(a)}{\int \text{d}a\, P(\text{knowledge about }x\rvert a)P(a)}. $$
+$$ P(a\rvert \text{knowledge about }x) = \frac{P(\text{knowledge about }x \rvert a)P(a)}{\int \text{d}a^\prime\, P(\text{knowledge about }x\rvert a^\prime)P(a^\prime)}. $$
 
 ## Standard credit
 
@@ -55,13 +55,13 @@ In the standard problem, we hear that the observed $x$ is equal to $\tfrac12.$ T
 
 Plugging that in to the expression, we get 
 
-$$ P(a\rvert x=\tfrac12) = \dfrac{P(x=\tfrac12\rvert a)}{\displaystyle\int_{\tfrac12}^1 \text{d}a P(x=\tfrac12\rvert a)} = \frac{1}{a\log 2}. $$
+$$ P(a\rvert x=\tfrac12) = \dfrac{P(x=\tfrac12\rvert a)}{\displaystyle\int_{\tfrac12}^1 \text{d}a^\prime P(x=\tfrac12\rvert a^\prime)} = \frac{1}{a\log 2}. $$
 
 With that in our possession, we can take the expectation of $a$ like
 
 $$ 
 	\begin{align}
-		\langle a\rangle &= \int_{\tfrac12}^1 \text{d}a\, a P(a\rvert x=\tfrac12) \\
+		\langle a\rangle &= \int_{\tfrac12}^1 \text{d}a\, a\, P(a\rvert x=\tfrac12) \\
 		&= \int_{\tfrac12}^1 \text{d}a\, \frac{1}{\log 2} \\
 		&= \frac{1}{2\log 2} \\
 		&\approx 0.721348
@@ -83,7 +83,7 @@ $$ P(x \leq \tfrac{1}{2}\rvert a) =
 Now, the integral in the denominator of $P(a\rvert x\leq \tfrac12)$ is
 
 $$ 
-	\int_0^{\tfrac12}\text{d}a + \int_{\tfrac12}^1\text{d}a \frac{1}{2a} = \frac12\left(1 + \log 2\right) 
+	\int_0^{\tfrac12}\text{d}a + \int_{\tfrac12}^1\text{d}a\, \frac{1}{2a} = \frac12\left(1 + \log 2\right) 
 $$
 
 and the expectation integral yields
