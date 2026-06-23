@@ -45,7 +45,7 @@ That distribution is not too clear to find directly but, but it can be expressed
 
 $$ \frac{P(\text{knowledge about }x \rvert a)P(a)}{P(\text{knowledge about }x)}. $$
 
-which has three pieces. The distribution $P(a)$ is just $1,$ and the conditional probability $P(\text{knowledge about }x\rvert a)$ is easy to write down, but the prior distribution in the denominator is tricky. However, we can expand it in terms of the simple conditional probability in the numerator so that the final expression becomes
+which has three pieces. The distribution $P(a)$ is just $1,$ and the conditional probability $P(\text{knowledge about }x\rvert a)$ is easy to write down, but the distribution in the denominator is tricky. However, we can expand it in terms of the simple conditional probability in the numerator so that the final expression becomes
 
 $$ P(a\rvert \text{knowledge about }x) = \frac{P(\text{knowledge about }x \rvert a)P(a)}{\int \text{d}a\, P(\text{knowledge about }x\rvert a)P(a)}. $$
 
