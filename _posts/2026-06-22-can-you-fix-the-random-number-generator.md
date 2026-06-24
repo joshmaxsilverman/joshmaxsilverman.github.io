@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Can you fix the random number generator?
 date: 2026/06/22
-subtitle: Based on your friend's cryptic revelations, what's the biggest possible number?
+subtitle: Based on your friend's cryptic revelations, what's the biggest possible number, probably?
 tags: conditional-probability bayes-rule
 source: fiddler
 kind: puzzle
