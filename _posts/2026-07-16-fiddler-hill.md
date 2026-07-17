@@ -91,8 +91,7 @@ You can experiment with the effect of $G$ on the gradient of the hill.
       const plotWidth = basePlotWidth / G;
       canvas.width = marginL + plotWidth + marginR;
       
-      ctx.fillStyle = '#f4f4f4';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       const width = canvas.width - marginL - marginR;
       const height = canvas.height - marginT - marginB;
@@ -402,3 +401,10 @@ If we perform the exact integral instead of approximating, we end up with $\int_
       });
   }
 </script>
+
+<style>
+  /* Automatically invert canvas colors in dark mode while preserving the red/blue/gold hues */
+  html.theme-dark canvas {
+    filter: invert(1) hue-rotate(180deg);
+  }
+</style>
