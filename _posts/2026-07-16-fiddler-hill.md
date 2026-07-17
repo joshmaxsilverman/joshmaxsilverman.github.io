@@ -378,7 +378,7 @@ $$
 
 Because the maximum value of $\sin$ is $1,$ the maximum gradient is $G$ itself.
 
-If we perform the exact integral instead of approximating, we end up with $\int_0^\pi\text{d}t\sqrt{1 + G^2\sin^2 t} = 36 G $ which yields the exact answer $0.0874330020767798\ldots$ which is less than $0.1\%$ off the approximation.
+If we perform the exact integral instead of approximating, we end up with $\int_0^\pi\text{d}x\sqrt{1 + G^2\sin^2 x} = 36 G $ which yields the exact answer $0.0874330020767798\ldots$ which is less than $0.1\%$ off the approximation.
 
 <br>
 
