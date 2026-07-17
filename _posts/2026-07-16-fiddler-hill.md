@@ -4,7 +4,7 @@ published: true
 title: Can You Power Up The Hill?
 permalink: /2026-07-16-hhh/
 date: 2026/07/16
-subtitle: To champion cyclists, each optimized for a different facet of their sport, will tie if you can stretch the hill just so.
+subtitle: Two champion cyclists, each optimized for a different facet of their sport, will tie if you can stretch the hill just so.
 tags: optimization calculus
 ---
 
