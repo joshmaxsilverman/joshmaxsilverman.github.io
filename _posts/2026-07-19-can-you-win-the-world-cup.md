@@ -187,9 +187,6 @@ $$ (x^\text{opt}, y^\text{opt}, 1-x^\text{opt}-y^\text{opt}) \approx \left(0.519
 
 which gets a maximum win probability of $P(\text{win overall}) \approx 0.2816222513\dots$
 
-### Mathematica Implementation
-
-Since our symbolic integration avoids complex branch cuts, our final probability formula evaluates to a real number everywhere in the domain. Thus, we can directly ask Mathematica to derive the closed-form probabilities for each round and numerically maximize the overall win probability:
 
 {% raw %}
 ```mathematica
