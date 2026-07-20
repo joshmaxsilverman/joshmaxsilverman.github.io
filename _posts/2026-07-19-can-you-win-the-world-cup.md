@@ -277,6 +277,7 @@ Below we have the overall win probability surface $P(\text{Win Overall})$ as a f
     x: [0.519655],
     y: [0.229637],
     z: [0.290],
+    text: ['0.2816'],
     mode: 'markers',
     type: 'scatter3d',
     marker: {
@@ -285,7 +286,7 @@ Below we have the overall win probability surface $P(\text{Win Overall})$ as a f
       symbol: 'circle'
     },
     name: 'Optimal Strategy',
-    hovertemplate: 'Optimal<br>x: %{x:.3f}<br>y: %{y:.3f}<br>Probability: %{z:.4f}<extra></extra>'
+    hovertemplate: 'Optimal<br>x: %{x:.3f}<br>y: %{y:.3f}<br>Probability: %{text}<extra></extra>'
   };
   Plotly.newPlot('plotly-win-prob', [surfaceData, maxPoint], layout, {responsive: true, scrollZoom: false});
 </script>
