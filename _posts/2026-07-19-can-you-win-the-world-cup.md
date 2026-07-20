@@ -10,7 +10,21 @@ hide_from_recent : false
 
 >**Question**
 > 
-> Can you win the world cup?
+> Congratulations to Fiddler Nation for making it to the semifinals of the World Cup! All four teams that made it this far are equally matched in that they each possess the same total amount of "energy." In advance of each semifinal game, teams must independently decide how much of their energy to allocate to the match; all remaining energy goes toward the finals. The team that spends *more* energy in any given game will win. The semifinals and finals occur so close in time that teams can't recuperate any of their energy in between.
+> 
+> You've heard that the managers for the other three teams are abysmal and have no idea how to allocate their teams' energy. Each of the other managers will independently pick a random percentage between $0$ and $100$ and allocate that portion of their team's energy to the semifinal game; the rest of that team's energy will go toward the final.
+> 
+> Since you're the cleverest manager of the bunch, you can choose an optimal strategy that will maximize Fiddler Nation's probability of winning the World Cup. What is this optimal probability?
+> 
+> **Extra Credit**
+> 
+> As it turns out, I spoke too soon. Fiddler Nation has made it to the *quarter*finals of the World Cup rather than the *semi*finals. My mistake. As before, teams must allocate the same total amount of energy across up to three matches.
+> 
+> The managers for the other seven teams remain abysmal. Each manager will independently pick a random percentage between $0$ and $100$ and allocate that amount of their team's energy to the quarterfinal. If they win, they will allocate a random amount of their remaining energy to the semifinal. And if they win *that*, the rest of their team's energy will go toward the final.
+> 
+> Fiddler Nation's strategy must be drawn up in advance, with no specific knowledge of the other teams' strategies beyond what I have already shared.
+> 
+> That said, as the cleverest manager of the bunch you can once again choose an optimal strategy that will maximize Fiddler Nation's probability of winning the World Cup. What is this optimal probability?
 
 <!--more-->
 
@@ -23,11 +37,11 @@ The smart manager's team wins if it wins in all three rounds, so our approach wi
 
 ### The first round
 
-In the first round, we play $x$ and our opponent is a random number between $0$ and $1.$ The probability that they lose to us is just $x.$
+In the first round, we play a chosen amount $x$ and our opponent is a random number between $0$ and $1.$ The probability that they lose to us is just $x.$
 
 ### The second round
 
-In the second round, we play against the winner of another first round match. We should expect this number to bias toward small numbers and away from large numbers, since they already spent some energy winning the first round. 
+In the second round, we play a chosen amount $y$ against the winner of another first round match. We should expect this number to bias toward small numbers and away from large numbers, since they already spent some energy winning the first round. 
 
 We can find this probability using the connection between CDFs and PDFs
 
