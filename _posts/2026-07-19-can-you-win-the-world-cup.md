@@ -74,7 +74,7 @@ And the probability the smart manager wins the second round is
 $$ 
 	\begin{align}
 		P(\text{win second round}) &= \int_0^1 \text{d}z\, P(y \gt zr) P(z) \\
-			&= \int_0^y \text{d}z\, 2(1-z) + \int_y^1 \frac{y}{z}2(1-z) \\
+			&= \int_0^y \text{d}z\, 2(1-z) + \int_y^1 \text{d}z\, \frac{y}{z}2(1-z) \\
 			&= y^2 - 2y\log y
 	\end{align}
 $$
