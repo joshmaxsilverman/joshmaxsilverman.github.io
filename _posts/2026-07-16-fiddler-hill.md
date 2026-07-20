@@ -6,6 +6,7 @@ permalink: /2026-07-16-hhh/
 date: 2026/07/16
 subtitle: Two champion cyclists, each optimized for a different facet of their sport, will tie if you can stretch the hill just so.
 tags: optimization calculus
+hide_from_recent : true
 ---
 
 > **Question**: This time, we’ll be looking at a model for a cyclist’s speed $v$ as a function of their pedaling power $P$, their mass $m$, and the ground’s angle of inclination $\theta$:
