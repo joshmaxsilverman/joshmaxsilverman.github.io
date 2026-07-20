@@ -97,31 +97,37 @@ $$
 
 The distributions for $a$ and $g$ are what we found in the second round, $P(a) = 2(1-a)$ and $P(g)=2(1-g).$
 
-Evaluating the integral results in the magnificent expression
+Evaluating the integral results in the magnificent expression for the CDF of the opponent's remaining energy:
 
 $$
 \begin{aligned}
 &P(\text{opposing bracket winner's remaining energy} \leq c) = \\
-&\quad \frac{1}{3} \Bigg( c^4 - 20 c^2 + 22 c + 2 \pi^2 c^2 + 2 \ln(1-c) - 12 c \ln(1-c) + 6 c^2 \ln(1-c) \\
-&\quad\quad + 4 c^3 \ln(1-c) + 6 c^2 \ln c - 4 c^3 \ln c + 12 i \pi c^2 \ln c - 12 c^2 \ln^2 c - 12 c^2 \text{Li}_2\left(\frac{1}{c}\right) \Bigg)
+&\quad \frac{1}{3} \Bigg( 8c^3 \text{arctanh}(1-2c) + 2(3c^2 - 6c + 1)\ln(1-c) \\
+&\quad\quad + c\Big(c^3 + 2c(\pi^2 - 10) + 6c(1 - 2\ln c)\ln c + 22\Big) - 12c^2 \Re\left(\text{Li}_2\left(\frac{1}{c}\right)\right) \Bigg)
 \end{aligned}
 $$
 
-Taking the derivative with respect to $c$ we get the next magnificent expression
-
-$$ P(c) = \frac{4}{3} \left( 5 - 6c + c^3 + 6c^2 \text{arctanh}(1 - 2c) - 3\ln(1 - c)(1 + 2c\ln c) + 6c \text{Li}_2\left(\frac{c-1}{c}\right) \right). $$
-
-Now, we simply have to evaluate the integral for $P(\text{win round three}).$ The smart manager wins when $1-x-y > c$ so
+Now, we simply have to evaluate the probability to win the third round. The smart manager wins when $1-x-y > c,$ so we integrate the PDF over the winning range. However, since the PDF is simply the derivative of the CDF we just found, and evaluating the CDF at $0$ yields $0,$ this integral evaluates exactly to the CDF evaluated at $1-x-y:$
 
 $$ 
 	\begin{align}
 		P(\text{win round three}) &= \int_0^1\text{d}c\, P(1-x-y>c)P(c) \\
 		&= \int_0^{1-x-y}\text{d}c\, P(c) \\
-		&= \frac{1}{3} \Bigg( (x+y-1) \Big( (x+y)^3 - 3(x+y)^2 - 17(x+y) - 3 \Big) \\
-		&\quad + 2(x+y-1)^2 \ln(1-x-y) \Big( 1 + 2(x+y) - 6\ln(x+y) \Big) \\
-		&\quad - 2(x+y)\Big( 2(x+y)^2 - 9(x+y) + 6 \Big)\ln(x+y) \\
-		&\quad + 12(x+y-1)^2 \text{Li}_2\left(1 - \frac{1}{1-x-y}\right) \Bigg)
+		&= \int_0^{1-x-y}\text{d}c\, \frac{\text{d}}{\text{d}c} P(\text{opponent energy} \leq c) \\
+		&= P(\text{opponent energy} \leq 1-x-y)
 	\end{align}
+$$
+
+Plugging $c = 1-x-y$ into our CDF yields the win probability for round three:
+
+$$
+\begin{aligned}
+&P(\text{win round three}) = \\
+&\quad \frac{1}{3} \Bigg( 8(1-x-y)^3 \text{arctanh}(2x+2y-1) + 2\big(3(1-x-y)^2 - 6(1-x-y) + 1\big)\ln(x+y) \\
+&\quad\quad + (1-x-y)\Big((1-x-y)^3 + 2(1-x-y)(\pi^2 - 10) \\
+&\quad\quad\quad + 6(1-x-y)\big(1 - 2\ln(1-x-y)\big)\ln(1-x-y) + 22\Big) \\
+&\quad\quad - 12(1-x-y)^2 \Re\left(\text{Li}_2\left(\frac{1}{1-x-y}\right)\right) \Bigg)
+\end{aligned}
 $$
 
 <!-- ### Opponent Remaining Energy Densities
@@ -175,30 +181,59 @@ $$ P(\text{win overall}) = P(\text{win round one}) \cdot P(\text{win round two})
 
 This gives us a surface in the space of strategies $(x,y).$ We can find its maximum by finding the point where the partial derivatives in each direction are both equal to zero.
 
-<!-- By taking the partial derivatives with respect to $x$ and $y$ and setting them to zero, we can find the exact analytical maximum using Mathematica's `FindInstance` root-finding algorithm: -->
-
 Doing that, we get
 
 $$ (x^\text{opt}, y^\text{opt}, 1-x^\text{opt}-y^\text{opt}) \approx \left(0.5196555337, 0.2296375664, 0.2507068997\right), $$
 
 which gets a maximum win probability of $P(\text{win overall}) \approx 0.2816222513\dots$
 
-To avoid spurious issues from the polylogarithm, we explicitly expand the real part before root finding the partial derivatives:
+### Mathematica Implementation
+
+Since our symbolic integration avoids complex branch cuts, our final probability formula evaluates to a real number everywhere in the domain. Thus, we can directly ask Mathematica to derive the closed-form probabilities for each round and numerically maximize the overall win probability:
 
 {% raw %}
 ```mathematica
-maxSol = FindInstance[{
-  ComplexExpand@Re@D[pWinOverall, x] == 0
-  , ComplexExpand@Re@D[pWinOverall, y] == 0
-  , 0.001 < x < 1
-  , 0.001 < y < 1
-  , x + y < 1
-	}
-  , {x, y}
-  , WorkingPrecision -> 30
+(* CDF of c *)
+
+CDFc = FullSimplify[
+  ComplexExpand[Re[
+    2 * Integrate[
+      2 (1 - a) * 2 (1 - g) * (1/a) * (1/g)
+      , {a, 0, 1}
+      , {g, 0, 1}
+      , {ap, Max[a - c, 0], a}
+      , {gp, 0, Min[ap, g]}
+      , Assumptions -> {0 < c < 1}
+    ]
+  ]], 
+  Assumptions -> {0 < c < 1}
 ];
 
-max = Re[pWinOverall /. First@maxSol]
+
+(* round by round probabilities *)
+
+pWinFirstRound = x;
+
+pWinSecondRound = y * (y - 2 * Log[y]);
+
+pWinThirdRound = FullSimplify[
+  (CDFc /. {c -> 1 - x - y}) - Limit[CDFc, c -> 0]
+];
+
+
+(* overall win probability *)
+
+pWinOverall = FullSimplify[pWinFirstRound * pWinSecondRound * pWinThirdRound];
+
+
+(* optimize *)
+
+NMaximize[{
+  pWinOverall,
+  1/1000 < x < 1,
+  1/1000 < y < 1,
+  1/1000 < x + y < 1
+}, {x, y}, WorkingPrecision -> 15]
 ```
 {% endraw %}
 
