@@ -43,7 +43,7 @@ In the first round, we play a chosen amount $x$ and our opponent is a random num
 
 In the second round, we play a chosen amount $y$ against the winner of another first round match. We should expect this number to bias toward small numbers and away from large numbers, since they already spent some energy winning the first round. 
 
-We can find this probability using the connection between CDFs and PDFs
+We can find this probability using the [connection between CDFs and PDFs](https://joshmaxsilverman.github.io/2026-05-11-fiddler-randomade/#:~:text=on%20average.-,Demonstration,-of%20the%20useful)
 
 $$ P(\text{first round winner has }z\text{ left}) = \frac{\text{d}}{\text{d}z} P(\text{first round winner has }\leq z\text{ left}). $$
 
