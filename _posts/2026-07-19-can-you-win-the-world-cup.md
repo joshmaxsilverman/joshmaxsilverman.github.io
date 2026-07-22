@@ -145,6 +145,8 @@ $$ (x^\text{opt}, y^\text{opt}, 1-x^\text{opt}-y^\text{opt}) \approx \left(0.519
 
 which gets a maximum win probability of $P(\text{win overall}) \approx 0.2816222513\dots$
 
+Counterintuitively, we should hold on to more energy for the final round than for the second to last round, even though the opponent has less energy than they had in the second round. This is because in the last round they spend everything they have left, no matter what. We have to hedge to account for the fact that they'll be going for broke.
+
 
 {% raw %}
 ```mathematica
