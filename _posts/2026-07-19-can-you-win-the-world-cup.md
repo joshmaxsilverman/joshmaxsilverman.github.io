@@ -95,7 +95,7 @@ $$ \begin{align}
 	\end{align} 
 $$
 
-The distributions for $a$ and $g$ are what we found in the second round, $P(a) = 2(1-a)$ and $P(g)=2(1-g).$
+The distributions for $a$ and $g$ are just what we found in the second round, $P(a) = 2(1-a)$ and $P(g)=2(1-g).$
 
 Evaluating the integral results in the magnificent expression for the CDF of the opponent's remaining energy:
 
@@ -107,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-Now, we simply have to evaluate the probability to win the third round. The smart manager wins when $1-x-y > c,$ so we integrate the PDF over the winning range. However, since the PDF is simply the derivative of the CDF we just found, and evaluating the CDF at $0$ yields $0,$ this integral evaluates exactly to the CDF evaluated at $1-x-y:$
+Now, we have to evaluate the probability to win the third round. The smart manager wins when $1-x-y > c,$ so we integrate the PDF over the winning range. Because the PDF is the derivative of the CDF we just found, and evaluating the CDF at $0$ yields $0,$ this integral is simply the CDF evaluated at $1-x-y:$
 
 $$ 
 	\begin{align}
@@ -118,7 +118,7 @@ $$
 	\end{align}
 $$
 
-Plugging $c = 1-x-y$ into our CDF yields the win probability for round three:
+Plugging $c = 1-x-y$ into the CDF yields the win probability for round three:
 
 $$
 \begin{aligned}
@@ -130,48 +130,6 @@ $$
 \end{aligned}
 $$
 
-<!-- ### Opponent Remaining Energy Densities
-
-The probability densities for the remaining energy of the opponents are:
-* **Round 2 Opponent ($z'$):** $P(z') = 2(1-z')$
-* **Round 3 Opponent ($c$):**
-
-The density $P(c)$ for the finalist is derived from the remaining energies of the two semifinalists, $a$ and $g$, which have densities $2(1-a)$ and $2(1-g)$. Because the semifinalists draw their bids uniformly from their *remaining* energy ($1/a$ and $1/g$), their conditional survival heavily alters the distribution of $c$. 
-
-We can first define the probability that the finalist has *at least* $c$ energy remaining (i.e. the survival function). Since the finalist is chosen by the maximum of the two semifinalists' bids, the Fiddler wins this round if the winner's remaining energy ($a - a^\prime$ or $g - g^\prime$) is greater than $c$. Integrating over the 4D joint probability volume yields the survival function $S(c)$ shown above.
-
-The exact density $P(c)$ is the negative derivative of the survival function, $P(c) = -\frac{d}{dc} S(c)$. Evaluating this analytically yields the following exact, closed-form density:
-
-$$ P(c) = \frac{4}{3} \left( 5 - 6c + c^3 + 6c^2 \text{arctanh}(1 - 2c) - 3\ln(1 - c)(1 + 2c\ln c) + 6c \text{Li}_2\left(\frac{c-1}{c}\right) \right) $$
-
-where $\text{Li}_2$ is the Dilogarithm function.
-
-### Expected Win Probabilities per Round
-Integrating the conditional probabilities over the opponent densities gives the overall win probability for each round:
-
-**First Round Win Probability:**
-
-$$ P(\text{win round one}) = x $$
-
-**Semi-Final (Second Round) Win Probability:**
-
-$$ P(\text{win round two}) = \int_0^1 P(z') P(y > \text{Opponent}) \, dz' = y^2 - 2y \ln(y) $$
-
-**Final (Third Round) Win Probability:**
-In the final round, your opponent has no reason to conserve energy, so they will unconditionally *dump* all of their remaining energy $c$. Thus, if your allocated energy is $z = 1-x-y$, the probability of winning is simply the Cumulative Distribution Function (CDF) of $c$:
-
-$$ P(\text{win round three}) = \int_0^{1-x-y} P(c) \, dc $$
-
-This evaluates analytically to a massive algebraic expression involving PolyLogarithms:
-
-$$
-\begin{aligned}
-P(\text{win round three}) &= \frac{1}{3} \Bigg( (x+y-1) \Big( (x+y)^3 - 3(x+y)^2 - 17(x+y) - 3 \Big) \\
-&\quad + 2(x+y-1)^2 \ln(1-x-y) \Big( 1 + 2(x+y) - 6\ln(x+y) \Big) \\
-&\quad - 2(x+y)\Big( 2(x+y)^2 - 9(x+y) + 6 \Big)\ln(x+y) \\
-&\quad + 12(x+y-1)^2 \text{Li}_2\left(1 - \frac{1}{1-x-y}\right) \Bigg)
-\end{aligned}
-$$ -->
 
 ### Overall Win Probability
 
