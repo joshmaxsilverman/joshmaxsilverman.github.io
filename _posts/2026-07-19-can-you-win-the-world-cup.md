@@ -41,13 +41,13 @@ In the first round, we play a chosen amount $x$ and our opponent is a random num
 
 ### The second round
 
-In the second round, we play a chosen amount $y$ against the winner of another first round match. We should expect this number to bias toward small numbers and away from large numbers, since they already spent some energy winning the first round. 
+In the second round, we play a chosen amount $y$ against the winner of another first round match. We should expect this number to bias toward small numbers and away from large numbers, since they've already spent some energy winning the first round. 
 
 We can find this probability using the [connection between CDFs and PDFs](https://joshmaxsilverman.github.io/2026-05-11-fiddler-randomade/#:~:text=on%20average.-,Demonstration,-of%20the%20useful)
 
 $$ P(\text{first round winner has }z\text{ left}) = \frac{\text{d}}{\text{d}z} P(\text{first round winner has }\leq z\text{ left}). $$
 
-The first round winner has $z$ or less left when one minus the max of the first round energies was less than $z:$
+The first round winner has $z$ or less left when one minus the max of the first round energies was less than $z.$ In other words, neither of the first round competitors picked a random number between $z$ and $1:$
 
 $$ 
 	\begin{align}
@@ -56,7 +56,7 @@ $$
 	\end{align} 
 $$
 
-Taking the derivative with respect to $z$ we get
+Taking the derivative of the CDF with respect to $z$ we get
 
 $$ 
 	\begin{align}
@@ -65,7 +65,7 @@ $$
 	\end{align}
 $$
 
-If the smart manager's second round opponent has $z$ energy left going into the second round, they will again play a random amount of what they have left. So they will play $zr,$ where $r$ is another random unit number, and the smart manager wins when $y \gt zr.$
+If the smart manager's second round opponent has energy $z$ left going into the second round, they will again play a random amount of what they have left. So they will play $zr,$ where $r$ is another random unit number, and the smart manager wins when $y \gt zr.$
 
 $$ P(y \gt zr) = \begin{cases} 1 & \text{if } z < y \\ \frac{y}{z} & \text{if } z \ge y \end{cases} $$
 
@@ -85,9 +85,9 @@ In the third round, there is no choice left since the smart manager's remaining 
 
 $$ P(\text{win third round}) = \int_0^1 \text{d}c\, P(1-x-y \gt c)P(c). $$
 
-To find $P(c)$ let's assume that the opposing bracket has $4$ players $\alpha, \beta, \gamma,$ and $\delta$ and that $\alpha$ and $\gamma$ face off in the quarterfinal match, with $\alpha$ winning. Team $\alpha$ exits the first round with energy $a$ and team $\gamma$ enters with energy $g.$ Team $\alpha$ emerges with remaining energy $c$ if the amount they spent in the second round is $a^\prime = a-c,$  and they spent more than team $\gamma$: $a^\prime \gt g^\prime.$ We need to average the probability of this outcome over all possible values of $a, g, a^\prime,$ and $g^\prime.$
+To find $P(c)$ let's assume that the opposing bracket has $4$ players $\alpha, \beta, \gamma,$ and $\delta$ and that $\alpha$ and $\gamma$ face off in the quarterfinal match, with $\alpha$ winning. Team $\alpha$ exits the first round with energy $a$ and team $\gamma$ exits with energy $g.$ Team $\alpha$ goes into the final round with remaining energy $c$ if the amount they spent in the second round is $a^\prime = a-c,$ and they spent more than team $\gamma$: $a^\prime \gt g^\prime.$ We need to average the probability of this outcome over all possible values of $a, g, a^\prime,$ and $g^\prime.$
 
-Again, it is easier to use the CDF/PDF connection than to find the PDF directly, so we will account for cases where the remaining energy is less than or equal to $c$ and take the derivative
+Again, it is easier to use the CDF/PDF connection than to find the PDF directly, so we will account for all possible cases where the remaining energy is less than or equal to $c$ and take the derivative. Team $\alpha$ can use any amount of energy from $0$ up to $a-c$ (cutting off at zero if $a - c \lt 0$) and team $\gamma$ can use any amount from $0$ up to $a^\prime$ (the amount played by $\alpha$) unless $a^\prime$ exceeds $g.$ We account for all possible values of $f$ and $g$. Finally, we multiply by $2$ to account for the arbitrary choice of $\alpha$ as the winner:
 
 $$ \begin{align}
 		&P(\text{opposing bracket winner's remaining energy} \leq c) = \\
