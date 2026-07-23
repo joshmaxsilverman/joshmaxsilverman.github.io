@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Can You Win The World Cup?
+title: Can you win the World Cup?
 date: 2026/07/19
 subtitle: How well can you win when you're the only one with a plan?
 tags: cdf survival game-theory
