@@ -54,13 +54,18 @@ The probability distribution of the maximum surplus $y$ is the probability that 
 
 That is 
 
-$$ P(\max_i y_i = y) = N\left[\int_{-\infty}^y \text{d}y^\prime \phi(y^\prime)\right]^{N-1} \phi(y) \, \text{d}y. $$
+$$ P(\max_i y_i = y) = N\left[\int_{-\infty}^y \text{d}y^\prime \phi(y^\prime)\right]^{N-1} \phi(y). $$
 
 For ease of writing, we will call the bracketed integral $\Phi(y).$
 
 So, the expected maximum surplus is
 
-$$ y_\text{max} = N\int_{-\infty}^\infty \text{d}y\,  \Phi(y)^{N-1}\phi(y) y, $$
+$$ 
+	\begin{align}
+		y_\text{max} &= \int_{-\infty}^\infty \text{d}y\, P(\max_i y_i = y) y \\
+		&= N\int_{-\infty}^\infty \text{d}y\,  \Phi(y)^{N-1}\phi(y) y,
+	\end{align} 
+$$
 
 and the expected maximum win count is
 
