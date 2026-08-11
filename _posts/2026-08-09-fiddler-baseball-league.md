@@ -185,11 +185,12 @@ We picked $y_0$ to that $\Phi(y_0) = 1-1/N$ so $y_0 = \Phi^{-1}(1-1/N).$ For the
 
 To see how the winner stands out from the crowd as the number of teams grows, holding to the pattern that each team plays $5$ games against each other team, so that $G=5(N-1),$ we can plot the result as a winning percentage along with a $500,000$ trial simulation and the numerical integral. We see excellent agreement as the number of teams grows.
 
-We also see that, somewhat counterintuitively, the best team gets worse and worse as the competition intensifies. Even though there are more oponents to overcome, the crushing regularity of a large number of coin flips means that all teams are stuck close to the mean. As the number of teams grows toward infinity, the expected maximum decays toward $50\%.$
-
 ![](/img/2026-08-09-fiddler-baseball-theory-sim.png){:width="450 px" class="image-centered"}
 
-If, instead, we scale the number of teams, but hold the number of games played constant at $145$ we do indeed see the winning teams win total grow with $N$ though rather slowly. Also, the fidelity of the normal approximation no longer increases with scale since that is tied to the number of games.
+We also see that, somewhat counterintuitively, the best team gets worse and worse as the competition intensifies. Even though there are more oponents to overcome, the crushing regularity of a large number of coin flips means that all teams are stuck close to the mean. As the number of teams grows toward infinity, the expected maximum decays toward $50\%.$
+
+
+If, instead, we scale the number of teams, but hold the number of games played constant at $145,$ we do indeed see the winning teams win total grow with $N$ though rather slowly. Also, the fidelity of the normal approximation no longer increases with scale since that is tied to the number of games.
 
 ![](/img/2026-08-09-fiddler-baseball-theory-sim-constant-games.png){:width="728 px" class="image-centered"}
 
