@@ -29,8 +29,8 @@ hide_from_recent: false
 Though the games are discrete events, each team plays enough that their distribution is pretty well approximated by the continuous counterpart. The plan is to 
 
 - approximate the win total for each team by the normal distribution with matching mean and variance
-- find the probability that all but one win total is less than $y$
-- find the average of $y$
+- find the probability that all but one win total is less than $w_\text{max}$
+- find the expected value of $w_\text{max}$
 
 In doing this, we'll run into a nasty integrals of CDFs raised to high powers that we'll get around through approximation.
 
