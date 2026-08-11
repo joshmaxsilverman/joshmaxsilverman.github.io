@@ -5,7 +5,7 @@ title: Gaussian skiers
 date: 2021/01/24
 subtitle: How safe are you for winning the first heat?
 source: fivethirtyeight
-tags: scaling approximation
+tags: scaling approximation gumbel-distribution
 theme: probability
 ---
 
