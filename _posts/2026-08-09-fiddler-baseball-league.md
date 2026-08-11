@@ -36,7 +36,7 @@ In doing this, we'll run into a nasty integrals of CDFs raised to high powers th
 
 ### Normalized teams
 
-Each team plays $G = 145$ games and has probability $p = \tfrac12$ to win each one. This means that the expected numbers of wins is $\mu = \tfrac12\cdot G = 72.5$ and the variance is $\sigma^2 = Gp(1-p) = \tfrac14 \cdot 145 = 36.25.$ Since the number of games is large, we can approximate the distribution as a binomial with the same mean and variance $\phi(y) = \mathcal{N}(y\rvert \mu, \sigma).$
+Each team plays $G = 145$ games and has probability $p = \tfrac12$ to win each one. This means that the expected numbers of wins is $\mu = \tfrac12 G = 72.5$ and the variance is $\sigma^2 = Gp(1-p) = \tfrac14 \cdot 145 = 36.25.$ Since the number of games is large, we can approximate the distribution as a binomial with the same mean and variance $\phi(y) = \mathcal{N}(y\rvert \mu, \sigma).$
 
 So, we can write the number of wins as the mean $\mu$ plus a random normal variable $y_i$ times the width of the distribution
 
