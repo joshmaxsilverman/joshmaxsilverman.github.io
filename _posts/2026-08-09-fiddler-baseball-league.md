@@ -5,6 +5,9 @@ title: How lucky can a baseball team get?
 date: 2026/08/09
 subtitle: When every team is the same, how best is the best?
 tags: approximation expectation variance
+source: fiddler
+kind: puzzle
+theme: probability
 hide_from_recent: false
 ---
 
