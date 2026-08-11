@@ -5,7 +5,10 @@ title: Can you win the World Cup?
 date: 2026/07/19
 subtitle: How well can you win when you're the only one with a plan?
 tags: cdf survival game-theory
-hide_from_recent : false
+source: fiddler
+kind: puzzle
+theme: probability
+hide_from_recent: false
 ---
 
 >**Question**
