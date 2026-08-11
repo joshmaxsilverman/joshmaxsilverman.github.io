@@ -146,8 +146,8 @@ Now the real issue is that $\overline{\Phi}(y)$ is hard to integrate, so we need
 
 $$ 
 	\begin{align}
-		\log \overline{\Phi}(y) &\approx \overline{\Phi}(y_0) + (y-y_0)\frac{\text{d}}{\text{d}y}\log\overline{\Phi}(y)\bigg\rvert_{y=y_0} \\
-		&\approx \overline{\Phi}(y_0) + (y-y_0)\frac{-\phi(y_0)}{\overline{\Phi}(y_0)}
+		\log \overline{\Phi}(y) &\approx \log\overline{\Phi}(y_0) + (y-y_0)\frac{\text{d}}{\text{d}y}\log\overline{\Phi}(y)\bigg\rvert_{y=y_0} \\
+		&\approx \log\overline{\Phi}(y_0) + (y-y_0)\frac{-\phi(y_0)}{\overline{\Phi}(y_0)}
 	\end{align}
 $$
 
