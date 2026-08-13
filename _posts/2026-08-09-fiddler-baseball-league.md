@@ -26,19 +26,21 @@ hide_from_recent: false
 
 ## Solution
 
-Though the games are discrete events, each team plays enough that their distribution is pretty well approximated by the continuous counterpart. The plan is to 
+Though the games are discrete events, each team plays enough of them that their distribution is pretty well approximated by its continuous counterpart. 
 
-- approximate the win total for each team by the normal distribution with matching mean and variance
-- find the probability that all but one win total is less than $w_\text{max}$
-- find the expected value of $w_\text{max}$
+Since each team plays $G = 145$ games and has probability $p = \tfrac12$ to win each one, the mean of this distribution is $\mu = \tfrac12 G = 72.5$ wins and the variance is $\sigma^2 = Gp(1-p) = \tfrac14 \cdot 145 = 36.25$ wins squared. 
 
-In doing this, we'll run into a nasty integrals of CDFs raised to high powers that we'll get around through approximation.
+With this in hand, our plan will be to 
+
+- approximate the win total for each team by the normal distribution with matching mean $\mu$ and variance $\sigma^2$
+- find the probability that all but one of the win totals is less than $w_\text{max}$
+- use that to find the expected value of $w_\text{max}$
+
+In doing this, we'll run into a nasty integral of CDFs raised to a high power that we will get around through tasteful approximation.
 
 ### Normalized teams
 
-Each team plays $G = 145$ games and has probability $p = \tfrac12$ to win each one. This means that the expected numbers of wins is $\mu = \tfrac12 G = 72.5$ and the variance is $\sigma^2 = Gp(1-p) = \tfrac14 \cdot 145 = 36.25.$ Since the number of games is large, we can approximate the distribution as a binomial with the same mean and variance $\phi(y) = \mathcal{N}(y\rvert \mu, \sigma).$
-
-So, we can write the number of wins as the mean $\mu$ plus a random normal variable $y_i$ times the width of the distribution
+Since the number of games is large, we can approximate the distribution as a binomial with the same mean and variance $\phi(y) = \mathcal{N}(y\rvert \mu, \sigma).$ So, we can write the number of wins as the mean $\mu$ plus a random normal variable $y_i$ times the width of the distribution
 
 $$ w_i = \mu + \sigma y_i, $$
 
@@ -50,15 +52,13 @@ This means we'll be thinking about the maximum surplus relative to the mean, rat
 
 ### Expected maximum
 
-The probability distribution of the maximum surplus $y$ is the probability that $(N-1)$ of the teams win less than the realized maximum surplus times the probability that the maximum surplus has value $y$ times $N$ since there are $N$ possible winners.
+The probability distribution of the maximum surplus $y$ is equal to the probability that $(N-1)$ of the teams win less than the maximum surplus $y$ times the probability that the maximum surplus has value $y$ times $N$ since there are $N$ possible winners.
 
 That is 
 
 $$ P(\max_i y_i = y) = N\left[\int_{-\infty}^y \text{d}y^\prime \phi(y^\prime)\right]^{N-1} \phi(y). $$
 
-For ease of writing, we will call the bracketed integral $\Phi(y).$
-
-So, the expected maximum surplus is
+For ease of writing, we will call the bracketed integral $\Phi(y),$ so the expected maximum surplus is
 
 $$ 
 	\begin{align}
@@ -75,7 +75,7 @@ We can evaluate the integral numerically but, before we do, we have to correct f
 
 ### Variance correction
 
-The variance for the win total of a team is $\langle\left(w_i - \overline{w}\right)^2\rangle.$ In the real league, $\overline{w}$ is a constant because every game won by some team is lost by another. But in the normal variables, there is no such constraint. This means that there is correlation between the mean and the variables. Writing out the mean, we can see 
+The variance of the win total of any given team is $\langle\left(w_i - \overline{w}\right)^2\rangle.$ In the real league, $\overline{w}$ is a constant because every game won by some team is lost by another. But with the normal variables we use to model the win totals, there is no such constraint. This means that there is correlation between the mean and the variables. Writing out the mean, we can see the connection
 
 $$ \overline{y} = \frac{y_i + (N-1)y_j}{N}, $$
 
@@ -87,7 +87,11 @@ $$
 	\end{align}
 $$
 
-The expectation $\langle y_i^2\rangle$ is just $1$ since it is a normal variable. $\langle \overline{y}^2\rangle$ is $\langle \frac1{N^2}\left(\sum_k y_k\right)^2\rangle = \frac1{N^2}\cdot N = 1/N.$ The expectation $\langle y_i \overline{y}\rangle$ is just $1/N$ since $y_i$ is only correlated with itself and none of the other $y_j.$ This means that
+- the expectation $\langle y_i^2\rangle$ is just $1$ since it is a normal variable. 
+- $\langle \overline{y}^2\rangle$ is $\langle \frac1{N^2}\left(\sum_k y_k\right)^2\rangle = \frac1{N^2}\cdot N = 1/N.$ 
+- the expectation $\langle y_i \cdot\overline{y}\rangle$ is just $1/N$ since $y_i$ is only correlated with itself and none of the other $y_j.$ 
+
+So
 
 $$ 
 	\begin{align}
@@ -98,13 +102,13 @@ $$
 	\end{align}
 $$
 
-So, the variance of the simulated league $\sigma^2$ is not $1$ but instead the slightly supressed $(N-1)/N.$ To correct for this, we boost the variance used in $\Phi$ and $\phi$ from $1$ to $\sqrt{\tfrac{N}{N-1}}.$ In order to avoid carrying around a factor of $1/\sigma^2 = \tfrac{N-1}{N}$ around, we can make a change of variables to $z = \sqrt{\tfrac{N-1}{N}} y,$ which makes $\text{d}y = \sqrt{\tfrac{N}{N-1}}\text{d}z.$
+This shows that the variance of the simulated league $\sigma^2$ is not $1$ but instead the slightly supressed figure $(N-1)/N.$ To correct for this, we need to boost the variance used in the cdf $\Phi$ and pdf $\phi$ from $1$ to $\sqrt{N/(N-1)}.$ So as to avoid carrying around a factor of $1/\sigma^2 = (N-1)/N)$ around everywhere we go, we can make a change of variables to $z = \sqrt{(N-1)/N} y,$ which makes $\text{d}y = \sqrt{N/(N-1)}\text{d}z.$
 
-This makes the expected maximum win count 
+The expected maximum win count is therefore
 
-$$ w_\text{max} = \mu + \sqrt{\tfrac{N}{N-1}}\sigma \cdot y_\text{max}, $$
+$$ w_\text{max} = \mu + \sigma\sqrt{\frac{N}{N-1}} \cdot y_\text{max}, $$
 
-where the integral for $y_\text{max}$ is performed with standard issue normal variables (zero mean, and unit variance). We can now evaluate the integral numerically
+where the integral for $y_\text{max}$ can now be performed numerically with standard issue normal variables (zero mean, and unit variance). 
 
 ```python
 import numpy as np
@@ -120,19 +124,19 @@ w_max = mu + sigma * expected_z_max
 
 ```
 
-which comes out to $\langle w_\text{max} \rangle \approx 85.009.$ Running a $100,000$ game simulation, we get $\approx 84.96$
+It comes out to $\langle w_\text{max} \rangle \approx 85.009$ which closely matches the result of a $100,000$ game simulation, $\approx 84.96$
 
 ### Analytic approximation
 
-Let's see if we can make an analytic approximation for the $y_\text{max}.$
+Now let's see if we can make an analytic approximation for the $y_\text{max}.$ The high power on $\Phi(y)$ will tend to push any potential winner into the tails of the cdf, giving hope for an exponential.
 
 $$ y_\text{max} = N\int_{-\infty}^\infty \text{d}y\,  \Phi(y)^{N-1}\phi(y) y. $$
 
 First of all, $\phi(y)$ is the derivative of $\Phi(y)$ so we can rewrite this as
 
-$$ y_\text{max} = \int_{-\infty}^\infty \text{d}y\,  \frac{\text{d}}{\text{d}y}\Phi(y)^N y. $$
+$$ y_\text{max} = \int_{-\infty}^\infty \text{d}y\,  \left[\frac{\text{d}}{\text{d}y}\Phi(y)^N\right] y. $$
 
-The large power $(N-1)$ in the integral means that any values of $\Phi(y)$ that aren't close to $1$ are going to be squashed. So, only values of $y$ for which $\Phi(y)$ is close to $1$ will make significant contribution to the average. Because $\Phi(y)$ is close to $1,$ $1-\Phi(y) = \overline{\Phi}(y)$ will be close to zero. After making this substitution, we get
+As we said, the large power $(N-1)$ in the integral means that any values of $\Phi(y)$ that aren't close to $1$ are going to be squashed. So, only values of $y$ for which $\Phi(y)$ is close to $1$ will be able to make a significant contribution to the average. Because $\Phi(y)$ is close to $1,$ $ \overline{\Phi}(y) = 1-\Phi(y) $ will be close to zero. After making this substitution, we get
 
 $$ 
 	\begin{align}
@@ -142,7 +146,7 @@ $$
 	\end{align}
 $$
 
-Now the real issue is that $\overline{\Phi}(y)$ is hard to integrate, so we need a way to approximate it. A simple way would be to make a linear approximation. But if we did that $\overline{\Phi}$ would blow up to well outside of the natural range of $0$ to $1,$ making the approximation go haywire. A better option is to linearly approximate the log of $\overline{\Phi}(y).$ That way, the approximation continues to vary from $0$ to $N$ like the real $\overline{\Phi}(y).$
+Now, $\overline{\Phi}(y)$ is hard to integrate, so we'll need a way to approximate it. A simple way would be to make a linear approximation about some point $y_0.$ But if we did that, $\overline{\Phi}$ would blow up to well outside of the natural range of $0$ to $1$ as $y$ varied from $y_0,$ making the approximation go haywire as $e^{-N(y-y_0)\overline{\Phi}^\prime(y_0)}$ goes to $\infty$ at the lower end. A better option is to linearly approximate the $\log$ of $\overline{\Phi}(y).$ That way, the approximation continues to vary from $0$ to $1$ like the real $\Phi(y).$
 
 $$ 
 	\begin{align}
@@ -151,7 +155,7 @@ $$
 	\end{align}
 $$
 
-Now we have to choose where to anchor $y_0$ for the approximation. The distribution $\Phi(y)^{N-1}\phi(y)$ should peak near $\Phi(y) \approx 1 - 1/N$ since, with $N$ variables, there should be less than a $1/N$ chance for a variable $y$ to exceed $y_\text{max}.$ So, we can anchor the expansion at the point $y_0$ where $\overline{\Phi}(y_0) = 1/N$ and
+Now we have to choose the anchor point for the approximation, $y_0.$ The distribution $\Phi(y)^{N-1}\phi(y)$ should peak near $\Phi(y) \approx 1 - 1/N$ since, with $N$ variables, the chance for a variable $y$ to exceed $y_\text{max}$ should be around $1/N.$ So, we can anchor the expansion at the point $y_0$ where $\overline{\Phi}(y_0) = 1/N$ and
 
 $$ \log\overline{\Phi}(y) \approx \log\frac1N - N\phi(y_0)\cdot(y-y_0), $$
 
@@ -161,9 +165,16 @@ $$ \overline{\Phi}(y) \approx \frac1N e^{- N\phi(y_0)\cdot(y-y_0)}. $$
 
 Plugging this back in to the integral, we get
 
-$$ y_\text{max} = \int_{-\infty}^\infty \text{d}y\,  \frac{\text{d}}{\text{d}y} e^{-e^{- N\phi(y_0)\cdot(y-y_0)}} y. $$
+$$ 
+	\begin{align}
+		y_\text{max} &= \int_{-\infty}^\infty\text{d}y\, \left[\frac{\text{d}}{\text{d}y}\Phi(y)^N\right] y \\
+		&\approx\int_{-\infty}^\infty \text{d}y\,  \left[\frac{\text{d}}{\text{d}y} e^{-e^{- N\phi(y_0)\cdot(y-y_0)}} \right]y. 
+	\end{align}
+$$
 
-Changing variables to $z = N\phi(y_0)\cdot(y-y_0)$ so that $\text{d}z = N\phi(y_0)\text{d}y$ and $y = \frac{z}{N\phi(y_0)} + y_0,$ we get
+We can clean this up by changing variables to $z = N\phi(y_0)\cdot(y-y_0)$ so that $\text{d}z = N\phi(y_0)\,\text{d}y$ and $y = \frac{z}{N\phi(y_0)} + y_0.$ 
+
+Plugging those in leads us to
 
 $$ 
 	\begin{align} 
@@ -173,11 +184,15 @@ $$
 	\end{align} 
 $$
 
-The second term just becomes $y_0$ and the first becomes 
+The second integral just becomes $y_0$ and the first becomes 
 
 $$ \frac{1}{N\phi(y_0)} \int_{-\infty}^\infty \text{d}z\, z e^{-z}e^{-e^{-z}}. $$
 
-which is $\gamma/(N\phi(y_0)) $ where $\gamma$ is the Euler-Mascheroni constant, so
+which features the Gumbel distribution whose pdf and cdf are shown below:
+
+![](/img/2026-08-10-gumbel-dists.png){:width="350 px" class="image-centered"}
+
+The first integral comes out to $\gamma/(N\phi(y_0)) $ where $\gamma$ is the Euler-Mascheroni constant, so
 
 $$ y_\text{max} = y_0 + \frac{\gamma}{N\phi(y_0)}. $$
 
