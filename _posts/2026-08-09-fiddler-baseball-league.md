@@ -158,7 +158,7 @@ $$
 	\end{align}
 $$
 
-Now we have to choose the anchor point for the approximation, $y_0.$ The distribution $\Phi(y)^{N-1}\phi(y)$ should peak near $\Phi(y) \approx 1 - 1/N$ since, with $N$ variables, the chance for a variable $y$ to exceed $y_\text{max}$ should be around $1/N.$ So, we can anchor the expansion at the point $y_0$ where $\overline{\Phi}(y_0) = 1/N$ and
+Now we have to choose the anchor point for the approximation, $y_0.$ The distribution $\Phi(y)^{N-1}\phi(y)$ should peak near $\Phi(y) \approx 1 - 1/N$ since, with $N$ teams, the chance for a team's surplus $y$ to exceed $y_\text{max}$ should be around $1/N.$ So, we can anchor the expansion at the point $y_0$ where $\overline{\Phi}(y_0) = 1/N$ and
 
 $$ \log\overline{\Phi}(y) \approx \log\frac1N - N\phi(y_0)\cdot(y-y_0), $$
 
