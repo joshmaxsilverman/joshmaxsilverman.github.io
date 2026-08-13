@@ -116,11 +116,14 @@ import scipy as sp
 
 N = 30
 
+mu = (N - 1) * 5
+sigma = np.sqrt(N / 4)
+
 def integrand(z):
     return np.sqrt(N/(N-1)) * N * (0.5 * (1 + sp.special.erf(z / np.sqrt(2))))**(N-1) * sp.stats.norm.pdf(z) * z
 
 y_max, _ = sp.integrate.quad(integrand, -np.inf, np.inf)
-w_max = mu + sigma * expected_z_max
+w_max = mu + sigma * y_max
 
 ```
 
