@@ -186,7 +186,7 @@ $$
 
 The second integral just becomes $y_0$ and the first becomes 
 
-$$ \frac{1}{N\phi(y_0)} \int_{-\infty}^\infty \text{d}z\, z \, \overbrace{e^{-z}e^{-e^{-z}}}^\text{gumbel dist.}. $$
+$$ \frac{1}{N\phi(y_0)} \int_{-\infty}^\infty \text{d}z\, z \, \overbrace{e^{-z}e^{-e^{-z}}}^\text{Gumbel dist.}. $$
 
 which features the Gumbel distribution. The pdf of the approximation, as well as the exact original, is shown below for increasing values of $N$:
 
