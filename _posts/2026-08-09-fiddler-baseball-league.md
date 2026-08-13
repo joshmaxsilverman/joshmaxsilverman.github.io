@@ -188,7 +188,7 @@ The second integral just becomes $y_0$ and the first becomes
 
 $$ \frac{1}{N\phi(y_0)} \int_{-\infty}^\infty \text{d}z\, z e^{-z}e^{-e^{-z}}. $$
 
-which features the Gumbel distribution whose pdf and cdf are shown below:
+which features the Gumbel distribution. The pdf of the approximation, as well as the unapproximated original are shown below:
 
 ![](/img/2026-08-10-gumbel-dists.png){:width="350 px" class="image-centered"}
 
