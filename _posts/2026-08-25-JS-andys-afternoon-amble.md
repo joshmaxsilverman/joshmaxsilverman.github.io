@@ -7,6 +7,8 @@ subtitle: How likely are you to realize that you woke up on the floor?
 source: jane-street
 theme: probability
 tags: random-walk recurrence
+hide_from_recent: true
+
 ---
 
 >**Question**: Andy the ant has moved on from his classic ‘Telstar’ [soccer ball](https://www.janestreet.com/puzzles/andys-morning-stroll-index/) homeland to live on a simpler spherical surface consisting of four white hexagons that are surrounded by alternating black triangles and white hexagons (three of each), and four black triangles surrounded by three white hexagons. To us this land is a truncated tetrahedron blown up into a sphere we see above on the left. Due to Andy’s tiny size and terrible eyesight, he doesn’t notice the curvature of the land and avoids the black triangles because he suspects they may be bottomless pits.
