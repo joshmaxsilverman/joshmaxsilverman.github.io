@@ -37,7 +37,7 @@ Depending on which face he exits from, he goes into one of three rings, but they
 
 ![](/img/2026-08-27-JS-hexagon-tiles.png){:width="500 px" class="image-centered"}
 
-It might seem odd that he can go in an infinite loop on the floor but indeed if he steps away from home on the ball and then makes three turns in the opposite direction, he will return to the tile he originally stepped to from home. 
+It might seem odd that he can go in an infinite loop on the floor and not realize he's not on the ball, but indeed if he steps away from home on the ball and then makes three turns in the opposite direction, he will return to the tile he originally stepped to from home. 
 So, he can do infinite cycles on the ball and the floor.
 
 As long as he stays in the ring, and does not move onto a decoy "home" before he exits at the real "home", he won't realize that he's off the ball. 
@@ -97,9 +97,9 @@ $$
 	\end{align}
 $$
 
-Solving this system of equations gets the expected time for fools, $T_1^\text{real} = 57/20 = 2.85$
+Solving this system of equations gets the expected time for fools, $T_1^\text{fooled} = 57/20 = 2.85$
 
-Working backwards, this means that the expected time conditioned on going to a decoy home is $T_1^\text{decoy} = \frac{20}{11}\left(T_1 - T_1^\text{real} \frac{9}{20}\right) = 1087/220  \approx 4.94.$ 
+Working backwards, this means that the expected time conditioned on going to a decoy home is $T_1^\text{witting} = \frac{20}{11}\left(T_1 - T_1^\text{fooled} \frac{9}{20}\right) = 1087/220  \approx 4.94.$ 
 So if you're on a long walk, it's some evidence you might be getting duped. 
 
 Plotting the distribution of walk lengths for people who are fooled or witting, we see that the fools can only have even walk lengths and tend to finish more quickly. 
