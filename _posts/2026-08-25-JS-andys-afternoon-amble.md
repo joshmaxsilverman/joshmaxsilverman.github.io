@@ -100,7 +100,7 @@ $$
 Solving this system of equations gets the expected time for fools, $T_1^\text{fooled} = 57/20 = 2.85$
 
 Working backwards, this means that the expected time conditioned on going to a decoy home is $T_1^\text{witting} = \frac{20}{11}\left(T_1 - T_1^\text{fooled} \frac{9}{20}\right) = 1087/220  \approx 4.94.$ 
-So if you're on a long walk, it's some evidence you might be getting duped. 
+So if you're on a long walk, it's some evidence you might be on the floor. 
 
 Plotting the distribution of walk lengths for people who are fooled or witting, we see that the fools can only have even walk lengths and tend to finish more quickly. 
 The witting participants wander longer, and can finish at any number of steps greater than $2$, since all tiles on the loop contact a decoy home tile, except for the first step on the loop which only contacts the real home tile.
