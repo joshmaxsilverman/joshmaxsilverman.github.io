@@ -63,14 +63,14 @@ We can use the same sort of equations to model the expected time to come to a co
 
 $$
 	\begin{align}
-		T_1 &= 1 + \frac13 + \frac23 T_2 \\
-		T_2 &= 1 + \frac13 T_1 + \frac13 T_3 + \frac13 \\
-		T_3 &= 1 + \frac13 T_2 + \frac13 T_4 + \frac13  \\
-		T_4 &= 1 + \frac23 T_3 + \frac13
+		T_1 &= 1 + \frac23 T_2 \\
+		T_2 &= 1 + \frac13 T_1 + \frac13 T_3 \\
+		T_3 &= 1 + \frac13 T_2 + \frac13 T_4  \\
+		T_4 &= 1 + \frac23 T_3 
 	\end{align}
 $$
 
-which leads to $T_1 = T_2 = T_3 = T_4 = 4.$
+which leads to $T_1 = T_2 = T_3 = T_4 = 3,$ leading to $T_1^\text{total} = 4,$ after accounting for the initial step away from home.
 
 ### Duration of deception
 
@@ -90,14 +90,14 @@ which leads to
 
 $$
 	\begin{align}
-		T_1 &= 1 + \frac{20}{27} + \frac{7}{27} T_2 \\
+		T_1 &= 1 + \frac{7}{27} T_2 \\
 		T_2 &= 1 + \frac67 T_1 + \frac17 T_3\\
 		T_3 &= 1 + \frac79 T_2 + \frac29 T_4\\
 		T_4 &= 1 + T_3.
 	\end{align}
 $$
 
-Solving this system of equations gets the expected time for fools, $T_1^\text{fooled} = 57/20 = 2.85$
+Solving this system of equations gets the expected time for fools, $T_1^\text{fooled} = 1 + T_1 = 57/20 = 2.85$
 
 Working backwards, this means that the expected time conditioned on going to a decoy home is $T_1^\text{witting} = \frac{20}{11}\left(T_1 - T_1^\text{fooled} \frac{9}{20}\right) = 1087/220  \approx 4.94.$ 
 So if you're on a long walk, it's some evidence you might be on the floor. 
