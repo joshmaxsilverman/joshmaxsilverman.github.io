@@ -19,7 +19,7 @@ tags: nash-equilibrium recursion
 
 <!--more-->
 
-([Jane Street](https://www.janestreet.com/puzzles/current-puzzle/]))
+([Jane Street](https://www.janestreet.com/puzzles/robot-javelin-index/))
 
 ## Solution
 

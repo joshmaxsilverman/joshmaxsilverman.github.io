@@ -15,7 +15,7 @@ tags: probability geometry jane-street
 
 <!--more-->
 
-([Jane Street](URL))
+([Jane Street](https://www.janestreet.com/puzzles/buffons-prism-index/))
 
 ## Solution
 

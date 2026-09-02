@@ -115,7 +115,7 @@ $$ P(s\rvert t,\ \text{score}) =
      \frac{1}{1-t}
 \begin{cases}
     s-t & \text{if} & s < 1 \\
-    1-t & \text{if} & 1<s<1+t \\
+    1-t & \text{if} & 1 < s < 1+t \\
     2-s & \text{if} & 1+t < s.
 \end{cases}
 $$
