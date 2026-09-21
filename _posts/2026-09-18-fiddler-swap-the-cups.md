@@ -80,7 +80,7 @@ $$ s_k \in \mathcal{N}(s_i), $$
 
 and if the current visited set $V_j$ is subset or equal to the new one $V_\ell$, 
 
-$$ V_j \subseteq V_\ell. $$
+$$ V_\ell = V_j \cup \{s_k} . $$
 
 With these rules, we can build the graph of neighbors in the abstract state space and generate a system of equations for the expected waiting time before we hit the final scramble.
 
