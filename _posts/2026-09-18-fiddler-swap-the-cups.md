@@ -208,7 +208,7 @@ To see this imagine we are in hell, doomed to traverse the scrambles for all ete
 Each time we get to a new scramble, we add it to the list of scrambles we've visited in order.
 
 How much time do we expect there to be between visits to a given scramble?
-Looking at the sequence we wrote down, it is the same question as "how often would we expect to be land on that given scramble?"
+Looking at the sequence we wrote down, it is the same question as "how often would we expect to land on a given scramble?"
 Since there is no favor among them, one sixth of the entries in the list are the given tile, so the answer has to be "once every $6$ steps."
 
 
