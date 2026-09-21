@@ -198,7 +198,7 @@ Solving them with `sympy` we get
 
 $$ T_{1,\left(1\right)} = \frac{171}{14} \approx 12.2143 $$
 
-There are surely symmetries and equivalences to exploit and collapse this down to fewer equations, but I think this presentation exposes the hideous beauty of generating the equations from graph search.
+There are symmetries and equivalences to exploit and collapse this down to a handful of equations, but I think this presentation exposes the hideous beauty of generating the equations from graph search.
 
 ### Standard credit
 
