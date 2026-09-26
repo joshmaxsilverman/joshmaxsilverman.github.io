@@ -205,7 +205,7 @@ There are symmetries and equivalences to exploit and collapse this down to a han
 The answer to the standard problem is $6$ due to symmetry. 
 
 To see this imagine we are in hell, doomed to traverse the scrambles for all eternity.
-Each time we get to a new scramble, we add it to the list of scrambles we've visited in order.
+Each time we swap a pair of letters to get to a different scramble, we add it to the list of scrambles we've visited in order.
 
 How much time do we expect there to be between visits to a given scramble?
 Looking at the sequence we wrote down, it is the same question as "how often would we expect to land on a given scramble?"
