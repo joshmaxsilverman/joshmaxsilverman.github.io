@@ -64,7 +64,7 @@ because this is true of any two pairs of districts, the optimal arrangement is a
 if we want to maximize our chance of winning 4 or more districts, we can choose to have anywhere from 4 to 7 of the districts participating.
 if we engage just 4 districts, then the probability to win at least 4 districts is simply 
 
-$$ P_\text{Moon}^4 = p^4 = \left(\frac{7}{2\cdot 4}\right)^4 \approx 0.58618164 $$
+$$ P_{\text{Moon},}4 = p^4 = \left(\frac{7}{2\cdot 4}\right)^4 \approx 0.5862 $$
 
 if, instead, we engage 5 districts then the probability to win at least 4 would be $\left(\frac{7}{2\cdot 5}\right)^5 + 5\left(\frac{7}{2\cdot 5}\right)^4(1-\frac{7}{2\cdot 5}) \approx 0.5282$ which is lower than if we used 4 and it doesn't get better from there.
 so, the optimal play for winning at least 4 districts is to evenly spread the Moon demographic over 4 districts and put zero in the other 3 districts.
