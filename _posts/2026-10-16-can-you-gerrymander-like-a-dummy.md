@@ -69,6 +69,21 @@ in fact, this suggests an algorithm to find the set of local optima in the space
 starting from a random configuration, we fix 5 of the districts at random, compute $(A-B)$ and then either average or extremize based on its sign. 
 if we start from a modest number of initial conditions, we can map out the space this way.
 
+suppose we tried a more elaborate swap by taking some small amount of demographic $\gamma$ from district 3 and giving $\alpha$ of it to district 1 and $\beta$ of it to district 2.
+then the rate of increase would be 
+
+$$
+	\begin{align} 
+		\nabla P_\text{Moon}\cdot \Delta &= \alpha\frac{\partial P_\text{Moon}}{\partial p_1} + \beta\frac{\partial P_\text{Moon}}{\partial p_2} - \gamma\frac{\partial P_\text{Moon}}{\partial p_3} \\
+		&= \alpha\frac{\partial P_\text{Moon}}{\partial p_1} + \beta\frac{\partial P_\text{Moon}}{\partial p_2} - \left(\alpha+\beta\right)\frac{\partial P_\text{Moon}}{\partial p_3} \\
+		&= \alpha\left(\frac{\partial P_\text{Moon}}{\partial p_1}-\frac{\partial P_\text{Moon}}{\partial p_3}\right) + \beta\left(\frac{\partial P_\text{Moon}}{\partial p_2}-\frac{\partial P_\text{Moon}}{\partial p_3}\right)
+	\end{align}
+$$
+
+which is just a linear combination of two pairwise exchanges. the only way for this to improve things is if one of the individual swaps does. 
+the same kind of argument holds for more complex swaps.
+so, the stability of a local optimum comes down to its stability to pairwise swaps.
+
 <!-- in fact, we can find these states by running the pairwise optimization strategy implied by the derivative condition above.
 we start out from a random arrangement, then calculate $(A-B)$ for the arrangement using the five quantities held fixed.
 if it's positive then we average the districts under inspections.
