@@ -139,8 +139,7 @@ def find_local_optimum(p, k):
             B = d[k - 1] if 0 <= k - 1 < len(d) else 0.0
             AminB = A - B
 
-            # AminB > 0 -> average
-            # AminB <= 0 -> extremize
+            # AminB > 0 -> average, AminB <= 0 -> extremize
             if AminB > 0:
                 new_i, new_j = s / 2, s / 2
             else:
