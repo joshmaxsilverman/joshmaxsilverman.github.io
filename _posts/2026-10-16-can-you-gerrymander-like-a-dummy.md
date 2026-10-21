@@ -70,7 +70,7 @@ starting from a random configuration, we fix 5 of the districts at random, compu
 if we start from a modest number of initial conditions, we can map out the space this way.
 
 suppose we tried a more elaborate swap by taking some small amount of demographic $\gamma$ from district 3 and giving $\alpha$ of it to district 1 and $\beta$ of it to district 2.
-then the rate of increase would be 
+then the rate of increase would be the dot product of the gradient of $P_\text{Moon}$ with the changes $\Delta = \left(\alpha,\beta, -\gamma\right)$.
 
 $$
 	\begin{align} 
