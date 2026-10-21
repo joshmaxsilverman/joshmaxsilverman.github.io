@@ -103,6 +103,71 @@ $$ \left(\frac12,\frac12,\frac12,\frac12,\frac12,\frac12,\frac12\right). $$
 
 <!-- this means that all strategies will have some number of zero entries and some number of non-zero entries all equal to each other.  -->
 
+```python
+import itertools
+import random
+import numpy as np
+from collections import defaultdict
+
+def get_score(p, k):
+	# probability of winning at least k districts
+	d = np.array([1.0])
+    # make probability distribution
+	for x in p:
+        d = np.convolve(d, [1 - x, x])
+	return d[k:].sum()
+
+def get_random_start():
+    # generates random valid configuration
+    while True:
+        p = np.random.dirichlet(np.ones(7)) * 3.5
+        if p.max() <= 1.0:
+            return p
+
+def find_local_optimum(p, k):
+    p = np.array(p)
+    while True:
+        improved = False
+        pairs = list(itertools.combinations(range(len(p)), 2))
+        
+        for i, j in pairs:
+            s = p[i] + p[j]
+            others = np.delete(p, [i, j])
+            d = prob_wins(others)
+            
+            A = d[k - 2] if 0 <= k - 2 < len(d) else 0.0
+            B = d[k - 1] if 0 <= k - 1 < len(d) else 0.0
+            AminB = A - B
+            
+            # AminB > 0 -> average
+			# AminB <= 0 -> extremize
+            if AminB > 0:
+                new_i, new_j = s / 2, s / 2
+            else:
+                new_i, new_j = min(1.0, s), max(0.0, s - 1.0)
+            
+            q = p.copy()
+            q[i], q[j] = new_i, new_j
+            
+            if get_score(q, k) > get_score(p, k) + 1e-9:
+                p = q
+                improved = True
+                
+        if not improved:
+            return np.sort(p)
+
+for k in (4, 5):
+    optima = defaultdict(lambda: 0)
+    for _ in range(1000):
+        p_start = get_random_start()
+        p_end = find_local_optimum(p_start, k)
+        optima[tuple(np.round(p_end, 3))] += 1
+
+    print(f"local optima for k={k}:")
+    for vec, count in optima.items():
+        print(f"  {count:4d}x matches: {vec}")
+```
+
 ### Optimal gerrymandering strategy
 
 if we want to maximize our chance of winning 4 or more districts, we allocate Moon demographic equally across 4 districts, and set the rest to zero.
