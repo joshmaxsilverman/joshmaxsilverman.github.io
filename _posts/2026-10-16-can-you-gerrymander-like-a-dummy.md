@@ -111,13 +111,13 @@ import random
 import numpy as np
 from collections import defaultdict
 
-def get_score(p, k):
-	# probability of winning at least k districts
-	d = np.array([1.0])
+def prob_wins(p, k):
+    # probability of winning at least k districts
+    d = np.array([1.0])
     # make probability distribution
-	for x in p:
+    for x in p:
         d = np.convolve(d, [1 - x, x])
-	return d[k:].sum()
+    return d[k:].sum()
 
 def get_random_start():
     # generates random valid configuration
