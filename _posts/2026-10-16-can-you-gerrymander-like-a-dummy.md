@@ -31,18 +31,18 @@ hide_from_recent: true
 
 ## Solution
 
-when we make an electoral strategy, how should we allocate the Moon demographic across the districts?
-we could give the same amount to every district, or we could give a lot to some and a little to others, or any number of schemes.
+When we make an electoral strategy, how should we allocate the Moon demographic across the districts?
+We could give the same amount to every district, or we could give a lot to some and a little to others, or any number of schemes.
 
-we can figure out what's best by assuming we're at the maximal policy and inspecting pairs of districts.
+We can figure out what's best by assuming we're at the maximal policy and inspecting pairs of districts.
 <!-- the answer is actually the simplest, that we should give the same amount to every participating district and we can prove this with the following argument. -->
 
 ### Optimal allocation policy
 
-suppose we are at the optimal allocation for at least $k$ wins and pick two districts, 1 and 2, to inspect.
+Suppose we are at the optimal allocation for at least $k$ wins and pick two districts, 1 and 2, to inspect.
 
-with the other districts held fixed, the probability of victory will have some terms where districts 1 and 2 both need to win, some where at least one of them needs to win, and some where neither needs to win.
-since the other districts are held constant, this will have the form
+With the other districts held fixed, the probability of victory will have some terms where districts 1 and 2 both need to win, some where at least one of them needs to win, and some where neither needs to win.
+Since the other districts are held constant, this will have the form
 
 $$ 
 	\begin{align}
@@ -51,13 +51,13 @@ $$
 	\end{align}
 $$
 
-where $A$ is the chance the fixed districts have $k-2$ wins, $P(W=k-2)$, $B=P(W=k-1)$, and $C=P(W\geq k)$. 
-by constraint, $p_1 + p_2 = R$ where $R$ is $\tfrac72$ minus the sum of the probabilities for Moon to win the other districts. 
-making this substitution, we get 
+Where $A$ is the chance the fixed districts have $k-2$ wins, $P(W=k-2)$, $B=P(W=k-1)$, and $C=P(W\geq k)$. 
+By constraint, $p_1 + p_2 = R$ where $R$ is $\tfrac72$ minus the sum of the probabilities for Moon to win the other districts. 
+Making this substitution, we get 
 
 $$ P_\text{Moon} = A\cdot p_1(R-p_1) + B\cdot \left(R - p_1(R-p_1)\right) + C. $$
 
-taking the derivative of this expression, we get 
+Taking the derivative of this expression, we get 
 
 $$ \frac{\text{d}}{\text{d}p_1} P_\text{Moon} = (A-B)(R-2p_1) $$
 
@@ -65,12 +65,12 @@ which is zero when $p_1 = \frac12R.$
 - if $(A-B)>0$ then $P_\text{Moon}$ is maximized when $p_1 = p_2 = R/2$, i.e. when $p_1$ and $p_2$ are both reset to their average.
 - if $(A-B) < 0$ then this is a minimum, and $P_\text{Moon}$ is maximized by extremizing $p_1$ toward zero or one (without making the larger one bigger than $R$ or $1$).
 
-in fact, this suggests an algorithm to find the set of local optima in the space of district allocations, from which we can identify the global optima.
-starting from a random configuration, we fix 5 of the districts at random, compute $(A-B)$ and then either average or extremize based on its sign. 
-if we start from a modest number of initial conditions, we can map out the space this way.
+In fact, this suggests an algorithm to find the set of local optima in the space of district allocations, from which we can identify the global optima.
+Starting from a random configuration, we fix 5 of the districts at random, compute $(A-B)$ and then either average or extremize based on its sign. 
+If we start from a modest number of initial conditions, we can map out the space this way.
 
-suppose we tried a more elaborate swap by taking some small amount of demographic $\gamma$ from district 3 and giving $\alpha$ of it to district 1 and $\beta$ of it to district 2.
-then the rate of increase would be the dot product of the gradient of $P_\text{Moon}$ with the changes $\Delta = \left(\alpha,\beta, -\gamma\right)$.
+Suppose we tried a more elaborate swap by taking some small amount of demographic $\gamma$ from district 3 and giving $\alpha$ of it to district 1 and $\beta$ of it to district 2.
+Then the rate of increase would be the dot product of the gradient of $P_\text{Moon}$ with the changes $\Delta = \left(\alpha,\beta, -\gamma\right)$.
 
 $$
 	\begin{align} 
@@ -80,24 +80,26 @@ $$
 	\end{align}
 $$
 
-which is just a linear combination of two pairwise exchanges. the only way for this to improve things is if one of the individual swaps does. 
-the same kind of argument holds for more complex swaps.
-so, the stability of a local optimum comes down to its stability to pairwise swaps.
+Which is just a linear combination of two pairwise exchanges. 
+The only way for this to improve things is if one of the individual swaps does. 
+The same kind of argument holds for more complex swaps.
+So, a global optimum can't have any pairwise swaps that improve $P_\text{Moon}$ and so is a fixed point under the pairwise exchange rule laid out above. 
+
 
 <!-- in fact, we can find these states by running the pairwise optimization strategy implied by the derivative condition above.
 we start out from a random arrangement, then calculate $(A-B)$ for the arrangement using the five quantities held fixed.
 if it's positive then we average the districts under inspections.
 if it's negative then we set one of the variables to the remainder itself, and the other to zero. -->
 
-when we run this out for the case of winning at least 4 districts, we get three fixed points 
+When we run this out for the case of winning at least 4 districts, we get three fixed points 
 
 - $(0,0,0,\frac78,\frac78,\frac78,\frac78),$ 
 - $(0,0,\frac{7}{10},\frac{7}{10},\frac{7}{10},\frac{7}{10},\frac{7}{10}),$ and 
-- $(0,\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12})$ 
+- $(0,\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12},\frac{7}{12}),$ 
 
 out of which the first arrangement has the highest probability to win.
 
-for the case of optimizing at least 5 districts won, the sole fixed point is 
+For the case of optimizing at least 5 districts won, the sole fixed point is 
 
 $$ \left(\frac12,\frac12,\frac12,\frac12,\frac12,\frac12,\frac12\right). $$
 
@@ -169,11 +171,11 @@ for k in (4, 5):
 
 ### Optimal gerrymandering strategy
 
-if we want to maximize our chance of winning 4 or more districts, we allocate Moon demographic equally across 4 districts, and set the rest to zero.
+If we want to maximize our chance of winning 4 or more districts, we allocate Moon demographic equally across 4 districts, and set the rest to zero.
 
 $$ P_{\text{Moon},4} = p^4 = \left(\frac{7}{2\cdot 4}\right)^4 \approx 0.5862 $$
 
-by contrast, the optimal allocation for $k=5$ is to put a half unit of Moon demographic in each of the 7 districts.
+By contrast, the optimal allocation for $k=5$ is to put a half unit of Moon demographic in each of the 7 districts.
 
 <!-- if, instead, we engage 5 districts then the probability to win at least 4 would be $\left(\frac{7}{2\cdot 5}\right)^5 + 5\left(\frac{7}{2\cdot 5}\right)^4(1-\frac{7}{2\cdot 5}) \approx 0.5282$ which is lower than if we used 4 and it doesn't get better from there.
 so, the optimal play for winning at least 4 districts is to evenly spread the Moon demographic over 4 districts and put zero in the other 3 districts.
@@ -186,11 +188,11 @@ $$ \sum_{j=5}^d \binom{d}{j}\left(\frac{7}{2d}\right)^j\left(1-\frac{7}{2d}\righ
 
 for $d=5,6,7$ which yields $\approx 0.1681, \approx 0.2083, $ and $\approx 0.2266,$ respectively, which shows that the optimal choice to win at least 5 districts is to assign $\frac12$ demographic units to each of the 7 districts. -->
 
-with this allocation, the probability of a Moon party loss is 
+With this allocation, the probability of a Moon party loss is 
 
 $$ L_A = 1 - \frac{1}{128}\left(\binom{7}{4} + \binom{7}{5} + \binom{7}{6} + \binom{7}{7}\right) = \frac12. $$
 
-the probability that the Moon party loses with the $k=4$ district plan is $L_B = 1-\left(7/8\right)^4 \approx 0.4138$ so the dummymander deficit is $L_A - L_B = \frac12-0.4138 \approx 0.0862$
+The probability that the Moon party loses with the $k=4$ district plan is $L_B = 1-\left(7/8\right)^4 \approx 0.4138$ so the dummymander deficit is $L_A - L_B = \frac12-0.4138 \approx 0.0862$
 
 
 
