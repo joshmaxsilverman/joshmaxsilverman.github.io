@@ -37,7 +37,7 @@ we could give the same amount to every district, or we could give a lot to some 
 we can figure out what's best by assuming we're at the maximal policy and inspecting pairs of districts.
 <!-- the answer is actually the simplest, that we should give the same amount to every participating district and we can prove this with the following argument. -->
 
-### Equal allocation policy
+### Optimal allocation policy
 
 suppose we are at the optimal allocation for at least $k$ wins and pick two districts, 1 and 2, to inspect.
 
