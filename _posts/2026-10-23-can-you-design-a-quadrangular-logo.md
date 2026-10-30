@@ -101,16 +101,16 @@ we have
 
 $$ \frac{h_B}{h_A} = \frac{h_A}{h_C} $$
 
-or $h_Bh_C = h_A^2. $$ 
+or $h_Bh_C = h_A^2.$ 
 this leads to 
 
-$$ \left(x^2 + x\right) + \left(y^2-\frac{1}{\sqrt{3}y}\right) = 0. $$
+$$ x^2 + x + y^2-\frac{1}{\sqrt{3}}y = 0. $$
 
-if we complete the square, this is equivalent to
+if we complete the squares, this is equivalent to
 
 $$ \left(x + \frac12\right)^2 + \left(y-\frac{1}{2\sqrt{3}}\right)^2 = \frac13. $$
 
-which is a circle center at $(-1/2, 1/2\sqrt{3})$ of radius $1/\sqrt{3}.$ 
+which is a circle center at $\left(-\frac12, \frac{1}{2\sqrt{3}}\right)$ of radius $1/\sqrt{3}.$ 
 so we have an arc through two vertices and the centroid.
 there are two equivalent arcs rotated $2\pi/3$ and $4\pi/3$ through the other two vertex pairs.
 
