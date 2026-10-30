@@ -90,4 +90,33 @@ the standard problem asks what the area of the average simple quadraliteral will
 each simple quadrilateral is formed by leaving out one of the triangles $A, B$, or $C$, so the average area will be the area of the equilateral triangle minus the average area of the missing triangle. 
 as the heights are $h_A, h_B$, and $h_C$, the average area of the missing triangle will be $\frac12\frac13\left(h_A + h_B + h_C\right) = \frac16 \frac{\sqrt{3}}{2} = \frac1{4\sqrt{3}}$ which makes the average area of the simple quadrilateral twice that or $\frac{1}{2\sqrt{3}} \approx 0.2887$
 
+### Extra extra credit
+
+we can also ask about the locus of points that form a geometric progression, $h_A = \gamma h_B = \gamma^2 h_C.$
+
+
+the extremes of this are the centroid itself which produces three triangles with $\gamma 1,$ and the vertices of the triangle with $\gamma = 0$ which produces one triangle with area equal to the equilateral triangle and two with area zero.
+
+we have
+
+$$ \frac{h_B}{h_A} = \frac{h_A}{h_C} $$
+
+or $h_Bh_C = h_A^2. $$ 
+this leads to 
+
+$$ \left(x^2 + x\right) + \left(y^2-\frac{1}{\sqrt{3}y}\right) = 0. $$
+
+if we complete the square, this is equivalent to
+
+$$ \left(x + \frac12\right)^2 + \left(y-\frac{1}{2\sqrt{3}}\right)^2 = \frac13. $$
+
+which is a circle center at $(-1/2, 1/2\sqrt{3})$ of radius $1/\sqrt{3}.$ 
+so we have an arc through two vertices and the centroid.
+there are two equivalent arcs rotated $2\pi/3$ and $4\pi/3$ through the other two vertex pairs.
+
+this locus is rendered beautifully below.
+
+![](/img/2026-10-29-fiddler-triangular-logo-geometric.png){:width="450px" class="image-centered"}
+
+
 <br>
