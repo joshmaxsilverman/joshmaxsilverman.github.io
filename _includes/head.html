@@ -1,9 +1,90 @@
 <head>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        MathJax.Hub.Register.StartupHook("End", function () {
+            bindMathPunctuation();
+        });
+        MathJax.Hub.Register.MessageHook("End Process", function () {
+            bindMathPunctuation();
+        });
     </script>
     <script type="text/javascript" async
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <script>
+    function bindMathPunctuation() {
+        if (!window.MathJax || !MathJax.Hub || !MathJax.Hub.getAllJax) return;
+        var jaxList = MathJax.Hub.getAllJax();
+        var LEADING_REGEX = /[(\[\{“"‘'«‹¿¡-]+$/;
+        var TRAILING_REGEX = /^[.,;:?!'""’”\)\]\}—–…»›-]+/;
+
+        for (var i = 0; i < jaxList.length; i++) {
+            var jax = jaxList[i];
+            if (jax.isDisplay) continue;
+
+            var frame = document.getElementById(jax.inputID + "-Frame");
+            if (!frame) continue;
+
+            if (frame.dataset.punctBound || (frame.parentElement && frame.parentElement.classList.contains("math-nowrap"))) {
+                continue;
+            }
+
+            var script = jax.SourceElement ? jax.SourceElement() : document.getElementById(jax.inputID);
+
+            var prevNode = frame.previousSibling;
+            while (prevNode && (
+                prevNode.nodeType === Node.COMMENT_NODE ||
+                prevNode.nodeName === "SCRIPT" ||
+                (prevNode.nodeType === Node.ELEMENT_NODE && prevNode.classList && prevNode.classList.contains("MathJax_Preview")) ||
+                (prevNode.nodeType === Node.TEXT_NODE && prevNode.nodeValue.length === 0)
+            )) {
+                prevNode = prevNode.previousSibling;
+            }
+
+            var anchorAfter = script || frame;
+            var nextNode = anchorAfter.nextSibling;
+            while (nextNode && (
+                nextNode.nodeType === Node.COMMENT_NODE ||
+                nextNode.nodeName === "SCRIPT" ||
+                (nextNode.nodeType === Node.TEXT_NODE && nextNode.nodeValue.length === 0)
+            )) {
+                nextNode = nextNode.nextSibling;
+            }
+
+            var leadingPunctNode = null;
+            if (prevNode && prevNode.nodeType === Node.TEXT_NODE) {
+                var leadMatch = prevNode.nodeValue.match(LEADING_REGEX);
+                if (leadMatch) {
+                    var splitIdx = prevNode.nodeValue.length - leadMatch[0].length;
+                    leadingPunctNode = prevNode.splitText(splitIdx);
+                }
+            }
+
+            var trailingPunctNode = null;
+            if (nextNode && nextNode.nodeType === Node.TEXT_NODE) {
+                var trailMatch = nextNode.nodeValue.match(TRAILING_REGEX);
+                if (trailMatch) {
+                    nextNode.splitText(trailMatch[0].length);
+                    trailingPunctNode = nextNode;
+                }
+            }
+
+            if (leadingPunctNode || trailingPunctNode) {
+                var wrapper = document.createElement("span");
+                wrapper.className = "math-nowrap";
+                wrapper.style.whiteSpace = "nowrap";
+
+                frame.parentNode.insertBefore(wrapper, frame);
+
+                if (leadingPunctNode) wrapper.appendChild(leadingPunctNode);
+                wrapper.appendChild(frame);
+                if (script && script.parentNode) wrapper.appendChild(script);
+                if (trailingPunctNode) wrapper.appendChild(trailingPunctNode);
+
+                frame.dataset.punctBound = "true";
+            }
+        }
+    }
     </script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
