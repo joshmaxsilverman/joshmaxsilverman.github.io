@@ -4,7 +4,7 @@ published: true
 title: Don't make a triangle … or a loop!
 date: 2026/11/20
 subtitle: How many edges can you draw without making a loop?
-tags: graph-theory combinatorics
+tags: graph-theory cauchy-schwarz
 source: fiddler
 kind: puzzle
 theme: combinatorics
