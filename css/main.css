@@ -556,16 +556,15 @@ footer .theme-by {
 }
 
 .caption {
-  text-align: center;
-  margin:0 auto;
-  font-size: 12px;
+  display: table !important;
+  text-align: left !important;
+  margin: 0 auto !important;
+  font-size: 14px;
+  line-height: 1.45;
   padding-top: -2px;
-  padding-bottom:10px;
-/*   word-wrap: break-word; */
-  width: 450px;
+  padding-bottom: 10px;
+  max-width: 450px;
   font-style: normal;
-/*   margin: 0px; */
-  display: block;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

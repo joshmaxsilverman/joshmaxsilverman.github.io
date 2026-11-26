@@ -68,7 +68,7 @@ Plugging in $n=10$, we get a maximum edge count of $\tfrac12\cdot 10 \cdot\sqrt{
 
 This upper bound can also be saturated, as seen in the graph below
 
-![](/img/2026-11-26-no-3-4-cycles.png){:width="450 px" class="image-centered"}
+![](/img/2026-11-26-no-3-4-cycles.png){:width="450 px" class="image-centered" caption="A graph with 10 nodes, each of degree 3, that contains no 3- or 4-loops, rendered beautifully using Apple Keynote."}
 
 ### Why are the graphs regular?
 
@@ -87,8 +87,8 @@ $$
 
 The reason for the left side is that $d_o$ will appear in as many sum terms as edges it appears in, which is just $d_o,$ so we end up with the squared sum of degrees.
 
-By the Cauchy-Schwarz inequality, the sum $\sum_\ell d_\ell$ is bounded above by $\sqrt{n}\sqrt{\sum_\ell d_\ell^2}$.
-To see this, think of the list of degrees as a vector $\mathbf{d}$ and take its dot product with the vector of all ones $\mathbf{1}$.
+The sum $\sum_\ell d_\ell$ is bounded above by $\sqrt{n}\sqrt{\sum_\ell d_\ell^2}$.
+To see this, think of the list of degrees as a vector $\mathbf{d}$ and take its dot product with the vector of all ones $\mathbf{1}$, then apply Cauchy-Schwarz inequality ($\mathbf{a}\cdot\mathbf{b} \leq \lvert\mathbf{a}\rvert\lvert\mathbf{b}\rvert$) .
 
 Squaring both sides we get
 

@@ -4,7 +4,7 @@ published: true
 title: Morning walkabout
 subtitle: Will the friendly ant have an unusual experience?
 source: jane-street
-tags: recursion counting waiting-time coarse-graining jane-street
+tags: recursion counting waiting-time coarse-graining graph-theory jane-street
 date: 2022/07/26
 theme: probability
 ---

@@ -6,7 +6,7 @@ date: 2025/05/18
 subtitle: How many paths can you find?
 source: fiddler
 theme: algorithms
-tags: counting recursion search
+tags: counting recursion search graph-theory
 ---
 
 >**Question**: Consider the following figure, which shows 16 points arranged in a rhombus shape and connected to their neighbors by edges. How many distinct paths are there from the top point to the bottom along the edges such that:

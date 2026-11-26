@@ -6,12 +6,12 @@ date: 2024/09/01
 subtitle: Can you taunt your friend forever?
 source: jane-street
 theme: game-theory
-tags: recursion phase-transitions game-theory jane-street
+tags: recursion phase-transitions game-theory graph-theory jane-street
 ---
 
 >**Question**: Aaron and Beren are playing a game on an infinite complete binary tree. At the beginning of the game, every edge of the tree is independently labeled $A$ with probability $p$ and $B$ otherwise. Both players are able to inspect all of these labels. Then, starting with Aaron at the root of the tree, the players alternate turns moving a shared token down the tree (each turn the active player selects from the two descendants of the current node and moves the token along the edge to that node). If the token ever traverses an edge labeled $B,$ Beren wins the game. Otherwise, Aaron wins.
 >
-> ![](/img/august-2024-diagram-JS.png){:width=300 px" class="image-centered"}
+> ![](/img/august-2024-diagram-JS.png){:width="300 px" class="image-centered"}
 >
 >An example game is in the picture above: after the labeling, Aaron chooses to go left to avoid immediate defeat, but after Beren goes right Aaron is doomed to choose one of two $B$ paths and Beren wins.
 >

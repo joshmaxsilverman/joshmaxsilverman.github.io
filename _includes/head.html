@@ -1,6 +1,9 @@
 <head>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        MathJax.Hub.Register.MessageHook("Begin Process", function () {
+            processImageCaptions();
+        });
         MathJax.Hub.Register.StartupHook("End", function () {
             bindMathPunctuation();
         });
@@ -84,6 +87,66 @@
                 frame.dataset.punctBound = "true";
             }
         }
+    }
+
+    function processImageCaptions() {
+        var imgs = document.querySelectorAll('img[caption]');
+        if (!imgs.length) return;
+
+        for (var i = 0; i < imgs.length; i++) {
+            var img = imgs[i];
+            var captionText = img.getAttribute('caption');
+            img.removeAttribute('caption');
+            if (!captionText) continue;
+
+            var p = document.createElement('p');
+            p.className = 'caption';
+
+            // Protect math (<, >) and allow simple bold/italic/code markdown
+            var math = [];
+            var safe = captionText.replace(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g, function(m) {
+                math.push(m.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+                return '___MATH_' + (math.length - 1) + '___';
+            });
+            safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+                       .replace(/`([^`]+)`/g, '<code>$1</code>');
+            p.innerHTML = safe.replace(/___MATH_(\d+)___/g, function(_, idx) {
+                return math[Number(idx)];
+            });
+
+            // Match image width if specified
+            var rawWidth = img.getAttribute('width');
+            var cleanWidth = '450px';
+            if (rawWidth) {
+                cleanWidth = rawWidth.replace(/\s+/g, '');
+                if (/^\d+$/.test(cleanWidth)) cleanWidth += 'px';
+            }
+            p.style.display = 'table';
+            p.style.margin = '0 auto';
+            p.style.textAlign = 'left';
+            p.style.fontSize = '14px';
+            p.style.maxWidth = cleanWidth;
+
+            // Insert after containing paragraph (or after link parent)
+            var container = img.closest('p') || img.parentElement;
+            if (container && container.parentNode) {
+                container.parentNode.insertBefore(p, container.nextSibling);
+            } else if (img.parentNode) {
+                img.parentNode.insertBefore(p, img.nextSibling);
+            }
+
+            // If MathJax already finished initial run, queue typesetting for this caption
+            if (window.MathJax && MathJax.Hub && MathJax.Hub.isInitial === false) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, p]);
+            }
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', processImageCaptions);
+    } else {
+        processImageCaptions();
     }
     </script>
   <meta charset="utf-8" />
