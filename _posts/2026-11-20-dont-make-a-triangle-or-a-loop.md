@@ -70,6 +70,8 @@ Plugging in $n=10$, we get a maximum edge count of $\tfrac12\cdot 10 \cdot\sqrt{
 
 This upper bound can also be saturated, as seen in the graph below
 
+![](/img/2026-11-26-no-3-4-cycles.png){:width="450 px" class="image-centered"}
+
 ### Why are the graphs regular?
 
 Without assuming uniform degree, the triangle free condition becomes
