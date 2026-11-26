@@ -26,23 +26,25 @@ hide_from_recent: true
 We'll answer both parts with the same kind of argument.
 First, we will find the upper bound on the degree of a node and then we'll show that it's possible to saturate.
 
-In the following, we'll calculate the bounds while making the assumption that all nodes have the same degree, then we'll show why this is must be the case.
+In the following, we'll calculate the bounds while making the assumption that all nodes have the same degree, then we'll show why this must be the case.
 
 ### Standard credit
 
-If a graph has no 3-loops then if we pick some node $o$ and look at its neighbors, none of them can be the nearest neighbor of another of its neighbors.
+If a graph has no 3-loops then if we pick some node $o$ and look at its neighbors, no two of them can be connected to each other.
 
 So, let's take a specific neighbor $j$ and look at its neighbors that aren't $o$ itself. 
 This is a list of $(d-1)$ nodes.
+$o$ also has $(d-1)$ neighbors that aren't $j$, which we can add to the list.
 
-$o$ also has $(d-1)$ neighbors that that aren't $j$, which we can add to the list.
+<!-- If there are more than $(n-2)$ distinct nodes in this list, then two of $o$'s neighbors must be neighbors and therefore form a triangle.  -->
 
-If there are more than $(n-2)$ distinct nodes in this list, then two of $o$'s neighbors must be neighbors and therefore form a triangle. 
-
-So, we have $2(d-1) \leq n-2, $ or $d \leq \tfrac12 n$, so the degree $d$ for a node can be at most $\tfrac12 n$. 
+Because the whole graph has just $n$ nodes, there are only $n-2$ nodes besides $o$ and $j$. 
+For the graph to be triangle-free, $o$ and $j$ cannot share any common neighbors.
+So, the greatest their combined neighbor count can be is $n-2$.
+So $2(d-1) \leq n-2, $ or $d \leq \tfrac12 n$, so the degree $d$ for a node can be at most $\tfrac12 n$. 
 If that bound saturates for each node, then the total number of edges would be 
 
-$$ \frac12 = \frac{n^2}{4} $$
+$$ \frac12 nd = \frac{n^2}{4} $$
 
 which is $25$ for our problem.
 
@@ -54,14 +56,10 @@ So, $25$ is the realizable max.
 
 ### Extra credit
 
-Now we are considering graphs without 3- and 4-loops so the set of relevant nodes is direct neighbors plus next nearest neighbors.
+Now we are considering graphs without 3- and 4-loops so the set of relevant nodes is direct neighbors plus next-nearest neighbors.
 
-The number of direct neighbors is just $d$ and the number of next nearest neighbors is $d(d-1)$ for a total of $d + d(d-1) = d^2.$ 
-If the size of this set is greater than $(n-1)$ then we have a 3- or a 4-loop, so
-
-$$ d^2 \leq n-1 $$
-
-and $d$ is at most $\sqrt{n-1}.$
+For any node $o$, the number of direct neighbors is just $d$ and the number of next nearest neighbors is $d(d-1)$ for a total of $d + d(d-1) = d^2.$ 
+If the size of this set is greater than $(n-1)$ then we have a 3- or a 4-loop, so $ d^2 \leq n-1 $ and $d$ is at most $\sqrt{n-1}.$
 This makes the total number of edges in the graph $\tfrac12 nd$ or
 
 $$ \frac12 n \sqrt{n-1}. $$
